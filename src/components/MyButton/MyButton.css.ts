@@ -2,8 +2,8 @@ import { style } from '@vanilla-extract/css';
 import { vars } from '../../styles/themes/lightTheme.css';
 
 export const button = style({
-  background: vars.color.primary,
-  color: vars.color.surface,
+  background: vars.colors.primary,
+  color: vars.colors.onPrimary,
   border: 'none',
   borderRadius: '8px',
   padding: `${vars.spacing.sm} ${vars.spacing.md}`,
@@ -12,10 +12,10 @@ export const button = style({
   transition: 'background 0.2s',
   selectors: {
     '&:hover': {
-      background: vars.color.secondary,
+      background: vars.colors.accent,
     },
     '&:active': {
-      background: '#2563eb',
+      background: vars.colors.primary,
     },
   },
 });

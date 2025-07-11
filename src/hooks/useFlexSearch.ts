@@ -7,8 +7,8 @@ import { useState, useEffect } from 'react';
  * @param {any} index - The FlexSearch index instance.
  * @returns {Array<any>} - Search results.
  */
-export function useFlexSearch(query: string, index: any): any[] {
-  const [results, setResults] = useState<any[]>([]);
+export function useFlexSearch(query: string, index: unknown): unknown[] {
+  const [results, setResults] = useState<unknown[]>([]);
 
   useEffect(() => {
     if (!query || !index) {

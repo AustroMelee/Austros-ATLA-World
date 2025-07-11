@@ -1,14 +1,9 @@
 import * as styles from './ItemCard.css';
 import React from 'react';
-// import type { EnrichedAnimal } from '../types/domainTypes';
+import type { EnrichedCharacter, EnrichedBending, EnrichedFauna, EnrichedFood, EnrichedLocation, EnrichedSpiritWorld } from '../types';
 
 type ItemCardProps = {
-  item: {
-    id: string;
-    name: string;
-    description?: string;
-    tags?: string[];
-  };
+  item: EnrichedCharacter | EnrichedBending | EnrichedFauna | EnrichedFood | EnrichedLocation | EnrichedSpiritWorld;
 };
 
 export default function ItemCard({ item }: ItemCardProps) {

@@ -1,6 +1,7 @@
 // Types matching the enriched data structure for runtime use
 
 export type EnrichedBending = {
+  id: string;
   name: string;
   description: string;
   synonyms?: string[];
@@ -9,6 +10,7 @@ export type EnrichedBending = {
 };
 
 export type EnrichedCharacter = {
+  id: string;
   name: string;
   description: string;
   synonyms?: string[];
@@ -17,6 +19,7 @@ export type EnrichedCharacter = {
 };
 
 export type EnrichedFauna = {
+  id: string;
   name: string;
   description: string;
   synonyms?: string[];
@@ -25,6 +28,7 @@ export type EnrichedFauna = {
 };
 
 export type EnrichedFood = {
+  id: string;
   name: string;
   description: string;
   synonyms?: string[];
@@ -33,6 +37,7 @@ export type EnrichedFood = {
 };
 
 export type EnrichedLocation = {
+  id: string;
   name: string;
   description: string;
   synonyms?: string[];
@@ -41,6 +46,7 @@ export type EnrichedLocation = {
 };
 
 export type EnrichedSpiritWorld = {
+  id: string;
   name: string;
   description: string;
   synonyms?: string[];
