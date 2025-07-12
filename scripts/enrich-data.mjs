@@ -155,6 +155,9 @@ async function main() {
           normalized.type = isFood ? 'food' : isCharacter ? 'character' : '';
           console.log(`[AUTO-FIX] Set type for ${isFood ? 'food' : 'character'} '${normalized.name}': ${normalized.type}`);
         }
+        // Set __type and remove type
+        normalized.__type = normalized.type;
+        delete normalized.type;
         if (!normalized.slug) {
           normalized.slug = normalized.id;
           console.log(`[AUTO-FIX] Set slug for ${isFood ? 'food' : 'character'} '${normalized.name}': ${normalized.slug}`);
@@ -173,6 +176,22 @@ async function main() {
           if (typeof normalized.bending !== 'string') normalized.bending = '';
           if (!Array.isArray(normalized.aliases)) normalized.aliases = [];
           if (!Array.isArray(normalized.sources)) normalized.sources = [];
+          // Defensive: Use provided shortDescription, or auto-generate from description if missing/empty
+          if (typeof record.shortDescription === 'string' && record.shortDescription.trim()) {
+            normalized.shortDescription = record.shortDescription.trim();
+          } else if (typeof normalized.description === 'string') {
+            // Auto-generate: take first sentence or first 120 chars as summary
+            const desc = normalized.description.trim();
+            const firstSentence = desc.split('. ')[0];
+            normalized.shortDescription = firstSentence.length < 120 ? firstSentence : desc.slice(0, 120) + '...';
+          } else {
+            normalized.shortDescription = '';
+          }
+          normalized.expansion = {
+            fullBio: normalized.overview || normalized.description,
+            notableEpisodes: normalized.highlights ? normalized.highlights.split(/[.;\n]/).map(s => s.trim()).filter(Boolean) : [],
+            quotes: normalized.quotes ? normalized.quotes.split(/"/).map(s => s.trim()).filter(q => q.length > 10) : [],
+          };
         }
         targetArr.push(normalized);
       } catch (err) {
@@ -184,7 +203,8 @@ async function main() {
   }
   // Write only enriched foods and characters to /dist/enriched-data.json
   await fs.mkdir(path.dirname(ENRICHED_PATH), { recursive: true });
-  await fs.writeFile(ENRICHED_PATH, JSON.stringify({ food: enrichedFoods, characters: enrichedCharacters }, null, 2));
+  const allRecords = [...enrichedFoods, ...enrichedCharacters];
+  await fs.writeFile(ENRICHED_PATH, JSON.stringify(allRecords, null, 2));
   // Print summary
   console.log('Enrichment complete. Type summary:');
   console.log(`  food: ${enrichedFoods.length} records`);

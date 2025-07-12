@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import FlexSearch from 'flexsearch';
 
-const ENRICHED_DATA_PATH = path.resolve('public/enriched-data.json');
+const ENRICHED_DATA_PATH = path.resolve('dist/enriched-data.json');
 const SEARCH_INDEX_PATH = path.resolve('public/search-index.json');
 const DIST_INDEX_PATH = path.resolve('dist/search-index.json');
 
@@ -29,18 +29,26 @@ async function buildSearchIndex() {
     let totalRecords = 0;
 
     // Flatten all records and add them to the index and map
-    for (const domain in enrichedData) {
-      if (Array.isArray(enrichedData[domain])) {
-        enrichedData[domain].forEach(record => {
-          if (record && record.slug) {
-            index.add(record);
-            recordMap.set(record.slug, record);
-            totalRecords++;
+    if (Array.isArray(enrichedData)) {
+      enrichedData.forEach(record => {
+        if (record && record.slug) {
+          // Always include shortDescription as a string for character records
+          if (record.__type === 'character') {
+            recordMap.set(record.slug, {
+              ...record,
+              shortDescription: typeof record.shortDescription === 'string' ? record.shortDescription : '',
+            });
           } else {
-            console.warn(`Skipping record without a slug in domain "${domain}":`, record.name || 'Unknown');
+            recordMap.set(record.slug, record);
           }
-        });
-      }
+          index.add(record);
+          totalRecords++;
+        } else {
+          console.warn(`Skipping record without a slug:`, record && record.name ? record.name : 'Unknown');
+        }
+      });
+    } else {
+      throw new Error('enriched-data.json is not an array');
     }
     
     console.log(`Indexed ${totalRecords} records across ${Object.keys(enrichedData).length} domains.`);

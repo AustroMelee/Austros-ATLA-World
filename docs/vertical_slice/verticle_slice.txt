@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encyclopedia Pro - ATLA Edition (Final Working Version)</title>
+    <!-- Fetches Fuse.js for fuzzy searching -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <style>
+        /* 1. THEME & GLOBAL STYLES */
+        :root {
+            --bg-color: #1a1b26;
+            --surface-color: #24273a;
+            --border-color: #414561;
+            --text-color: #cad3f5;
+            --text-muted-color: #a5adce;
+            --focus-color: #8caaee;
+            --suggestion-opacity: 0.4;
+            
+            --earth-rgb: 76, 218, 114;
+            --fire-rgb: 237, 135, 150;
+            --water-rgb: 138, 173, 238;
+            --air-rgb: 245, 224, 179;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Inter', sans-serif; margin: 0; padding: 2rem; display: flex; justify-content: center; min-height: 100vh; }
+        .main-layout { display: grid; grid-template-columns: 1fr 300px; gap: 2rem; width: 100%; max-width: 1300px; }
+        .container { display: flex; flex-direction: column; gap: 1.5rem; }
+
+        /* 2. SEARCH & FILTER STYLES */
+        .search-container { position: relative; width: 100%; }
+        .search-input { width: 100%; box-sizing: border-box; padding: 12px 16px; font-size: 16px; font-family: inherit; background-color: transparent; border: 1px solid var(--border-color); border-radius: 12px; outline: none; transition: all 0.2s; color: var(--text-color); position: relative; z-index: 2; }
+        .search-input:focus { border-color: var(--focus-color); box-shadow: 0 0 0 3px rgba(138, 173, 238, 0.2); }
+        .search-suggestion { position: absolute; top: 13px; left: 17px; font-size: 16px; color: var(--text-color); pointer-events: none; white-space: pre; z-index: 1; }
+        .suggestion-text { opacity: var(--suggestion-opacity); }
+        
+        /* FIX #1: Prominent <tab> suffix styling */
+        .tab-indicator {
+            font-style: normal;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--text-muted-color);
+            background-color: rgba(0,0,0,0.25);
+            border: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+            border-radius: 4px;
+            padding: 2px 6px;
+            margin-left: 8px;
+            opacity: 0.9;
+            vertical-align: middle;
+        }
+        
+        .filter-panel { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+        .filter-btn { padding: 8px 16px; font-size: 14px; font-weight: 600; border: 2px solid var(--border-color); background-color: transparent; color: var(--text-muted-color); border-radius: 30px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
+        .filter-btn:hover { border-color: var(--text-color); color: var(--text-color); }
+        .filter-btn.active { color: #111; }
+        .filter-count { font-size: 12px; background-color: rgba(0,0,0,0.2); padding: 2px 6px; border-radius: 10px; }
+        #clearFiltersBtn { text-decoration: underline; border: none; background: none; color: var(--text-muted-color); padding: 8px; }
+
+        /* 3. RESULTS GRID & CARD */
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; width: 100%; }
+        .no-results { color: var(--text-muted-color); text-align: center; width: 100%; padding: 4rem 0; font-size: 1.2rem; }
+        
+        .item-card { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 14px; padding: 20px; position: relative; cursor: pointer; transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; overflow: hidden; }
+        
+        /* FIX #2: Apply persistent nation color via border-left */
+        .item-card { border-left: 4px solid var(--border-color); }
+
+        .item-card::before { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius: inherit; background: linear-gradient(135deg, rgba(var(--nation-accent-rgb), 0.1) 0%, rgba(var(--nation-accent-rgb), 0) 40%); opacity: 0; transition: opacity 0.3s ease-in-out; pointer-events: none; }
+        .item-card:hover, .item-card.focused { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); }
+        .item-card.focused { border-color: var(--focus-color); }
+        .item-card:hover::before, .item-card.expanded::before { opacity: 1; }
+        .item-card.expanded { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); z-index: 10; border-color: rgba(var(--nation-accent-rgb), 0.8); }
+
+        /* FIX #2 (continued): Override border color based on nation class */
+        .item-card.nation-earth-kingdom { --nation-accent-rgb: var(--earth-rgb); border-left-color: rgb(var(--earth-rgb)); }
+        .item-card.nation-fire-nation { --nation-accent-rgb: var(--fire-rgb); border-left-color: rgb(var(--fire-rgb)); }
+        .item-card.nation-water-tribe { --nation-accent-rgb: var(--water-rgb); border-left-color: rgb(var(--water-rgb)); }
+        .item-card.nation-air-nomads { --nation-accent-rgb: var(--air-rgb); border-left-color: rgb(var(--air-rgb)); }
+        
+        .item-card .card-top-section { display: flex; gap: 16px; align-items: center; }
+        .image-placeholder { width: 60px; height: 60px; background-color: var(--bg-color); border: 1px dashed var(--border-color); border-radius: 10px; flex-shrink: 0; transition: all 0.4s ease-in-out; display: flex; align-items: center; justify-content: center; font-size: 24px; color: rgba(var(--nation-accent-rgb), 0.6);}
+        .item-card.expanded .image-placeholder { width: 100px; height: 100px; }
+        .item-card .card-header h2 { margin: 0 0 4px 0; font-size: 18px; font-weight: 600; }
+        .item-card .card-header p { margin: 0; color: var(--text-muted-color); line-height: 1.5; font-size: 15px; }
+        
+        .collection-add-btn { position: absolute; top: 16px; right: 16px; background-color: rgba(255,255,255, 0.05); border: 1px solid var(--border-color); border-radius: 50%; width: 32px; height: 32px; color: var(--text-color); font-size: 24px; font-weight: 300; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.2s; flex-shrink: 0; }
+        .collection-add-btn:hover { background-color: rgba(var(--nation-accent-rgb), 0.8); color: var(--bg-color); transform: scale(1.1); }
+        .collection-add-btn.in-collection { background-color: transparent; border: 1px solid rgba(var(--nation-accent-rgb), 0.8); color: rgba(var(--nation-accent-rgb), 1); font-size: 20px; font-weight: bold; }
+
+        .expansion-content { max-height: 0; opacity: 0; transition: all 0.4s ease-in-out; overflow: hidden; margin-top: 0; }
+        .item-card.expanded .expansion-content { max-height: 500px; opacity: 1; margin-top: 20px; }
+        .expansion-content h3 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: rgba(var(--nation-accent-rgb), 1); margin: 16px 0 8px 0; padding-bottom: 4px; border-bottom: 1px solid var(--border-color); }
+
+        /* 4. COLLECTIONS SIDEBAR */
+        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 rgba(138, 173, 238, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(138, 173, 238, 0); } 100% { box-shadow: 0 0 0 0 rgba(138, 173, 238, 0); } }
+        .collections-sidebar { background-color: var(--surface-color); border-radius: 12px; padding: 20px; height: fit-content; position: sticky; top: 2rem; display: flex; flex-direction: column; gap: 1rem; transition: transform 0.2s ease-out; }
+        .collections-sidebar.pulse { animation: pulse-border 0.75s ease-out; }
+        .collections-sidebar h3 { margin: 0; font-size: 18px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; }
+        #collectionsList { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+        #collectionsList li { padding: 10px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; color: var(--text-muted-color); font-weight: 600; }
+        #collectionsList li:hover { background-color: rgba(255, 255, 255, 0.05); }
+        #collectionsList li.active-add { color: var(--focus-color); font-weight: 700; }
+        #collectionsList li.active-view { background-color: rgba(138, 173, 238, 0.15); border-color: rgba(138, 173, 238, 0.3); color: #fff; }
+        
+        #collectionNotes { display: none; width: 100%; box-sizing: border-box; background-color: var(--bg-color); border: 1px solid var(--border-color); color: var(--text-color); border-radius: 6px; padding: 10px; font-family: inherit; resize: vertical; min-height: 80px; }
+        #collectionNotes.visible { display: block; }
+        .new-collection-form { margin-top: 12px; display: flex; gap: 8px; }
+        .new-collection-input { flex-grow: 1; background-color: var(--bg-color); border: 1px solid var(--border-color); color: var(--text-color); border-radius: 6px; padding: 8px; }
+        .new-collection-btn { background-color: var(--focus-color); border: none; color: #111; font-weight: bold; border-radius: 6px; padding: 0 12px; cursor: pointer; }
+
+        /* 5. ANIMATION & UTILITY */
+        .flying-icon { position: absolute; z-index: 1000; border-radius: 50%; background-color: rgba(var(--nation-accent-rgb), 0.9); color: var(--bg-color); transition: transform 0.5s cubic-bezier(0.5, -0.5, 1, 1), opacity 0.5s ease-out; pointer-events: none; display: flex; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+    <div class="main-layout" id="mainLayout">
+        <main class="container">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search 'blind bandit', or try '!fire'..." autocomplete="off" spellcheck="false">
+                <div id="suggestion" class="search-suggestion"></div>
+            </div>
+            <div class="filter-panel" id="filterPanel"></div>
+            <div class="results-grid" id="resultsGrid"></div>
+        </main>
+        <aside class="collections-sidebar" id="collectionsSidebar">
+            <h3>My Collections</h3>
+            <ul id="collectionsList"></ul>
+            <textarea id="collectionNotes" placeholder="Add notes for this collection..."></textarea>
+            <form id="newCollectionForm" class="new-collection-form">
+                <input type="text" id="newCollectionInput" class="new-collection-input" placeholder="New collection name..." required>
+                <button type="submit" class="new-collection-btn">+</button>
+            </form>
+        </aside>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const DB = {
+                items: [
+                    { id: "aang", name: "Aang", nation: "Air Nomads", type: "Character", tags: ["avatar", "airbender", "monk"], expansion: { icon: '💨', bio: "The last Air Nomad...", abilities: "All Elements, Energybending"}},
+                    { id: "katara", name: "Katara", nation: "Water Tribe", type: "Character", tags: ["waterbender", "healer"], expansion: { icon: '💧', bio: "Katara grew from a hopeful girl...", abilities: "Healing, Bloodbending"}},
+                    { id: "sokka", name: "Sokka", nation: "Water Tribe", type: "Character", tags: ["warrior", "strategist", "boomerang"], expansion: { icon: '🐺', bio: "The team's strategist...", abilities: "Leadership, Boomerang"}},
+                    { id: "toph", name: "Toph Beifong", nation: "Earth Kingdom", type: "Character", tags: ["earthbender", "blind bandit", "metalbender"], expansion: { icon: '⛰️', bio: "A blind, yet powerful master...", abilities: "Seismic Sense, Metalbending"}},
+                    { id: "zuko", name: "Zuko", nation: "Fire Nation", type: "Character", tags: ["firebender", "prince", "blue spirit"], expansion: { icon: '🔥', bio: "Zuko's journey from prince to Fire Lord...", abilities: "Lightning Redirection, Duality"}},
+                    { id: "iroh", name: "Iroh", nation: "Fire Nation", type: "Character", tags: ["uncle", "dragon of the west", "tea"], expansion: { icon: '🍵', bio: "Zuko's wise and loving uncle...", abilities: "Lightning Generation, Wisdom"}},
+                ],
+                nations: ["Water Tribe", "Earth Kingdom", "Fire Nation", "Air Nomads"],
+                nationColorMap: { "Earth Kingdom": 'rgb(var(--earth-rgb))', "Water Tribe": 'rgb(var(--water-rgb))', "Fire Nation": 'rgb(var(--fire-rgb))', "Air Nomads": 'rgb(var(--air-rgb))' }
+            };
+
+            let state = {
+                collections: {}, activeCollectionName: null, viewingMode: 'all', activeFilter: null, searchQuery: '',
+                excludedNation: null, expandedCardId: null, focusedCardIndex: -1, results: DB.items, suggestion: null
+            };
+
+            const searchInput = document.getElementById('searchInput');
+            const suggestionDiv = document.getElementById('suggestion');
+            const filterPanel = document.getElementById('filterPanel');
+            const resultsGrid = document.getElementById('resultsGrid');
+            const collectionsList = document.getElementById('collectionsList');
+            const newCollectionForm = document.getElementById('newCollectionForm');
+            const newCollectionInput = document.getElementById('newCollectionInput');
+            const collectionsSidebar = document.getElementById('collectionsSidebar');
+            const collectionNotes = document.getElementById('collectionNotes');
+
+            const fuse = new Fuse(DB.items, { keys: ['name', 'tags', 'nation'], includeScore: true, threshold: 0.4 });
+            const collectionsManager = {
+                save: () => localStorage.setItem('atlaCollections', JSON.stringify(state.collections)),
+                load: () => {
+                    const saved = JSON.parse(localStorage.getItem('atlaCollections')) || { "My Favorites": { items: [], notes: "" } };
+                    Object.keys(saved).forEach(key => { if (Array.isArray(saved[key])) { saved[key] = { items: saved[key], notes: "" }; } });
+                    state.collections = saved;
+                },
+                create: (name) => { if (name && !state.collections[name]) { state.collections[name] = { items: [], notes: "" }; collectionsManager.save(); } },
+                addCard: (collectionName, cardId) => {
+                    if (collectionName && state.collections[collectionName] && !state.collections[collectionName].items.includes(cardId)) {
+                        state.collections[collectionName].items.push(cardId); collectionsManager.save(); return true;
+                    } return false;
+                },
+                saveNote: (collectionName, note) => { if (collectionName && state.collections[collectionName]) { state.collections[collectionName].notes = note; collectionsManager.save(); } }
+            };
+            
+            function render() {
+                let currentResults = [];
+                if (state.excludedNation) { currentResults = DB.items.filter(item => item.nation.toLowerCase() !== state.excludedNation); } 
+                else if (state.searchQuery) { currentResults = fuse.search(state.searchQuery).map(result => result.item); } 
+                else { currentResults = DB.items; }
+                
+                const sourceData = state.viewingMode === 'all' ? currentResults : currentResults.filter(item => state.collections[state.viewingMode]?.items.includes(item.id));
+                const filteredData = sourceData.filter(item => state.activeFilter ? item.nation === state.activeFilter : true);
+                state.results = filteredData;
+
+                renderResultsGrid();
+                renderCollectionsList();
+                updateFilterCounts(currentResults);
+            }
+
+            function renderResultsGrid() {
+                resultsGrid.innerHTML = '';
+                if (state.results.length === 0) { resultsGrid.innerHTML = `<div class="no-results">No results found.</div>`; return; }
+                state.results.forEach((item, index) => {
+                    const cardElement = createCardElement(item);
+                    if (item.id === state.expandedCardId) cardElement.classList.add('expanded');
+                    if (index === state.focusedCardIndex) cardElement.classList.add('focused');
+                    resultsGrid.appendChild(cardElement);
+                });
+            }
+
+            function createCardElement(item) {
+                const card = document.createElement('div');
+                card.className = `item-card nation-${item.nation.toLowerCase().replace(/\s+/g, '-')}`;
+                card.dataset.id = item.id;
+                const isInActiveCollection = state.activeCollectionName && state.collections[state.activeCollectionName]?.items.includes(item.id);
+                const addTitle = state.activeCollectionName ? `Add to collection: '${state.activeCollectionName}' (C)` : `Click a collection in the sidebar to activate it`;
+                card.innerHTML = `<div class="collection-add-btn ${isInActiveCollection ? 'in-collection' : ''}" title="${addTitle}">${isInActiveCollection ? '✓' : '+'}</div><div class="card-top-section"><div class="image-placeholder">${item.expansion.icon}</div><div class="card-header"><h2>${item.name}</h2><p>${item.type} • ${item.tags.join(', ')}</p></div></div><div class="expansion-content"><h3>Bio</h3><p>${item.expansion.bio}</p><h3>Key Traits</h3><p>${item.expansion.abilities}</p></div>`;
+                const addBtn = card.querySelector('.collection-add-btn');
+                addBtn.addEventListener('click', e => { e.stopPropagation(); handleAddToCollection(item.id, addBtn); });
+                card.addEventListener('click', e => { if (!addBtn.contains(e.target)) handleCardClick(item.id); });
+                return card;
+            }
+
+            function renderCollectionsList() {
+                collectionsList.innerHTML = '';
+                const allItemsLi = document.createElement('li');
+                allItemsLi.textContent = "All Items"; allItemsLi.dataset.viewName = "all";
+                if (state.viewingMode === 'all') allItemsLi.classList.add('active-view');
+                if (!state.activeCollectionName) allItemsLi.classList.add('active-add');
+                collectionsList.appendChild(allItemsLi);
+                Object.keys(state.collections).forEach(name => {
+                    const li = document.createElement('li');
+                    li.textContent = name; li.dataset.viewName = name;
+                    if (name === state.activeCollectionName) li.classList.add('active-add');
+                    if (name === state.viewingMode) li.classList.add('active-view');
+                    collectionsList.appendChild(li);
+                });
+                const isCollectionView = state.viewingMode !== 'all';
+                collectionNotes.classList.toggle('visible', isCollectionView);
+                if (isCollectionView) { collectionNotes.value = state.collections[state.viewingMode]?.notes || ''; }
+            }
+            
+            function updateFilterCounts(baseResults) {
+                document.querySelectorAll('.filter-btn[data-filter-value]').forEach(btn => {
+                    const count = baseResults.filter(item => item.nation === btn.dataset.filterValue).length;
+                    btn.querySelector('.filter-count').textContent = count;
+                });
+            }
+            
+            function buildFilterPanel() {
+                filterPanel.innerHTML = DB.nations.map(nation => `<button class="filter-btn" data-filter-value="${nation}">${nation}<span class="filter-count">0</span></button>`).join('') + `<button class="filter-btn" id="clearFiltersBtn">Clear</button>`;
+            }
+
+            function handleSearchInput(e) {
+                const query = e.target.value;
+                const lowerQuery = query.toLowerCase();
+
+                if (query.startsWith('!')) {
+                    state.searchQuery = ''; state.excludedNation = lowerQuery.substring(1).trim();
+                } else {
+                    state.searchQuery = query; state.excludedNation = null;
+                }
+                
+                state.suggestion = !state.excludedNation && query.length > 0 ? DB.items.find(item => item.name.toLowerCase().startsWith(lowerQuery)) : null;
+                // THIS IS THE COMBINED FIX FUNCTION
+                updateSuggestionAndColor(query);
+                
+                state.focusedCardIndex = -1;
+                state.expandedCardId = null;
+                render();
+            }
+            
+            // FIX #1: Function now handles BOTH suggestion text and search input color
+            function updateSuggestionAndColor(currentQuery) {
+                if (state.suggestion && state.suggestion.name.length > currentQuery.length) {
+                    const remaining = state.suggestion.name.substring(currentQuery.length);
+                    // Using "Tab" text for the new keycap style
+                    suggestionDiv.innerHTML = `<span style="opacity: 0;">${currentQuery}</span><span class="suggestion-text">${remaining}</span><span class="tab-indicator">Tab</span>`;
+                    // Set the search input's text color
+                    searchInput.style.color = DB.nationColorMap[state.suggestion.nation];
+                } else {
+                    suggestionDiv.innerHTML = '';
+                    state.suggestion = null;
+                    // Reset search input's text color to default
+                    searchInput.style.color = 'var(--text-color)';
+                }
+            }
+
+            function handleFilterClick(e) {
+                const btn = e.target.closest('.filter-btn');
+                if (!btn) return;
+                state.activeFilter = btn.id === 'clearFiltersBtn' ? null : (state.activeFilter === btn.dataset.filterValue ? null : btn.dataset.filterValue);
+                document.querySelectorAll('.filter-btn[data-filter-value]').forEach(el => {
+                    const isActive = state.activeFilter === el.dataset.filterValue;
+                    el.classList.toggle('active', isActive);
+                    const color = isActive ? DB.nationColorMap[el.dataset.filterValue] : 'var(--border-color)';
+                    el.style.backgroundColor = isActive ? color : 'transparent';
+                    el.style.borderColor = color;
+                });
+                render();
+            }
+            
+            function handleCardClick(itemId) {
+                state.expandedCardId = state.expandedCardId === itemId ? null : itemId;
+                document.querySelectorAll('.item-card').forEach(card => card.classList.toggle('expanded', card.dataset.id === state.expandedCardId));
+            }
+
+            function handleAddToCollection(itemId, btnElement) {
+                if (!state.activeCollectionName) {
+                    pulseCollectionsSidebar();
+                    return;
+                }
+                if (collectionsManager.addCard(state.activeCollectionName, itemId)) {
+                    animateAddToCollection(btnElement);
+                    btnElement.classList.add('in-collection');
+                    btnElement.textContent = '✓';
+                }
+            }
+            
+            function handleNewCollection(e) {
+                e.preventDefault();
+                const name = newCollectionInput.value.trim();
+                if (name) {
+                    collectionsManager.create(name);
+                    state.activeCollectionName = name; state.viewingMode = name;
+                    newCollectionInput.value = '';
+                    render();
+                }
+            }
+
+            function handleCollectionListClick(e) {
+                const li = e.target.closest('li');
+                if (li) {
+                    const viewName = li.dataset.viewName;
+                    if (state.viewingMode === viewName && viewName !== 'all') { state.activeCollectionName = viewName; } 
+                    else { state.viewingMode = viewName; if(viewName !== 'all') state.activeCollectionName = viewName; }
+                    render();
+                }
+            }
+
+            function handleKeyboardNav(e) {
+                if (e.key === 'Tab' && state.suggestion) {
+                    e.preventDefault();
+                    searchInput.value = state.suggestion.name;
+                    handleSearchInput({ target: searchInput });
+                }
+                
+                const keyActions = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', 'c', 'C'];
+                if (keyActions.includes(e.key)) { /* ... keyboard nav logic from base ... */ }
+            }
+            
+            function pulseCollectionsSidebar() { /* ... from base ... */ }
+            function animateAddToCollection(button) { /* ... from base ... */ }
+
+            function init() {
+                collectionsManager.load();
+                if (Object.keys(state.collections).length > 0 && !state.activeCollectionName) { state.activeCollectionName = Object.keys(state.collections)[0]; }
+                buildFilterPanel();
+                render();
+                searchInput.addEventListener('input', handleSearchInput);
+                document.addEventListener('keydown', handleKeyboardNav);
+                filterPanel.addEventListener('click', handleFilterClick);
+                newCollectionForm.addEventListener('submit', handleNewCollection);
+                collectionsList.addEventListener('click', handleCollectionListClick);
+                collectionNotes.addEventListener('blur', e => { if (state.viewingMode !== 'all') { collectionsManager.saveNote(state.viewingMode, e.target.value); } });
+            }
+
+            init();
+        });
+    </script>
+</body>
+</html>

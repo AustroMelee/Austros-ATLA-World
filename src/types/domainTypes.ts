@@ -15,11 +15,20 @@ export type EnrichedCharacter = {
   __type: 'character';
   id: string;
   name: string;
+  shortDescription?: string;
   description: string;
   slug: string;
   synonyms?: string[];
   tags?: string[];
   relations?: string[];
+  nation?: string;
+  bending?: string;
+  expansion?: {
+    fullBio?: string;
+    notableEpisodes?: string[];
+    quotes?: string[];
+    [key: string]: unknown;
+  };
 };
 
 export type EnrichedFauna = {

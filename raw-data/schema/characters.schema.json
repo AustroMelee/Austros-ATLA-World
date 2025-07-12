@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Raw Character Data from Markdown",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": { "type": "string" },
+      "nation": { "type": "string" },
+      "image": { "type": "string" },
+      "description": { "type": "string" },
+      "bending": { "type": "string" },
+      "role": { "type": "string" },
+      "overview": { "type": "string" },
+      "highlights": { "type": "array", "items": { "type": "string" } },
+      "traits": { "type": "array", "items": { "type": "string" } },
+      "quotes": { "type": "array", "items": { "type": "string" } },
+      "relationships": { "type": "string" }
+    },
+    "required": ["name", "description"]
+  }
+}

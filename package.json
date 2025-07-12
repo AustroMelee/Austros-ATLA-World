@@ -10,10 +10,11 @@
     "lint": "eslint src --max-warnings=0",
     "lint:fix": "eslint src --fix --max-warnings=0",
     "type-check": "tsc --noEmit",
+    "parse:characters": "node scripts/parse-character-md.mjs",
     "validate:data": "node scripts/validate-data.mjs",
     "enrich:data": "node scripts/enrich-data.mjs",
     "build:index": "node scripts/build-index.mjs",
-    "build:data": "npm run validate:data && npm run enrich:data && npm run build:index"
+    "build:data": "npm run parse:characters && npm run validate:data && npm run enrich:data && npm run build:index"
   },
   "devDependencies": {
     "@types/react": "19.1.8",

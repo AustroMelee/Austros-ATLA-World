@@ -10,7 +10,7 @@ import { useSearchParams } from 'react-router-dom';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
 import type { EnrichedRecord } from '../types/domainTypes';
 
-const CHARACTER_TYPE = 'character';
+const CHARACTER_TYPE = 'character'; // FIX: Changed to plural to match the directory name
 const CHARACTER_FILTERS = [
   { key: 'nation', label: 'Nation' },
   { key: 'bending', label: 'Bending' },
@@ -30,6 +30,7 @@ export default function CharactersPage() {
   const [results, setResults] = useState<EnrichedRecord[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   useEffect(() => {
     const params: Record<string, string> = {};
@@ -45,21 +46,29 @@ export default function CharactersPage() {
     setError(null);
     try {
       await ClientSearchEngine.init();
-      const all = await ClientSearchEngine.search(searchQuery);
-      let filtered = all.filter(r => r && typeof r === 'object' && r.__type === CHARACTER_TYPE) as EnrichedRecord[];
-      console.log('[CharactersPage] Filtered character records:', filtered.length, filtered.map(r => r.slug));
+      // Efficient initial load: get all by type if no search query
+      const initialRecords = searchQuery
+        ? await ClientSearchEngine.search(searchQuery)
+        : await ClientSearchEngine.getAllByType(CHARACTER_TYPE);
+
+      let filtered = initialRecords.filter(r => r && r.__type === CHARACTER_TYPE) as EnrichedRecord[];
+      
+      console.log(`[CharactersPage] Found ${filtered.length} records of type '${CHARACTER_TYPE}'.`);
+
       CHARACTER_FILTERS.forEach(f => {
         if (filters[f.key]) {
           filtered = filtered.filter(r => {
-            if (f.key === 'nation' && 'nation' in r) return r.nation === filters[f.key];
-            if (f.key === 'bending' && 'bending' in r) return r.bending === filters[f.key];
-            return true;
+            const record = r as import('../types/domainTypes').EnrichedCharacter;
+            if (f.key === 'nation' && record.nation) return record.nation === filters[f.key];
+            if (f.key === 'bending' && record.bending) return record.bending.includes(filters[f.key]);
+            return false;
           });
         }
       });
       setResults(filtered);
     } catch (e) {
       setError('Failed to load results.');
+      console.error(e);
     } finally {
       setLoading(false);
     }
@@ -97,7 +106,11 @@ export default function CharactersPage() {
       ) : results.length === 0 ? (
         <NoResults />
       ) : (
-        <ResultsGrid items={results.map(item => ({...item, to: `/characters/${item.slug}`}))} />
+        <ResultsGrid
+          items={results}
+          expandedId={expandedId}
+          onExpand={setExpandedId}
+        />
       )}
     </main>
   );

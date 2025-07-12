@@ -28,3 +28,42 @@ export const tags = style({
   gap: vars.spacing.sm,
   flexWrap: 'wrap',
 });
+
+export const expansion = style({
+  marginTop: vars.spacing.md,
+  background: '#f9f9ff',
+  borderRadius: vars.radius.sm,
+  padding: vars.spacing.md,
+  fontSize: '1rem',
+});
+
+export const expandBtn = style({
+  marginTop: vars.spacing.sm,
+  alignSelf: 'flex-end',
+  background: vars.color.accent,
+  color: 'white',
+  border: 'none',
+  borderRadius: vars.radius.sm,
+  padding: `${vars.spacing.sm} ${vars.spacing.md}`,
+  cursor: 'pointer',
+  fontWeight: 600,
+  fontSize: '1rem',
+  transition: 'background .2s',
+  ':hover': {
+    background: '#2a4d8f', // fallback hover color
+  },
+});
+
+export const cardExpanded = style([
+  card,
+  {
+    boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
+    zIndex: 2,
+    position: 'relative',
+    transform: 'scale(1.04)',
+    minHeight: '24rem', // 3x typical collapsed height
+    minWidth: '32rem',  // ensure enough width for expanded content
+    maxWidth: '90vw',
+    fontSize: '1.1rem',
+  },
+]);
