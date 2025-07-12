@@ -1,81 +1,88 @@
-import { promises as fs } from 'fs';
+import fs from 'fs';
 import path from 'path';
 
-const mdPath = path.resolve(process.cwd(), 'raw-data/characters/character_data.md');
-const jsonPath = path.resolve(process.cwd(), 'raw-data/characters.json');
+const INPUT_FILE = path.join(process.cwd(), 'raw-data', 'characters', 'character_data.md');
+const OUTPUT_FILE = path.join(process.cwd(), 'raw-data', 'characters.json');
 
-const FIELD_MAP = {
-  bending_ability: 'bending',
-  occupationrole: 'role',
-  key_journey_highlights: 'highlights',
-  notable_quotes: 'quotes',
-  personality_traits: 'traits',
+const KEY_MAP = {
+  'Name': 'name',
+  'Nation': 'nation',
+  'Image': 'image',
+  'Bending Ability': 'bending',
+  'Occupation/Role': 'role',
+  'Overview': 'overview',
+  'Key Journey Highlights': 'highlights',
+  'Personality Traits': 'traits',
+  'Notable Quotes': 'quotes',
+  'Relationships': 'relationships',
 };
 
-function normalizeFields(char) {
-  const normalized = {};
-  for (const key in char) {
-    if (FIELD_MAP[key]) {
-      normalized[FIELD_MAP[key]] = char[key];
-    } else {
-      normalized[key] = char[key];
-    }
+const LIST_KEYS = new Set(['Key Journey Highlights', 'Personality Traits', 'Notable Quotes']);
+const ALL_KEYS = Object.keys(KEY_MAP);
+
+function parseMarkdown() {
+  console.log(`Reading from: ${INPUT_FILE}`);
+  if (!fs.existsSync(INPUT_FILE)) {
+    console.error(`ERROR: Input file not found at ${INPUT_FILE}`);
+    process.exit(1);
   }
-  return normalized;
-}
+  const content = fs.readFileSync(INPUT_FILE, 'utf-8');
+  const characterBlocks = content.split(/\r?\n(?=#<\d+>)/).filter(block => block.trim().startsWith('#<'));
 
-function parseCharacterSection(section) {
-  const lines = section.split('\n').map(l => l.trim());
-  const char = {};
-  let currentKey = null;
-  let buffer = [];
+  if (characterBlocks.length === 0) {
+    console.error("ERROR: No character blocks found. Check the delimiter format (e.g., #<1> AANG).");
+    process.exit(1);
+  }
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    if (/^(Short Template|Expanded Template)/i.test(line)) continue;
-    const match = line.match(/^([A-Za-z\s\/\(\)']+):\s*(.*)$/);
-    if (match) {
-      if (currentKey && buffer.length) {
-        char[currentKey] = buffer.join(' ').trim();
-        buffer = [];
+  const allCharacters = characterBlocks.map(block => {
+    const character = {};
+    const blockLines = block.split(/\r?\n/);
+    for (const [mdKey, jsonKey] of Object.entries(KEY_MAP)) {
+      if (LIST_KEYS.has(mdKey)) continue;
+      const line = blockLines.find(l => l.trim().startsWith(`${mdKey}:`));
+      if (line) {
+        character[jsonKey] = line.split(':')[1].trim();
       }
-      currentKey = match[1].trim().toLowerCase().replace(/\s+/g, '_').replace(/\W/g, '');
-      if (match[2]) {
-        buffer.push(match[2].trim());
-      }
-    } else if (currentKey) {
-      buffer.push(line);
     }
-  }
-  if (currentKey && buffer.length) {
-    char[currentKey] = buffer.join(' ').trim();
-  }
-
-  ['key_journey_highlights', 'personality_traits', 'notable_quotes', 'relationships'].forEach(field => {
-    if (char[field]) {
-      char[field] = char[field]
-        .split(/\n|\.|\r/)
-        .map(s => s.trim())
-        .filter(Boolean);
+    const cardViewRegex = /Short Template \(Card View\)[\s\S]*?Description:\s*([^\n\r]+)/;
+    const descMatch = block.match(cardViewRegex);
+    character.description = descMatch ? descMatch[1].trim() : (character.overview || '');
+    for (const listKey of LIST_KEYS) {
+        const jsonKey = KEY_MAP[listKey];
+        character[jsonKey] = [];
+        const blockStartIndex = block.indexOf(`${listKey}:`);
+        if (blockStartIndex === -1) continue;
+        let blockEndIndex = block.length;
+        for (const nextKey of ALL_KEYS) {
+            if (nextKey === listKey) continue;
+            const nextKeyIndex = block.indexOf(`\n${nextKey}:`, blockStartIndex);
+            if (nextKeyIndex !== -1 && nextKeyIndex < blockEndIndex) {
+                blockEndIndex = nextKeyIndex;
+            }
+        }
+        let contentSlice = block.substring(blockStartIndex + listKey.length + 1, blockEndIndex).trim();
+        if (contentSlice) {
+            const items = contentSlice.split(/\r?\n\s*\r?\n/).map(item => 
+                item.replace(/\r?\n/g, ' ').trim()
+            ).filter(Boolean);
+            if (jsonKey === 'quotes') {
+                character[jsonKey] = items.map(q => q.replace(/^"|"$/g, ''));
+            } else {
+                character[jsonKey] = items;
+            }
+        }
     }
+    return character;
   });
-
-  char.__type = 'character';
-  if (char.description) char.shortDescription = char.description;
-  return normalizeFields(char);
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allCharacters, null, 2));
+  console.log(`✅ Successfully parsed ${allCharacters.length} characters to ${OUTPUT_FILE}`);
 }
 
-async function parseMarkdown() {
-  console.log('Reading character markdown data...');
-  const fileContent = await fs.readFile(mdPath, 'utf8');
-  const sections = fileContent.split(/#<\d+>\s+/).slice(1);
-  const characters = sections.map(parseCharacterSection).filter(c => c.name && c.description);
-  await fs.writeFile(jsonPath, JSON.stringify(characters, null, 2));
-  console.log(`✅ Successfully parsed ${characters.length} characters to ${jsonPath}`);
-}
-
-parseMarkdown().catch(e => {
-  console.error('❌ Failed to parse character markdown:', e);
+try {
+  parseMarkdown();
+} catch (error) {
+  console.error("A critical error occurred during parsing:", error);
   process.exit(1);
-});
+}
+
 

@@ -1,272 +1,99 @@
-# 📘 Source of Truth: Data Pipeline Workflow
+### FILE: `docs/source_of_truth.md` (Updated)
 
-This is the canonical, always-up-to-date reference for how curated data flows from Markdown or JSON into the live UI. This system is built to be type-safe, scalable, and fully automatable across any entity type.
+```markdown
+# 📚 Source of Truth: Project Documentation
 
----
+This is the canonical, always-up-to-date reference for how data and styles are managed in the Austros ATLA World Encyclopedia. This system is built to be type-safe, scalable, and fully automated.
 
-## ⚙️ The Data Pipeline: Step-by-Step
+***
+***
 
-### **1. ✍️ Data Authoring**
-*   **Format:**
-    *   Use Markdown (`.md`) files for human-friendly editing.
-    *   JSON (`.json`) files are also supported for structured input.
+## ⚙️ The Data Pipeline Workflow
+
+This is the standard operating procedure for any data changes. Follow these steps precisely to ensure data integrity.
+
+### **1. ✍️ Data Authoring (The Human Part)**
+*   **Format:** All rich, descriptive content (like characters) is authored in Markdown (`.md`). Simpler, flat data (like foods) can be authored directly in JSON (`.json`).
 *   **Location:**
-    *   Place files in `raw-data/[entity-type]/` (e.g., `raw-data/characters/mai.md`).
-*   **Schema:**
-    *   Every entity has a schema in `raw-data/schema/*.schema.json`.
-    *   **All required fields must be present.**
+    *   Markdown: `raw-data/[entity-type]/[entity-data].md` (e.g., `raw-data/characters/character_data.md`)
+    *   JSON: `raw-data/[entity-type].json` (e.g., `raw-data/foods.json`)
+*   **Schema:** Every entity type **must** have a corresponding schema in `raw-data/schema/`. This is the contract your data must follow.
 
-### **2. ⚙️ Parsing: Markdown → Raw JSON**
-*   **Script:** `npm run parse:characters` (or other domain equivalents)
-*   **What it does:** Converts `.md` files into structured `.json` arrays and handles complex formats.
+### **2. 🔄 Parsing & Validation (The Scripts)**
+This is the automated process for turning raw data into a structured, searchable format.
 
-### **3. 🛡️ Validation: Schema Check**
-*   **Script:** `npm run validate:data`
-*   **What it does:** Validates all raw `.json` files against their schemas, blocking the pipeline on any errors.
+1.  **Parse Markdown to JSON (`npm run parse:characters`)**
+    *   **What it does:** Reads complex `.md` files and converts them into structured `.json` files within the `raw-data` directory. This script is essential for handling multi-line fields like `highlights` and `traits`.
 
-### **4. ✨ Enrichment: Normalize & Finalize**
-*   **Script:** `npm run enrich:data`
-*   **What it does:** Adds a unique `id`, `slug`, and `__type` field, and applies defaults for optional fields.
-*   **Output:** `dist/enriched-data.json`
+2.  **Validate Data (`npm run validate:data`)**
+    *   **What it does:** Validates all raw `.json` files (both handwritten and parsed) against their schemas using Zod. The pipeline will **fail** if there are any errors, preventing bad data from proceeding.
 
-### **5. 🔍 Indexing: Build Search Index**
-*   **Script:** `npm run build:index`
-*   **What it does:** Reads enriched data to build a fast, UI-ready FlexSearch index.
-*   **Output:** `public/search-index.json`
+3.  **Enrich Data (`npm run enrich:data`)**
+    *   **What it does:** Adds machine-generated fields: a unique `id`, a URL-friendly `slug`, and a `__type` identifier to every record.
+    *   **Output:** A single, consolidated `dist/enriched-data.json` file.
 
-### **6. 🖥️ UI Consumption: Live App**
-*   **Client:** React app (see `src/search/ClientSearchEngine.ts`)
-*   **How it works:** At runtime, the app loads `public/search-index.json` to power all search and filtering logic.
+4.  **Build Search Index (`npm run build:index`)**
+    *   **What it does:** Reads the enriched data to build a fast, client-ready FlexSearch index.
+    *   **Output:** `public/search-index.json`. This is the file the live application actually loads.
+
+### **3. 🚀 The Full Pipeline (Recommended)**
+To simplify the process, run the master script that executes all steps in the correct order:
+```bash
+npm run build:data
+```
+
+### **4. ✅ How to Maintain the Data**
+1.  **Edit or Add Data:** Modify or create files in the `raw-data/` directory.
+2.  **Run the Pipeline:** Open your terminal and run `npm run build:data`.
+3.  **Check for Errors:** Watch the terminal output for any validation or enrichment errors.
+4.  **Refresh UI:** Hard refresh your browser (`Ctrl+F5` or `Cmd+Shift+R`) to see the changes live.
+
+> **Summary:** Edit raw data. Run the pipeline. Refresh the UI. As long as you follow this system, your data will remain clean, robust, and production-grade.
 
 ---
-
-## ✅ How to Maintain the Data Pipeline
-
-This is the standard operating procedure for any data changes. Follow these steps precisely.
-
-1.  **✍️ Edit or Add Data**
-    *   **Format:** Use `.md` for easy editing.
-    *   **Location:** Add to `raw-data/[entity]/`.
-    *   **Schema:** Adhere to the structure in `raw-data/schema/[type].schema.json`.
-
-2.  **⚙️ Parse Markdown to JSON**
-    *   **Script:** `npm run parse:[entity]`
-
-3.  **🛡️ Validate Data**
-    *   **Script:** `npm run validate:data`
-
-4.  **✨ Enrich Data**
-    *   **Script:** `npm run enrich:data`
-
-5.  **🔍 Build the Search Index**
-    *   **Script:** `npm run build:index`
-
-6.  **🚀 Run the Full Pipeline (Recommended)**
-    *   **Script:** `npm run build:data`
-
-7.  **🔄 Refresh the UI**
-    *   Hard refresh your browser (`Ctrl + F5` or `Cmd + Shift + R`) to see live changes.
-
 ---
 
-## 👍 Best Practices
+## 🎨 CSS Source of Truth: Tailwind CSS
 
-*   Always run the full pipeline (`npm run build:data`) after editing data.
-*   Check the terminal for any validation or enrichment errors.
-*   **Never** edit generated files like `dist/enriched-data.json` or `public/search-index.json` directly.
-*   To add a new entity type, you must add a schema, a parser script, and enrichment logic.
+The project uses **Tailwind CSS** for all styling. This utility-first framework is our single source of truth for the design system.
 
-## 🛠️ Troubleshooting
+### **1. 🏛️ Core Configuration Files**
+All styling originates from these key files. **Do not use hardcoded style values in components.**
 
-If a record is missing from the UI, check the following:
+*   `tailwind.config.js`: **The Primary Source of Truth.** This file (if it exists, or one should be created with `npx tailwindcss init`) defines the entire design system:
+    *   **Colors:** Including the `nation-` color palette (`nation-water`, `nation-fire`, etc.).
+    *   **Spacing, Fonts, Borders:** All theme values are configured here.
+*   `postcss.config.cjs`: The build configuration that enables Tailwind. It uses `@tailwindcss/postcss` for v4+ compatibility.
+*   `src/styles/tailwind.css`: The main CSS entry point where Tailwind's directives are imported.
 
-*   Confirm no schema or parse errors occurred in the terminal.
-*   Check that the `__type` field exists in both `dist/enriched-data.json` and `public/search-index.json`.
-*   Verify your client-side logic is filtering correctly using the `__type`.
-*   **Always re-run the full pipeline after making any changes.**
+### **2. 🛠️ How to Style Components**
 
-> **Summary:** Edit markdown. Run the pipeline. Refresh the UI.
+1.  **Use Utility Classes Directly in JSX:**
+    *   The primary method of styling is to apply utility classes directly in the `className` prop of your React components.
+    *   **Example:** `<div className="bg-slate-800 p-4 rounded-lg">...</div>`
 
-*As long as you follow this system, your data will remain clean, robust, searchable, and production-grade.*
+2.  **Create Reusable Components:**
+    *   Instead of creating custom CSS classes with `@apply`, encapsulate repeated styles within a React component. This is the standard "utility-first" approach.
+    *   **Example:** The `MyButton.tsx` component has the classes `bg-blue-500 hover:bg-blue-700` baked into it. To use a button, you import and use `<MyButton>`.
 
-***
-***
+3.  **Dynamic Classes:**
+    *   Use template literals to apply classes conditionally based on props or state.
+    *   **Example from `ItemCard.tsx`:**
+        ```jsx
+        const stateClasses = expanded ? 'scale-105' : 'hover:scale-105';
+        <div className={`... ${stateClasses}`}>
+        ```
 
-# 📜 CSS Source of Truth: Project Documentation
+### **3. ✅ Best Practices**
+*   **Single Source of Truth:** All colors, spacing, and fonts **must** be defined in `tailwind.config.js`. Never hardcode values like `style={{ color: '#FF0000' }}`.
+*   **Embrace Utilities:** Build complex layouts by composing simple utility classes. Avoid writing custom CSS files unless absolutely necessary for a unique, non-reusable feature.
+*   **Keep It Clean:** Use a tool like the official [Prettier Plugin for Tailwind CSS](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) to automatically sort your classes for readability.
+*   **Update the Config, Not the Code:** If the primary "water tribe blue" needs to change, update it once in `tailwind.config.js`. The change will propagate everywhere.
 
-### 🤔 What is the “CSS Source of Truth”?
-
-> The **CSS Source of Truth** is the single, canonical location in your codebase where all global and theme-level styles originate.
-
-All other style usage—from component styles to utility classes—should reference or import from this central hub. This approach ensures:
-
-*   **Consistency:** Every part of the app uses the same design language.
-*   **Maintainability:** Changes are made in one place and propagate everywhere.
-*   **Scalability:** The system grows predictably without creating conflicts.
-
-### 📁 Directory Structure
-
-All foundational styles live within the `src/styles/` directory.
-
-```text
-src/
-└── styles/
-    ├── global.css         # Global resets, typography, base styles
-    ├── tailwind.css       # (Optional) Tailwind CSS entry point
-    ├── tokens.css.ts      # Design tokens (colors, spacing, fonts)
-    └── themes/
-        ├── theme.contract.css.ts # Defines the shape/interface of a theme
-        └── darkTheme.css.ts      # An implementation of the theme contract
+### **4. troubleshooting**
+*   **Styles not applying?**
+    1.  Check that your component file is included in the `content` array in `tailwind.config.js`.
+    2.  Ensure `src/styles/tailwind.css` is imported at the top of `src/main.tsx`.
+*   **Config changes not working?**
+    *   You **must** restart the Vite development server (`npm run dev`) after making any changes to `tailwind.config.js` or `postcss.config.cjs`.
 ```
-
-### 🛠️ How to Use
-
-#### 1. 🌍 Global Styles
-Place all global resets and base element styles in `src/styles/global.css`. Import it **once** in your application's entry point (`src/main.tsx`):
-
-```tsx
-// src/main.tsx
-import './styles/global.css'; // Import global styles here
-// ... rest of the file
-```
-
-#### 2. 💎 Design Tokens & Theme Variables
-Use Vanilla Extract to define all reusable design values as tokens in `src/styles/tokens.css.ts`.
-
-```typescript
-// src/styles/tokens.css.ts
-import { createGlobalTheme } from '@vanilla-extract/css';
-
-export const vars = createGlobalTheme(':root', {
-  colors: {
-    primary: '#007BFF',
-    text: '#333333',
-  },
-  spacing: {
-    small: '4px',
-    medium: '8px',
-  },
-});
-```
-
-#### 3. 🧩 Component Styles
-Co-locate component styles using `.css.ts` files. **Always** import variables from the source of truth (`tokens.css.ts`).
-
-```typescript
-// src/components/Button/Button.css.ts
-import { style } from '@vanilla-extract/css';
-import { vars } from '../../styles/tokens.css.ts'; // Import from the source!
-
-export const button = style({
-  padding: `${vars.spacing.medium} ${vars.spacing.large}`,
-  backgroundColor: vars.colors.primary,
-  border: 'none',
-});
-```
-
-### ✅ Best Practices
-
-*   🚫 **Never duplicate values.** Always import from `tokens.css.ts` or theme files.
-*   📂 **Keep global styles contained.** All foundational styles must live in `src/styles/`.
-*   🔗 **Reference, don't re-declare.** Component styles should only reference tokens, never hardcoded values like `#FFFFFF`.
-*   🎯 **Update the source first.** When a design value changes, update `tokens.css.ts`.
-*   ✍️ **Document your tokens.** Use comments or JSDoc to explain the purpose of each token.
-
-### ✨ Example: Adding a New Color
-
-1.  **Add the token to the source of truth:**
-    ```typescript
-    // src/styles/tokens.css.ts
-    export const vars = createGlobalTheme(':root', {
-      colors: {
-        // ... existing colors
-        success: '#28A745', // ✨ New color added here
-      },
-    });
-    ```
-2.  **Use the new token in a component:**
-    ```typescript
-    // src/components/Alert/Alert.css.ts
-    import { vars } from '../../styles/tokens.css.ts';
-
-    export const successAlert = style({
-      backgroundColor: vars.colors.success, // ✅ Use the new token
-    });
-    ```
-
-### 🔧 Troubleshooting
-*   **Styles not applying?** → Double-check your import paths.
-*   **Theme not switching?** → Ensure the correct theme class name is on your app's root element.
-*   **Token not updating?** → Make sure you are importing the token, not using a duplicated value.
-
-***
-***
-
-## 🍃 Tailwind CSS v4+ Setup Guide (Vite + React)
-
-### 1. 📦 Install Required Packages
-
-```bash
-npm install -D tailwindcss @tailwindcss/postcss autoprefixer
-```
-*   `tailwindcss`: The core Tailwind library.
-*   `@tailwindcss/postcss`: The **new** PostCSS plugin for Tailwind v4+.
-*   `autoprefixer`: For vendor prefixing.
-
-### 2. ⚙️ Configure PostCSS
-
-Create or update `postcss.config.cjs`:
-
-```javascript
-// postcss.config.cjs
-module.exports = {
-  plugins: {
-    '@tailwindcss/postcss': {},
-    autoprefixer: {},
-  },
-};
-```
-> ⚠️ **Important:** For Tailwind v4+, you must use `@tailwindcss/postcss`. Do **not** use `tailwindcss` directly as a PostCSS plugin.
-
-### 3. 📝 Create Tailwind CSS Entry File
-Create `src/styles/tailwind.css`:
-
-```css
-@import "tailwindcss";
-```
-
-### 4. 📥 Import Tailwind in Your App
-Add this to the top of your main entry file (e.g., `src/main.tsx`):
-
-```tsx
-import './styles/tailwind.css';
-```
-
-### 5. ⚡ Configure Vite (Optional)
-This is not strictly required but can improve HMR.
-
-```bash
-npm install -D @tailwindcss/vite
-```
-Then, update `vite.config.ts`:
-```typescript
-// vite.config.ts
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [tailwindcss(), react()],
-})
-```
-
-### 6. ✅ Test Tailwind
-Add an element with Tailwind classes (e.g., `bg-blue-500 text-white p-4`) to confirm it works.
-
-### 🛠️ Troubleshooting
-*   **Error about `tailwindcss` as a plugin?** → You are using the old v3 config. Switch to `@tailwindcss/postcss` in `postcss.config.cjs`.
-*   **Styles not appearing?** → Ensure `tailwind.css` is imported in your main app file.
-*   **Config changes not working?** → Restart your dev server.
-
-### 🎨 (Optional) Customization
-Run `npx tailwindcss init` to generate a `tailwind.config.js` for custom themes and plugins.

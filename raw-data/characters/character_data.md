@@ -1,6 +1,3 @@
-
-Here are the completed templates based on the provided character data.
-
 #<1> AANG
 
 Short Template (Card View)
