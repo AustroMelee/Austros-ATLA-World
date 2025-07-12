@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Firebending",
+    "slug": "firebending",
+    "description": "Firebending is the pyrokinetic ability to control and produce fire. Practiced by the Fire Nation and Sun Warriors, it is the element of power, emphasizing will, energy, and aggression. The first firebenders learned from dragons and the sun. Firebending is unique in that it can generate its own element.",
+    "element": "fire",
+    "source": "Sun",
+    "learnedFrom": "Dragons",
+    "alternateStyles": ["Combustionbending", "Lightning generation", "Lightning redirection"],
+    "tags": ["fire nation", "power", "aggression", "energy"],
+    "synonyms": ["Pyrokinesis"],
+    "relations": [],
+    "notableTechniques": [
+      "Blazing rings and arcs",
+      "Blocking fire",
+      "Fan the flame",
+      "Fire blade",
+      "Fire bomb",
+      "Fire circle",
+      "Fire comet",
+      "Fire dropkick",
+      "Fire fists",
+      "Fire knives",
+      "Fire lashes",
+      "Fire manipulation",
+      "Fire missiles",
+      "Fire pinwheel",
+      "Fire stream",
+      "Fire whip",
+      "Jet propulsion",
+      "Lightning generation",
+      "Lightning redirection",
+      "Shield of fire",
+      "Wall of flames",
+      "Combustionbending",
+      "Blue fire",
+      "Breath of fire"
+    ],
+    "__type": "bending"
+  }
+]

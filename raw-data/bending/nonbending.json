@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Nonbending",
+    "slug": "nonbending",
+    "description": "Nonbenders are individuals in the Avatar universe who cannot bend any of the four elements but contribute through other abilities such as martial arts, chi-blocking, technology, or leadership. Nonbenders play crucial roles in society, politics, and conflict, often compensating for their lack of bending with unique skills.",
+    "tags": ["nonbender", "martial arts", "chi-blocking", "technology", "leadership"],
+    "synonyms": ["nonbender"],
+    "relations": [],
+    "notableSkills": [
+      "Martial arts",
+      "Chi-blocking",
+      "Technology expertise",
+      "Leadership",
+      "Political influence",
+      "Cultural preservation"
+    ],
+    "notableCharacters": [
+      "Sokka",
+      "Asami Sato",
+      "President Raiko",
+      "Varrick",
+      "Zhu Li Moon",
+      "Hiroshi Sato",
+      "The Lieutenant",
+      "Air Acolytes",
+      "Bumi (Aang's son)",
+      "Ru",
+      "Yaling",
+      "Tonraq",
+      "Suki",
+      "Ty Lee"
+    ],
+    "__type": "bending"
+  }
+]

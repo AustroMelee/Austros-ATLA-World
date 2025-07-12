@@ -2,11 +2,12 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import enrichConfig from './enrich-config.mjs';
+import { toSlug } from './slug-utils.mjs';
 
 const RAW_DATA_ROOT = path.resolve('raw-data');
 const ENRICHED_PATH = path.resolve('dist/enriched-data.json');
 
-// Recursively find all .json files under a directory
+// Recursively find all .json files under a directory, excluding /schema/
 async function findJsonFilesRecursive(dir) {
   let results = [];
   let entries = [];
@@ -18,8 +19,14 @@ async function findJsonFilesRecursive(dir) {
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
+      // Exclude any directory named 'schema'
+      if (entry.name.toLowerCase() === 'schema') continue;
       results = results.concat(await findJsonFilesRecursive(fullPath));
-    } else if (entry.isFile() && entry.name.endsWith('.json')) {
+    } else if (
+      entry.isFile() &&
+      entry.name.endsWith('.json') &&
+      !fullPath.includes(`${path.sep}schema${path.sep}`)
+    ) {
       results.push(fullPath);
     }
   }
@@ -83,19 +90,23 @@ function detectType(record, file) {
 }
 
 async function main() {
-  const jsonFiles = await findJsonFilesRecursive(RAW_DATA_ROOT);
-  const grouped = {};
-  const typeCounts = {};
+  // Only process raw-data/foods.json and raw-data/characters.json
+  const foodFile = path.resolve('raw-data/foods.json');
+  const characterFile = path.resolve('raw-data/characters.json');
+  const filesToProcess = [foodFile, characterFile];
   let skipped = 0;
-  for (const file of jsonFiles) {
+  let enrichedFoods = [];
+  let enrichedCharacters = [];
+  for (const file of filesToProcess) {
+    const isFood = file.endsWith(`${path.sep}foods.json`);
+    const isCharacter = file.endsWith(`${path.sep}characters.json`);
     let records = [];
     try {
       const content = await fs.readFile(file, 'utf-8');
       const parsed = JSON.parse(content);
-      if (Array.isArray(parsed)) {
-        records = parsed;
-      } else {
-        records = [parsed];
+      records = Array.isArray(parsed) ? parsed : [parsed];
+      if (isFood) {
+        console.log('FOODS.JSON LOADED:', Array.isArray(records), records.length, records.slice(0, 2));
       }
     } catch (e) {
       console.warn(`[SKIP] ${file}: Failed to parse JSON: ${e.message}`);
@@ -103,33 +114,81 @@ async function main() {
       continue;
     }
     for (const record of records) {
-      const type = detectType(record, file);
-      const id = getIdentifier(record, file);
-      if (!type) {
-        console.warn(`[SKIP] ${file}: Could not determine type for record '${id}'.`);
+      // --- SCHEMA PROTECTION ---
+      if (
+        record &&
+        (record.$schema || record.properties || (typeof record.type === 'string' && record.required && record.properties))
+      ) {
+        console.warn(`[SKIP] ${file}: Detected schema object, skipping.`);
         skipped++;
         continue;
       }
-      if (!grouped[type]) grouped[type] = [];
-      const typeConfig = enrichConfig[type];
-      let enriched;
+      // --- BEGIN: Schema normalization for food ---
+      let normalized = { ...record };
       try {
-        enriched = enrichRecord(record, typeConfig, id, type);
+        if (!normalized.name || !normalized.description) {
+          console.warn(`[SKIP] ${file}: Missing required name or description for record.`);
+          skipped++;
+          continue;
+        }
+        // Skip region summary records for foods
+        if (isFood && typeof normalized.name === 'string' && normalized.name.toLowerCase().includes('food data')) {
+          console.warn(`[SKIP] ${file}: Skipping region summary record '${normalized.name}'.`);
+          skipped++;
+          continue;
+        }
+        // Auto-generate id (slug of name, collision-safe)
+        const targetArr = isFood ? enrichedFoods : isCharacter ? enrichedCharacters : null;
+        if (!targetArr) continue;
+        if (!normalized.id) {
+          const baseSlug = typeof normalized.name === 'string' ? toSlug(normalized.name) : '';
+          let slug = baseSlug;
+          let n = 2;
+          const existingIds = new Set(targetArr.map(r => r.id));
+          while (slug && existingIds.has(slug)) {
+            slug = `${baseSlug}-${n++}`;
+          }
+          normalized.id = slug;
+          console.log(`[AUTO-FIX] Set id for ${isFood ? 'food' : 'character'} '${normalized.name}': ${slug}`);
+        }
+        if (!normalized.type) {
+          normalized.type = isFood ? 'food' : isCharacter ? 'character' : '';
+          console.log(`[AUTO-FIX] Set type for ${isFood ? 'food' : 'character'} '${normalized.name}': ${normalized.type}`);
+        }
+        if (!normalized.slug) {
+          normalized.slug = normalized.id;
+          console.log(`[AUTO-FIX] Set slug for ${isFood ? 'food' : 'character'} '${normalized.name}': ${normalized.slug}`);
+        }
+        // Optional fields (add more as needed)
+        if (isFood) {
+          if (!Array.isArray(normalized.tags)) normalized.tags = [];
+          if (typeof normalized.region !== 'string') normalized.region = null;
+          if (typeof normalized.image !== 'string') normalized.image = null;
+          if (!Array.isArray(normalized.aliases)) normalized.aliases = [];
+          if (!Array.isArray(normalized.sources)) normalized.sources = [];
+        }
+        if (isCharacter) {
+          if (!Array.isArray(normalized.tags)) normalized.tags = [];
+          if (typeof normalized.nation !== 'string') normalized.nation = '';
+          if (typeof normalized.bending !== 'string') normalized.bending = '';
+          if (!Array.isArray(normalized.aliases)) normalized.aliases = [];
+          if (!Array.isArray(normalized.sources)) normalized.sources = [];
+        }
+        targetArr.push(normalized);
       } catch (err) {
-        console.warn(`[ENRICH ERROR] ${file}: ${id}: ${err.message}`);
-        enriched = record;
+        console.error(`[ENRICH ERROR] ${file}: ${normalized.name || 'unknown'}: ${err.message}`);
+        skipped++;
+        continue;
       }
-      grouped[type].push(enriched);
-      typeCounts[type] = (typeCounts[type] || 0) + 1;
     }
   }
+  // Write only enriched foods and characters to /dist/enriched-data.json
   await fs.mkdir(path.dirname(ENRICHED_PATH), { recursive: true });
-  await fs.writeFile(ENRICHED_PATH, JSON.stringify(grouped, null, 2));
+  await fs.writeFile(ENRICHED_PATH, JSON.stringify({ food: enrichedFoods, characters: enrichedCharacters }, null, 2));
   // Print summary
   console.log('Enrichment complete. Type summary:');
-  for (const t of Object.keys(typeCounts)) {
-    console.log(`  ${t}: ${typeCounts[t]} records`);
-  }
+  console.log(`  food: ${enrichedFoods.length} records`);
+  console.log(`  characters: ${enrichedCharacters.length} records`);
   if (skipped) {
     console.log(`Skipped ${skipped} files/records due to errors or missing type.`);
   }

@@ -1,15 +1,11 @@
 import React from 'react';
+import * as styles from './Search.css';
 
 const Search: React.FC = () => (
-  <main className="container mx-auto p-8">
-    <h1 className="text-2xl font-bold mb-4">Search Encyclopedia</h1>
-    <input
-      type="text"
-      placeholder="Search for characters, bending, locations, etc..."
-      aria-label="Search encyclopedia"
-    />
-    {/* TODO: Connect to FlexSearch index and display results */}
-    <div className="mt-8 text-gray-500">Search results will appear here.</div>
+  <main className={styles.container}>
+    <h1 className={styles.title}>Search Encyclopedia</h1>
+    {/* TODO: Implement search logic */}
+    <div className={styles.body}>Search results will appear here.</div>
   </main>
 );
 

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Airbending",
+    "slug": "airbending",
+    "description": "Airbending is the aerokinetic ability to control and manipulate air. Practiced by the Air Nomads, it is the element of freedom, emphasizing detachment, flexibility, and pacifism. Airbenders use circular, evasive movements and are known for their agility and defensive style. The first airbenders learned from flying bison.",
+    "element": "air",
+    "source": "Air",
+    "learnedFrom": "Flying bison",
+    "alternateStyles": ["Flight", "Spiritual projection"],
+    "tags": ["air nomad", "freedom", "defensive", "agility"],
+    "synonyms": ["Aerokinesis"],
+    "relations": [],
+    "notableTechniques": [
+      "Air ball",
+      "Air blast",
+      "Air bomb",
+      "Air cushion",
+      "Air manipulation",
+      "Air punch/kick",
+      "Air shield",
+      "Air swipe",
+      "Air wheel",
+      "Breath of wind",
+      "Cannonball",
+      "Directed funnel",
+      "Enhanced agility",
+      "Enhanced speed",
+      "Gale slice",
+      "Gliding takeoff",
+      "Heat regulation",
+      "Sound manipulation",
+      "Suffocation/asphyxiation",
+      "Tornado",
+      "Vacuum/airless void",
+      "Air scooter",
+      "Cloudbending",
+      "Flight",
+      "Spiritual projection"
+    ],
+    "__type": "bending"
+  }
+]

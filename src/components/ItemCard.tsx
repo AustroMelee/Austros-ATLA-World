@@ -1,21 +1,34 @@
 import * as styles from './ItemCard.css';
 import React from 'react';
-import type { EnrichedCharacter, EnrichedBending, EnrichedFauna, EnrichedFood, EnrichedLocation, EnrichedSpiritWorld } from '../types';
+import type { EnrichedRecord } from '../types';
+import { Link } from 'react-router-dom';
 
 type ItemCardProps = {
-  item: EnrichedCharacter | EnrichedBending | EnrichedFauna | EnrichedFood | EnrichedLocation | EnrichedSpiritWorld;
+  item: EnrichedRecord & { to?: string };
 };
 
 export default function ItemCard({ item }: ItemCardProps) {
-  return (
-    <div className={styles.card}>
+  const cardContent = (
+    <>
       <div className={styles.title}>{item.name}</div>
       <div>{item.description}</div>
-      <div className={styles.tags}>
-        {item.tags?.map(tag => (
-          <span key={tag}>{tag}</span>
-        ))}
-      </div>
-    </div>
+      {'tags' in item && Array.isArray(item.tags) && (
+        <div className={styles.tags}>
+          {item.tags.map(tag => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+      )}
+    </>
   );
+
+  if (item.to) {
+    return (
+      <Link to={item.to} className={styles.card}>
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return <div className={styles.card}>{cardContent}</div>;
 }

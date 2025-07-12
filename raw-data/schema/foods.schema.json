@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Food",
+  "type": "object",
+  "required": ["id", "name", "description", "type", "slug"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier for the food record (slug or UUID, not just the name)." },
+    "name": { "type": "string", "description": "Canonical name of the food." },
+    "description": { "type": "string", "description": "Description of the food (Markdown allowed)." },
+    "type": { "type": "string", "enum": ["food"], "description": "Always 'food' for this domain." },
+    "slug": { "type": "string", "description": "URL-safe slug for the food record (usually same as id)." },
+    "tags": { "type": "array", "items": { "type": "string" }, "description": "Optional tags for filtering/categorization.", "default": [] },
+    "region": { "type": ["string", "null"], "description": "Nation or region of origin." },
+    "image": { "type": ["string", "null"], "description": "Relative path to image, if available." },
+    "aliases": { "type": "array", "items": { "type": "string" }, "description": "Alternate names for the food.", "default": [] },
+    "sources": { "type": "array", "items": { "type": "string" }, "description": "Source references (episode, comic, etc.).", "default": [] }
+  },
+  "additionalProperties": false
+}

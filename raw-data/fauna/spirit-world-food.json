@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Spirit World cuisine",
+    "slug": "spirit-world-cuisine",
+    "description": "Spirit World cuisine consists mainly of naturally occurring fruits and dishes inspired by the four nations. Spirits rarely need to eat, and spirit foods do not contribute to weight gain or loss. Dishes are often whimsical or influenced by human visitors.",
+    "tags": ["spirit world", "fruit", "inspired"],
+    "synonyms": ["Spirit World food"],
+    "relations": [],
+    "notableDishes": [
+      "spirit cake",
+      "spirit cupcake",
+      "spirit icing"
+    ],
+    "commonIngredients": [
+      "spirit blueberry",
+      "spirit kiwi",
+      "spirit strawberry"
+    ],
+    "__type": "food"
+  }
+]

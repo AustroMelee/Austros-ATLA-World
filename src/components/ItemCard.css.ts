@@ -8,12 +8,15 @@ export const card = style({
   padding: vars.spacing.md,
   boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
   transition: 'box-shadow .2s',
-  ':hover': {
-    boxShadow: '0 4px 16px rgba(0,0,0,0.10)',
-  },
   display: 'flex',
   flexDirection: 'column',
   gap: vars.spacing.sm,
+  textDecoration: 'none', // For Link component
+  color: 'inherit', // For Link component
+  ':hover': {
+    boxShadow: '0 4px 16px rgba(0,0,0,0.10)',
+    borderColor: vars.color.accent,
+  },
 });
 export const title = style({
   fontWeight: 700,

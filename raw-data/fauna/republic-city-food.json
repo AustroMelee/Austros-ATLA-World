@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Republic City cuisine",
+    "slug": "republic-city-cuisine",
+    "description": "Republic City cuisine is a fusion of foods from all nations, with a focus on convenience and commercial preparation. Fast-paced city life has led to the popularity of instant noodles, snack cakes, and street food. Many dishes are adaptations of traditional foods from other nations, often with unique twists.",
+    "tags": ["republic city", "fusion", "convenience", "street food"],
+    "synonyms": ["United Republic of Nations food"],
+    "relations": [],
+    "notableDishes": [
+      "beef jerky",
+      "crispy squid balls",
+      "cupcakes",
+      "dumplings",
+      "flamey-o instant noodles",
+      "lobster crab chowder",
+      "octopus fritters",
+      "pepper jelly",
+      "popcorn",
+      "ramen",
+      "roasted meat on sticks",
+      "rock crab soufflé",
+      "seaweed noodles",
+      "sesame-dried sticks",
+      "spicy bean cakes",
+      "spicy pickled kelp",
+      "strawberry pie",
+      "street gruel",
+      "turkey duck skewers",
+      "turtle crab noodles",
+      "varri-cake"
+    ],
+    "commonIngredients": [
+      "bread",
+      "cherries",
+      "chili pepper",
+      "eggs",
+      "garlic",
+      "jellynemone",
+      "karashi",
+      "lemon",
+      "lobster crab",
+      "mint",
+      "molasses",
+      "potatoes",
+      "rice",
+      "sesame",
+      "sugar",
+      "wasabi"
+    ],
+    "__type": "food"
+  }
+]

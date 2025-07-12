@@ -6,105 +6,66 @@ import process from 'process';
 const RAW_DATA_ROOT = path.resolve('raw-data');
 const VERBOSE = process.argv.includes('--verbose');
 
-function parseFrontmatter(md) {
-  if (!md.startsWith('---')) return { frontmatter: null, body: md };
-  const end = md.indexOf('---', 3);
-  if (end === -1) return { frontmatter: null, body: md };
-  const yaml = md.slice(3, end).trim();
-  const body = md.slice(end + 3).replace(/^\s*\n/, '');
-  try {
-    // Simple YAML parser (no dependencies)
-    const obj = {};
-    for (const line of yaml.split(/\r?\n/)) {
-      if (!line.trim() || line.trim().startsWith('#')) continue;
-      const idx = line.indexOf(':');
-      if (idx === -1) continue;
-      const key = line.slice(0, idx).trim().toLowerCase();
-      let value = line.slice(idx + 1).trim();
-      // Try to parse arrays (comma-separated)
-      if (value.startsWith('[') && value.endsWith(']')) {
-        value = value.slice(1, -1).split(',').map(v => v.trim());
-      }
-      obj[key] = value;
-    }
-    return { frontmatter: obj, body };
-  } catch (e) {
-    return { frontmatter: 'MALFORMED', body: md };
-  }
+// Optionally, a canonical list of known character names (add more as needed)
+const KNOWN_CHARACTERS = [
+  'Avatar Aang', 'Katara', 'Sokka', 'Toph Beifong', 'Zuko', 'Avatar Korra', 'Mako', 'Bolin', 'Asami Sato', 'Tenzin',
+  'Appa', 'Momo', 'Suki', 'Uncle Iroh', 'Azula', 'Fire Lord Ozai', 'Lin Beifong', 'Jinora', 'Naga', 'Pabu',
+  'Chief Hakoda', 'Tonraq', 'Unalaq', 'Eska and Desna', 'Fire Lord Izumi', 'Ursa', 'Fire Lord Azulon', 'Prince Lu Ten',
+  'The Great Sage', 'Shyu', 'Ran and Shaw', 'Combustion Man', 'Yon Rha', 'Kiyi', 'Princess Yue', 'Bato', 'Chief Arnook',
+  'Kanna', 'Yagoda', 'Hahn', 'Hama'
+];
+
+function isRealCharacterName(name) {
+  if (!name) return false;
+  const lower = name.toLowerCase();
+  if (lower.match(/character|list|overview|note|data/)) return false;
+  if (name.trim().split(/\s+/).length > 3) return false;
+  if (KNOWN_CHARACTERS.length > 0 && !KNOWN_CHARACTERS.includes(name.trim())) return false;
+  return true;
 }
 
-async function processMdFile(mdPath) {
-  const base = path.basename(mdPath, '.md');
-  const dir = path.dirname(mdPath);
-  const jsonPath = path.join(dir, base + '.json');
+function parseCharacterList(md) {
+  const lines = md.split(/\r?\n/);
+  const characterEntries = [];
+  let current = null;
+  for (let line of lines) {
+    const match = line.match(/^([A-Za-z .'-]+):\s*(.+)$/);
+    if (match) {
+      if (current) characterEntries.push(current);
+      current = { name: match[1].trim(), description: match[2].trim() };
+    } else if (current && line.trim() && !/^\s*[-*#]/.test(line)) {
+      current.description += ' ' + line.trim();
+    }
+  }
+  if (current) characterEntries.push(current);
+  // Stricter filter: only real character names
+  return characterEntries.filter(c => isRealCharacterName(c.name));
+}
+
+async function processCharacterMdFile(mdPath, outPath) {
   let status = 'OK';
-  let warnings = [];
   let error = null;
-  let output = {};
+  let output = [];
   try {
     const raw = await fs.readFile(mdPath, 'utf-8');
-    const { frontmatter, body } = parseFrontmatter(raw);
-    if (frontmatter === 'MALFORMED') {
-      error = 'Malformed frontmatter';
-      output = { name: base, description: body.trim() };
-    } else if (frontmatter) {
-      output = { ...frontmatter };
-      // Warn on unknown fields (not name, description, body)
-      for (const k of Object.keys(frontmatter)) {
-        if (!['name', 'description', 'body'].includes(k)) {
-          warnings.push(`Unknown field: ${k}`);
-        }
-      }
-      if (!output.name) {
-        output.name = base;
-        warnings.push('Missing name; set from filename');
-      }
-      if (output.description && body.trim()) {
-        output.body = body.trim();
-      } else if (!output.description && body.trim()) {
-        output.description = body.trim();
-      }
-    } else {
-      output = { name: base, description: raw.trim() };
-    }
-    await fs.writeFile(jsonPath, JSON.stringify(output, null, 2));
+    output = parseCharacterList(raw);
+    await fs.writeFile(outPath, JSON.stringify(output, null, 2));
   } catch (e) {
     status = 'ERROR';
     error = e.message;
   }
-  let msg = `[${status}] ${mdPath}`;
+  let msg = `[${status}] ${mdPath} -> ${outPath}`;
   if (error) msg += ` | Error: ${error}`;
-  if (warnings.length) msg += ` | Warnings: ${warnings.join('; ')}`;
-  console.log(msg);
   if (VERBOSE && status === 'OK') {
     console.log(JSON.stringify(output, null, 2));
   }
-}
-
-async function findMdFilesRecursive(dir) {
-  let results = [];
-  let entries = [];
-  try {
-    entries = await fs.readdir(dir, { withFileTypes: true });
-  } catch {
-    return results;
-  }
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      results = results.concat(await findMdFilesRecursive(fullPath));
-    } else if (entry.isFile() && entry.name.endsWith('.md')) {
-      results.push(fullPath);
-    }
-  }
-  return results;
+  console.log(msg);
 }
 
 async function main() {
-  const mdFiles = await findMdFilesRecursive(RAW_DATA_ROOT);
-  for (const mdFile of mdFiles) {
-    await processMdFile(mdFile);
-  }
+  const charMd = path.join(RAW_DATA_ROOT, 'characters', 'character data 1.md');
+  const charJson = path.join(RAW_DATA_ROOT, 'characters', 'characters.json');
+  await processCharacterMdFile(charMd, charJson);
 }
 
-main(); 
+main();

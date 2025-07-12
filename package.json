@@ -1,5 +1,5 @@
 {
-  "name": "react-tailwind-baseline",
+  "name": "react-vanilla-extract-baseline",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -9,16 +9,17 @@
     "preview": "vite preview",
     "lint": "eslint src --max-warnings=0",
     "lint:fix": "eslint src --fix --max-warnings=0",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "validate:data": "node scripts/validate-data.mjs",
+    "enrich:data": "node scripts/enrich-data.mjs",
+    "build:index": "node scripts/build-index.mjs",
+    "build:data": "npm run validate:data && npm run enrich:data && npm run build:index"
   },
   "devDependencies": {
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "@vanilla-extract/vite-plugin": "^5.1.0",
     "@vitejs/plugin-react": "^4.2.0",
-    "typescript": "^5.8.3",
-    "vite": "^5.4.19",
-    "vite-plugin-pwa": "^1.0.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.1.0",
@@ -26,13 +27,19 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "typescript": "^5.8.3",
+    "vite": "^5.4.19",
+    "vite-plugin-pwa": "^1.0.1"
   },
   "dependencies": {
-    "flexsearch": "0.8.205",
+    "@vanilla-extract/css": "^1.17.4",
+    "ajv": "^8.17.1",
+    "flexsearch": "^0.7.43",
+    "gray-matter": "^4.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "@vanilla-extract/css": "^1.17.4",
-    "react-router-dom": "^7.6.3"
+    "react-router-dom": "^6.30.1",
+    "zod": "^4.0.5"
   }
 }

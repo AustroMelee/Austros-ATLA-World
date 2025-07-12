@@ -1,0 +1,12 @@
+[
+  { "name": "Fire Flakes", "description": "Crispy, spicy chips from the Fire Nation.", "region": "fire nation" },
+  { "name": "Sea Prunes", "description": "A Water Tribe delicacy, notoriously acquired taste.", "region": "water tribe" },
+  { "name": "Komodo Sausage", "description": "Spicy sausage made from komodo chicken.", "region": "fire nation" },
+  { "name": "Mango Jerky", "description": "Dried, chewy mango snack popular with Air Nomads.", "region": "air nomad" },
+  { "name": "Moon Peaches", "description": "Sweet, juicy peaches from the Earth Kingdom.", "region": "earth kingdom" },
+  { "name": "Cactus Juice", "description": "Strange, potent drink found in the Si Wong Desert.", "region": "earth kingdom" },
+  { "name": "Momo's Fruit Pie", "description": "Pastry stuffed with assorted fruits, favorite of Momo.", "region": "air nomad" },
+  { "name": "Unagi Sushi", "description": "Freshwater eel dish, local specialty of Kyoshi Island.", "region": "earth kingdom" },
+  { "name": "Steamed Seaweed Noodles", "description": "Healthy and light, often served by the Foggy Swamp Tribe.", "region": "water tribe" },
+  { "name": "Plum Bao", "description": "Steamed buns filled with tart plum jam.", "region": "earth kingdom" }
+]

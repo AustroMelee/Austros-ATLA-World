@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Avatar Aang",
+    "description": "The main protagonist of ATLA, a young Airbender who masters all four elements to restore balance to the world.",
+    "id": "avatar-aang",
+    "slug": "avatar-aang",
+    "__type": "character"
+  },
+  {
+    "name": "Katara",
+    "description": "A compassionate waterbender from the Southern Water Tribe who helps Aang on his journey.",
+    "id": "katara",
+    "slug": "katara",
+    "__type": "character"
+  },
+  {
+    "name": "Sokka",
+    "description": "Katara’s non-bender brother, a witty warrior and strategist in ATLA.",
+    "id": "sokka",
+    "slug": "sokka",
+    "__type": "character"
+  },
+  {
+    "name": "Zuko",
+    "description": "A Fire Nation prince seeking redemption, later becoming Fire Lord in ATLA.",
+    "id": "zuko",
+    "slug": "zuko",
+    "__type": "character"
+  }
+]

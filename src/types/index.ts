@@ -42,5 +42,18 @@ export type SpiritWorldEntry = {
   description: string;
 };
 
+export type SearchFilters = {
+  tag?: string;
+  type?: string;
+  name?: string;
+  [key: string]: string | undefined;
+};
+
+export type PersonalizationState = {
+  recentSearches: string[];
+  boostedSlugs: string[];
+  // Extendable for future personalization fields
+};
+
 export * from './rawTypes';
 export * from './domainTypes';
