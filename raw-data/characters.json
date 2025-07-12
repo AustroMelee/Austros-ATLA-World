@@ -1,81 +1,172 @@
 [
-  {},
   {
     "name": "Aang",
     "nation": "Air Nomads",
     "image": "[SVG embedded image link]",
-    "description": "Aang is the fun-loving, pacifistic Avatar, the last of the Air Nomads, and the only person capable of bending all four elements. After being frozen for a century, he must master water, earth, and fire to defeat Fire Lord Ozai and end the Hundred Year War. Expanded Template (Detailed View)",
+    "description": "Aang is the fun-loving, pacifistic Avatar, the last of the Air Nomads, and the only person capable of bending all four elements. After being frozen for a century, he must master water, earth, and fire to defeat Fire Lord Ozai and end the Hundred Year War.",
     "bending": "Airbending (Master), Waterbending, Earthbending, Firebending, Energybending",
     "role": "Avatar, Airbending Master, Co-founder of the United Republic of Nations",
     "overview": "As the Avatar of his time and the last surviving airbender, Aang is tasked with the monumental burden of ending the century-long war waged by the Fire Nation. After being discovered in an iceberg, he embarks on a journey with his friends Katara and Sokka to master the elements. Despite the immense pressure and the loss of his people, Aang remains a kind and goofy kid at heart, ultimately succeeding in his mission by pioneering the use of energybending to defeat Fire Lord Ozai without taking his life.",
-    "highlights": " Being freed from an iceberg by Katara and Sokka and embarking on a quest to master the four elements to defeat the Fire Lord. Learning to control the powerful Avatar State and later being taught the ancient art of energybending by a lion turtle. Defeating Fire Lord Ozai by taking away his bending, ending the Hundred Year War, and co-founding the United Republic of Nations with Fire Lord Zuko.",
-    "traits": "",
-    "quotes": " \"When we hit our lowest point, we are open to the greatest change.\" \"The past can be a great teacher.\"",
-    "relationships": "Katara (close friend, love interest, and later wife), Sokka (close friend), Toph (friend and earthbending teacher), Zuko (enemy turned friend and firebending teacher), Appa (lifelong animal companion), Momo (pet lemur), Monk Gyatso (guardian and father figure), Avatar Roku (past life and spiritual guide)."
+    "highlights": [
+      "Being freed from an iceberg by Katara and Sokka and embarking on a quest to master the four elements to defeat the Fire Lord",
+      "Learning to control the powerful Avatar State and later being taught the ancient art of energybending by a lion turtle",
+      "Defeating Fire Lord Ozai by taking away his bending, ending the Hundred Year War, and co-founding the United Republic of Nations with Fire Lord Zuko"
+    ],
+    "traits": [
+      "Fun-loving and Adventurous: He possesses a deep sense of humor and craves the stimulation of new people and places, often taking detours that frustrate his allies"
+    ],
+    "pacifistic_and_compassionate": "Raised with a deep respect for all life, Aang is a vegetarian who is reluctant to fight and always seeks non-violent solutions to conflict.",
+    "burdened_but_resilient": "He carries the heavy mental burden of his duties and the guilt of his people's fate, but ultimately faces his responsibilities with courage and resolve.",
+    "quotes": [
+      "\"When we hit our lowest point, we are open to the greatest change",
+      "\"  \"The past can be a great teacher",
+      "\""
+    ],
+    "relationships": [
+      "Katara (close friend, love interest, and later wife), Sokka (close friend), Toph (friend and earthbending teacher), Zuko (enemy turned friend and firebending teacher), Appa (lifelong animal companion), Momo (pet lemur), Monk Gyatso (guardian and father figure), Avatar Roku (past life and spiritual guide)"
+    ],
+    "__type": "character",
+    "shortDescription": "Aang is the fun-loving, pacifistic Avatar, the last of the Air Nomads, and the only person capable of bending all four elements. After being frozen for a century, he must master water, earth, and fire to defeat Fire Lord Ozai and end the Hundred Year War."
   },
   {
     "name": "Katara",
     "nation": "Southern Water Tribe",
     "image": "[SVG embedded image link]",
-    "description": "A powerful and compassionate waterbending master from the Southern Water Tribe who discovers the Avatar. She serves as the moral compass for the group and Aang's waterbending teacher, growing into one of the world's most formidable benders and healers. Expanded Template (Detailed View)",
+    "description": "A powerful and compassionate waterbending master from the Southern Water Tribe who discovers the Avatar. She serves as the moral compass for the group and Aang's waterbending teacher, growing into one of the world's most formidable benders and healers.",
     "bending": "Waterbending (Master), Healing, Bloodbending",
     "role": "Waterbending Master, Healer, Avatar's Waterbending Teacher",
     "overview": "Katara is a fiercely determined and caring waterbender who, alongside her brother Sokka, finds and frees Aang from an iceberg. She becomes a maternal figure for the group and Aang's first bending teacher, guiding him on his journey. Her mastery of waterbending, including the rare ability to heal, makes her a vital asset in the fight against the Fire Nation and a cornerstone of Team Avatar.",
-    "highlights": " Discovering Aang in an iceberg and leaving her home in the South Pole to help him save the world. Training under Master Pakku to become a waterbending master and later discovering her powerful healing abilities. Confronting the man who killed her mother and, in the final battle, defeating the unstable Princess Azula.",
+    "highlights": [
+      "Discovering Aang in an iceberg and leaving her home in the South Pole to help him save the world",
+      "Training under Master Pakku to become a waterbending master and later discovering her powerful healing abilities",
+      "Confronting the man who killed her mother and, in the final battle, defeating the unstable Princess Azula"
+    ],
     "traits": "",
-    "quotes": " \"I will never, ever, turn my back on people who need me!\" \"But I know you're going to be okay.\"",
-    "relationships": "Aang (close friend, love interest, and later husband), Sokka (older brother), Hakoda (father), Kya (mother, deceased), Kanna (grandmother), Pakku (master and step-grandfather), Zuko (enemy turned close friend), Toph (close friend)."
+    "compassionate_and_motherly": "Possesses a great sense of justice and compassion for others, often acting as a fiercely protective and nurturing figure to her friends.  Determined and Strong-willed: Morally and emotionally driven, she is resolute in her quest to help others and master her abilities, never turning her back on those in need.",
+    "fiery_and_passionate": "Despite her kindness, she has a nasty temper and can be overly domineering and self-righteous when provoked.",
+    "quotes": [
+      "\"I will never, ever, turn my back on people who need me!\"  \"But I know you're going to be okay",
+      "\""
+    ],
+    "relationships": [
+      "Aang (close friend, love interest, and later husband), Sokka (older brother), Hakoda (father), Kya (mother, deceased), Kanna (grandmother), Pakku (master and step-grandfather), Zuko (enemy turned close friend), Toph (close friend)"
+    ],
+    "__type": "character",
+    "shortDescription": "A powerful and compassionate waterbending master from the Southern Water Tribe who discovers the Avatar. She serves as the moral compass for the group and Aang's waterbending teacher, growing into one of the world's most formidable benders and healers."
   },
   {
     "name": "Sokka",
     "nation": "Southern Water Tribe",
     "image": "[SVG embedded image link]",
-    "description": "A warrior from the Southern Water Tribe and Katara's older brother who, despite being a non-bender, serves as Team Avatar's primary strategist. He provides much of the group's comic relief, relying on his wit, sarcasm, and trusty boomerang. Expanded Template (Detailed View)",
+    "description": "A warrior from the Southern Water Tribe and Katara's older brother who, despite being a non-bender, serves as Team Avatar's primary strategist. He provides much of the group's comic relief, relying on his wit, sarcasm, and trusty boomerang.",
     "bending": "Non-Bender",
     "role": "Warrior, Tactician, Chieftain (formerly), Chairman of the United Republic Council (formerly)",
     "overview": "Sokka is the pragmatic and inventive non-bender of the group, driven to prove himself a great warrior like his father. Initially skeptical and sarcastic, he grows into a master swordsman and a brilliant leader, masterminding crucial strategies like the invasion of the Fire Nation. His humor, creativity, and unwavering loyalty are essential to Team Avatar's journey and eventual victory.",
-    "highlights": " Leaving his home with Katara and Aang, becoming the team's strategist, navigator, and \"idea guy.\" Training under the swordmaster Piandao, overcoming his insecurities as a non-bender and forging his own unique \"space sword.\" Leading the invasion on the Day of Black Sun and later commanding the mission to destroy the Fire Nation's airship fleet during Sozin's Comet.",
+    "highlights": [
+      "Leaving his home with Katara and Aang, becoming the team's strategist, navigator, and \"idea guy",
+      "\"  Training under the swordmaster Piandao, overcoming his insecurities as a non-bender and forging his own unique \"space sword",
+      "\"  Leading the invasion on the Day of Black Sun and later commanding the mission to destroy the Fire Nation's airship fleet during Sozin's Comet"
+    ],
     "traits": "",
-    "quotes": " \"That's all I got. It's pretty much my whole identity. Sokka, the meat and sarcasm guy.\" \"My first girlfriend turned into the moon.\"",
-    "relationships": "Katara (younger sister), Aang (close friend), Toph (close friend), Zuko (friend and ally), Suki (girlfriend), Yue (first girlfriend, deceased), Hakoda (father), Kya (mother, deceased), Kanna (grandmother)."
+    "sarcastic_and_humorous": "The main comic relief of the group, known for his witty remarks, \"Sok-casm,\" and love of meat.",
+    "inventive_and_strategic": "Lacking bending, he relies on his keen intellect and scientific mind to create weapons, tools, and brilliant battle plans.",
+    "loyal_and_protective": "He is fiercely protective of his sister and friends, and his patriotism drives him to fight for the honor of his tribe and the world.",
+    "quotes": [
+      "\"That's all I got",
+      "It's pretty much my whole identity",
+      "Sokka, the meat and sarcasm guy",
+      "\"  \"My first girlfriend turned into the moon",
+      "\""
+    ],
+    "relationships": [
+      "Katara (younger sister), Aang (close friend), Toph (close friend), Zuko (friend and ally), Suki (girlfriend), Yue (first girlfriend, deceased), Hakoda (father), Kya (mother, deceased), Kanna (grandmother)"
+    ],
+    "__type": "character",
+    "shortDescription": "A warrior from the Southern Water Tribe and Katara's older brother who, despite being a non-bender, serves as Team Avatar's primary strategist. He provides much of the group's comic relief, relying on his wit, sarcasm, and trusty boomerang."
   },
   {
     "name": "Zuko",
     "nation": "Fire Nation",
     "image": "[SVG embedded image link]",
-    "description": "The exiled Crown Prince of the Fire Nation, recognizable by a prominent burn scar over his left eye given to him by his own father. He initially hunts the Avatar to regain his honor but undergoes a profound transformation, ultimately joining Team Avatar to restore peace. Expanded Template (Detailed View)",
+    "description": "The exiled Crown Prince of the Fire Nation, recognizable by a prominent burn scar over his left eye given to him by his own father. He initially hunts the Avatar to regain his honor but undergoes a profound transformation, ultimately joining Team Avatar to restore peace.",
     "bending": "Firebending (Master), Swordsmanship (Master)",
     "role": "Fire Lord, Firebending Master, Ambassador, Crown Prince (formerly)",
     "overview": "Zuko is the banished prince of the Fire Nation, initially obsessed with capturing the Avatar to restore his honor and his abusive father's love. Guided by his wise uncle, Iroh, Zuko's journey is a story of internal turmoil, struggle, and eventual redemption. He ultimately rejects his father's tyranny, joins Aang to become his firebending teacher, and takes his rightful place as the new Fire Lord to help build an era of peace.",
-    "highlights": " Being banished by his father and spending years hunting the Avatar, a quest that defined his early motivations and internal conflict. Betraying his Uncle Iroh in Ba Sing Se to regain his place in the Fire Nation, only to later realize his error and confront his father to join Team Avatar. Defeating his sister Azula in a final Agni Kai and being crowned Fire Lord, vowing to end the war and restore his and his nation's honor.",
+    "highlights": [
+      "Being banished by his father and spending years hunting the Avatar, a quest that defined his early motivations and internal conflict",
+      "Betraying his Uncle Iroh in Ba Sing Se to regain his place in the Fire Nation, only to later realize his error and confront his father to join Team Avatar",
+      "Defeating his sister Azula in a final Agni Kai and being crowned Fire Lord, vowing to end the war and restore his and his nation's honor"
+    ],
     "traits": "",
-    "quotes": " \"I used to think this scar marked me – the mark of the banished prince, cursed to chase the Avatar forever. But lately, I've realized I'm free to determine my own destiny, even if I'll never be free of my mark.\" \"Hello, Zuko here.\"",
-    "relationships": "Iroh (uncle, mentor, and father figure), Ozai (abusive father and enemy), Azula (younger sister and rival), Ursa (mother), Aang (enemy turned friend and student), Katara (enemy turned friend and healer), Mai (girlfriend)."
+    "conflicted_and_impatient": "Deeply scarred by his past, he is often bitter, hot-headed, and consumed by his inner turmoil as he struggles to know what is right.",
+    "determined_and_resilient": "Possesses an iron-willed defiance, pursuing his goals with relentless and inflexible determination, whether hunting the Avatar or seeking redemption.",
+    "honorable_and_empathetic": "Beneath his anger lies a deep-seated sense of morality and compassion, which ultimately guides him to reject his father's cruelty and restore his own honor.",
+    "quotes": [
+      "\"I used to think this scar marked me – the mark of the banished prince, cursed to chase the Avatar forever",
+      "But lately, I've realized I'm free to determine my own destiny, even if I'll never be free of my mark",
+      "\"  \"Hello, Zuko here",
+      "\""
+    ],
+    "relationships": [
+      "Iroh (uncle, mentor, and father figure), Ozai (abusive father and enemy), Azula (younger sister and rival), Ursa (mother), Aang (enemy turned friend and student), Katara (enemy turned friend and healer), Mai (girlfriend)"
+    ],
+    "__type": "character",
+    "shortDescription": "The exiled Crown Prince of the Fire Nation, recognizable by a prominent burn scar over his left eye given to him by his own father. He initially hunts the Avatar to regain his honor but undergoes a profound transformation, ultimately joining Team Avatar to restore peace."
   },
   {
     "name": "Toph Beifong",
     "nation": "Earth Kingdom",
     "image": "[SVG embedded image link]",
-    "description": "A blind but immensely powerful earthbending master from a wealthy Gaoling family who becomes Aang's teacher. She uses earthbending as an extension of her senses to \"see\" via vibrations in the ground and is the inventor of metalbending. Expanded Template (Detailed View)",
+    "description": "A blind but immensely powerful earthbending master from a wealthy Gaoling family who becomes Aang's teacher. She uses earthbending as an extension of her senses to \"see\" via vibrations in the ground and is the inventor of metalbending.",
     "bending": "Earthbending (Master), Metalbending (Inventor), Sandbending",
     "role": "Earthbending Master, Aang's Earthbending Teacher, Chief of Police (retired), Founder of the Metalbending Police Force",
     "overview": "Toph Beifong is an earthbending prodigy who, despite being blind since birth, became one of the most powerful benders in the world by learning from badgermoles. Rebelling against her sheltered upbringing, she runs away to join Team Avatar as Aang's tough, uncompromising earthbending teacher. Her unique mastery of the art, including her groundbreaking invention of metalbending, makes her an invaluable and legendary member of the team.",
-    "highlights": " Running away from her overprotective parents to travel with Avatar Aang and become his earthbending teacher. Inventing the art of metalbending while imprisoned in a metal cage, a skill previously thought impossible for earthbenders. Becoming the first Chief of Police in the newly formed Republic City, where she established the elite Metalbending Police Force.",
+    "highlights": [
+      "Running away from her overprotective parents to travel with Avatar Aang and become his earthbending teacher",
+      "Inventing the art of metalbending while imprisoned in a metal cage, a skill previously thought impossible for earthbenders",
+      "Becoming the first Chief of Police in the newly formed Republic City, where she established the elite Metalbending Police Force"
+    ],
     "traits": "",
-    "quotes": " \"I am the greatest earthbender in the world! Don't you two dunderheads ever forget it!\" \"There's no different angle, no clever solution, no trickity-trick that's gonna move that rock. You've gotta face it head on.\"",
-    "relationships": "Aang (student and friend), Katara (friend and occasional rival), Sokka (friend and crush), Lao and Poppy Beifong (estranged parents), Lin and Suyin (daughters)."
+    "independent_and_tough": "Fiercely independent and proud, she hates being treated as helpless due to her blindness and insists on \"carrying her own weight.\"",
+    "sarcastic_and_confrontational": "Brutally honest and direct, she has a tomboyish nature and enjoys taunting opponents and teasing her friends with her sharp wit.",
+    "perceptive_and_pragmatic": "Uses her seismic sense to detect lies and is a thoughtful, if unconventional, teacher who values a direct approach to solving problems.",
+    "quotes": [
+      "\"I am the greatest earthbender in the world! Don't you two dunderheads ever forget it!\"  \"There's no different angle, no clever solution, no trickity-trick that's gonna move that rock",
+      "You've gotta face it head on",
+      "\""
+    ],
+    "relationships": [
+      "Aang (student and friend), Katara (friend and occasional rival), Sokka (friend and crush), Lao and Poppy Beifong (estranged parents), Lin and Suyin (daughters)"
+    ],
+    "__type": "character",
+    "shortDescription": "A blind but immensely powerful earthbending master from a wealthy Gaoling family who becomes Aang's teacher. She uses earthbending as an extension of her senses to \"see\" via vibrations in the ground and is the inventor of metalbending."
   },
   {
     "name": "Azula",
     "nation": "Fire Nation",
     "image": "[SVG embedded image link]",
-    "description": "The manipulative and power-hungry princess of the Fire Nation and a firebending prodigy known for her intense blue flames and lightning generation. She is a primary antagonist to Team Avatar, whose obsession with perfection and control ultimately leads to her own mental downfall. Expanded Template (Detailed View)",
+    "description": "The manipulative and power-hungry princess of the Fire Nation and a firebending prodigy known for her intense blue flames and lightning generation. She is a primary antagonist to Team Avatar, whose obsession with perfection and control ultimately leads to her own mental downfall.",
     "bending": "Firebending (Master), Lightning Generation",
     "role": "Princess of the Fire Nation, Crown Princess (formerly), Head of the Dai Li (formerly)",
     "overview": "Azula is Zuko's younger sister, a firebending prodigy, and her father's favored child. A cunning and ruthless strategist, she orchestrates the fall of Ba Sing Se and serves as a key adversary to Team Avatar. Her relentless pursuit of power and perfection, rooted in a belief that her mother saw her as a monster, masks a deep mental instability that surfaces after being betrayed by her closest friends and defeated by her brother.",
-    "highlights": " Leading a successful coup of the Earth Kingdom capital, Ba Sing Se, by manipulating the Dai Li and nearly killing the Avatar. Being betrayed by her closest friends, Mai and Ty Lee, which triggers her descent into paranoia and madness. Defeated by Zuko and Katara in a final Agni Kai during Sozin's Comet, which results in a complete mental breakdown.",
+    "highlights": [
+      "Leading a successful coup of the Earth Kingdom capital, Ba Sing Se, by manipulating the Dai Li and nearly killing the Avatar",
+      "Being betrayed by her closest friends, Mai and Ty Lee, which triggers her descent into paranoia and madness",
+      "Defeated by Zuko and Katara in a final Agni Kai during Sozin's Comet, which results in a complete mental breakdown"
+    ],
     "traits": "",
-    "quotes": " \"Trust is for fools! Fear is the only reliable way. Even you fear me.\" \"Almost isn't good enough!\"",
-    "relationships": "Ozai (father and role model), Ursa (mother, source of resentment), Zuko (older brother and rival), Mai and Ty Lee (childhood friends whom she controlled and who later betrayed her), Iroh (uncle and enemy)."
+    "perfectionist_and_narcissistic": "Drills herself relentlessly and settles for nothing less than absolute perfection from herself and her subordinates, believing in her divine right to rule.",
+    "manipulative_and_cruel": "A brilliant tactician who uses fear and psychological manipulation to control everyone around her, showing little to no remorse for her actions.",
+    "mentally_unstable": "Her confident and composed exterior hides a fragile psyche plagued by deep-seated insecurities about her mother's love, which unravels under pressure and betrayal.",
+    "quotes": [
+      "\"Trust is for fools! Fear is the only reliable way",
+      "Even you fear me",
+      "\"  \"Almost isn't good enough!\""
+    ],
+    "relationships": [
+      "Ozai (father and role model), Ursa (mother, source of resentment), Zuko (older brother and rival), Mai and Ty Lee (childhood friends whom she controlled and who later betrayed her), Iroh (uncle and enemy)"
+    ],
+    "__type": "character",
+    "shortDescription": "The manipulative and power-hungry princess of the Fire Nation and a firebending prodigy known for her intense blue flames and lightning generation. She is a primary antagonist to Team Avatar, whose obsession with perfection and control ultimately leads to her own mental downfall."
   }
 ]

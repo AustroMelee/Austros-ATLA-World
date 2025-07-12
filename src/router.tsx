@@ -10,7 +10,6 @@ import FaunaPage from './pages/FaunaPage';
 import FoodPage from './pages/FoodPage';
 import SpiritWorldPage from './pages/SpiritWorldPage';
 import NotFound from './pages/NotFound';
-// Legacy detail page imports removed
 
 const AppRouter: React.FC = () => (
   <Router>

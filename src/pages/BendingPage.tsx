@@ -2,12 +2,14 @@ import React, { useEffect, useState, useCallback } from 'react';
 import SearchBar from '../components/SearchBar';
 import FilterPanel from '../components/FilterPanel';
 import FilterTag from '../components/FilterTag';
-import ResultsGrid from '../components/ResultsGrid';
+import EntityGrid from '../components/EntityGrid/EntityGrid';
+import CollectionsPanel from '../components/CollectionsPanel/CollectionsPanel';
 import NoResults from '../components/NoResults';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { useSearchParams } from 'react-router-dom';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
 import type { EnrichedRecord } from '../types/domainTypes';
+import { useCollectionsStore } from '../collections/collectionsStore';
 
 const BENDING_TYPE = 'bending';
 const BENDING_FILTERS = [
@@ -28,6 +30,15 @@ export default function BendingPage() {
   const [results, setResults] = useState<EnrichedRecord[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const {
+    collections,
+    selectedItem,
+    panelOpen,
+    createCollection,
+    addItemToCollection,
+    closePanel,
+  } = useCollectionsStore();
 
   useEffect(() => {
     const params: Record<string, string> = {};
@@ -94,8 +105,18 @@ export default function BendingPage() {
       ) : results.length === 0 ? (
         <NoResults />
       ) : (
-        <ResultsGrid items={results.map(item => ({...item, to: `/bending/${item.slug}`}))} />
+        <EntityGrid items={results} />
       )}
+      <CollectionsPanel
+        collections={Object.entries(collections).map(([id, col]) => ({ id, ...col }))}
+        open={panelOpen}
+        onSelect={collectionId => {
+          if (selectedItem) addItemToCollection(collectionId, selectedItem);
+          closePanel();
+        }}
+        onCreate={name => createCollection(name)}
+        onClose={closePanel}
+      />
     </main>
   );
 }

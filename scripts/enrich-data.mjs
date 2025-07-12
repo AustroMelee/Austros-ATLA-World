@@ -1,217 +1,101 @@
-// enrich-data.mjs
 import { promises as fs } from 'fs';
 import path from 'path';
-import enrichConfig from './enrich-config.mjs';
-import { toSlug } from './slug-utils.mjs';
 
-const RAW_DATA_ROOT = path.resolve('raw-data');
-const ENRICHED_PATH = path.resolve('dist/enriched-data.json');
+// Helper to create a URL-safe slug from a name
+const slugify = (str) =>
+  str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 
-// Recursively find all .json files under a directory, excluding /schema/
-async function findJsonFilesRecursive(dir) {
-  let results = [];
-  let entries = [];
-  try {
-    entries = await fs.readdir(dir, { withFileTypes: true });
-  } catch {
-    return results;
-  }
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      // Exclude any directory named 'schema'
-      if (entry.name.toLowerCase() === 'schema') continue;
-      results = results.concat(await findJsonFilesRecursive(fullPath));
-    } else if (
-      entry.isFile() &&
-      entry.name.endsWith('.json') &&
-      !fullPath.includes(`${path.sep}schema${path.sep}`)
-    ) {
-      results.push(fullPath);
-    }
-  }
-  return results;
-}
+async function enrichData() {
+  console.log('🚀 Starting data enrichment process...');
 
-function getIdentifier(record, file) {
-  return record.id || record.name || path.basename(file);
-}
+  const dataSources = [
+    { type: 'character', path: 'raw-data/characters.json' },
+    { type: 'food', path: 'raw-data/foods.json' },
+    // Add other data sources here in the future
+  ];
 
-function appendUnique(arr, values) {
-  for (const v of values) {
-    if (!arr.includes(v)) arr.push(v);
-  }
-}
+  const allEnrichedRecords = [];
 
-function enrichRecord(record, typeConfig, id, type) {
-  const enriched = { ...record };
-  if (!typeConfig) return enriched; // No enrichment rules, return as-is
-  for (const field of typeConfig.enrichFields || []) {
-    if (field === 'synonyms' && typeConfig.synonyms) {
-      const syns = typeConfig.synonyms[record.name];
-      if (syns) {
-        if (!enriched.synonyms) enriched.synonyms = [];
-        appendUnique(enriched.synonyms, syns);
-      }
-    }
-    if (field === 'tags' && typeConfig.tags) {
-      const tags = typeConfig.tags[record.name];
-      if (tags) {
-        if (!enriched.tags) enriched.tags = [];
-        appendUnique(enriched.tags, tags);
-      }
-    }
-    if (field === 'relations' && typeConfig.relations) {
-      const rels = typeConfig.relations[record.name];
-      if (rels) {
-        if (!enriched.relations) enriched.relations = [];
-        appendUnique(enriched.relations, rels);
-      }
-    }
-    // Add default if missing and defined in config
-    if (enriched[field] === undefined && typeConfig.defaults && typeConfig.defaults[field] !== undefined) {
-      enriched[field] = typeConfig.defaults[field];
-    } else if (enriched[field] === undefined) {
-      console.warn(`${id}: Missing field '${field}' for type '${type}', no default. Skipping enrichment for this field.`);
-    }
-  }
-  return enriched;
-}
-
-function detectType(record, file) {
-  // Prefer explicit type field
-  if (record && typeof record.type === 'string' && record.type.trim()) {
-    return record.type.trim();
-  }
-  // Else, use immediate parent directory name
-  const parentDir = path.basename(path.dirname(file));
-  if (parentDir) return parentDir;
-  return null;
-}
-
-async function main() {
-  // Only process raw-data/foods.json and raw-data/characters.json
-  const foodFile = path.resolve('raw-data/foods.json');
-  const characterFile = path.resolve('raw-data/characters.json');
-  const filesToProcess = [foodFile, characterFile];
-  let skipped = 0;
-  let enrichedFoods = [];
-  let enrichedCharacters = [];
-  for (const file of filesToProcess) {
-    const isFood = file.endsWith(`${path.sep}foods.json`);
-    const isCharacter = file.endsWith(`${path.sep}characters.json`);
-    let records = [];
+  for (const source of dataSources) {
+    console.log(`\nProcessing source: ${source.path}`);
+    let records;
     try {
-      const content = await fs.readFile(file, 'utf-8');
-      const parsed = JSON.parse(content);
-      records = Array.isArray(parsed) ? parsed : [parsed];
-      if (isFood) {
-        console.log('FOODS.JSON LOADED:', Array.isArray(records), records.length, records.slice(0, 2));
-      }
-    } catch (e) {
-      console.warn(`[SKIP] ${file}: Failed to parse JSON: ${e.message}`);
-      skipped++;
+      const fileContent = await fs.readFile(source.path, 'utf-8');
+      records = JSON.parse(fileContent);
+    } catch (error) {
+      console.error(`❌ ERROR: Could not read or parse ${source.path}. Skipping.`, error);
       continue;
     }
-    for (const record of records) {
-      // --- SCHEMA PROTECTION ---
-      if (
-        record &&
-        (record.$schema || record.properties || (typeof record.type === 'string' && record.required && record.properties))
-      ) {
-        console.warn(`[SKIP] ${file}: Detected schema object, skipping.`);
-        skipped++;
-        continue;
-      }
-      // --- BEGIN: Schema normalization for food ---
-      let normalized = { ...record };
-      try {
-        if (!normalized.name || !normalized.description) {
-          console.warn(`[SKIP] ${file}: Missing required name or description for record.`);
-          skipped++;
-          continue;
+    
+    if (!Array.isArray(records)) {
+      console.error(`❌ ERROR: Data in ${source.path} is not an array. Skipping.`);
+      continue;
+    }
+
+    const enriched = records
+      .filter(record => record && record.name) // Ensure record is not null and has a name
+      .map(record => {
+        console.log(`  -> Enriching: ${record.name}`);
+        const slug = slugify(record.name);
+
+        const baseRecord = {
+          id: slug,
+          slug: slug,
+          name: record.name,
+          description: record.description || '',
+          __type: source.type,
+          tags: record.tags || [],
+          aliases: record.aliases || [],
+          sources: record.sources || [],
+          image: record.image || null,
+        };
+
+        // Handle character-specific fields with type-checking
+        if (source.type === 'character') {
+          const charRecord = {
+            ...baseRecord,
+            nation: record.nation || 'Unknown',
+            bending: record.bending || 'Unknown',
+            role: record.role || '',
+            overview: record.overview || '',
+            relationships: record.relationships || '',
+            // Safely handle fields that might be arrays or strings
+            highlights: Array.isArray(record.highlights) ? record.highlights : (record.highlights?.split('. ') || []),
+            traits: Array.isArray(record.traits) ? record.traits : (record.traits?.split('. ') || []),
+            quotes: Array.isArray(record.quotes) ? record.quotes : (record.quotes?.split('" "') || []),
+          };
+          // Clean up quote formatting
+          charRecord.quotes = charRecord.quotes.map(q => q.replace(/"/g, '').trim()).filter(Boolean);
+          return charRecord;
         }
-        // Skip region summary records for foods
-        if (isFood && typeof normalized.name === 'string' && normalized.name.toLowerCase().includes('food data')) {
-          console.warn(`[SKIP] ${file}: Skipping region summary record '${normalized.name}'.`);
-          skipped++;
-          continue;
-        }
-        // Auto-generate id (slug of name, collision-safe)
-        const targetArr = isFood ? enrichedFoods : isCharacter ? enrichedCharacters : null;
-        if (!targetArr) continue;
-        if (!normalized.id) {
-          const baseSlug = typeof normalized.name === 'string' ? toSlug(normalized.name) : '';
-          let slug = baseSlug;
-          let n = 2;
-          const existingIds = new Set(targetArr.map(r => r.id));
-          while (slug && existingIds.has(slug)) {
-            slug = `${baseSlug}-${n++}`;
-          }
-          normalized.id = slug;
-          console.log(`[AUTO-FIX] Set id for ${isFood ? 'food' : 'character'} '${normalized.name}': ${slug}`);
-        }
-        if (!normalized.type) {
-          normalized.type = isFood ? 'food' : isCharacter ? 'character' : '';
-          console.log(`[AUTO-FIX] Set type for ${isFood ? 'food' : 'character'} '${normalized.name}': ${normalized.type}`);
-        }
-        // Set __type and remove type
-        normalized.__type = normalized.type;
-        delete normalized.type;
-        if (!normalized.slug) {
-          normalized.slug = normalized.id;
-          console.log(`[AUTO-FIX] Set slug for ${isFood ? 'food' : 'character'} '${normalized.name}': ${normalized.slug}`);
-        }
-        // Optional fields (add more as needed)
-        if (isFood) {
-          if (!Array.isArray(normalized.tags)) normalized.tags = [];
-          if (typeof normalized.region !== 'string') normalized.region = null;
-          if (typeof normalized.image !== 'string') normalized.image = null;
-          if (!Array.isArray(normalized.aliases)) normalized.aliases = [];
-          if (!Array.isArray(normalized.sources)) normalized.sources = [];
-        }
-        if (isCharacter) {
-          if (!Array.isArray(normalized.tags)) normalized.tags = [];
-          if (typeof normalized.nation !== 'string') normalized.nation = '';
-          if (typeof normalized.bending !== 'string') normalized.bending = '';
-          if (!Array.isArray(normalized.aliases)) normalized.aliases = [];
-          if (!Array.isArray(normalized.sources)) normalized.sources = [];
-          // Defensive: Use provided shortDescription, or auto-generate from description if missing/empty
-          if (typeof record.shortDescription === 'string' && record.shortDescription.trim()) {
-            normalized.shortDescription = record.shortDescription.trim();
-          } else if (typeof normalized.description === 'string') {
-            // Auto-generate: take first sentence or first 120 chars as summary
-            const desc = normalized.description.trim();
-            const firstSentence = desc.split('. ')[0];
-            normalized.shortDescription = firstSentence.length < 120 ? firstSentence : desc.slice(0, 120) + '...';
-          } else {
-            normalized.shortDescription = '';
-          }
-          normalized.expansion = {
-            fullBio: normalized.overview || normalized.description,
-            notableEpisodes: normalized.highlights ? normalized.highlights.split(/[.;\n]/).map(s => s.trim()).filter(Boolean) : [],
-            quotes: normalized.quotes ? normalized.quotes.split(/"/).map(s => s.trim()).filter(q => q.length > 10) : [],
+
+        // Handle food-specific fields
+        if (source.type === 'food') {
+          return {
+            ...baseRecord,
+            region: record.region || 'Unknown'
           };
         }
-        targetArr.push(normalized);
-      } catch (err) {
-        console.error(`[ENRICH ERROR] ${file}: ${normalized.name || 'unknown'}: ${err.message}`);
-        skipped++;
-        continue;
-      }
-    }
+
+        return baseRecord;
+      });
+      
+    allEnrichedRecords.push(...enriched);
+    console.log(`  ✅ Finished processing ${source.path}. Found ${enriched.length} valid records.`);
   }
-  // Write only enriched foods and characters to /dist/enriched-data.json
-  await fs.mkdir(path.dirname(ENRICHED_PATH), { recursive: true });
-  const allRecords = [...enrichedFoods, ...enrichedCharacters];
-  await fs.writeFile(ENRICHED_PATH, JSON.stringify(allRecords, null, 2));
-  // Print summary
-  console.log('Enrichment complete. Type summary:');
-  console.log(`  food: ${enrichedFoods.length} records`);
-  console.log(`  characters: ${enrichedCharacters.length} records`);
-  if (skipped) {
-    console.log(`Skipped ${skipped} files/records due to errors or missing type.`);
-  }
+
+  const outputPath = path.resolve(process.cwd(), 'public/enriched-data.json');
+  await fs.writeFile(outputPath, JSON.stringify(allEnrichedRecords, null, 2));
+
+  console.log(`\n✨ Enrichment complete! ${allEnrichedRecords.length} total records written to ${outputPath}.`);
 }
 
-main();
+enrichData().catch(error => {
+  console.error('\n❌ A fatal error occurred during the enrichment process:', error);
+  process.exit(1);
+});

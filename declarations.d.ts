@@ -25,10 +25,4 @@ export type ThemeVars = {
     heading: string;
     body: string;
   };
-};
-
-declare module '*.css.ts' {
-  export const vars: ThemeVars;
-  export const themeClass: string;
-  export default {};
-} 
+}; 

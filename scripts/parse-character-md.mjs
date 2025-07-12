@@ -1,110 +1,81 @@
-import fs from 'fs/promises';
+import { promises as fs } from 'fs';
 import path from 'path';
 
-const inputFile = path.resolve(process.cwd(), 'raw-data', 'characters', 'character_data.md');
-const outputFile = path.resolve(process.cwd(), 'raw-data', 'characters', 'characters.json');
+const mdPath = path.resolve(process.cwd(), 'raw-data/characters/character_data.md');
+const jsonPath = path.resolve(process.cwd(), 'raw-data/characters.json');
 
-const keyMapping = {
-    'Name': 'name',
-    'Nation': 'nation',
-    'Image': 'image',
-    'Description': 'description',
-    'Bending Ability': 'bending',
-    'Occupation/Role': 'role',
-    'Overview': 'overview',
-    'Key Journey Highlights': 'highlights',
-    'Personality Traits': 'traits',
-    'Notable Quotes': 'quotes',
-    'Relationships': 'relationships',
+const FIELD_MAP = {
+  bending_ability: 'bending',
+  occupationrole: 'role',
+  key_journey_highlights: 'highlights',
+  notable_quotes: 'quotes',
+  personality_traits: 'traits',
 };
 
-async function parseMarkdown() {
-  try {
-    const content = await fs.readFile(inputFile, 'utf-8');
-    const characterBlocks = content.split(/\s*#<\d+>\s*/).filter(block => block.trim());
-    
-    const characters = [];
-
-    for (const block of characterBlocks) {
-      const lines = block.split('\n');
-      const character = {};
-      let currentKey = null;
-      let currentKeyName = null;
-      let isList = false;
-
-      for (const line of lines) {
-        const trimmedLine = line.trim();
-        if (!trimmedLine) {
-            currentKey = null; // Reset on empty lines
-            continue;
-        }
-
-        const match = trimmedLine.match(/^([a-zA-Z\s]+):\s*(.*)$/);
-
-        if (match) {
-          const keyName = match[1].trim();
-          const value = match[2].trim();
-          currentKey = keyMapping[keyName];
-          currentKeyName = keyName;
-          isList = !value; // It's a list if there's no value on the same line
-          
-          if (currentKey) {
-            if (isList) {
-              character[currentKey] = [];
-            } else {
-              character[currentKey] = value;
-            }
-          }
-        } else if (currentKey) {
-          if (trimmedLine.startsWith('- ')) {
-            const item = trimmedLine.substring(2).trim();
-            if (Array.isArray(character[currentKey])) {
-              character[currentKey].push(item);
-            }
-          } else if (!isList && typeof character[currentKey] === 'string') {
-            character[currentKey] += ' ' + trimmedLine;
-          }
-        }
-      }
-      
-      // Clean up properties that shouldn't be arrays but were parsed as such
-      for(const key in character) {
-          if (Array.isArray(character[key]) && character[key].length === 0) {
-              delete character[key];
-          }
-      }
-
-      if (character.name) {
-        // Extract shortDescription from Short Template (Card View)
-        const shortDescMatch = block.match(/Short Template \(Card View\)[\s\S]*?Description:\s*([\s\S]*?)(?=\n\n|#|Expanded Template|$)/);
-        if (shortDescMatch && shortDescMatch[1]) {
-          character.shortDescription = shortDescMatch[1].replace(/\n/g, ' ').trim();
-        }
-        // Extract description from Expanded Template (Detailed View)
-        const longDescMatch = block.match(/Expanded Template \(Detailed View\)[\s\S]*?Overview:\s*([\s\S]*?)(?=\n\n|Key Journey Highlights|Personality Traits|Notable Quotes|Relationships|#|$)/);
-        if (longDescMatch && longDescMatch[1]) {
-          character.description = longDescMatch[1].replace(/\n/g, ' ').trim();
-        }
-        // Fallback: if only one is present, use it for both
-        if (!character.shortDescription && character.description) {
-          character.shortDescription = character.description;
-        }
-        if (!character.description && character.shortDescription) {
-          character.description = character.shortDescription;
-        }
-        character.__type = 'character';
-        characters.push(character);
-      }
+function normalizeFields(char) {
+  const normalized = {};
+  for (const key in char) {
+    if (FIELD_MAP[key]) {
+      normalized[FIELD_MAP[key]] = char[key];
+    } else {
+      normalized[key] = char[key];
     }
-
-    const finalCharacters = characters.filter(c => c.name && c.description);
-
-    await fs.writeFile(outputFile, JSON.stringify(finalCharacters, null, 2));
-    console.log(`Successfully parsed ${finalCharacters.length} characters and wrote to ${outputFile}`);
-  } catch (error) {
-    console.error('Failed to parse character markdown:', error);
-    process.exit(1);
   }
+  return normalized;
 }
 
-parseMarkdown();
+function parseCharacterSection(section) {
+  const lines = section.split('\n').map(l => l.trim());
+  const char = {};
+  let currentKey = null;
+  let buffer = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (/^(Short Template|Expanded Template)/i.test(line)) continue;
+    const match = line.match(/^([A-Za-z\s\/\(\)']+):\s*(.*)$/);
+    if (match) {
+      if (currentKey && buffer.length) {
+        char[currentKey] = buffer.join(' ').trim();
+        buffer = [];
+      }
+      currentKey = match[1].trim().toLowerCase().replace(/\s+/g, '_').replace(/\W/g, '');
+      if (match[2]) {
+        buffer.push(match[2].trim());
+      }
+    } else if (currentKey) {
+      buffer.push(line);
+    }
+  }
+  if (currentKey && buffer.length) {
+    char[currentKey] = buffer.join(' ').trim();
+  }
+
+  ['key_journey_highlights', 'personality_traits', 'notable_quotes', 'relationships'].forEach(field => {
+    if (char[field]) {
+      char[field] = char[field]
+        .split(/\n|\.|\r/)
+        .map(s => s.trim())
+        .filter(Boolean);
+    }
+  });
+
+  char.__type = 'character';
+  if (char.description) char.shortDescription = char.description;
+  return normalizeFields(char);
+}
+
+async function parseMarkdown() {
+  console.log('Reading character markdown data...');
+  const fileContent = await fs.readFile(mdPath, 'utf8');
+  const sections = fileContent.split(/#<\d+>\s+/).slice(1);
+  const characters = sections.map(parseCharacterSection).filter(c => c.name && c.description);
+  await fs.writeFile(jsonPath, JSON.stringify(characters, null, 2));
+  console.log(`✅ Successfully parsed ${characters.length} characters to ${jsonPath}`);
+}
+
+parseMarkdown().catch(e => {
+  console.error('❌ Failed to parse character markdown:', e);
+  process.exit(1);
+});
+

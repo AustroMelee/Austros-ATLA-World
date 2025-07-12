@@ -8,8 +8,9 @@ interface ItemCardProps {
   icon: React.ReactNode;
   expanded?: boolean;
   inCollection?: boolean;
-  onAdd?: () => void;
+  onAddToCollection?: () => void;
   onExpand?: () => void;
+  description?: string;
 }
 
 const nationAccent: Record<string, string> = {
@@ -27,8 +28,9 @@ export default function ItemCard({
   icon,
   expanded = false,
   inCollection = false,
-  onAdd,
+  onAddToCollection,
   onExpand,
+  description,
 }: ItemCardProps) {
   const isInteractive = typeof onExpand === 'function';
   const interactiveProps = isInteractive
@@ -53,7 +55,12 @@ export default function ItemCard({
       <button
         className={`absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border border-slate-600 bg-slate-700 text-lg font-bold transition-colors ${inCollection ? 'bg-nation-earth text-slate-900' : 'hover:bg-nation-water hover:text-white'}`}
         title={inCollection ? 'In Collection' : 'Add to Collection'}
-        onClick={e => { e.stopPropagation(); onAdd && onAdd(); }}
+        onClick={e => {
+          e.stopPropagation();
+          if (onAddToCollection) {
+            onAddToCollection();
+          }
+        }}
         aria-pressed={inCollection}
       >
         {inCollection ? '✓' : '+'}
@@ -68,6 +75,9 @@ export default function ItemCard({
         </div>
       </div>
       {/* Expansion content can be added here if needed */}
+      {description && (
+        <p className="text-slate-300 text-sm mt-3 leading-relaxed line-clamp-3">{description}</p>
+      )}
     </div>
   );
 }
