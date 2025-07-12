@@ -1,4 +1,3 @@
-import * as styles from './FilterPanel.css';
 import React from 'react';
 
 type FilterPanelProps = {
@@ -6,5 +5,5 @@ type FilterPanelProps = {
 };
 
 export default function FilterPanel({ children }: FilterPanelProps) {
-  return <div className={styles.panel}>{children}</div>;
+  return <div className="flex flex-wrap gap-3 items-center mb-4">{children}</div>;
 }

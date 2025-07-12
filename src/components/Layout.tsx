@@ -1,16 +1,17 @@
-import * as styles from './Layout.css';
 import React from 'react';
 import Navbar from './Navbar';
 
-type LayoutProps = {
+interface LayoutProps {
   children: React.ReactNode;
-};
+}
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className={styles.layout}>
+    <div className="flex flex-col min-h-screen bg-slate-900">
       <Navbar />
-      <main className={styles.main}>{children}</main>
+      <main className="flex-1 w-full flex flex-col items-center justify-center">
+        {children}
+      </main>
     </div>
   );
 }

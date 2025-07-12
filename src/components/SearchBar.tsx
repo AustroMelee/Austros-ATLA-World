@@ -1,4 +1,3 @@
-import * as styles from './SearchBar.css';
 import React from 'react';
 
 type SearchBarProps = {
@@ -10,17 +9,20 @@ type SearchBarProps = {
 export default function SearchBar({ value, onChange, onSubmit }: SearchBarProps) {
   return (
     <form
-      className={styles.searchBar}
+      className="flex items-center gap-2 w-full max-w-xl mx-auto mb-6"
       onSubmit={e => { e.preventDefault(); onSubmit(); }}
     >
       <input
-        className={styles.input}
+        className="flex-1 px-4 py-3 rounded-lg bg-slate-800 text-slate-100 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-nation-water placeholder:text-slate-400 text-base transition-colors duration-200"
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder="Search the Avatar world…"
         type="text"
       />
-      <button className={styles.button} type="submit">
+      <button
+        className="px-5 py-3 rounded-lg bg-nation-water text-slate-900 font-semibold hover:bg-nation-earth transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-nation-water"
+        type="submit"
+      >
         Search
       </button>
     </form>

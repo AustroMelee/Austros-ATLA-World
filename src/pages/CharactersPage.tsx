@@ -5,12 +5,11 @@ import FilterTag from '../components/FilterTag';
 import ResultsGrid from '../components/ResultsGrid';
 import NoResults from '../components/NoResults';
 import LoadingSpinner from '../components/LoadingSpinner';
-import * as styles from './Characters.css';
 import { useSearchParams } from 'react-router-dom';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
 import type { EnrichedRecord } from '../types/domainTypes';
 
-const CHARACTER_TYPE = 'character'; // FIX: Changed to plural to match the directory name
+const CHARACTER_TYPE = 'character';
 const CHARACTER_FILTERS = [
   { key: 'nation', label: 'Nation' },
   { key: 'bending', label: 'Bending' },
@@ -91,8 +90,8 @@ export default function CharactersPage() {
   ));
 
   return (
-    <main className={styles.container}>
-      <h1 className={styles.title}>Characters</h1>
+    <main className="w-full max-w-5xl mx-auto py-10 px-4 flex flex-col items-center">
+      <h1 className="text-3xl font-extrabold text-slate-100 mb-4">Characters</h1>
       <SearchBar
         value={searchQuery}
         onChange={setSearchQuery}

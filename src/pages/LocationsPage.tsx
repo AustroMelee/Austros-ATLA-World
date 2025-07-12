@@ -5,7 +5,6 @@ import FilterTag from '../components/FilterTag';
 import ResultsGrid from '../components/ResultsGrid';
 import NoResults from '../components/NoResults';
 import LoadingSpinner from '../components/LoadingSpinner';
-import * as styles from './Locations.css';
 import { useSearchParams } from 'react-router-dom';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
 import type { EnrichedRecord } from '../types/domainTypes';
@@ -80,8 +79,8 @@ export default function LocationsPage() {
   ));
 
   return (
-    <main className={styles.container}>
-      <h1 className={styles.title}>Locations</h1>
+    <main className="w-full max-w-5xl mx-auto py-10 px-4 flex flex-col items-center">
+      <h1 className="text-3xl font-extrabold text-slate-100 mb-4">Locations</h1>
       <SearchBar
         value={searchQuery}
         onChange={setSearchQuery}
