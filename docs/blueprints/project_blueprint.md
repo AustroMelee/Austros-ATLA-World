@@ -4,7 +4,7 @@ Here is the updated project blueprint. It integrates all your requests, treating
 
 AUSTROS ATLA WORLD ENCYCLOPEDIA & RESEARCH TOOL - BLUEPRINT (v4.0)
 
-Architectural Note: The project standard for all styling is vanilla-extract. This provides type-safe, zero-runtime CSS-in-TypeScript, ensuring maximum performance, maintainability, and alignment with the project's strict typing philosophy. The default theme is dark, inspired by modern development environments.
+Architectural Note: The project standard for all styling is Tailwind CSS. This provides a utility-first, scalable, and maintainable design system. The default theme is dark, inspired by modern development environments.
 
 ðŸ … NORTH STAR (PROJECT MOTTO)
 

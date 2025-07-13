@@ -19,12 +19,11 @@ This document outlines the official project plan for implementing the **v4.0 Blu
 ### ### Step 1.2: Architect the Theming System 🛡️
 *Goal: Create a scalable, type-safe theming architecture that supports the four nations.*
 
-1.  **Install Tooling:** Verify that `vite-plugin-vanilla-extract` is installed and correctly configured in `vite.config.ts`.
-2.  **Define Theme Contract:** Create `src/styles/themes/theme.contract.ts`. In this file, define the shape of the theme using `createThemeContract` to enforce type-safety (e.g., `primaryColor`, `borderColor`, `nationWater`, `nationEarth`, etc.).
-3.  **Implement Dark Theme:** Create `src/styles/themes/darkTheme.css.ts`. Implement the contract by defining the CSS variables for the dark theme and all four nation colors, plus a neutral/default color.
-4.  **Create Storybook Story:** Develop a new Storybook story (`Theme.stories.tsx`) that visually displays all theme colors as colored swatches. This provides a "living style guide" for instant visual confirmation.
-5.  **Apply Global Theme:** In `App.tsx`, import and apply the dark theme class to the root element to set it as the application-wide default.
-6.  **Compatibility Check:** Briefly run the app to ensure the new global styles do not conflict with or override any critical existing component styles.
+1.  **Install Tooling:** Ensure Tailwind CSS is installed and correctly configured in `tailwind.config.js` and `postcss.config.cjs`.
+2.  **Define Theme Tokens:** Use `tailwind.config.js` to define the color palette for the four nations and any other design tokens.
+3.  **Apply Global Theme:** In `src/styles/tailwind.css`, import Tailwind's base styles. Use utility classes in all components to apply theming.
+4.  **Create Storybook Story:** (Optional) Develop a Storybook story that visually displays all theme colors as colored swatches, using Tailwind utility classes.
+5.  **Compatibility Check:** Briefly run the app to ensure the new global styles do not conflict with or override any critical existing component styles.
 
 ---
 
@@ -37,7 +36,7 @@ This document outlines the official project plan for implementing the **v4.0 Blu
 2.  **Implement Debouncing:** Wrap the search execution logic in a `debounce` function (e.g., from `lodash-es`) with a `300ms` delay to prevent excessive re-renders and processing while the user is typing.
 3.  **Refactor Logic:** Modify the hook to identify the top result and extract its `nation`.
 4.  **Handle Edge Cases:** Add explicit logic to return a neutral state (`topHit: null`) when there are zero search results or when the top result has no `nation` property.
-5.  **Write Unit Tests:** Create `useAustrosSearch.test.ts` and write tests for three scenarios: a) successful search with a top hit, b) search with results but no valid top hit, and c) search with no results.[END-COMPLETE]
+5.  **Write Unit Tests:** Create `useAustrosSearch.test.ts` and write tests for three scenarios: a) successful search with a top hit, b) search with results but no valid top hit, and c) search with no results.
 
 ### ### Step 2.2: Construct the UI Components ⌨️ (Revised for Current System)
 
@@ -65,8 +64,7 @@ This document outlines the official project plan for implementing the **v4.0 Blu
 ---
 
 **Summary:**  
-This approach eliminates the need for a separate overlay component, reduces layout bugs, and ensures a seamless, accessible, and visually consistent search experience. All requirements for predictive text, dynamic theming, and accessibility are met within a single, maintainable component.
-
+This approach eliminates the need for a separate overlay component, reduces layout bugs, and ensures a seamless, accessible, and visually consistent search experience. All requirements for predictive text, dynamic theming, and accessibility are met within a single, maintainable component.[END-COMPLETE]
 ---
 
 ## ✨ **Section 3: Implement Dynamic, Nation-Themed Item Cards**

@@ -52,7 +52,6 @@ export type SearchFilters = {
 export type PersonalizationState = {
   recentSearches: string[];
   boostedSlugs: string[];
-  // Extendable for future personalization fields
 };
 
 export * from './rawTypes';

@@ -1,5 +1,9 @@
 import React from 'react';
-import type { EnrichedCharacter } from '../../types/domainTypes';
+import type { EnrichedCharacter } from '../../types';
+import ThemedCard from '../ThemedCard/ThemedCard';
+import StyledButton from '../StyledButton/StyledButton';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface ItemCardProps {
   item: EnrichedCharacter;
@@ -15,82 +19,60 @@ function toTitleCase(str?: string): string {
 
 export default function ItemCard({ item, expanded, onExpand, onAddToCollection }: ItemCardProps) {
   const iconText = (item.name || 'UNK').substring(0, 3).toUpperCase();
-  const nationInitial = item.nation?.charAt(0).toUpperCase() || '?';
-  
-  const baseClasses = "w-full text-left transition-all duration-300 ease-in-out rounded-xl";
-  const expandedClasses = expanded ? "bg-slate-800 ring-2 ring-blue-500 p-4" : "bg-slate-800 hover:bg-slate-700 p-3";
 
   return (
-    <div
-      onClick={onExpand} // Always allow toggle
-      role="button"
-      tabIndex={0}
-      onKeyPress={(e) => (e.key === 'Enter' || e.key === ' ') && onExpand()} // Always allow toggle
-      aria-expanded={expanded}
-      aria-label={`View details for ${item.name}`}
-      className={`${baseClasses} ${expandedClasses}`}
+    <ThemedCard
+      nation={item.nation}
+      onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+        if (expanded) e.stopPropagation();
+        else onExpand();
+      }}
+      className={`${expanded ? '' : 'hover:-translate-y-px'}`}
+      role="button" tabIndex={0} onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => (e.key === 'Enter' || e.key === ' ') && !expanded && onExpand()}
+      aria-expanded={expanded} aria-label={`View details for ${item.name}`}
     >
-      {/* Header (visible in both states, slightly different layout) */}
-      <div className="flex items-start gap-3">
-        <div className="w-12 h-12 flex-shrink-0 bg-slate-700 rounded-lg flex items-center justify-center">
-          <span className="font-bold text-slate-300">{iconText}</span>
-        </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-white truncate">{toTitleCase(item.name)}</h3>
-          <div className="flex items-center gap-2 text-xs text-slate-400 mt-1">
-            {item.nation && <span>{toTitleCase(item.nation)}</span>}
-            {item.bendingElement && <span className="text-xs px-2 py-0.5 bg-slate-700 rounded-full">{toTitleCase(item.bendingElement)}</span>}
+      <div className="p-4">
+        {/* Header - Stays the same */}
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 flex-shrink-0 bg-background rounded-lg flex items-center justify-center border border-subtle/20">
+            <span className="font-bold text-subtle text-lg">{iconText}</span>
           </div>
-        </div>
-        <div className="flex-shrink-0 flex gap-2">
+          <div className="flex-1 min-w-0">
+            <h3 className="font-bold text-lg text-white truncate">{toTitleCase(item.name)}</h3>
+            <div className="text-sm text-subtle mt-1">Character</div>
+          </div>
           {expanded && (
-            <button
-              onClick={(e) => { e.stopPropagation(); onAddToCollection?.(); }}
-              className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center text-white text-lg hover:bg-slate-600"
+            <StyledButton
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => { e.stopPropagation(); onAddToCollection?.(); }}
+              variant="secondary"
+              className="!px-3 !py-2 !rounded-lg"
               aria-label={`Add ${item.name} to a collection`}
             >
-              +
-            </button>
+              <span className="text-xl leading-none">+</span>
+            </StyledButton>
           )}
-          <div className="w-6 h-6 bg-slate-600 rounded-full flex items-center justify-center text-white text-xs font-semibold border border-slate-500">
-            {nationInitial}
-          </div>
         </div>
+        {/* Compact Description - Stays the same */}
+        {!expanded && (
+          <p className="text-sm text-subtle mt-3 leading-relaxed line-clamp-3">{item.description}</p>
+        )}
       </div>
 
-      {/* Default/Compact Description */}
-      {!expanded && (
-        <p className="text-xs text-slate-400 mt-2 line-clamp-2">{item.description}</p>
-      )}
-
-      {/* Expanded Detail View */}
+      {/* --- CORRECTED EXPANDED VIEW --- */}
       {expanded && (
-        <div className="mt-4 pt-4 border-t border-slate-700 space-y-3 text-sm text-slate-300">
-          <p>{item.overview || item.description}</p>
-          {item.highlights && item.highlights.length > 0 && (
-            <div>
-              <h4 className="font-semibold text-slate-200 mb-1">Highlights:</h4>
-              <ul className="list-disc list-inside space-y-1 text-slate-400">
-                {item.highlights.map((h, i) => <li key={i}>{h}</li>)}
-              </ul>
-            </div>
-          )}
-           {item.traits && item.traits.length > 0 && (
-            <div>
-              <h4 className="font-semibold text-slate-200 mb-1">Traits:</h4>
-              <p className="text-slate-400">{item.traits.join(', ')}</p>
-            </div>
-          )}
-          {item.quotes && item.quotes.length > 0 && (
-            <div>
-              <h4 className="font-semibold text-slate-200 mb-1">Quotes:</h4>
-              <ul className="list-disc list-inside space-y-1 text-slate-400">
-                {item.quotes.map((q, i) => <li key={i}>{q}</li>)}
-              </ul>
-            </div>
-          )}
+        <div className="px-4 pb-4 mt-2 border-t border-subtle/20">
+          {/* The `prose` classes from Tailwind's typography plugin will automatically style headings, lists, paragraphs, and blockquotes from the markdown. */}
+          <div className="prose prose-sm prose-invert max-w-none text-slate-300">
+            {item.expandedView ? (
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {item.expandedView}
+              </ReactMarkdown>
+            ) : (
+              <p className="italic text-subtle">No detailed view available.</p>
+            )}
+          </div>
         </div>
       )}
-    </div>
+    </ThemedCard>
   );
 }

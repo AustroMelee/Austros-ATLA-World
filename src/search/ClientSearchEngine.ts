@@ -1,7 +1,7 @@
 // src/search/ClientSearchEngine.ts
 
 import FlexSearch from 'flexsearch';
-import type { EnrichedRecord } from '../types/domainTypes';
+import type { EnrichedRecord, EnrichedCharacter } from '../types/domainTypes';
 
 let index: FlexSearch.Document<EnrichedRecord, true> | null = null;
 let recordMap: Map<string, EnrichedRecord> = new Map();
@@ -16,13 +16,32 @@ function lowerArray(arr: unknown): string[] {
 
 function buildIndexableRecord(record: EnrichedRecord): Record<string, unknown> {
   const base: Record<string, unknown> = { ...record };
+  
+  // Lowercase standard fields for consistent searching
   if (typeof record.name === 'string') base.name = lower(record.name);
   if (typeof record.description === 'string') base.description = lower(record.description);
-  if ('nation' in record && typeof (record as { nation?: string }).nation === 'string') base.nation = lower((record as { nation?: string }).nation);
-  if ('bending' in record && typeof (record as { bending?: string }).bending === 'string') base.bending = lower((record as { bending?: string }).bending);
-  if ('role' in record && typeof (record as { role?: string }).role === 'string') base.role = lower((record as { role?: string }).role);
+
+  // Handle character-specific fields
+  if (record.__type === 'character') {
+    const char = record as EnrichedCharacter;
+    if (char.nation) base.nation = lower(char.nation);
+    if (char.bendingElement) base.bendingElement = lower(char.bendingElement);
+    if (char.archetype) base.archetype = lower(char.archetype);
+    if (char.moralAlignment) base.moralAlignment = lower(char.moralAlignment);
+    // Add gender to the indexable record
+    if (char.gender) base.gender = lower(char.gender);
+    
+    // Flatten all tags from tagCategories into a single searchable array
+    if (char.tagCategories) {
+      const allTags = Object.values(char.tagCategories || {}).flat();
+      base.all_tags = lowerArray(allTags);
+    }
+  }
+
+  // Handle other type-specific fields if necessary
   if ('tags' in record && Array.isArray((record as { tags?: unknown }).tags)) base.tags = lowerArray((record as { tags?: unknown }).tags);
   if ('synonyms' in record && Array.isArray((record as { synonyms?: unknown }).synonyms)) base.synonyms = lowerArray((record as { synonyms?: unknown }).synonyms);
+
   return base;
 }
 
@@ -51,13 +70,20 @@ export function init(): Promise<void> {
         document: {
           id: 'slug',
           index: [
+            // Core fields
             { field: 'name', tokenize: 'forward' },
             { field: 'description', tokenize: 'forward' },
             { field: 'tags', tokenize: 'forward' },
             { field: 'synonyms', tokenize: 'forward' },
+            // Expanded character fields
             { field: 'nation', tokenize: 'forward' },
-            { field: 'bending', tokenize: 'forward' },
-            { field: 'role', tokenize: 'forward' }
+            { field: 'bendingElement', tokenize: 'forward' },
+            { field: 'archetype', tokenize: 'forward' },
+            { field: 'moralAlignment', tokenize: 'forward' },
+            // Add gender to the index configuration
+            { field: 'gender', tokenize: 'forward' },
+            // The new flattened tag field for comprehensive tag searching
+            { field: 'all_tags', tokenize: 'forward' }
           ],
           store: true,
         }
@@ -82,7 +108,6 @@ export async function search(query: string): Promise<EnrichedRecord[]> {
 
   const normalizedQuery = query.trim().toLowerCase();
   if (!normalizedQuery) {
-    // If the query is empty, return all available records.
     return Array.from(recordMap.values());
   }
 
@@ -99,12 +124,11 @@ export async function search(query: string): Promise<EnrichedRecord[]> {
     });
   });
 
-  // Fallback logic
   if (finalResults.length === 0) {
     for (const record of recordMap.values()) {
       const name = typeof record.name === 'string' ? lower(record.name) : '';
       const slug = typeof record.slug === 'string' ? lower(record.slug) : '';
-      if (name === normalizedQuery || slug === normalizedQuery) {
+      if (name.includes(normalizedQuery) || slug.includes(normalizedQuery)) {
         if (!uniqueSlugs.has(slug)) {
           finalResults.push(record);
           uniqueSlugs.add(slug);

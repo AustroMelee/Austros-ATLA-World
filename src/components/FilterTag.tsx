@@ -2,36 +2,24 @@ import React from 'react';
 
 type FilterTagProps = {
   label: string;
-  onClick?: () => void;
-  onRemove?: () => void;
-  active?: boolean;
-  role?: string;
-  ariaChecked?: boolean;
-  tabIndex?: number;
-  onKeyDown?: (e: React.KeyboardEvent<HTMLButtonElement>) => void;
+  onClick: () => void;
+  active: boolean;
 };
 
-export default function FilterTag({ label, onClick, onRemove, active, role, ariaChecked, tabIndex, onKeyDown }: FilterTagProps) {
+export default function FilterTag({ label, onClick, active }: FilterTagProps) {
+  const baseClasses = "rounded-full px-3 py-1 text-xs font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface focus:ring-primary";
+  
+  // Use primary styles when active, ghost-like styles when inactive
+  const activeClasses = "bg-primary text-white";
+  const inactiveClasses = "bg-surface text-subtle hover:bg-highlight hover:border-primary/50 border border-subtle/30";
+
   return (
-    <span
-      className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2 transition-colors duration-150 ${active ? 'bg-blue-600 text-white' : 'bg-slate-700 text-slate-200'} ${onClick ? 'cursor-pointer' : ''}`}
-      role={role}
-      aria-checked={ariaChecked}
-      tabIndex={tabIndex}
+    <button
       onClick={onClick}
-      onKeyDown={onKeyDown}
+      className={`${baseClasses} ${active ? activeClasses : inactiveClasses}`}
+      aria-pressed={active}
     >
       {label}
-      {onRemove && (
-        <button
-          onClick={onRemove}
-          aria-label={`Remove ${label}`}
-          className="ml-2 text-slate-400 hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 rounded-full px-1"
-          type="button"
-        >
-          ×
-        </button>
-      )}
-    </span>
+    </button>
   );
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useDebounce } from './useDebounce';
 import type { EnrichedRecord } from '../types/domainTypes';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
+import * as PersonalizationEngine from '../search/PersonalizationEngine';
 
 export interface AustrosSearchResult {
   results: EnrichedRecord[];
@@ -15,7 +16,7 @@ export interface AustrosSearchResult {
  * @param query - The search string.
  * @param initialLoadType - (Optional) The entity type to load by default and to filter search results by.
  */
-export function useAustrosSearch(query: string, initialLoadType?: string): AustrosSearchResult {
+export function useAustrosSearch(query: string): AustrosSearchResult {
   const debouncedQuery = useDebounce(query, 250);
   const [results, setResults] = useState<EnrichedRecord[]>([]);
   const [topHit, setTopHit] = useState<{ nation: string; name: string } | null>(null);
@@ -28,38 +29,26 @@ export function useAustrosSearch(query: string, initialLoadType?: string): Austr
     async function doSearch() {
       setLoading(true);
       setError(null);
-      
       try {
+        const trimmedQuery = debouncedQuery.trim();
+        if (!trimmedQuery) {
+          setResults([]);
+          setTopHit(null);
+          setLoading(false);
+          return;
+        }
         await ClientSearchEngine.init();
         if (cancelled) return;
-
-        let found: EnrichedRecord[] = [];
-        
-        if (!debouncedQuery.trim()) {
-          if (initialLoadType) {
-            found = await ClientSearchEngine.getAllByType(initialLoadType);
-          } else {
-            // If no type is specified, return all records.
-            found = await ClientSearchEngine.search("");
-          }
-        } else {
-          // If query is present, perform a global search.
-          found = await ClientSearchEngine.search(debouncedQuery);
-          // **THE FIX:** If an initialLoadType is provided, filter the search results.
-          if (initialLoadType) {
-            found = found.filter(item => item.__type === initialLoadType);
-          }
-        }
-
+        const found = await ClientSearchEngine.search(trimmedQuery);
         if (cancelled) return;
-
         setResults(found);
-
         if (found.length > 0 && 'nation' in found[0] && found[0].nation && 'name' in found[0] && found[0].name) {
           setTopHit({ nation: found[0].nation, name: found[0].name });
         } else {
           setTopHit(null);
         }
+        // **2. ADD TO RECENT SEARCHES**
+        PersonalizationEngine.addRecentSearch(trimmedQuery);
       } catch(e) {
         console.error("Search hook error:", e);
         setError("Search failed to load.");
@@ -72,7 +61,7 @@ export function useAustrosSearch(query: string, initialLoadType?: string): Austr
 
     doSearch();
     return () => { cancelled = true; };
-  }, [debouncedQuery, initialLoadType]);
+  }, [debouncedQuery]);
 
   return { results, topHit, loading, error };
 }

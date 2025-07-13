@@ -15,11 +15,11 @@
     "enrich:data": "node scripts/enrich-data.mjs",
     "build:index": "node scripts/build-index.mjs",
     "build:data": "npm run parse:characters && npm run enrich:data && npm run build:index",
-    "lint:md": "markdownlint --config .markdownlint.json \"**/*.md\""
+    "lint:md": "markdownlint --config .markdownlint.json \"**/*.md\"",
+    "build:tailwind": "tailwindcss -i ./src/styles/pure-tailwind.css -o ./src/styles/generated-tailwind.css --watch"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
-    "@tailwindcss/vite": "^4.1.11",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
@@ -33,7 +33,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "markdownlint-cli": "^0.39.0",
     "prettier": "^3.2.5",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5.8.3",
     "vite": "^5.4.19",
     "vite-plugin-pwa": "^1.0.1"
@@ -44,7 +44,9 @@
     "gray-matter": "^4.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^6.30.1",
+    "remark-gfm": "^4.0.1",
     "zod": "^4.0.5"
   }
 }

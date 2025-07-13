@@ -12,33 +12,98 @@ export type EnrichedBending = {
 };
 
 export type EnrichedCharacter = {
+  /** Character type marker */
   __type: 'character';
+  /** Unique character ID */
   id: string;
+  /** Display name */
   name: string;
+  /** Short description or summary */
   description: string;
+  /** Slug for routing/lookup */
   slug: string;
-  nation?: string;
-  role?: string;
-  overview?: string;
+  /** Nation or origin (e.g., Fire Nation) */
+  nation?: string | null;
+  /** Character's main role/title */
+  role?: string | null;
+  /** Short overview/biography */
+  overview?: string | null;
+  /** List of highlights/major moments */
   highlights?: string[];
+  /** List of general traits (legacy) */
   traits?: string[];
+  /** List of notable quotes */
   quotes?: string[];
-  relationships?: string;
+  /** List of relationships */
+  relationships?: Array<{
+    characterId: string;
+    relationshipType: string;
+    status: string;
+    history: string;
+  }>;
+  /** Path to image asset or null */
   image?: string | null;
+  /** List of tags */
   tags?: string[];
+  /** List of synonyms */
   synonyms?: string[];
+  /** List of sources */
   sources?: string[];
-  
-  // Corrected v3.0 Fields
-  fullName?: string;
-  bendingElement?: string;
-  narrativeFunction?: string;
-  ageRange?: string;
-  gender?: string;
+  /** Full name (if different from name) */
+  fullName?: string | null;
+  /** Bending element (e.g., Fire, Water) */
+  bendingElement?: string | null;
+  /** Narrative function (e.g., Protagonist) */
+  narrativeFunction?: string | null;
+  /** Age or age range */
+  age?: string | number | null;
+  ageRange?: string | null;
+  /** Gender */
+  gender?: string | null;
+  /** Affiliations/groups */
   currentAffiliations?: string[];
-  archetype?: string;
-  moralAlignment?: string;
+  /** Archetype (e.g., Hero, Mentor) */
+  archetype?: string | null;
+  /** Moral alignment (e.g., Lawful Good) */
+  moralAlignment?: string | null;
+  /** Legendary fighter status */
   isLegendaryFighter?: boolean;
+  /** Notable feats/accomplishments */
+  notableFeats?: string[];
+  /** Narrative arcs */
+  narrativeArcs?: Array<{
+    arcType: string;
+    status: string;
+    summary: string;
+  }>;
+  /** Positive traits */
+  positiveTraits?: string[];
+  /** Negative traits */
+  negativeTraits?: string[];
+  /** Motivations */
+  motivations?: string[];
+  /** Fears */
+  fears?: string[];
+  /** Internal conflicts */
+  internalConflicts?: string[];
+  /** Expanded view (markdown/html) */
+  expandedView?: string;
+  /** WIP: Avatar icon filename (if available) */
+  avatarIcon?: string | null;
+  /** Key-value pairs of thematic tags */
+  tagCategories?: {
+    narrativeTags?: string[];
+    combatTags?: string[];
+    relationshipTags?: string[];
+    emotionTags?: string[];
+    politicalTags?: string[];
+    arcTags?: string[];
+    worldTags?: string[];
+    triviaTags?: string[];
+    [key: string]: string[] | undefined;
+  };
+  /** Bending status (true if bender, false if non-bender) */
+  isBender?: boolean;
 };
 
 export type EnrichedFauna = {

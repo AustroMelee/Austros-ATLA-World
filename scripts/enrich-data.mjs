@@ -4,7 +4,7 @@ import path from 'path';
 // --- CONFIGURATION ---
 // Maps a data type to its source directory.
 const SOURCE_DIRS_MAP = {
-  character: 'raw-data/characters/json',
+  character: 'dist/parsed-data/characters',
   bending: 'raw-data/bending',
   food: 'raw-data/fauna',
 };

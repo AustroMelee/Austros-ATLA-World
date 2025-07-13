@@ -1,16 +1,15 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root, :host {
-    /* HIGH-CONTRAST SLATE PALETTE */
-    --color-slate-50: oklch(98% 0.005 250);      /* Brighter, near-white text */
-    --color-slate-100: oklch(96% 0.008 250);     /* Slightly less bright text */
-    --color-slate-200: oklch(90% 0.015 250);     /* Secondary text / muted icons */
-    --color-slate-300: oklch(80% 0.02 250);      /* Dimmer text */
-    --color-slate-400: oklch(65% 0.03 250);      /* Muted UI elements, placeholder text */
-    --color-slate-700: oklch(25% 0.02 255);      /* Borders and dividers */
-    --color-slate-800: oklch(18% 0.015 258);     /* Elevated surfaces (cards, nav) */
-    --color-slate-900: oklch(12% 0.01 250);      /* Main page background */
-    --color-slate-950: oklch(8% 0.005 250);      /* Deepest background (e.g., ::after mask) */
+body {
+  background-color: #0D1117;
+  /* Or use Tailwind: bg-background if using JIT mode */
+}
+
+:root {
+  --border-from: #2563eb; /* Tailwind blue-600 */
+  --border-to: #60a5fa;   /* Tailwind blue-400 */
 }
 
 @keyframes flowing-border-rotate {
@@ -19,23 +18,22 @@
   }
 }
 
-.itemcard-animated-border {
+. {
   position: relative;
-  border-radius: 24px; /* Matches the inner card's `rounded-3xl` from Tailwind */
+  border-radius: 24px;
   overflow: hidden;
-  z-index: 1; /* Establishes a stacking context */
+  z-index: 1;
 }
 
-/* The animated gradient layer */
-.itemcard-animated-border::before {
+.::before {
   content: '';
   position: absolute;
-  z-index: -2; /* Sits behind everything */
+  z-index: -2;
   left: -50%;
   top: -50%;
   width: 200%;
   height: 200%;
-  background-color: var(--color-slate-950); /* Use new deepest background */
+  background-color: var(--color-slate-950);
   background-repeat: no-repeat;
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
@@ -44,28 +42,23 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-/* On hover/focus, animate the pseudo-element */
-.itemcard-animated-border:hover::before,
-.itemcard-animated-border:focus-within::before {
+.:hover::before,
+.:focus-within::before {
   animation: flowing-border-rotate 4s linear infinite;
   opacity: 1;
 }
 
-/* The mask that creates the border effect */
-.itemcard-animated-border::after {
+.::after {
   content: '';
   position: absolute;
-  z-index: -1; /* Sits ON TOP of the gradient, but BEHIND the content */
+  z-index: -1;
   left: 2px;
   top: 2px;
   width: calc(100% - 4px);
   height: calc(100% - 4px);
-  background: var(--color-slate-900); /* Use the new main background for the mask */
+  background: var(--color-slate-900);
   border-radius: 22px;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Custom styles for filter sidebar and chips */
 /* (Extend as needed for accessibility and focus states) */

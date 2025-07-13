@@ -5,17 +5,30 @@ const BOOSTED_KEY = 'austros:boostedSlugs';
 const MAX_RECENT = 10;
 
 function loadState(): PersonalizationState {
-  const recent = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]') as string[];
-  const boosted = JSON.parse(localStorage.getItem(BOOSTED_KEY) || '[]') as string[];
-  return { recentSearches: recent, boostedSlugs: boosted };
+  try {
+    const recent = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]') as string[];
+    const boosted = JSON.parse(localStorage.getItem(BOOSTED_KEY) || '[]') as string[];
+    return { recentSearches: recent, boostedSlugs: boosted };
+  } catch (e) {
+    console.error('Failed to load personalization state:', e);
+    return { recentSearches: [], boostedSlugs: [] };
+  }
 }
 
 function saveRecentSearches(recent: string[]) {
-  localStorage.setItem(RECENT_KEY, JSON.stringify(recent));
+  try {
+    localStorage.setItem(RECENT_KEY, JSON.stringify(recent));
+  } catch (e) {
+    console.error('Failed to save recent searches:', e);
+  }
 }
 
 function saveBoostedSlugs(boosted: string[]) {
-  localStorage.setItem(BOOSTED_KEY, JSON.stringify(boosted));
+  try {
+    localStorage.setItem(BOOSTED_KEY, JSON.stringify(boosted));
+  } catch (e) {
+    console.error('Failed to save boosted slugs:', e);
+  }
 }
 
 export function getRecentSearches(): string[] {
@@ -23,9 +36,13 @@ export function getRecentSearches(): string[] {
 }
 
 export function addRecentSearch(query: string) {
-  let recent = loadState().recentSearches.filter(q => q !== query);
-  recent.unshift(query);
-  if (recent.length > MAX_RECENT) recent = recent.slice(0, MAX_RECENT);
+  if (!query || query.trim().length < 2) return;
+  const lowercasedQuery = query.trim().toLowerCase();
+  let recent = loadState().recentSearches.filter(q => q !== lowercasedQuery);
+  recent.unshift(lowercasedQuery);
+  if (recent.length > MAX_RECENT) {
+    recent = recent.slice(0, MAX_RECENT);
+  }
   saveRecentSearches(recent);
 }
 
@@ -34,6 +51,7 @@ export function getBoostedSlugs(): string[] {
 }
 
 export function boostSlug(slug: string) {
+  if (!slug) return;
   const boosted = loadState().boostedSlugs.filter(s => s !== slug);
   boosted.unshift(slug);
   saveBoostedSlugs(boosted);
@@ -45,8 +63,12 @@ export function unboostSlug(slug: string) {
 }
 
 export function clearAll() {
-  localStorage.removeItem(RECENT_KEY);
-  localStorage.removeItem(BOOSTED_KEY);
+  try {
+    localStorage.removeItem(RECENT_KEY);
+    localStorage.removeItem(BOOSTED_KEY);
+  } catch (e) {
+    console.error('Failed to clear personalization state:', e);
+  }
 }
 
 // For future: export sync/rehydrate methods for remote support 

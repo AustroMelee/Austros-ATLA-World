@@ -1,125 +1,108 @@
-## **Implementation Plan: MAXI-MINIMALIST FILTERING ENCYCLOPEDIA**
+## **Implementation Plan: AVATAR ATLA WORLD ENCYCLOPEDIA (Context-Specific)**
 
-This plan translates the blueprint into a phased, step-by-step development process. Each step is designed to be a concrete, testable unit of work.
+This plan translates the Avatar Encyclopedia blueprint into a phased, step-by-step development process. Each step is designed to be a concrete, testable unit of work, tailored to the real data pipeline, type system, and UI architecture.
 
-### **Phase 0: Pre-Implementation & Project Setup**
+[START-COMPLETE]
+### **Phase 0: Data Pipeline & Project Setup**
 
-This foundational phase is crucial for ensuring a smooth and scalable development process.[START-COMPLETED]
+This foundational phase ensures robust, scalable, and type-safe data handling.
 **1. Technology Stack Selection & Justification:**
-    *   **Framework:** **React** (with Vite). It's component-based, performant, and has a massive ecosystem. Vite provides a lightning-fast development experience.
-    *   **Language:** **TypeScript**. Mandated by the blueprint and essential for managing the complex data models and state.
-    *   **State Management:** **Zustand**. A simple, minimalist state management library that is powerful enough for the `AppState` but avoids the boilerplate of Redux. It aligns perfectly with the project's philosophy.
-    *   **Styling:** **Tailwind CSS**. For rapid, utility-first styling. It's perfect for creating the responsive layouts and adaptive components described.
-    *   **Animation:** **Framer Motion**. A production-ready animation library for React that makes implementing the specified micro-interactions and layout animations straightforward.
-    *   **Client-Side Search:** **Fuse.js**. A powerful, lightweight fuzzy-search library, ideal for implementing the "Intelligent Text Search."
-    *   **Layout:** **React Masonry CSS**. A simple library to achieve the masonry grid layout without heavy dependencies.
-    *   **Icons:** **Lucide Icons** or **Heroicons**. Minimalist, high-quality SVG icons.
+    *   **Framework:** **React** (with Vite) for component-based, performant UI.
+    *   **Language:** **TypeScript** for strict typing and maintainability.
+    *   **Styling:** **Tailwind CSS** for utility-first, responsive design.
+    *   **Search:** **FlexSearch** for fast, client-side full-text search.
+    *   **Data Pipeline:** Custom scripts for Markdown → JSON → enrichment → search index.
+    *   **Other:** ESLint, Prettier, Zod (for schema validation), and custom scripts for data processing.
 
-**2. Project Initialization:**
-    *   **Task:** Initialize a new project using Vite: `npm create vite@latest my-encyclopedia -- --template react-ts`.
-    *   **Task:** Install all primary dependencies:
-        ```bash
-        npm install react react-dom zustand tailwindcss postcss autoprefixer framer-motion fuse.js react-masonry-css
-        ```
-    *   **Task:** Configure Tailwind CSS by following its official integration guide for Vite.
-    *   **Task:** Set up a version control system: `git init`, create an initial commit, and set up a repository on GitHub/GitLab.
+**2. Data Pipeline Initialization:**
+    *   **Task:** Author character and domain data in custom Markdown format in `/raw-data/characters/` and related folders.
+    *   **Task:** Use `scripts/parse-character-md.mjs` to extract and flatten data into JSON.
+    *   **Task:** Validate all JSON with Zod schemas (`raw-data/schema/`).
+    *   **Task:** Enrich data (add slugs, ids, etc.) with `scripts/enrich-data.mjs`.
+    *   **Task:** Build the FlexSearch index with `scripts/build-index.mjs`.
+    *   **Task:** Output: `public/enriched-data.json` and `public/search-index.json`.
 
 **3. Directory & File Structure:**
-    *   **Task:** Create a logical directory structure within `/src`:
-        *   `/components`: For reusable UI components (e.g., `Card`, `FilterChip`, `SearchPalette`).
-        *   `/data`: To hold the initial static card data and related types.
-        *   `/hooks`: For custom React hooks (e.g., `useFilteredCards`, `useDebounce`).
-        *   `/lib` or `/utils`: For helper functions (e.g., search indexing, data processing).
-        *   `/store`: For Zustand state management stores.
-        *   `/styles`: For global CSS and Tailwind base configuration.
-        *   `/types`: For shared TypeScript interfaces (e.g., `Card`, `AppState`).
+    *   **Task:** Maintain logical structure:
+        *   `/src/components`: Reusable UI components (e.g., `ItemCard`, `EntityGrid`, `FilterSidebar`).
+        *   `/src/hooks`: Custom React hooks (e.g., `useAustrosSearch`, `useDebounce`).
+        *   `/src/search`: Search engine logic (e.g., `ClientSearchEngine.ts`).
+        *   `/src/types`: Shared TypeScript interfaces (e.g., `EnrichedCharacter`, `EnrichedRecord`).
+        *   `/src/styles`: Global CSS and Tailwind config.
+        *   `/public`: Static assets and generated data files.
 
 **4. Core Type Definitions:**
-    *   **Task:** Create a `types/index.ts` file.
-    *   **Task:** Define the `Card` interface exactly as specified in the blueprint.
-    *   **Task:** Define the initial `AppState` interface in `store/appStore.ts`.
+    *   **Task:** Define all domain types in `/src/types/` (e.g., `EnrichedCharacter`, `BendingArt`, etc.).
+    *   **Task:** Ensure all data pipeline scripts and UI components use these types for type safety.
 
 ---
 
-### **Phase 1: Foundation (The Visible Skeleton)**
+### **Phase 1: UI Foundation & Data Integration**
 
-Goal: Get a working, filterable grid on screen. Focus on functionality over polish.
+Goal: Display a working, filterable encyclopedia grid using real, validated data.
 
-**5. Data Modeling & Loading:**
-    *   **Task:** Create a `data/mockData.ts` file.
-    *   **Task:** Populate this file with 20-30 sample `Card` objects. Ensure a variety of `type`, `tags`, and `relationships` to enable future testing.
-    *   **Task:** Create a simple data-loading mechanism. For now, this can be a simple `import { cards } from './data/mockData';` at the top level of the app.
+**5. Data Loading & Integration:**
+    *   **Task:** Load enriched data and search index from `public/enriched-data.json` and `public/search-index.json` at app startup.
+    *   **Task:** Use `ClientSearchEngine` to provide search and retrieval functions for the UI.
 
-**6. Static Card Grid Display:**
-    *   **Task:** Create a `<Card>` component (`components/Card.tsx`) that accepts a `card` prop and displays its basic info (`imageUrl`, `title`, `description`).
-    *   **Task:** Create a `<CardGrid>` component (`components/CardGrid.tsx`).
-    *   **Task:** Inside `<CardGrid>`, import the mock data and use the `react-masonry-css` component to render a grid of `<Card>` components.
+**6. Card Grid Display:**
+    *   **Task:** Implement `ItemCard` to display character/domain info.
+    *   **Task:** Implement `EntityGrid` to render a responsive grid of `ItemCard` components.
+    *   **Task:** Use Tailwind for layout (no react-masonry-css needed).
 
-**7. Basic State Management Setup:**
-    *   **Task:** Create the Zustand store in `store/appStore.ts`.
-    *   **Task:** Implement the `data` slice of the `AppState`, including `cards` and `filteredCards`.
-    *   **Task:** On app load, populate `data.cards` with the mock data. Initially, `filteredCards` can be a copy of `cards`.
-    *   **Task:** Refactor `<CardGrid>` to pull its data from the `filteredCards` array in the Zustand store.
+**7. State Management & Filtering:**
+    *   **Task:** Use React hooks (`useState`, `useMemo`, etc.) for all UI state (search query, filters, selection).
+    *   **Task:** Implement filter state and logic in the main container (e.g., `HomeContainer`).
+    *   **Task:** Ensure all filtering is performed on the loaded, enriched data.
 
-**8. Implement Simple Text Search:**
-    *   **Task:** Create a `<SearchPalette>` component. For now, it's just a styled `<input>` field.
-    *   **Task:** Connect the input's `onChange` event to an action in the Zustand store that updates `filters.search`.
-    *   **Task:** Create a filtering function that runs whenever `filters.search` changes. This function should:
-        1.  Take the original `data.cards` array.
-        2.  Perform a simple `string.includes()` search on `card.title` and `card.description`.
-        3.  Update the `data.filteredCards` array in the store with the result.
-[END-COMPLETED]
-**9. Implement Stage 1 Type Filters:**
-    *   **Task:** Create a `<FilterSidebar>` component.
-    *   **Task:** Create a `<FilterChip>` component that can display a filter name and handle clicks.
-    *   **Task:** In `<FilterSidebar>`, dynamically generate a list of unique card types from the `data.cards` array.
-    *   **Task:** Render a `<FilterChip>` for each type.
-    *   **Task:** On chip click, update the `filters.types` array in the Zustand store (add/remove the type).
-    *   **Task:** Enhance the main filtering function to chain filters: first apply the search, then apply the type filter to the result.
+**8. Search Integration:**
+    *   **Task:** Implement `useAustrosSearch` and connect it to the FlexSearch index for fast, full-text search.
+    *   **Task:** Ensure search results are type-safe and match the domain model.
+
+**9. Filter Sidebar & Chips:**
+    *   **Task:** Implement `FilterSidebar` to display available filters (e.g., nation, bending, role).
+    *   **Task:** Implement `FilterTag` for filter chips (clickable, active/inactive states).
+    *   **Task:** Dynamically generate filter options from the loaded data.
+    *   **Task:** Chain filters: search → type filter → other filters.
+    [END-COMPLETE]
 
 ---
 
-### **Phase 2: Intelligence (Making it Smart)**
+### **Phase 2: Advanced Features & UX Enhancements**
 
-Goal: Make the filtering feel intelligent and the interactions more fluid.
+Goal: Add intelligence, polish, and advanced user interactions.
 
-**10. Advanced Search Indexing:**
-    *   **Task:** Create a utility function in `lib/search.ts` that takes the `cards` array and builds a Fuse.js index. This function should run once when the app loads.
-    *   **Task:** Configure the Fuse.js index to use the keys and weights from the blueprint (`primaryTerms`, `tagMatch`, etc.).
-    *   **Task:** Refactor the search logic from Step 8. Instead of `string.includes()`, it will now query the Fuse.js index. The result from Fuse.js (which includes a score) will be used to update `filteredCards`.
+**10. Advanced Search & Filtering:**
+    *   **Task:** Enhance search logic in `ClientSearchEngine` for more nuanced queries (e.g., synonyms, tags).
+    *   **Task:** Add support for multi-field and fuzzy search using FlexSearch features.
 
-**11. Implement Tag & Micro-Filters:**
-    *   **Task:** Add a "Tags" section to the `<FilterSidebar>`.
-    *   **Task:** Include a text input that allows users to add custom tags to the filter set.
-    *   **Task:** Update the Zustand store to handle `filters.tags`.
-    *   **Task:** Update the master filtering function to include tag filtering logic. The sequence should be: Search -> Type Filter -> Tag Filter.
+**11. Expanded Card View:**
+    *   **Task:** Implement expanded detail view for characters/entities (modal or panel).
+    *   **Task:** Ensure only one expanded card is visible at a time (SRP-compliant overlay logic).
+    *   **Task:** Add keyboard and click-to-close support.
 
-**12. Implement Filter Previews & Counts:**
-    *   **Task:** In `<FilterSidebar>`, for each inactive filter chip, calculate how many results would be shown if that filter were added.
-    *   **Task:** Display this count next to the filter name (e.g., "Sci-Fi (12)").
-    *   **Task:** Use `onMouseEnter` on a filter chip to preview its effect. This can be done by briefly highlighting the cards on the grid that would remain.
+**12. Collections & Personalization:**
+    *   **Task:** Implement collections logic (e.g., save favorite characters) using React state and localStorage if needed.
+    *   **Task:** Add personalization features (recent searches, boosted results) as needed.
 
-**13. Expanded Card View:**
-    *   **Task:** Implement the "Right Context Panel" as the initial expanded view. It should be hidden by default.
-    *   **Task:** Update the `ui.expandedCard` ID in the Zustand store when a `<Card>` is clicked.
-    *   **Task:** Create an `<ExpandedCardView>` component that displays the `extended` data of the selected card.
-    *   **Task:** The panel should appear with a smooth animation (using Framer Motion).
-    *   **Task:** Add a close button and an "Esc" key listener to set `ui.expandedCard` back to `null`.
+**13. Accessibility & Performance:**
+    *   **Task:** Ensure all UI is accessible (ARIA labels, keyboard navigation).
+    *   **Task:** Optimize for performance (memoization, lazy loading, etc.).
 
 ---
 
-### **Phase 3: Magic (The "Wow" Factor)**
+### **Phase 3: Polish & Documentation**
 
-Goal: Implement the features that make the app feel predictive and delightful.
+Goal: Ensure maintainability, clarity, and a robust developer experience.
 
-**14. Predictive "Ghost" Filters:**
-    *   **Task:** When a card is selected (i.e., `ui.expandedCard` is set), create a function that analyzes its `relationships` field.
-    *   **Task:** Identify related tags/types that are not currently in the active filter set.
-    *   **Task:** Pass these suggestions as props to `<FilterSidebar>`.
-    *   **Task:** Render these suggestions as uniquely styled "ghost" filter chips that are dismissible or can be promoted to active filters on click.
+**14. Documentation & Source of Truth:**
+    *   **Task:** Keep `docs/source_of_truth.md` and related docs up to date with all data, type, and UI changes.
+    *   **Task:** Document the data pipeline, type system, and filtering/search logic clearly.
 
-**15. Collections & Saved States (Deep Linking):**
-    *   **Task:** Add a "Save View" button to the UI.
-    *   **Task:** On click, this button should grab the entire `filters` object from the Zustand store.
-    *   **Task:** Use the browser's `URLSearchParams` API to serialize the `filters` object into the URL's query string (e.g., `?search=robot&types=character,location`).
-    *   **Task:** Create a function that runs on app load to parse the URL's query string and hydrate the Zustand `filters`
+**15. Automated Checks & Linting:**
+    *   **Task:** Run all lint/type checks and data pipeline scripts before every commit.
+    *   **Task:** Ensure zero lint/type errors and full data validation at all times.
+
+---
+
+**This plan is now fully aligned with the Avatar Encyclopedia's real architecture, data flow, and UI.**

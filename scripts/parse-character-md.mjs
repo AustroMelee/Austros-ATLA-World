@@ -3,7 +3,7 @@ import path from 'path';
 import { glob } from 'glob';
 
 const INPUT_DIR = 'raw-data/characters';
-const OUTPUT_DIR = 'raw-data/characters/json';
+const OUTPUT_DIR = 'dist/parsed-data/characters';
 
 /**
  * Extracts a single-line value for a given key from a markdown-like list.
@@ -18,24 +18,35 @@ function extractValue(content, key) {
 }
 
 /**
- * Extracts a multi-line list for a given key.
- * @param {string} content The block of text to search within.
- * @param {string} key The key for the list (e.g., "Narrative Highlights").
- * @returns {string[]}
+ * Extracts all JSON code blocks from a markdown file.
+ * @param {string} content The entire file content.
+ * @returns {object[]} An array of parsed JSON objects.
  */
-function extractList(content, key) {
-  const regex = new RegExp(`-\\s*${key}:\\s*([\\s\\S]*?)(?=\\n-\\s*\\w|$)`);
-  const match = content.match(regex);
-  if (!match) return [];
-  return match[1]
-    .trim()
-    .split('\n')
-    .map(s => s.replace(/-\\s*/, '').trim())
-    .filter(Boolean);
+function extractJsonBlocks(content) {
+  const regex = /```json\s*([\s\S]*?)\s*```/g;
+  const matches = [];
+  let match;
+  while ((match = regex.exec(content)) !== null) {
+    try {
+      matches.push(JSON.parse(match[1]));
+    } catch (e) {
+      console.error(`[Warning] Could not parse a JSON block. Error: ${e.message}`);
+    }
+  }
+  return matches;
+}
+
+/**
+ * Flattens an array of objects into a single object, merging them.
+ * @param {object[]} objects The array of objects to flatten.
+ * @returns {object} A single merged object.
+ */
+function flattenObjects(objects) {
+  return objects.reduce((acc, obj) => ({ ...acc, ...obj }), {});
 }
 
 async function main() {
-  console.log('--- Starting Character Markdown Parsing (Final Version) ---');
+  console.log('--- Starting Character Markdown Parsing (SRP-Compliant v3.0) ---');
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
   const mdFiles = await glob(`${INPUT_DIR}/*.md`);
@@ -47,34 +58,40 @@ async function main() {
     console.log(`[Processing] Parsing ${file}...`);
     const fileContent = await fs.readFile(file, 'utf8');
 
-    const cardViewMatch = fileContent.match(/## [^\n]*UI - CARD VIEW[^`]*```md\s*([\s\S]*?)\s*```/);
-    const expandedViewMatch = fileContent.match(/## [^\n]*UI - EXPANDED VIEW[^`]*```md\s*([\s\S]*?)\s*```/);
-    
-    const cardContent = cardViewMatch ? cardViewMatch[1] : '';
-    const expandedContent = expandedViewMatch ? expandedViewMatch[1] : '';
+    // --- SINGLE RESPONSIBILITY: EXTRACT ALL DATA ---
 
-    // Create the final JSON object by parsing both sections
-    const characterData = {
-      id: fileName, // Use filename as the base ID
+    // 1. Extract basic UI "Card View" data
+    const cardViewMatch = fileContent.match(/## [^\n]*UI - CARD VIEW[^`]*```md\s*([\s\S]*?)\s*```/);
+    const cardContent = cardViewMatch ? cardViewMatch[1] : '';
+
+    const cardData = {
       name: extractValue(cardContent, 'Name') || 'Unknown',
       nation: extractValue(cardContent, 'Nation') || 'Unknown',
       description: extractValue(cardContent, 'Short Description') || '',
-      
-      // Extract from Expanded View
-      overview: extractValue(expandedContent, 'Overview') || '',
-      role: extractValue(expandedContent, 'Role in the Story') || '',
-      relationships: extractValue(expandedContent, 'Relationships') || '',
-      highlights: extractList(expandedContent, 'Narrative Highlights'),
-      traits: extractList(expandedContent, 'Personality Traits'),
-      quotes: extractList(expandedContent, 'Notable Quotes'),
-      
+    };
+    
+    // 1b. Extract UI - EXPANDED VIEW block as markdown string
+    const expandedViewMatch = fileContent.match(/## [^\n]*UI - EXPANDED VIEW[^`]*```md\s*([\s\S]*?)\s*```/);
+    const expandedView = expandedViewMatch ? expandedViewMatch[1].trim() : '';
+    
+    // 2. Extract all backend metadata from JSON blocks
+    const jsonObjects = extractJsonBlocks(fileContent);
+    const backendData = flattenObjects(jsonObjects);
+    
+    // 3. Combine all data into one rich object
+    const characterData = {
+      ...backendData, // Backend data is the base
+      ...cardData,    // Card view data can override for consistency if needed
+      expandedView,   // Add the expanded view markdown
       __type: 'character',
       __source: path.basename(file),
     };
 
+    // --- END OF RESPONSIBILITY ---
+
     const outputPath = path.join(OUTPUT_DIR, `${fileName}.json`);
     await fs.writeFile(outputPath, JSON.stringify(characterData, null, 2));
-    console.log(`[SUCCESS] Saved processed data to ${outputPath}`);
+    console.log(`[SUCCESS] Saved fully parsed data to ${outputPath}`);
   }
 
   console.log('--- Character Markdown Parsing Complete ---');
