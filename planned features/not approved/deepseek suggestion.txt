@@ -1,0 +1,20 @@
+The #1 feature a digital encyclopedia should have—but few, if any, actually do—is **real-time, verifiable fact-checking with transparent sourcing and conflict detection**.  
+
+Here’s why this is critical and rare:  
+
+1. **Dynamic Accuracy** – Most encyclopedias (even digital ones) rely on static, periodically updated information. A truly modern system would cross-reference facts in real-time against primary sources (studies, official data, expert reviews) and flag discrepancies or outdated claims.  
+
+2. **Bias & Conflict Detection** – The system could automatically highlight when a claim is contested by reputable sources, show political/corporate funding behind cited research, or detect "citation loops" (where unreliable sources reference each other to create false credibility).  
+
+3. **Transparent Revision History with Context** – Beyond just edit logs (like Wikipedia), it would explain *why* a change was made (e.g., "This statistic was updated because the original source was retracted" or "This claim is now disputed by X study").  
+
+4. **Live Consensus Metrics** – For controversial topics, it could display the level of agreement among experts (e.g., "90% of climate scientists agree on this point, based on these 5 meta-studies").  
+
+### Why Don’t Existing Encyclopedias Have This?  
+- **Technical complexity**: Requires AI-driven sourcing, live data integration, and expert collaboration.  
+- **Scale challenges**: Wikipedia’s volunteer model isn’t built for real-time verification.  
+- **Adversarial risks**: Bad actors could exploit live updates to spread misinformation faster than corrections.  
+
+A platform combining **AI-assisted sourcing, blockchain-like transparency for edits, and live expert oversight** could revolutionize trust in digital knowledge. No major encyclopedia currently does this at scale.  
+
+Would you want a "fact-checking engine" built into your encyclopedia searches?

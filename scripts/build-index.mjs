@@ -1,67 +1,81 @@
-import { promises as fs } from 'fs';
+import fs from 'fs';
 import path from 'path';
 import FlexSearch from 'flexsearch';
 
-const enrichedDataPath = path.resolve(process.cwd(), 'public/enriched-data.json');
-const searchIndexPath = path.resolve(process.cwd(), 'public/search-index.json');
-const distIndexPath = path.resolve(process.cwd(), 'dist/search-index.json'); // Also save to dist
+// --- Configuration ---
+const ENRICHED_DATA_PATH = path.join(process.cwd(), 'public', 'enriched-data.json');
+const INDEX_OUTPUT_PATH = path.join(process.cwd(), 'public', 'search-index.json');
 
+function lower(str) {
+  return typeof str === 'string' ? str.toLowerCase() : str;
+}
+
+function lowerArray(arr) {
+  return Array.isArray(arr) ? arr.map(lower) : arr;
+}
+
+// --- Main Indexing Logic ---
 async function buildIndex() {
   console.log('Reading enriched data...');
-  const enrichedDataFile = await fs.readFile(enrichedDataPath, 'utf-8');
-  const records = JSON.parse(enrichedDataFile);
-
-  if (!Array.isArray(records)) {
-    throw new Error('Enriched data is not an array.');
+  if (!fs.existsSync(ENRICHED_DATA_PATH)) {
+    console.error(`ERROR: Enriched data not found at ${ENRICHED_DATA_PATH}. Run enrichment script first.`);
+    return;
   }
-  
-  console.log(`Found ${records.length} records to index.`);
+  const data = JSON.parse(fs.readFileSync(ENRICHED_DATA_PATH, 'utf-8'));
+
+  console.log('Building FlexSearch index...');
 
   const index = new FlexSearch.Document({
     document: {
       id: 'slug',
-      index: ['name', 'description', 'tags', 'synonyms', 'nation', 'bending', 'role'],
-      store: ['name', 'slug', '__type', 'description', 'nation', 'icon'],
-    },
-    tokenize: 'forward',
+      index: [
+        { field: 'name', tokenize: 'forward' },
+        { field: 'description', tokenize: 'forward' },
+        { field: 'tags', tokenize: 'forward' },
+        { field: 'synonyms', tokenize: 'forward' },
+        { field: 'nation', tokenize: 'forward' },
+        { field: 'bending', tokenize: 'forward' },
+        { field: 'role', tokenize: 'forward' }
+      ],
+      store: ['slug', 'name', 'description', '__type', 'nation'],
+    }
   });
 
-  records.forEach(record => {
-    index.add(record);
+  const recordMap = new Map();
+  data.forEach(record => {
+    if (record && record.slug) {
+      // Lowercase all indexed fields for robust case-insensitive search
+      const lowercased = {
+        ...record,
+        name: lower(record.name),
+        description: lower(record.description),
+        nation: lower(record.nation),
+        bending: lower(record.bending),
+        role: lower(record.role),
+        tags: lowerArray(record.tags),
+        synonyms: lowerArray(record.synonyms)
+      };
+      index.add(lowercased);
+      recordMap.set(record.slug, record); // Store original for display
+    }
   });
 
-  console.log('FlexSearch index created. Exporting...');
-
+  console.log('Exporting index and records...');
   const exportedIndex = {};
-  await new Promise(resolve => {
-    index.export((key, data) => {
-      // @ts-ignore
-      exportedIndex[key] = data;
-      if (Object.keys(exportedIndex).length === 7) { // Wait for all parts to be exported
-         resolve(undefined);
-      }
-    });
+  await index.export((key, data) => {
+    exportedIndex[key] = data;
   });
-  
-  const recordMap = records.reduce((acc, record) => {
-    acc[record.slug] = record;
-    return acc;
-  }, {});
 
-  const finalOutput = {
+  const output = {
     index: exportedIndex,
-    records: recordMap,
+    records: Object.fromEntries(recordMap.entries()),
   };
 
-  await fs.mkdir(path.dirname(searchIndexPath), { recursive: true });
-  await fs.writeFile(searchIndexPath, JSON.stringify(finalOutput));
-  await fs.mkdir(path.dirname(distIndexPath), { recursive: true });
-  await fs.writeFile(distIndexPath, JSON.stringify(finalOutput)); // Also write to dist for good measure
-
-  console.log(`✅ Search index built successfully at ${searchIndexPath} and ${distIndexPath}`);
+  fs.writeFileSync(INDEX_OUTPUT_PATH, JSON.stringify(output));
+  console.log(`✅ Index built successfully at ${INDEX_OUTPUT_PATH}`);
 }
 
 buildIndex().catch(err => {
-  console.error('❌ Failed to build search index:', err);
+  console.error('Failed to build search index:', err);
   process.exit(1);
 });

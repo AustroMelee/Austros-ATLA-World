@@ -1,0 +1,321 @@
+{
+  "id": "mai",
+  "fullName": "Mai",
+  "titles": [
+    "Governor's Daughter"
+  ],
+  "aliases": [],
+  "species": "human",
+  "gender": "female",
+  "ageChronological": 17,
+  "ageBiological": 17,
+  "ageRange": "teen",
+  "birthDate": "85 AG",
+  "deathDate": null,
+  "nationality": "Fire Nation",
+  "ethnicity": "Fire Nation",
+  "nativeLocation": "Fire Nation",
+  "currentLocation": "Fire Nation",
+  "socioeconomicStanding": "nobility",
+  "languagesSpoken": [
+    "Standard Language"
+  ],
+  "isBender": false,
+  "bendingElement": null,
+  "bendingProficiency": "novice",
+  "advancedBending": [],
+  "nonBendingSkills": [
+    "shuriken-jutsu (knife throwing)",
+    "marksmanship",
+    "stealth",
+    "acrobatics"
+  ],
+  "uniqueTechniques": [
+    "concealed spring-loaded stiletto holsters"
+  ],
+  "powerMetrics": {
+    "rawPower": 1,
+    "technicalSkill": 9,
+    "strategicAptitude": 6
+  },
+  "combatStyle": "technical",
+  "vulnerabilities": [
+    "emotional attachment to Zuko",
+    "powerful benders at close range"
+  ],
+  "isLegendaryFighter": false,
+  "notableFeats": [
+    "Betrayed Azula and survived",
+    "Held her own against multiple benders",
+    "Aided in Zuko's escape from the Boiling Rock",
+    "Mastered knife-throwing out of boredom"
+  ],
+  "currentAffiliations": [
+    "Fire Nation",
+    "Royal Fire Academy for Girls"
+  ],
+  "pastAffiliations": [
+    "Azula's team"
+  ],
+  "allegianceHistory": [
+    {
+      "affiliation": "Azula's team",
+      "startDate": "100 AG",
+      "endDate": "100 AG",
+      "reasonForLeaving": "Betrayed Azula to save Zuko."
+    }
+  ],
+  "isRoyalty": false,
+  "politicalPower": "influential",
+  "politicalLeanings": [
+    "apolitical (initially)",
+    "reformist (later)"
+  ],
+  "moralAlignment": "true neutral",
+  "moralCompassDrift": true,
+  "narrativeFunction": "love interest",
+  "screenTimeLevel": "supporting",
+  "firstAppearance": "203-Return-to-Omashu",
+  "finalAppearance": "Graphic Novel: Ashes of the Academy",
+  "deathStatus": "alive",
+  "causeOfDeath": null,
+  "narrativeArcs": [
+    {
+      "arcType": "growth",
+      "status": "completed",
+      "summary": "Moving from detached apathy to actively choosing a side based on love rather than fear or duty."
+    }
+  ],
+  "keyTropes": [
+    "The Stoic",
+    "The Cynic",
+    "Deadpan Snarker",
+    "Love Redeems",
+    "Heel-Face Turn",
+    "The Goth"
+  ],
+  "eraAppearances": [
+    {
+      "era": "Avatar: The Last Airbender - Book 2",
+      "role": "villain",
+      "focus": "Serving as a skilled and dangerous member of Azula's team while hunting the Avatar.",
+      "keyEpisodes": [
+        "203",
+        "208",
+        "213",
+        "220"
+      ]
+    },
+    {
+      "era": "Avatar: The Last Airbender - Book 3",
+      "role": "hero",
+      "focus": "Rekindling her romance with Zuko, confronting her apathy, and ultimately betraying Azula.",
+      "keyEpisodes": [
+        "301",
+        "305",
+        "315"
+      ]
+    }
+  ],
+  "relationships": [
+    "Zuko (Boyfriend, former)",
+    "Azula (Commander, former)",
+    "Ty Lee (Friend)",
+    "Ukano (Father)",
+    "Kei Lo (Boyfriend, former)"
+  ],
+  "groupMemberships": [
+    {
+      "groupId": "azulas-team",
+      "roleInGroup": "specialist"
+    }
+  ],
+  "petCompanions": [],
+  "positiveTraits": [
+    "calm",
+    "level-headed",
+    "brave",
+    "honest (bluntly)",
+    "loyal (to Zuko)"
+  ],
+  "negativeTraits": [
+    "apathetic",
+    "gloomy",
+    "emotionally repressed",
+    "cynical",
+    "pessimistic"
+  ],
+  "motivations": [
+    "Zuko",
+    "escaping boredom"
+  ],
+  "fears": [
+    "Azula (formerly)"
+  ],
+  "internalConflicts": [
+    "apathy vs. love",
+    "fear vs. loyalty"
+  ],
+  "emotionalWounds": [
+    "emotional neglect",
+    "being forced to behave perfectly"
+  ],
+  "copingMechanisms": [
+    "stoicism",
+    "apathy",
+    "sarcasm",
+    "knife-throwing"
+  ],
+  "worldview": "Believes that most of life is dull and uninteresting, with rare exceptions for things—and people—worth caring about.",
+  "heightEstimate": "Average",
+  "notableFeatures": [
+    "Elaborate hair buns",
+    "tawny eyes",
+    "gloomy expression",
+    "dark lipstick"
+  ],
+  "outfitStyles": [
+    "Fire Nation noble attire",
+    "beachwear",
+    "Kyoshi Warrior disguise"
+  ],
+  "signaturePossessions": [
+    "Stilettos",
+    "shuriken",
+    "knives"
+  ],
+  "ageProgression": false,
+  "voiceActor": [
+    "Cricket Leigh"
+  ],
+  "iconicQuotes": [
+    "I love Zuko more than I fear you.",
+    "There is no fathoming my depths of passion for the Fire Nation.",
+    "Orange is such an awful color."
+  ],
+  "speakingStyle": "stoic",
+  "linguisticQuirks": [
+    "Monotone delivery",
+    "deadpan and dry wit"
+  ],
+  "catchphrases": [],
+  "archetype": "The Loner",
+  "thematicKeywords": [
+    "apathy",
+    "love",
+    "fear",
+    "loyalty",
+    "boredom",
+    "betrayal",
+    "stoicism",
+    "emotion"
+  ],
+  "tagCategories": {
+    "narrativeTags": [
+      "secondary antagonist",
+      "love interest",
+      "heel-face turn",
+      "deadpan snarker",
+      "the stoic",
+      "the goth"
+    ],
+    "combatTags": [
+      "non-bender",
+      "knife-thrower",
+      "markswoman",
+      "shuriken",
+      "stiletto"
+    ],
+    "relationshipTags": [
+      "girlfriend of Zuko",
+      "friend of Ty Lee",
+      "enemy of Azula",
+      "daughter of Ukano"
+    ],
+    "emotionTags": [
+      "apathetic",
+      "bored",
+      "gloomy",
+      "stoic",
+      "loyal",
+      "passionate (internally)"
+    ],
+    "politicalTags": [
+      "nobility",
+      "traitor (amnestied)",
+      "governor's daughter"
+    ],
+    "arcTags": [
+      "betrayed Azula",
+      "rekindled romance with Zuko",
+      "Boiling Rock incident",
+      "helped Zuko"
+    ],
+    "worldTags": [
+      "Fire Nation",
+      "Azula's team",
+      "New Ozai",
+      "Royal Fire Academy"
+    ],
+    "triviaTags": [
+      "hates orange",
+      "skilled at shuriken-jutsu",
+      "parents are politicians",
+      "broke up with Zuko"
+    ]
+  },
+  "relatedCards": [
+    "zuko",
+    "azula",
+    "ty-lee",
+    "ukano",
+    "kei-lo"
+  ],
+  "filterWeight": 80,
+  "canonicalImportance": "secondary",
+  "dataCompletenessScore": 0.98,
+  "searchableKeywords": [
+    "mai",
+    "knife",
+    "knives",
+    "stiletto",
+    "goth",
+    "bored",
+    "apathetic",
+    "zuko",
+    "azula",
+    "boiling",
+    "rock"
+  ],
+  "fuzzySynonyms": [
+    "zuko's girlfriend",
+    "the knife thrower",
+    "the gloomy girl",
+    "the one who betrayed azula"
+  ],
+  "isSuggestedInXContext": [],
+  "name": "Mai",
+  "nation": "Fire Nation",
+  "age": "15 (in Avatar: The Last Airbender)",
+  "description": "Raised to be a perfectly behaved and quiet daughter of a prominent politician, Mai developed a deeply apathetic and emotionally distant personality. Recruited by Princess Azula for her deadly marksmanship, she becomes a formidable foe. However, her deep-seated love for Prince Zuko ultimately forces her to make a choice between her fear of Azula and her loyalty to him, a decision that changes the course of her life and the war.",
+  "highlights": [
+    "Recruited into Azula's elite team to hunt the Avatar and Zuko.",
+    "Rekindled her childhood crush into a serious relationship with Prince Zuko.",
+    "Defied Princess Azula at the Boiling Rock, declaring \"I love Zuko more than I fear you\".",
+    "Aided Zuko against her own father's traitorous New Ozai Society after the war."
+  ],
+  "traits": [
+    "Apathetic & Bored",
+    "Stoic & Emotionally Repressed",
+    "Loyal (to Zuko)",
+    "Brave & Decisive (when it counts)"
+  ],
+  "quotes": [
+    "I love Zuko more than I fear you.",
+    "You're so beautiful when you hate the world.",
+    "Please tell me you're not here to rescue me."
+  ],
+  "role": "A secondary antagonist turned ally whose character arc explores how love can triumph over fear and apathy.",
+  "image": "[SVG embedded image link]",
+  "__source": "mai.md"
+}

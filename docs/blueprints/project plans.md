@@ -1,7 +1,3 @@
-Of course. Here is the project plan, reformatted and significantly expanded with more detailed, proactive steps to ensure a robust, error-resistant development process. This version anticipates potential issues, emphasizes best practices, and adds layers of validation to prevent "tomfoolery."
-
-***
-
 # 🚀 **Austros ATLA World Encyclopedia – Project Plan v4.0**
 
 This document outlines the official project plan for implementing the **v4.0 Blueprint**. It is designed to be a comprehensive, step-by-step guide that prioritizes stability, accessibility, and proactive quality assurance.
@@ -10,11 +6,10 @@ This document outlines the official project plan for implementing the **v4.0 Blu
 
 ## 🎨 **Section 1: Theming Foundation & Data Readiness**
 *Objective: Establish the core visual identity and validate the entire data pipeline to prevent downstream errors. This corresponds to **Batch 1** of the blueprint.*
-
+[START-COMPLETE]
 ### ### Step 1.1: Fortify the Data Pipeline 📊
 *Goal: Ensure data is 100% clean, validated, and backed up before any new development begins.*
 
-1.  **Backup Raw Data:** Before running any scripts, create a compressed archive (`.zip` or `.tar.gz`) of the entire `raw-data/` directory as a failsafe.
 2.  **Lint Markdown:** Run a linter (like `markdownlint`) across all `.md` files to catch syntax inconsistencies or potential parsing errors early.
 3.  **Execute Full Pipeline:** Run the master script `npm run build:data` to perform parsing, validation, enrichment, and indexing in one go.
 4.  **Scrutinize Pipeline Output:** Manually inspect the terminal output for any warnings or errors, even if the script succeeds.
@@ -38,26 +33,39 @@ This document outlines the official project plan for implementing the **v4.0 Blu
 
 ### ### Step 2.1: Engineer the Search Hook ⚙️
 *Goal: Refactor the core search logic to be more powerful and provide necessary metadata.*
-
 1.  **Define New Return Type:** In `src/hooks/useAustrosSearch.ts`, define a clear TypeScript type for the new return structure, e.g., `{ results: SearchResult[]; topHit: { nation: string } | null; }`.
 2.  **Implement Debouncing:** Wrap the search execution logic in a `debounce` function (e.g., from `lodash-es`) with a `300ms` delay to prevent excessive re-renders and processing while the user is typing.
 3.  **Refactor Logic:** Modify the hook to identify the top result and extract its `nation`.
 4.  **Handle Edge Cases:** Add explicit logic to return a neutral state (`topHit: null`) when there are zero search results or when the top result has no `nation` property.
-5.  **Write Unit Tests:** Create `useAustrosSearch.test.ts` and write tests for three scenarios: a) successful search with a top hit, b) search with results but no valid top hit, and c) search with no results.
+5.  **Write Unit Tests:** Create `useAustrosSearch.test.ts` and write tests for three scenarios: a) successful search with a top hit, b) search with results but no valid top hit, and c) search with no results.[END-COMPLETE]
 
-### ### Step 2.2: Construct the UI Components ⌨️
-*Goal: Build the user-facing search bar and suggestion overlay with full accessibility.*
+### ### Step 2.2: Construct the UI Components ⌨️ (Revised for Current System)
 
-1.  **Build the `SearchSuggestor`:**
-    *   Create `src/components/SearchBar/SearchSuggestor.tsx`.
-    *   Position it absolutely within the `SearchBar` container to overlay the input without disrupting layout.
-    *   Style it with **35% opacity** and ensure its text styles match the input exactly.
-    *   Add `aria-hidden="true"` to the suggestor's element to prevent screen readers from announcing the suggestion text twice (as it's already in the input).
-2.  **Build the `SearchBar`:**
-    *   In `SearchBar.tsx`, consume the `useAustrosSearch` hook.
-    *   Use the `topHit.nation` metadata to dynamically apply the correct nation-color CSS variable to the input's `color` property.
-    *   Implement the `onKeyDown` event handler. If the `Tab` key is pressed *and* a suggestion is present, call `event.preventDefault()` and update the search query to accept the suggestion.
-3.  **Cross-Browser Testing:** Manually test the `Tab` completion, color-changing text, and suggestion overlay in Chrome, Firefox, and Safari to catch any browser-specific quirks.
+*Goal: Build a robust, accessible search bar with inline autosuggestion and dynamic theming.*
+
+1. **Implement Inline Suggestion in `SearchBar`:**
+    *   The suggestion logic is handled directly within `SearchBar.tsx` using a “fake input” pattern.
+    *   The user’s query and the suggestion are rendered together in a single flex row, ensuring perfect alignment and no visual cramping.
+    *   The suggestion text is styled with reduced opacity and ellipsis, and is not focusable or announced by screen readers (since it’s not part of the input value).
+
+2. **Dynamic Theming and Accessibility:**
+    *   The `SearchBar` consumes the `useAustrosSearch` hook to get the top result and its nation.
+    *   The input text color dynamically reflects the nation color, using a prop passed from the parent page.
+    *   The search bar is fully accessible: the real input is layered on top, is focusable, and supports keyboard navigation and screen readers.
+
+3. **Tab Completion and User Experience:**
+    *   The `onKeyDown` handler in `SearchBar` listens for the Tab key.
+    *   If a suggestion is present, pressing Tab autocompletes the suggestion into the input, preventing the default tab navigation.
+    *   The “TAB” keycap indicator is rendered immediately after the suggestion for clear user guidance.
+
+4. **Cross-Browser and Responsive Testing:**
+    *   The inline suggestion approach is robust across Chrome, Firefox, and Safari, and adapts to all input widths and device sizes.
+    *   Manual QA confirms that the suggestion, Tab completion, and theming work consistently in all supported browsers.
+
+---
+
+**Summary:**  
+This approach eliminates the need for a separate overlay component, reduces layout bugs, and ensures a seamless, accessible, and visually consistent search experience. All requirements for predictive text, dynamic theming, and accessibility are met within a single, maintainable component.
 
 ---
 

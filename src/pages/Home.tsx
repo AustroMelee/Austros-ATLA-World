@@ -1,35 +1,51 @@
-import React from 'react';
-
-const pageLinks = [
-  { label: 'Search', href: '/search' },
-  { label: 'Characters', href: '/characters' },
-  { label: 'Bending Arts', href: '/bending' },
-  { label: 'Locations', href: '/locations' },
-  { label: 'Fauna', href: '/fauna' },
-  { label: 'Food', href: '/food' },
-  { label: 'Spirit World', href: '/spirit-world' },
-];
+import React, { useState } from 'react';
+import SearchBar from '../components/SearchBar/SearchBar';
+import EntityGrid from '../components/EntityGrid/EntityGrid';
+import { useAustrosSearch } from '../hooks/useAustrosSearch';
 
 export default function Home() {
+  const [query, setQuery] = useState('');
+  const { results, loading, error } = useAustrosSearch(query);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  // Compute suggestion
+  let suggestion = '';
+  if (query && results.length > 0) {
+    const top = results[0];
+    if (top.name && top.name.toLowerCase().startsWith(query.toLowerCase())) {
+      suggestion = top.name.slice(query.length);
+    }
+  }
+
+  // Compute dynamic text color (example logic)
+  const nationColors: Record<string, string> = {
+    'Earth Kingdom': '#6ee7b7',
+    'Fire Nation': '#f87171',
+    'Water Tribe': '#60a5fa',
+    'Air Nomads': '#fbbf24',
+  };
+  let textColor = '#fff';
+  if (results[0]?.__type === 'character' && results[0].nation) {
+    textColor = nationColors[results[0].nation] || '#fff';
+  }
+
   return (
-    <section className="w-full max-w-3xl mx-auto text-center py-16 px-4">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-slate-100 mb-4 tracking-tight drop-shadow-lg">
-        Austros ATLA World Encyclopedia
-      </h1>
-      <p className="text-lg text-slate-300 mb-8">
-        Welcome! Explore the world of Avatar through characters, bending arts, locations, fauna, and more.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-        {pageLinks.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="block bg-slate-800 hover:bg-indigo-600 text-slate-100 font-semibold py-4 px-6 rounded-xl shadow transition-colors duration-200 text-lg text-center border border-slate-700 hover:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          >
-            {item.label}
-          </a>
-        ))}
+    <section className="w-full max-w-5xl mx-auto text-center py-16 px-4">
+      <div className="mb-10">
+        <SearchBar
+          query={query}
+          onQueryChange={setQuery}
+          suggestion={suggestion}
+          textColor={textColor}
+        />
       </div>
+      {loading ? (
+        <div className="text-slate-400 mt-8">Loading...</div>
+      ) : error ? (
+        <div className="text-red-400 mt-8">{error}</div>
+      ) : (
+        <EntityGrid items={results} expandedId={expandedId} onExpand={setExpandedId} />
+      )}
     </section>
   );
 }

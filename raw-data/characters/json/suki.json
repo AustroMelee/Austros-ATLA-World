@@ -1,0 +1,323 @@
+{
+  "id": "suki",
+  "fullName": "Suki",
+  "titles": [
+    "Leader"
+  ],
+  "aliases": [],
+  "species": "human",
+  "gender": "female",
+  "ageChronological": 17,
+  "ageBiological": 17,
+  "ageRange": "teen",
+  "birthDate": "c. 84-85 AG",
+  "deathDate": null,
+  "nationality": "Earth Kingdom",
+  "ethnicity": "Kyoshi Islander",
+  "nativeLocation": "Suki's village, Kyoshi Island",
+  "currentLocation": "Unknown",
+  "socioeconomicStanding": "commoner",
+  "languagesSpoken": [
+    "Standard Language"
+  ],
+  "isBender": false,
+  "bendingElement": null,
+  "bendingProficiency": "novice",
+  "advancedBending": [],
+  "nonBendingSkills": [
+    "tessenjutsu (war fans)",
+    "chi-blocking",
+    "acrobatics",
+    "leadership",
+    "stealth",
+    "katana"
+  ],
+  "uniqueTechniques": [
+    "Kyoshi Warrior combat style",
+    "wall running"
+  ],
+  "powerMetrics": {
+    "rawPower": 2,
+    "technicalSkill": 9,
+    "strategicAptitude": 7
+  },
+  "combatStyle": "technical",
+  "vulnerabilities": [
+    "overwhelmed by powerful benders"
+  ],
+  "isLegendaryFighter": true,
+  "notableFeats": [
+    "Led the Kyoshi Warriors",
+    "Escaped the Boiling Rock prison",
+    "Helped disable the Fire Nation airship fleet",
+    "Fought Ty Lee to a standstill",
+    "Became a personal guard to the Fire Lord"
+  ],
+  "currentAffiliations": [
+    "Kyoshi Warriors",
+    "Team Avatar",
+    "Earth Kingdom"
+  ],
+  "pastAffiliations": [
+    "Fire Nation prisoner"
+  ],
+  "allegianceHistory": [],
+  "isRoyalty": false,
+  "politicalPower": "influential",
+  "politicalLeanings": [
+    "isolationist (initially)",
+    "internationalist",
+    "feminist"
+  ],
+  "moralAlignment": "lawful good",
+  "moralCompassDrift": false,
+  "narrativeFunction": "supporting",
+  "screenTimeLevel": "supporting",
+  "firstAppearance": "104-The-Warriors-of-Kyoshi",
+  "finalAppearance": "Avatar: The Last Airbender: Quest for Balance",
+  "deathStatus": "alive",
+  "causeOfDeath": null,
+  "narrativeArcs": [
+    {
+      "arcType": "growth",
+      "status": "completed",
+      "summary": "Moving beyond the isolationism of her home to become a warrior for the entire world."
+    }
+  ],
+  "keyTropes": [
+    "Action Girl",
+    "The Lancer (to Sokka)",
+    "Odango Hair",
+    "The Leader",
+    "Badass Normal"
+  ],
+  "eraAppearances": [
+    {
+      "era": "Avatar: The Last Airbender - Book 1",
+      "role": "supporting",
+      "focus": "Introducing Kyoshi Warrior culture and challenging Sokka's sexism.",
+      "keyEpisodes": [
+        "104"
+      ]
+    },
+    {
+      "era": "Avatar: The Last Airbender - Book 2",
+      "role": "supporting",
+      "focus": "Joining the war effort, protecting Appa, and being captured by Azula.",
+      "keyEpisodes": [
+        "212",
+        "216"
+      ]
+    },
+    {
+      "era": "Avatar: The Last Airbender - Book 3",
+      "role": "hero",
+      "focus": "Surviving the Boiling Rock, officially joining Team Avatar, and fighting in the final battle.",
+      "keyEpisodes": [
+        "314",
+        "315",
+        "320"
+      ]
+    }
+  ],
+  "relationships": [
+    "Sokka (Boyfriend, Combat Partner)",
+    "Kyoshi Warriors (Her \"Sisters\" and Team)",
+    "Aang & Team Avatar (Allies & Friends)",
+    "Ty Lee (Rival turned Ally)",
+    "Zuko (Ally, former Enemy)"
+  ],
+  "groupMemberships": [
+    {
+      "groupId": "kyoshi-warriors",
+      "roleInGroup": "leader"
+    },
+    {
+      "groupId": "team-avatar",
+      "roleInGroup": "specialist"
+    }
+  ],
+  "petCompanions": [],
+  "positiveTraits": [
+    "brave",
+    "loyal",
+    "disciplined",
+    "compassionate",
+    "assertive",
+    "dependable"
+  ],
+  "negativeTraits": [
+    "initially stubborn about tradition",
+    "can be serious"
+  ],
+  "motivations": [
+    "duty",
+    "protecting others",
+    "honoring Kyoshi's legacy",
+    "her friends and Sokka"
+  ],
+  "fears": [
+    "failing her warriors",
+    "letting her friends down"
+  ],
+  "internalConflicts": [
+    "isolationism vs. global responsibility",
+    "maintaining warrior identity vs. personal feelings"
+  ],
+  "emotionalWounds": [
+    "imprisonment"
+  ],
+  "copingMechanisms": [
+    "discipline",
+    "training",
+    "relying on her team"
+  ],
+  "worldview": "Believes in honor, discipline, and the duty of the strong to protect the vulnerable, regardless of gender.",
+  "heightEstimate": "Average",
+  "notableFeatures": [
+    "Kyoshi Warrior makeup (face paint)",
+    "auburn hair",
+    "blue eyes"
+  ],
+  "outfitStyles": [
+    "Kyoshi Warrior armor and uniform",
+    "Fire Nation prisoner uniform"
+  ],
+  "signaturePossessions": [
+    "War fans",
+    "Katana"
+  ],
+  "ageProgression": false,
+  "voiceActor": [
+    "Jennie Kwan"
+  ],
+  "iconicQuotes": [
+    "I am a warrior, but I'm a girl too.",
+    "We're the Kyoshi Warriors, revered by some, feared by others!",
+    "It's a rematch I've been waiting for."
+  ],
+  "speakingStyle": "confident",
+  "linguisticQuirks": [
+    "Speaks with authority as a leader"
+  ],
+  "catchphrases": [],
+  "archetype": "The Warrior",
+  "thematicKeywords": [
+    "duty",
+    "honor",
+    "leadership",
+    "feminism",
+    "tradition",
+    "community",
+    "resilience",
+    "loyalty"
+  ],
+  "tagCategories": {
+    "narrativeTags": [
+      "action girl",
+      "the leader",
+      "badass normal",
+      "love interest",
+      "joins the party late"
+    ],
+    "combatTags": [
+      "non-bender",
+      "war fans",
+      "chi-blocking",
+      "acrobat",
+      "swordsman (katana)"
+    ],
+    "relationshipTags": [
+      "girlfriend of Sokka",
+      "leader of Kyoshi Warriors",
+      "member of Team Avatar",
+      "rival of Ty Lee"
+    ],
+    "emotionTags": [
+      "brave",
+      "loyal",
+      "assertive",
+      "compassionate",
+      "disciplined"
+    ],
+    "politicalTags": [
+      "village leader",
+      "bodyguard",
+      "prisoner of war"
+    ],
+    "arcTags": [
+      "Boiling Rock escapee",
+      "joined the war",
+      "protected the Fire Lord",
+      "taught chi blocking"
+    ],
+    "worldTags": [
+      "Kyoshi Island",
+      "Earth Kingdom",
+      "Kyoshi Warriors",
+      "Boiling Rock"
+    ],
+    "triviaTags": [
+      "wears face paint",
+      "originally a one-off character",
+      "trained Sokka",
+      "master of tessenjutsu"
+    ]
+  },
+  "relatedCards": [
+    "sokka",
+    "aang",
+    "katara",
+    "toph-beifong",
+    "zuko",
+    "ty-lee",
+    "azula",
+    "kyoshi"
+  ],
+  "filterWeight": 85,
+  "canonicalImportance": "secondary",
+  "dataCompletenessScore": 0.98,
+  "searchableKeywords": [
+    "suki",
+    "kyoshi",
+    "warrior",
+    "fan",
+    "leader",
+    "nonbender",
+    "sokka",
+    "boiling",
+    "rock",
+    "chi",
+    "block"
+  ],
+  "fuzzySynonyms": [
+    "kyoshi warrior leader",
+    "sokka's girlfriend",
+    "the girl with the fans"
+  ],
+  "isSuggestedInXContext": [],
+  "name": "Suki",
+  "nation": "Earth Kingdom (Kyoshi Island)",
+  "age": "15 (in Avatar: The Last Airbender)",
+  "description": "As the leader of a formidable band of female warriors, Suki initially upholds her island's isolationist traditions. Inspired by Team Avatar, she chooses to join the war effort, becoming a valuable ally with her exceptional combat skills and leadership. Her journey takes her from the shores of Kyoshi Island to the cells of the Fire Nation's most feared prison, all while maintaining her courage, loyalty, and unwavering warrior spirit.",
+  "highlights": [
+    "Defeated and later trained Sokka, challenging his sexism.",
+    "Fought Princess Azula's team to protect Appa.",
+    "Survived and escaped the Fire Nation's highest-security prison, the Boiling Rock.",
+    "Helped Sokka and Toph disable the Fire Nation airship fleet during Sozin's Comet."
+  ],
+  "traits": [
+    "Brave & Assertive",
+    "Loyal & Compassionate",
+    "Disciplined & Focused",
+    "Playful & Humorous"
+  ],
+  "quotes": [
+    "I am a warrior, but I'm a girl too.",
+    "I'm the leader of the Kyoshi Warriors. I can handle a few navy guys.",
+    "Looks like we're in this together."
+  ],
+  "role": "A skilled supporting warrior whose growth from isolationist to global peacekeeper demonstrates the expanding scope of the war and the strength of non-benders.",
+  "image": "[SVG embedded image link]",
+  "__source": "suki.md"
+}

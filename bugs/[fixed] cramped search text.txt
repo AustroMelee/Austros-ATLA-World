@@ -1,0 +1,2322 @@
+Of course. You are correct to point out that the issue persists, and I sincerely apologize that my previous attempts did not resolve it. The visual evidence is clear: the text is overlapping.
+
+My last solution, while theoretically sound, clearly contained a flaw in its implementation that did not translate to the real-world browser rendering. Thank you for your patience. Let's produce the report you requested.
+
+Final Diagnostic Report: Autosuggestion Layout Failure
+1. Issue Diagnosis
+
+The root cause of the persistent text cramping and overlap is a fundamental conflict in how the layout is being calculated. Specifically, the absolutely positioned "suggestion" <div> (in the first attempts) or the <span> elements within the "fake input" (in the last attempt) are not being correctly offset by the width of the user's typed text.
+
+All previous attempts have failed for one of two reasons:
+
+Different Rendering Contexts: Trying to overlay a <div> or <span> on top of an <input> field's text is inherently unreliable. Browsers use different internal logic for rendering form element text versus standard block/inline text, leading to sub-pixel misalignments that cause overlap.
+
+Flawed Flexbox Logic: The "fake input" approach failed because the flexbox container was not correctly configured to treat the user's query and the suggestion as a single, continuous line of text. My use of justify-between or simple adjacent spans inside a flex container was incorrect for this specific use case, causing the suggestion to render from the start of the container instead of at the end of the user's query.
+
+2. History of Attempted Solutions & Why They Failed
+Attempt #	Strategy	Why It Failed
+1	Absolute Overlay (SearchSuggestor)	Rendering Mismatch: It was impossible to perfectly align the <span> inside the overlay with the text inside the <input> due to different browser rendering engines for form elements vs. standard text blocks.
+2	First "Fake Input" Attempt	Flawed Flexbox: The flexbox layout treated the user's text and the suggestion as separate items to be arranged, rather than as a single, continuous string. This caused them to overlap.
+3	Second "Fake Input" Attempt	Persistent Layout Conflict: This was a refinement of the previous attempt, but the core issue remained. The whitespace-pre and container structure was still not sufficient to force a sequential text flow, leading to the overlap you've shown.
+3. The Definitive Solution: A Simplified and Corrected "Fake Input"
+
+The principle of the "fake input" is correct, but the execution must be simpler and more direct. We will now use a structure that is immune to these layout flaws.
+
+The Strategy:
+
+Visual Layer: Create a div that looks like the input. Inside, place a single div to act as the text container.
+
+Text Rendering: Inside this text container, render the user's query in a span and the suggestion in another span. Crucially, we will use flex on this container to ensure they sit side-by-side without wrapping.
+
+Invisible Layer: Place the real, transparent <input> on top to capture user interaction.
+
+This approach isolates the text rendering from the input element itself, guaranteeing perfect alignment.
+
+Action: Replace src/components/SearchBar/SearchBar.tsx
+
+Please replace the entire content of this file with the following, corrected code. This version has been significantly simplified to ensure the text elements render correctly and sequentially.
+
+Generated typescript
+import React from 'react';
+
+interface SearchBarProps {
+  query: string;
+  onQueryChange: (newQuery: string) => void;
+  suggestion: string;
+  textColor: string;
+}
+
+export default function SearchBar({ query, onQueryChange, suggestion, textColor }: SearchBarProps) {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Tab' && suggestion && query) {
+      e.preventDefault();
+      onQueryChange(query + suggestion);
+    }
+  };
+
+  const showSuggestion = suggestion && query.length > 0;
+
+  return (
+    <div className="relative w-full max-w-2xl mx-auto">
+      {/*
+        LAYER 1: The Visuals ("Fake Input")
+        This div is styled to look like an input and is not interactive.
+      */}
+      <div
+        className="w-full h-[52px] px-5 py-3 flex items-center justify-between rounded-lg bg-slate-800 font-medium text-base border-2 border-slate-700 pointer-events-none"
+        aria-hidden="true"
+      >
+        {/* This container ensures text flows left-to-right and doesn't wrap. */}
+        <div className="flex-1 flex items-center whitespace-nowrap overflow-hidden">
+          <span style={{ color: textColor }}>{query}</span>
+          {showSuggestion && (
+            <span className="text-slate-400/50 text-ellipsis overflow-hidden">
+              {suggestion}
+            </span>
+          )}
+        </div>
+
+        {/* Tab keycap, only shown when there's a suggestion */}
+        {showSuggestion && (
+          <span className="ml-4 flex-shrink-0 text-xs font-semibold uppercase text-slate-400 bg-slate-900/75 border border-slate-700 rounded-md px-2 py-0.5">
+            Tab
+          </span>
+        )}
+      </div>
+
+      {/*
+        LAYER 2: The Interaction (Real, Invisible Input)
+        Layered on top to capture typing.
+      */}
+      <input
+        className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-transparent text-transparent font-medium text-base border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400"
+        style={{ caretColor: textColor }}
+        value={query}
+        onChange={e => onQueryChange(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder="Search for 'Toph' or 'Fire Flakes'..."
+        aria-label="Search encyclopedia"
+        autoComplete="off"
+        type="text"
+      />
+    </div>
+  );
+}
+
+Why This Final Version Will Work
+
+Corrected Text Flow: The key change is the new inner <div className="flex-1 flex items-center whitespace-nowrap overflow-hidden">. This container forces the query and suggestion spans to render sequentially as a single line (whitespace-nowrap). This physically prevents them from ever overlapping.
+
+Overflow Handling: The overflow-hidden and text-ellipsis on the suggestion span will gracefully truncate the suggestion if the combined text is too long, preventing it from pushing the "Tab" keycap out of view.
+
+Robust Spacing: The parent div uses justify-between, and the "Tab" keycap has flex-shrink-0, which guarantees that the text block and the keycap are spaced apart reliably.
+
+This is the industry-standard, robust way to build a custom input with this kind of functionality. It is no longer fighting the browser's rendering quirks but is instead using a predictable and clean layout structure.
+
+
+
+DOM:
+
+
+<html lang="en"><head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Tailwind Baseline</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/rohai/Desktop/WEBSITE PAGES/AVATAR/AUSTROS ATLA WORLD/src/styles/tailwind.css">/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-red-100: oklch(93.6% 0.032 17.717);
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
+    --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-indigo-300: oklch(78.5% 0.115 274.713);
+    --color-indigo-400: oklch(67.3% 0.182 276.935);
+    --color-indigo-600: oklch(51.1% 0.262 276.966);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-300: oklch(86.9% 0.022 252.894);
+    --color-slate-400: oklch(70.4% 0.04 256.788);
+    --color-slate-500: oklch(55.4% 0.046 257.417);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-md: 28rem;
+    --container-xl: 36rem;
+    --container-2xl: 42rem;
+    --container-3xl: 48rem;
+    --container-5xl: 64rem;
+    --container-7xl: 80rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --tracking-tight: -0.025em;
+    --leading-relaxed: 1.625;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-spin: spin 1s linear infinite;
+    --blur-sm: 8px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+      -o-tab-size: 4;
+         tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::-moz-placeholder {
+    opacity: 1;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::-moz-placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    -webkit-appearance: button;
+       -moz-appearance: button;
+            appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .collapse {
+    visibility: collapse;
+  }
+  .invisible {
+    visibility: hidden;
+  }
+  .visible {
+    visibility: visible;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .static {
+    position: static;
+  }
+  .sticky {
+    position: sticky;
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
+  .inset-y-0 {
+    inset-block: calc(var(--spacing) * 0);
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
+  .top-8 {
+    top: calc(var(--spacing) * 8);
+  }
+  .right-4 {
+    right: calc(var(--spacing) * 4);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-5 {
+    left: calc(var(--spacing) * 5);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-20 {
+    z-index: 20;
+  }
+  .z-30 {
+    z-index: 30;
+  }
+  .z-40 {
+    z-index: 40;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
+  }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  .block {
+    display: block;
+  }
+  .contents {
+    display: contents;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline {
+    display: inline;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .min-h-\[60vh\] {
+    min-height: 60vh;
+  }
+  .min-h-\[80vh\] {
+    min-height: 80vh;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-5xl {
+    max-width: var(--container-5xl);
+  }
+  .max-w-7xl {
+    max-width: var(--container-7xl);
+  }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .max-w-xl {
+    max-width: var(--container-xl);
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .grow {
+    flex-grow: 1;
+  }
+  .scale-105 {
+    --tw-scale-x: 105%;
+    --tw-scale-y: 105%;
+    --tw-scale-z: 105%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .animate-spin {
+    animation: var(--animate-spin);
+  }
+  .cursor-default {
+    cursor: default;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .resize {
+    resize: both;
+  }
+  .list-inside {
+    list-style-position: inside;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .space-y-1 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .gap-x-8 {
+    -moz-column-gap: calc(var(--spacing) * 8);
+         column-gap: calc(var(--spacing) * 8);
+  }
+  .gap-y-6 {
+    row-gap: calc(var(--spacing) * 6);
+  }
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-l-2 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 2px;
+  }
+  .border-l-4 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 4px;
+  }
+  .border-none {
+    --tw-border-style: none;
+    border-style: none;
+  }
+  .border-blue-400 {
+    border-color: var(--color-blue-400);
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
+  .border-green-400 {
+    border-color: var(--color-green-400);
+  }
+  .border-red-400 {
+    border-color: var(--color-red-400);
+  }
+  .border-red-500 {
+    border-color: var(--color-red-500);
+  }
+  .border-slate-600 {
+    border-color: var(--color-slate-600);
+  }
+  .border-slate-700 {
+    border-color: var(--color-slate-700);
+  }
+  .border-yellow-400 {
+    border-color: var(--color-yellow-400);
+  }
+  .border-t-transparent {
+    border-top-color: transparent;
+  }
+  .border-l-slate-600 {
+    border-left-color: var(--color-slate-600);
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
+  .bg-blue-600 {
+    background-color: var(--color-blue-600);
+  }
+  .bg-green-500 {
+    background-color: var(--color-green-500);
+  }
+  .bg-red-100 {
+    background-color: var(--color-red-100);
+  }
+  .bg-slate-700 {
+    background-color: var(--color-slate-700);
+  }
+  .bg-slate-800 {
+    background-color: var(--color-slate-800);
+  }
+  .bg-slate-900 {
+    background-color: var(--color-slate-900);
+  }
+  .bg-slate-900\/80 {
+    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-900) 80%, transparent);
+    }
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
+  }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
+  }
+  .pl-3 {
+    padding-left: calc(var(--spacing) * 3);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-tight {
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  .text-blue-400 {
+    color: var(--color-blue-400);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
+  .text-gray-600 {
+    color: var(--color-gray-600);
+  }
+  .text-green-400 {
+    color: var(--color-green-400);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
+  }
+  .text-red-700 {
+    color: var(--color-red-700);
+  }
+  .text-slate-100 {
+    color: var(--color-slate-100);
+  }
+  .text-slate-200 {
+    color: var(--color-slate-200);
+  }
+  .text-slate-300 {
+    color: var(--color-slate-300);
+  }
+  .text-slate-400 {
+    color: var(--color-slate-400);
+  }
+  .text-slate-500 {
+    color: var(--color-slate-500);
+  }
+  .text-slate-900 {
+    color: var(--color-slate-900);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .text-yellow-400 {
+    color: var(--color-yellow-400);
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .opacity-50 {
+    opacity: 50%;
+  }
+  .shadow {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-md {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring-blue-400 {
+    --tw-ring-color: var(--color-blue-400);
+  }
+  .ring-green-400 {
+    --tw-ring-color: var(--color-green-400);
+  }
+  .ring-red-500 {
+    --tw-ring-color: var(--color-red-500);
+  }
+  .ring-slate-500 {
+    --tw-ring-color: var(--color-slate-500);
+  }
+  .ring-yellow-400 {
+    --tw-ring-color: var(--color-yellow-400);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .blur {
+    --tw-blur: blur(8px);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .drop-shadow-lg {
+    --tw-drop-shadow-size: drop-shadow(0 4px 4px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.15)));
+    --tw-drop-shadow: drop-shadow(var(--drop-shadow-lg));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .backdrop-blur-sm {
+    --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-150 {
+    --tw-duration: 150ms;
+    transition-duration: 150ms;
+  }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+  .select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+         user-select: none;
+  }
+  .placeholder\:text-slate-400 {
+    &::-moz-placeholder {
+      color: var(--color-slate-400);
+    }
+    &::placeholder {
+      color: var(--color-slate-400);
+    }
+  }
+  .hover\:scale-105 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 105%;
+        --tw-scale-y: 105%;
+        --tw-scale-z: 105%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:border-indigo-400 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-indigo-400);
+      }
+    }
+  }
+  .hover\:bg-blue-400\/10 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, oklch(70.7% 0.165 254.624) 10%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-blue-400) 10%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:bg-blue-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-500);
+      }
+    }
+  }
+  .hover\:bg-blue-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-700);
+      }
+    }
+  }
+  .hover\:bg-gray-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-100);
+      }
+    }
+  }
+  .hover\:bg-green-400\/10 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, oklch(79.2% 0.209 151.711) 10%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-green-400) 10%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:bg-indigo-600 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-indigo-600);
+      }
+    }
+  }
+  .hover\:bg-red-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-500);
+      }
+    }
+  }
+  .hover\:bg-red-500\/10 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, oklch(63.7% 0.237 25.331) 10%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:bg-slate-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-slate-700);
+      }
+    }
+  }
+  .hover\:bg-slate-700\/50 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, oklch(37.2% 0.044 257.287) 50%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-slate-700) 50%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:bg-yellow-400\/10 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, oklch(85.2% 0.199 91.936) 10%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-yellow-400) 10%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:text-gray-700 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-700);
+      }
+    }
+  }
+  .hover\:text-indigo-300 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-indigo-300);
+      }
+    }
+  }
+  .hover\:text-red-400 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-red-400);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .focus\:ring-2 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-blue-500 {
+    &:focus {
+      --tw-ring-color: var(--color-blue-500);
+    }
+  }
+  .focus\:ring-indigo-400 {
+    &:focus {
+      --tw-ring-color: var(--color-indigo-400);
+    }
+  }
+  .focus\:ring-red-400 {
+    &:focus {
+      --tw-ring-color: var(--color-red-400);
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+  }
+  .sm\:inline {
+    @media (width >= 40rem) {
+      display: inline;
+    }
+  }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
+  .sm\:gap-4 {
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
+  .sm\:gap-6 {
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:mb-0 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:w-80 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 80);
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
+    }
+  }
+  .md\:p-8 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:text-5xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
+  .lg\:grid-cols-2 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-ease: initial;
+    }
+  }
+}
+</style></head>
+  <body>
+    <div id="root"><div class="bg-slate-900 text-slate-100 min-h-screen"><div class="flex flex-col min-h-screen bg-slate-900"><nav class="w-full bg-slate-800 border-b border-slate-700 px-4 py-3 flex flex-col sm:flex-row items-center gap-2 sm:gap-6"><span class="font-extrabold text-xl text-slate-100 tracking-tight mr-4">Austros ATLA World Encyclopedia</span><div class="flex flex-wrap gap-2 sm:gap-4"><a href="/search" class="text-slate-200 font-medium px-3 py-1 rounded hover:bg-slate-700 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-colors duration-150">Search</a><a href="/characters" class="text-slate-200 font-medium px-3 py-1 rounded hover:bg-slate-700 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-colors duration-150">Characters</a><a href="/bending" class="text-slate-200 font-medium px-3 py-1 rounded hover:bg-slate-700 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-colors duration-150">Bending</a><a href="/locations" class="text-slate-200 font-medium px-3 py-1 rounded hover:bg-slate-700 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-colors duration-150">Locations</a><a href="/fauna" class="text-slate-200 font-medium px-3 py-1 rounded hover:bg-slate-700 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-colors duration-150">Fauna</a><a href="/food" class="text-slate-200 font-medium px-3 py-1 rounded hover:bg-slate-700 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-colors duration-150">Food</a><a href="/spirit-world" class="text-slate-200 font-medium px-3 py-1 rounded hover:bg-slate-700 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-colors duration-150">Spirit World</a></div></nav><main class="flex-1 w-full flex flex-col items-center justify-center"><main class="w-full max-w-5xl mx-auto py-10 px-4 flex flex-col items-center"><h1 class="text-3xl font-extrabold text-slate-100 mb-4">Characters</h1><div class="flex items-center gap-3 w-full max-w-2xl mx-auto"><div class="relative flex-1 w-full"><input class="w-full px-5 py-3 rounded-lg bg-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-nation-water placeholder:text-slate-400 text-base transition-colors duration-200 border-2 border-slate-700" placeholder="Search for 'Toph' or 'Fire Flakes'..." aria-label="Search encyclopedia" autocomplete="off" type="text" value="kat" style="color: rgb(138, 173, 238); -webkit-text-fill-color: rgb(138, 173, 238);"><div class="absolute inset-y-0 left-0 flex items-center pointer-events-none w-full px-5" aria-hidden="true" style="font-size: 1rem; height: 100%;"><span style="visibility: hidden; white-space: pre;">kat</span><span style="color: rgb(165, 173, 206); opacity: 0.5; white-space: pre;">ara</span><span style="font-style: normal; font-size: 0.7em; font-weight: 600; text-transform: uppercase; color: rgb(165, 173, 206); background: rgba(0, 0, 0, 0.25); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(65, 69, 97); border-image: initial; border-radius: 4px; padding: 2px 6px; margin-left: 8px; opacity: 0.9; vertical-align: middle; margin-top: 1px;">Tab</span></div></div></div><div class="flex flex-wrap gap-3 items-center mb-4"></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"><div class=""><div class="relative bg-slate-800 text-slate-100 rounded-xl p-6 shadow-lg border-l-4 transition-all duration-300 ease-in-out border-slate-600 cursor-pointer hover:bg-slate-700/50 hover:scale-105" aria-expanded="false" role="button" tabindex="0"><div class="flex items-start gap-4"><div class="w-16 h-16 flex-shrink-0 flex items-center justify-center text-4xl bg-slate-900 rounded-lg border border-slate-700">🦰</div><div class="flex-grow"><h2 class="font-bold text-xl mb-1 truncate">katara</h2><p class="text-slate-400 text-sm capitalize">southern water tribe</p></div><button class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full border border-slate-600 bg-slate-700 text-lg font-bold transition-colors z-20 hover:bg-blue-500 hover:text-white" title="Add to Collection" aria-pressed="false" aria-label="Add katara to collection">+</button></div><p class="text-slate-300 text-sm mt-4 leading-relaxed line-clamp-3">a powerful and compassionate waterbending master from the southern water tribe who discovers the avatar. she serves as the moral compass for the group and aang's waterbending teacher, growing into one of the world's most formidable benders and healers.</p></div></div><div class=""><div class="relative bg-slate-800 text-slate-100 rounded-xl p-6 shadow-lg border-l-4 transition-all duration-300 ease-in-out border-slate-600 cursor-pointer hover:bg-slate-700/50 hover:scale-105" aria-expanded="false" role="button" tabindex="0"><div class="flex items-start gap-4"><div class="w-16 h-16 flex-shrink-0 flex items-center justify-center text-4xl bg-slate-900 rounded-lg border border-slate-700">🦰</div><div class="flex-grow"><h2 class="font-bold text-xl mb-1 truncate">sokka</h2><p class="text-slate-400 text-sm capitalize">southern water tribe</p></div><button class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full border border-slate-600 bg-slate-700 text-lg font-bold transition-colors z-20 hover:bg-blue-500 hover:text-white" title="Add to Collection" aria-pressed="false" aria-label="Add sokka to collection">+</button></div><p class="text-slate-300 text-sm mt-4 leading-relaxed line-clamp-3">a warrior from the southern water tribe and katara's older brother who, despite being a non-bender, serves as team avatar's primary strategist. he provides much of the group's comic relief, relying on his wit, sarcasm, and trusty boomerang.</p></div></div></div></main></main></div></div></div>
+    <script type="module" src="/src/main.tsx?t=1752360379936"></script>
+  
+
+</body></html>
+
+
+
+
+
+
+STYLES:
+
+positionstatic
+align-contentnormal
+align-itemsnormal
+align-selfauto
+block-size1080px
+bottomauto
+box-sizingborder-box
+clearnone
+clipauto
+displayblock
+flex-basisauto
+flex-directionrow
+flex-grow0
+flex-shrink1
+flex-wrapnowrap
+floatnone
+height1080px
+inline-size1372px
+justify-contentnormal
+leftauto
+margin-bottom0px
+margin-left0px
+margin-right0px
+margin-top0px
+max-block-sizenone
+max-heightnone
+max-inline-sizenone
+max-widthnone
+min-block-size0px
+min-height0px
+min-inline-size0px
+min-width0px
+overflow-xvisible
+overflow-yvisible
+padding-bottom0px
+padding-left0px
+padding-right0px
+padding-top0px
+resizenone
+rightauto
+topauto
+visibilityvisible
+width1372px
+z-indexauto
+text-size-adjust100%
+directionltr
+font-familyui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+font-feature-settingsnormal
+font-kerningauto
+font-optical-sizingauto
+font-size16px
+font-size-adjustnone
+font-stretch100%
+font-stylenormal
+font-variant-alternatesnormal
+font-variant-capsnormal
+font-variant-east-asiannormal
+font-variant-emojinormal
+font-variant-ligaturesnormal
+font-variant-numericnormal
+font-variant-positionnormal
+font-variation-settingsnormal
+font-weight400
+letter-spacingnormal
+line-height24px
+tab-size4
+text-alignstart
+text-align-lastauto
+text-decoration-colorrgb(0, 0, 0)
+text-decoration-linenone
+text-decoration-stylesolid
+text-decoration-thicknessauto
+text-indent0px
+text-overflowclip
+text-shadownone
+text-transformnone
+text-wrap-modewrap
+vertical-alignbaseline
+white-space-collapsecollapse
+word-breaknormal
+word-spacing0px
+colorrgb(0, 0, 0)
+background-attachmentscroll
+background-clipborder-box
+background-colorrgba(0, 0, 0, 0)
+background-imagenone
+background-originpadding-box
+background-position-x0%
+background-position-y0%
+background-repeatrepeat
+background-sizeauto
+border-bottom-colorrgb(0, 0, 0)
+border-bottom-stylesolid
+border-bottom-width0px
+border-image-outset0
+border-image-repeatstretch
+border-image-slice100%
+border-image-sourcenone
+border-image-width1
+border-left-colorrgb(0, 0, 0)
+border-left-stylesolid
+border-left-width0px
+border-right-colorrgb(0, 0, 0)
+border-right-stylesolid
+border-right-width0px
+border-top-colorrgb(0, 0, 0)
+border-top-stylesolid
+border-top-width0px
+box-shadownone
+cursorauto
+outline-colorrgb(0, 0, 0)
+outline-offset0px
+outline-stylenone
+outline-width0px
+-webkit-border-imagenone
+animation-delay0s
+animation-directionnormal
+animation-duration0s
+animation-fill-modenone
+animation-iteration-count1
+animation-namenone
+animation-play-staterunning
+animation-range-endnormal
+animation-range-startnormal
+animation-timelineauto
+animation-timing-functionease
+transition-behaviornormal
+transition-delay0s
+transition-duration0s
+transition-propertyall
+transition-timing-functionease
+--container-md28rem
+--tw-ring-offset-shadow0 0 #0000
+--tw-inset-shadow-alpha100%
+--color-indigo-300oklch(78.5% 0.115 274.713)
+--tw-ring-shadow0 0 #0000
+--color-indigo-400oklch(67.3% 0.182 276.935)
+--ease-in-outcubic-bezier(0.4, 0, 0.2, 1)
+--leading-relaxed1.625
+--color-slate-200oklch(92.9% 0.013 255.508)
+--tw-drop-shadow-alpha100%
+--color-slate-700oklch(37.2% 0.044 257.287)
+--text-lg1.125rem
+--default-transition-timing-functioncubic-bezier(0.4, 0, 0.2, 1)
+--color-blue-700oklch(48.8% 0.243 264.376)
+--color-slate-800oklch(27.9% 0.041 260.031)
+--color-slate-500oklch(55.4% 0.046 257.417)
+--color-slate-900oklch(20.8% 0.042 265.755)
+--tw-outline-stylesolid
+--text-5xl--line-height1
+--container-5xl64rem
+--color-slate-600oklch(44.6% 0.043 257.281)
+--tw-inset-ring-shadow0 0 #0000
+--text-base--line-heightcalc(1.5 / 1)
+--spacing0.25rem
+--color-gray-300oklch(87.2% 0.01 258.338)
+--tw-scale-y1
+--color-yellow-400oklch(85.2% 0.199 91.936)
+--font-monoui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+--color-slate-300oklch(86.9% 0.022 252.894)
+--text-xl--line-heightcalc(1.75 / 1.25)
+--font-weight-semibold600
+--color-gray-500oklch(55.1% 0.027 264.364)
+--color-red-700oklch(50.5% 0.213 27.518)
+--container-3xl48rem
+--text-sm0.875rem
+--color-green-400oklch(79.2% 0.209 151.711)
+--color-slate-100oklch(96.8% 0.007 247.896)
+--color-blue-500oklch(62.3% 0.214 259.815)
+--color-green-500oklch(72.3% 0.219 149.579)
+--animate-spinspin 1s linear infinite
+--tw-inset-shadow0 0 #0000
+--tw-ring-offset-color#fff
+--text-lg--line-heightcalc(1.75 / 1.125)
+--color-red-400oklch(70.4% 0.191 22.216)
+--color-white#fff
+--color-gray-700oklch(37.3% 0.034 259.733)
+--color-blue-400oklch(70.7% 0.165 254.624)
+--tw-shadow-alpha100%
+--color-slate-400oklch(70.4% 0.04 256.788)
+--color-gray-600oklch(44.6% 0.03 256.802)
+--font-weight-extrabold800
+--color-red-100oklch(93.6% 0.032 17.717)
+--color-blue-600oklch(54.6% 0.245 262.881)
+--font-sansui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+--text-4xl2.25rem
+--tw-scale-z1
+--font-weight-bold700
+--tw-border-stylesolid
+--color-gray-100oklch(96.7% 0.003 264.542)
+--color-red-500oklch(63.7% 0.237 25.331)
+--container-2xl42rem
+--tw-shadow0 0 #0000
+--text-sm--line-heightcalc(1.25 / 0.875)
+--tw-ring-offset-width0px
+--text-3xl--line-heightcalc(2.25 / 1.875)
+--text-5xl3rem
+--text-3xl1.875rem
+--color-black#000
+--default-font-familyui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+--font-weight-medium500
+--tw-scale-x1
+--color-indigo-600oklch(51.1% 0.262 276.966)
+--default-transition-duration150ms
+--radius-xl0.75rem
+--tw-space-y-reverse0
+--radius-md0.375rem
+--container-xl36rem
+--drop-shadow-lg0 4px 4px rgb(0 0 0 / 0.15)
+--radius-lg0.5rem
+--text-4xl--line-heightcalc(2.5 / 2.25)
+--text-xl1.25rem
+--container-7xl80rem
+--text-base1rem
+--blur-sm8px
+--default-mono-font-familyui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+--tracking-tight-0.025em
+grid-auto-columnsauto
+grid-auto-flowrow
+grid-auto-rowsauto
+grid-column-endauto
+grid-column-startauto
+grid-row-endauto
+grid-row-startauto
+grid-template-areasnone
+grid-template-columnsnone
+grid-template-rowsnone
+justify-itemsnormal
+justify-selfauto
+order0
+border-collapseseparate
+caption-sidetop
+empty-cellsshow
+table-layoutauto
+-webkit-border-horizontal-spacing0px
+-webkit-border-vertical-spacing0px
+contentnormal
+counter-incrementnone
+counter-resetnone
+quotesauto
+color-schemenormal
+forced-color-adjustauto
+mask-imagenone
+math-depth0
+position-anchorauto
+appearancenone
+font-palettenormal
+font-synthesis-small-capsauto
+font-synthesis-styleauto
+font-synthesis-weightauto
+position-areanone
+text-orientationmixed
+text-renderingauto
+text-spacing-trimnormal
+-webkit-font-smoothingauto
+-webkit-locale"en"
+-webkit-text-orientationvertical-right
+writing-modehorizontal-tb
+zoom1
+accent-colorauto
+alignment-baselineauto
+all
+anchor-namenone
+anchor-scopenone
+animation-compositionreplace
+app-regionnone
+aspect-ratioauto
+backdrop-filternone
+backface-visibilityvisible
+background-blend-modenormal
+baseline-shift0px
+baseline-sourceauto
+border-block-end-colorrgb(0, 0, 0)
+border-block-end-stylesolid
+border-block-end-width0px
+border-block-start-colorrgb(0, 0, 0)
+border-block-start-stylesolid
+border-block-start-width0px
+border-bottom-left-radius0px
+border-bottom-right-radius0px
+border-end-end-radius0px
+border-end-start-radius0px
+border-inline-end-colorrgb(0, 0, 0)
+border-inline-end-stylesolid
+border-inline-end-width0px
+border-inline-start-colorrgb(0, 0, 0)
+border-inline-start-stylesolid
+border-inline-start-width0px
+border-start-end-radius0px
+border-start-start-radius0px
+border-top-left-radius0px
+border-top-right-radius0px
+box-decoration-breakslice
+break-afterauto
+break-beforeauto
+break-insideauto
+buffered-renderingauto
+caret-colorrgb(0, 0, 0)
+clip-pathnone
+clip-rulenonzero
+color-interpolationsrgb
+color-interpolation-filterslinearrgb
+color-renderingauto
+column-countauto
+column-fillbalance
+column-gapnormal
+column-rule-colorrgb(0, 0, 0)
+column-rule-stylenone
+column-rule-width0px
+column-spannone
+column-widthauto
+containnone
+contain-intrinsic-block-sizenone
+contain-intrinsic-heightnone
+contain-intrinsic-inline-sizenone
+contain-intrinsic-widthnone
+container-namenone
+container-typenormal
+content-visibilityvisible
+counter-setnone
+cx0px
+cy0px
+dnone
+dominant-baselineauto
+dynamic-range-limitno-limit
+field-sizingfixed
+fillrgb(0, 0, 0)
+fill-opacity1
+fill-rulenonzero
+filternone
+flood-colorrgb(0, 0, 0)
+flood-opacity1
+hyphenate-characterauto
+hyphenate-limit-charsauto
+hyphensmanual
+image-orientationfrom-image
+image-renderingauto
+initial-letternormal
+inset-block-endauto
+inset-block-startauto
+inset-inline-endauto
+inset-inline-startauto
+interactivityauto
+interpolate-sizenumeric-only
+isolationauto
+lighting-colorrgb(255, 255, 255)
+line-breakauto
+list-style-imagenone
+list-style-positionoutside
+list-style-typedisc
+margin-block-end0px
+margin-block-start0px
+margin-inline-end0px
+margin-inline-start0px
+marker-endnone
+marker-midnone
+marker-startnone
+mask-clipborder-box
+mask-compositeadd
+mask-modematch-source
+mask-originborder-box
+mask-repeatrepeat
+mask-sizeauto
+mask-typeluminance
+math-shiftnormal
+math-stylenormal
+mix-blend-modenormal
+object-fitfill
+object-position50% 50%
+object-view-boxnone
+offset-anchorauto
+offset-distance0px
+offset-pathnone
+offset-positionnormal
+offset-rotateauto 0deg
+opacity1
+orphans2
+overflow-anchorauto
+overflow-blockvisible
+overflow-clip-margin0px
+overflow-inlinevisible
+overflow-wrapnormal
+overlaynone
+overscroll-behavior-blockauto
+overscroll-behavior-inlineauto
+overscroll-behavior-xauto
+overscroll-behavior-yauto
+padding-block-end0px
+padding-block-start0px
+padding-inline-end0px
+padding-inline-start0px
+pageauto
+page-orientation
+paint-ordernormal
+perspectivenone
+perspective-origin686px 540px
+pointer-eventsauto
+position-try-fallbacksnone
+position-try-ordernormal
+position-visibilityalways
+print-color-adjusteconomy
+r0px
+reading-flownormal
+reading-order0
+rotatenone
+row-gapnormal
+ruby-alignspace-around
+ruby-positionover
+rxauto
+ryauto
+scalenone
+scroll-behaviorauto
+scroll-initial-targetnone
+scroll-margin-block-end0px
+scroll-margin-block-start0px
+scroll-margin-bottom0px
+scroll-margin-inline-end0px
+scroll-margin-inline-start0px
+scroll-margin-left0px
+scroll-margin-right0px
+scroll-margin-top0px
+scroll-marker-groupnone
+scroll-padding-block-endauto
+scroll-padding-block-startauto
+scroll-padding-bottomauto
+scroll-padding-inline-endauto
+scroll-padding-inline-startauto
+scroll-padding-leftauto
+scroll-padding-rightauto
+scroll-padding-topauto
+scroll-snap-alignnone
+scroll-snap-stopnormal
+scroll-snap-typenone
+scroll-timeline-axisblock
+scroll-timeline-namenone
+scrollbar-colorauto
+scrollbar-gutterauto
+scrollbar-widthauto
+shape-image-threshold0
+shape-margin0px
+shape-outsidenone
+shape-renderingauto
+size
+speaknormal
+stop-colorrgb(0, 0, 0)
+stop-opacity1
+strokenone
+stroke-dasharraynone
+stroke-dashoffset0px
+stroke-linecapbutt
+stroke-linejoinmiter
+stroke-miterlimit4
+stroke-opacity1
+stroke-width1px
+text-anchorstart
+text-box-edgeauto
+text-box-trimnone
+text-combine-uprightnone
+text-decoration-skip-inkauto
+text-emphasis-colorrgb(0, 0, 0)
+text-emphasis-positionover
+text-emphasis-stylenone
+text-underline-offsetauto
+text-underline-positionauto
+text-wrap-styleauto
+timeline-scopenone
+touch-actionauto
+transformnone
+transform-boxview-box
+transform-origin686px 540px
+transform-styleflat
+translatenone
+unicode-bidinormal
+user-selectauto
+vector-effectnone
+view-timeline-axisblock
+view-timeline-insetauto
+view-timeline-namenone
+view-transition-classnone
+view-transition-nameroot
+-webkit-box-alignstretch
+-webkit-box-directionnormal
+-webkit-box-flex0
+-webkit-box-ordinal-group1
+-webkit-box-orienthorizontal
+-webkit-box-packstart
+-webkit-box-reflectnone
+-webkit-line-clampnone
+-webkit-mask-box-image-outset0
+-webkit-mask-box-image-repeatstretch
+-webkit-mask-box-image-slice0 fill
+-webkit-mask-box-image-sourcenone
+-webkit-mask-box-image-widthauto
+-webkit-mask-position-x0%
+-webkit-mask-position-y0%
+-webkit-perspective-origin-x
+-webkit-perspective-origin-y
+-webkit-rtl-orderinglogical
+-webkit-ruby-positionbefore
+-webkit-tap-highlight-colorrgba(0, 0, 0, 0)
+-webkit-text-combinenone
+-webkit-text-decorations-in-effectnone
+-webkit-text-fill-colorrgb(0, 0, 0)
+-webkit-text-securitynone
+-webkit-text-stroke-colorrgb(0, 0, 0)
+-webkit-text-stroke-width0px
+-webkit-transform-origin-x
+-webkit-transform-origin-y
+-webkit-transform-origin-z
+-webkit-user-dragauto
+-webkit-user-modifyread-only
+widows2
+will-changeauto
+x0px
+y0px
+
+element.style {
+}
+<style>
+html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+}
+<style>
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+}
+<style>
+:root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-red-100: oklch(93.6% 0.032 17.717);
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
+    --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-indigo-300: oklch(78.5% 0.115 274.713);
+    --color-indigo-400: oklch(67.3% 0.182 276.935);
+    --color-indigo-600: oklch(51.1% 0.262 276.966);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-300: oklch(86.9% 0.022 252.894);
+    --color-slate-400: oklch(70.4% 0.04 256.788);
+    --color-slate-500: oklch(55.4% 0.046 257.417);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-md: 28rem;
+    --container-xl: 36rem;
+    --container-2xl: 42rem;
+    --container-3xl: 48rem;
+    --container-5xl: 64rem;
+    --container-7xl: 80rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+Show all properties (20 more)
+}
+html[Attributes Style] {
+    -webkit-locale: "en";
+}
+user agent stylesheet
+:root {
+    view-transition-name: root;
+}
+user agent stylesheet
+html {
+    display: block;
+}
+<style>
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+}
+<style>
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+}
+<style>
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+}
+
+
+
+
+
+
+
+**Solution to Text Cramping in the SearchBar Autosuggestion:**
+
+The text cramping (overlap or crowding between the user's query, the suggestion, and the "TAB" keycap) was fixed by making the following key changes:
+
+---
+
+### 1. **Proper Flexbox Layout with Shrinkable Container**
+- The text container (holding the query and suggestion) was given `min-w-0` and `overflow-hidden` inside a flex row.
+- This allows the suggestion text to shrink and ellipsis (`...`) when space is tight, instead of pushing into the keycap or overflowing.
+
+### 2. **Margin Between Suggestion and Keycap**
+- A right margin (`mr-4` or, in the final version, a left margin `ml-2` on the keycap) was added to ensure there is always space between the suggestion and the "TAB" keycap, preventing them from touching or overlapping.
+
+### 3. **Keycap Placement**
+- The "TAB" keycap was moved to be immediately after the suggestion (not at the far right), so the suggestion and keycap are always visually connected and never overlap.
+
+---
+
+**Key Code Snippet:**
+```tsx
+<div className="flex items-center whitespace-nowrap overflow-hidden min-w-0">
+  <span style={{ color: textColor }}>{query}</span>
+  {showSuggestion && (
+    <>
+      <span className="text-slate-400/50 text-ellipsis overflow-hidden ml-1">
+        {suggestion}
+      </span>
+      <span className="flex-shrink-0 text-xs font-semibold uppercase text-slate-400 bg-slate-900/75 border border-slate-700 rounded-md px-2 py-0.5 ml-2">
+        Tab
+      </span>
+    </>
+  )}
+</div>
+```
+
+---
+
+**Summary:**  
+- **min-w-0** and **overflow-hidden** allow the suggestion to shrink and ellipsis, preventing cramping.
+- **Margin** between suggestion and keycap ensures clear separation.
+- **Keycap placement** right after the suggestion keeps the UI clean and readable.
+
+This combination ensures the query, suggestion, and keycap never overlap or cramp, regardless of input length.

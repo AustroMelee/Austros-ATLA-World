@@ -1,60 +1,55 @@
-import React, { useRef } from 'react';
-import { useAustrosSearch } from '../../hooks/useAustrosSearch';
-import SearchSuggestor from './SearchSuggestor';
+import React from 'react';
 
 interface SearchBarProps {
-  value: string;
-  onChange: (value: string) => void;
-  onSubmit: () => void;
+  query: string;
+  onQueryChange: (newQuery: string) => void;
+  suggestion: string;
+  textColor: string;
 }
 
-const nationAccent: Record<string, string> = {
-  'Earth Kingdom': 'border-nation-earth',
-  'Fire Nation': 'border-nation-fire',
-  'Water Tribe': 'border-nation-water',
-  'Air Nomads': 'border-nation-air',
-};
-
-export default function SearchBar({ value, onChange, onSubmit }: SearchBarProps) {
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { results, topHit } = useAustrosSearch(value);
-  const suggestion = results.length > 0 && results[0].name.toLowerCase().startsWith(value.toLowerCase())
-    ? results[0].name.slice(value.length)
-    : '';
-  const nation = topHit?.nation || 'neutral';
-
-  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === 'Tab' && suggestion) {
+export default function SearchBar({ query, onQueryChange, suggestion, textColor }: SearchBarProps) {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Tab' && suggestion && query) {
       e.preventDefault();
-      onChange(value + suggestion);
-      setTimeout(() => inputRef.current?.setSelectionRange((value + suggestion).length, (value + suggestion).length), 0);
+      onQueryChange(query + suggestion);
     }
-  }
+  };
+
+  const showSuggestion = suggestion && query.length > 0;
 
   return (
-    <div className="flex flex-col md:flex-row items-center gap-3 w-full max-w-2xl mx-auto p-4 bg-slate-900 rounded-xl shadow-md">
-      <div className="relative flex-1 w-full">
-        <input
-          ref={inputRef}
-          className={`w-full px-5 py-3 rounded-lg bg-slate-800 text-slate-100 font-medium focus:outline-none focus:ring-2 focus:ring-nation-water placeholder:text-slate-400 text-base transition-colors duration-200 border-2 ${nationAccent[nation] || 'border-slate-600'}`}
-          value={value}
-          onChange={e => onChange(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Search the Avatar world…"
-          type="text"
-          aria-label="Search encyclopedia"
-          autoComplete="off"
-        />
-        <SearchSuggestor value={value} suggestion={suggestion} />
-      </div>
-      <button
-        className="px-5 py-3 rounded-lg bg-nation-water text-slate-900 font-semibold hover:bg-nation-earth transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-nation-water"
-        type="button"
-        onClick={onSubmit}
-        aria-label="Search"
+    <div className="relative w-full max-w-2xl mx-auto">
+      {/* LAYER 1: The Visuals ("Fake Input") */}
+      <div
+        className="w-full h-[52px] px-5 py-3 flex items-center justify-start rounded-lg bg-slate-800 font-medium text-base border-2 border-slate-700 pointer-events-none"
+        aria-hidden="true"
       >
-        Search
-      </button>
+        <div className="flex items-center whitespace-nowrap overflow-hidden min-w-0">
+          <span style={{ color: textColor }}>{query}</span>
+          {showSuggestion && (
+            <>
+              <span className="text-slate-400/50 text-ellipsis overflow-hidden ml-1">
+                {suggestion}
+              </span>
+              <span className="flex-shrink-0 text-xs font-semibold uppercase text-slate-400 bg-slate-900/75 border border-slate-700 rounded-md px-2 py-0.5 ml-2">
+                Tab
+              </span>
+            </>
+          )}
+        </div>
+      </div>
+      {/* LAYER 2: The Interaction (Real, Invisible Input) */}
+      <input
+        className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-transparent font-medium text-base border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400"
+        style={{ color: textColor, caretColor: textColor }}
+        value={query}
+        onChange={e => onQueryChange(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder="Search for 'Toph' or 'Fire Flakes'..."
+        aria-label="Search encyclopedia"
+        autoComplete="off"
+        type="text"
+      />
     </div>
   );
 }

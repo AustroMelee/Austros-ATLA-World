@@ -1,0 +1,14 @@
+The #1 feature that a digital encyclopedia should have but most lack is **dynamic, contextual cross-referencing that adapts to your reading journey**.
+
+Think about how you actually consume information: you rarely read an encyclopedia entry in isolation. You're usually exploring interconnected concepts, following threads of curiosity, or trying to understand how different pieces fit together. Yet most digital encyclopedias still treat each article as a standalone document with basic hyperlinks.
+
+What they should have instead is an intelligent system that:
+
+- **Contextually surfaces related concepts** as you read, not just obvious links but subtle connections that illuminate the bigger picture
+- **Maintains awareness of your reading path** and suggests progressively deeper or broader connections based on where you've been
+- **Provides multiple relationship types** between entries (causal, temporal, conceptual, oppositional) rather than just generic links
+- **Offers dynamic entry points** that reshape article presentations based on how you arrived there
+
+For example, if you're reading about the French Revolution after coming from articles about economic theory, the encyclopedia should emphasize different aspects and surface different connections than if you arrived from articles about military history.
+
+This would transform encyclopedias from static reference works into dynamic knowledge exploration tools that actually match how human curiosity and learning work. Instead, most digital encyclopedias are still essentially print encyclopedias with search functions and basic hyperlinks - a massive missed opportunity for the medium.
