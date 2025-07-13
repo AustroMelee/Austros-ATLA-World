@@ -1,6 +1,5 @@
 import React from 'react';
-import { EnrichedCharacter } from '../../types/domainTypes';
-import { useCollectionsStore } from '../../collections/collectionsStore';
+import type { EnrichedCharacter } from '../../types/domainTypes';
 
 interface ItemCardProps {
   item: EnrichedCharacter;
@@ -9,195 +8,89 @@ interface ItemCardProps {
   onAddToCollection?: () => void;
 }
 
-const nationTheme: Record<string, { gradient: string; ring: string; accent: string; text: string; shadow: string; glowFromColor: string; glowToColor: string }> = {
-  'Air Nomads': {
-    gradient: 'from-yellow-200/40 via-yellow-400/20 to-yellow-700/10',
-    ring: 'ring-yellow-300/60',
-    accent: 'bg-yellow-300/80',
-    text: 'text-yellow-100',
-    shadow: 'shadow-yellow-200/30',
-    glowFromColor: '#ffe06699',
-    glowToColor: '#ffd60a99',
-  },
-  'Water Tribe': {
-    gradient: 'from-blue-200/40 via-blue-400/20 to-blue-900/10',
-    ring: 'ring-blue-400/60',
-    accent: 'bg-blue-400/80',
-    text: 'text-blue-100',
-    shadow: 'shadow-blue-200/30',
-    glowFromColor: '#38bdf899',
-    glowToColor: '#1e40af99',
-  },
-  'Southern Water Tribe': {
-    gradient: 'from-blue-200/40 via-blue-400/20 to-blue-900/10',
-    ring: 'ring-blue-400/60',
-    accent: 'bg-blue-400/80',
-    text: 'text-blue-100',
-    shadow: 'shadow-blue-200/30',
-    glowFromColor: '#38bdf899',
-    glowToColor: '#1e40af99',
-  },
-  'Earth Kingdom': {
-    gradient: 'from-green-200/40 via-green-400/20 to-green-900/10',
-    ring: 'ring-green-400/60',
-    accent: 'bg-green-400/80',
-    text: 'text-green-100',
-    shadow: 'shadow-green-200/30',
-    glowFromColor: '#4ade8099',
-    glowToColor: '#16653499',
-  },
-  'Fire Nation': {
-    gradient: 'from-red-200/40 via-red-400/20 to-red-900/10',
-    ring: 'ring-red-400/60',
-    accent: 'bg-red-400/80',
-    text: 'text-red-100',
-    shadow: 'shadow-red-200/30',
-    glowFromColor: '#f8717199',
-    glowToColor: '#7f1d1d99',
-  },
-  neutral: {
-    gradient: 'from-slate-200/40 via-slate-400/20 to-slate-900/10',
-    ring: 'ring-slate-400/60',
-    accent: 'bg-slate-400/80',
-    text: 'text-slate-100',
-    shadow: 'shadow-slate-200/30',
-    glowFromColor: '#a9a9a999',
-    glowToColor: '#6b728099',
-  },
-};
+function toTitleCase(str?: string): string {
+  if (!str) return '';
+  return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase());
+}
 
 export default function ItemCard({ item, expanded, onExpand, onAddToCollection }: ItemCardProps) {
-  const theme = nationTheme[item.nation || 'neutral'] || nationTheme.neutral;
-  const { collections } = useCollectionsStore();
-  const isItemInCollection = Object.values(collections).some(col => col.items.includes(item.id));
-
-  const hoverClasses = expanded ? '' : 'hover:scale-[1.035] motion-safe:transition-transform duration-300';
-  const expandedClasses = expanded ? 'scale-105 z-20' : '';
-
-  const interactiveProps = {
-    role: 'button' as const,
-    tabIndex: 0,
-    onClick: onExpand,
-    onKeyPress: (e: React.KeyboardEvent<HTMLDivElement>) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        onExpand();
-      }
-    },
-  };
-
-  const iconText = item.slug.substring(0, 3).toUpperCase();
+  const iconText = (item.name || 'UNK').substring(0, 3).toUpperCase();
+  const nationInitial = item.nation?.charAt(0).toUpperCase() || '?';
+  
+  const baseClasses = "w-full text-left transition-all duration-300 ease-in-out rounded-xl";
+  const expandedClasses = expanded ? "bg-slate-800 ring-2 ring-blue-500 p-4" : "bg-slate-800 hover:bg-slate-700 p-3";
 
   return (
     <div
-      className={`itemcard-animated-border ${hoverClasses} ${expandedClasses}`}
-      style={{
-        '--border-from': theme.glowFromColor,
-        '--border-to': theme.glowToColor,
-      } as React.CSSProperties}
-      {...interactiveProps}
+      onClick={onExpand} // Always allow toggle
+      role="button"
+      tabIndex={0}
+      onKeyPress={(e) => (e.key === 'Enter' || e.key === ' ') && onExpand()} // Always allow toggle
+      aria-expanded={expanded}
+      aria-label={`View details for ${item.name}`}
+      className={`${baseClasses} ${expandedClasses}`}
     >
-      <div className={`relative rounded-[22px] p-6 bg-slate-800/80 backdrop-blur-xl h-full w-full`}>
-        {/* === Header Section (Visible on both collapsed and expanded) === */}
-        <div className="relative z-20 flex items-start gap-4">
-          <div className={`w-16 h-16 flex-shrink-0 flex items-center justify-center ${theme.accent} rounded-2xl shadow-lg ring-2 ring-white/20 overflow-hidden`}>
-            {item.image && !item.image.startsWith('[SVG') ? (
-              <img
-                src={item.name === 'Aang' ? '/assets/images/aang.jpg' : item.image}
-                alt={item.name}
-                className="object-cover w-full h-full"
-                loading="lazy"
-                draggable={false}
-              />
-            ) : item.name === 'Aang' ? (
-              <img
-                src={'/assets/images/aang.jpg'}
-                alt="Aang"
-                className="object-cover w-full h-full"
-                loading="lazy"
-                draggable={false}
-              />
-            ) : (
-              <span className="font-mono font-bold text-2xl text-slate-900/70 tracking-tighter">{iconText}</span>
-            )}
-          </div>
-          <div className="flex-grow min-w-0 pt-1">
-            <h2 className={`font-bold text-xl drop-shadow text-slate-50`}>{item.name}</h2>
-            <p className={`text-sm capitalize opacity-80 text-slate-300`}>{item.nation || item.__type}</p>
-          </div>
-          <button
-            className={`flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-full border-2 border-white/30 bg-white/20 text-lg font-bold transition-colors z-20 shadow ${isItemInCollection ? 'bg-green-400 text-green-900' : `${theme.accent} text-white hover:bg-white/60 hover:text-black`} focus-visible:outline-2 focus-visible:outline-white/80`}
-            title={isItemInCollection ? 'In Collection' : 'Add to Collection'}
-            onClick={(e) => { e.stopPropagation(); if (onAddToCollection) { onAddToCollection(); } }}
-            aria-pressed={isItemInCollection}
-            aria-label={isItemInCollection ? `Item is in a collection` : `Add ${item.name} to collection`}
-          >
-            {isItemInCollection ? '\u2713' : '+'}
-          </button>
+      {/* Header (visible in both states, slightly different layout) */}
+      <div className="flex items-start gap-3">
+        <div className="w-12 h-12 flex-shrink-0 bg-slate-700 rounded-lg flex items-center justify-center">
+          <span className="font-bold text-slate-300">{iconText}</span>
         </div>
-        
-        {/* === Description Section (Only changes visibility) === */}
-        <p className={`text-slate-200 text-sm mt-4 leading-relaxed drop-shadow-lg ${expanded ? '' : 'line-clamp-3'}`}>{item.description}</p>
-        
-        {/* === Expanded Content Section (Dynamically rendered) === */}
-        {expanded && (
-          <>
-            <hr className="my-6 border-t-2" style={{ borderColor: theme.glowFromColor, opacity: 0.2 }} />
-            <div className="space-y-8">
-              {/* Overview Section */}
-              {item.overview && (
-                <div>
-                  <h3 className="font-bold text-lg text-slate-50 mb-2">Overview</h3>
-                  <p className="text-slate-300 text-sm leading-relaxed">{item.overview}</p>
-                </div>
-              )}
-
-              {/* Two-Column Grid for Details */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
-                {/* Left Column */}
-                <div className="space-y-8">
-                  {item.highlights && item.highlights.length > 0 && (
-                    <div>
-                      <h3 className="font-bold text-lg text-slate-50 mb-3">Key Journey Highlights</h3>
-                      <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm">
-                        {item.highlights.map((highlight, i) => <li key={i}>{highlight}</li>)}
-                      </ul>
-                    </div>
-                  )}
-                  {item.traits && item.traits.length > 0 && (
-                    <div>
-                      <h3 className="font-bold text-lg text-slate-50 mb-3">Personality Traits</h3>
-                      <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm">
-                        {item.traits.map((trait, i) => <li key={i}>{trait}</li>)}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-
-                {/* Right Column */}
-                <div className="space-y-8">
-                  {item.quotes && item.quotes.length > 0 && (
-                    <div>
-                      <h3 className="font-bold text-lg text-slate-50 mb-3">Notable Quotes</h3>
-                      <div className="space-y-4">
-                        {item.quotes.map((quote, i) => (
-                          <blockquote key={i} className="italic border-l-2 pl-4 text-slate-400 text-sm" style={{ borderColor: theme.glowFromColor }}>&quot;{quote}&quot;</blockquote>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {item.relationships && (
-                    <div>
-                      <h3 className="font-bold text-lg text-slate-50 mb-3">Relationships</h3>
-                      <p className="text-slate-300 text-sm leading-relaxed">{item.relationships}</p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </>
-        )}
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-white truncate">{toTitleCase(item.name)}</h3>
+          <div className="flex items-center gap-2 text-xs text-slate-400 mt-1">
+            {item.nation && <span>{toTitleCase(item.nation)}</span>}
+            {item.bendingElement && <span className="text-xs px-2 py-0.5 bg-slate-700 rounded-full">{toTitleCase(item.bendingElement)}</span>}
+          </div>
+        </div>
+        <div className="flex-shrink-0 flex gap-2">
+          {expanded && (
+            <button
+              onClick={(e) => { e.stopPropagation(); onAddToCollection?.(); }}
+              className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center text-white text-lg hover:bg-slate-600"
+              aria-label={`Add ${item.name} to a collection`}
+            >
+              +
+            </button>
+          )}
+          <div className="w-6 h-6 bg-slate-600 rounded-full flex items-center justify-center text-white text-xs font-semibold border border-slate-500">
+            {nationInitial}
+          </div>
+        </div>
       </div>
+
+      {/* Default/Compact Description */}
+      {!expanded && (
+        <p className="text-xs text-slate-400 mt-2 line-clamp-2">{item.description}</p>
+      )}
+
+      {/* Expanded Detail View */}
+      {expanded && (
+        <div className="mt-4 pt-4 border-t border-slate-700 space-y-3 text-sm text-slate-300">
+          <p>{item.overview || item.description}</p>
+          {item.highlights && item.highlights.length > 0 && (
+            <div>
+              <h4 className="font-semibold text-slate-200 mb-1">Highlights:</h4>
+              <ul className="list-disc list-inside space-y-1 text-slate-400">
+                {item.highlights.map((h, i) => <li key={i}>{h}</li>)}
+              </ul>
+            </div>
+          )}
+           {item.traits && item.traits.length > 0 && (
+            <div>
+              <h4 className="font-semibold text-slate-200 mb-1">Traits:</h4>
+              <p className="text-slate-400">{item.traits.join(', ')}</p>
+            </div>
+          )}
+          {item.quotes && item.quotes.length > 0 && (
+            <div>
+              <h4 className="font-semibold text-slate-200 mb-1">Quotes:</h4>
+              <ul className="list-disc list-inside space-y-1 text-slate-400">
+                {item.quotes.map((q, i) => <li key={i}>{q}</li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

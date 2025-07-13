@@ -1,89 +1,82 @@
-import { promises as fs } from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 
-// Helper to create a URL-safe slug from a name
-const slugify = (str) =>
-  str
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/[\s_-]+/g, '-')
-    .replace(/^-+|-+$/g, '');
+// --- CONFIGURATION ---
+// Maps a data type to its source directory.
+const SOURCE_DIRS_MAP = {
+  character: 'raw-data/characters/json',
+  bending: 'raw-data/bending',
+  food: 'raw-data/fauna',
+};
+const OUTPUT_FILE_DIST = 'dist/enriched-data.json';
+const OUTPUT_FILE_PUBLIC = 'public/enriched-data.json';
 
-const VERBOSE = process.argv.includes('--verbose');
-
-async function getAllJsonFiles(dir) {
-  const entries = await fs.readdir(dir, { withFileTypes: true });
-  return entries
-    .filter(e => e.isFile() && e.name.endsWith('.json'))
-    .map(e => path.join(dir, e.name));
+function slugify(text) {
+  if (!text) return '';
+  return text.toString().toLowerCase().trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
 }
 
-async function enrichData() {
-  console.log('🚀 Starting character data enrichment process...');
-
-  const charJsonDir = 'raw-data/characters/json/';
-  let files = [];
+// --- MAIN EXECUTION ---
+(async () => {
+  console.log('--- Starting Data Enrichment (v3 - Robust) ---');
   try {
-    files = await getAllJsonFiles(charJsonDir);
-  } catch (err) {
-    console.error(`❌ ERROR: Could not read directory ${charJsonDir}.`, err);
-    process.exit(1);
-  }
-  if (files.length === 0) {
-    console.warn(`⚠️  No character .json files found in ${charJsonDir}`);
-    process.exit(1);
-  }
+    let allRecords = [];
 
-  const allEnrichedRecords = [];
-  for (const file of files) {
-    try {
-      const fileContent = await fs.readFile(file, 'utf-8');
-      const record = JSON.parse(fileContent);
-      if (!record || !record.name) {
-        console.warn(`⚠️  Skipping malformed or nameless record in ${file}`);
-        continue;
+    // Process all configured data domains
+    for (const [type, dirPath] of Object.entries(SOURCE_DIRS_MAP)) {
+      console.log(`- Processing domain: '${type}' from '${dirPath}'`);
+      try {
+        const files = await fs.readdir(dirPath);
+        for (const file of files.filter(f => f.endsWith('.json'))) {
+          const content = await fs.readFile(path.join(dirPath, file), 'utf-8');
+          const data = JSON.parse(content);
+
+          // Handle both single objects and arrays of objects in files
+          const records = Array.isArray(data) ? data : [data];
+          records.forEach(record => {
+            allRecords.push({ ...record, __type: type });
+          });
+        }
+      } catch (error) {
+        if (error.code === 'ENOENT') {
+          console.warn(`  - Directory not found, skipping: ${dirPath}`);
+        } else {
+          console.error(`  - Error processing directory ${dirPath}:`, error);
+        }
       }
-      if (VERBOSE) console.log(`  -> Enriching: ${record.name}`);
-      const slug = slugify(record.name);
-      const baseRecord = {
-        id: slug,
-        slug: slug,
-        name: record.name,
-        description: record.description || '',
-        __type: 'character',
-        tags: record.tags || [],
-        aliases: record.aliases || [],
-        sources: record.sources || [],
-        image: record.image || null,
-      };
-      // Handle character-specific fields with type-checking
-      const charRecord = {
-        ...baseRecord,
-        nation: record.nation || 'Unknown',
-        bending: record.bending || 'Unknown',
-        role: record.role || '',
-        overview: record.overview || '',
-        relationships: record.relationships || '',
-        highlights: Array.isArray(record.highlights) ? record.highlights : (record.highlights?.split('. ') || []),
-        traits: Array.isArray(record.traits) ? record.traits : (record.traits?.split('. ') || []),
-        quotes: Array.isArray(record.quotes) ? record.quotes : (record.quotes?.split('" "') || []),
-      };
-      charRecord.quotes = charRecord.quotes.map(q => q.replace(/"/g, '').trim()).filter(Boolean);
-      allEnrichedRecords.push(charRecord);
-    } catch (err) {
-      console.error(`❌ ERROR: Could not process ${file}:`, err.message);
     }
+    
+    // Enrich every record with a guaranteed slug and ID
+    const enrichedRecords = allRecords.map(record => {
+      const name = record.fullName || record.name || '';
+      const slug = record.slug || slugify(name);
+      return {
+        ...record,
+        id: record.id || slug,
+        slug: slug,
+      };
+    });
+
+    if (enrichedRecords.length === 0) {
+      throw new Error("No records were processed. Check SOURCE_DIRS_MAP and raw data paths.");
+    }
+
+    // Write to both dist and public
+    await fs.mkdir(path.dirname(OUTPUT_FILE_DIST), { recursive: true });
+    await fs.writeFile(OUTPUT_FILE_DIST, JSON.stringify(enrichedRecords, null, 2));
+    await fs.mkdir(path.dirname(OUTPUT_FILE_PUBLIC), { recursive: true });
+    await fs.writeFile(OUTPUT_FILE_PUBLIC, JSON.stringify(enrichedRecords, null, 2));
+
+    console.log(`\n✅ Successfully enriched ${enrichedRecords.length} records.`);
+    console.log(`   Output written to: ${OUTPUT_FILE_DIST} and ${OUTPUT_FILE_PUBLIC}`);
+  } catch (error) {
+    console.error('\n❌ Fatal error during data enrichment:');
+    console.error(error);
+    process.exit(1);
+  } finally {
+    console.log('--- Data Enrichment Finished ---');
   }
-  console.log(`  ✅ Finished processing ${files.length} character files. ${allEnrichedRecords.length} valid records.`);
-
-  const outputPath = path.resolve(process.cwd(), 'public/enriched-data.json');
-  await fs.writeFile(outputPath, JSON.stringify(allEnrichedRecords, null, 2));
-
-  console.log(`\n✨ Enrichment complete! ${allEnrichedRecords.length} total character records written to ${outputPath}.`);
-}
-
-enrichData().catch(error => {
-  console.error('\n❌ A fatal error occurred during the enrichment process:', error);
-  process.exit(1);
-});
+})();

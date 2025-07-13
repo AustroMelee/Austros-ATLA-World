@@ -63,3 +63,9 @@
   background: var(--color-slate-900); /* Use the new main background for the mask */
   border-radius: 22px;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for filter sidebar and chips */
+/* (Extend as needed for accessibility and focus states) */

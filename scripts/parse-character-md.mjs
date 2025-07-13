@@ -1,88 +1,86 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
+import { glob } from 'glob';
 
-const INPUT_FILE = path.join(process.cwd(), 'raw-data', 'characters', 'character_data.md');
-const OUTPUT_FILE = path.join(process.cwd(), 'raw-data', 'characters.json');
+const INPUT_DIR = 'raw-data/characters';
+const OUTPUT_DIR = 'raw-data/characters/json';
 
-const KEY_MAP = {
-  'Name': 'name',
-  'Nation': 'nation',
-  'Image': 'image',
-  'Bending Ability': 'bending',
-  'Occupation/Role': 'role',
-  'Overview': 'overview',
-  'Key Journey Highlights': 'highlights',
-  'Personality Traits': 'traits',
-  'Notable Quotes': 'quotes',
-  'Relationships': 'relationships',
-};
-
-const LIST_KEYS = new Set(['Key Journey Highlights', 'Personality Traits', 'Notable Quotes']);
-const ALL_KEYS = Object.keys(KEY_MAP);
-
-function parseMarkdown() {
-  console.log(`Reading from: ${INPUT_FILE}`);
-  if (!fs.existsSync(INPUT_FILE)) {
-    console.error(`ERROR: Input file not found at ${INPUT_FILE}`);
-    process.exit(1);
-  }
-  const content = fs.readFileSync(INPUT_FILE, 'utf-8');
-  const characterBlocks = content.split(/\r?\n(?=#<\d+>)/).filter(block => block.trim().startsWith('#<'));
-
-  if (characterBlocks.length === 0) {
-    console.error("ERROR: No character blocks found. Check the delimiter format (e.g., #<1> AANG).");
-    process.exit(1);
-  }
-
-  const allCharacters = characterBlocks.map(block => {
-    const character = {};
-    const blockLines = block.split(/\r?\n/);
-    for (const [mdKey, jsonKey] of Object.entries(KEY_MAP)) {
-      if (LIST_KEYS.has(mdKey)) continue;
-      const line = blockLines.find(l => l.trim().startsWith(`${mdKey}:`));
-      if (line) {
-        character[jsonKey] = line.split(':')[1].trim();
-      }
-    }
-    const cardViewRegex = /Short Template \(Card View\)[\s\S]*?Description:\s*([^\n\r]+)/;
-    const descMatch = block.match(cardViewRegex);
-    character.description = descMatch ? descMatch[1].trim() : (character.overview || '');
-    for (const listKey of LIST_KEYS) {
-        const jsonKey = KEY_MAP[listKey];
-        character[jsonKey] = [];
-        const blockStartIndex = block.indexOf(`${listKey}:`);
-        if (blockStartIndex === -1) continue;
-        let blockEndIndex = block.length;
-        for (const nextKey of ALL_KEYS) {
-            if (nextKey === listKey) continue;
-            const nextKeyIndex = block.indexOf(`\n${nextKey}:`, blockStartIndex);
-            if (nextKeyIndex !== -1 && nextKeyIndex < blockEndIndex) {
-                blockEndIndex = nextKeyIndex;
-            }
-        }
-        let contentSlice = block.substring(blockStartIndex + listKey.length + 1, blockEndIndex).trim();
-        if (contentSlice) {
-            const items = contentSlice.split(/\r?\n\s*\r?\n/).map(item => 
-                item.replace(/\r?\n/g, ' ').trim()
-            ).filter(Boolean);
-            if (jsonKey === 'quotes') {
-                character[jsonKey] = items.map(q => q.replace(/^"|"$/g, ''));
-            } else {
-                character[jsonKey] = items;
-            }
-        }
-    }
-    return character;
-  });
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allCharacters, null, 2));
-  console.log(`✅ Successfully parsed ${allCharacters.length} characters to ${OUTPUT_FILE}`);
+/**
+ * Extracts a single-line value for a given key from a markdown-like list.
+ * @param {string} content The block of text to search within.
+ * @param {string} key The key to look for (e.g., "Name").
+ * @returns {string|null}
+ */
+function extractValue(content, key) {
+  const regex = new RegExp(`-\\s*${key}:\\s*(.*)`);
+  const match = content.match(regex);
+  return match ? match[1].trim() : null;
 }
 
-try {
-  parseMarkdown();
-} catch (error) {
-  console.error("A critical error occurred during parsing:", error);
+/**
+ * Extracts a multi-line list for a given key.
+ * @param {string} content The block of text to search within.
+ * @param {string} key The key for the list (e.g., "Narrative Highlights").
+ * @returns {string[]}
+ */
+function extractList(content, key) {
+  const regex = new RegExp(`-\\s*${key}:\\s*([\\s\\S]*?)(?=\\n-\\s*\\w|$)`);
+  const match = content.match(regex);
+  if (!match) return [];
+  return match[1]
+    .trim()
+    .split('\n')
+    .map(s => s.replace(/-\\s*/, '').trim())
+    .filter(Boolean);
+}
+
+async function main() {
+  console.log('--- Starting Character Markdown Parsing (Final Version) ---');
+  await fs.mkdir(OUTPUT_DIR, { recursive: true });
+
+  const mdFiles = await glob(`${INPUT_DIR}/*.md`);
+
+  for (const file of mdFiles) {
+    const fileName = path.basename(file, '.md');
+    if (fileName === 'character_template') continue;
+
+    console.log(`[Processing] Parsing ${file}...`);
+    const fileContent = await fs.readFile(file, 'utf8');
+
+    const cardViewMatch = fileContent.match(/## [^\n]*UI - CARD VIEW[^`]*```md\s*([\s\S]*?)\s*```/);
+    const expandedViewMatch = fileContent.match(/## [^\n]*UI - EXPANDED VIEW[^`]*```md\s*([\s\S]*?)\s*```/);
+    
+    const cardContent = cardViewMatch ? cardViewMatch[1] : '';
+    const expandedContent = expandedViewMatch ? expandedViewMatch[1] : '';
+
+    // Create the final JSON object by parsing both sections
+    const characterData = {
+      id: fileName, // Use filename as the base ID
+      name: extractValue(cardContent, 'Name') || 'Unknown',
+      nation: extractValue(cardContent, 'Nation') || 'Unknown',
+      description: extractValue(cardContent, 'Short Description') || '',
+      
+      // Extract from Expanded View
+      overview: extractValue(expandedContent, 'Overview') || '',
+      role: extractValue(expandedContent, 'Role in the Story') || '',
+      relationships: extractValue(expandedContent, 'Relationships') || '',
+      highlights: extractList(expandedContent, 'Narrative Highlights'),
+      traits: extractList(expandedContent, 'Personality Traits'),
+      quotes: extractList(expandedContent, 'Notable Quotes'),
+      
+      __type: 'character',
+      __source: path.basename(file),
+    };
+
+    const outputPath = path.join(OUTPUT_DIR, `${fileName}.json`);
+    await fs.writeFile(outputPath, JSON.stringify(characterData, null, 2));
+    console.log(`[SUCCESS] Saved processed data to ${outputPath}`);
+  }
+
+  console.log('--- Character Markdown Parsing Complete ---');
+}
+
+main().catch(error => {
+  console.error('A fatal error occurred:', error);
   process.exit(1);
-}
-
-
+});

@@ -1,255 +1,26 @@
 {
   "id": "azulon",
-  "fullName": "Azulon",
-  "titles": [
-    "Fire Lord",
-    "General",
-    "Prince"
-  ],
-  "aliases": [],
-  "species": "human",
-  "gender": "male",
-  "ageChronological": 95,
-  "ageBiological": 95,
-  "ageRange": "elder",
-  "birthDate": "0 AG",
-  "deathDate": "95 AG",
-  "nationality": "Fire Nation",
-  "ethnicity": "Fire Nation",
-  "nativeLocation": "Fire Nation Capital",
-  "currentLocation": "Deceased",
-  "socioeconomicStanding": "royalty",
-  "languagesSpoken": [
-    "Standard Language"
-  ],
-  "isBender": true,
-  "bendingElement": "fire",
-  "bendingProficiency": "master",
-  "advancedBending": [],
-  "nonBendingSkills": [
-    "military strategy",
-    "leadership"
-  ],
-  "uniqueTechniques": [],
-  "powerMetrics": {
-    "rawPower": 9,
-    "technicalSkill": 9,
-    "strategicAptitude": 9
-  },
-  "combatStyle": "overwhelming",
-  "vulnerabilities": [
-    "arrogance",
-    "favoritism"
-  ],
-  "isLegendaryFighter": true,
-  "notableFeats": [
-    "Reigned as Fire Lord for 75 years",
-    "Nearly annihilated the Southern Water Tribe",
-    "Conquered the Hu Xin Provinces"
-  ],
-  "currentAffiliations": [
-    "Fire Nation (deceased)"
-  ],
-  "pastAffiliations": [
-    "Fire Nation military",
-    "Fire Nation Royal Family"
-  ],
-  "allegianceHistory": [],
-  "isRoyalty": true,
-  "politicalPower": "ruling",
-  "politicalLeanings": [
-    "imperialist",
-    "militarist",
-    "authoritarian"
-  ],
-  "moralAlignment": "lawful evil",
-  "moralCompassDrift": false,
-  "narrativeFunction": "antagonist",
-  "screenTimeLevel": "minor",
-  "firstAppearance": "207-Zuko-Alone",
-  "finalAppearance": "Graphic Novel: Azula in the Spirit Temple",
-  "deathStatus": "deceased",
-  "causeOfDeath": "Poisoned by Ozai and Ursa",
-  "narrativeArcs": [],
-  "keyTropes": [
-    "The Emperor",
-    "Abusive Parent",
-    "Posthumous Character",
-    "Offing the Offspring",
-    "Killed Offscreen"
-  ],
-  "eraAppearances": [
-    {
-      "era": "Avatar: The Last Airbender",
-      "role": "villain",
-      "focus": "Appearing in flashbacks as the cruel and demanding Fire Lord who set the stage for Ozai's rise.",
-      "keyEpisodes": [
-        "207"
-      ]
-    }
-  ],
-  "relationships": [
-    "Iroh (Firstborn Son, Favored Heir)",
-    "Ozai (Second Son, Usurper, Killer)",
-    "Ursa (Daughter-in-Law)",
-    "Zuko & Azula (Grandchildren)",
-    "Sozin (Father, Predecessor)"
-  ],
-  "groupMemberships": [],
-  "petCompanions": [],
-  "positiveTraits": [
-    "strong leader",
-    "strategically brilliant",
-    "decisive"
-  ],
-  "negativeTraits": [
-    "ruthless",
-    "cruel",
-    "unempathetic",
-    "demanding",
-    "prone to favoritism"
-  ],
-  "motivations": [
-    "world domination",
-    "military conquest",
-    "upholding the honor of his family line"
-  ],
-  "fears": [
-    "betrayal from within his family"
-  ],
-  "internalConflicts": [],
-  "emotionalWounds": [],
-  "copingMechanisms": [
-    "cruelty",
-    "demanding perfection",
-    "military campaigns"
-  ],
-  "worldview": "Believes in absolute power, military might, and the unquestionable superiority of his bloodline and nation.",
-  "heightEstimate": "Average",
-  "notableFeatures": [
-    "Long gray hair and beard",
-    "Fire Lord's topknot"
-  ],
-  "outfitStyles": [
-    "Fire Lord royal robes"
-  ],
-  "signaturePossessions": [],
-  "ageProgression": true,
-  "voiceActor": [
-    "Walker Edmiston"
-  ],
-  "iconicQuotes": [
-    "You dare suggest I betray Iroh? My first born?",
-    "Your punishment has scarcely begun!"
-  ],
-  "speakingStyle": "formal",
-  "linguisticQuirks": [
-    "Speaks with absolute, menacing authority"
-  ],
-  "catchphrases": [],
-  "archetype": "The Tyrant",
-  "thematicKeywords": [
-    "tyranny",
-    "legacy",
-    "family",
-    "betrayal",
-    "war",
-    "cruelty",
-    "power",
-    "succession"
-  ],
-  "tagCategories": {
-    "narrativeTags": [
-      "posthumous character",
-      "abusive parent",
-      "the emperor",
-      "firebending prodigy"
-    ],
-    "combatTags": [
-      "firebender",
-      "master firebender"
-    ],
-    "relationshipTags": [
-      "father of Iroh",
-      "father of Ozai",
-      "grandfather of Zuko",
-      "son of Sozin"
-    ],
-    "emotionTags": [
-      "ruthless",
-      "cruel",
-      "demanding",
-      "favoritism"
-    ],
-    "politicalTags": [
-      "Fire Lord",
-      "general",
-      "warmonger"
-    ],
-    "arcTags": [
-      "ordered Zuko's death",
-      "annihilated Southern Water Tribe",
-      "assassinated"
-    ],
-    "worldTags": [
-      "Fire Nation",
-      "Fire Nation Royal Family",
-      "Hundred Year War"
-    ],
-    "triviaTags": [
-      "reigned for 75 years",
-      "Azula's namesake",
-      "poisoned"
-    ]
-  },
-  "relatedCards": [
-    "ozai",
-    "iroh",
-    "zuko",
-    "azula",
-    "ursa",
-    "sozin"
-  ],
-  "filterWeight": 65,
-  "canonicalImportance": "secondary",
-  "dataCompletenessScore": 0.98,
-  "searchableKeywords": [
-    "azulon",
-    "fire",
-    "lord",
-    "father",
-    "ozai",
-    "iroh",
-    "sozin",
-    "poison",
-    "punishment"
-  ],
-  "fuzzySynonyms": [
-    "ozai's father",
-    "zuko's grandfather",
-    "the fire lord before ozai"
-  ],
-  "isSuggestedInXContext": [],
   "name": "Azulon",
   "nation": "Fire Nation",
-  "age": "95 (at time of death)",
-  "description": "As the son of Fire Lord Sozin, Azulon inherited the Hundred Year War and prosecuted it with brutal efficiency for 75 years. A famed general and prodigy, he nearly annihilated the Southern Water Tribe and secured many victories against the Earth Kingdom. His reign was defined by military conquest and a cold, demanding demeanor, favoring his firstborn son Iroh and showing little affection for Ozai, which ultimately led to his own assassination at the hands of his ambitious second son.",
+  "description": "The long-reigning Fire Lord who preceded Ozai. A ruthless military commander and firebending prodigy, he greatly expanded the Fire Nation's empire during the Hundred Year War.",
+  "overview": "As the son of Fire Lord Sozin, Azulon inherited the Hundred Year War and prosecuted it with brutal efficiency for 75 years. A famed general and prodigy, he nearly annihilated the Southern Water Tribe and secured many victories against the Earth Kingdom. His reign was defined by military conquest and a cold, demanding demeanor, favoring his firstborn son Iroh and showing little affection for Ozai, which ultimately led to his own assassination at the hands of his ambitious second son.",
+  "role": "A posthumous antagonist whose actions shaped the world of the series and whose death set the final, most brutal stage of the war in motion.",
+  "relationships": "- Iroh (Firstborn Son, Favored Heir)",
   "highlights": [
-    "Ruled as Fire Lord for 75 years, overseeing most of the Hundred Year War.",
-    "Ordered the raids that nearly wiped out the Southern Water Tribe.",
-    "Commanded his son Ozai to kill Zuko as punishment for disrespect.",
-    "Was poisoned by Ozai in a conspiracy with Ursa to seize the throne."
+    "- Ruled as Fire Lord for 75 years, overseeing most of the Hundred Year War.",
+    "- Ordered the raids that nearly wiped out the Southern Water Tribe.",
+    "- Commanded his son Ozai to kill Zuko as punishment for disrespect.",
+    "- Was poisoned by Ozai in a conspiracy with Ursa to seize the throne."
   ],
   "traits": [
-    "Ruthless & Cruel",
-    "Demanding & Perfectionistic",
-    "Traditionalist",
-    "Uncaring (except for Iroh)"
+    "- Ruthless & Cruel",
+    "- Demanding & Perfectionistic",
+    "- Traditionalist",
+    "- Uncaring (except for Iroh)"
   ],
   "quotes": [
-    "You dare suggest I betray Iroh? My first born? ... Your punishment has scarcely begun!"
+    "- \"You dare suggest I betray Iroh? My first born? ... Your punishment has scarcely begun!\""
   ],
-  "role": "A posthumous antagonist whose actions shaped the world of the series and whose death set the final, most brutal stage of the war in motion.",
-  "image": "[SVG embedded image link]",
+  "__type": "character",
   "__source": "azulon.md"
 }

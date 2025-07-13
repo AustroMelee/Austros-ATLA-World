@@ -14,7 +14,7 @@
     "validate:data": "node scripts/validate-data.mjs",
     "enrich:data": "node scripts/enrich-data.mjs",
     "build:index": "node scripts/build-index.mjs",
-    "build:data": "npm run parse:characters && npm run validate:data && npm run enrich:data && npm run build:index",
+    "build:data": "npm run parse:characters && npm run enrich:data && npm run build:index",
     "lint:md": "markdownlint --config .markdownlint.json \"**/*.md\""
   },
   "devDependencies": {

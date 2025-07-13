@@ -1,1342 +1,1744 @@
 [
   {
     "id": "aang",
-    "slug": "aang",
     "name": "Aang",
-    "description": "Frozen in an iceberg for a century, Aang awoke to a world ravaged by a war he was meant to prevent. Burdened by survivor's guilt and the immense responsibility of the Avatar, he embarks on a journey with his friends to master the elements, restore balance, and rebuild his lost culture, all while trying to hold on to his pacifist ideals and childhood innocence.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Bonzu Pippinpaddleopsicopolis III",
-      "Kuzon",
-      "Twinkle Toes"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Air Nomads",
-    "bending": "Unknown",
+    "description": "A fun-loving, reluctant hero and the last of the Air Nomads, Aang is the long-lost Avatar destined to master all four elements and end the Hundred Year War.",
+    "overview": "Frozen in an iceberg for a century, Aang awoke to a world ravaged by a war he was meant to prevent. Burdened by survivor's guilt and the immense responsibility of the Avatar, he embarks on a journey with his friends to master the elements, restore balance, and rebuild his lost culture, all while trying to hold on to his pacifist ideals and childhood innocence.",
     "role": "The protagonist and catalyst for the world's salvation, whose journey explores the conflict between duty and personal desire.",
-    "overview": "",
-    "relationships": [
-      "Katara (Wife, Closest Ally)",
-      "Sokka (Close Ally, Brother Figure)",
-      "Zuko (Rival turned Mentor & Friend)",
-      "Toph Beifong (Earthbending Master, Friend)",
-      "Appa & Momo (Animal Companions)",
-      "Monk Gyatso (Mentor, Father Figure)"
-    ],
+    "relationships": "- Katara (Wife, Closest Ally)",
     "highlights": [
-      "Discovered in an iceberg by Katara and Sokka.",
-      "Merged with the Ocean Spirit to defend the Northern Water Tribe.",
-      "Mastered energybending to defeat Fire Lord Ozai without killing him.",
-      "Co-founded the United Republic of Nations with Fire Lord Zuko."
+      "- Discovered in an iceberg by Katara and Sokka.",
+      "- Merged with the Ocean Spirit to defend the Northern Water Tribe.",
+      "- Mastered energybending to defeat Fire Lord Ozai without killing him.",
+      "- Co-founded the United Republic of Nations with Fire Lord Zuko."
     ],
     "traits": [
-      "Playful & Goofy",
-      "Deeply Spiritual",
-      "Reluctant & Burdened",
-      "Compassionate & Pacifistic"
+      "- Playful & Goofy",
+      "- Deeply Spiritual",
+      "- Reluctant & Burdened",
+      "- Compassionate & Pacifistic"
     ],
     "quotes": [
-      "I will never, ever turn my back on people who need me!",
-      "When we hit our lowest point, we are open to the greatest change.",
-      "Yip yip!"
-    ]
+      "- \"I will never, ever turn my back on people who need me!\"",
+      "- \"When we hit our lowest point, we are open to the greatest change.\"",
+      "- \"Yip yip!\""
+    ],
+    "__type": "character",
+    "__source": "aang.md",
+    "slug": "aang"
   },
   {
     "id": "appa",
-    "slug": "appa",
     "name": "Appa",
-    "description": "Chosen by Aang as a young calf, Appa shares an unbreakable bond with the Avatar, having been frozen alongside him for a century. More than just transportation, Appa is a powerful airbender, a fierce protector, and a beloved member of the found family of Team Avatar. His harrowing journey after being kidnapped and subsequent reunion with Aang highlights his resilience, intelligence, and deep loyalty.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Air Nomads",
-    "bending": "Unknown",
+    "description": "Avatar Aang's loyal, ten-ton sky bison and lifelong animal companion. As the primary mode of transportation for Team Avatar, he is a living symbol of the lost Air Nomad civilization.",
+    "overview": "Chosen by Aang as a young calf, Appa shares an unbreakable bond with the Avatar, having been frozen alongside him for a century. More than just transportation, Appa is a powerful airbender, a fierce protector, and a beloved member of the found family of Team Avatar. His harrowing journey after being kidnapped and subsequent reunion with Aang highlights his resilience, intelligence, and deep loyalty.",
     "role": "The Avatar's loyal animal guide, providing transportation, combat support, and serving as a living, breathing connection to Aang's lost culture.",
-    "overview": "",
-    "relationships": [
-      "Aang (Best Friend, Rider, Lifelong Companion)",
-      "Momo (Friend & Fellow Animal Companion)",
-      "Team Avatar (His Found Family)",
-      "Zuko (Freed him from captivity)"
-    ],
+    "relationships": "- Aang (Best Friend, Rider, Lifelong Companion)",
     "highlights": [
-      "Froze in an iceberg with Aang for 100 years.",
-      "Endured a traumatic solo journey across the Earth Kingdom after being kidnapped.",
-      "Was instrumental in the defeat of Long Feng and the Dai Li in Ba Sing Se.",
-      "Served as the steadfast transport and muscle for Team Avatar throughout the war."
+      "- Froze in an iceberg with Aang for 100 years.",
+      "- Endured a traumatic solo journey across the Earth Kingdom after being kidnapped.",
+      "- Was instrumental in the defeat of Long Feng and the Dai Li in Ba Sing Se.",
+      "- Served as the steadfast transport and muscle for Team Avatar throughout the war."
     ],
     "traits": [
-      "Loyal & Gentle",
-      "Brave & Protective",
-      "Intelligent",
-      "Fearful (of fire and being underground)"
+      "- Loyal & Gentle",
+      "- Brave & Protective",
+      "- Intelligent",
+      "- Fearful (of fire and being underground)"
     ],
     "quotes": [
-      "(Communicates through expressive growls, groans, and sneezes)"
-    ]
+      "- (Communicates through expressive growls, groans, and sneezes)"
+    ],
+    "__type": "character",
+    "__source": "appa.md",
+    "slug": "appa"
   },
   {
     "id": "azula",
-    "slug": "azula",
     "name": "Azula",
-    "description": "Hailed as a prodigy and favored by her father, Fire Lord Ozai, Princess Azula was molded into the perfect weapon. Driven by a relentless pursuit of power and perfection, she uses fear and manipulation to achieve her goals, including the conquest of Ba Sing Se. However, beneath her confident and cruel exterior lies a deep-seated mental instability, fueled by the perceived rejection from her mother, which ultimately leads to her tragic downfall.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Kemurikage (disguise)"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "A firebending prodigy and princess of the Fire Nation, Azula is a ruthlessly ambitious and manipulative strategist who serves as one of the Avatar's most formidable and psychologically terrifying adversaries.",
+    "overview": "Hailed as a prodigy and favored by her father, Fire Lord Ozai, Princess Azula was molded into the perfect weapon. Driven by a relentless pursuit of power and perfection, she uses fear and manipulation to achieve her goals, including the conquest of Ba Sing Se. However, beneath her confident and cruel exterior lies a deep-seated mental instability, fueled by the perceived rejection from her mother, which ultimately leads to her tragic downfall.",
     "role": "The primary antagonist of the second and third acts, whose perfectionism and psychological cruelty provide a dark mirror to Zuko's struggle for honor.",
-    "overview": "",
-    "relationships": [
-      "Ozai (Father, Role Model)",
-      "Zuko (Brother, Object of Scorn and Rivalry)",
-      "Mai & Ty Lee (Subordinates disguised as Friends)",
-      "Ursa (Mother, Source of Insecurity and Hallucinations)",
-      "Iroh (Uncle, Viewed as a Traitor)"
-    ],
+    "relationships": "- Ozai (Father, Role Model)",
     "highlights": [
-      "Mastered a uniquely powerful and intense form of blue firebending.",
-      "Conquered the Earth Kingdom capital of Ba Sing Se through pure cunning and manipulation.",
-      "Mortally wounded Avatar Aang, nearly ending the Avatar Cycle.",
-      "Suffered a complete mental breakdown after being betrayed and defeated."
+      "- Mastered a uniquely powerful and intense form of blue firebending.",
+      "- Conquered the Earth Kingdom capital of Ba Sing Se through pure cunning and manipulation.",
+      "- Mortally wounded Avatar Aang, nearly ending the Avatar Cycle.",
+      "- Suffered a complete mental breakdown after being betrayed and defeated."
     ],
     "traits": [
-      "Perfectionist & Sadistic",
-      "Confident & Narcissistic",
-      "Manipulative & Cunning",
-      "Mentally Unstable"
+      "- Perfectionist & Sadistic",
+      "- Confident & Narcissistic",
+      "- Manipulative & Cunning",
+      "- Mentally Unstable"
     ],
     "quotes": [
-      "Trust is for fools! Fear is the only reliable way.",
-      "Almost isn't good enough!",
-      "My own mother thought I was a monster... She was right, of course, but it still hurt."
-    ]
+      "- \"Trust is for fools! Fear is the only reliable way.\"",
+      "- \"Almost isn't good enough!\"",
+      "- \"My own mother thought I was a monster... She was right, of course, but it still hurt.\""
+    ],
+    "__type": "character",
+    "__source": "azula.md",
+    "slug": "azula"
   },
   {
     "id": "azulon",
-    "slug": "azulon",
     "name": "Azulon",
-    "description": "As the son of Fire Lord Sozin, Azulon inherited the Hundred Year War and prosecuted it with brutal efficiency for 75 years. A famed general and prodigy, he nearly annihilated the Southern Water Tribe and secured many victories against the Earth Kingdom. His reign was defined by military conquest and a cold, demanding demeanor, favoring his firstborn son Iroh and showing little affection for Ozai, which ultimately led to his own assassination at the hands of his ambitious second son.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "The long-reigning Fire Lord who preceded Ozai. A ruthless military commander and firebending prodigy, he greatly expanded the Fire Nation's empire during the Hundred Year War.",
+    "overview": "As the son of Fire Lord Sozin, Azulon inherited the Hundred Year War and prosecuted it with brutal efficiency for 75 years. A famed general and prodigy, he nearly annihilated the Southern Water Tribe and secured many victories against the Earth Kingdom. His reign was defined by military conquest and a cold, demanding demeanor, favoring his firstborn son Iroh and showing little affection for Ozai, which ultimately led to his own assassination at the hands of his ambitious second son.",
     "role": "A posthumous antagonist whose actions shaped the world of the series and whose death set the final, most brutal stage of the war in motion.",
-    "overview": "",
-    "relationships": [
-      "Iroh (Firstborn Son, Favored Heir)",
-      "Ozai (Second Son, Usurper, Killer)",
-      "Ursa (Daughter-in-Law)",
-      "Zuko & Azula (Grandchildren)",
-      "Sozin (Father, Predecessor)"
-    ],
+    "relationships": "- Iroh (Firstborn Son, Favored Heir)",
     "highlights": [
-      "Ruled as Fire Lord for 75 years, overseeing most of the Hundred Year War.",
-      "Ordered the raids that nearly wiped out the Southern Water Tribe.",
-      "Commanded his son Ozai to kill Zuko as punishment for disrespect.",
-      "Was poisoned by Ozai in a conspiracy with Ursa to seize the throne."
+      "- Ruled as Fire Lord for 75 years, overseeing most of the Hundred Year War.",
+      "- Ordered the raids that nearly wiped out the Southern Water Tribe.",
+      "- Commanded his son Ozai to kill Zuko as punishment for disrespect.",
+      "- Was poisoned by Ozai in a conspiracy with Ursa to seize the throne."
     ],
     "traits": [
-      "Ruthless & Cruel",
-      "Demanding & Perfectionistic",
-      "Traditionalist",
-      "Uncaring (except for Iroh)"
+      "- Ruthless & Cruel",
+      "- Demanding & Perfectionistic",
+      "- Traditionalist",
+      "- Uncaring (except for Iroh)"
     ],
     "quotes": [
-      "You dare suggest I betray Iroh? My first born? ... Your punishment has scarcely begun!"
-    ]
+      "- \"You dare suggest I betray Iroh? My first born? ... Your punishment has scarcely begun!\""
+    ],
+    "__type": "character",
+    "__source": "azulon.md",
+    "slug": "azulon"
   },
   {
-    "id": "king-bumi",
-    "slug": "king-bumi",
+    "id": "bumi",
     "name": "King Bumi",
-    "description": "Aang's childhood friend and the King of Omashu, Bumi appears to be a senile and eccentric old man. This facade conceals one of the most powerful earthbenders in the world and a brilliant, patient tactician. He tests Aang with a series of bizarre challenges to teach him the importance of creative thinking and neutral jing, ultimately proving to be a formidable ally in the war against the Fire Nation.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Earth Kingdom",
-    "bending": "Unknown",
+    "description": "The eccentric and wildly powerful elderly King of Omashu. As Avatar Aang's only surviving childhood friend, he uses his \"mad genius\" philosophy and mastery of earthbending to test and guide the young Avatar.",
+    "overview": "Aang's childhood friend and the King of Omashu, Bumi appears to be a senile and eccentric old man. This facade conceals one of the most powerful earthbenders in the world and a brilliant, patient tactician. He tests Aang with a series of bizarre challenges to teach him the importance of creative thinking and neutral jing, ultimately proving to be a formidable ally in the war against the Fire Nation.",
     "role": "A powerful master and member of the old guard who pushes Aang to think outside the box and embrace the \"mad genius\" within.",
-    "overview": "",
-    "relationships": [
-      "Aang (Childhood Best Friend, Mentee)",
-      "Flopsie (Pet Goat Gorilla)",
-      "Order of the White Lotus (Fellow Member)",
-      "Toph Beifong (Earthbending Rival)"
-    ],
+    "relationships": "- Aang (Childhood Best Friend, Mentee)",
     "highlights": [
-      "Subjected Aang to three \"deadly\" challenges to test his growth as the Avatar.",
-      "Allowed himself to be captured, waiting for the opportune moment to liberate Omashu.",
-      "Single-handedly retook his entire city from the Fire Nation during the Day of Black Sun.",
-      "As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control."
+      "- Subjected Aang to three \"deadly\" challenges to test his growth as the Avatar.",
+      "- Allowed himself to be captured, waiting for the opportune moment to liberate Omashu.",
+      "- Single-handedly retook his entire city from the Fire Nation during the Day of Black Sun.",
+      "- As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control."
     ],
     "traits": [
-      "Eccentric & Wild",
-      "Cunning & Patient",
-      "Powerful & Confident",
-      "Playful & Humorous"
+      "- Eccentric & Wild",
+      "- Cunning & Patient",
+      "- Powerful & Confident",
+      "- Playful & Humorous"
     ],
     "quotes": [
-      "You've got to keep an open mind.",
-      "I hope you will think like a mad genius!",
-      "Lettuce leaf?"
-    ]
+      "- \"You've got to keep an open mind.\"",
+      "- \"I hope you will think like a mad genius!\"",
+      "- \"Lettuce leaf?\""
+    ],
+    "__type": "character",
+    "__source": "bumi.md",
+    "slug": "king-bumi"
   },
   {
-    "id": "combustion-man",
-    "slug": "combustion-man",
+    "id": "combustian man",
     "name": "Combustion Man",
-    "description": "A formidable and mysterious bounty hunter, Combustion Man is renowned for his rare and devastating combustionbending ability. Hired by Zuko to eliminate the Avatar, he becomes a terrifying and near-unstoppable threat to Team Avatar. His silent, single-minded pursuit and immense destructive power make him one of their most dangerous physical opponents.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Sparky Sparky Boom Man"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "A silent, hulking assassin with the unique ability to project explosive blasts from a third-eye tattoo on his forehead. Hired by Prince Zuko, he relentlessly pursues Avatar Aang across the Fire Nation.",
+    "overview": "A formidable and mysterious bounty hunter, Combustion Man is renowned for his rare and devastating combustionbending ability. Hired by Zuko to eliminate the Avatar, he becomes a terrifying and near-unstoppable threat to Team Avatar. His silent, single-minded pursuit and immense destructive power make him one of their most dangerous physical opponents.",
     "role": "A recurring physical threat in Book Three who raises the stakes for Team Avatar and represents the deadly consequences of Zuko's desperation.",
-    "overview": "",
-    "relationships": [
-      "Zuko (Employer)",
-      "Aang (Target)",
-      "Sokka (Nemesis, \"Sparky Sparky Boom Man\")"
-    ],
+    "relationships": "- Zuko (Employer)",
     "highlights": [
-      "Terrorized Team Avatar with his unique and powerful combustionbending.",
-      "Tracked the team across the entire Fire Nation with unerring accuracy.",
-      "Was ultimately defeated when his own power backfired, caused by a well-aimed boomerang."
+      "- Terrorized Team Avatar with his unique and powerful combustionbending.",
+      "- Tracked the team across the entire Fire Nation with unerring accuracy.",
+      "- Was ultimately defeated when his own power backfired, caused by a well-aimed boomerang."
     ],
     "traits": [
-      "Silent & Professional",
-      "Relentless & Tenacious",
-      "Destructive & Implacable"
+      "- Silent & Professional",
+      "- Relentless & Tenacious",
+      "- Destructive & Implacable"
     ],
     "quotes": [
-      "(No spoken lines)"
-    ]
+      "- (No spoken lines)"
+    ],
+    "__type": "character",
+    "__source": "combustian man.md",
+    "slug": "combustion-man"
   },
   {
-    "id": "monk-gyatso",
-    "slug": "monk-gyatso",
+    "id": "gyatso",
     "name": "Monk Gyatso",
-    "description": "Known for his exceptional wisdom and mischievous sense of humor, Monk Gyatso was a high-ranking member of the Southern Air Temple. As a young man, he befriended and traveled with Avatar Roku, offering him crucial perspective. Decades later, he became the guardian and mentor to Aang, Roku's successor. He believed in balancing discipline with joy, a philosophy that put him at odds with the other council elders and ultimately led to Aang's departure.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Air Nomads",
-    "bending": "Unknown",
+    "description": "A wise and kind-hearted airbending master from the Southern Air Temple. He was a lifelong friend to Avatar Roku and later became the beloved guardian and father figure to Avatar Aang.",
+    "overview": "Known for his exceptional wisdom and mischievous sense of humor, Monk Gyatso was a high-ranking member of the Southern Air Temple. As a young man, he befriended and traveled with Avatar Roku, offering him crucial perspective. Decades later, he became the guardian and mentor to Aang, Roku's successor. He believed in balancing discipline with joy, a philosophy that put him at odds with the other council elders and ultimately led to Aang's departure.",
     "role": "A guiding father figure whose love and wisdom profoundly shaped Aang's character, and whose death represents Aang's greatest personal loss.",
-    "overview": "",
-    "relationships": [
-      "Aang (Student, Surrogate Son)",
-      "Roku (Best Friend)",
-      "Pathik (Friend)",
-      "The Council of Elders (Colleagues)"
-    ],
+    "relationships": "- Aang (Student, Surrogate Son)",
     "highlights": [
-      "Was a close personal friend of Avatar Roku.",
-      "Served as the primary guardian, mentor, and father figure to Avatar Aang.",
-      "His compassionate approach to Aang's training conflicted with the other Air Nomad elders.",
-      "Died defending the Southern Air Temple, taking many Fire Nation soldiers with him."
+      "- Was a close personal friend of Avatar Roku.",
+      "- Served as the primary guardian, mentor, and father figure to Avatar Aang.",
+      "- His compassionate approach to Aang's training conflicted with the other Air Nomad elders.",
+      "- Died defending the Southern Air Temple, taking many Fire Nation soldiers with him."
     ],
     "traits": [
-      "Kind & Compassionate",
-      "Wise & Patient",
-      "Humorous & Playful",
-      "Fiercely Protective"
+      "- Kind & Compassionate",
+      "- Wise & Patient",
+      "- Humorous & Playful",
+      "- Fiercely Protective"
     ],
     "quotes": [
-      "We can't concern ourselves with what was. We must act on what is.",
-      "Come closer. I have some wisdom for you... *splat* (before a pie-throwing prank)",
-      "All I want is for him to be happy."
-    ]
+      "- \"We can't concern ourselves with what was. We must act on what is.\"",
+      "- \"Come closer. I have some wisdom for you... *splat*\" (before a pie-throwing prank)",
+      "- \"All I want is for him to be happy.\""
+    ],
+    "__type": "character",
+    "__source": "gyatso.md",
+    "slug": "monk-gyatso"
   },
   {
     "id": "hakoda",
-    "slug": "hakoda",
     "name": "Hakoda",
-    "description": "Hakoda is a respected warrior and leader, burdened by the difficult choice to leave his family to fight for the future of the world. A brilliant tactician and a loving father, his influence shapes his son Sokka's own journey into leadership. After enduring capture and imprisonment at the Boiling Rock, he reunites with his children and plays a pivotal role in the Day of Black Sun invasion and the post-war reconstruction of the Southern Water Tribe.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Southern Water Tribe",
-    "bending": "Unknown",
+    "description": "The brave and strategic chieftain of the Southern Water Tribe and the father of Sokka and Katara. He leaves his children to lead his tribe's warriors against the Fire Nation in the Hundred Year War.",
+    "overview": "Hakoda is a respected warrior and leader, burdened by the difficult choice to leave his family to fight for the future of the world. A brilliant tactician and a loving father, his influence shapes his son Sokka's own journey into leadership. After enduring capture and imprisonment at the Boiling Rock, he reunites with his children and plays a pivotal role in the Day of Black Sun invasion and the post-war reconstruction of the Southern Water Tribe.",
     "role": "A guiding father figure whose courage and strategic mind inspire his children and represent the Water Tribe's resilience and contribution to the war.",
-    "overview": "",
-    "relationships": [
-      "Sokka (Son & Protégé)",
-      "Katara (Daughter)",
-      "Kya (Wife, Deceased)",
-      "Kanna (Mother)",
-      "Malina (Girlfriend)",
-      "Bato (Close Friend & Fellow Warrior)"
-    ],
+    "relationships": "- Sokka (Son & Protégé)",
     "highlights": [
-      "Led the warriors of the Southern Water Tribe against the Fire Nation.",
-      "Provided key leadership during the invasion of the Fire Nation.",
-      "Was imprisoned in and escaped from the high-security prison, the Boiling Rock.",
-      "Became Head Chieftain of the unified Southern Water Tribe after the war."
+      "- Led the warriors of the Southern Water Tribe against the Fire Nation.",
+      "- Provided key leadership during the invasion of the Fire Nation.",
+      "- Was imprisoned in and escaped from the high-security prison, the Boiling Rock.",
+      "- Became Head Chieftain of the unified Southern Water Tribe after the war."
     ],
     "traits": [
-      "Brave & Courageous",
-      "Strategic & Ingenious",
-      "Loving & Fatherly",
-      "Respected Leader"
+      "- Brave & Courageous",
+      "- Strategic & Ingenious",
+      "- Loving & Fatherly",
+      "- Respected Leader"
     ],
     "quotes": [
-      "You and your brother are my entire world.",
-      "I'm the proudest father in the world.",
-      "We're going to show the Fire Nation that we believe in our cause as much as they believe in theirs."
-    ]
+      "- \"You and your brother are my entire world.\"",
+      "- \"I'm the proudest father in the world.\"",
+      "- \"We're going to show the Fire Nation that we believe in our cause as much as they believe in theirs.\""
+    ],
+    "__type": "character",
+    "__source": "hakoda.md",
+    "slug": "hakoda"
   },
   {
     "id": "hama",
-    "slug": "hama",
     "name": "Hama",
-    "description": "Once a proud defender of the Southern Water Tribe, Hama was the last waterbender captured during the Fire Nation raids. Decades of cruel imprisonment twisted her spirit, leading her to develop the terrifying ability to bend the water within living creatures. After escaping, she lives a quiet life as an innkeeper, secretly exacting her revenge on innocent Fire Nation villagers under the light of the full moon.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Southern Water Tribe",
-    "bending": "Unknown",
+    "description": "A Southern Water Tribe waterbending master who was captured and imprisoned by the Fire Nation. To escape, she invented the dark and horrifying art of bloodbending.",
+    "overview": "Once a proud defender of the Southern Water Tribe, Hama was the last waterbender captured during the Fire Nation raids. Decades of cruel imprisonment twisted her spirit, leading her to develop the terrifying ability to bend the water within living creatures. After escaping, she lives a quiet life as an innkeeper, secretly exacting her revenge on innocent Fire Nation villagers under the light of the full moon.",
     "role": "A tragic antagonist and a dark mirror for Katara, showcasing how trauma and a thirst for vengeance can corrupt even the most noble of intentions.",
-    "overview": "",
-    "relationships": [
-      "Katara (Protégé, Victim, Captor)",
-      "Kanna (Childhood Friend)",
-      "Aang & Sokka (Puppets)"
-    ],
+    "relationships": "- Katara (Protégé, Victim, Captor)",
     "highlights": [
-      "The sole inventor of the forbidden art of bloodbending.",
-      "Was the last waterbending master of the Southern Water Tribe before its devastation.",
-      "Used her dark abilities to imprison innocent Fire Nation civilians out of revenge.",
-      "Forced Katara to learn and use bloodbending against her will."
+      "- The sole inventor of the forbidden art of bloodbending.",
+      "- Was the last waterbending master of the Southern Water Tribe before its devastation.",
+      "- Used her dark abilities to imprison innocent Fire Nation civilians out of revenge.",
+      "- Forced Katara to learn and use bloodbending against her will."
     ],
     "traits": [
-      "Vengeful & Bitter",
-      "Cunning & Deceptive",
-      "Mentally Unstable",
-      "Proud & Resilient"
+      "- Vengeful & Bitter",
+      "- Cunning & Deceptive",
+      "- Mentally Unstable",
+      "- Proud & Resilient"
     ],
     "quotes": [
-      "Congratulations, Katara. You're a bloodbender.",
-      "They threw me in prison to rot... They deserve the same! You must carry on my work.",
-      "You've got to keep an open mind, Katara. There's water in places you never think about."
-    ]
+      "- \"Congratulations, Katara. You're a bloodbender.\"",
+      "- \"They threw me in prison to rot... They deserve the same! You must carry on my work.\"",
+      "- \"You've got to keep an open mind, Katara. There's water in places you never think about.\""
+    ],
+    "__type": "character",
+    "__source": "hama.md",
+    "slug": "hama"
   },
   {
     "id": "iroh",
-    "slug": "iroh",
     "name": "Iroh",
-    "description": "The former Crown Prince of the Fire Nation, General Iroh abandoned his quest for power after the tragic death of his son, Lu Ten. Choosing a life of peace, wisdom, and tea, he accompanies his banished nephew Zuko, acting as his moral compass and father figure. Iroh's deep understanding of balance, spirituality, and all four elements makes him a powerful ally and a sage voice of reason in a world consumed by war.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Mushi",
-      "Hong Mushi"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "A retired Fire Nation general and the wise, tea-loving uncle to Prince Zuko. Once a fearsome warrior known as the \"Dragon of the West,\" Iroh guides his nephew on a path of redemption and serves as a mentor to all he meets.",
+    "overview": "The former Crown Prince of the Fire Nation, General Iroh abandoned his quest for power after the tragic death of his son, Lu Ten. Choosing a life of peace, wisdom, and tea, he accompanies his banished nephew Zuko, acting as his moral compass and father figure. Iroh's deep understanding of balance, spirituality, and all four elements makes him a powerful ally and a sage voice of reason in a world consumed by war.",
     "role": "The primary mentor figure whose wisdom, kindness, and guidance are crucial for Zuko's redemption and the restoration of balance.",
-    "overview": "",
-    "relationships": [
-      "Zuko (Nephew, Surrogate Son)",
-      "Ozai (Younger Brother, Rival)",
-      "Lu Ten (Son, Deceased)",
-      "Aang & Team Avatar (Allies & Mentees)",
-      "Order of the White Lotus (Grand Lotus)"
-    ],
+    "relationships": "- Zuko (Nephew, Surrogate Son)",
     "highlights": [
-      "Abandoned the 600-day siege of Ba Sing Se after the death of his son.",
-      "Invented the technique of lightning redirection by studying waterbenders.",
-      "As a Grand Lotus, he led the Order of the White Lotus to liberate Ba Sing Se.",
-      "After the war, he ascended to the Spirit World, leaving his mortal body behind."
+      "- Abandoned the 600-day siege of Ba Sing Se after the death of his son.",
+      "- Invented the technique of lightning redirection by studying waterbenders.",
+      "- As a Grand Lotus, he led the Order of the White Lotus to liberate Ba Sing Se.",
+      "- After the war, he ascended to the Spirit World, leaving his mortal body behind."
     ],
     "traits": [
-      "Wise & Patient",
-      "Kind & Compassionate",
-      "Easy-going & Humorous",
-      "Deeply Spiritual"
+      "- Wise & Patient",
+      "- Kind & Compassionate",
+      "- Easy-going & Humorous",
+      "- Deeply Spiritual"
     ],
     "quotes": [
-      "Pride is not the opposite of shame, but its source. True humility is the only antidote to shame.",
-      "Sometimes life is like this dark tunnel. You can't always see the light at the end of the tunnel, but if you just keep moving, you will come to a better place.",
-      "Sharing tea with a fascinating stranger is one of life's true delights."
-    ]
+      "- \"Pride is not the opposite of shame, but its source. True humility is the only antidote to shame.\"",
+      "- \"Sometimes life is like this dark tunnel. You can't always see the light at the end of the tunnel, but if you just keep moving, you will come to a better place.\"",
+      "- \"Sharing tea with a fascinating stranger is one of life's true delights.\""
+    ],
+    "__type": "character",
+    "__source": "iroh.md",
+    "slug": "iroh"
   },
   {
-    "id": "jeong-jeong",
-    "slug": "jeong-jeong",
+    "id": "jeong jeong",
     "name": "Jeong Jeong",
-    "description": "Once a celebrated admiral in the Fire Nation Navy, Jeong Jeong became horrified by the destruction wrought by his element and his students. He deserted his post, forever branded as \"The Deserter\". Living as a nomad in the Earth Kingdom, he adopted a philosophy of discipline and restraint, viewing firebending as a dangerous curse. His wisdom and immense power make him a formidable, if reluctant, master and a key member of the Order of the White Lotus.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "A disillusioned firebending master and the first admiral to successfully desert the Fire Nation military. He views his own bending as a curse and reluctantly agrees to become Aang's first firebending teacher.",
+    "overview": "Once a celebrated admiral in the Fire Nation Navy, Jeong Jeong became horrified by the destruction wrought by his element and his students. He deserted his post, forever branded as \"The Deserter\". Living as a nomad in the Earth Kingdom, he adopted a philosophy of discipline and restraint, viewing firebending as a dangerous curse. His wisdom and immense power make him a formidable, if reluctant, master and a key member of the Order of the White Lotus.",
     "role": "A wise but embittered mentor who introduces Aang to the dangers and responsibilities of firebending, representing an alternative to the Fire Nation's philosophy of destruction.",
-    "overview": "",
-    "relationships": [
-      "Aang (Reluctant Student)",
-      "Zhao (Former Student, Greatest Failure)",
-      "Order of the White Lotus (Fellow Members)",
-      "Roku (Spiritual Guide)"
-    ],
+    "relationships": "- Aang (Reluctant Student)",
     "highlights": [
-      "The first person known to have deserted the Fire Nation military and survived.",
-      "Reluctantly agreed to teach Avatar Aang after being visited by the spirit of Avatar Roku.",
-      "Emphasized discipline and control as the core of firebending, not rage.",
-      "As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control."
+      "- The first person known to have deserted the Fire Nation military and survived.",
+      "- Reluctantly agreed to teach Avatar Aang after being visited by the spirit of Avatar Roku.",
+      "- Emphasized discipline and control as the core of firebending, not rage.",
+      "- As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control."
     ],
     "traits": [
-      "Embittered & Jaded",
-      "Wise & Disciplined",
-      "Spiritual & Enlightened",
-      "Reluctant & Cautious"
+      "- Embittered & Jaded",
+      "- Wise & Disciplined",
+      "- Spiritual & Enlightened",
+      "- Reluctant & Cautious"
     ],
     "quotes": [
-      "Fire brings only destruction and pain.",
-      "You have not yet mastered water, or earth. You are not ready for fire!",
-      "Destiny? What would a boy know of destiny?"
-    ]
+      "- \"Fire brings only destruction and pain.\"",
+      "- \"You have not yet mastered water, or earth. You are not ready for fire!\"",
+      "- \"Destiny? What would a boy know of destiny?\""
+    ],
+    "__type": "character",
+    "__source": "jeong jeong.md",
+    "slug": "jeong-jeong"
   },
   {
     "id": "jet",
-    "slug": "jet",
     "name": "Jet",
-    "description": "After witnessing the death of his parents at the hands of the Fire Nation, Jet dedicated his life to a guerrilla war against them. As the leader of the Freedom Fighters, he used his charisma and combat prowess to rally other refugees to his cause. However, his all-consuming hatred led him to endanger innocent lives, creating a conflict with Team Avatar. After attempting to start a new life in Ba Sing Se, he was brainwashed by the Dai Li and ultimately sacrificed himself to save the Avatar.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Earth Kingdom",
-    "bending": "Unknown",
+    "description": "The charismatic and vengeful leader of the Freedom Fighters, a group of young refugees fighting against the Fire Nation. His deep-seated hatred often clouds his judgment, pushing him to extremist measures.",
+    "overview": "After witnessing the death of his parents at the hands of the Fire Nation, Jet dedicated his life to a guerrilla war against them. As the leader of the Freedom Fighters, he used his charisma and combat prowess to rally other refugees to his cause. However, his all-consuming hatred led him to endanger innocent lives, creating a conflict with Team Avatar. After attempting to start a new life in Ba Sing Se, he was brainwashed by the Dai Li and ultimately sacrificed himself to save the Avatar.",
     "role": "A tragic anti-hero whose story serves as a cautionary tale about how the desire for justice can be corrupted by hatred and revenge.",
-    "overview": "",
-    "relationships": [
-      "Katara (Former Crush)",
-      "Sokka (Rival)",
-      "Smellerbee & Longshot (Loyal Lieutenants)",
-      "Zuko & Iroh (Enemies)",
-      "Long Feng (Captor & Killer)"
-    ],
+    "relationships": "- Katara (Former Crush)",
     "highlights": [
-      "Formed and led the Freedom Fighters, a group of Earth Kingdom refugees.",
-      "Attempted to destroy a dam to flood a town occupied by Fire Nation soldiers and civilians.",
-      "Was captured and brainwashed by the Dai Li in Ba Sing Se.",
-      "Fatally wounded by Long Feng after breaking free of his mind control to help Aang."
+      "- Formed and led the Freedom Fighters, a group of Earth Kingdom refugees.",
+      "- Attempted to destroy a dam to flood a town occupied by Fire Nation soldiers and civilians.",
+      "- Was captured and brainwashed by the Dai Li in Ba Sing Se.",
+      "- Fatally wounded by Long Feng after breaking free of his mind control to help Aang."
     ],
     "traits": [
-      "Charismatic & Persuasive",
-      "Vengeful & Obsessive",
-      "Paranoid & Ruthless",
-      "Loyal (to his cause)"
+      "- Charismatic & Persuasive",
+      "- Vengeful & Obsessive",
+      "- Paranoid & Ruthless",
+      "- Loyal (to his cause)"
     ],
     "quotes": [
-      "The Fire Nation is a disease, and we're the cure.",
-      "This is how we fight for our freedom.",
-      "I'll be fine."
-    ]
+      "- \"The Fire Nation is a disease, and we're the cure.\"",
+      "- \"This is how we fight for our freedom.\"",
+      "- \"I'll be fine.\""
+    ],
+    "__type": "character",
+    "__source": "jet.md",
+    "slug": "jet"
   },
   {
     "id": "june",
-    "slug": "june",
     "name": "June",
-    "description": "An infamous bounty hunter with a reputation for success, June operates with a cool, professional detachment. Aided by her powerful, scent-tracking shirshu, Nyla, she is a master of capture and combat. Though she initially works only for money, she demonstrates a deeper sense of morality when it truly matters, eventually leaving her old life behind for a new, more peaceful career.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Earth Kingdom",
-    "bending": "Unknown",
+    "description": "A confident and formidable bounty hunter, known as the best and most expensive of her time. Accompanied by her shirshu, Nyla, she tracks her targets with unerring accuracy for the highest bidder.",
+    "overview": "An infamous bounty hunter with a reputation for success, June operates with a cool, professional detachment. Aided by her powerful, scent-tracking shirshu, Nyla, she is a master of capture and combat. Though she initially works only for money, she demonstrates a deeper sense of morality when it truly matters, eventually leaving her old life behind for a new, more peaceful career.",
     "role": "A recurring neutral party whose unique skills serve as a crucial plot device, and whose presence tests the resolve and morality of the main characters.",
-    "overview": "",
-    "relationships": [
-      "Nyla (Shirshu, Lifelong Companion)",
-      "Zuko (Client)",
-      "Iroh (Client, Admirer, Eventual Employer)"
-    ],
+    "relationships": "- Nyla (Shirshu, Lifelong Companion)",
     "highlights": [
-      "Hired by Zuko to track the Avatar using Katara's necklace.",
-      "Hired again by Zuko to find Iroh, leading Team Avatar to the Order of the White Lotus.",
-      "Retired from bounty hunting to become the \"tea discoverer\" for Iroh's Jasmine Dragon.",
-      "Rescued Iroh from a vengeful crime boss."
+      "- Hired by Zuko to track the Avatar using Katara's necklace.",
+      "- Hired again by Zuko to find Iroh, leading Team Avatar to the Order of the White Lotus.",
+      "- Retired from bounty hunting to become the \"tea discoverer\" for Iroh's Jasmine Dragon.",
+      "- Rescued Iroh from a vengeful crime boss."
     ],
     "traits": [
-      "Confident & Self-assured",
-      "Sassy & Sarcastic",
-      "Uncaring & Professional (outwardly)",
-      "Pragmatic"
+      "- Confident & Self-assured",
+      "- Sassy & Sarcastic",
+      "- Uncaring & Professional (outwardly)",
+      "- Pragmatic"
     ],
     "quotes": [
-      "I'm a little short on money.",
-      "Sounds like a nasty situation. Hope you find a way out of it.",
-      "My Snuffly Wuffly!"
-    ]
+      "- \"I'm a little short on money.\"",
+      "- \"Sounds like a nasty situation. Hope you find a way out of it.\"",
+      "- \"My Snuffly Wuffly!\""
+    ],
+    "__type": "character",
+    "__source": "june.md",
+    "slug": "june"
   },
   {
     "id": "katara",
-    "slug": "katara",
     "name": "Katara",
-    "description": "Shaped by the tragic loss of her mother, Katara became the nurturing heart of her family and tribe. Upon freeing Aang from the iceberg, she embarks on a global journey, transforming from an untrained bender into one of the most powerful waterbending masters and healers in the world, all while serving as the moral compass for Team Avatar.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Sapphire Fire",
-      "June Pippinpaddleopsicopolis",
-      "Gran Gran"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Southern Water Tribe",
-    "bending": "Unknown",
+    "description": "The last waterbender of the Southern Water Tribe, Katara is a determined and compassionate young woman whose hope leads her to discover the Avatar and become his first teacher.",
+    "overview": "Shaped by the tragic loss of her mother, Katara became the nurturing heart of her family and tribe. Upon freeing Aang from the iceberg, she embarks on a global journey, transforming from an untrained bender into one of the most powerful waterbending masters and healers in the world, all while serving as the moral compass for Team Avatar.",
     "role": "The heart and moral compass of Team Avatar, whose compassion and fierce determination anchor the group and drive her to become one of the world's most powerful masters.",
-    "overview": "",
-    "relationships": [
-      "Aang (Husband, Student, Closest Ally)",
-      "Sokka (Brother, Confidant)",
-      "Toph Beifong (Friend, Rival)",
-      "Zuko (Enemy turned trusted Ally)",
-      "Hakoda (Father)",
-      "Hama (Dark Mentor)"
-    ],
+    "relationships": "- Aang (Husband, Student, Closest Ally)",
     "highlights": [
-      "Discovered and freed Avatar Aang from a century of slumber.",
-      "Mastered the dark art of bloodbending to defeat Hama.",
-      "Confronted her mother's killer, ultimately choosing forgiveness over revenge.",
-      "Intelligently defeated a comet-enhanced Princess Azula in single combat."
+      "- Discovered and freed Avatar Aang from a century of slumber.",
+      "- Mastered the dark art of bloodbending to defeat Hama.",
+      "- Confronted her mother's killer, ultimately choosing forgiveness over revenge.",
+      "- Intelligently defeated a comet-enhanced Princess Azula in single combat."
     ],
     "traits": [
-      "Compassionate & Motherly",
-      "Determined & Fierce",
-      "Hopeful & Idealistic",
-      "Stubborn & Prone to anger"
+      "- Compassionate & Motherly",
+      "- Determined & Fierce",
+      "- Hopeful & Idealistic",
+      "- Stubborn & Prone to anger"
     ],
     "quotes": [
-      "I will never, ever turn my back on people who need me!",
-      "But I believe Aang can save the world.",
-      "You can't knock me down!"
-    ]
+      "- \"I will never, ever turn my back on people who need me!\"",
+      "- \"But I believe Aang can save the world.\"",
+      "- \"You can't knock me down!\""
+    ],
+    "__type": "character",
+    "__source": "katara.md",
+    "slug": "katara"
   },
   {
     "id": "kuei",
-    "slug": "kuei",
-    "name": "Kuei",
-    "description": "Ascending to the throne as a child, Kuei spent most of his life as a figurehead, oblivious to the Hundred Year War raging outside his palace walls. His world is shattered when Team Avatar reveals the conspiracy orchestrated by his advisor, Long Feng. After a brief, humbling exile, Kuei strives to become a strong and decisive leader for his people, though his newfound assertiveness nearly plunges the world back into war.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "The 52nd Earth King"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
+    "name": "Earth King Kuei",
     "nation": "Earth Kingdom",
-    "bending": "Unknown",
+    "description": "The naive and sheltered 52nd Earth King of Ba Sing Se. For years, he was a puppet ruler, manipulated by his treacherous Grand Secretariat, Long Feng.",
+    "overview": "Ascending to the throne as a child, Kuei spent most of his life as a figurehead, oblivious to the Hundred Year War raging outside his palace walls. His world is shattered when Team Avatar reveals the conspiracy orchestrated by his advisor, Long Feng. After a brief, humbling exile, Kuei strives to become a strong and decisive leader for his people, though his newfound assertiveness nearly plunges the world back into war.",
     "role": "A symbol of political naivety and the dangers of isolation, whose personal growth reflects the Earth Kingdom's struggle to find its place in a changing world.",
-    "overview": "",
-    "relationships": [
-      "Bosco (Pet Bear, Best Friend)",
-      "Long Feng (Manipulator, former Advisor)",
-      "Aang & Team Avatar (Allies, Awakeners)",
-      "Hou-Ting (Daughter, Successor)"
-    ],
+    "relationships": "- Bosco (Pet Bear, Best Friend)",
     "highlights": [
-      "Lived in blissful ignorance of the war due to Long Feng's manipulation.",
-      "His pet bear, Bosco, was his closest and only true companion.",
-      "Was overthrown in a coup by Azula and the Dai Li.",
-      "After his restoration, almost restarted the war with the Fire Nation over the colonies."
+      "- Lived in blissful ignorance of the war due to Long Feng's manipulation.",
+      "- His pet bear, Bosco, was his closest and only true companion.",
+      "- Was overthrown in a coup by Azula and the Dai Li.",
+      "- After his restoration, almost restarted the war with the Fire Nation over the colonies."
     ],
     "traits": [
-      "Naive & Sheltered (initially)",
-      "Determined & Assertive (later)",
-      "Well-meaning",
-      "Animal-lover"
+      "- Naive & Sheltered (initially)",
+      "- Determined & Assertive (later)",
+      "- Well-meaning",
+      "- Animal-lover"
     ],
     "quotes": [
-      "The Earth Kingdom... has fallen.",
-      "All my life, I've been weak! It's time for me to be a man!",
-      "Just take the bear."
-    ]
+      "- \"The Earth Kingdom... has fallen.\"",
+      "- \"All my life, I've been weak! It's time for me to be a man!\"",
+      "- \"Just take the bear.\""
+    ],
+    "__type": "character",
+    "__source": "kuei.md",
+    "slug": "earth-king-kuei"
   },
   {
     "id": "kuruk",
-    "slug": "kuruk",
     "name": "Kuruk",
-    "description": "A powerful and charismatic Avatar, Kuruk's era was publicly one of peace, allowing him to pursue a life of pleasure and challenges. Secretly, he was engaged in a brutal, lonely war against a plague of dark spirits, a conflict that corrupted his own spirit and drained his life force. This tragic battle culminated in the loss of his fiancée, Ummi, to Koh the Face Stealer, leaving a legacy of regret and a world unprepared for the strife that followed his early death.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Northern Water Tribe",
-    "bending": "Unknown",
+    "description": "A \"go with the flow\" Avatar from the Northern Water Tribe whose carefree public life hid a secret, tragic war against dark spirits that ultimately consumed him.",
+    "overview": "A powerful and charismatic Avatar, Kuruk's era was publicly one of peace, allowing him to pursue a life of pleasure and challenges. Secretly, he was engaged in a brutal, lonely war against a plague of dark spirits, a conflict that corrupted his own spirit and drained his life force. This tragic battle culminated in the loss of his fiancée, Ummi, to Koh the Face Stealer, leaving a legacy of regret and a world unprepared for the strife that followed his early death.",
     "role": "A tragic past Avatar whose life serves as a cautionary tale about the spiritual duties of the Avatar and the consequences of neglecting the physical world.",
-    "overview": "",
-    "relationships": [
-      "Ummi (Fiancée, Lost Love)",
-      "Jianzhu, Kelsang, & Hei-Ran (Companions)",
-      "Koh the Face Stealer (Arch-Nemesis)",
-      "Kyoshi (Successor)",
-      "Yangchen (Predecessor)"
-    ],
+    "relationships": "- Ummi (Fiancée, Lost Love)",
     "highlights": [
-      "Secretly hunted and destroyed dark spirits to protect the world from a spiritual plague.",
-      "Lost his fiancée, Ummi, to Koh the Face Stealer as a punishment for his arrogance.",
-      "His neglect of mortal affairs led to a chaotic era for his successor, Kyoshi.",
-      "Died at the young age of 33 due to the spiritual toll of his battles."
+      "- Secretly hunted and destroyed dark spirits to protect the world from a spiritual plague.",
+      "- Lost his fiancée, Ummi, to Koh the Face Stealer as a punishment for his arrogance.",
+      "- His neglect of mortal affairs led to a chaotic era for his successor, Kyoshi.",
+      "- Died at the young age of 33 due to the spiritual toll of his battles."
     ],
     "traits": [
-      "Easy-going & \"Go with the flow\" (Publicly)",
-      "Hedonistic & Arrogant (as a coping mechanism)",
-      "Tragic & Regretful (Privately)",
-      "Brave & Self-sacrificing"
+      "- Easy-going & \"Go with the flow\" (Publicly)",
+      "- Hedonistic & Arrogant (as a coping mechanism)",
+      "- Tragic & Regretful (Privately)",
+      "- Brave & Self-sacrificing"
     ],
     "quotes": [
-      "I had to do it. The world would have been destroyed.",
-      "Actively shape your own destiny, and the destiny of the world.",
-      "My wife's face... it was stolen by Koh, the Face Stealer."
-    ]
+      "- \"I had to do it. The world would have been destroyed.\"",
+      "- \"Actively shape your own destiny, and the destiny of the world.\"",
+      "- \"My wife's face... it was stolen by Koh, the Face Stealer.\""
+    ],
+    "__type": "character",
+    "__source": "kuruk.md",
+    "slug": "kuruk"
   },
   {
     "id": "kyoshi",
-    "slug": "kyoshi",
     "name": "Kyoshi",
-    "description": "Abandoned as a child and not discovered as the Avatar until her teens, Kyoshi's early life was defined by hardship and survival. This forged her into a pragmatic and ruthlessly effective Avatar who valued justice above all else. During her 230-year lifespan, she ended the tyrannical conquest of Chin the Conqueror, founded both the elite Kyoshi Warriors and the Dai Li, and brought about an unprecedented era of peace, leaving a complex and enduring legacy.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Earth Kingdom",
-    "bending": "Unknown",
+    "description": "The physically imposing and long-lived Earth Kingdom Avatar who believed that only true, uncompromising justice could bring peace, a philosophy that shaped the world for centuries.",
+    "overview": "Abandoned as a child and not discovered as the Avatar until her teens, Kyoshi's early life was defined by hardship and survival. This forged her into a pragmatic and ruthlessly effective Avatar who valued justice above all else. During her 230-year lifespan, she ended the tyrannical conquest of Chin the Conqueror, founded both the elite Kyoshi Warriors and the Dai Li, and brought about an unprecedented era of peace, leaving a complex and enduring legacy.",
     "role": "A legendary predecessor to Aang whose life and ruthless methods serve as a stark philosophical counterpoint, forcing Aang to question the nature of justice and peace.",
-    "overview": "",
-    "relationships": [
-      "Rangi (Girlfriend, Firebending Master)",
-      "Kelsang (Adoptive Father, Mentor)",
-      "Yun (Childhood Friend, later Enemy)",
-      "The Flying Opera Company (Found Family, Allies)",
-      "Roku (Successor)"
-    ],
+    "relationships": "- Rangi (Girlfriend, Firebending Master)",
     "highlights": [
-      "Lived to be 230 years old, the oldest known human.",
-      "Used the Avatar State to separate her home peninsula, creating Kyoshi Island."
+      "- Lived to be 230 years old, the oldest known human.",
+      "- Used the Avatar State to separate her home peninsula, creating Kyoshi Island.",
+      "- Founded two elite orders: the Kyoshi Warriors and the Dai Li of Ba Sing Se.",
+      "- Defeated Chin the Conqueror, ending his reign of terror over the Earth Kingdom."
     ],
     "traits": [
-      "Fierce & Uncompromising",
-      "Just & Protective",
-      "Pragmatic & Decisive",
-      "Reserved & Self-doubting (internally)"
+      "- Fierce & Uncompromising",
+      "- Just & Protective",
+      "- Pragmatic & Decisive",
+      "- Reserved & Self-doubting (internally)"
     ],
     "quotes": [
-      "Only justice will bring peace.",
-      "My friend is not a diplomat. She is the failure of diplomacy.",
-      "I killed Chin the Conqueror."
-    ]
+      "- \"Only justice will bring peace.\"",
+      "- \"My friend is not a diplomat. She is the failure of diplomacy.\"",
+      "- \"I killed Chin the Conqueror.\""
+    ],
+    "__type": "character",
+    "__source": "kyoshi.md",
+    "slug": "kyoshi"
   },
   {
-    "id": "long-feng",
-    "slug": "long-feng",
+    "id": "long feng",
     "name": "Long Feng",
-    "description": "Rising from humble origins, Long Feng became the most powerful man in the Earth Kingdom by manipulating the young Earth King and seizing control of the Dai Li. He maintains a fragile utopia within Ba Sing Se by brainwashing citizens and erasing any knowledge of the war. His absolute control is challenged by the arrival of Team Avatar, and his web of lies unravels, leading to his downfall and the conquest of the city by Azula.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Earth Kingdom",
-    "bending": "Unknown",
+    "description": "The charismatic but treacherous Grand Secretariat of Ba Sing Se. As the leader of the Dai Li, he secretly rules the city as a dictator, suppressing all mention of the Hundred Year War.",
+    "overview": "Rising from humble origins, Long Feng became the most powerful man in the Earth Kingdom by manipulating the young Earth King and seizing control of the Dai Li. He maintains a fragile utopia within Ba Sing Se by brainwashing citizens and erasing any knowledge of the war. His absolute control is challenged by the arrival of Team Avatar, and his web of lies unravels, leading to his downfall and the conquest of the city by Azula.",
     "role": "The primary antagonist of the Ba Sing Se arc, representing political corruption, the dangers of censorship, and oppressive control disguised as peace.",
-    "overview": "",
-    "relationships": [
-      "Earth King Kuei (Puppet Ruler)",
-      "The Dai Li (Secret Police, Subordinates)",
-      "Jet (Victim of Brainwashing)",
-      "Azula (Co-conspirator, Usurper)",
-      "Team Avatar (Enemies)"
-    ],
+    "relationships": "- Earth King Kuei (Puppet Ruler)",
     "highlights": [
-      "Ruled Ba Sing Se as a de facto dictator, keeping the Earth King as a puppet.",
-      "Utilized the Dai Li and Lake Laogai to brainwash dissenters.",
-      "Kidnapped Appa to use as leverage against the Avatar.",
-      "Was out-manipulated and overthrown by Princess Azula."
+      "- Ruled Ba Sing Se as a de facto dictator, keeping the Earth King as a puppet.",
+      "- Utilized the Dai Li and Lake Laogai to brainwash dissenters.",
+      "- Kidnapped Appa to use as leverage against the Avatar.",
+      "- Was out-manipulated and overthrown by Princess Azula."
     ],
     "traits": [
-      "Manipulative & Cunning",
-      "Charismatic & Composed",
-      "Power-hungry & Ruthless",
-      "Patient & Calculating"
+      "- Manipulative & Cunning",
+      "- Charismatic & Composed",
+      "- Power-hungry & Ruthless",
+      "- Patient & Calculating"
     ],
     "quotes": [
-      "There is no war in Ba Sing Se.",
-      "You've beaten me at my own game.",
-      "By silencing talk of conflict, Ba Sing Se remains a peaceful, orderly utopia."
-    ]
+      "- \"There is no war in Ba Sing Se.\"",
+      "- \"You've beaten me at my own game.\"",
+      "- \"By silencing talk of conflict, Ba Sing Se remains a peaceful, orderly utopia.\""
+    ],
+    "__type": "character",
+    "__source": "long feng.md",
+    "slug": "long-feng"
   },
   {
     "id": "mai",
-    "slug": "mai",
     "name": "Mai",
-    "description": "Raised to be a perfectly behaved and quiet daughter of a prominent politician, Mai developed a deeply apathetic and emotionally distant personality. Recruited by Princess Azula for her deadly marksmanship, she becomes a formidable foe. However, her deep-seated love for Prince Zuko ultimately forces her to make a choice between her fear of Azula and her loyalty to him, a decision that changes the course of her life and the war.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "A stoic and skilled non-bender from a privileged Fire Nation family. Mai is a master of knife-throwing who serves as a key member of Azula's team and is Zuko's primary love interest.",
+    "overview": "Raised to be a perfectly behaved and quiet daughter of a prominent politician, Mai developed a deeply apathetic and emotionally distant personality. Recruited by Princess Azula for her deadly marksmanship, she becomes a formidable foe. However, her deep-seated love for Prince Zuko ultimately forces her to make a choice between her fear of Azula and her loyalty to him, a decision that changes the course of her life and the war.",
     "role": "A secondary antagonist turned ally whose character arc explores how love can triumph over fear and apathy.",
-    "overview": "",
-    "relationships": [
-      "Zuko (Boyfriend, former)",
-      "Azula (Commander, former)",
-      "Ty Lee (Friend)",
-      "Ukano (Father)",
-      "Kei Lo (Boyfriend, former)"
-    ],
+    "relationships": "- Zuko (Boyfriend, former)",
     "highlights": [
-      "Recruited into Azula's elite team to hunt the Avatar and Zuko.",
-      "Rekindled her childhood crush into a serious relationship with Prince Zuko.",
-      "Defied Princess Azula at the Boiling Rock, declaring \"I love Zuko more than I fear you\".",
-      "Aided Zuko against her own father's traitorous New Ozai Society after the war."
+      "- Recruited into Azula's elite team to hunt the Avatar and Zuko.",
+      "- Rekindled her childhood crush into a serious relationship with Prince Zuko.",
+      "- Defied Princess Azula at the Boiling Rock, declaring \"I love Zuko more than I fear you\".",
+      "- Aided Zuko against her own father's traitorous New Ozai Society after the war."
     ],
     "traits": [
-      "Apathetic & Bored",
-      "Stoic & Emotionally Repressed",
-      "Loyal (to Zuko)",
-      "Brave & Decisive (when it counts)"
+      "- Apathetic & Bored",
+      "- Stoic & Emotionally Repressed",
+      "- Loyal (to Zuko)",
+      "- Brave & Decisive (when it counts)"
     ],
     "quotes": [
-      "I love Zuko more than I fear you.",
-      "You're so beautiful when you hate the world.",
-      "Please tell me you're not here to rescue me."
-    ]
+      "- \"I love Zuko more than I fear you.\"",
+      "- \"You're so beautiful when you hate the world.\"",
+      "- \"Please tell me you're not here to rescue me.\""
+    ],
+    "__type": "character",
+    "__source": "mai.md",
+    "slug": "mai"
   },
   {
     "id": "momo",
-    "slug": "momo",
     "name": "Momo",
-    "description": "Discovered by Aang at the abandoned Southern Air Temple, Momo is believed to be one of the last of the winged lemurs. He quickly joins Team Avatar, providing comic relief, unexpected assistance, and a living connection to Aang's lost home. His strong bond with both Aang and Appa makes him an integral part of their found family.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Twinklewings"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Air Nomads",
-    "bending": "Unknown",
+    "description": "A curious and intelligent winged lemur from the Southern Air Temple. As one of the last vestiges of his species, he becomes a loyal companion and a cherished member of Team Avatar.",
+    "overview": "Discovered by Aang at the abandoned Southern Air Temple, Momo is believed to be one of the last of the winged lemurs. He quickly joins Team Avatar, providing comic relief, unexpected assistance, and a living connection to Aang's lost home. His strong bond with both Aang and Appa makes him an integral part of their found family.",
     "role": "A loyal animal companion who serves as a source of levity, a resourceful scout, and a constant reminder of the Air Nomad culture that was lost.",
-    "overview": "",
-    "relationships": [
-      "Aang (Owner, Best Friend)",
-      "Appa (Friend, \"Big Brother,\" Rival for food)",
-      "Sokka (Frequent target of food theft)",
-      "Team Avatar (His Found Family)"
-    ],
+    "relationships": "- Aang (Owner, Best Friend)",
     "highlights": [
-      "Discovered by Aang at the Southern Air Temple and named after a peach.",
-      "Befriended a pack of pygmy pumas in Ba Sing Se to escape capture.",
-      "Frequently helped the team in small but crucial ways with his agility and small size.",
-      "Engaged in a \"samurai duel\" with Appa during one of Aang's sleep-deprived hallucinations."
+      "- Discovered by Aang at the Southern Air Temple and named after a peach.",
+      "- Befriended a pack of pygmy pumas in Ba Sing Se to escape capture.",
+      "- Frequently helped the team in small but crucial ways with his agility and small size.",
+      "- Engaged in a \"samurai duel\" with Appa during one of Aang's sleep-deprived hallucinations."
     ],
     "traits": [
-      "Curious & Mischievous",
-      "Intelligent & Resourceful",
-      "Loyal & Playful",
-      "Constantly hungry"
+      "- Curious & Mischievous",
+      "- Intelligent & Resourceful",
+      "- Loyal & Playful",
+      "- Constantly hungry"
     ],
     "quotes": [
-      "(Communicates through a variety of expressive chitters, squeaks, and screeches)"
-    ]
+      "- (Communicates through a variety of expressive chitters, squeaks, and screeches)"
+    ],
+    "__type": "character",
+    "__source": "momo.md",
+    "slug": "momo"
   },
   {
     "id": "ozai",
-    "slug": "ozai",
     "name": "Ozai",
-    "description": "As the ruthless and power-hungry Fire Lord, Ozai represents the culmination of a century of Fire Nation aggression. After usurping the throne from his brother, he rules with an iron fist, showing no mercy to his enemies or even his own family. His ultimate goal is to use the power of Sozin's Comet to burn down the Earth Kingdom and declare himself the supreme ruler of the world, the Phoenix King.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "The tyrannical ruler of the Fire Nation, Fire Lord Ozai is an exceptionally powerful firebender who seeks to end the Hundred Year War by conquering the world under his absolute rule.",
+    "overview": "As the ruthless and power-hungry Fire Lord, Ozai represents the culmination of a century of Fire Nation aggression. After usurping the throne from his brother, he rules with an iron fist, showing no mercy to his enemies or even his own family. His ultimate goal is to use the power of Sozin's Comet to burn down the Earth Kingdom and declare himself the supreme ruler of the world, the Phoenix King.",
     "role": "The main antagonist and final boss of the series, representing the ultimate personification of tyranny, abuse, and unbalanced ambition.",
-    "overview": "",
-    "relationships": [
-      "Zuko (Son, Object of Abuse and Scorn)",
-      "Azula (Daughter, Favored Child, Weapon)",
-      "Iroh (Brother, Rival)",
-      "Ursa (Wife, Banished)",
-      "Azulon (Father, Murdered)"
-    ],
+    "relationships": "- Zuko (Son, Object of Abuse and Scorn)",
     "highlights": [
-      "Usurped the throne from his brother Iroh after their father's mysterious death.",
-      "Permanently scarred and banished his own son, Zuko, for speaking out of turn.",
-      "Planned to use Sozin's Comet to commit genocide on a global scale.",
-      "Was defeated by Avatar Aang, who permanently removed his firebending abilities."
+      "- Usurped the throne from his brother Iroh after their father's mysterious death.",
+      "- Permanently scarred and banished his own son, Zuko, for speaking out of turn.",
+      "- Planned to use Sozin's Comet to commit genocide on a global scale.",
+      "- Was defeated by Avatar Aang, who permanently removed his firebending abilities."
     ],
     "traits": [
-      "Megalomaniacal & Power-hungry",
-      "Cruel & Sadistic",
-      "Domineering & Narcissistic",
-      "Charismatic & Cunning"
+      "- Megalomaniacal & Power-hungry",
+      "- Cruel & Sadistic",
+      "- Domineering & Narcissistic",
+      "- Charismatic & Cunning"
     ],
     "quotes": [
-      "You will learn respect, and suffering will be your teacher.",
-      "There is no right or wrong apart from what you decide. What you choose, by definition, is right.",
-      "Prepare to join them. Prepare to die!"
-    ]
+      "- \"You will learn respect, and suffering will be your teacher.\"",
+      "- \"There is no right or wrong apart from what you decide. What you choose, by definition, is right.\"",
+      "- \"Prepare to join them. Prepare to die!\""
+    ],
+    "__type": "character",
+    "__source": "ozai.md",
+    "slug": "ozai"
   },
   {
     "id": "pakku",
-    "slug": "pakku",
     "name": "Pakku",
-    "description": "As the premier waterbending master of the Northern Water Tribe, Pakku is a formidable and disciplined teacher, deeply rooted in his tribe's patriarchal traditions. His refusal to teach female students brings him into direct conflict with Katara. Upon discovering she is the granddaughter of his long-lost love, he re-evaluates his rigid beliefs, accepts Katara as his student, and ultimately becomes a key member of the Order of the White Lotus, fighting to restore world balance.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Northern Water Tribe",
-    "bending": "Unknown",
+    "description": "A powerful and traditionalist waterbending master from the Northern Water Tribe. Initially a strict and sexist instructor, he later becomes a crucial mentor to Aang and Katara.",
+    "overview": "As the premier waterbending master of the Northern Water Tribe, Pakku is a formidable and disciplined teacher, deeply rooted in his tribe's patriarchal traditions. His refusal to teach female students brings him into direct conflict with Katara. Upon discovering she is the granddaughter of his long-lost love, he re-evaluates his rigid beliefs, accepts Katara as his student, and ultimately becomes a key member of the Order of the White Lotus, fighting to restore world balance.",
     "role": "A master of the old guard whose personal history forces him to confront his prejudices and embrace a changing world.",
-    "overview": "",
-    "relationships": [
-      "Kanna (Wife, former Fiancée)",
-      "Katara (Student, Step-Granddaughter)",
-      "Sokka (Step-Grandson)",
-      "Aang (Student)",
-      "Iroh & The Order of the White Lotus (Fellow Members)"
-    ],
+    "relationships": "- Kanna (Wife, former Fiancée)",
     "highlights": [
-      "Initially refused to teach Katara due to sexist tribal laws.",
-      "Dueled Katara and was moved by the sight of her grandmother's betrothal necklace.",
-      "Fought to defend the Northern Water Tribe during the Fire Nation siege.",
-      "As a member of the White Lotus, helped liberate Ba Sing Se."
+      "- Initially refused to teach Katara due to sexist tribal laws.",
+      "- Dueled Katara and was moved by the sight of her grandmother's betrothal necklace.",
+      "- Fought to defend the Northern Water Tribe during the Fire Nation siege.",
+      "- As a member of the White Lotus, helped liberate Ba Sing Se."
     ],
     "traits": [
-      "Traditionalist & Strict",
-      "Sarcastic & Acerbic",
-      "Proud & Disciplined",
-      "Caring (beneath his gruff exterior)"
+      "- Traditionalist & Strict",
+      "- Sarcastic & Acerbic",
+      "- Proud & Disciplined",
+      "- Caring (beneath his gruff exterior)"
     ],
     "quotes": [
-      "Go back to the healing huts with the other women.",
-      "It is respectful to bow to an old master, but how about a hug for your new grandfather?",
-      "I'm not going to say 'no' to my new grandson-in-law, am I?"
-    ]
+      "- \"Go back to the healing huts with the other women.\"",
+      "- \"It is respectful to bow to an old master, but how about a hug for your new grandfather?\"",
+      "- \"I'm not going to say 'no' to my new grandson-in-law, am I?\""
+    ],
+    "__type": "character",
+    "__source": "pakku.md",
+    "slug": "pakku"
   },
   {
     "id": "piandao",
-    "slug": "piandao",
     "name": "Piandao",
-    "description": "Once a celebrated and undefeated general in the Fire Nation army, Piandao grew weary of war and deserted to pursue a life of art and enlightenment. Living in a secluded castle, he is revered as the greatest swordmaster in the nation's history. He believes knowledge of the arts belongs to everyone and takes on the eager but unworthy Sokka as his student, guiding him to discover his own unique strengths.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "A legendary swordmaster and bladesmith who deserted the Fire Nation army. He believes the way of the sword belongs to no single nation and takes on Sokka as his student.",
+    "overview": "Once a celebrated and undefeated general in the Fire Nation army, Piandao grew weary of war and deserted to pursue a life of art and enlightenment. Living in a secluded castle, he is revered as the greatest swordmaster in the nation's history. He believes knowledge of the arts belongs to everyone and takes on the eager but unworthy Sokka as his student, guiding him to discover his own unique strengths.",
     "role": "A wise master who provides Sokka with the skills and confidence he needs to become a true warrior, reinforcing the theme that worth is not defined by one's nation or bending ability.",
-    "overview": "",
-    "relationships": [
-      "Sokka (Student)",
-      "Zuko (Former Student)",
-      "Iroh & The Order of the White Lotus (Fellow Members)",
-      "Fat (Butler)"
-    ],
+    "relationships": "- Sokka (Student)",
     "highlights": [
-      "Deserted the Fire Nation army and single-handedly defeated one hundred soldiers sent to arrest him.",
-      "Took Sokka as his student, teaching him swordsmanship and the importance of creativity.",
-      "Forged Sokka's unique \"space sword\" from a fallen meteorite.",
-      "As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control."
+      "- Deserted the Fire Nation army and single-handedly defeated one hundred soldiers sent to arrest him.",
+      "- Took Sokka as his student, teaching him swordsmanship and the importance of creativity.",
+      "- Forged Sokka's unique \"space sword\" from a fallen meteorite.",
+      "- As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control."
     ],
     "traits": [
-      "Wise & Enlightened",
-      "Patient & Humble",
-      "Artistic & Creative",
-      "Unconventional"
+      "- Wise & Enlightened",
+      "- Patient & Humble",
+      "- Artistic & Creative",
+      "- Unconventional"
     ],
     "quotes": [
-      "The way of the sword doesn't belong to any one nation. Knowledge of the arts belongs to us all.",
-      "The most important lesson is creativity.",
-      "It's not the sword, it's the swordsman."
-    ]
+      "- \"The way of the sword doesn't belong to any one nation. Knowledge of the arts belongs to us all.\"",
+      "- \"The most important lesson is creativity.\"",
+      "- \"It's not the sword, it's the swordsman.\""
+    ],
+    "__type": "character",
+    "__source": "piandao.md",
+    "slug": "piandao"
   },
   {
     "id": "roku",
-    "slug": "roku",
     "name": "Roku",
-    "description": "A kind and powerful Avatar, Roku's life was defined by his close friendship with Prince Sozin, which tragically soured as Sozin's imperial ambitions grew. Roku's struggle to balance his personal loyalty with his global duty resulted in a moment of hesitation that allowed Sozin to begin his conquest. He died protecting his home from a volcanic eruption, leaving a legacy of regret and a world on the brink of a century-long war for his successor, Aang, to resolve.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Ro"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "The Fire Nation-born Avatar who preceded Aang. His lifelong friendship and later rivalry with Fire Lord Sozin directly led to the beginning of the Hundred Year War.",
+    "overview": "A kind and powerful Avatar, Roku's life was defined by his close friendship with Prince Sozin, which tragically soured as Sozin's imperial ambitions grew. Roku's struggle to balance his personal loyalty with his global duty resulted in a moment of hesitation that allowed Sozin to begin his conquest. He died protecting his home from a volcanic eruption, leaving a legacy of regret and a world on the brink of a century-long war for his successor, Aang, to resolve.",
     "role": "A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson for Aang on the importance of decisiveness.",
-    "overview": "",
-    "relationships": [
-      "Sozin (Best Friend turned Arch-Nemesis)",
-      "Aang (Successor, Mentee)",
-      "Gyatso (Close Friend, Aang's Guardian)",
-      "Ta Min (Wife)",
-      "Zuko (Great-Grandson)"
-    ],
+    "relationships": "- Sozin (Best Friend turned Arch-Nemesis)",
     "highlights": [
-      "Grew up as the best friend of Prince Sozin, who would later become Fire Lord.",
-      "Confronted and defeated Sozin, sparing his life out of friendship.",
-      "Died fighting a volcanic eruption after being betrayed by Sozin.",
-      "Served as Aang's primary spiritual guide from beyond the grave."
+      "- Grew up as the best friend of Prince Sozin, who would later become Fire Lord.",
+      "- Confronted and defeated Sozin, sparing his life out of friendship.",
+      "- Died fighting a volcanic eruption after being betrayed by Sozin.",
+      "- Served as Aang's primary spiritual guide from beyond the grave."
     ],
     "traits": [
-      "Wise & Merciful",
-      "Disciplined & Kind",
-      "Indecisive (at critical moments)",
-      "Regretful"
+      "- Wise & Merciful",
+      "- Disciplined & Kind",
+      "- Indecisive (at critical moments)",
+      "- Regretful"
     ],
     "quotes": [
-      "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.",
-      "Being the Avatar is an honor, but it's also a great burden.",
-      "Some friendships are so strong, they can even transcend lifetimes."
-    ]
+      "- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"",
+      "- \"Being the Avatar is an honor, but it's also a great burden.\"",
+      "- \"Some friendships are so strong, they can even transcend lifetimes.\""
+    ],
+    "__type": "character",
+    "__source": "roku.md",
+    "slug": "roku"
   },
   {
     "id": "sokka",
-    "slug": "sokka",
     "name": "Sokka",
-    "description": "Left as the oldest male in his village, Sokka was a self-styled warrior desperate to prove himself. After discovering the Avatar, his worldview rapidly expands from cynical and pragmatic to one of a brilliant leader and strategist. Overcoming his insecurities as a non-bender, he becomes the indispensable \"idea guy\" of the group, masterminding the invasion of the Fire Nation and evolving into a master swordsman in his own right.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Wang Fire",
-      "Captain Boomerang"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Southern Water Tribe",
-    "bending": "Unknown",
+    "description": "A warrior from the Southern Water Tribe, Sokka is the resident strategist and comic relief of Team Avatar. Though he lacks bending, his ingenuity, leadership, and trusty boomerang prove indispensable in the fight against the Fire Nation.",
+    "overview": "Left as the oldest male in his village, Sokka was a self-styled warrior desperate to prove himself. After discovering the Avatar, his worldview rapidly expands from cynical and pragmatic to one of a brilliant leader and strategist. Overcoming his insecurities as a non-bender, he becomes the indispensable \"idea guy\" of the group, masterminding the invasion of the Fire Nation and evolving into a master swordsman in his own right.",
     "role": "The non-bender strategist whose intellect, humor, and courage prove that you don't need powers to change the world.",
-    "overview": "",
-    "relationships": [
-      "Katara (Sister, Confidant)",
-      "Suki (Girlfriend, Combat Partner)",
-      "Aang (Best Friend, \"The Muscle\")",
-      "Toph Beifong (Friend, \"Captain Boomerang\")",
-      "Yue (First Love)",
-      "Hakoda (Father, Role Model)"
-    ],
+    "relationships": "- Katara (Sister, Confidant)",
     "highlights": [
-      "Formulated the plan for the invasion of the Fire Nation on the Day of Black Sun.",
-      "Trained under Master Piandao to become a master swordsman, forging his own space sword.",
-      "Single-handedly defeated the formidable assassin Combustion Man.",
-      "Led a prison break from the Boiling Rock, rescuing his father and Suki."
+      "- Formulated the plan for the invasion of the Fire Nation on the Day of Black Sun.",
+      "- Trained under Master Piandao to become a master swordsman, forging his own space sword.",
+      "- Single-handedly defeated the formidable assassin Combustion Man.",
+      "- Led a prison break from the Boiling Rock, rescuing his father and Suki."
     ],
     "traits": [
-      "Sarcastic & Witty",
-      "Inventive & Strategic",
-      "Loyal & Protective",
-      "Goofy & A lover of meat"
+      "- Sarcastic & Witty",
+      "- Inventive & Strategic",
+      "- Loyal & Protective",
+      "- Goofy & A lover of meat"
     ],
     "quotes": [
-      "It's the quenchiest!",
-      "I'm just a guy with a boomerang. I didn't ask for all this flying and magic.",
-      "Boomerang! You do always come back!"
-    ]
+      "- \"It's the quenchiest!\"",
+      "- \"I'm just a guy with a boomerang. I didn't ask for all this flying and magic.\"",
+      "- \"Boomerang! You do always come back!\""
+    ],
+    "__type": "character",
+    "__source": "sokka.md",
+    "slug": "sokka"
   },
   {
     "id": "sozin",
-    "slug": "sozin",
     "name": "Sozin",
-    "description": "Once the best friend of Avatar Roku, Prince Sozin's ascension to Fire Lord ignited his ambition to expand his nation's influence across the globe. Believing he was sharing the Fire Nation's greatness, his vision was rejected by Roku. This ideological schism led to a bitter rivalry that culminated in Sozin betraying Roku, leaving him to die in a volcanic eruption. With the Avatar gone, Sozin harnessed the power of a great comet to commit genocide against the Air Nomads and begin the Hundred Year War.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Lee (undercover)"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "The ambitious and visionary Fire Lord whose desire to spread the Fire Nation's prosperity led him to betray his best friend, Avatar Roku, and plunge the world into the Hundred Year War.",
+    "overview": "Once the best friend of Avatar Roku, Prince Sozin's ascension to Fire Lord ignited his ambition to expand his nation's influence across the globe. Believing he was sharing the Fire Nation's greatness, his vision was rejected by Roku. This ideological schism led to a bitter rivalry that culminated in Sozin betraying Roku, leaving him to die in a volcanic eruption. With the Avatar gone, Sozin harnessed the power of a great comet to commit genocide against the Air Nomads and begin the Hundred Year War.",
     "role": "The original antagonist of the Hundred Year War, whose past actions and friendship with Roku define the central conflict of the series.",
-    "overview": "",
-    "relationships": [
-      "Roku (Best Friend turned Arch-Nemesis)",
-      "Azulon (Son, Successor)",
-      "Taiso (Father)",
-      "Aang (The target of his lifelong hunt)"
-    ],
+    "relationships": "- Roku (Best Friend turned Arch-Nemesis)",
     "highlights": [
-      "Grew up as the best friend of Roku, before Roku was identified as the Avatar.",
-      "Betrayed Roku by leaving him to die in a volcanic eruption to pursue his conquest.",
-      "Used the power of a comet to wipe out the Air Nomads.",
-      "Instigated the Hundred Year War."
+      "- Grew up as the best friend of Roku, before Roku was identified as the Avatar.",
+      "- Betrayed Roku by leaving him to die in a volcanic eruption to pursue his conquest.",
+      "- Used the power of a comet to wipe out the Air Nomads.",
+      "- Instigated the Hundred Year War."
     ],
     "traits": [
-      "Ambitious & Visionary",
-      "Imperialistic & Ruthless",
-      "Cunning & Patient",
-      "Conflicted (initially)"
+      "- Ambitious & Visionary",
+      "- Imperialistic & Ruthless",
+      "- Cunning & Patient",
+      "- Conflicted (initially)"
     ],
     "quotes": [
-      "With Roku gone and the great comet returning, the timing was perfect to change the world.",
-      "We have a chance to share our greatness with the rest of the world.",
-      "Without you, all my plans are suddenly possible. I have a vision for the future, Roku."
-    ]
+      "- \"With Roku gone and the great comet returning, the timing was perfect to change the world.\"",
+      "- \"We have a chance to share our greatness with the rest of the world.\"",
+      "- \"Without you, all my plans are suddenly possible. I have a vision for the future, Roku.\""
+    ],
+    "__type": "character",
+    "__source": "sozin.md",
+    "slug": "sozin"
   },
   {
     "id": "suki",
-    "slug": "suki",
     "name": "Suki",
-    "description": "As the leader of a formidable band of female warriors, Suki initially upholds her island's isolationist traditions. Inspired by Team Avatar, she chooses to join the war effort, becoming a valuable ally with her exceptional combat skills and leadership. Her journey takes her from the shores of Kyoshi Island to the cells of the Fire Nation's most feared prison, all while maintaining her courage, loyalty, and unwavering warrior spirit.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
-    "nation": "Earth Kingdom (Kyoshi Island)",
-    "bending": "Unknown",
-    "role": "A skilled supporting warrior whose growth from isolationist to global peacekeeper demonstrates the expanding scope of the war and the strength of non-benders.",
-    "overview": "",
-    "relationships": [
-      "Sokka (Boyfriend, Combat Partner)",
-      "Kyoshi Warriors (Her \"Sisters\" and Team)",
-      "Aang & Team Avatar (Allies & Friends)",
-      "Ty Lee (Rival turned Ally)",
-      "Zuko (Ally, former Enemy)"
-    ],
-    "highlights": [
-      "Defeated and later trained Sokka, challenging his sexism.",
-      "Fought Princess Azula's team to protect Appa.",
-      "Survived and escaped the Fire Nation's highest-security prison, the Boiling Rock.",
-      "Helped Sokka and Toph disable the Fire Nation airship fleet during Sozin's Comet."
-    ],
-    "traits": [
-      "Brave & Assertive",
-      "Loyal & Compassionate",
-      "Disciplined & Focused",
-      "Playful & Humorous"
-    ],
-    "quotes": [
-      "I am a warrior, but I'm a girl too.",
-      "I'm the leader of the Kyoshi Warriors. I can handle a few navy guys.",
-      "Looks like we're in this together."
-    ]
-  },
-  {
-    "id": "toph-beifong",
-    "slug": "toph-beifong",
-    "name": "Toph Beifong",
-    "description": "Born blind and treated as a fragile doll by her overprotective parents, Toph secretly honed her earthbending skills with the original masters, the badgermoles. She developed a unique style using seismic sense to \"see\" the world, becoming an undefeated champion in underground fighting rings. After joining Team Avatar, her tough, independent, and brutally honest personality provides a necessary counterpoint, and her invention of metalbending single-handedly revolutionizes the art form and the future of the world.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "The Runaway",
-      "Dung"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Earth Kingdom",
-    "bending": "Unknown",
-    "role": "The master earthbender who challenges Aang's methods and revolutionizes her element, proving strength comes from unexpected places.",
-    "overview": "",
-    "relationships": [
-      "Aang (Student, Friend, \"Twinkle Toes\")",
-      "Katara (Friend, Rival, \"Sugar Queen\")",
-      "Sokka (Friend, Crush)",
-      "Lao & Poppy Beifong (Estranged Parents)",
-      "Lin & Suyin Beifong (Daughters)",
-      "Badgermoles (First Teachers)"
-    ],
+    "description": "The proud and capable leader of the Kyoshi Warriors. Suki is a highly skilled non-bender who overcomes her island's isolationism to fight for the world and becomes a key ally to Team Avatar.",
+    "overview": "As the leader of a formidable band of female warriors, Suki initially upholds her island's isolationist traditions. Inspired by Team Avatar, she chooses to join the war effort, becoming a valuable ally with her exceptional combat skills and leadership. Her journey takes her from the shores of Kyoshi Island to the cells of the Fire Nation's most feared prison, all while maintaining her courage, loyalty, and unwavering warrior spirit.",
+    "role": "A skilled supporting warrior whose growth from isolationist to global peacekeeper demonstrates the expanding scope of the war and the strength of non-benders.",
+    "relationships": "- Sokka (Boyfriend, Combat Partner)",
     "highlights": [
-      "Learned earthbending directly from badgermoles.",
-      "Single-handedly invented the art of metalbending to escape a metal cage.",
-      "Became Republic City's first Chief of Police and founded the Metalbending Police Force.",
-      "Reached enlightenment in the Foggy Swamp, connecting with the entire world."
+      "- Defeated and later trained Sokka, challenging his sexism.",
+      "- Fought Princess Azula's team to protect Appa.",
+      "- Survived and escaped the Fire Nation's highest-security prison, the Boiling Rock.",
+      "- Helped Sokka and Toph disable the Fire Nation airship fleet during Sozin's Comet."
     ],
     "traits": [
-      "Tough & Independent",
-      "Sarcastic & Direct",
-      "Uncouth & Rebellious",
-      "Loyal & Protective (in her own way)"
+      "- Brave & Assertive",
+      "- Loyal & Compassionate",
+      "- Disciplined & Focused",
+      "- Playful & Humorous"
     ],
     "quotes": [
-      "I am the greatest earthbender in the world! Don't you two dunderheads ever forget it!",
-      "There's no different angle, no clever solution, no trickity-trick that's gonna move that rock. You've gotta face it head on.",
-      "I am not Toph! I am Melon Lord! Mwahahaha!"
-    ]
+      "- \"I am a warrior, but I'm a girl too.\"",
+      "- \"I'm the leader of the Kyoshi Warriors. I can handle a few navy guys.\"",
+      "- \"Looks like we're in this together.\""
+    ],
+    "__type": "character",
+    "__source": "suki.md",
+    "slug": "suki"
   },
   {
-    "id": "ty-lee",
-    "slug": "ty-lee",
-    "name": "Ty Lee",
-    "description": "One of seven identical sisters, Ty Lee ran away to join the circus to feel unique and gain individual recognition. Her acrobatic prowess and mastery of chi-blocking made her a prime recruit for Princess Azula's elite team. Though initially loyal out of fear, her empathetic nature and friendship with Mai ultimately lead her to defy Azula, choosing friendship over servitude.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
-    "nation": "Fire Nation",
-    "bending": "Unknown",
-    "role": "A secondary antagonist whose bubbly personality conceals a deadly fighting style and whose arc demonstrates the courage to defy a toxic friendship.",
-    "overview": "",
-    "relationships": [
-      "Azula (Commander, former)",
-      "Mai (Best Friend)",
-      "Suki & The Kyoshi Warriors (Teammates)",
-      "Sokka (Crush)",
-      "Ty Sisters (Family)"
-    ],
+    "id": "toph",
+    "name": "Toph Beifong",
+    "nation": "Earth Kingdom",
+    "description": "A blind but prodigiously powerful earthbending master from a wealthy family. Toph rejects her sheltered life to teach the Avatar, inventing the revolutionary art of metalbending along the way.",
+    "overview": "Born blind and treated as a fragile doll by her overprotective parents, Toph secretly honed her earthbending skills with the original masters, the badgermoles. She developed a unique style using seismic sense to \"see\" the world, becoming an undefeated champion in underground fighting rings. After joining Team Avatar, her tough, independent, and brutally honest personality provides a necessary counterpoint, and her invention of metalbending single-handedly revolutionizes the art form and the future of the world.",
+    "role": "The master earthbender who challenges Aang's methods and revolutionizes her element, proving strength comes from unexpected places.",
+    "relationships": "- Aang (Student, Friend, \"Twinkle Toes\")",
     "highlights": [
-      "Intimidated by Azula into leaving her circus life to join her quest.",
-      "Single-handedly defeated the Terra Team of elite earthbenders with her chi-blocking.",
-      "Betrayed Princess Azula at the Boiling Rock to save Mai.",
-      "After being imprisoned, she befriended and joined the Kyoshi Warriors."
+      "- Learned earthbending directly from badgermoles.",
+      "- Single-handedly invented the art of metalbending to escape a metal cage.",
+      "- Became Republic City's first Chief of Police and founded the Metalbending Police Force.",
+      "- Reached enlightenment in the Foggy Swamp, connecting with the entire world."
     ],
     "traits": [
-      "Cheerful & Bubbly",
-      "Energetic & Flirtatious",
-      "Empathetic & Loyal",
-      "Attention-seeking"
+      "- Tough & Independent",
+      "- Sarcastic & Direct",
+      "- Uncouth & Rebellious",
+      "- Loyal & Protective (in her own way)"
     ],
     "quotes": [
-      "My aura has never been pinker!",
-      "Ooh, he's cute.",
-      "Circus freak is a compliment!"
-    ]
+      "- \"I am the greatest earthbender in the world! Don't you two dunderheads ever forget it!\"",
+      "- \"There's no different angle, no clever solution, no trickity-trick that's gonna move that rock. You've gotta face it head on.\"",
+      "- \"I am not Toph! I am Melon Lord! Mwahahaha!\""
+    ],
+    "__type": "character",
+    "__source": "toph.md",
+    "slug": "toph-beifong"
+  },
+  {
+    "id": "ty lee",
+    "name": "Ty Lee",
+    "nation": "Fire Nation",
+    "description": "A cheerful and energetic acrobat from a noble Fire Nation family. Ty Lee is a master of chi-blocking, using her unique martial arts to disable benders as a key member of Azula's team.",
+    "overview": "One of seven identical sisters, Ty Lee ran away to join the circus to feel unique and gain individual recognition. Her acrobatic prowess and mastery of chi-blocking made her a prime recruit for Princess Azula's elite team. Though initially loyal out of fear, her empathetic nature and friendship with Mai ultimately lead her to defy Azula, choosing friendship over servitude.",
+    "role": "A secondary antagonist whose bubbly personality conceals a deadly fighting style and whose arc demonstrates the courage to defy a toxic friendship.",
+    "relationships": "- Azula (Commander, former)",
+    "highlights": [
+      "- Intimidated by Azula into leaving her circus life to join her quest.",
+      "- Single-handedly defeated the Terra Team of elite earthbenders with her chi-blocking.",
+      "- Betrayed Princess Azula at the Boiling Rock to save Mai.",
+      "- After being imprisoned, she befriended and joined the Kyoshi Warriors."
+    ],
+    "traits": [
+      "- Cheerful & Bubbly",
+      "- Energetic & Flirtatious",
+      "- Empathetic & Loyal",
+      "- Attention-seeking"
+    ],
+    "quotes": [
+      "- \"My aura has never been pinker!\"",
+      "- \"Ooh, he's cute.\"",
+      "- \"Circus freak is a compliment!\""
+    ],
+    "__type": "character",
+    "__source": "ty lee.md",
+    "slug": "ty-lee"
   },
   {
     "id": "ursa",
-    "slug": "ursa",
     "name": "Ursa",
-    "description": "Born in the small town of Hira'a, Ursa's life was forcibly changed when she was made to marry Prince Ozai. A loving mother caught in a web of royal intrigue, she made a terrible bargain to save her son Zuko's life, resulting in her banishment and the murder of Fire Lord Azulon. To escape her painful past, she had her memories and face changed by a spirit, living a new life as \"Noriko\" until her children finally found her.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "Noriko"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "The kind-hearted mother of Zuko and Azula, and wife of Prince Ozai. Her mysterious banishment from the Fire Nation is a driving force in her children's lives.",
+    "overview": "Born in the small town of Hira'a, Ursa's life was forcibly changed when she was made to marry Prince Ozai. A loving mother caught in a web of royal intrigue, she made a terrible bargain to save her son Zuko's life, resulting in her banishment and the murder of Fire Lord Azulon. To escape her painful past, she had her memories and face changed by a spirit, living a new life as \"Noriko\" until her children finally found her.",
     "role": "A mysterious and tragic figure whose absence haunts her children, acting as a symbol of lost love and the catalyst for Zuko's quest for truth.",
-    "overview": "",
-    "relationships": [
-      "Zuko (Son)",
-      "Azula (Daughter)",
-      "Ozai (Husband, former)",
-      "Noren / Ikem (Husband, First Love)",
-      "Kiyi (Daughter)",
-      "Roku (Grandfather)"
-    ],
+    "relationships": "- Zuko (Son)",
     "highlights": [
-      "Granddaughter of Avatar Roku, fulfilling a prophecy by marrying into the royal family.",
-      "Conspired with Ozai to poison Fire Lord Azulon in order to save Zuko's life.",
-      "Was banished and had her memory and face changed by the Mother of Faces.",
-      "Reunited with Zuko years later and had her memories and identity restored."
+      "- Granddaughter of Avatar Roku, fulfilling a prophecy by marrying into the royal family.",
+      "- Conspired with Ozai to poison Fire Lord Azulon in order to save Zuko's life.",
+      "- Was banished and had her memory and face changed by the Mother of Faces.",
+      "- Reunited with Zuko years later and had her memories and identity restored."
     ],
     "traits": [
-      "Kind & Loving",
-      "Protective & Brave",
-      "Cunning & Pragmatic",
-      "Haunted by her past"
+      "- Kind & Loving",
+      "- Protective & Brave",
+      "- Cunning & Pragmatic",
+      "- Haunted by her past"
     ],
     "quotes": [
-      "Everything I've done, I've done to protect you.",
-      "Remember this, Zuko. No matter how things may seem to change, never forget who you are.",
-      "My only fault was not loving you enough. (to Azula)"
-    ]
+      "- \"Everything I've done, I've done to protect you.\"",
+      "- \"Remember this, Zuko. No matter how things may seem to change, never forget who you are.\"",
+      "- \"My only fault was not loving you enough.\" (to Azula)"
+    ],
+    "__type": "character",
+    "__source": "ursa.md",
+    "slug": "ursa"
   },
   {
     "id": "yangchen",
-    "slug": "yangchen",
     "name": "Yangchen",
-    "description": "Burdened from a young age by the voices and memories of her past lives, Yangchen grew into a pragmatic and formidable Avatar. Unlike many Air Nomads, she was not a strict pacifist and understood that maintaining peace sometimes required manipulation, espionage, and force. Her tireless efforts and difficult compromises secured an entire generation of peace after her death, though her focus on humanity's problems inadvertently led to a rise in dark spirits for her successor, Kuruk.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Air Nomads",
-    "bending": "Unknown",
+    "description": "A revered and powerful Air Nomad Avatar known for her fierce devotion to her duty. She was willing to do whatever was necessary to maintain global peace and stability.",
+    "overview": "Burdened from a young age by the voices and memories of her past lives, Yangchen grew into a pragmatic and formidable Avatar. Unlike many Air Nomads, she was not a strict pacifist and understood that maintaining peace sometimes required manipulation, espionage, and force. Her tireless efforts and difficult compromises secured an entire generation of peace after her death, though her focus on humanity's problems inadvertently led to a rise in dark spirits for her successor, Kuruk.",
     "role": "A legendary past Avatar who serves as a crucial spiritual guide, offering a pragmatic and duty-bound perspective that contrasts with Aang's idealism.",
-    "overview": "",
-    "relationships": [
-      "Kuruk (Successor)",
-      "Szeto (Predecessor)",
-      "Kavik (Companion, Informant)",
-      "Jetsun (Older Sister Figure, Spiritual Guide)"
-    ],
+    "relationships": "- Kuruk (Successor)",
     "highlights": [
-      "Plagued by visions of her past lives since childhood.",
-      "Defeated the spirit General Old Iron and established a pact to protect his sacred land.",
-      "Became deeply involved in the complex politics of the four nations to prevent war.",
-      "Was so effective as the Avatar that no major wars occurred for a generation after her death."
+      "- Plagued by visions of her past lives since childhood.",
+      "- Defeated the spirit General Old Iron and established a pact to protect his sacred land.",
+      "- Became deeply involved in the complex politics of the four nations to prevent war.",
+      "- Was so effective as the Avatar that no major wars occurred for a generation after her death."
     ],
     "traits": [
-      "Dutiful & Determined",
-      "Compassionate & Empathetic",
-      "Pragmatic & Shrewd",
-      "Spiritually Troubled"
+      "- Dutiful & Determined",
+      "- Compassionate & Empathetic",
+      "- Pragmatic & Shrewd",
+      "- Spiritually Troubled"
     ],
     "quotes": [
-      "Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.",
-      "Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.",
-      "All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us."
-    ]
+      "- \"Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.\"",
+      "- \"Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.\"",
+      "- \"All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us.\""
+    ],
+    "__type": "character",
+    "__source": "yangchen.md",
+    "slug": "yangchen"
   },
   {
     "id": "yue",
-    "slug": "yue",
     "name": "Yue",
-    "description": "As a sickly infant, Princess Yue's life was saved when the Moon Spirit gave her a piece of its own life force. Torn between her duty to her tribe and her feelings for Sokka, her kindness and bravery define her. During the Siege of the North, when the mortal form of the Moon Spirit is killed, Yue selflessly gives her life back, ascending to become the new Moon Spirit and saving waterbending for the entire world.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Northern Water Tribe",
-    "bending": "Unknown",
+    "description": "The gentle and dutiful princess of the Northern Water Tribe. She makes the ultimate sacrifice to save her people and restore balance to the world by becoming the new Moon Spirit.",
+    "overview": "As a sickly infant, Princess Yue's life was saved when the Moon Spirit gave her a piece of its own life force. Torn between her duty to her tribe and her feelings for Sokka, her kindness and bravery define her. During the Siege of the North, when the mortal form of the Moon Spirit is killed, Yue selflessly gives her life back, ascending to become the new Moon Spirit and saving waterbending for the entire world.",
     "role": "A tragic love interest and key spiritual figure whose sacrifice is a pivotal moment in the war and for Sokka's personal development.",
-    "overview": "",
-    "relationships": [
-      "Sokka (Boyfriend)",
-      "Arnook (Father)",
-      "Hahn (Fiancé, arranged)",
-      "Aang & Katara (Allies)"
-    ],
+    "relationships": "- Sokka (Boyfriend)",
     "highlights": [
-      "Saved from a mortal illness as a baby by the Moon Spirit.",
-      "Torn between her arranged marriage and her love for Sokka.",
-      "Sacrificed her mortal life to become the new Moon Spirit, Tui.",
-      "Guided Aang in the Spirit World after her transformation."
+      "- Saved from a mortal illness as a baby by the Moon Spirit.",
+      "- Torn between her arranged marriage and her love for Sokka.",
+      "- Sacrificed her mortal life to become the new Moon Spirit, Tui.",
+      "- Guided Aang in the Spirit World after her transformation."
     ],
     "traits": [
-      "Gentle & Kind",
-      "Dutiful & Loyal",
-      "Spiritual & Graceful",
-      "Courageous"
+      "- Gentle & Kind",
+      "- Dutiful & Loyal",
+      "- Spiritual & Graceful",
+      "- Courageous"
     ],
     "quotes": [
-      "It gave me life. Maybe I can give it back.",
-      "We can't. It's not right.",
-      "I'll always be with you."
-    ]
+      "- \"It gave me life. Maybe I can give it back.\"",
+      "- \"We can't. It's not right.\"",
+      "- \"I'll always be with you.\""
+    ],
+    "__type": "character",
+    "__source": "yue.md",
+    "slug": "yue"
   },
   {
     "id": "zhao",
-    "slug": "zhao",
     "name": "Zhao",
-    "description": "A man driven by a pathological need for recognition, Zhao rapidly climbed the ranks of the Fire Nation military through a combination of skill, cunning, and cruelty. His rivalry with the banished Prince Zuko for the capture of the Avatar fuels much of his action. His ultimate ambition culminates in the Siege of the North, where he makes the fatal mistake of killing the Moon Spirit, leading to his own downfall at the hands of the enraged Ocean Spirit.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "A ruthlessly ambitious and arrogant Fire Nation naval officer. Zhao's obsession with capturing the Avatar and achieving legendary status makes him a primary adversary in the early stages of the war.",
+    "overview": "A man driven by a pathological need for recognition, Zhao rapidly climbed the ranks of the Fire Nation military through a combination of skill, cunning, and cruelty. His rivalry with the banished Prince Zuko for the capture of the Avatar fuels much of his action. His ultimate ambition culminates in the Siege of the North, where he makes the fatal mistake of killing the Moon Spirit, leading to his own downfall at the hands of the enraged Ocean Spirit.",
     "role": "The primary antagonist of Book One, whose arrogance and short-sighted pursuit of glory serve as a foil to both Zuko's honor-bound quest and Aang's spiritual journey.",
-    "overview": "",
-    "relationships": [
-      "Zuko (Rival)",
-      "Iroh (Rival, former subordinate)",
-      "Aang (Primary Target)",
-      "Jeong Jeong (Former Master)",
-      "Ozai (Superior)"
-    ],
+    "relationships": "- Zuko (Rival)",
     "highlights": [
-      "Discovered the location of the Moon and Ocean spirits in Wan Shi Tong's Library.",
-      "Became the primary rival to Prince Zuko in the hunt for the Avatar.",
-      "Led the massive Fire Nation naval invasion of the Northern Water Tribe.",
-      "Killed the Moon Spirit, Tui, and was subsequently dragged into the Spirit World for eternity."
+      "- Discovered the location of the Moon and Ocean spirits in Wan Shi Tong's Library.",
+      "- Became the primary rival to Prince Zuko in the hunt for the Avatar.",
+      "- Led the massive Fire Nation naval invasion of the Northern Water Tribe.",
+      "- Killed the Moon Spirit, Tui, and was subsequently dragged into the Spirit World for eternity."
     ],
     "traits": [
-      "Arrogant & Ambitious",
-      "Narcissistic & Egotistical",
-      "Short-tempered & Impatient",
-      "Cunning & Deceptive"
+      "- Arrogant & Ambitious",
+      "- Narcissistic & Egotistical",
+      "- Short-tempered & Impatient",
+      "- Cunning & Deceptive"
     ],
     "quotes": [
-      "I am a legend now! The Fire Nation will for generations tell stories about the great Zhao who darkened the moon!",
-      "I am Zhao the Conqueror! Zhao the Moon Slayer! Zhao... the Invincible!",
-      "You can't compete with me. I have hundreds of warships under my command."
-    ]
+      "- \"I am a legend now! The Fire Nation will for generations tell stories about the great Zhao who darkened the moon!\"",
+      "- \"I am Zhao the Conqueror! Zhao the Moon Slayer! Zhao... the Invincible!\"",
+      "- \"You can't compete with me. I have hundreds of warships under my command.\""
+    ],
+    "__type": "character",
+    "__source": "zhao.md",
+    "slug": "zhao"
   },
   {
     "id": "zuko",
-    "slug": "zuko",
     "name": "Zuko",
-    "description": "Banished by his cruel father and marked by a brutal scar, Prince Zuko's singular goal is to capture the Avatar to restore his lost honor. Aided by his wise uncle Iroh, Zuko's relentless pursuit forces him to confront the tyranny of his nation and the turmoil within himself. Ultimately, he rejects his father's legacy, choosing instead to join his former enemies and help the Avatar bring peace and balance to the world.",
-    "__type": "character",
-    "tags": [],
-    "aliases": [
-      "The Blue Spirit",
-      "Lee",
-      "Junior"
-    ],
-    "sources": [],
-    "image": "[SVG embedded image link]",
     "nation": "Fire Nation",
-    "bending": "Unknown",
+    "description": "The exiled crown prince of the Fire Nation, Zuko's obsession with capturing the Avatar to regain his honor leads him on a tumultuous journey of self-discovery and redemption.",
+    "overview": "Banished by his cruel father and marked by a brutal scar, Prince Zuko's singular goal is to capture the Avatar to restore his lost honor. Aided by his wise uncle Iroh, Zuko's relentless pursuit forces him to confront the tyranny of his nation and the turmoil within himself. Ultimately, he rejects his father's legacy, choosing instead to join his former enemies and help the Avatar bring peace and balance to the world.",
     "role": "The primary antagonist turned deuteragonist whose redemption arc is central to the series' themes of honor, destiny, and change.",
-    "overview": "",
-    "relationships": [
-      "Iroh (Uncle, Mentor, Father Figure)",
-      "Aang (Enemy turned Student & Friend)",
-      "Azula (Sister, Primary Rival)",
-      "Ozai (Father, Abuser, Enemy)",
-      "Katara (Enemy turned trusted Ally)",
-      "Mai (Girlfriend)"
-    ],
+    "relationships": "- Iroh (Uncle, Mentor, Father Figure)",
     "highlights": [
-      "Banished and scarred by his own father, Fire Lord Ozai.",
-      "Hunted the Avatar across the world, often under the guise of the \"Blue Spirit\".",
-      "Made the difficult choice to defy his father and join Team Avatar.",
-      "Defeated his sister, Azula, in a final Agni Kai to claim the title of Fire Lord."
+      "- Banished and scarred by his own father, Fire Lord Ozai.",
+      "- Hunted the Avatar across the world, often under the guise of the \"Blue Spirit\".",
+      "- Made the difficult choice to defy his father and join Team Avatar.",
+      "- Defeated his sister, Azula, in a final Agni Kai to claim the title of Fire Lord."
     ],
     "traits": [
-      "Intense & Brooding",
-      "Impatient & Hot-headed",
-      "Honorable & Determined",
-      "Conflicted & Compassionate"
+      "- Intense & Brooding",
+      "- Impatient & Hot-headed",
+      "- Honorable & Determined",
+      "- Conflicted & Compassionate"
     ],
     "quotes": [
-      "Hello, Zuko here.",
-      "I've struggled for so long to do what's right; to even know what's right.",
-      "That's rough, buddy."
-    ]
+      "- \"Hello, Zuko here.\"",
+      "- \"I've struggled for so long to do what's right; to even know what's right.\"",
+      "- \"That's rough, buddy.\""
+    ],
+    "__type": "character",
+    "__source": "zuko.md",
+    "slug": "zuko"
+  },
+  {
+    "name": "Airbending",
+    "slug": "airbending",
+    "description": "Airbending is the aerokinetic ability to control and manipulate air. Practiced by the Air Nomads, it is the element of freedom, emphasizing detachment, flexibility, and pacifism. Airbenders use circular, evasive movements and are known for their agility and defensive style. The first airbenders learned from flying bison.",
+    "element": "air",
+    "source": "Air",
+    "learnedFrom": "Flying bison",
+    "alternateStyles": [
+      "Flight",
+      "Spiritual projection"
+    ],
+    "tags": [
+      "air nomad",
+      "freedom",
+      "defensive",
+      "agility"
+    ],
+    "synonyms": [
+      "Aerokinesis"
+    ],
+    "relations": [],
+    "notableTechniques": [
+      "Air ball",
+      "Air blast",
+      "Air bomb",
+      "Air cushion",
+      "Air manipulation",
+      "Air punch/kick",
+      "Air shield",
+      "Air swipe",
+      "Air wheel",
+      "Breath of wind",
+      "Cannonball",
+      "Directed funnel",
+      "Enhanced agility",
+      "Enhanced speed",
+      "Gale slice",
+      "Gliding takeoff",
+      "Heat regulation",
+      "Sound manipulation",
+      "Suffocation/asphyxiation",
+      "Tornado",
+      "Vacuum/airless void",
+      "Air scooter",
+      "Cloudbending",
+      "Flight",
+      "Spiritual projection"
+    ],
+    "__type": "bending",
+    "id": "airbending"
+  },
+  {
+    "name": "Earthbending",
+    "slug": "earthbending",
+    "description": "Earthbending is the geokinetic ability to manipulate earth and rock in all their forms. Practiced mainly in the Earth Kingdom and United Republic, it is the element of substance, emphasizing strength, endurance, and neutral jing (waiting for the right moment to strike). The first earthbenders learned from badgermoles.",
+    "element": "earth",
+    "source": "Earth",
+    "learnedFrom": "Badgermoles",
+    "alternateStyles": [
+      "Lavabending",
+      "Metalbending",
+      "Sandbending"
+    ],
+    "tags": [
+      "earth kingdom",
+      "substance",
+      "strength",
+      "endurance"
+    ],
+    "synonyms": [
+      "Geokinesis"
+    ],
+    "relations": [],
+    "notableTechniques": [
+      "Earth and stone levitation",
+      "Earth block",
+      "Earth compression",
+      "Earth dagger",
+      "Earth elevator",
+      "Earth gauntlet",
+      "Earth hand/mannequin",
+      "Earth impression",
+      "Earth launch",
+      "Earth material manipulation",
+      "Earth shelter",
+      "Earth smash",
+      "Earth wall",
+      "Earthquakes/fissures",
+      "Ground shift",
+      "Quicksand",
+      "Rock column",
+      "Rock cuff",
+      "Rock shield",
+      "Rock slide",
+      "Sand spout",
+      "Slab shackles",
+      "Thick mud",
+      "Water filtering",
+      "Dust cloud",
+      "Earth armor",
+      "Earth bomb",
+      "Earth sinking",
+      "Earth tunneling",
+      "Earth wave",
+      "Magnetization",
+      "Metalbending",
+      "Lavabending",
+      "Sandbending"
+    ],
+    "__type": "bending",
+    "id": "earthbending"
+  },
+  {
+    "name": "Firebending",
+    "slug": "firebending",
+    "description": "Firebending is the pyrokinetic ability to control and produce fire. Practiced by the Fire Nation and Sun Warriors, it is the element of power, emphasizing will, energy, and aggression. The first firebenders learned from dragons and the sun. Firebending is unique in that it can generate its own element.",
+    "element": "fire",
+    "source": "Sun",
+    "learnedFrom": "Dragons",
+    "alternateStyles": [
+      "Combustionbending",
+      "Lightning generation",
+      "Lightning redirection"
+    ],
+    "tags": [
+      "fire nation",
+      "power",
+      "aggression",
+      "energy"
+    ],
+    "synonyms": [
+      "Pyrokinesis"
+    ],
+    "relations": [],
+    "notableTechniques": [
+      "Blazing rings and arcs",
+      "Blocking fire",
+      "Fan the flame",
+      "Fire blade",
+      "Fire bomb",
+      "Fire circle",
+      "Fire comet",
+      "Fire dropkick",
+      "Fire fists",
+      "Fire knives",
+      "Fire lashes",
+      "Fire manipulation",
+      "Fire missiles",
+      "Fire pinwheel",
+      "Fire stream",
+      "Fire whip",
+      "Jet propulsion",
+      "Lightning generation",
+      "Lightning redirection",
+      "Shield of fire",
+      "Wall of flames",
+      "Combustionbending",
+      "Blue fire",
+      "Breath of fire"
+    ],
+    "__type": "bending",
+    "id": "firebending"
+  },
+  {
+    "name": "Nonbending",
+    "slug": "nonbending",
+    "description": "Nonbenders are individuals in the Avatar universe who cannot bend any of the four elements but contribute through other abilities such as martial arts, chi-blocking, technology, or leadership. Nonbenders play crucial roles in society, politics, and conflict, often compensating for their lack of bending with unique skills.",
+    "tags": [
+      "nonbender",
+      "martial arts",
+      "chi-blocking",
+      "technology",
+      "leadership"
+    ],
+    "synonyms": [
+      "nonbender"
+    ],
+    "relations": [],
+    "notableSkills": [
+      "Martial arts",
+      "Chi-blocking",
+      "Technology expertise",
+      "Leadership",
+      "Political influence",
+      "Cultural preservation"
+    ],
+    "notableCharacters": [
+      "Sokka",
+      "Asami Sato",
+      "President Raiko",
+      "Varrick",
+      "Zhu Li Moon",
+      "Hiroshi Sato",
+      "The Lieutenant",
+      "Air Acolytes",
+      "Bumi (Aang's son)",
+      "Ru",
+      "Yaling",
+      "Tonraq",
+      "Suki",
+      "Ty Lee"
+    ],
+    "__type": "bending",
+    "id": "nonbending"
+  },
+  {
+    "name": "Waterbending",
+    "slug": "waterbending",
+    "description": "Waterbending is the hydrokinetic ability to control water in all its forms. Practiced by the Water Tribes, it is the element of change, emphasizing adaptability, healing, and flow. The first waterbenders learned from the Moon and Ocean Spirits. Waterbending is known for its versatility and ability to turn defense into offense.",
+    "element": "water",
+    "source": "Moon and Ocean Spirits",
+    "learnedFrom": "The Moon",
+    "alternateStyles": [
+      "Bloodbending",
+      "Healing"
+    ],
+    "tags": [
+      "water tribe",
+      "change",
+      "adaptability",
+      "healing"
+    ],
+    "synonyms": [
+      "Hydrokinesis"
+    ],
+    "relations": [],
+    "notableTechniques": [
+      "Breath of ice",
+      "Creeping ice",
+      "Flow as water",
+      "Ice blade",
+      "Ice claws",
+      "Ice column",
+      "Ice disc",
+      "Ice gauntlet",
+      "Ice hook",
+      "Ice wall/ice shield",
+      "Ice spear",
+      "Iceberg spike",
+      "Phase change",
+      "Rings of water",
+      "Snowball",
+      "Stream the water",
+      "Water ball",
+      "Water bullet",
+      "Water cloak",
+      "Water jet",
+      "Water knife",
+      "Water lashing",
+      "Water manipulation",
+      "Water pressure manipulation",
+      "Water ring",
+      "Water rope",
+      "Water wall/water shield",
+      "Water whip",
+      "Wave",
+      "Bloodbending",
+      "Healing"
+    ],
+    "__type": "bending",
+    "id": "waterbending"
+  },
+  {
+    "name": "Air Nomad cuisine",
+    "slug": "air-nomad-cuisine",
+    "description": "Strictly vegetarian meals, with a focus on non-violence and minimal environmental impact. Known for sweets like fruit pies and custard tarts. Many monks were skilled bakers. After the Hundred Year War, Avatar Aang attempted to reconstruct Air Nomad cuisine from memory and damaged scrolls, improvising with available ingredients.",
+    "tags": [
+      "vegetarian",
+      "sweets",
+      "baking",
+      "air nomad"
+    ],
+    "synonyms": [
+      "Air Nation cuisine"
+    ],
+    "relations": [],
+    "notableDishes": [
+      "fruit pies",
+      "custard tarts",
+      "dumplings",
+      "egg custard tart",
+      "macaroon",
+      "mung bean & tofu curry",
+      "noodle soup",
+      "rice",
+      "roasted seaweed",
+      "sky bison biscuits",
+      "steamed tofu",
+      "steamed vegetables",
+      "sweet buns",
+      "sweet red bean cake",
+      "sweet rice",
+      "tsampa",
+      "tofu and bean sprouts",
+      "tofu curry"
+    ],
+    "commonIngredients": [
+      "butter",
+      "cream",
+      "custard",
+      "egg",
+      "milk",
+      "chives",
+      "cilantro",
+      "garlic",
+      "ginger",
+      "maple syrup",
+      "vanilla",
+      "apple",
+      "banana",
+      "bean sprouts",
+      "bird's eye chili",
+      "cabbage",
+      "carrot",
+      "chayote",
+      "chrysanthemum",
+      "coconut",
+      "cucumberquat",
+      "jackfruit",
+      "lemon",
+      "lychee nut",
+      "mango",
+      "moon peach",
+      "mung beans",
+      "nuts",
+      "onion",
+      "orange",
+      "oyster mushroom",
+      "pear",
+      "pepper",
+      "pickles",
+      "pistachios",
+      "plum",
+      "potato",
+      "raisins",
+      "shiitake",
+      "soy",
+      "taro",
+      "tomato",
+      "yam",
+      "barley",
+      "flour",
+      "rice"
+    ],
+    "__type": "food",
+    "id": "air-nomad-cuisine"
+  },
+  {
+    "name": "Earth Kingdom cuisine",
+    "slug": "earth-kingdom-cuisine",
+    "description": "The Earth Kingdom offers a wide variety of dishes, including fruits, vegetables, rice, and meats. Regional variations exist, from simple village fare to elaborate delicacies in Ba Sing Se. Cooking methods include boiling, roasting, baking, and steaming. Dishes are influenced by climate and proximity to other nations.",
+    "tags": [
+      "earth kingdom",
+      "regional",
+      "variety",
+      "meat",
+      "vegetarian"
+    ],
+    "synonyms": [
+      "Earth Kingdom food"
+    ],
+    "relations": [],
+    "notableDishes": [
+      "bean curd puffs",
+      "beetle-worm soup",
+      "bison steak",
+      "braised turtle duck",
+      "cabbage bun",
+      "cabbage cookies",
+      "cabbage noodles",
+      "cabbage soup",
+      "cakes",
+      "chocolate mousse",
+      "crab puffs",
+      "crab urchin stir-fry",
+      "deep-fried pickled radishes",
+      "dumplings",
+      "egg custard tart",
+      "fried cookies",
+      "fried dough",
+      "ginger-infused pea tendril and hibiscus-root salad",
+      "grilled sausage",
+      "jook",
+      "kale wraps",
+      "meat kebabs",
+      "misty palms special rice",
+      "moon peach cakes",
+      "noodle soup",
+      "pan-fried noodles",
+      "pau buns",
+      "pies",
+      "pumpkin pie",
+      "ramen",
+      "roast boar",
+      "roast duck",
+      "rice gruel",
+      "seared wild Kyoshi elephant koi",
+      "seaweed soup",
+      "seaweed wraps",
+      "soup",
+      "spicy pickled kelp",
+      "steamed buns",
+      "stuffed apple donuts",
+      "sugar cookies",
+      "sushi",
+      "tea eggs",
+      "tofu",
+      "unfried dough",
+      "vegetable wrap",
+      "wagashi desserts"
+    ],
+    "commonIngredients": [
+      "bean",
+      "bread",
+      "corn",
+      "flour",
+      "lentil",
+      "rice",
+      "wheat",
+      "beef",
+      "chicken",
+      "crab",
+      "duck",
+      "egg",
+      "fish",
+      "lamb",
+      "lobster crab",
+      "possum chicken",
+      "wild crab urchin",
+      "aloe",
+      "apple",
+      "banana",
+      "berries",
+      "cabbage",
+      "cantaloupe",
+      "carrot",
+      "chili",
+      "cucumber",
+      "daikon radish",
+      "eggplant",
+      "fava bean",
+      "ginger",
+      "grape",
+      "kale",
+      "kelp",
+      "lemon",
+      "lettuce",
+      "lotus root",
+      "lychee nut",
+      "mango",
+      "moon peaches",
+      "mustard",
+      "onion",
+      "orange",
+      "papaya",
+      "pear",
+      "pepper",
+      "persimmon",
+      "plum",
+      "pumpkin",
+      "sesame",
+      "soy",
+      "sweet potato",
+      "tapioca",
+      "taro root",
+      "watermelon",
+      "wild nuts",
+      "yam"
+    ],
+    "__type": "food",
+    "id": "earth-kingdom-cuisine"
+  },
+  {
+    "name": "Fire Nation cuisine",
+    "slug": "fire-nation-cuisine",
+    "description": "Fire Nation cuisine is known for its spicy nature and wide variety of grains, meats, and vegetables. Dishes are often seasoned with chili and other spices. Cooking methods include boiling, steaming, roasting, and baking. Food culture emphasizes control and respect for firebending.",
+    "tags": [
+      "fire nation",
+      "spicy",
+      "meat",
+      "vegetarian"
+    ],
+    "synonyms": [
+      "Fire Nation food"
+    ],
+    "relations": [],
+    "notableDishes": [
+      "bean cakes",
+      "buns and bread",
+      "chicken skewers",
+      "cookies",
+      "dried mushrooms",
+      "dumplings",
+      "elephant koi shui zhu yu",
+      "fertilized turtle duck egg",
+      "fire cakes",
+      "fire gummies",
+      "flaming fire flakes",
+      "fried bangus fish",
+      "fried egg",
+      "fruit tart",
+      "gruel",
+      "hippo-ox tail skewers",
+      "hotcakes",
+      "ice cream",
+      "komodo chicken",
+      "komodo chicken skewer",
+      "spiced komodo chicken sausage",
+      "komodo jerky",
+      "komodo kabob",
+      "komodo sausage",
+      "loco moco",
+      "mochi",
+      "mudfish stew",
+      "noodles",
+      "spicy noodles",
+      "extra spicy fire noodles",
+      "spiral-shaped noodles",
+      "noodle soup",
+      "udon noodles",
+      "onsen egg",
+      "rice",
+      "rice ball",
+      "rice candy",
+      "roast duck",
+      "salted vegetables",
+      "sea soup",
+      "sizzle-crisps",
+      "smoked sea slug",
+      "stalknose mushrooms",
+      "superspicy soufflé",
+      "tart pie",
+      "tea sandwich",
+      "toast"
+    ],
+    "commonIngredients": [
+      "beans",
+      "flour",
+      "millet",
+      "rice",
+      "sorghum",
+      "wheat",
+      "bangus fish",
+      "clam",
+      "crab",
+      "duck",
+      "elephant rat",
+      "egg",
+      "fish",
+      "silverskim fish",
+      "hippo-ox",
+      "komodo chicken",
+      "komodo rhino",
+      "mudfish",
+      "sea slug",
+      "shrimp",
+      "squid",
+      "apple",
+      "ash banana",
+      "banana",
+      "cabbage",
+      "cherries",
+      "chili",
+      "dragon paw fruit",
+      "dumpling weed",
+      "figs",
+      "lychee nut",
+      "lemon",
+      "lettuce",
+      "mango",
+      "melon",
+      "melonyam",
+      "mushroom",
+      "ocean kumquat",
+      "peas",
+      "pink berries",
+      "plum",
+      "purple berries",
+      "scallion",
+      "star apple",
+      "tamarind",
+      "tomato",
+      "tomato-carrot",
+      "wakame",
+      "watermelon"
+    ],
+    "__type": "food",
+    "id": "fire-nation-cuisine"
+  },
+  {
+    "name": "Republic City cuisine",
+    "slug": "republic-city-cuisine",
+    "description": "Republic City cuisine is a fusion of foods from all nations, with a focus on convenience and commercial preparation. Fast-paced city life has led to the popularity of instant noodles, snack cakes, and street food. Many dishes are adaptations of traditional foods from other nations, often with unique twists.",
+    "tags": [
+      "republic city",
+      "fusion",
+      "convenience",
+      "street food"
+    ],
+    "synonyms": [
+      "United Republic of Nations food"
+    ],
+    "relations": [],
+    "notableDishes": [
+      "beef jerky",
+      "crispy squid balls",
+      "cupcakes",
+      "dumplings",
+      "flamey-o instant noodles",
+      "lobster crab chowder",
+      "octopus fritters",
+      "pepper jelly",
+      "popcorn",
+      "ramen",
+      "roasted meat on sticks",
+      "rock crab soufflé",
+      "seaweed noodles",
+      "sesame-dried sticks",
+      "spicy bean cakes",
+      "spicy pickled kelp",
+      "strawberry pie",
+      "street gruel",
+      "turkey duck skewers",
+      "turtle crab noodles",
+      "varri-cake"
+    ],
+    "commonIngredients": [
+      "bread",
+      "cherries",
+      "chili pepper",
+      "eggs",
+      "garlic",
+      "jellynemone",
+      "karashi",
+      "lemon",
+      "lobster crab",
+      "mint",
+      "molasses",
+      "potatoes",
+      "rice",
+      "sesame",
+      "sugar",
+      "wasabi"
+    ],
+    "__type": "food",
+    "id": "republic-city-cuisine"
+  },
+  {
+    "name": "Spirit World cuisine",
+    "slug": "spirit-world-cuisine",
+    "description": "Spirit World cuisine consists mainly of naturally occurring fruits and dishes inspired by the four nations. Spirits rarely need to eat, and spirit foods do not contribute to weight gain or loss. Dishes are often whimsical or influenced by human visitors.",
+    "tags": [
+      "spirit world",
+      "fruit",
+      "inspired"
+    ],
+    "synonyms": [
+      "Spirit World food"
+    ],
+    "relations": [],
+    "notableDishes": [
+      "spirit cake",
+      "spirit cupcake",
+      "spirit icing"
+    ],
+    "commonIngredients": [
+      "spirit blueberry",
+      "spirit kiwi",
+      "spirit strawberry"
+    ],
+    "__type": "food",
+    "id": "spirit-world-cuisine"
+  },
+  {
+    "name": "Water Tribe cuisine",
+    "slug": "water-tribe-cuisine",
+    "description": "Water Tribe cuisine relies heavily on ocean-sourced foods, with staples like crab, sea prunes, squid, seal jerky, and seaweed. Cooking styles include boiling, stewing, and preservation. Dishes reflect a convergence of preservation and exploration, with influences from imports and adaptation to harsh climates.",
+    "tags": [
+      "water tribe",
+      "seafood",
+      "preservation",
+      "exploration"
+    ],
+    "synonyms": [
+      "Water Nation food"
+    ],
+    "relations": [],
+    "notableDishes": [
+      "ashuna",
+      "blood soup",
+      "blubbered seal jerky",
+      "blueberry cookies",
+      "cotton candy",
+      "dried fish",
+      "fish cakes",
+      "five-flavor soup",
+      "foggy swamp chicken",
+      "freeze-dried cucumberquats",
+      "fried fish balls on a stick",
+      "fried foods on sticks",
+      "kale cookies",
+      "pickled fish",
+      "puffin-seal sausages",
+      "salmon jerky",
+      "sea prune stew",
+      "sea squid soup",
+      "seaweed bread",
+      "seaweed cookies",
+      "seaweed noodles",
+      "seaweed soup",
+      "seaweed stew",
+      "smoked arctic hen",
+      "steamed dumplings",
+      "two-headed fish soup",
+      "vegetable broth",
+      "yue's mooncakes"
+    ],
+    "commonIngredients": [
+      "arctic hen",
+      "blubber",
+      "chicken",
+      "crab",
+      "critter",
+      "egg",
+      "fish",
+      "anchovy",
+      "common sole",
+      "cuttle perch",
+      "flounder",
+      "halibut",
+      "kanpachi",
+      "salmon",
+      "giant fly",
+      "giant sea crab",
+      "octopus",
+      "platypus bear",
+      "possum chicken",
+      "seal",
+      "shrimp",
+      "squid",
+      "bamboo roots",
+      "blueberry",
+      "butterfly pea",
+      "dandelion greens",
+      "galangal",
+      "kale",
+      "kombu",
+      "lemongrass",
+      "mushroom",
+      "osmanthus syrup",
+      "satsuma",
+      "scallions",
+      "sea prune",
+      "seaweed",
+      "seaweed sprinkles",
+      "taro",
+      "flour",
+      "honey",
+      "maple syrup",
+      "rice",
+      "sugar",
+      "wheat"
+    ],
+    "__type": "food",
+    "id": "water-tribe-cuisine"
   }
 ]

@@ -18,7 +18,6 @@ export type EnrichedCharacter = {
   description: string;
   slug: string;
   nation?: string;
-  bending?: string;
   role?: string;
   overview?: string;
   highlights?: string[];
@@ -29,6 +28,17 @@ export type EnrichedCharacter = {
   tags?: string[];
   synonyms?: string[];
   sources?: string[];
+  
+  // Corrected v3.0 Fields
+  fullName?: string;
+  bendingElement?: string;
+  narrativeFunction?: string;
+  ageRange?: string;
+  gender?: string;
+  currentAffiliations?: string[];
+  archetype?: string;
+  moralAlignment?: string;
+  isLegendaryFighter?: boolean;
 };
 
 export type EnrichedFauna = {
@@ -81,4 +91,4 @@ export type EnrichedRecord =
   | EnrichedFauna
   | EnrichedFood
   | EnrichedLocation
-  | EnrichedSpiritWorld; 
+  | EnrichedSpiritWorld;
