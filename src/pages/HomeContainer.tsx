@@ -3,7 +3,6 @@ import React, { useState, useMemo, useRef } from 'react';
 import { Home } from './Home';
 import { useAustrosSearch } from '../hooks/useAustrosSearch';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
-import * as PersonalizationEngine from '../search/PersonalizationEngine';
 import type { EnrichedCharacter } from '../types/domainTypes';
 import { useCollectionsStore } from '../collections/collectionsStore';
 
@@ -12,13 +11,23 @@ function getNestedValue(obj: unknown, path: string): unknown {
   return path.split('.').reduce((o, key) => (o && typeof o === 'object' && o !== null && key in o) ? (o as Record<string, unknown>)[key] : undefined, obj);
 }
 
+// Nation color mapping (reused from ThemedCard)
+const nationThemeMap: Record<string, { main: string; glow: string }> = {
+  'air nomads': { main: '#FF9933', glow: 'rgba(255, 153, 51, 0.15)' },
+  'water tribe': { main: '#61aee4', glow: 'rgba(97, 174, 228, 0.15)' },
+  'southern water tribe': { main: '#61aee4', glow: 'rgba(97, 174, 228, 0.15)' },
+  'northern water tribe': { main: '#61aee4', glow: 'rgba(97, 174, 228, 0.15)' },
+  'earth kingdom': { main: '#559c41', glow: 'rgba(85, 156, 65, 0.15)' },
+  'fire nation': { main: '#d93e3e', glow: 'rgba(217, 62, 62, 0.15)' },
+  'default': { main: '#8b949e', glow: 'rgba(139, 148, 158, 0.05)' },
+};
+
 export default function HomeContainer() {
   const [query, setQuery] = useState('');
-  const { results: searchResults, loading, error } = useAustrosSearch(query);
+  const { results: searchResults, loading, error, topHit } = useAustrosSearch(query);
   const [initialItems, setInitialItems] = useState<EnrichedCharacter[]>([]);
   const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({});
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const scrollContainerRef = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
   const {
     collections,
@@ -30,7 +39,6 @@ export default function HomeContainer() {
     deleteCollection,
     addItemToCollection,
     removeItemFromCollection,
-    openPanel,
     closePanel,
   } = useCollectionsStore();
 
@@ -43,7 +51,7 @@ export default function HomeContainer() {
 
   React.useEffect(() => {
     if (!query) {
-      setRecentSearches(PersonalizationEngine.getRecentSearches());
+      // setRecentSearches(PersonalizationEngine.getRecentSearches()); // This line was removed
     }
   }, [query]);
 
@@ -131,15 +139,41 @@ export default function HomeContainer() {
     });
   };
 
-  const handleRecentSearchSelect = (selectedQuery: string) => {
-    setQuery(selectedQuery);
-  };
-
   const activeCollectionFullItems = useMemo(() => {
     if (!activeCollectionId || initialItems.length === 0) return [];
     const itemIds = collections[activeCollectionId]?.items || [];
     return itemIds.map(id => initialItems.find(item => item.id === id)).filter(Boolean) as EnrichedCharacter[];
   }, [activeCollectionId, collections, initialItems]);
+
+  // Use all search results for suggestion logic
+  const suggestion = React.useMemo(() => {
+    if (!query || !searchResults.length) return '';
+    const q = query.trim().toLowerCase();
+    // Find the first result where any word in the name starts with the query
+    const first = searchResults.find(item => {
+      if (typeof item.name !== 'string') return false;
+      const words = item.name.toLowerCase().split(/\s+/);
+      return words.some(word => word.startsWith(q)) && item.name.length > q.length;
+    });
+    if (first && typeof first.name === 'string') {
+      // Find the word that matches and return the rest of the name from that point
+      const name = first.name;
+      const lowerName = name.toLowerCase();
+      const matchIndex = lowerName.indexOf(q);
+      if (matchIndex !== -1 && matchIndex + q.length < name.length) {
+        return name.slice(matchIndex + q.length);
+      }
+    }
+    return '';
+  }, [query, searchResults]);
+
+  const textColor = React.useMemo(() => {
+    if (topHit && topHit.nation) {
+      const nationKey = topHit.nation.toLowerCase();
+      return nationThemeMap[nationKey]?.main || nationThemeMap.default.main;
+    }
+    return nationThemeMap.default.main;
+  }, [topHit]);
 
   return (
     <Home
@@ -156,8 +190,12 @@ export default function HomeContainer() {
       setSelectedId={setSelectedId}
       scrollContainerRef={scrollContainerRef}
       collections={Object.entries(collections).map(([id, c]) => ({ id, ...c }))}
+      activeCollectionId={activeCollectionId}
+      activeCollectionItems={activeCollectionFullItems}
+      onSelectCollection={setActiveCollectionId}
+      onDeleteItem={removeItemFromCollection}
+      onDeleteCollection={deleteCollection}
       panelOpen={panelOpen}
-      onOpenPanel={openPanel}
       onClosePanel={closePanel}
       onAddItemToCollection={(collectionId: string) => {
         if (selectedItem) {
@@ -166,13 +204,9 @@ export default function HomeContainer() {
         }
       }}
       onCreateCollection={createCollection}
-      recentSearches={recentSearches}
-      onRecentSearchSelect={handleRecentSearchSelect}
-      activeCollectionId={activeCollectionId}
-      setActiveCollectionId={setActiveCollectionId}
-      activeCollectionItems={activeCollectionFullItems}
-      onDeleteCollection={deleteCollection}
-      onRemoveItemFromCollection={removeItemFromCollection}
+      suggestion={suggestion}
+      textColor={textColor}
+      topNation={topHit?.nation || null}
     />
   );
 } 

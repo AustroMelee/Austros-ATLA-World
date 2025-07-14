@@ -15,36 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Jet
-- Nation: Earth Kingdom
-- Age: 16 (at time of death)
-- Overview: After witnessing the death of his parents at the hands of the Fire Nation, Jet dedicated his life to a guerrilla war against them. As the leader of the Freedom Fighters, he used his charisma and combat prowess to rally other refugees to his cause. However, his all-consuming hatred led him to endanger innocent lives, creating a conflict with Team Avatar. After attempting to start a new life in Ba Sing Se, he was brainwashed by the Dai Li and ultimately sacrificed himself to save the Avatar.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Formed and led the Freedom Fighters, a group of Earth Kingdom refugees.
-  - Attempted to destroy a dam to flood a town occupied by Fire Nation soldiers and civilians.
-  - Was captured and brainwashed by the Dai Li in Ba Sing Se.
-  - Fatally wounded by Long Feng after breaking free of his mind control to help Aang.
+After witnessing the death of his parents at the hands of the Fire Nation, Jet dedicated his life to a guerrilla war against them. As the leader of the Freedom Fighters, he used his charisma and combat prowess to rally other refugees to his cause. However, his all-consuming hatred led him to endanger innocent lives, creating a conflict with Team Avatar. After attempting to start a new life in Ba Sing Se, he was brainwashed by the Dai Li and ultimately sacrificed himself to save the Avatar.
 
-- Role in the Story: A tragic anti-hero whose story serves as a cautionary tale about how the desire for justice can be corrupted by hatred and revenge.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Katara (Former Crush)
-  - Sokka (Rival)
-  - Smellerbee & Longshot (Loyal Lieutenants)
-  - Zuko & Iroh (Enemies)
-  - Long Feng (Captor & Killer)
+- Formed and led the Freedom Fighters, a group of Earth Kingdom refugees.
+- Attempted to destroy a dam to flood a town occupied by Fire Nation soldiers and civilians.
+- Was captured and brainwashed by the Dai Li in Ba Sing Se.
+- Fatally wounded by Long Feng after breaking free of his mind control to help Aang.
 
-- Personality Traits:
-  - Charismatic & Persuasive
-  - Vengeful & Obsessive
-  - Paranoid & Ruthless
-  - Loyal (to his cause)
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "The Fire Nation is a disease, and we're the cure."
-  - "This is how we fight for our freedom."
-  - "I'll be fine."
+A tragic anti-hero whose story serves as a cautionary tale about how the desire for justice can be corrupted by hatred and revenge.
+
+### 🤝 Relationships
+
+- **Katara** – Former crush, betrayed by his extremism.
+- **Sokka** – Rival, strategic and moral counterpoint.
+- **Smellerbee & Longshot** – Loyal lieutenants and friends.
+- **Zuko & Iroh** – Enemies, targets of his suspicion.
+- **Long Feng** – Captor and killer.
+
+### 🌟 Notable Traits
+
+- Charismatic and persuasive leader.
+- Vengeful and obsessive in his quest for justice.
+- Paranoid and ruthless when threatened.
+- Loyal to his cause and followers.
+
+### 💬 Notable Quotes
+
+- "You want to know my problem? I'm the one who's not confused."
+- "The sacrifices are necessary."
+- "I'm a freedom fighter."
 ```
 
 ---

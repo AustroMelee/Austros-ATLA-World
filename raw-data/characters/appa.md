@@ -15,33 +15,37 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Appa
-- Nation: Air Nomads
-- Age: 112 (biologically 12)
-- Overview: Chosen by Aang as a young calf, Appa shares an unbreakable bond with the Avatar, having been frozen alongside him for a century. More than just transportation, Appa is a powerful airbender, a fierce protector, and a beloved member of the found family of Team Avatar. His harrowing journey after being kidnapped and subsequent reunion with Aang highlights his resilience, intelligence, and deep loyalty.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Froze in an iceberg with Aang for 100 years.
-  - Endured a traumatic solo journey across the Earth Kingdom after being kidnapped.
-  - Was instrumental in the defeat of Long Feng and the Dai Li in Ba Sing Se.
-  - Served as the steadfast transport and muscle for Team Avatar throughout the war.
+Chosen by Aang as a young calf, Appa shares an unbreakable bond with the Avatar, having been frozen alongside him for a century. More than just transportation, Appa is a powerful airbender, a fierce protector, and a beloved member of the found family of Team Avatar. His harrowing journey after being kidnapped and subsequent reunion with Aang highlights his resilience, intelligence, and deep loyalty.
 
-- Role in the Story: The Avatar's loyal animal guide, providing transportation, combat support, and serving as a living, breathing connection to Aang's lost culture.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Aang (Best Friend, Rider, Lifelong Companion)
-  - Momo (Friend & Fellow Animal Companion)
-  - Team Avatar (His Found Family)
-  - Zuko (Freed him from captivity)
+- Froze in an iceberg with Aang for 100 years.
+- Endured a traumatic solo journey across the Earth Kingdom after being kidnapped.
+- Was instrumental in the defeat of Long Feng and the Dai Li in Ba Sing Se.
+- Served as the steadfast transport and muscle for Team Avatar throughout the war.
 
-- Personality Traits:
-  - Loyal & Gentle
-  - Brave & Protective
-  - Intelligent
-  - Fearful (of fire and being underground)
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - (Communicates through expressive growls, groans, and sneezes)
+The Avatar's loyal animal guide, providing transportation, combat support, and serving as a living, breathing connection to Aang's lost culture.
+
+### 🤝 Relationships
+
+- **Aang** – Best friend, rider, lifelong companion.
+- **Momo** – Friend and fellow animal companion.
+- **Team Avatar** – His found family.
+- **Zuko** – Freed him from captivity.
+
+### 🌟 Notable Traits
+
+- Loyal and gentle.
+- Brave, protective, and intelligent.
+- Fearful of fire and being underground.
+
+### 💬 Notable Quotes
+
+- (Communicates through expressive growls, groans, and sneezes)
 ```
 
 ---

@@ -15,36 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Azula
-- Nation: Fire Nation
-- Age: 14 (in Avatar: The Last Airbender)
-- Overview: Hailed as a prodigy and favored by her father, Fire Lord Ozai, Princess Azula was molded into the perfect weapon. Driven by a relentless pursuit of power and perfection, she uses fear and manipulation to achieve her goals, including the conquest of Ba Sing Se. However, beneath her confident and cruel exterior lies a deep-seated mental instability, fueled by the perceived rejection from her mother, which ultimately leads to her tragic downfall.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Mastered a uniquely powerful and intense form of blue firebending.
-  - Conquered the Earth Kingdom capital of Ba Sing Se through pure cunning and manipulation.
-  - Mortally wounded Avatar Aang, nearly ending the Avatar Cycle.
-  - Suffered a complete mental breakdown after being betrayed and defeated.
+Hailed as a prodigy and favored by her father, Fire Lord Ozai, Princess Azula was molded into the perfect weapon. Driven by a relentless pursuit of power and perfection, she uses fear and manipulation to achieve her goals, including the conquest of Ba Sing Se. However, beneath her confident and cruel exterior lies a deep-seated mental instability, fueled by the perceived rejection from her mother, which ultimately leads to her tragic downfall.
 
-- Role in the Story: The primary antagonist of the second and third acts, whose perfectionism and psychological cruelty provide a dark mirror to Zuko's struggle for honor.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Ozai (Father, Role Model)
-  - Zuko (Brother, Object of Scorn and Rivalry)
-  - Mai & Ty Lee (Subordinates disguised as Friends)
-  - Ursa (Mother, Source of Insecurity and Hallucinations)
-  - Iroh (Uncle, Viewed as a Traitor)
+- Mastered a uniquely powerful and intense form of blue firebending.
+- Conquered the Earth Kingdom capital of Ba Sing Se through pure cunning and manipulation.
+- Mortally wounded Avatar Aang, nearly ending the Avatar Cycle.
+- Suffered a complete mental breakdown after being betrayed and defeated.
 
-- Personality Traits:
-  - Perfectionist & Sadistic
-  - Confident & Narcissistic
-  - Manipulative & Cunning
-  - Mentally Unstable
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Trust is for fools! Fear is the only reliable way."
-  - "Almost isn't good enough!"
-  - "My own mother thought I was a monster... She was right, of course, but it still hurt."
+The primary antagonist of the second and third acts, whose perfectionism and psychological cruelty provide a dark mirror to Zuko's struggle for honor.
+
+### 🤝 Relationships
+
+- **Ozai** – Father, role model, source of ambition and cruelty.
+- **Zuko** – Brother, object of scorn and rivalry.
+- **Mai & Ty Lee** – Subordinates disguised as friends, ultimately betrayers.
+- **Ursa** – Mother, source of insecurity and hallucinations.
+- **Iroh** – Uncle, viewed as a traitor.
+
+### 🌟 Notable Traits
+
+- Perfectionist and sadistic.
+- Confident, narcissistic, and manipulative.
+- Cunning strategist with legendary firebending skill.
+- Deeply mentally unstable beneath her composed exterior.
+
+### 💬 Notable Quotes
+
+- "Trust is for fools! Fear is the only reliable way."
+- "Almost isn't good enough!"
+- "My own mother thought I was a monster... She was right, of course, but it still hurt."
 ```
 
 ---

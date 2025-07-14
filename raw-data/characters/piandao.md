@@ -15,35 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Piandao
-- Nation: Fire Nation
-- Age: Unknown (Elderly)
-- Overview: Once a celebrated and undefeated general in the Fire Nation army, Piandao grew weary of war and deserted to pursue a life of art and enlightenment. Living in a secluded castle, he is revered as the greatest swordmaster in the nation's history. He believes knowledge of the arts belongs to everyone and takes on the eager but unworthy Sokka as his student, guiding him to discover his own unique strengths.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Deserted the Fire Nation army and single-handedly defeated one hundred soldiers sent to arrest him.
-  - Took Sokka as his student, teaching him swordsmanship and the importance of creativity.
-  - Forged Sokka's unique "space sword" from a fallen meteorite.
-  - As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control.
+Once a celebrated and undefeated general in the Fire Nation army, Piandao grew weary of war and deserted to pursue a life of art and enlightenment. Living in a secluded castle, he is revered as the greatest swordmaster in the nation's history. He believes knowledge of the arts belongs to everyone and takes on the eager but unworthy Sokka as his student, guiding him to discover his own unique strengths.
 
-- Role in the Story: A wise master who provides Sokka with the skills and confidence he needs to become a true warrior, reinforcing the theme that worth is not defined by one's nation or bending ability.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Sokka (Student)
-  - Zuko (Former Student)
-  - Iroh & The Order of the White Lotus (Fellow Members)
-  - Fat (Butler)
+- Deserted the Fire Nation army and single-handedly defeated one hundred soldiers sent to arrest him.
+- Took Sokka as his student, teaching him swordsmanship and the importance of creativity.
+- Forged Sokka's unique "space sword" from a fallen meteorite.
+- As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control.
 
-- Personality Traits:
-  - Wise & Enlightened
-  - Patient & Humble
-  - Artistic & Creative
-  - Unconventional
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "The way of the sword doesn't belong to any one nation. Knowledge of the arts belongs to us all."
-  - "The most important lesson is creativity."
-  - "It's not the sword, it's the swordsman."
+A wise master who provides Sokka with the skills and confidence he needs to become a true warrior, reinforcing the theme that worth is not defined by one's nation or bending ability.
+
+### 🤝 Relationships
+
+- Sokka (Student)
+- Zuko (Former Student)
+- Iroh & The Order of the White Lotus (Fellow Members)
+- Fat (Butler)
+
+### 🧬 Notable Traits
+
+- Wise & Enlightened
+- Patient & Humble
+- Artistic & Creative
+- Unconventional
+
+### 🗣️ Notable Quotes
+
+- "The way of the sword doesn't belong to any one nation. Knowledge of the arts belongs to us all."
+- "The most important lesson is creativity."
+- "It's not the sword, it's the swordsman."
 ```
 
 ---

@@ -15,34 +15,38 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Azulon
-- Nation: Fire Nation
-- Age: 95 (at time of death)
-- Overview: As the son of Fire Lord Sozin, Azulon inherited the Hundred Year War and prosecuted it with brutal efficiency for 75 years. A famed general and prodigy, he nearly annihilated the Southern Water Tribe and secured many victories against the Earth Kingdom. His reign was defined by military conquest and a cold, demanding demeanor, favoring his firstborn son Iroh and showing little affection for Ozai, which ultimately led to his own assassination at the hands of his ambitious second son.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Ruled as Fire Lord for 75 years, overseeing most of the Hundred Year War.
-  - Ordered the raids that nearly wiped out the Southern Water Tribe.
-  - Commanded his son Ozai to kill Zuko as punishment for disrespect.
-  - Was poisoned by Ozai in a conspiracy with Ursa to seize the throne.
+As the son of Fire Lord Sozin, Azulon inherited the Hundred Year War and prosecuted it with brutal efficiency for 75 years. A famed general and prodigy, he nearly annihilated the Southern Water Tribe and secured many victories against the Earth Kingdom. His reign was defined by military conquest and a cold, demanding demeanor, favoring his firstborn son Iroh and showing little affection for Ozai, which ultimately led to his own assassination at the hands of his ambitious second son.
 
-- Role in the Story: A posthumous antagonist whose actions shaped the world of the series and whose death set the final, most brutal stage of the war in motion.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Iroh (Firstborn Son, Favored Heir)
-  - Ozai (Second Son, Usurper, Killer)
-  - Ursa (Daughter-in-Law)
-  - Zuko & Azula (Grandchildren)
-  - Sozin (Father, Predecessor)
+- Ruled as Fire Lord for 75 years, overseeing most of the Hundred Year War.
+- Ordered the raids that nearly wiped out the Southern Water Tribe.
+- Commanded his son Ozai to kill Zuko as punishment for disrespect.
+- Was poisoned by Ozai in a conspiracy with Ursa to seize the throne.
 
-- Personality Traits:
-  - Ruthless & Cruel
-  - Demanding & Perfectionistic
-  - Traditionalist
-  - Uncaring (except for Iroh)
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "You dare suggest I betray Iroh? My first born? ... Your punishment has scarcely begun!"
+A posthumous antagonist whose actions shaped the world of the series and whose death set the final, most brutal stage of the war in motion.
+
+### 🤝 Relationships
+
+- **Iroh** – Firstborn son, favored heir.
+- **Ozai** – Second son, usurper, killer.
+- **Ursa** – Daughter-in-law.
+- **Zuko & Azula** – Grandchildren.
+- **Sozin** – Father, predecessor.
+
+### 🌟 Notable Traits
+
+- Ruthless and cruel.
+- Demanding, perfectionistic, and traditionalist.
+- Uncaring except for Iroh.
+
+### 💬 Notable Quotes
+
+- "You dare suggest I betray Iroh? My first born? ... Your punishment has scarcely begun!"
 ```
 
 ---

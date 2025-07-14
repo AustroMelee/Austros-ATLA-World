@@ -15,36 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Kuruk
-- Nation: Northern Water Tribe
-- Age: 33 (at time of death)
-- Overview: A powerful and charismatic Avatar, Kuruk's era was publicly one of peace, allowing him to pursue a life of pleasure and challenges. Secretly, he was engaged in a brutal, lonely war against a plague of dark spirits, a conflict that corrupted his own spirit and drained his life force. This tragic battle culminated in the loss of his fiancée, Ummi, to Koh the Face Stealer, leaving a legacy of regret and a world unprepared for the strife that followed his early death.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Secretly hunted and destroyed dark spirits to protect the world from a spiritual plague.
-  - Lost his fiancée, Ummi, to Koh the Face Stealer as a punishment for his arrogance.
-  - His neglect of mortal affairs led to a chaotic era for his successor, Kyoshi.
-  - Died at the young age of 33 due to the spiritual toll of his battles.
+A powerful and charismatic Avatar, Kuruk's era was publicly one of peace, allowing him to pursue a life of pleasure and challenges. Secretly, he was engaged in a brutal, lonely war against a plague of dark spirits, a conflict that corrupted his own spirit and drained his life force. This tragic battle culminated in the loss of his fiancée, Ummi, to Koh the Face Stealer, leaving a legacy of regret and a world unprepared for the strife that followed his early death.
 
-- Role in the Story: A tragic past Avatar whose life serves as a cautionary tale about the spiritual duties of the Avatar and the consequences of neglecting the physical world.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Ummi (Fiancée, Lost Love)
-  - Jianzhu, Kelsang, & Hei-Ran (Companions)
-  - Koh the Face Stealer (Arch-Nemesis)
-  - Kyoshi (Successor)
-  - Yangchen (Predecessor)
+- Secretly hunted and destroyed dark spirits to protect the world from a spiritual plague.
+- Lost his fiancée, Ummi, to Koh the Face Stealer as a punishment for his arrogance.
+- His neglect of mortal affairs led to a chaotic era for his successor, Kyoshi.
+- Died at the young age of 33 due to the spiritual toll of his battles.
 
-- Personality Traits:
-  - Easy-going & "Go with the flow" (Publicly)
-  - Hedonistic & Arrogant (as a coping mechanism)
-  - Tragic & Regretful (Privately)
-  - Brave & Self-sacrificing
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "I had to do it. The world would have been destroyed."
-  - "Actively shape your own destiny, and the destiny of the world."
-  - "My wife's face... it was stolen by Koh, the Face Stealer."
+A tragic past Avatar whose life serves as a cautionary tale about the spiritual duties of the Avatar and the consequences of neglecting the physical world.
+
+### 🤝 Relationships
+
+- Ummi (Fiancée, Lost Love)
+- Jianzhu, Kelsang, & Hei-Ran (Companions)
+- Koh the Face Stealer (Arch-Nemesis)
+- Kyoshi (Successor)
+- Yangchen (Predecessor)
+
+### 🧬 Notable Traits
+
+- Easy-going & "Go with the flow" (Publicly)
+- Hedonistic & Arrogant (as a coping mechanism)
+- Tragic & Regretful (Privately)
+- Brave & Self-sacrificing
+
+### 🗣️ Notable Quotes
+
+- "I had to do it. The world would have been destroyed."
+- "Actively shape your own destiny, and the destiny of the world."
+- "My wife's face... it was stolen by Koh, the Face Stealer."
 ```
 
 ---

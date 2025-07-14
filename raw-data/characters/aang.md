@@ -1,6 +1,3 @@
-Yes. Here is the fully populated v3.0 schema for Aang, built with absurd elegance and frightening granularity.
-
----
 
 # 🧠 ULTIMATE CHARACTER METADATA SCHEMA (v3.0) - AANG
 
@@ -19,37 +16,35 @@ Yes. Here is the fully populated v3.0 schema for Aang, built with absurd eleganc
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Aang
-- Nation: Air Nomads
-- Age: 112 (biologically 12)
-- Overview: Frozen in an iceberg for a century, Aang awoke to a world ravaged by a war he was meant to prevent. Burdened by survivor's guilt and the immense responsibility of the Avatar, he embarks on a journey with his friends to master the elements, restore balance, and rebuild his lost culture, all while trying to hold on to his pacifist ideals and childhood innocence.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Discovered in an iceberg by Katara and Sokka.
-  - Merged with the Ocean Spirit to defend the Northern Water Tribe.
-  - Mastered energybending to defeat Fire Lord Ozai without killing him.
-  - Co-founded the United Republic of Nations with Fire Lord Zuko.
+Frozen in an iceberg for a century, Aang awoke to a world ravaged by a war he was meant to prevent. Burdened by survivor's guilt and the immense responsibility of the Avatar, he embarks on a journey with his friends to master the elements, restore balance, and rebuild his lost culture, all while trying to hold on to his pacifist ideals and childhood innocence.
 
-- Role in the Story: The protagonist and catalyst for the world's salvation, whose journey explores the conflict between duty and personal desire.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Katara (Wife, Closest Ally)
-  - Sokka (Close Ally, Brother Figure)
-  - Zuko (Rival turned Mentor & Friend)
-  - Toph Beifong (Earthbending Master, Friend)
-  - Appa & Momo (Animal Companions)
-  - Monk Gyatso (Mentor, Father Figure)
+- Discovered in an iceberg by Katara and Sokka.
+- Merged with the Ocean Spirit to defend the Northern Water Tribe.
+- Mastered energybending to defeat Fire Lord Ozai without killing him.
+- Co-founded the United Republic of Nations with Fire Lord Zuko.
 
-- Personality Traits:
-  - Playful & Goofy
-  - Deeply Spiritual
-  - Reluctant & Burdened
-  - Compassionate & Pacifistic
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "I will never, ever turn my back on people who need me!"
-  - "When we hit our lowest point, we are open to the greatest change."
-  - "Yip yip!"
+The protagonist and catalyst for the world's salvation, whose journey explores the conflict between duty and personal desire.
+
+### 🤝 Relationships
+
+- **Katara** – Wife, closest ally, emotional anchor.
+- **Sokka** – Brother figure, travel companion, comic foil.
+- **Zuko** – Former enemy turned ally and spiritual mirror.
+- **Toph Beifong** – Earthbending master, loyal friend.
+- **Appa & Momo** – Animal companions and sources of comfort.
+- **Monk Gyatso** – Mentor and father figure.
+
+### 🌟 Notable Traits
+
+- Airbending prodigy and pacifist monk.
+- Struggles with responsibility and legacy.
+- Deep connection to animal companions and the spiritual world.
 ```
 
 ---

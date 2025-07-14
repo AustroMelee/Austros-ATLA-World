@@ -15,37 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Toph Beifong
-- Nation: Earth Kingdom
-- Age: 12 (in Avatar: The Last Airbender)
-- Overview: Born blind and treated as a fragile doll by her overprotective parents, Toph secretly honed her earthbending skills with the original masters, the badgermoles. She developed a unique style using seismic sense to "see" the world, becoming an undefeated champion in underground fighting rings. After joining Team Avatar, her tough, independent, and brutally honest personality provides a necessary counterpoint, and her invention of metalbending single-handedly revolutionizes the art form and the future of the world.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Learned earthbending directly from badgermoles.
-  - Single-handedly invented the art of metalbending to escape a metal cage.
-  - Became Republic City's first Chief of Police and founded the Metalbending Police Force.
-  - Reached enlightenment in the Foggy Swamp, connecting with the entire world.
+Born blind and treated as a fragile doll by her overprotective parents, Toph secretly honed her earthbending skills with the original masters, the badgermoles. She developed a unique style using seismic sense to "see" the world, becoming an undefeated champion in underground fighting rings. After joining Team Avatar, her tough, independent, and brutally honest personality provides a necessary counterpoint, and her invention of metalbending single-handedly revolutionizes the art form and the future of the world.
 
-- Role in the Story: The master earthbender who challenges Aang's methods and revolutionizes her element, proving strength comes from unexpected places.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Aang (Student, Friend, "Twinkle Toes")
-  - Katara (Friend, Rival, "Sugar Queen")
-  - Sokka (Friend, Crush)
-  - Lao & Poppy Beifong (Estranged Parents)
-  - Lin & Suyin Beifong (Daughters)
-  - Badgermoles (First Teachers)
+- Learned earthbending directly from badgermoles.
+- Single-handedly invented the art of metalbending to escape a metal cage.
+- Became Republic City's first Chief of Police and founded the Metalbending Police Force.
+- Reached enlightenment in the Foggy Swamp, connecting with the entire world.
 
-- Personality Traits:
-  - Tough & Independent
-  - Sarcastic & Direct
-  - Uncouth & Rebellious
-  - Loyal & Protective (in her own way)
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "I am the greatest earthbender in the world! Don't you two dunderheads ever forget it!"
-  - "There's no different angle, no clever solution, no trickity-trick that's gonna move that rock. You've gotta face it head on."
-  - "I am not Toph! I am Melon Lord! Mwahahaha!"
+The master earthbender who challenges Aang's methods and revolutionizes her element, proving strength comes from unexpected places.
+
+### 🤝 Relationships
+
+- **Aang** – Student, friend, "Twinkle Toes".
+- **Katara** – Friend, rival, "Sugar Queen".
+- **Sokka** – Friend, crush.
+- **Lao & Poppy Beifong** – Estranged parents.
+- **Lin & Suyin Beifong** – Daughters.
+- **Badgermoles** – First teachers.
+
+### 🌟 Notable Traits
+
+- Tough, independent, and sarcastic.
+- Direct, uncouth, and rebellious.
+- Loyal and protective in her own way.
+
+### 💬 Notable Quotes
+
+- "I am the greatest earthbender in the world! Don't you two dunderheads ever forget it!"
+- "There's no different angle, no clever solution, no trickity-trick that's gonna move that rock. You've gotta face it head on."
+- "I am not Toph! I am Melon Lord! Mwahahaha!"
 ```
 
 ---

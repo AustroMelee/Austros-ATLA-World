@@ -15,36 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Ty Lee
-- Nation: Fire Nation
-- Age: 14 (in Avatar: The Last Airbender)
-- Overview: One of seven identical sisters, Ty Lee ran away to join the circus to feel unique and gain individual recognition. Her acrobatic prowess and mastery of chi-blocking made her a prime recruit for Princess Azula's elite team. Though initially loyal out of fear, her empathetic nature and friendship with Mai ultimately lead her to defy Azula, choosing friendship over servitude.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Intimidated by Azula into leaving her circus life to join her quest.
-  - Single-handedly defeated the Terra Team of elite earthbenders with her chi-blocking.
-  - Betrayed Princess Azula at the Boiling Rock to save Mai.
-  - After being imprisoned, she befriended and joined the Kyoshi Warriors.
+One of seven identical sisters, Ty Lee ran away to join the circus to feel unique and gain individual recognition. Her acrobatic prowess and mastery of chi-blocking made her a prime recruit for Princess Azula's elite team. Though initially loyal out of fear, her empathetic nature and friendship with Mai ultimately lead her to defy Azula, choosing friendship over servitude.
 
-- Role in the Story: A secondary antagonist whose bubbly personality conceals a deadly fighting style and whose arc demonstrates the courage to defy a toxic friendship.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Azula (Commander, former)
-  - Mai (Best Friend)
-  - Suki & The Kyoshi Warriors (Teammates)
-  - Sokka (Crush)
-  - Ty Sisters (Family)
+- Intimidated by Azula into leaving her circus life to join her quest.
+- Single-handedly defeated the Terra Team of elite earthbenders with her chi-blocking.
+- Betrayed Princess Azula at the Boiling Rock to save Mai.
+- After being imprisoned, she befriended and joined the Kyoshi Warriors.
 
-- Personality Traits:
-  - Cheerful & Bubbly
-  - Energetic & Flirtatious
-  - Empathetic & Loyal
-  - Attention-seeking
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "My aura has never been pinker!"
-  - "Ooh, he's cute."
-  - "Circus freak is a compliment!"
+A secondary antagonist whose bubbly personality conceals a deadly fighting style and whose arc demonstrates the courage to defy a toxic friendship.
+
+### 🤝 Relationships
+
+- Azula (Commander, former)
+- Mai (Best Friend)
+- Suki & The Kyoshi Warriors (Teammates)
+- Sokka (Crush)
+- Ty Sisters (Family)
+
+### 🧬 Notable Traits
+
+- Cheerful & Bubbly
+- Energetic & Flirtatious
+- Empathetic & Loyal
+- Attention-seeking
+
+### 🗣️ Notable Quotes
+
+- "My aura has never been pinker!"
+- "Ooh, he's cute."
+- "Circus freak is a compliment!"
 ```
 
 ---

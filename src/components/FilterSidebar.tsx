@@ -1,5 +1,4 @@
 import React from 'react';
-import FilterTag from './FilterTag';
 
 export interface FilterConfigItem {
   key: string;
@@ -18,32 +17,20 @@ export interface FilterSidebarProps {
   filterConfig: FilterGroup[];
 }
 
-const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, activeFilters, onToggle, filterConfig }) => {
+const FilterSidebar: React.FC<FilterSidebarProps> = ({ filterConfig }) => {
   return (
-    <aside 
-      className="w-64 min-w-[16rem] bg-surface rounded-xl p-4 flex-col gap-4 hidden lg:flex border border-subtle/20" 
-      aria-label="Character Filters"
-    >
-      <h2 className="text-white text-lg font-bold">Filter Characters</h2>
-      {filterConfig.map((group) => (
-        <div key={group.label} className="py-2">
-          {group.filters.map(({ key, label }) => (
-            <div key={key} className="mb-4">
-              <h3 className="text-slate-400 text-sm font-semibold mb-2">{label}</h3>
-              <div className="flex flex-wrap gap-2">
-                {(filters[key] && filters[key].length > 0) ? (
-                  filters[key].map(option => (
-                    <FilterTag
-                      key={option}
-                      label={option.charAt(0).toUpperCase() + option.slice(1)}
-                      onClick={() => onToggle(key, option)}
-                      active={activeFilters[key]?.some(v => v.toLowerCase() === option.toLowerCase())}
-                    />
-                  ))
-                ) : (
-                  <span className="text-subtle/50 text-xs italic">No options</span>
-                )}
-              </div>
+    <aside className="w-full">
+      {filterConfig.map((group, groupIdx) => (
+        <div
+          key={group.label}
+          className={`backdrop-blur-md bg-slate-900/60 rounded-xl p-4${groupIdx !== 0 ? ' mt-8' : ''} mb-6`}
+        >
+          <h3 className="text-lg font-semibold uppercase tracking-widest mb-2 mt-6">{group.label}</h3>
+          {group.filters.map(({ key, label }, filterIdx) => (
+            <div key={key} className={`mb-6${filterIdx !== 0 ? ' mt-4' : ''}`}> {/* More margin between sections */}
+              <h4 className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-2">{label}</h4>
+              {/* Filter controls are fully functional but have been hidden from the UI per user request. */}
+              {/* Filter buttons removed as requested */}
             </div>
           ))}
         </div>

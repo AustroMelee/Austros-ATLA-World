@@ -15,35 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Kuei
-- Nation: Earth Kingdom
-- Age: Unknown (Young Adult)
-- Overview: Ascending to the throne as a child, Kuei spent most of his life as a figurehead, oblivious to the Hundred Year War raging outside his palace walls. His world is shattered when Team Avatar reveals the conspiracy orchestrated by his advisor, Long Feng. After a brief, humbling exile, Kuei strives to become a strong and decisive leader for his people, though his newfound assertiveness nearly plunges the world back into war.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Lived in blissful ignorance of the war due to Long Feng's manipulation.
-  - His pet bear, Bosco, was his closest and only true companion.
-  - Was overthrown in a coup by Azula and the Dai Li.
-  - After his restoration, almost restarted the war with the Fire Nation over the colonies.
+Ascending to the throne as a child, Kuei spent most of his life as a figurehead, oblivious to the Hundred Year War raging outside his palace walls. His world is shattered when Team Avatar reveals the conspiracy orchestrated by his advisor, Long Feng. After a brief, humbling exile, Kuei strives to become a strong and decisive leader for his people, though his newfound assertiveness nearly plunges the world back into war.
 
-- Role in the Story: A symbol of political naivety and the dangers of isolation, whose personal growth reflects the Earth Kingdom's struggle to find its place in a changing world.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Bosco (Pet Bear, Best Friend)
-  - Long Feng (Manipulator, former Advisor)
-  - Aang & Team Avatar (Allies, Awakeners)
-  - Hou-Ting (Daughter, Successor)
+- Lived in blissful ignorance of the war due to Long Feng's manipulation.
+- His pet bear, Bosco, was his closest and only true companion.
+- Was overthrown in a coup by Azula and the Dai Li.
+- After his restoration, almost restarted the war with the Fire Nation over the colonies.
 
-- Personality Traits:
-  - Naive & Sheltered (initially)
-  - Determined & Assertive (later)
-  - Well-meaning
-  - Animal-lover
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "The Earth Kingdom... has fallen."
-  - "All my life, I've been weak! It's time for me to be a man!"
-  - "Just take the bear."
+A symbol of political naivety and the dangers of isolation, whose personal growth reflects the Earth Kingdom's struggle to find its place in a changing world.
+
+### 🤝 Relationships
+
+- Bosco (Pet Bear, Best Friend)
+- Long Feng (Manipulator, former Advisor)
+- Aang & Team Avatar (Allies, Awakeners)
+- Hou-Ting (Daughter, Successor)
+
+### 🧬 Notable Traits
+
+- Naive & Sheltered (initially)
+- Determined & Assertive (later)
+- Well-meaning
+- Animal-lover
+
+### 🗣️ Notable Quotes
+
+- "The Earth Kingdom... has fallen."
+- "All my life, I've been weak! It's time for me to be a man!"
+- "Just take the bear."
 ```
 
 ---

@@ -15,35 +15,39 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: King Bumi
-- Nation: Earth Kingdom
-- Age: 112
-- Overview: Aang's childhood friend and the King of Omashu, Bumi appears to be a senile and eccentric old man. This facade conceals one of the most powerful earthbenders in the world and a brilliant, patient tactician. He tests Aang with a series of bizarre challenges to teach him the importance of creative thinking and neutral jing, ultimately proving to be a formidable ally in the war against the Fire Nation.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Subjected Aang to three "deadly" challenges to test his growth as the Avatar.
-  - Allowed himself to be captured, waiting for the opportune moment to liberate Omashu.
-  - Single-handedly retook his entire city from the Fire Nation during the Day of Black Sun.
-  - As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control.
+Aang's childhood friend and the King of Omashu, Bumi appears to be a senile and eccentric old man. This facade conceals one of the most powerful earthbenders in the world and a brilliant, patient tactician. He tests Aang with a series of bizarre challenges to teach him the importance of creative thinking and neutral jing, ultimately proving to be a formidable ally in the war against the Fire Nation.
 
-- Role in the Story: A powerful master and member of the old guard who pushes Aang to think outside the box and embrace the "mad genius" within.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Aang (Childhood Best Friend, Mentee)
-  - Flopsie (Pet Goat Gorilla)
-  - Order of the White Lotus (Fellow Member)
-  - Toph Beifong (Earthbending Rival)
+- Subjected Aang to three "deadly" challenges to test his growth as the Avatar.
+- Allowed himself to be captured, waiting for the opportune moment to liberate Omashu.
+- Single-handedly retook his entire city from the Fire Nation during the Day of Black Sun.
+- As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control.
 
-- Personality Traits:
-  - Eccentric & Wild
-  - Cunning & Patient
-  - Powerful & Confident
-  - Playful & Humorous
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "You've got to keep an open mind."
-  - "I hope you will think like a mad genius!"
-  - "Lettuce leaf?"
+A powerful master and member of the old guard who pushes Aang to think outside the box and embrace the "mad genius" within.
+
+### 🤝 Relationships
+
+- **Aang** – Childhood best friend, mentee.
+- **Flopsie** – Pet goat gorilla.
+- **Order of the White Lotus** – Fellow member.
+- **Toph Beifong** – Earthbending rival.
+
+### 🌟 Notable Traits
+
+- Eccentric and wild.
+- Cunning, patient, and powerful.
+- Confident, playful, and humorous.
+
+### 💬 Notable Quotes
+
+- "You've got to keep an open mind."
+- "I hope you will think like a mad genius!"
+- "Lettuce leaf?"
 ```
 
 ---

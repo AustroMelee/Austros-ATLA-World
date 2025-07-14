@@ -31,3 +31,12 @@ body {
     transform: translateY(-2px);
   }
 }
+
+@layer utilities {
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .isolation-isolate {
+    isolation: isolate;
+  }
+}

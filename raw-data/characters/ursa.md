@@ -15,37 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Ursa
-- Nation: Fire Nation
-- Age: Late 30s / Early 40s
-- Overview: Born in the small town of Hira'a, Ursa's life was forcibly changed when she was made to marry Prince Ozai. A loving mother caught in a web of royal intrigue, she made a terrible bargain to save her son Zuko's life, resulting in her banishment and the murder of Fire Lord Azulon. To escape her painful past, she had her memories and face changed by a spirit, living a new life as "Noriko" until her children finally found her.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Granddaughter of Avatar Roku, fulfilling a prophecy by marrying into the royal family.
-  - Conspired with Ozai to poison Fire Lord Azulon in order to save Zuko's life.
-  - Was banished and had her memory and face changed by the Mother of Faces.
-  - Reunited with Zuko years later and had her memories and identity restored.
+Born in the small town of Hira'a, Ursa's life was forcibly changed when she was made to marry Prince Ozai. A loving mother caught in a web of royal intrigue, she made a terrible bargain to save her son Zuko's life, resulting in her banishment and the murder of Fire Lord Azulon. To escape her painful past, she had her memories and face changed by a spirit, living a new life as "Noriko" until her children finally found her.
 
-- Role in the Story: A mysterious and tragic figure whose absence haunts her children, acting as a symbol of lost love and the catalyst for Zuko's quest for truth.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Zuko (Son)
-  - Azula (Daughter)
-  - Ozai (Husband, former)
-  - Noren / Ikem (Husband, First Love)
-  - Kiyi (Daughter)
-  - Roku (Grandfather)
+- Granddaughter of Avatar Roku, fulfilling a prophecy by marrying into the royal family.
+- Conspired with Ozai to poison Fire Lord Azulon in order to save Zuko's life.
+- Was banished and had her memory and face changed by the Mother of Faces.
+- Reunited with Zuko years later and had her memories and identity restored.
 
-- Personality Traits:
-  - Kind & Loving
-  - Protective & Brave
-  - Cunning & Pragmatic
-  - Haunted by her past
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Everything I've done, I've done to protect you."
-  - "Remember this, Zuko. No matter how things may seem to change, never forget who you are."
-  - "My only fault was not loving you enough." (to Azula)
+A mysterious and tragic figure whose absence haunts her children, acting as a symbol of lost love and the catalyst for Zuko's quest for truth.
+
+### 🤝 Relationships
+
+- **Zuko** – Son.
+- **Azula** – Daughter.
+- **Ozai** – Husband, former.
+- **Noren / Ikem** – Husband, first love.
+- **Kiyi** – Daughter.
+- **Roku** – Grandfather.
+
+### 🌟 Notable Traits
+
+- Kind and loving.
+- Protective, brave, and cunning.
+- Pragmatic and haunted by her past.
+
+### 💬 Notable Quotes
+
+- "Everything I've done, I've done to protect you."
+- "Remember this, Zuko. No matter how things may seem to change, never forget who you are."
+- "My only fault was not loving you enough." (to Azula)
 ```
 
 ---

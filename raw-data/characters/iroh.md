@@ -15,36 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Iroh
-- Nation: Fire Nation
-- Age: 50s (in Avatar: The Last Airbender)
-- Overview: The former Crown Prince of the Fire Nation, General Iroh abandoned his quest for power after the tragic death of his son, Lu Ten. Choosing a life of peace, wisdom, and tea, he accompanies his banished nephew Zuko, acting as his moral compass and father figure. Iroh's deep understanding of balance, spirituality, and all four elements makes him a powerful ally and a sage voice of reason in a world consumed by war.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Abandoned the 600-day siege of Ba Sing Se after the death of his son.
-  - Invented the technique of lightning redirection by studying waterbenders.
-  - As a Grand Lotus, he led the Order of the White Lotus to liberate Ba Sing Se.
-  - After the war, he ascended to the Spirit World, leaving his mortal body behind.
+The former Crown Prince of the Fire Nation, General Iroh abandoned his quest for power after the tragic death of his son, Lu Ten. Choosing a life of peace, wisdom, and tea, he accompanies his banished nephew Zuko, acting as his moral compass and father figure. Iroh's deep understanding of balance, spirituality, and all four elements makes him a powerful ally and a sage voice of reason in a world consumed by war.
 
-- Role in the Story: The primary mentor figure whose wisdom, kindness, and guidance are crucial for Zuko's redemption and the restoration of balance.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Zuko (Nephew, Surrogate Son)
-  - Ozai (Younger Brother, Rival)
-  - Lu Ten (Son, Deceased)
-  - Aang & Team Avatar (Allies & Mentees)
-  - Order of the White Lotus (Grand Lotus)
+- Abandoned the 600-day siege of Ba Sing Se after the death of his son.
+- Invented the technique of lightning redirection by studying waterbenders.
+- As a Grand Lotus, led the Order of the White Lotus to liberate Ba Sing Se.
+- After the war, ascended to the Spirit World, leaving his mortal body behind.
 
-- Personality Traits:
-  - Wise & Patient
-  - Kind & Compassionate
-  - Easy-going & Humorous
-  - Deeply Spiritual
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Pride is not the opposite of shame, but its source. True humility is the only antidote to shame."
-  - "Sometimes life is like this dark tunnel. You can't always see the light at the end of the tunnel, but if you just keep moving, you will come to a better place."
-  - "Sharing tea with a fascinating stranger is one of life's true delights."
+The primary mentor figure whose wisdom, kindness, and guidance are crucial for Zuko's redemption and the restoration of balance.
+
+### 🤝 Relationships
+
+- **Zuko** – Nephew, surrogate son.
+- **Ozai** – Younger brother, rival.
+- **Lu Ten** – Son, deceased.
+- **Aang & Team Avatar** – Allies and mentees.
+- **Order of the White Lotus** – Grand Lotus.
+
+### 🌟 Notable Traits
+
+- Wise and patient.
+- Kind, compassionate, and deeply spiritual.
+- Easy-going, humorous, and humble.
+
+### 💬 Notable Quotes
+
+- "Pride is not the opposite of shame, but its source. True humility is the only antidote to shame."
+- "Sometimes life is like this dark tunnel. You can't always see the light at the end of the tunnel, but if you just keep moving, you will come to a better place."
+- "Sharing tea with a fascinating stranger is one of life's true delights."
 ```
 
 ---

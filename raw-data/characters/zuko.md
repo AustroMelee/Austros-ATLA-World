@@ -15,37 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Zuko
-- Nation: Fire Nation
-- Age: 16 (in Avatar: The Last Airbender)
-- Overview: Banished by his cruel father and marked by a brutal scar, Prince Zuko's singular goal is to capture the Avatar to restore his lost honor. Aided by his wise uncle Iroh, Zuko's relentless pursuit forces him to confront the tyranny of his nation and the turmoil within himself. Ultimately, he rejects his father's legacy, choosing instead to join his former enemies and help the Avatar bring peace and balance to the world.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Banished and scarred by his own father, Fire Lord Ozai.
-  - Hunted the Avatar across the world, often under the guise of the "Blue Spirit".
-  - Made the difficult choice to defy his father and join Team Avatar.
-  - Defeated his sister, Azula, in a final Agni Kai to claim the title of Fire Lord.
+Banished by his cruel father and marked by a brutal scar, Prince Zuko's singular goal is to capture the Avatar to restore his lost honor. Aided by his wise uncle Iroh, Zuko's relentless pursuit forces him to confront the tyranny of his nation and the turmoil within himself. Ultimately, he rejects his father's legacy, choosing instead to join his former enemies and help the Avatar bring peace and balance to the world.
 
-- Role in the Story: The primary antagonist turned deuteragonist whose redemption arc is central to the series' themes of honor, destiny, and change.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Iroh (Uncle, Mentor, Father Figure)
-  - Aang (Enemy turned Student & Friend)
-  - Azula (Sister, Primary Rival)
-  - Ozai (Father, Abuser, Enemy)
-  - Katara (Enemy turned trusted Ally)
-  - Mai (Girlfriend)
+- Banished and scarred by his own father, Fire Lord Ozai.
+- Hunted the Avatar across the world, often under the guise of the "Blue Spirit".
+- Made the difficult choice to defy his father and join Team Avatar.
+- Defeated his sister, Azula, in a final Agni Kai to claim the title of Fire Lord.
 
-- Personality Traits:
-  - Intense & Brooding
-  - Impatient & Hot-headed
-  - Honorable & Determined
-  - Conflicted & Compassionate
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Hello, Zuko here."
-  - "I've struggled for so long to do what's right; to even know what's right."
-  - "That's rough, buddy."
+The primary antagonist turned deuteragonist whose redemption arc is central to the series' themes of honor, destiny, and change.
+
+### 🤝 Relationships
+
+- **Iroh** – Uncle, mentor, father figure.
+- **Aang** – Enemy turned student and friend.
+- **Azula** – Sister, primary rival.
+- **Ozai** – Father, abuser, enemy.
+- **Katara** – Enemy turned trusted ally.
+- **Mai** – Girlfriend.
+
+### 🌟 Notable Traits
+
+- Intense, brooding, and impatient.
+- Hot-headed, honorable, and determined.
+- Conflicted and compassionate.
+
+### 💬 Notable Quotes
+
+- "Hello, Zuko here."
+- "I've struggled for so long to do what's right; to even know what's right."
+- "That's rough, buddy."
 ```
 
 ---

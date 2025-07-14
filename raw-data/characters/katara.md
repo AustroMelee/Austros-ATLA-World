@@ -15,37 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Katara
-- Nation: Southern Water Tribe
-- Age: 14 (in Avatar: The Last Airbender)
-- Overview: Shaped by the tragic loss of her mother, Katara became the nurturing heart of her family and tribe. Upon freeing Aang from the iceberg, she embarks on a global journey, transforming from an untrained bender into one of the most powerful waterbending masters and healers in the world, all while serving as the moral compass for Team Avatar.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Discovered and freed Avatar Aang from a century of slumber.
-  - Mastered the dark art of bloodbending to defeat Hama.
-  - Confronted her mother's killer, ultimately choosing forgiveness over revenge.
-  - Intelligently defeated a comet-enhanced Princess Azula in single combat.
+Shaped by the tragic loss of her mother, Katara became the nurturing heart of her family and tribe. Upon freeing Aang from the iceberg, she embarks on a global journey, transforming from an untrained bender into one of the most powerful waterbending masters and healers in the world, all while serving as the moral compass for Team Avatar.
 
-- Role in the Story: The heart and moral compass of Team Avatar, whose compassion and fierce determination anchor the group and drive her to become one of the world's most powerful masters.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Aang (Husband, Student, Closest Ally)
-  - Sokka (Brother, Confidant)
-  - Toph Beifong (Friend, Rival)
-  - Zuko (Enemy turned trusted Ally)
-  - Hakoda (Father)
-  - Hama (Dark Mentor)
+- Discovered and freed Avatar Aang from a century of slumber.
+- Mastered the dark art of bloodbending to defeat Hama.
+- Confronted her mother's killer, ultimately choosing forgiveness over revenge.
+- Intelligently defeated a comet-enhanced Princess Azula in single combat.
 
-- Personality Traits:
-  - Compassionate & Motherly
-  - Determined & Fierce
-  - Hopeful & Idealistic
-  - Stubborn & Prone to anger
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "I will never, ever turn my back on people who need me!"
-  - "But I believe Aang can save the world."
-  - "You can't knock me down!"
+The heart and moral compass of Team Avatar, whose compassion and fierce determination anchor the group and drive her to become one of the world's most powerful masters.
+
+### 🤝 Relationships
+
+- **Aang** – Husband, student, closest ally.
+- **Sokka** – Brother, confidant.
+- **Toph Beifong** – Friend, rival.
+- **Zuko** – Enemy turned trusted ally.
+- **Hakoda** – Father.
+- **Hama** – Dark mentor.
+
+### 🌟 Notable Traits
+
+- Compassionate and motherly.
+- Determined, fierce, and hopeful.
+- Idealistic, stubborn, and prone to anger.
+
+### 💬 Notable Quotes
+
+- "I will never, ever turn my back on people who need me!"
+- "But I believe Aang can save the world."
+- "You can't knock me down!"
 ```
 
 ---

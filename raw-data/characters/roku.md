@@ -15,36 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Roku
-- Nation: Fire Nation
-- Age: 70 (at time of death)
-- Overview: A kind and powerful Avatar, Roku's life was defined by his close friendship with Prince Sozin, which tragically soured as Sozin's imperial ambitions grew. Roku's struggle to balance his personal loyalty with his global duty resulted in a moment of hesitation that allowed Sozin to begin his conquest. He died protecting his home from a volcanic eruption, leaving a legacy of regret and a world on the brink of a century-long war for his successor, Aang, to resolve.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Grew up as the best friend of Prince Sozin, who would later become Fire Lord.
-  - Confronted and defeated Sozin, sparing his life out of friendship.
-  - Died fighting a volcanic eruption after being betrayed by Sozin.
-  - Served as Aang's primary spiritual guide from beyond the grave.
+A kind and powerful Avatar, Roku's life was defined by his close friendship with Prince Sozin, which tragically soured as Sozin's imperial ambitions grew. Roku's struggle to balance his personal loyalty with his global duty resulted in a moment of hesitation that allowed Sozin to begin his conquest. He died protecting his home from a volcanic eruption, leaving a legacy of regret and a world on the brink of a century-long war for his successor, Aang, to resolve.
 
-- Role in the Story: A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson for Aang on the importance of decisiveness.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Sozin (Best Friend turned Arch-Nemesis)
-  - Aang (Successor, Mentee)
-  - Gyatso (Close Friend, Aang's Guardian)
-  - Ta Min (Wife)
-  - Zuko (Great-Grandson)
+- Grew up as the best friend of Prince Sozin, who would later become Fire Lord.
+- Confronted and defeated Sozin, sparing his life out of friendship.
+- Died fighting a volcanic eruption after being betrayed by Sozin.
+- Served as Aang's primary spiritual guide from beyond the grave.
 
-- Personality Traits:
-  - Wise & Merciful
-  - Disciplined & Kind
-  - Indecisive (at critical moments)
-  - Regretful
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started."
-  - "Being the Avatar is an honor, but it's also a great burden."
-  - "Some friendships are so strong, they can even transcend lifetimes."
+A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson for Aang on the importance of decisiveness.
+
+### 🤝 Relationships
+
+- Sozin (Best Friend turned Arch-Nemesis)
+- Aang (Successor, Mentee)
+- Gyatso (Close Friend, Aang's Guardian)
+- Ta Min (Wife)
+- Zuko (Great-Grandson)
+
+### 🧬 Notable Traits
+
+- Wise & Merciful
+- Disciplined & Kind
+- Indecisive (at critical moments)
+- Regretful
+
+### 🗣️ Notable Quotes
+
+- "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started."
+- "Being the Avatar is an honor, but it's also a great burden."
+- "Some friendships are so strong, they can even transcend lifetimes."
 ```
 
 ---

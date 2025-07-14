@@ -5,9 +5,10 @@ interface SearchBarProps {
   onQueryChange: (newQuery: string) => void;
   suggestion: string;
   textColor: string;
+  nationIcon?: React.ReactNode;
 }
 
-export default function SearchBar({ query, onQueryChange, suggestion, textColor }: SearchBarProps) {
+export default function SearchBar({ query, onQueryChange, suggestion, textColor, nationIcon }: SearchBarProps) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Tab' && suggestion && query) {
       e.preventDefault();
@@ -24,9 +25,10 @@ export default function SearchBar({ query, onQueryChange, suggestion, textColor 
         className="w-full h-[52px] px-5 py-3 flex items-center justify-between rounded-lg bg-surface font-medium text-base border-2 border-subtle/20 group focus-within:border-primary/50 transition-colors"
         aria-hidden="true"
       >
-        <div className="whitespace-nowrap overflow-hidden text-left">
+        <div className="whitespace-nowrap overflow-hidden text-left flex items-center">
           <span style={{ color: textColor }}>{displayQuery}</span>
           {showSuggestion && <span className="opacity-35" style={{ color: textColor }}>{suggestion}</span>}
+          {nationIcon && <span className="ml-2 flex-shrink-0 align-middle">{nationIcon}</span>}
         </div>
         {showSuggestion && <span className="flex-shrink-0 text-xs font-semibold uppercase text-subtle bg-background border border-subtle/30 rounded-md px-2 py-0.5 ml-2">Tab</span>}
       </div>

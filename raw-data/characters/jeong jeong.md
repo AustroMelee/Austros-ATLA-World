@@ -15,35 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Jeong Jeong
-- Nation: Fire Nation
-- Age: 61
-- Overview: Once a celebrated admiral in the Fire Nation Navy, Jeong Jeong became horrified by the destruction wrought by his element and his students. He deserted his post, forever branded as "The Deserter". Living as a nomad in the Earth Kingdom, he adopted a philosophy of discipline and restraint, viewing firebending as a dangerous curse. His wisdom and immense power make him a formidable, if reluctant, master and a key member of the Order of the White Lotus.
+### 📖 Overview
 
-- Narrative Highlights:
-  - The first person known to have deserted the Fire Nation military and survived.
-  - Reluctantly agreed to teach Avatar Aang after being visited by the spirit of Avatar Roku.
-  - Emphasized discipline and control as the core of firebending, not rage.
-  - As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control.
+Once a celebrated admiral in the Fire Nation Navy, Jeong Jeong became horrified by the destruction wrought by his element and his students. He deserted his post, forever branded as "The Deserter." Living as a nomad in the Earth Kingdom, he adopted a philosophy of discipline and restraint, viewing firebending as a dangerous curse. His wisdom and immense power make him a formidable, if reluctant, master and a key member of the Order of the White Lotus.
 
-- Role in the Story: A wise but embittered mentor who introduces Aang to the dangers and responsibilities of firebending, representing an alternative to the Fire Nation's philosophy of destruction.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Aang (Reluctant Student)
-  - Zhao (Former Student, Greatest Failure)
-  - Order of the White Lotus (Fellow Members)
-  - Roku (Spiritual Guide)
+- First person known to have deserted the Fire Nation military and survived.
+- Reluctantly agreed to teach Avatar Aang after being visited by the spirit of Avatar Roku.
+- Emphasized discipline and control as the core of firebending, not rage.
+- As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control.
 
-- Personality Traits:
-  - Embittered & Jaded
-  - Wise & Disciplined
-  - Spiritual & Enlightened
-  - Reluctant & Cautious
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Fire brings only destruction and pain."
-  - "You have not yet mastered water, or earth. You are not ready for fire!"
-  - "Destiny? What would a boy know of destiny?"
+A wise but embittered mentor who introduces Aang to the dangers and responsibilities of firebending, representing an alternative to the Fire Nation's philosophy of destruction.
+
+### 🤝 Relationships
+
+- Aang (Reluctant Student)
+- Zhao (Former Student, Greatest Failure)
+- Order of the White Lotus (Fellow Members)
+- Roku (Spiritual Guide)
+
+### 🧬 Notable Traits
+
+- Embittered & Jaded
+- Wise & Disciplined
+- Spiritual & Enlightened
+- Reluctant & Cautious
+
+### 🗣️ Notable Quotes
+
+- "Fire brings only destruction and pain."
+- "You have not yet mastered water, or earth. You are not ready for fire!"
+- "Destiny? What would a boy know of destiny?"
 ```
 
 ---

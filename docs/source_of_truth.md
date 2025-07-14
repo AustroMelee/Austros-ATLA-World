@@ -83,6 +83,56 @@ The encyclopedia's core user experience is driven by a dynamic filtering and sea
 
 ---
 
+## 🔎 Search Bar Features & Non-Regression Policy (2024)
+
+**This section documents all advanced search bar features. These are core to the encyclopedia UX and must NEVER be removed or regressed. If any are lost, restore them per this spec.**
+
+### 1. Features
+- **Live Text Search:** As the user types, the search bar performs a debounced, case-insensitive query against the FlexSearch index, matching all indexed fields (name, description, nation, gender, archetype, tags, etc.).
+- **Auto Suggestion:**
+  - As the user types, a suggestion is shown inline after the query if any result's name contains a word that starts with the query (case-insensitive).
+  - The suggestion is the remainder of the name from the match point (e.g., typing "bumi" suggests "King Bumi").
+  - Suggestion logic is type-agnostic: it works for all cards/data, not just characters.
+- **Autofill (Tab Completion):**
+  - Pressing Tab autocompletes the query with the current suggestion.
+  - The suggestion is only autofilled if visible.
+- **Nation Icon Suffix:**
+  - If the top search result has a nation, a small React icon (from `react-icons/fa`) is shown as a suffix, moving with the text and suggestion.
+  - Icon is color-coded: Air Nomads (yellow wind), Water Tribe (blue water drop), Earth Kingdom (green leaf), Fire Nation (red fire), default (globe).
+  - Icon never overlaps text; spacing is handled in the flex container.
+- **Dynamic Text Color:**
+  - The search bar text color updates to match the detected nation of the top result, using the same color mapping as ThemedCard and FilterSidebar.
+- **Accessibility:**
+  - All features are keyboard accessible (Tab, focus, etc.).
+  - Icons have `aria-label` for screen readers.
+- **Performance:**
+  - All logic is implemented with React hooks and memoization for instant feedback and zero lag.
+
+### 2. Implementation Details
+- **Location:** All logic is in `src/pages/HomeContainer.tsx`, `src/pages/Home.tsx`, `src/components/SearchBar/SearchBar.tsx`, and `src/components/NationIcon/NationIcon.tsx`.
+- **Suggestion Algorithm:**
+  - For each search result, split the name into words.
+  - If any word starts with the query, show the rest of the name as the suggestion.
+  - If multiple results match, use the first.
+  - If no match, show no suggestion.
+- **Nation Icon:**
+  - Uses `react-icons` (FaWind, FaTint, FaLeaf, FaFire, FaGlobe).
+  - Icon is rendered as a suffix, not a prefix, and moves with the text.
+- **Autofill:**
+  - Only triggers if a suggestion is visible and the user presses Tab.
+  - Does not interfere with normal typing or navigation.
+- **Type Agnostic:**
+  - All features work for any entity in the search index, not just characters.
+
+### 3. Non-Regression Policy (MANDATORY)
+- **These features are non-negotiable.**
+- If any are lost, broken, or removed, they must be restored immediately to match this spec.
+- All maintainers and contributors must verify these features are present and working after any refactor or UI change.
+- If restoring, use the implementation in the files listed above as the canonical reference.
+- Any future enhancements must be strictly additive and never remove or degrade these features.
+
+---
+
 ## 🎨 CSS Source of Truth: Tailwind CSS
 
 The project uses Tailwind CSS for all styling. Due to a critical, unrecoverable CLI install bug with Tailwind v4+, this project is pinned to tailwindcss@3.4.3 and will remain on this version until a complete OS/user environment migration is feasible.
@@ -211,6 +261,58 @@ import './styles/custom.css'; // ❌ This will NOT work for @layer/theme() rules
 
 **This policy is non-negotiable and must be observed by all maintainers.**
 **Do not repeat these environment troubleshooting steps unless the underlying root cause (OS/user profile or npm installer bug) has been independently resolved and verified.**
+
+---
+
+## 🧑‍🎨 UI/UX & Responsive Design Rules (2024 Filter & Collections Overhaul)
+
+### Card Grid Hover Clipping: Hard Rule (2024)
+- **Never use CSS Grid for card layouts that require hover scaling or shadow bleed.**
+- **Always use Flexbox (`flex flex-wrap`) for card grids where cards scale or shadow on hover.**
+- **The card grid container must have at least `px-6 py-8` padding** to create a safe edge zone for scaling/shadowed cards.
+- **Each card wrapper must use `overflow-visible` and margin (`m-2` or greater) for buffer.**
+- **Cap card hover scale to `scale-[1.015]`** to prevent edge collision while preserving the lift effect.
+- **Do not use `overflow-hidden`, `overflow-auto`, or tight padding on any parent of the card grid.**
+- **If you see card hover effects clipped at the edge, check for missing container padding or a regression to grid layout.**
+- This rule is non-negotiable and must be enforced after any layout or UI refactor.
+
+### 1. Responsive Flex Layouts for Pills, Tags, and Lists
+- Always use `flex` containers for pill/tag groups and collection lists.
+- For pill/tag layouts: use `flex-wrap gap-x-2 gap-y-2` to ensure wrapping and breathing room on all screen sizes.
+- For collection items: avatar must use `flex-shrink-0`, name must use `flex-1 min-w-0 truncate`, and action labels (like "View") must use `flex-shrink-0 ml-auto` and be hidden on xs screens (`hidden sm:inline`).
+- Never hard-limit name width with `max-w-[Nch]` unless absolutely necessary; prefer `truncate` with `flex-1 min-w-0` for natural expansion.
+- Sidebar minimum width should be at least `min-w-[250px]` for usability; increase as needed for longer names.
+
+### 2. Truncation & Tooltips
+- Only truncate names when truly necessary (i.e., sidebar is very narrow).
+- Always provide a `title` attribute or tooltip for truncated names so the full value is accessible on hover.
+
+### 3. Affordance & Feedback
+- All interactive elements (pills, collection items, etc.) must be `<button>`s with clear hover, focus, and active states.
+- Use micro-animations (`transition-all`, `duration-100`, `scale-95` on active) for tactile feedback.
+- Show selection with both color and a secondary indicator (e.g., checkmark, bold, or filled background) for accessibility.
+
+### 4. Accessibility
+- All interactive elements must have `aria-label` or descriptive text.
+- Use `aria-pressed` for toggleable pills/tags.
+- Ensure keyboard navigation and visible focus rings (`focus-visible:outline-2` or similar).
+- Hide non-essential labels (like "View") on small screens, and use icons (e.g., 👁) for clarity.
+
+### 5. Visual Hierarchy & Spacing
+- Use clear section headers with hierarchy (`text-lg font-bold` for main, `text-xs uppercase` for subheaders).
+- Add vertical margin between filter/collection sections for clarity.
+- Use generous padding and rounded corners for all cards, panels, and pills.
+- Always provide an empty state with friendly text and an emoji for empty collections or lists.
+
+### 6. Avatar & Icon Rules
+- Avatars must never shrink or crowd the name; always use `flex-shrink-0` and a fixed width/height.
+- If no image is available, use initials in a colored circle.
+- Use consistent icon sizes and spacing in all pills and lists.
+
+### 7. Color & Contrast
+- Use color to indicate selection, but never as the only indicator.
+- Ensure all text and backgrounds meet WCAG AA contrast standards.
+- Use Tailwind color tokens for consistency.
 
 ---
 

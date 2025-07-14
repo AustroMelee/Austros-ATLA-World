@@ -15,37 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Hakoda
-- Nation: Southern Water Tribe
-- Age: Unknown (Adult)
-- Overview: Hakoda is a respected warrior and leader, burdened by the difficult choice to leave his family to fight for the future of the world. A brilliant tactician and a loving father, his influence shapes his son Sokka's own journey into leadership. After enduring capture and imprisonment at the Boiling Rock, he reunites with his children and plays a pivotal role in the Day of Black Sun invasion and the post-war reconstruction of the Southern Water Tribe.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Led the warriors of the Southern Water Tribe against the Fire Nation.
-  - Provided key leadership during the invasion of the Fire Nation.
-  - Was imprisoned in and escaped from the high-security prison, the Boiling Rock.
-  - Became Head Chieftain of the unified Southern Water Tribe after the war.
+Hakoda is a respected warrior and leader, burdened by the difficult choice to leave his family to fight for the future of the world. A brilliant tactician and a loving father, his influence shapes his son Sokka's own journey into leadership. After enduring capture and imprisonment at the Boiling Rock, he reunites with his children and plays a pivotal role in the Day of Black Sun invasion and the post-war reconstruction of the Southern Water Tribe.
 
-- Role in the Story: A guiding father figure whose courage and strategic mind inspire his children and represent the Water Tribe's resilience and contribution to the war.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Sokka (Son & Protégé)
-  - Katara (Daughter)
-  - Kya (Wife, Deceased)
-  - Kanna (Mother)
-  - Malina (Girlfriend)
-  - Bato (Close Friend & Fellow Warrior)
+- Led the warriors of the Southern Water Tribe against the Fire Nation.
+- Provided key leadership during the invasion of the Fire Nation.
+- Was imprisoned in and escaped from the high-security prison, the Boiling Rock.
+- Became Head Chieftain of the unified Southern Water Tribe after the war.
 
-- Personality Traits:
-  - Brave & Courageous
-  - Strategic & Ingenious
-  - Loving & Fatherly
-  - Respected Leader
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "You and your brother are my entire world."
-  - "I'm the proudest father in the world."
-  - "We're going to show the Fire Nation that we believe in our cause as much as they believe in theirs."
+A guiding father figure whose courage and strategic mind inspire his children and represent the Water Tribe's resilience and contribution to the war.
+
+### 🤝 Relationships
+
+- **Sokka** – Son and protégé.
+- **Katara** – Daughter.
+- **Kya** – Wife, deceased.
+- **Kanna** – Mother.
+- **Malina** – Girlfriend.
+- **Bato** – Close friend and fellow warrior.
+
+### 🌟 Notable Traits
+
+- Brave and courageous.
+- Strategic, ingenious, and respected leader.
+- Loving and fatherly.
+
+### 💬 Notable Quotes
+
+- "You and your brother are my entire world."
+- "I'm the proudest father in the world."
+- "We're going to show the Fire Nation that we believe in our cause as much as they believe in theirs."
 ```
 
 ---

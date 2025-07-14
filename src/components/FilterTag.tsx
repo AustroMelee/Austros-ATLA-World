@@ -1,7 +1,7 @@
 import React from 'react';
 
 type FilterTagProps = {
-  label: string;
+  label: React.ReactNode;
   onClick: () => void;
   active: boolean;
 };

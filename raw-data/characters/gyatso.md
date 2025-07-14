@@ -15,35 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Monk Gyatso
-- Nation: Air Nomads
-- Age: Late 70s (at time of death)
-- Overview: Known for his exceptional wisdom and mischievous sense of humor, Monk Gyatso was a high-ranking member of the Southern Air Temple. As a young man, he befriended and traveled with Avatar Roku, offering him crucial perspective. Decades later, he became the guardian and mentor to Aang, Roku's successor. He believed in balancing discipline with joy, a philosophy that put him at odds with the other council elders and ultimately led to Aang's departure.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Was a close personal friend of Avatar Roku.
-  - Served as the primary guardian, mentor, and father figure to Avatar Aang.
-  - His compassionate approach to Aang's training conflicted with the other Air Nomad elders.
-  - Died defending the Southern Air Temple, taking many Fire Nation soldiers with him.
+Known for his exceptional wisdom and mischievous sense of humor, Monk Gyatso was a high-ranking member of the Southern Air Temple. As a young man, he befriended Avatar Roku and later became the beloved guardian and father figure to Avatar Aang. He believed in balancing discipline with joy, a philosophy that put him at odds with the other council elders and ultimately led to Aang's departure.
 
-- Role in the Story: A guiding father figure whose love and wisdom profoundly shaped Aang's character, and whose death represents Aang's greatest personal loss.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Aang (Student, Surrogate Son)
-  - Roku (Best Friend)
-  - Pathik (Friend)
-  - The Council of Elders (Colleagues)
+- Close personal friend of Avatar Roku.
+- Served as the primary guardian, mentor, and father figure to Avatar Aang.
+- His compassionate approach to Aang's training conflicted with the other Air Nomad elders.
+- Died defending the Southern Air Temple, taking many Fire Nation soldiers with him.
 
-- Personality Traits:
-  - Kind & Compassionate
-  - Wise & Patient
-  - Humorous & Playful
-  - Fiercely Protective
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "We can't concern ourselves with what was. We must act on what is."
-  - "Come closer. I have some wisdom for you... *splat*" (before a pie-throwing prank)
-  - "All I want is for him to be happy."
+A guiding father figure whose love and wisdom profoundly shaped Aang's character, and whose death represents Aang's greatest personal loss.
+
+### 🤝 Relationships
+
+- Aang (Student, Surrogate Son)
+- Roku (Best Friend)
+- Pathik (Friend)
+- The Council of Elders (Colleagues)
+
+### 🧬 Notable Traits
+
+- Kind & Compassionate
+- Wise & Patient
+- Humorous & Playful
+- Fiercely Protective
+
+### 🗣️ Notable Quotes
+
+- "We can't concern ourselves with what was. We must act on what is."
+- "Come closer. I have some wisdom for you... *splat*" (before a pie-throwing prank)
+- "All I want is for him to be happy."
 ```
 
 ---

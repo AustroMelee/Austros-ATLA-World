@@ -15,36 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Kyoshi
-- Nation: Earth Kingdom
-- Age: 230 (at time of death)
-- Overview: Abandoned as a child and not discovered as the Avatar until her teens, Kyoshi's early life was defined by hardship and survival. This forged her into a pragmatic and ruthlessly effective Avatar who valued justice above all else. During her 230-year lifespan, she ended the tyrannical conquest of Chin the Conqueror, founded both the elite Kyoshi Warriors and the Dai Li, and brought about an unprecedented era of peace, leaving a complex and enduring legacy.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Lived to be 230 years old, the oldest known human.
-  - Used the Avatar State to separate her home peninsula, creating Kyoshi Island.
-  - Founded two elite orders: the Kyoshi Warriors and the Dai Li of Ba Sing Se.
-  - Defeated Chin the Conqueror, ending his reign of terror over the Earth Kingdom.
+Abandoned as a child and not discovered as the Avatar until her teens, Kyoshi's early life was defined by hardship and survival. This forged her into a pragmatic and ruthlessly effective Avatar who valued justice above all else. During her 230-year lifespan, she ended the tyrannical conquest of Chin the Conqueror, founded both the elite Kyoshi Warriors and the Dai Li, and brought about an unprecedented era of peace, leaving a complex and enduring legacy.
 
-- Role in the Story: A legendary predecessor to Aang whose life and ruthless methods serve as a stark philosophical counterpoint, forcing Aang to question the nature of justice and peace.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Rangi (Girlfriend, Firebending Master)
-  - Kelsang (Adoptive Father, Mentor)
-  - Yun (Childhood Friend, later Enemy)
-  - The Flying Opera Company (Found Family, Allies)
-  - Roku (Successor)
+- Lived to be 230 years old, the oldest known human.
+- Used the Avatar State to separate her home peninsula, creating Kyoshi Island.
+- Founded two elite orders: the Kyoshi Warriors and the Dai Li of Ba Sing Se.
+- Defeated Chin the Conqueror, ending his reign of terror over the Earth Kingdom.
 
-- Personality Traits:
-  - Fierce & Uncompromising
-  - Just & Protective
-  - Pragmatic & Decisive
-  - Reserved & Self-doubting (internally)
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Only justice will bring peace."
-  - "My friend is not a diplomat. She is the failure of diplomacy."
-  - "I killed Chin the Conqueror."
+A legendary predecessor to Aang whose life and ruthless methods serve as a stark philosophical counterpoint, forcing Aang to question the nature of justice and peace.
+
+### 🤝 Relationships
+
+- **Rangi** – Girlfriend, firebending master.
+- **Kelsang** – Adoptive father, mentor.
+- **Yun** – Childhood friend, later enemy.
+- **The Flying Opera Company** – Found family, allies.
+- **Roku** – Successor.
+
+### 🌟 Notable Traits
+
+- Fierce and uncompromising.
+- Just, protective, and pragmatic.
+- Decisive, reserved, and self-doubting (internally).
+
+### 💬 Notable Quotes
+
+- "Only justice will bring peace."
+- "My friend is not a diplomat. She is the failure of diplomacy."
+- "I killed Chin the Conqueror."
 ```
 
 ---

@@ -15,34 +15,39 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Hama
-- Nation: Southern Water Tribe
-- Age: Elderly (in Avatar: The Last Airbender)
-- Overview: Once a proud defender of the Southern Water Tribe, Hama was the last waterbender captured during the Fire Nation raids. Decades of cruel imprisonment twisted her spirit, leading her to develop the terrifying ability to bend the water within living creatures. After escaping, she lives a quiet life as an innkeeper, secretly exacting her revenge on innocent Fire Nation villagers under the light of the full moon.
+### 📖 Overview
 
-- Narrative Highlights:
-  - The sole inventor of the forbidden art of bloodbending.
-  - Was the last waterbending master of the Southern Water Tribe before its devastation.
-  - Used her dark abilities to imprison innocent Fire Nation civilians out of revenge.
-  - Forced Katara to learn and use bloodbending against her will.
+Once a proud defender of the Southern Water Tribe, Hama was the last waterbender captured during the Fire Nation raids. Decades of cruel imprisonment twisted her spirit, leading her to develop the terrifying ability to bend the water within living creatures. After escaping, she lives a quiet life as an innkeeper, secretly exacting her revenge on innocent Fire Nation villagers under the light of the full moon.
 
-- Role in the Story: A tragic antagonist and a dark mirror for Katara, showcasing how trauma and a thirst for vengeance can corrupt even the most noble of intentions.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Katara (Protégé, Victim, Captor)
-  - Kanna (Childhood Friend)
-  - Aang & Sokka (Puppets)
+- Sole inventor of the forbidden art of bloodbending.
+- Last waterbending master of the Southern Water Tribe before its devastation.
+- Used her dark abilities to imprison innocent Fire Nation civilians out of revenge.
+- Forced Katara to learn and use bloodbending against her will.
 
-- Personality Traits:
-  - Vengeful & Bitter
-  - Cunning & Deceptive
-  - Mentally Unstable
-  - Proud & Resilient
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Congratulations, Katara. You're a bloodbender."
-  - "They threw me in prison to rot... They deserve the same! You must carry on my work."
-  - "You've got to keep an open mind, Katara. There's water in places you never think about."
+A tragic antagonist and a dark mirror for Katara, showcasing how trauma and a thirst for vengeance can corrupt even the most noble of intentions.
+
+### 🤝 Relationships
+
+- Katara (Protégée, Victim, Captor)
+- Kanna (Childhood Friend)
+- Aang & Sokka (Puppets)
+
+### 🧬 Notable Traits
+
+- Vengeful & Bitter
+- Cunning & Deceptive
+- Mentally Unstable
+- Proud & Resilient
+
+### 🗣️ Notable Quotes
+
+- "Congratulations, Katara. You're a bloodbender."
+- "They threw me in prison to rot... They deserve the same! You must carry on my work."
+- "You've got to keep an open mind, Katara. There's water in places you never think about."
 ```
 
 ---

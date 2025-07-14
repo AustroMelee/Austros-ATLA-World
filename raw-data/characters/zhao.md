@@ -15,36 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Zhao
-- Nation: Fire Nation
-- Age: Middle-aged (in Avatar: The Last Airbender)
-- Overview: A man driven by a pathological need for recognition, Zhao rapidly climbed the ranks of the Fire Nation military through a combination of skill, cunning, and cruelty. His rivalry with the banished Prince Zuko for the capture of the Avatar fuels much of his action. His ultimate ambition culminates in the Siege of the North, where he makes the fatal mistake of killing the Moon Spirit, leading to his own downfall at the hands of the enraged Ocean Spirit.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Discovered the location of the Moon and Ocean spirits in Wan Shi Tong's Library.
-  - Became the primary rival to Prince Zuko in the hunt for the Avatar.
-  - Led the massive Fire Nation naval invasion of the Northern Water Tribe.
-  - Killed the Moon Spirit, Tui, and was subsequently dragged into the Spirit World for eternity.
+A man driven by a pathological need for recognition, Zhao rapidly climbed the ranks of the Fire Nation military through a combination of skill, cunning, and cruelty. His rivalry with the banished Prince Zuko for the capture of the Avatar fuels much of his action. His ultimate ambition culminates in the Siege of the North, where he makes the fatal mistake of killing the Moon Spirit, leading to his own downfall at the hands of the enraged Ocean Spirit.
 
-- Role in the Story: The primary antagonist of Book One, whose arrogance and short-sighted pursuit of glory serve as a foil to both Zuko's honor-bound quest and Aang's spiritual journey.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Zuko (Rival)
-  - Iroh (Rival, former subordinate)
-  - Aang (Primary Target)
-  - Jeong Jeong (Former Master)
-  - Ozai (Superior)
+- Discovered the location of the Moon and Ocean spirits in Wan Shi Tong's Library.
+- Became the primary rival to Prince Zuko in the hunt for the Avatar.
+- Led the massive Fire Nation naval invasion of the Northern Water Tribe.
+- Killed the Moon Spirit, Tui, and was subsequently dragged into the Spirit World for eternity.
 
-- Personality Traits:
-  - Arrogant & Ambitious
-  - Narcissistic & Egotistical
-  - Short-tempered & Impatient
-  - Cunning & Deceptive
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "I am a legend now! The Fire Nation will for generations tell stories about the great Zhao who darkened the moon!"
-  - "I am Zhao the Conqueror! Zhao the Moon Slayer! Zhao... the Invincible!"
-  - "You can't compete with me. I have hundreds of warships under my command."
+The primary antagonist of Book One, whose arrogance and short-sighted pursuit of glory serve as a foil to both Zuko's honor-bound quest and Aang's spiritual journey.
+
+### 🤝 Relationships
+
+- Zuko (Rival)
+- Iroh (Rival, former subordinate)
+- Aang (Primary Target)
+- Jeong Jeong (Former Master)
+- Ozai (Superior)
+
+### 🧬 Notable Traits
+
+- Arrogant & Ambitious
+- Narcissistic & Egotistical
+- Short-tempered & Impatient
+- Cunning & Deceptive
+
+### 🗣️ Notable Quotes
+
+- "I am a legend now! The Fire Nation will for generations tell stories about the great Zhao who darkened the moon!"
+- "I am Zhao the Conqueror! Zhao the Moon Slayer! Zhao... the Invincible!"
+- "You can't compete with me. I have hundreds of warships under my command."
 ```
 
 ---

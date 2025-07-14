@@ -15,36 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Long Feng
-- Nation: Earth Kingdom
-- Age: Unknown (Adult)
-- Overview: Rising from humble origins, Long Feng became the most powerful man in the Earth Kingdom by manipulating the young Earth King and seizing control of the Dai Li. He maintains a fragile utopia within Ba Sing Se by brainwashing citizens and erasing any knowledge of the war. His absolute control is challenged by the arrival of Team Avatar, and his web of lies unravels, leading to his downfall and the conquest of the city by Azula.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Ruled Ba Sing Se as a de facto dictator, keeping the Earth King as a puppet.
-  - Utilized the Dai Li and Lake Laogai to brainwash dissenters.
-  - Kidnapped Appa to use as leverage against the Avatar.
-  - Was out-manipulated and overthrown by Princess Azula.
+Rising from humble origins, Long Feng became the most powerful man in the Earth Kingdom by manipulating the young Earth King and seizing control of the Dai Li. He maintains a fragile utopia within Ba Sing Se by brainwashing citizens and erasing any knowledge of the war. His absolute control is challenged by the arrival of Team Avatar, and his web of lies unravels, leading to his downfall and the conquest of the city by Azula.
 
-- Role in the Story: The primary antagonist of the Ba Sing Se arc, representing political corruption, the dangers of censorship, and oppressive control disguised as peace.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Earth King Kuei (Puppet Ruler)
-  - The Dai Li (Secret Police, Subordinates)
-  - Jet (Victim of Brainwashing)
-  - Azula (Co-conspirator, Usurper)
-  - Team Avatar (Enemies)
+- Ruled Ba Sing Se as a de facto dictator, keeping the Earth King as a puppet.
+- Utilized the Dai Li and Lake Laogai to brainwash dissenters.
+- Kidnapped Appa to use as leverage against the Avatar.
+- Was out-manipulated and overthrown by Princess Azula.
 
-- Personality Traits:
-  - Manipulative & Cunning
-  - Charismatic & Composed
-  - Power-hungry & Ruthless
-  - Patient & Calculating
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "There is no war in Ba Sing Se."
-  - "You've beaten me at my own game."
-  - "By silencing talk of conflict, Ba Sing Se remains a peaceful, orderly utopia."
+The primary antagonist of the Ba Sing Se arc, representing political corruption, the dangers of censorship, and oppressive control disguised as peace.
+
+### 🤝 Relationships
+
+- Earth King Kuei (Puppet Ruler)
+- The Dai Li (Secret Police, Subordinates)
+- Jet (Victim of Brainwashing)
+- Azula (Co-conspirator, Usurper)
+- Team Avatar (Enemies)
+
+### 🧬 Notable Traits
+
+- Manipulative & Cunning
+- Charismatic & Composed
+- Power-hungry & Ruthless
+- Patient & Calculating
+
+### 🗣️ Notable Quotes
+
+- "There is no war in Ba Sing Se."
+- "You've beaten me at my own game."
+- "By silencing talk of conflict, Ba Sing Se remains a peaceful, orderly utopia."
 ```
 
 ---

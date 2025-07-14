@@ -15,36 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Mai
-- Nation: Fire Nation
-- Age: 15 (in Avatar: The Last Airbender)
-- Overview: Raised to be a perfectly behaved and quiet daughter of a prominent politician, Mai developed a deeply apathetic and emotionally distant personality. Recruited by Princess Azula for her deadly marksmanship, she becomes a formidable foe. However, her deep-seated love for Prince Zuko ultimately forces her to make a choice between her fear of Azula and her loyalty to him, a decision that changes the course of her life and the war.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Recruited into Azula's elite team to hunt the Avatar and Zuko.
-  - Rekindled her childhood crush into a serious relationship with Prince Zuko.
-  - Defied Princess Azula at the Boiling Rock, declaring "I love Zuko more than I fear you".
-  - Aided Zuko against her own father's traitorous New Ozai Society after the war.
+Raised to be a perfectly behaved and quiet daughter of a prominent politician, Mai developed a deeply apathetic and emotionally distant personality. Recruited by Princess Azula for her deadly marksmanship, she becomes a formidable foe. However, her deep-seated love for Prince Zuko ultimately forces her to make a choice between her fear of Azula and her loyalty to him, a decision that changes the course of her life and the war.
 
-- Role in the Story: A secondary antagonist turned ally whose character arc explores how love can triumph over fear and apathy.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Zuko (Boyfriend, former)
-  - Azula (Commander, former)
-  - Ty Lee (Friend)
-  - Ukano (Father)
-  - Kei Lo (Boyfriend, former)
+- Recruited into Azula's elite team to hunt the Avatar and Zuko.
+- Rekindled her childhood crush into a serious relationship with Prince Zuko.
+- Defied Princess Azula at the Boiling Rock, declaring "I love Zuko more than I fear you".
+- Aided Zuko against her own father's traitorous New Ozai Society after the war.
 
-- Personality Traits:
-  - Apathetic & Bored
-  - Stoic & Emotionally Repressed
-  - Loyal (to Zuko)
-  - Brave & Decisive (when it counts)
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "I love Zuko more than I fear you."
-  - "You're so beautiful when you hate the world."
-  - "Please tell me you're not here to rescue me."
+A secondary antagonist turned ally whose character arc explores how love can triumph over fear and apathy.
+
+### 🤝 Relationships
+
+- **Zuko** – Boyfriend, former.
+- **Azula** – Commander, former.
+- **Ty Lee** – Friend.
+- **Ukano** – Father.
+- **Kei Lo** – Boyfriend, former.
+
+### 🌟 Notable Traits
+
+- Apathetic and bored.
+- Stoic, emotionally repressed, and loyal (to Zuko).
+- Brave and decisive when it counts.
+
+### 💬 Notable Quotes
+
+- "I love Zuko more than I fear you."
+- "You're so beautiful when you hate the world."
+- "Please tell me you're not here to rescue me."
 ```
 
 ---

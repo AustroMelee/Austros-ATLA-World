@@ -15,35 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Yangchen
-- Nation: Air Nomads
-- Age: Unknown (Adult)
-- Overview: Burdened from a young age by the voices and memories of her past lives, Yangchen grew into a pragmatic and formidable Avatar. Unlike many Air Nomads, she was not a strict pacifist and understood that maintaining peace sometimes required manipulation, espionage, and force. Her tireless efforts and difficult compromises secured an entire generation of peace after her death, though her focus on humanity's problems inadvertently led to a rise in dark spirits for her successor, Kuruk.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Plagued by visions of her past lives since childhood.
-  - Defeated the spirit General Old Iron and established a pact to protect his sacred land.
-  - Became deeply involved in the complex politics of the four nations to prevent war.
-  - Was so effective as the Avatar that no major wars occurred for a generation after her death.
+Burdened from a young age by the voices and memories of her past lives, Yangchen grew into a pragmatic and formidable Avatar. Unlike many Air Nomads, she was not a strict pacifist and understood that maintaining peace sometimes required manipulation, espionage, and force. Her tireless efforts and difficult compromises secured an entire generation of peace after her death, though her focus on humanity's problems inadvertently led to a rise in dark spirits for her successor, Kuruk.
 
-- Role in the Story: A legendary past Avatar who serves as a crucial spiritual guide, offering a pragmatic and duty-bound perspective that contrasts with Aang's idealism.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Kuruk (Successor)
-  - Szeto (Predecessor)
-  - Kavik (Companion, Informant)
-  - Jetsun (Older Sister Figure, Spiritual Guide)
+- Plagued by visions of her past lives since childhood.
+- Defeated the spirit General Old Iron and established a pact to protect his sacred land.
+- Became deeply involved in the complex politics of the four nations to prevent war.
+- Was so effective as the Avatar that no major wars occurred for a generation after her death.
 
-- Personality Traits:
-  - Dutiful & Determined
-  - Compassionate & Empathetic
-  - Pragmatic & Shrewd
-  - Spiritually Troubled
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world."
-  - "Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it."
-  - "All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us."
+A legendary past Avatar who serves as a crucial spiritual guide, offering a pragmatic and duty-bound perspective that contrasts with Aang's idealism.
+
+### 🤝 Relationships
+
+- Kuruk (Successor)
+- Szeto (Predecessor)
+- Kavik (Companion, Informant)
+- Jetsun (Older Sister Figure, Spiritual Guide)
+
+### 🧬 Notable Traits
+
+- Dutiful & Determined
+- Compassionate & Empathetic
+- Pragmatic & Shrewd
+- Spiritually Troubled
+
+### 🗣️ Notable Quotes
+
+- "Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world."
+- "Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it."
+- "All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us."
 ```
 
 ---

@@ -15,35 +15,40 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Sozin
-- Nation: Fire Nation
-- Age: 102 (at time of death)
-- Overview: Once the best friend of Avatar Roku, Prince Sozin's ascension to Fire Lord ignited his ambition to expand his nation's influence across the globe. Believing he was sharing the Fire Nation's greatness, his vision was rejected by Roku. This ideological schism led to a bitter rivalry that culminated in Sozin betraying Roku, leaving him to die in a volcanic eruption. With the Avatar gone, Sozin harnessed the power of a great comet to commit genocide against the Air Nomads and begin the Hundred Year War.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Grew up as the best friend of Roku, before Roku was identified as the Avatar.
-  - Betrayed Roku by leaving him to die in a volcanic eruption to pursue his conquest.
-  - Used the power of a comet to wipe out the Air Nomads.
-  - Instigated the Hundred Year War.
+Once the best friend of Avatar Roku, Prince Sozin's ascension to Fire Lord ignited his ambition to expand his nation's influence across the globe. Believing he was sharing the Fire Nation's greatness, his vision was rejected by Roku. This ideological schism led to a bitter rivalry that culminated in Sozin betraying Roku, leaving him to die in a volcanic eruption. With the Avatar gone, Sozin harnessed the power of a great comet to commit genocide against the Air Nomads and begin the Hundred Year War.
 
-- Role in the Story: The original antagonist of the Hundred Year War, whose past actions and friendship with Roku define the central conflict of the series.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Roku (Best Friend turned Arch-Nemesis)
-  - Azulon (Son, Successor)
-  - Taiso (Father)
-  - Aang (The target of his lifelong hunt)
+- Grew up as the best friend of Roku, before Roku was identified as the Avatar.
+- Betrayed Roku by leaving him to die in a volcanic eruption to pursue his conquest.
+- Used the power of a comet to wipe out the Air Nomads.
+- Instigated the Hundred Year War.
 
-- Personality Traits:
-  - Ambitious & Visionary
-  - Imperialistic & Ruthless
-  - Cunning & Patient
-  - Conflicted (initially)
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "With Roku gone and the great comet returning, the timing was perfect to change the world."
-  - "We have a chance to share our greatness with the rest of the world."
-  - "Without you, all my plans are suddenly possible. I have a vision for the future, Roku."
+The original antagonist of the Hundred Year War, whose past actions and friendship with Roku define the central conflict of the series.
+
+### 🤝 Relationships
+
+- Roku (Best Friend turned Arch-Nemesis)
+- Azulon (Son, Successor)
+- Taiso (Father)
+- Aang (The target of his lifelong hunt)
+
+### 🧬 Notable Traits
+
+- Ambitious & Visionary
+- Imperialistic & Ruthless
+- Cunning & Patient
+- Conflicted (initially)
+
+### 🗣️ Notable Quotes
+
+- "With Roku gone and the great comet returning, the timing was perfect to change the world."
+- "We have a chance to share our greatness with the rest of the world."
+- "Without you, all my plans are suddenly possible. I have a vision for the future, Roku."
 ```
 
 ---

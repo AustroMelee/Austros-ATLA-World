@@ -15,37 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Sokka
-- Nation: Southern Water Tribe
-- Age: 15 (in Avatar: The Last Airbender)
-- Overview: Left as the oldest male in his village, Sokka was a self-styled warrior desperate to prove himself. After discovering the Avatar, his worldview rapidly expands from cynical and pragmatic to one of a brilliant leader and strategist. Overcoming his insecurities as a non-bender, he becomes the indispensable "idea guy" of the group, masterminding the invasion of the Fire Nation and evolving into a master swordsman in his own right.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Formulated the plan for the invasion of the Fire Nation on the Day of Black Sun.
-  - Trained under Master Piandao to become a master swordsman, forging his own space sword.
-  - Single-handedly defeated the formidable assassin Combustion Man.
-  - Led a prison break from the Boiling Rock, rescuing his father and Suki.
+Left as the oldest male in his village, Sokka was a self-styled warrior desperate to prove himself. After discovering the Avatar, his worldview rapidly expands from cynical and pragmatic to one of a brilliant leader and strategist. Overcoming his insecurities as a non-bender, he becomes the indispensable "idea guy" of the group, masterminding the invasion of the Fire Nation and evolving into a master swordsman in his own right.
 
-- Role in the Story: The non-bender strategist whose intellect, humor, and courage prove that you don't need powers to change the world.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Katara (Sister, Confidant)
-  - Suki (Girlfriend, Combat Partner)
-  - Aang (Best Friend, "The Muscle")
-  - Toph Beifong (Friend, "Captain Boomerang")
-  - Yue (First Love)
-  - Hakoda (Father, Role Model)
+- Formulated the plan for the invasion of the Fire Nation on the Day of Black Sun.
+- Trained under Master Piandao to become a master swordsman, forging his own space sword.
+- Single-handedly defeated the formidable assassin Combustion Man.
+- Led a prison break from the Boiling Rock, rescuing his father and Suki.
 
-- Personality Traits:
-  - Sarcastic & Witty
-  - Inventive & Strategic
-  - Loyal & Protective
-  - Goofy & A lover of meat
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "It's the quenchiest!"
-  - "I'm just a guy with a boomerang. I didn't ask for all this flying and magic."
-  - "Boomerang! You do always come back!"
+The non-bender strategist whose intellect, humor, and courage prove that you don't need powers to change the world.
+
+### 🤝 Relationships
+
+- **Katara** – Sister, confidant.
+- **Suki** – Girlfriend, combat partner.
+- **Aang** – Best friend, "the muscle".
+- **Toph Beifong** – Friend, "Captain Boomerang".
+- **Yue** – First love.
+- **Hakoda** – Father, role model.
+
+### 🌟 Notable Traits
+
+- Sarcastic, witty, and inventive.
+- Strategic, loyal, and protective.
+- Goofy and a lover of meat.
+
+### 💬 Notable Quotes
+
+- "It's the quenchiest!"
+- "I'm just a guy with a boomerang. I didn't ask for all this flying and magic."
+- "Boomerang! You do always come back!"
 ```
 
 ---

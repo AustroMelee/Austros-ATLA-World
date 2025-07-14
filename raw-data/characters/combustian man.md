@@ -15,30 +15,35 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Combustion Man
-- Nation: Fire Nation
-- Age: Unknown
-- Overview: A formidable and mysterious bounty hunter, Combustion Man is renowned for his rare and devastating combustionbending ability. Hired by Zuko to eliminate the Avatar, he becomes a terrifying and near-unstoppable threat to Team Avatar. His silent, single-minded pursuit and immense destructive power make him one of their most dangerous physical opponents.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Terrorized Team Avatar with his unique and powerful combustionbending.
-  - Tracked the team across the entire Fire Nation with unerring accuracy.
-  - Was ultimately defeated when his own power backfired, caused by a well-aimed boomerang.
+A formidable and mysterious bounty hunter, Combustion Man is renowned for his rare and devastating combustionbending ability. Hired by Zuko to eliminate the Avatar, he becomes a terrifying and near-unstoppable threat to Team Avatar. His silent, single-minded pursuit and immense destructive power make him one of their most dangerous physical opponents.
 
-- Role in the Story: A recurring physical threat in Book Three who raises the stakes for Team Avatar and represents the deadly consequences of Zuko's desperation.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Zuko (Employer)
-  - Aang (Target)
-  - Sokka (Nemesis, "Sparky Sparky Boom Man")
+- Terrorized Team Avatar with his unique and powerful combustionbending.
+- Tracked the team across the entire Fire Nation with unerring accuracy.
+- Was ultimately defeated when his own power backfired, caused by a well-aimed boomerang.
 
-- Personality Traits:
-  - Silent & Professional
-  - Relentless & Tenacious
-  - Destructive & Implacable
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - (No spoken lines)
+A recurring physical threat in Book Three who raises the stakes for Team Avatar and represents the deadly consequences of Zuko's desperation.
+
+### 🤝 Relationships
+
+- Zuko (Employer)
+- Aang (Target)
+- Sokka (Nemesis, "Sparky Sparky Boom Man")
+
+### 🧬 Notable Traits
+
+- Silent & Professional
+- Relentless & Tenacious
+- Destructive & Implacable
+
+### 🗣️ Notable Quotes
+
+- (No spoken lines)
 ```
 
 ---

@@ -15,35 +15,39 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Yue
-- Nation: Northern Water Tribe
-- Age: 16 (at time of death)
-- Overview: As a sickly infant, Princess Yue's life was saved when the Moon Spirit gave her a piece of its own life force. Torn between her duty to her tribe and her feelings for Sokka, her kindness and bravery define her. During the Siege of the North, when the mortal form of the Moon Spirit is killed, Yue selflessly gives her life back, ascending to become the new Moon Spirit and saving waterbending for the entire world.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Saved from a mortal illness as a baby by the Moon Spirit.
-  - Torn between her arranged marriage and her love for Sokka.
-  - Sacrificed her mortal life to become the new Moon Spirit, Tui.
-  - Guided Aang in the Spirit World after her transformation.
+As a sickly infant, Princess Yue's life was saved when the Moon Spirit gave her a piece of its own life force. Torn between her duty to her tribe and her feelings for Sokka, her kindness and bravery define her. During the Siege of the North, when the mortal form of the Moon Spirit is killed, Yue selflessly gives her life back, ascending to become the new Moon Spirit and saving waterbending for the entire world.
 
-- Role in the Story: A tragic love interest and key spiritual figure whose sacrifice is a pivotal moment in the war and for Sokka's personal development.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Sokka (Boyfriend)
-  - Arnook (Father)
-  - Hahn (Fiancé, arranged)
-  - Aang & Katara (Allies)
+- Saved from a mortal illness as a baby by the Moon Spirit.
+- Torn between her arranged marriage and her love for Sokka.
+- Sacrificed her mortal life to become the new Moon Spirit, Tui.
+- Guided Aang in the Spirit World after her transformation.
 
-- Personality Traits:
-  - Gentle & Kind
-  - Dutiful & Loyal
-  - Spiritual & Graceful
-  - Courageous
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "It gave me life. Maybe I can give it back."
-  - "We can't. It's not right."
-  - "I'll always be with you."
+A tragic love interest and key spiritual figure whose sacrifice is a pivotal moment in the war and for Sokka's personal development.
+
+### 🤝 Relationships
+
+- **Sokka** – Boyfriend.
+- **Arnook** – Father.
+- **Hahn** – Fiancé (arranged).
+- **Aang & Katara** – Allies.
+
+### 🌟 Notable Traits
+
+- Gentle and kind.
+- Dutiful, loyal, spiritual, and graceful.
+- Courageous.
+
+### 💬 Notable Quotes
+
+- "It gave me life. Maybe I can give it back."
+- "We can't. It's not right."
+- "I'll always be with you."
 ```
 
 ---

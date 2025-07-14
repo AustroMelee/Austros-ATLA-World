@@ -15,36 +15,41 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Pakku
-- Nation: Northern Water Tribe
-- Age: Elderly
-- Overview: As the premier waterbending master of the Northern Water Tribe, Pakku is a formidable and disciplined teacher, deeply rooted in his tribe's patriarchal traditions. His refusal to teach female students brings him into direct conflict with Katara. Upon discovering she is the granddaughter of his long-lost love, he re-evaluates his rigid beliefs, accepts Katara as his student, and ultimately becomes a key member of the Order of the White Lotus, fighting to restore world balance.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Initially refused to teach Katara due to sexist tribal laws.
-  - Dueled Katara and was moved by the sight of her grandmother's betrothal necklace.
-  - Fought to defend the Northern Water Tribe during the Fire Nation siege.
-  - As a member of the White Lotus, helped liberate Ba Sing Se.
+As the premier waterbending master of the Northern Water Tribe, Pakku is a formidable and disciplined teacher, deeply rooted in his tribe's patriarchal traditions. His refusal to teach female students brings him into direct conflict with Katara. Upon discovering she is the granddaughter of his long-lost love, he re-evaluates his rigid beliefs, accepts Katara as his student, and ultimately becomes a key member of the Order of the White Lotus, fighting to restore world balance.
 
-- Role in the Story: A master of the old guard whose personal history forces him to confront his prejudices and embrace a changing world.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Kanna (Wife, former Fiancée)
-  - Katara (Student, Step-Granddaughter)
-  - Sokka (Step-Grandson)
-  - Aang (Student)
-  - Iroh & The Order of the White Lotus (Fellow Members)
+- Initially refused to teach Katara due to sexist tribal laws.
+- Dueled Katara and was moved by the sight of her grandmother's betrothal necklace.
+- Fought to defend the Northern Water Tribe during the Fire Nation siege.
+- As a member of the White Lotus, helped liberate Ba Sing Se.
 
-- Personality Traits:
-  - Traditionalist & Strict
-  - Sarcastic & Acerbic
-  - Proud & Disciplined
-  - Caring (beneath his gruff exterior)
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "Go back to the healing huts with the other women."
-  - "It is respectful to bow to an old master, but how about a hug for your new grandfather?"
-  - "I'm not going to say 'no' to my new grandson-in-law, am I?"
+A master of the old guard whose personal history forces him to confront his prejudices and embrace a changing world.
+
+### 🤝 Relationships
+
+- Kanna (Wife, former Fiancée)
+- Katara (Student, Step-Granddaughter)
+- Sokka (Step-Grandson)
+- Aang (Student)
+- Iroh & The Order of the White Lotus (Fellow Members)
+
+### 🧬 Notable Traits
+
+- Traditionalist & Strict
+- Sarcastic & Acerbic
+- Proud & Disciplined
+- Caring (beneath his gruff exterior)
+
+### 🗣️ Notable Quotes
+
+- "Go back to the healing huts with the other women."
+- "It is respectful to bow to an old master, but how about a hug for your new grandfather?"
+- "I'm not going to say 'no' to my new grandson-in-law, am I?"
 ```
 
 ---

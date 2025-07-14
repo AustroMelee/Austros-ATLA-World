@@ -8,10 +8,9 @@ interface EntityGridProps {
   onSelect: (id: string | null) => void;
   selectedId: string | null;
   scrollContainerRef: React.RefObject<HTMLDivElement>;
-  onAddToCollection: (itemId: string) => void;
 }
 
-export default function EntityGrid({ items, onSelect, selectedId, scrollContainerRef, onAddToCollection }: EntityGridProps) {
+export default function EntityGrid({ items, onSelect, selectedId, scrollContainerRef }: EntityGridProps) {
   const itemRefs = useRef<Map<string, HTMLDivElement | null>>(new Map());
   const lastFocusedElement = useRef<HTMLElement | null>(null);
 
@@ -50,39 +49,56 @@ export default function EntityGrid({ items, onSelect, selectedId, scrollContaine
   const expandedItem = selectedId ? items.find(item => item.id === selectedId) : null;
   
   return (
-    <div className="relative">
-      {/* Grid of Compact Cards */}
-      <div className={`${expandedItem ? 'opacity-10 pointer-events-none' : 'opacity-100'} grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 transition-opacity duration-300`}>
+    <div className="relative overflow-x-hidden">
+      {/* Card Grid: Now Flexbox for overflow-safe hover */}
+      <div
+        className={`${expandedItem ? 'opacity-10 pointer-events-none' : 'opacity-100'} flex flex-wrap gap-8 overflow-visible px-6 py-8`}
+      >
+        {/* Uncomment for debug: <div className="ring-4 ring-yellow-500"> */}
         {items.map(item => (
           <div
             key={item.id}
             ref={node => { itemRefs.current.set(item.id, node); }}
+            className="relative overflow-visible w-[300px] m-2"
           >
-            <ItemCard
-              item={item as EnrichedCharacter}
-              expanded={false}
-              onExpand={() => onSelect(item.id)}
-            />
+            {/* Uncomment for debug: <div className="ring-4 ring-orange-500"> */}
+            <div className={
+              `transition-transform duration-200 ease-out${selectedId !== item.id ? ' hover:scale-[1.015] hover:z-10 hover:shadow-lg' : ''}`
+            }>
+              <ItemCard
+                item={item as EnrichedCharacter}
+                expanded={false}
+                onExpand={() => onSelect(item.id)}
+              />
+            </div>
+            {/* Uncomment for debug: </div> */}
           </div>
         ))}
+        {/* Uncomment for debug: </div> */}
       </div>
       
       {/* Modal Overlay for Expanded Card */}
       {expandedItem && (
         <section
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm"
-          onClick={(e) => { if (e.target === e.currentTarget) onSelect(null); }}
-          onKeyDown={(e) => { if (e.key === 'Escape') onSelect(null); }}
           role="dialog"
           aria-modal="true"
-          tabIndex={0}
         >
-          <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+          {/* Overlay click to close */}
+          <button
+            type="button"
+            className="absolute inset-0 w-full h-full cursor-default bg-transparent border-none p-0 m-0"
+            aria-label="Close expanded card"
+            tabIndex={0}
+            onClick={() => onSelect(null)}
+            onKeyDown={e => { if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') onSelect(null); }}
+            style={{ zIndex: 1 }}
+          />
+          <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto relative" style={{ zIndex: 2 }}>
             <ItemCard
               item={expandedItem as EnrichedCharacter}
               expanded={true}
               onExpand={() => onSelect(null)}
-              onAddToCollection={() => onAddToCollection(expandedItem.id)}
             />
           </div>
         </section>

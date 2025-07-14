@@ -15,34 +15,39 @@
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: June
-- Nation: Earth Kingdom
-- Age: Unknown (Young Adult)
-- Overview: An infamous bounty hunter with a reputation for success, June operates with a cool, professional detachment. Aided by her powerful, scent-tracking shirshu, Nyla, she is a master of capture and combat. Though she initially works only for money, she demonstrates a deeper sense of morality when it truly matters, eventually leaving her old life behind for a new, more peaceful career.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Hired by Zuko to track the Avatar using Katara's necklace.
-  - Hired again by Zuko to find Iroh, leading Team Avatar to the Order of the White Lotus.
-  - Retired from bounty hunting to become the "tea discoverer" for Iroh's Jasmine Dragon.
-  - Rescued Iroh from a vengeful crime boss.
+An infamous bounty hunter with a reputation for success, June operates with a cool, professional detachment. Aided by her powerful, scent-tracking shirshu, Nyla, she is a master of capture and combat. Though she initially works only for money, she demonstrates a deeper sense of morality when it truly matters, eventually leaving her old life behind for a new, more peaceful career.
 
-- Role in the Story: A recurring neutral party whose unique skills serve as a crucial plot device, and whose presence tests the resolve and morality of the main characters.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Nyla (Shirshu, Lifelong Companion)
-  - Zuko (Client)
-  - Iroh (Client, Admirer, Eventual Employer)
+- Hired by Zuko to track the Avatar using Katara's necklace.
+- Hired again by Zuko to find Iroh, leading Team Avatar to the Order of the White Lotus.
+- Retired from bounty hunting to become the "tea discoverer" for Iroh's Jasmine Dragon.
+- Rescued Iroh from a vengeful crime boss.
 
-- Personality Traits:
-  - Confident & Self-assured
-  - Sassy & Sarcastic
-  - Uncaring & Professional (outwardly)
-  - Pragmatic
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "I'm a little short on money."
-  - "Sounds like a nasty situation. Hope you find a way out of it."
-  - "My Snuffly Wuffly!"
+A recurring neutral party whose unique skills serve as a crucial plot device, and whose presence tests the resolve and morality of the main characters.
+
+### 🤝 Relationships
+
+- Nyla (Shirshu, Lifelong Companion)
+- Zuko (Client)
+- Iroh (Client, Admirer, Eventual Employer)
+
+### 🧬 Notable Traits
+
+- Confident & Self-assured
+- Sassy & Sarcastic
+- Uncaring & Professional (outwardly)
+- Pragmatic
+
+### 🗣️ Notable Quotes
+
+- "I'm a little short on money."
+- "Sounds like a nasty situation. Hope you find a way out of it."
+- "My Snuffly Wuffly!"
 ```
 
 ---
