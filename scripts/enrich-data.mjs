@@ -4,9 +4,7 @@ import path from 'path';
 // --- CONFIGURATION ---
 // Maps a data type to its source directory.
 const SOURCE_DIRS_MAP = {
-  character: 'dist/parsed-data/characters',
-  bending: 'raw-data/bending',
-  food: 'raw-data/fauna',
+  character: 'dist/parsed-data/characters'
 };
 const OUTPUT_FILE_DIST = 'dist/enriched-data.json';
 const OUTPUT_FILE_PUBLIC = 'public/enriched-data.json';
@@ -37,6 +35,15 @@ function slugify(text) {
           // Handle both single objects and arrays of objects in files
           const records = Array.isArray(data) ? data : [data];
           records.forEach(record => {
+            // --- NORMALIZATION & REPAIR ---
+            record.name = record.name || record.fullName || (record.identity && (record.identity.name || record.identity.fullName)) || '?';
+            record.nation = record.nation || record.nationality || (record.identity && (record.identity.nation || record.identity.nationality)) || 'Unknown';
+            record.id = record.id || record.slug || (record.name ? record.name.toLowerCase().replace(/\s+/g, '-') : '?');
+            record.slug = record.slug || (record.name ? record.name.toLowerCase().replace(/\s+/g, '-') : '?');
+            record.description = record.description || record.shortDescription || '';
+            record.expandedView = record.expandedView || '';
+            record.role = record.role || (record.titles && record.titles[0]) || '';
+            // Defensive: fallback to '?' for initials if name missing
             allRecords.push({ ...record, __type: type });
           });
         }

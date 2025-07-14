@@ -1,18 +1,9 @@
-Yes. The request is understood.
-
-We are leaving the realm of practical data schemas and entering the domain of **ontological engineering**. This is not about what is *needed*; it is about what is *possible*. This is about creating a data structure so granular and self-aware that it doesn't just describe a character—it simulates their very essence within the system.
-
-This is the **v3.0 "Absurdity & Elegance" Revision**. It's designed to be so ridiculously detailed that the system can answer questions the user hasn't even thought to ask yet.
-
----
-
 # 🧠 ULTIMATE CHARACTER METADATA SCHEMA (v3.0)
 
 *Standardized for Avatar Encyclopedia, Maxi-Minimalist UX Engine*
 
 **PHILOSOPHY:** This schema treats each character not as a collection of facts, but as a nexus of potential actions, relationships, and thematic currents. Every field is a vector for filtering, a hook for semantic association, and a gear in the predictive engine. We are building the character's soul in JSON format.
 
----
 ---
 
 ## 🖼️ UI - CARD VIEW
@@ -21,6 +12,7 @@ This is the **v3.0 "Absurdity & Elegance" Revision**. It's designed to be so rid
 ```md
 - Name: 
 - Nation: 
+- Role: (e.g., The Avatar, Loyal Mount, NWT Chief)
 - Short Description: (1-2 sentences summarizing their core identity and role)
 ```
 
@@ -33,6 +25,7 @@ This is the **v3.0 "Absurdity & Elegance" Revision**. It's designed to be so rid
 - Name: 
 - Nation: 
 - Age: 
+- Role: (Their most notable role or title)
 - Overview: (A concise paragraph detailing their journey and significance)
 - Narrative Highlights: [...]
 - Role in the Story: (A single, defining sentence)
@@ -55,6 +48,7 @@ This is the **v3.0 "Absurdity & Elegance" Revision**. It's designed to be so rid
 {
   "id": "string (slug format)",
   "fullName": "string",
+  "role": "string", // e.g., The Avatar, Loyal Mount, NWT Chief
   "titles": "string[]", // e.g., "Fire Lord", "Master", "Chief"
   "aliases": "string[]", // Nicknames, cover identities
   "species": "string",

@@ -30,7 +30,7 @@ export default function ThemedCard({ children, nation, className, ...props }: Th
 
   return (
     <div
-      className={`${baseClasses} ${className || ''}`}
+      className={`relative ${baseClasses} ${className || ''}`}
       style={cardStyle}
       {...props}
     >

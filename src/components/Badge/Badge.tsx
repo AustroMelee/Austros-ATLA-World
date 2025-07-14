@@ -18,8 +18,8 @@ export interface BadgeProps {
 const typeColorMap: Record<string, string> = {
   nation: 'bg-blue-800 text-blue-100',
   bending: 'bg-orange-800 text-orange-100',
-  age: 'bg-slate-800 text-slate-300',
-  custom: 'bg-slate-700 text-slate-200',
+  age: 'bg-zinc-900 text-neutral-200',
+  custom: 'bg-neutral-800 text-neutral-100',
 };
 
 // Variant mapping for additional styling

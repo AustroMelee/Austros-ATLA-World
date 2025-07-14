@@ -5,7 +5,7 @@
 ## 🖼️ UI - CARD VIEW
 
 ```md
-- Name: Earth King Kuei
+- Name: Kuei
 - Nation: Earth Kingdom
 - Short Description: The naive and sheltered 52nd Earth King of Ba Sing Se. For years, he was a puppet ruler, manipulated by his treacherous Grand Secretariat, Long Feng.
 ```

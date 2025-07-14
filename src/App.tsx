@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound';
 const App: React.FC = () => (
   <Router>
     <Layout>
-      <div className="bg-slate-900 text-slate-100 min-h-screen">
+      <div className="bg-zinc-950 text-neutral-200 min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />

@@ -3,7 +3,7 @@ import path from 'path';
 import FlexSearch from 'flexsearch';
 
 // --- CONFIGURATION ---
-const SOURCE_FILE = 'dist/enriched-data.json';
+const SOURCE_FILE = 'public/enriched-characters.json';
 const OUTPUT_DIR = 'public';
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'search-index.json');
 

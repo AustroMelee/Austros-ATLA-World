@@ -23,7 +23,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filterConfig }) => {
       {filterConfig.map((group, groupIdx) => (
         <div
           key={group.label}
-          className={`backdrop-blur-md bg-slate-900/60 rounded-xl p-4${groupIdx !== 0 ? ' mt-8' : ''} mb-6`}
+          className={`backdrop-blur-md bg-zinc-950/60 rounded-xl p-4${groupIdx !== 0 ? ' mt-8' : ''} mb-6`}
         >
           <h3 className="text-lg font-semibold uppercase tracking-widest mb-2 mt-6">{group.label}</h3>
           {group.filters.map(({ key, label }, filterIdx) => (

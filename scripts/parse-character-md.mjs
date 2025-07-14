@@ -60,32 +60,44 @@ async function main() {
 
     // --- SINGLE RESPONSIBILITY: EXTRACT ALL DATA ---
 
-    // 1. Extract basic UI "Card View" data
+    // 1. Extract all backend metadata from JSON blocks (must be first)
+    const jsonObjects = extractJsonBlocks(fileContent);
+    const backendData = flattenObjects(jsonObjects);
+
+    // 2. Extract basic UI "Card View" data
     const cardViewMatch = fileContent.match(/## [^\n]*UI - CARD VIEW[^`]*```md\s*([\s\S]*?)\s*```/);
     const cardContent = cardViewMatch ? cardViewMatch[1] : '';
 
     const cardData = {
       name: extractValue(cardContent, 'Name') || 'Unknown',
       nation: extractValue(cardContent, 'Nation') || 'Unknown',
+      role: extractValue(cardContent, 'Role') || (backendData.role || ''),
       description: extractValue(cardContent, 'Short Description') || '',
     };
-    
-    // 1b. Extract UI - EXPANDED VIEW block as markdown string
+
+    // 3. Extract UI - EXPANDED VIEW block as markdown string
     const expandedViewMatch = fileContent.match(/## [^\n]*UI - EXPANDED VIEW[^`]*```md\s*([\s\S]*?)\s*```/);
     const expandedView = expandedViewMatch ? expandedViewMatch[1].trim() : '';
     
-    // 2. Extract all backend metadata from JSON blocks
-    const jsonObjects = extractJsonBlocks(fileContent);
-    const backendData = flattenObjects(jsonObjects);
-    
     // 3. Combine all data into one rich object
-    const characterData = {
+    let characterData = {
       ...backendData, // Backend data is the base
       ...cardData,    // Card view data can override for consistency if needed
       expandedView,   // Add the expanded view markdown
       __type: 'character',
       __source: path.basename(file),
     };
+
+    // --- NORMALIZATION & REPAIR ---
+    // Map alternate/nested field names to canonical
+    characterData.name = characterData.name || characterData.fullName || (characterData.identity && (characterData.identity.name || characterData.identity.fullName)) || '?';
+    characterData.nation = characterData.nation || characterData.nationality || (characterData.identity && (characterData.identity.nation || characterData.identity.nationality)) || 'Unknown';
+    characterData.id = characterData.id || characterData.slug || (characterData.name ? characterData.name.toLowerCase().replace(/\s+/g, '-') : '?');
+    characterData.slug = characterData.slug || (characterData.name ? characterData.name.toLowerCase().replace(/\s+/g, '-') : '?');
+    characterData.description = characterData.description || characterData.shortDescription || '';
+    characterData.expandedView = characterData.expandedView || '';
+    // Defensive: fallback to '?' for initials if name missing
+    // ... existing code ...
 
     // --- END OF RESPONSIBILITY ---
 

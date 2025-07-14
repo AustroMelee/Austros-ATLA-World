@@ -13,7 +13,7 @@ export default function SearchBar({ value, onChange, onSubmit }: SearchBarProps)
       onSubmit={e => { e.preventDefault(); onSubmit(); }}
     >
       <input
-        className="flex-1 px-4 py-3 rounded-lg bg-slate-800 text-slate-100 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-nation-water placeholder:text-slate-400 text-base transition-colors duration-200"
+        className="flex-1 px-4 py-3 rounded-lg bg-zinc-900 text-neutral-200 border border-neutral-800 focus:outline-none focus:ring-2 focus:ring-nation-water placeholder:text-neutral-400 text-base transition-colors duration-200"
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder="Search the Avatar world…"

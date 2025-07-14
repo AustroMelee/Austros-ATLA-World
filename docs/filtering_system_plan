@@ -1,108 +1,414 @@
-## **Implementation Plan: AVATAR ATLA WORLD ENCYCLOPEDIA (Context-Specific)**
+Excellent. This is the correct mindset. The blueprint is the "what" and the "why"; this plan is the "how." It provides a step-by-step, robust implementation strategy to bring the blueprint to life, complete with code examples, compatibility checks, and proactive warnings against common pitfalls.
 
-This plan translates the Avatar Encyclopedia blueprint into a phased, step-by-step development process. Each step is designed to be a concrete, testable unit of work, tailored to the real data pipeline, type system, and UI architecture.
+This plan is structured in distinct, testable phases. Adhere to it, and the result will be a powerful, performant, and maintainable search system.
 
-[START-COMPLETE]
-### **Phase 0: Data Pipeline & Project Setup**
+🚀 Implementation Plan: Client-Side Search Engine v4.0
 
-This foundational phase ensures robust, scalable, and type-safe data handling.
-**1. Technology Stack Selection & Justification:**
-    *   **Framework:** **React** (with Vite) for component-based, performant UI.
-    *   **Language:** **TypeScript** for strict typing and maintainability.
-    *   **Styling:** **Tailwind CSS** for utility-first, responsive design.
-    *   **Search:** **FlexSearch** for fast, client-side full-text search.
-    *   **Data Pipeline:** Custom scripts for Markdown → JSON → enrichment → search index.
-    *   **Other:** ESLint, Prettier, Zod (for schema validation), and custom scripts for data processing.
+This document details the phased implementation of the Ultra-Specific Technical Blueprint. Each phase is designed to be a self-contained, verifiable unit of work.
 
-**2. Data Pipeline Initialization:**
-    *   **Task:** Author character and domain data in custom Markdown format in `/raw-data/characters/` and related folders.
-    *   **Task:** Use `scripts/parse-character-md.mjs` to extract and flatten data into JSON.
-    *   **Task:** Validate all JSON with Zod schemas (`raw-data/schema/`).
-    *   **Task:** Enrich data (add slugs, ids, etc.) with `scripts/enrich-data.mjs`.
-    *   **Task:** Build the FlexSearch index with `scripts/build-index.mjs`.
-    *   **Task:** Output: `public/enriched-data.json` and `public/search-index.json`.
+Phase 0: Foundation & Tooling Setup
 
-**3. Directory & File Structure:**
-    *   **Task:** Maintain logical structure:
-        *   `/src/components`: Reusable UI components (e.g., `ItemCard`, `EntityGrid`, `FilterSidebar`).
-        *   `/src/hooks`: Custom React hooks (e.g., `useAustrosSearch`, `useDebounce`).
-        *   `/src/search`: Search engine logic (e.g., `ClientSearchEngine.ts`).
-        *   `/src/types`: Shared TypeScript interfaces (e.g., `EnrichedCharacter`, `EnrichedRecord`).
-        *   `/src/styles`: Global CSS and Tailwind config.
-        *   `/public`: Static assets and generated data files.
+Goal: Establish a clean, stable environment before writing any core logic.
 
-**4. Core Type Definitions:**
-    *   **Task:** Define all domain types in `/src/types/` (e.g., `EnrichedCharacter`, `BendingArt`, etc.).
-    *   **Task:** Ensure all data pipeline scripts and UI components use these types for type safety.
+File & Folder Structure: Create the directory structure outlined in the blueprint. This enforces the Single Responsibility Principle from the start.
 
----
+Generated plaintext
+/src
+  /components
+    /SearchBar
+    /ResultCard
+  /hooks
+    /useSearch.ts
+  /search
+    /engine.ts
+    /preprocessor.ts
+    /types.ts
+  /utils
+    /tokenize.ts
 
-### **Phase 1: UI Foundation & Data Integration**
 
-Goal: Display a working, filterable encyclopedia grid using real, validated data.
+Type Definitions (src/search/types.ts): Codify the data contracts first. This is non-negotiable for TypeScript robustness.
 
-**5. Data Loading & Integration:**
-    *   **Task:** Load enriched data and search index from `public/enriched-data.json` and `public/search-index.json` at app startup.
-    *   **Task:** Use `ClientSearchEngine` to provide search and retrieval functions for the UI.
+Generated typescript
+// src/search/types.ts
 
-**6. Card Grid Display:**
-    *   **Task:** Implement `ItemCard` to display character/domain info.
-    *   **Task:** Implement `EntityGrid` to render a responsive grid of `ItemCard` components.
-    *   **Task:** Use Tailwind for layout (no react-masonry-css needed).
+export interface EnrichedEntity {
+  id: string;
+  name: string;
+  summary: string;
+  metadata: Record<string, string | string[]>;
+  tags?: string[];
+  type: string;
+}
 
-**7. State Management & Filtering:**
-    *   **Task:** Use React hooks (`useState`, `useMemo`, etc.) for all UI state (search query, filters, selection).
-    *   **Task:** Implement filter state and logic in the main container (e.g., `HomeContainer`).
-    *   **Task:** Ensure all filtering is performed on the loaded, enriched data.
+export interface IndexedEntity {
+  id: string;
+  original: EnrichedEntity; // Keep original for rendering
+  searchBlob: string; // A single, massive string of all searchable text
+  fieldMap: Map<string, string[]>; // Normalized key-value pairs for structured search
+}
 
-**8. Search Integration:**
-    *   **Task:** Implement `useAustrosSearch` and connect it to the FlexSearch index for fast, full-text search.
-    *   **Task:** Ensure search results are type-safe and match the domain model.
+export interface SearchToken {
+  type: 'global' | 'structured';
+  key?: string; // e.g., 'nation'
+  value: string; // e.g., 'fire nation'
+}
 
-**9. Filter Sidebar & Chips:**
-    *   **Task:** Implement `FilterSidebar` to display available filters (e.g., nation, bending, role).
-    *   **Task:** Implement `FilterTag` for filter chips (clickable, active/inactive states).
-    *   **Task:** Dynamically generate filter options from the loaded data.
-    *   **Task:** Chain filters: search → type filter → other filters.
-    [END-COMPLETE]
+export interface MatchResult {
+  entityId: string;
+  score: number; // For future relevance ranking
+  matchedFields: {
+    field: string; // e.g., 'metadata.nation' or 'summary'
+    token: string;
+  }[];
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+TypeScript
+IGNORE_WHEN_COPYING_END
+Phase 1: Core Logic - Tokenization & Matching (Pure Functions)
 
----
+Goal: Create the stateless, testable "brain" of the search engine. No React code in this phase.
 
-### **Phase 2: Advanced Features & UX Enhancements**
+Tokenizer (src/utils/tokenize.ts):
 
-Goal: Add intelligence, polish, and advanced user interactions.
+Generated typescript
+// src/utils/tokenize.ts
 
-**10. Advanced Search & Filtering:**
-    *   **Task:** Enhance search logic in `ClientSearchEngine` for more nuanced queries (e.g., synonyms, tags).
-    *   **Task:** Add support for multi-field and fuzzy search using FlexSearch features.
+export function tokenizeInput(input: string): string[] {
+  if (!input) return [];
+  return input
+    .toLowerCase()
+    .trim()
+    .replace(/[.,\/#!$%\^&\*;{}=\-_`~()]/g, "") // Remove punctuation but keep colons for structured search
+    .split(/\s+/)
+    .filter(Boolean); // Remove empty strings
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+TypeScript
+IGNORE_WHEN_COPYING_END
 
-**11. Expanded Card View:**
-    *   **Task:** Implement expanded detail view for characters/entities (modal or panel).
-    *   **Task:** Ensure only one expanded card is visible at a time (SRP-compliant overlay logic).
-    *   **Task:** Add keyboard and click-to-close support.
+Token Resolver (src/search/engine.ts): This function will differentiate between global and structured tokens.
 
-**12. Collections & Personalization:**
-    *   **Task:** Implement collections logic (e.g., save favorite characters) using React state and localStorage if needed.
-    *   **Task:** Add personalization features (recent searches, boosted results) as needed.
+Generated typescript
+// src/search/engine.ts
 
-**13. Accessibility & Performance:**
-    *   **Task:** Ensure all UI is accessible (ARIA labels, keyboard navigation).
-    *   **Task:** Optimize for performance (memoization, lazy loading, etc.).
+import type { SearchToken } from './types';
 
----
+export function resolveTokens(tokens: string[]): SearchToken[] {
+  return tokens.map(token => {
+    if (token.includes(':')) {
+      const [key, ...valueParts] = token.split(':');
+      const value = valueParts.join(':'); // Handle values that might contain colons
+      if (key && value) {
+        return { type: 'structured', key, value };
+      }
+    }
+    return { type: 'global', value: token };
+  });
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+TypeScript
+IGNORE_WHEN_COPYING_END
 
-### **Phase 3: Polish & Documentation**
+Match Engine (src/search/engine.ts):
 
-Goal: Ensure maintainability, clarity, and a robust developer experience.
+Generated typescript
+// src/search/engine.ts (continued)
+import type { IndexedEntity, SearchToken, MatchResult } from './types';
 
-**14. Documentation & Source of Truth:**
-    *   **Task:** Keep `docs/source_of_truth.md` and related docs up to date with all data, type, and UI changes.
-    *   **Task:** Document the data pipeline, type system, and filtering/search logic clearly.
+export function matchEntity(entity: IndexedEntity, tokens: SearchToken[]): MatchResult | null {
+  const matchedFields: MatchResult['matchedFields'] = [];
 
-**15. Automated Checks & Linting:**
-    *   **Task:** Run all lint/type checks and data pipeline scripts before every commit.
-    *   **Task:** Ensure zero lint/type errors and full data validation at all times.
+  for (const token of tokens) {
+    let foundMatch = false;
 
----
+    if (token.type === 'structured' && token.key) {
+      const values = entity.fieldMap.get(token.key);
+      if (values?.some(v => v.includes(token.value))) {
+        foundMatch = true;
+        matchedFields.push({ field: `metadata.${token.key}`, token: token.value });
+      }
+    } else { // Global token
+      if (entity.searchBlob.includes(token.value)) {
+        foundMatch = true;
+        // For simplicity, we'll mark it as a general match. A more advanced version could find the exact field.
+        matchedFields.push({ field: 'global', token: token.value });
+      }
+    }
+    
+    if (!foundMatch) {
+      return null; // AND logic: if any token doesn't match, the entity fails.
+    }
+  }
+  
+  // All tokens found a match
+  return {
+    entityId: entity.id,
+    score: 1, // Basic score; can be enhanced later
+    matchedFields,
+  };
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+TypeScript
+IGNORE_WHEN_COPYING_END
 
-**This plan is now fully aligned with the Avatar Encyclopedia's real architecture, data flow, and UI.**
+⚠️ Pitfall: Avoid premature complexity. Keep the matchEntity function focused on a simple AND-based boolean match for now. Relevance scoring can be added in a later phase.
+
+Phase 2: Data Pre-processing & Indexing
+
+Goal: Transform the raw JSON data into the highly optimized IndexedEntity format on application load.
+
+Preprocessor (src/search/preprocessor.ts): This is the core of your "work at load time" strategy.
+
+Generated typescript
+// src/search/preprocessor.ts
+import type { EnrichedEntity, IndexedEntity } from './types';
+
+function createSearchBlob(entity: EnrichedEntity): string {
+  const textParts: string[] = [
+    entity.name,
+    entity.summary,
+    ...(entity.tags || [])
+  ];
+
+  for (const value of Object.values(entity.metadata)) {
+    if (Array.isArray(value)) {
+      textParts.push(...value);
+    } else if (typeof value === 'string') {
+      textParts.push(value);
+    }
+  }
+
+  return textParts.join(' ').toLowerCase();
+}
+
+function createFieldMap(entity: EnrichedEntity): Map<string, string[]> {
+    const map = new Map<string, string[]>();
+    for (const [key, value] of Object.entries(entity.metadata)) {
+        const values = Array.isArray(value) ? value : [value];
+        map.set(key.toLowerCase(), values.map(v => String(v).toLowerCase()));
+    }
+    return map;
+}
+
+export function preprocessEntities(entities: EnrichedEntity[]): IndexedEntity[] {
+  return entities.map(entity => ({
+    id: entity.id,
+    original: entity,
+    searchBlob: createSearchBlob(entity),
+    fieldMap: createFieldMap(entity),
+  }));
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+TypeScript
+IGNORE_WHEN_COPYING_END
+
+⚠️ Pitfall: Running this preprocessing logic on every search. This must only run once when the application boots. The result should be stored in a useRef or memoized with an empty dependency array in your main container component.
+
+Phase 3: React Hook & State Management
+
+Goal: Create the useSearch hook to orchestrate the search logic and manage React state.
+
+Initial Hook Structure (src/hooks/useSearch.ts):
+
+Generated tsx
+// src/hooks/useSearch.ts
+import { useState, useMemo, useEffect } from 'react';
+import { preprocessEntities } from '../search/preprocessor';
+import { resolveTokens, matchEntity } from '../search/engine';
+import type { EnrichedEntity, IndexedEntity, MatchResult } from '../search/types';
+
+export function useSearch(allEntities: EnrichedEntity[], query: string) {
+  const [results, setResults] = useState<MatchResult[]>([]);
+
+  // Pre-process and index data ONLY ONCE.
+  const indexedEntities = useMemo(() => preprocessEntities(allEntities), [allEntities]);
+
+  useEffect(() => {
+    if (!query) {
+      setResults([]);
+      return;
+    }
+
+    const rawTokens = tokenizeInput(query);
+    const searchTokens = resolveTokens(rawTokens);
+
+    const matches = indexedEntities
+      .map(entity => matchEntity(entity, searchTokens))
+      .filter((result): result is MatchResult => result !== null);
+      
+    setResults(matches);
+
+  }, [query, indexedEntities]);
+
+  return { results };
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Tsx
+IGNORE_WHEN_COPYING_END
+
+⚠️ Pitfall: Passing a new allEntities array on every render will cause the expensive useMemo to re-run. Ensure the source data array has a stable reference.
+
+Phase 4: UI Component Implementation
+
+Goal: Build the stateless UI components that consume the hook's output.
+
+Main Container (HomeContainer.tsx): This is where the hook is called and state is passed down.
+
+Generated tsx
+// src/pages/HomeContainer.tsx
+// (Simplified)
+function HomeContainer() {
+  const [query, setQuery] = useState('');
+  const [allEntities, setAllEntities] = useState<EnrichedEntity[]>([]);
+
+  useEffect(() => {
+    // Fetch your enriched-data.json here and setAllEntities
+  }, []);
+
+  const { results } = useSearch(allEntities, query);
+
+  // Now map results to the full entity data for rendering
+  const resultEntities = useMemo(() => {
+    const entityMap = new Map(allEntities.map(e => [e.id, e]));
+    return results.map(res => entityMap.get(res.entityId)).filter(Boolean) as EnrichedEntity[];
+  }, [results, allEntities]);
+
+  return <Home query={query} setQuery={setQuery} searchResults={resultEntities} />;
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Tsx
+IGNORE_WHEN_COPYING_END
+Phase 5: Performance Optimization & Polish
+
+Goal: Implement the sub-50ms performance enhancements.
+
+Introduce useTransition (src/hooks/useSearch.ts): This is the highest-impact change.
+
+Generated diff
+// src/hooks/useSearch.ts
+--- a/src/hooks/useSearch.ts
++++ b/src/hooks/useSearch.ts
+@@ -1,10 +1,11 @@
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Diff
+IGNORE_WHEN_COPYING_END
+
+import { useState, useMemo, useEffect } from 'react';
+
+import { useState, useMemo, useEffect, useTransition } from 'react';
+// ... imports
+
+export function useSearch(allEntities: EnrichedEntity[], query: string) {
+const [results, setResults] = useState<MatchResult[]>([]);
+
+Generated code
+const [isPending, startTransition] = useTransition();
+
+const indexedEntities = useMemo(() => preprocessEntities(allEntities), [allEntities]);
+
+useEffect(() => {
+  startTransition(() => {
+    if (!query) {
+      setResults([]);
+      return;
+    }
+
+    const rawTokens = tokenizeInput(query);
+    const searchTokens = resolveTokens(rawTokens);
+
+    const matches = indexedEntities
+      .map(entity => matchEntity(entity, searchTokens))
+      .filter((result): result is MatchResult => result !== null);
+      
+    setResults(matches);
+  });
+}, [query, indexedEntities]);
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+Generated code
+return { results };
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+Generated code
+return { results, loading: isPending };
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+}
+
+Generated code
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+Implement Virtualization (src/components/ResultGrid.tsx): For large result sets.
+
+Generated tsx
+// src/components/ResultGrid.tsx
+// THIS IS CONCEPTUAL - requires react-window or similar
+import { FixedSizeList } from 'react-window';
+import ItemCard from './ItemCard';
+
+const Row = ({ index, style, data }) => (
+  <div style={style}>
+    <ItemCard item={data[index]} />
+  </div>
+);
+
+function ResultGrid({ results }) {
+  return (
+    <FixedSizeList
+      height={800} // Example height
+      itemCount={results.length}
+      itemSize={350} // Approximate height of one card
+      itemData={results}
+      width="100%"
+    >
+      {Row}
+    </FixedSizeList>
+  );
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Tsx
+IGNORE_WHEN_COPYING_END
+
+This phased approach builds the system from the ground up, ensuring each component is logical and testable before integrating it into the reactive UI. By separating core logic from state management and presentation, you create a system that is not only fast but also easy to debug and extend in the future.

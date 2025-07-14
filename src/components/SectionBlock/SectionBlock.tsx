@@ -23,9 +23,9 @@ const typeVariantMap: Record<string, SectionBlockProps['variant']> = {
 };
 
 const variantMap: Record<string, string> = {
-  default: 'bg-slate-800/70 border-l-4 border-blue-700',
+  default: 'bg-zinc-900/70 border-l-4 border-blue-700',
   highlight: 'bg-blue-900/80 border-l-4 border-blue-400',
-  subtle: 'bg-slate-900/40 border-l-4 border-slate-700',
+  subtle: 'bg-zinc-950/40 border-l-4 border-neutral-800',
 };
 
 export const SectionBlock: React.FC<SectionBlockProps> = ({ title, icon, children, variant = 'default', type }) => {

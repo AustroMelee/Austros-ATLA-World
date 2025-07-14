@@ -5,9 +5,9 @@ This is the canonical, always-up-to-date reference for how data, styling, and lo
 ---
 ---
 
-## ⚙️ The Data Pipeline Workflow
+## ⚙️ The Data Pipeline Workflow (2024+)
 
-This is the standard operating procedure for any data changes. The pipeline is designed to be robust, but it depends on the correct initial data format.
+This is the standard operating procedure for any data changes. The pipeline is robust, but depends on the correct initial data format and a strict character-only policy for all downstream data.
 
 ### **1. ✍️ Data Authoring: The v3.0 Metadata Schema**
 
@@ -19,9 +19,86 @@ All character data is authored in a custom markdown format designed for maximum 
     2.  **Expanded View Block:** A `UI - EXPANDED VIEW` block for human-readable detailed descriptions.
     3.  **Backend Metadata Blocks:** Multiple `json` code blocks containing detailed fields from the `v3.0` character schema. These are parsed, merged, and flattened into a single, rich object.
 
-### **2. 🤖 Parsing, Validation & Indexing: The Automated Scripts**
+## How to Author Character Markdown Files (v3.0 Schema)
 
-This is the automated process that transforms raw markdown into a structured, searchable application.
+> **MANDATORY: Use the following format for every character file. The parser will fail if you do not.**
+
+1. **Card View Block (for UI summary):**
+   ```
+   ## UI - CARD VIEW
+
+   ```md
+   - Name: [Character Name]
+   - Nation: [Nation]
+   - Short Description: [1-2 sentence summary]
+   ```
+   ```
+
+2. **Expanded View Block (for detailed UI view):**
+   ```
+   ## UI - EXPANDED VIEW
+
+   ```md
+   (Detailed markdown content, can use markdown formatting, lists, quotes, etc.)
+   ```
+   ```
+
+3. **Backend Metadata Blocks:**
+   - Add as many `json` code blocks as needed, each with a specific section of the v3.0 schema.
+
+4. **Do NOT use `---` or bold/asterisk fields for Card/Expanded View.**
+   - The parser will ignore these and set fields to "Unknown".
+
+5. **After editing or adding a file, always run:**
+   ```
+   npm run build:data
+   ```
+   - Check for errors in the terminal.
+   - Hard refresh your browser to see changes.
+
+---
+
+## 🛑 Common Pitfalls & How to Avoid Data Loss in the App/Search
+
+> **If a new character is missing from the app or search index, or appears as "Unknown":**
+
+### 1. Authoring Checklist (MANDATORY)
+- **File location:** `raw-data/characters/[character-slug].md` (filename must match the canonical slug, e.g., `combustion-man.md`)
+- **Card View Block:**
+  - Must start with `## UI - CARD VIEW` (level 2 header)
+  - Must use a fenced code block: <code>```md</code>
+  - Each field must be dash-prefixed (e.g., `- Name: ...`)
+- **Expanded View Block:**
+  - Must start with `## UI - EXPANDED VIEW` (level 2 header)
+  - Must use a fenced code block: <code>```md</code>
+  - Content can be any markdown, but must be inside the code block
+- **Backend Metadata Block(s):**
+  - Must use fenced <code>```json</code> code blocks
+  - Each block must be valid JSON (no trailing commas, all required fields present)
+  - **REQUIRED:** Each backend block must include at least `id` and `slug` fields (these are used for enrichment and indexing)
+- **Do NOT:**
+  - Use `---`, bold, or asterisk-prefixed fields for Card/Expanded View (these will be ignored)
+  - Omit required fields (`id`, `slug`) in backend JSON
+  - Use a filename that does not match the canonical slug (e.g., typos like `combustian-man.md`)
+
+### 2. Troubleshooting Checklist
+- [ ] Is the filename correct and matches the intended slug?
+- [ ] Are all required blocks present and formatted exactly as shown above?
+- [ ] Are all backend JSON blocks valid and include `id` and `slug`?
+- [ ] Did you run `npm run build:data` and check for errors?
+- [ ] Did you hard refresh your browser after rebuilding?
+- [ ] If a character is missing or appears as "Unknown":
+    - Check the parsed JSON in `raw-data/characters/json/` for missing or empty fields
+    - Check `public/enriched-data.json` and `dist/enriched-data.json` for the character's presence
+    - If missing, fix the markdown file and rerun the pipeline
+
+> **If you follow this checklist, your new character will always appear correctly in the app and search index.**
+
+---
+
+### **2. 🤖 Parsing, Validation, Cleaning & Indexing: The Automated Scripts**
+
+This is the automated process that transforms raw markdown into a structured, character-only, searchable application.
 
 1.  **Parse Custom Markdown (`npm run parse:characters`)**
     *   **What it does:** Runs `scripts/parse-character-md.mjs`. This custom script reads our unique `.md` format, extracts Card and Expanded View data, finds all `json` blocks, and flattens them into a single, valid JSON object per character.
@@ -32,10 +109,15 @@ This is the automated process that transforms raw markdown into a structured, se
 
 3.  **Enrich Data (`npm run enrich:data`)**
     *   **What it does:** Adds machine-generated fields: a unique `id`, a URL-friendly `slug`, and a `__type` identifier to every record.
-    *   **Output:** A single, consolidated `dist/enriched-data.json` file.
+    *   **Output:** A single, consolidated `dist/enriched-data.json` file (may contain non-character records at this stage).
 
-4.  **Build Search Index (`npm run build:index`)**
-    *   **What it does:** Reads the enriched data to build a fast, client-ready FlexSearch index.
+4.  **Clean Character Data (`node scripts/clean-characters.mjs`)**
+    *   **What it does:** Reads the enriched data and filters out any record that is not a valid character (must have `__type: "character"` and non-empty `name`, `nation`, and `description`).
+    *   **Output:** Overwrites both `public/enriched-data.json` and `dist/enriched-data.json` with only valid character records. **No non-character data is present downstream.**
+    *   **Safety:** The script creates backups of the original files before overwriting.
+
+5.  **Build Search Index (`npm run build:index`)**
+    *   **What it does:** Reads the cleaned, character-only enriched data to build a fast, client-ready FlexSearch index.
     *   **Indexed Fields:** Includes core fields (`name`, `description`) and **all filterable v3.0 metadata fields** (`nation`, `gender`, `archetype`, `moralAlignment`, and a flattened `all_tags` field from `tagCategories`).
     *   **Output:** `public/search-index.json`. This is the file the live application loads.
 
@@ -44,14 +126,17 @@ This is the automated process that transforms raw markdown into a structured, se
 To prevent errors, always use the master script which executes all steps in the correct order:
 ```bash
 npm run build:data
+node scripts/clean-characters.mjs
+npm run build:index
 ```
 
 ### **4. ✅ How to Maintain the Data**
 
 - **Edit or Add Data:** Modify or create files in the `raw-data/` directory, strictly following the v3.0 schema and custom markdown format.
-- **Run the Pipeline:** Open your terminal and run `npm run build:data`.
+- **Run the Pipeline:** Open your terminal and run the full sequence above.
 - **Check for Errors:** Watch the terminal output for any validation or enrichment errors.
 - **Refresh UI:** Hard refresh your browser (`Ctrl+F5` or `Cmd+Shift+R`) to see the changes live.
+- **If you see extra or "Unknown" cards:** Re-run the cleaning script to ensure only valid character records are present.
 
 ---
 
@@ -334,6 +419,65 @@ This section documents common issues and their root causes, based on our debuggi
 
 ---
 
+## 📝 Canonical Expanded View Structure Required for Rich Cards
+
+> **MANDATORY:** For a fully rich card, your expanded view block must include all of the following sections, using the canonical template below. Omitting sections will result in a less detailed card.
+
+### How to Author the Expanded View Block
+
+- Always include these sections, in this order:
+  - `### 📖 Overview` (narrative summary)
+  - `### 🧩 Role in the Story` (context and arc)
+  - `### 🤝 Relationships` (key connections)
+  - `### 🌟 Notable Traits` (personality, skills, quirks)
+  - `### 💬 Quotes` (memorable lines)
+  - `### ✨ Narrative Highlights` (bulleted list of feats, moments, or traits)
+- Use markdown headings, icons, and lists for best results.
+- Copy and fill in the structure below:
+
+```
+## UI - EXPANDED VIEW
+
+```md
+### 📖 Overview
+
+[1-2 paragraph summary]
+
+### 🧩 Role in the Story
+
+[Describe their narrative arc, turning points, or importance.]
+
+### 🤝 Relationships
+
+- [Relationship 1: description]
+- [Relationship 2: description]
+
+### 🌟 Notable Traits
+
+- [Trait 1]
+- [Trait 2]
+
+### 💬 Quotes
+
+> "Memorable quote here."
+> — Character Name
+
+### ✨ Narrative Highlights
+
+- [Bullet point 1]
+- [Bullet point 2]
+```
+```
+
+### Updating Legacy Cards
+- If a card is missing sections, edit the expanded view block to match the above template.
+- Run `npm run build:data` and hard refresh the app to see the update.
+
+### Future Policy
+- A markdown linter or template validator may be added to enforce this automatically. Until then, always use the canonical structure for new and updated cards.
+
+---
+
 ## ⚙️ Data Parsing: SRP-Compliant Parser
 
 The character data parser (`scripts/parse-character-md.mjs`) now follows the Single Responsibility Principle (SRP):
@@ -395,5 +539,127 @@ The character data parser (`scripts/parse-character-md.mjs`) now follows the Sin
 **Enforcement:**
 - All maintainers and contributors must follow this policy. Any regression to metadata-driven expanded views is a critical bug and must be immediately reverted.
 - Reviewers must check that all card and expanded views are rendering the correct, authored content.
+
+---
+
+## 🚦 Step-by-Step: How to Add a New Character Card (v3.0+ Robust Pipeline)
+
+> **Follow these steps exactly for every new character. The system now auto-repairs most issues, but canonical format is still required for best results.**
+
+1. **Create a new file:**
+   - Location: `raw-data/characters/[character-slug].md` (use kebab-case, e.g., `combustion-man.md`)
+
+2. **Add the Card View Block:**
+   ```
+   ## UI - CARD VIEW
+
+   ```md
+   - Name: [Character Name]
+   - Nation: [Nation]
+   - Short Description: [1-2 sentence summary]
+   ```
+   ```
+
+3. **Add the Expanded View Block:**
+   ```
+   ## UI - EXPANDED VIEW
+
+   ```md
+   (Detailed markdown content, can use markdown formatting, lists, quotes, etc.)
+   ```
+   ```
+
+4. **Add at least one Backend Metadata Block:**
+   - Use a fenced <code>```json</code> code block
+   - Must include at least:
+     - `id` (string, kebab-case, matches filename)
+     - `slug` (string, kebab-case, matches filename)
+     - All other required schema fields as needed
+   - Example:
+   ```
+   ```json
+   {
+     "id": "combustion-man",
+     "slug": "combustion-man",
+     "identity": { "fullName": "Combustion Man", ... },
+     ...
+   }
+   ```
+   ```
+
+5. **Run the pipeline:**
+   ```
+   npm run build:data
+   node scripts/clean-characters.mjs
+   npm run build:index
+   ```
+   - The system will now auto-normalize and repair most missing fields, but canonical format ensures best results.
+
+6. **Check your card in the app:**
+   - Hard refresh your browser.
+   - If anything is missing or broken, check the troubleshooting checklist above.
+   - If you see extra or "Unknown" cards, re-run the cleaning script.
+
+> **Note:** The parser and enrichment scripts now auto-map alternate/nested field names and fill in missing fields with safe defaults. However, always use the canonical format for new cards to guarantee correct display and searchability.
+
+---
+
+## 🖼️ Character Image Rendering: Name, Slug, and Filename Alignment (2024)
+
+> **New Guideline (2024, updated):** For a character card to display its image, the following must all match **exactly** (case, dashes/underscores, and spacing):
+>
+> - The **Card View Block Name** (e.g., `- Name: Kuei`)
+> - The **backend JSON `slug` field** (e.g., `"slug": "kuei"`)
+> - The **image filename** in `public/assets/images/` (e.g., `kuei.jpg`)
+>
+> **All image filenames must be normalized to kebab-case (lowercase, hyphens, no spaces or underscores) to match the slug.**
+> If any of these differ, the app will fall back to initials or not render the image.
+>
+> **Example: Aunt Wu**
+> - Card View Block: `- Name: Aunt Wu`
+> - Backend JSON: `"slug": "aunt-wu"`
+> - Image file: `public/assets/images/aunt-wu.jpg`
+>
+> **Result:** Image displays correctly.
+>
+> **If the image does not display:**
+> - Check that the card name, slug, and image filename all match exactly (kebab-case, hyphens, lowercase, no spaces).
+> - Rebuild the data pipeline (`npm run build:data`).
+> - Hard refresh the browser.
+>
+> **If the card name is different (e.g., `Earth King Kuei`), but the slug and image are `kuei`, the image will not render.**
+>
+> **Validation Policy:**
+> - All new or updated character images must be checked for filename normalization and presence.
+> - A validation script is recommended to enforce asset/slug alignment and surface warnings for mismatches or missing images during the data pipeline.
+
+---
+
+---
+
+## 🚨 Data Authoring Compliance Policy (v3.0 Schema Enforcement)
+
+> **MANDATORY: All character markdown files must strictly follow the v3.0 schema.**
+
+### Common Authoring Mistakes That Cause 'Unknown' Cards
+- Using `---` dividers instead of `## UI - CARD VIEW` and `## UI - EXPANDED VIEW` headers.
+- Using bold (`**Key:**`) or asterisk-prefixed fields instead of dash-prefixed fields (e.g., `- Name: ...`).
+- Omitting fenced code blocks (```md for card/expanded view, ```json for backend).
+- Placing metadata in the wrong section (e.g., putting backend fields in the card view block).
+- Failing to include required fields (`id`, `slug`) in backend JSON.
+
+### Parser Behavior
+- **Any file not using the canonical v3.0 schema will be ignored by the parser.**
+- The pipeline will generate a fallback 'Unknown' card for each invalid file, which will appear in the app and search index **until the cleaning script is run**.
+- This includes legacy files with triple-dash dividers, bold/asterisk fields, or missing code blocks.
+
+### Enforcement Policy
+- **All contributors must validate every new or edited character file for schema compliance before running the data pipeline.**
+- Use the checklist below before adding or editing any file:
+  - [ ] Card View: `## UI - CARD VIEW` header, fenced code block, dash-prefixed fields.
+  - [ ] Expanded View: `## UI - EXPANDED VIEW` header, fenced code block.
+  - [ ] Backend JSON: fenced code block, includes `id` and `slug`.
+  - [ ] No legacy formatting (---, bold, asterisk fields).
+- If any file fails validation, fix it before running the full pipeline.
 
 ---

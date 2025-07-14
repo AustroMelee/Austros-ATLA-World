@@ -17,8 +17,19 @@ function toTitleCase(str?: string): string {
   return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase());
 }
 
+function getInitials(name?: string): string {
+  if (!name) return '?';
+  const words = name.trim().split(/\s+/);
+  if (words.length === 1) {
+    if (words[0].length <= 4) return words[0][0].toUpperCase();
+    return words[0].substring(0, 2).toUpperCase();
+  }
+  // Multi-word: first letter of first and last word
+  return (words[0][0] + words[words.length - 1][0]).toUpperCase();
+}
+
 export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
-  const iconText = (item.name || 'UNK').substring(0, 3).toUpperCase();
+  const iconText = getInitials(item.name);
 
   // Fallbacks for known edge cases
   const imageFallbacks: Record<string, string> = {
@@ -52,8 +63,9 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
       {!expanded && (
         <span className="absolute top-4 right-4 text-subtle opacity-0 group-hover:opacity-80 group-focus-within:opacity-80 transition-opacity duration-150 pointer-events-none text-2xl select-none" aria-hidden="true">›</span>
       )}
-      <div className="px-4 pb-4 pt-6 flex flex-col items-center">
-        <div className="mb-4 flex justify-center w-full">
+      <div className="pb-4 pt-6 flex flex-col min-h-[420px]">
+        {/* AVATAR/IMAGE SECTION - Padded Separately */}
+        <div className="mb-4 flex justify-center w-full px-4">
           <div className="w-44 h-44 sm:w-48 sm:h-48 flex-shrink-0 bg-background rounded-2xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
             {item.slug ? (
               <img
@@ -79,15 +91,18 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
             )}
           </div>
         </div>
-        <div className="flex flex-col items-center w-full">
-          <div className="flex items-center gap-2">
+
+        {/* TITLE & DESCRIPTION SECTION - Padded Separately */}
+        <div className="w-full mt-auto px-4">
+          <div className="flex items-center justify-end gap-2">
             <h3 className="font-bold text-2xl text-white truncate">{toTitleCase(item.name)}</h3>
-            {item.nation && <NationIcon nation={item.nation} size={24} className="ml-2 align-middle" />}
+            {item.nation && <NationIcon nation={item.nation} size={24} className="align-middle flex-shrink-0" />}
           </div>
-          <div className="text-lg text-subtle mt-1 font-medium">Character</div>
+          <div className="text-right text-lg text-subtle mt-1 font-medium">Character</div>
         </div>
+        {/* EXPANDED VIEW - Padded Separately */}
         {expanded && (
-          <div className="prose prose-sm prose-invert max-w-none text-slate-300 mt-4 w-full text-left">
+          <div className="prose prose-sm prose-invert max-w-none text-slate-300 mt-4 w-full text-left px-4">
             {item.expandedView ? (
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
@@ -134,6 +149,13 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
           </div>
         )}
       </div>
+      {item.role && (
+        <div className="absolute bottom-2 right-4">
+          <span className="inline-block text-xs text-blue-300 bg-zinc-900/80 px-2 py-1 rounded shadow-md border border-blue-400/30 font-semibold pointer-events-none select-none">
+            {item.role}
+          </span>
+        </div>
+      )}
     </ThemedCard>
   );
 }

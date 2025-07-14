@@ -9,7 +9,7 @@ export default function CollectionsSidebar({
   collections,
 }: CollectionsSidebarProps) {
   return (
-    <aside className="w-[270px] max-w-[320px] min-w-[250px] bg-slate-900 rounded-2xl p-4 shadow-md border border-slate-800 self-start max-h-[70vh] overflow-y-auto flex flex-col gap-4">
+    <aside className="w-[270px] max-w-[320px] min-w-[250px] bg-zinc-950 rounded-2xl p-4 shadow-md border border-neutral-800 self-start max-h-[70vh] overflow-y-auto flex flex-col gap-4">
       <div className="flex items-center justify-between mb-2">
         <h2 className="text-lg font-bold tracking-tight text-white">My Collections</h2>
         <span className="text-xs text-slate-500">{collections.length} total</span>
