@@ -2,9 +2,11 @@
 import React, { useState, useMemo, useRef, useCallback } from 'react';
 import { Home } from './Home';
 import { useSearchHandler } from '../hooks/useSearchHandler';
+import { useRecentSearchRecorder } from '../hooks/useRecentSearchRecorder';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
 import type { EnrichedCharacter, EnrichedRecord } from '../types/domainTypes';
-import { useCollectionsStore } from '../collections/collectionsStore';
+import { useCollectionsData } from '../hooks/useCollectionsData';
+import { useCollectionsUI } from '../hooks/useCollectionsUI';
 import { useFilters } from '../hooks/useFilters';
 
 export default function HomeContainer() {
@@ -21,23 +23,30 @@ export default function HomeContainer() {
   const [initialItems, setInitialItems] = useState<EnrichedCharacter[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
+
+  // Collections data (CRUD)
   const {
     collections,
-    // selectedItem, // Remove unused
-    panelOpen,
     activeCollectionId,
     setActiveCollectionId,
     createCollection,
     deleteCollection,
     addItemToCollection,
-    // removeItemFromCollection, // Remove unused
-    // openPanel, // Remove unused
+  } = useCollectionsData();
+
+  // Collections UI state
+  const {
+    panelOpen,
+    // selectedItem, // Not used in this container
+    // setSelectedItem, // Not used in this container
     closePanel,
-  } = useCollectionsStore();
+  } = useCollectionsUI();
 
   React.useEffect(() => {
     ClientSearchEngine.getAllByType<EnrichedCharacter>('character').then(setInitialItems);
   }, []);
+
+  useRecentSearchRecorder(query);
 
   // Memoized filter for EnrichedCharacter[]
   const characterSearchResults = useMemo(

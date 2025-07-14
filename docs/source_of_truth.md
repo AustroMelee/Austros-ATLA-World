@@ -152,3 +152,31 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 -   **Problem: A linter error appears in a `.mjs` script.**
     *   **Cause:** The root `tsconfig.json` is configured for the `src` directory.
     *   **Solution:** The project now has a dedicated `tsconfig.node.json` for all scripts, which resolves tooling conflicts correctly. **Do not ignore these linter errors.**
+
+-   **Problem: Vite fails to resolve a local import (e.g., "Failed to resolve import '../theme/nationThemes'") even though the file exists and all paths are correct.**
+    *   **Cause:** This is a known Vite/Windows bug, especially in projects with long paths or spaces. The Vite dev server's resolver can fail to recognize valid TypeScript files due to path ambiguity or cache issues.
+    *   **Solution (CRITICAL):**
+        1. Open `vite.config.ts` and ensure the following alias is present in the `defineConfig` block:
+            ```ts
+            import path from 'path';
+            // ...
+            resolve: {
+              alias: {
+                '@': path.resolve(__dirname, './src'),
+              },
+            },
+            ```
+        2. Update all imports of local files to use the `@` alias and include the `.ts` extension. For example:
+            ```ts
+            // Instead of:
+            import { nationThemeMap } from '../theme/nationThemes';
+            // Use:
+            import { nationThemeMap } from '@/theme/nationThemes.ts';
+            ```
+        3. Restart the Vite dev server. The import error will be resolved, as the alias gives Vite a direct, unambiguous path from the project root.
+        4. After resolving, always run:
+            ```bash
+            npm run lint
+            npx tsc --noEmit
+            ```
+            to verify the project is clean and error-free.

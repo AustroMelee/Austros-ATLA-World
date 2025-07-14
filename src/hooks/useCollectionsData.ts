@@ -1,11 +1,11 @@
-import { useState, useMemo } from 'react';
-import { CollectionManager, UserCollections } from './CollectionManager';
+import { useState } from 'react';
+import { CollectionManager, UserCollections } from '../collections/CollectionManager';
 
-export function useCollectionsStore() {
+/**
+ * Hook for managing persistent collection data (CRUD operations).
+ */
+export function useCollectionsData() {
   const [collections, setCollections] = useState<UserCollections>(CollectionManager.getAllCollections());
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);
-  const [panelOpen, setPanelOpen] = useState(false);
-  // --- NEW STATE FOR SIDEBAR ---
   const [activeCollectionId, setActiveCollectionId] = useState<string | null>(() => {
     const allCollections = CollectionManager.getAllCollections();
     return Object.keys(allCollections)[0] || null;
@@ -15,7 +15,6 @@ export function useCollectionsStore() {
     setCollections(CollectionManager.getAllCollections());
   }
 
-  // --- NEW ACTIONS FOR SIDEBAR ---
   function createCollection(name: string) {
     const newId = CollectionManager.createCollection(name);
     refresh();
@@ -42,32 +41,13 @@ export function useCollectionsStore() {
     refresh();
   }
 
-  function openPanel(itemId: string) {
-    setSelectedItem(itemId);
-    setPanelOpen(true);
-  }
-
-  function closePanel() {
-    setPanelOpen(false);
-    setSelectedItem(null);
-  }
-
-  const activeCollectionItems = useMemo(() => {
-    return activeCollectionId ? collections[activeCollectionId]?.items || [] : [];
-  }, [collections, activeCollectionId]);
-
   return {
     collections,
-    selectedItem,
-    panelOpen,
     activeCollectionId,
-    activeCollectionItems,
     setActiveCollectionId,
     createCollection,
     deleteCollection,
     addItemToCollection,
     removeItemFromCollection,
-    openPanel,
-    closePanel,
   };
 }

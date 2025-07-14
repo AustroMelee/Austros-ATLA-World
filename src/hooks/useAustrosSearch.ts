@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useDebounce } from './useDebounce';
 import type { EnrichedRecord } from '../types/domainTypes';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
-import * as PersonalizationEngine from '../search/PersonalizationEngine';
+// import * as PersonalizationEngine from '../search/PersonalizationEngine';
 
 export interface AustrosSearchResult {
   results: EnrichedRecord[];
@@ -47,8 +47,7 @@ export function useAustrosSearch(query: string): AustrosSearchResult {
         } else {
           setTopHit(null);
         }
-        // **2. ADD TO RECENT SEARCHES**
-        PersonalizationEngine.addRecentSearch(trimmedQuery);
+        // Removed: PersonalizationEngine.addRecentSearch(trimmedQuery);
       } catch(e) {
         console.error("Search hook error:", e);
         setError("Search failed to load.");

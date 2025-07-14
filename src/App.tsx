@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import Home from './pages/Home';
+import HomeContainer from './pages/HomeContainer';
 import NotFound from './pages/NotFound';
 
 const App: React.FC = () => (
@@ -9,7 +9,7 @@ const App: React.FC = () => (
     <Layout>
       <div className="bg-zinc-950 text-neutral-200 min-h-screen">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomeContainer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

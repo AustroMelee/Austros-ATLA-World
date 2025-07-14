@@ -1,6 +1,5 @@
 // Home: Presentational/stateless component for Home page. Receives all data/handlers as props from HomeContainer.
 import React from 'react';
-import HomeContainer from './HomeContainer';
 import SearchBar from '../components/SearchBar';
 import EntityGrid from '../components/EntityGrid/EntityGrid';
 import FilterSidebar from '../components/FilterSidebar';
@@ -9,6 +8,7 @@ import CollectionsPanel from '../components/CollectionsPanel/CollectionsPanel';
 import CollectionsSidebar from '../components/CollectionsSidebar/CollectionsSidebar';
 import type { EnrichedCharacter } from '../types';
 import type { FilterGroup } from '../components/FilterSidebar';
+import { ExpandedItemModal } from '../components/ExpandedItemModal';
 
 interface HomeProps {
   query: string;
@@ -65,6 +65,7 @@ export function Home({
   onSelectCollection,
   onDeleteCollection,
 }: HomeProps) {
+  const expandedItem = selectedId ? filteredResults.find(item => item.id === selectedId) : null;
   return (
     <div className="flex flex-row gap-6 min-h-screen overflow-x-hidden">
       <aside className="w-64 max-w-xs min-w-[200px] flex flex-col gap-6 min-h-screen">
@@ -105,6 +106,9 @@ export function Home({
               scrollContainerRef={scrollContainerRef}
             />
           )}
+          {expandedItem && (
+            <ExpandedItemModal item={expandedItem} onClose={() => setSelectedId(null)} />
+          )}
         </div>
       </main>
       <CollectionsPanel
@@ -117,6 +121,4 @@ export function Home({
     </div>
   );
 }
-
-export default HomeContainer;
 
