@@ -1,7 +1,7 @@
 // Home: Presentational/stateless component for Home page. Receives all data/handlers as props from HomeContainer.
 import React from 'react';
 import HomeContainer from './HomeContainer';
-import SearchBar from '../components/SearchBar/SearchBar';
+import SearchBar from '../components/SearchBar';
 import EntityGrid from '../components/EntityGrid/EntityGrid';
 import FilterSidebar from '../components/FilterSidebar';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -9,7 +9,6 @@ import CollectionsPanel from '../components/CollectionsPanel/CollectionsPanel';
 import CollectionsSidebar from '../components/CollectionsSidebar/CollectionsSidebar';
 import type { EnrichedCharacter } from '../types';
 import type { FilterGroup } from '../components/FilterSidebar';
-import NationIcon from '../components/NationIcon/NationIcon';
 
 interface HomeProps {
   query: string;
@@ -25,11 +24,6 @@ interface HomeProps {
   setSelectedId: (id: string | null) => void;
   scrollContainerRef: React.RefObject<HTMLDivElement>;
   collections: { id: string; name: string; items: string[] }[];
-  activeCollectionId: string | null;
-  activeCollectionItems: EnrichedCharacter[];
-  onSelectCollection: (id: string) => void;
-  onDeleteItem: (collectionId: string, itemId: string) => void;
-  onDeleteCollection: (id: string) => void;
   panelOpen: boolean;
   onClosePanel: () => void;
   onAddItemToCollection: (collectionId: string) => void;
@@ -37,6 +31,11 @@ interface HomeProps {
   suggestion: string;
   textColor: string;
   topNation?: string | null;
+  // Added props for collections
+  activeCollectionId: string | null;
+  activeCollectionItems: EnrichedCharacter[];
+  onSelectCollection: (collectionId: string | null) => void;
+  onDeleteCollection: (collectionId: string) => void;
 }
 
 export function Home({
@@ -53,11 +52,6 @@ export function Home({
   setSelectedId,
   scrollContainerRef,
   collections,
-  activeCollectionId,
-  activeCollectionItems,
-  onSelectCollection,
-  onDeleteItem,
-  onDeleteCollection,
   panelOpen,
   onClosePanel,
   onAddItemToCollection,
@@ -65,6 +59,11 @@ export function Home({
   suggestion,
   textColor,
   topNation,
+  // Destructure new props
+  activeCollectionId,
+  activeCollectionItems,
+  onSelectCollection,
+  onDeleteCollection,
 }: HomeProps) {
   return (
     <div className="flex flex-row gap-6 min-h-screen overflow-x-hidden">
@@ -83,7 +82,6 @@ export function Home({
             activeCollectionId={activeCollectionId}
             activeCollectionItems={activeCollectionItems}
             onSelectCollection={onSelectCollection}
-            onDeleteItem={onDeleteItem}
             onDeleteCollection={onDeleteCollection}
           />
         </section>
@@ -91,11 +89,11 @@ export function Home({
       <main className="flex-1 flex flex-col overflow-visible">
         <div className="flex-shrink-0 pt-4">
           <SearchBar
-            query={query}
-            onQueryChange={setQuery}
+            value={query}
+            onChange={setQuery}
             suggestion={suggestion}
             textColor={textColor}
-            nationIcon={topNation ? <NationIcon nation={topNation} size={18} /> : undefined}
+            nationIcon={topNation}
           />
         </div>
         <div ref={scrollContainerRef} className="pt-6 pr-2 overflow-visible">

@@ -1,5 +1,5 @@
 ---
-UI - CARD VIEW
+type: character
 ---
 ## UI - CARD VIEW
 

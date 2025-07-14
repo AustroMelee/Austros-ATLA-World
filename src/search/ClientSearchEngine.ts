@@ -140,10 +140,13 @@ export async function search(query: string): Promise<EnrichedRecord[]> {
   return finalResults;
 }
 
-export async function getAllByType(type: string): Promise<EnrichedRecord[]> {
+export async function getAllByType<T extends EnrichedRecord>(type: T['__type']): Promise<T[]> {
   await init();
   const allRecords = Array.from(recordMap.values());
-  return allRecords.filter(record => typeof (record as { __type?: string }).__type === 'string' && (record as { __type: string }).__type === type);
+  const filteredRecords = allRecords.filter(
+    (record) => record.__type === type
+  );
+  return filteredRecords as T[];
 }
 
 export async function getEntityBySlug(slug: string): Promise<EnrichedRecord | undefined> {

@@ -1,12 +1,21 @@
 import React from 'react';
+import { EnrichedCharacter } from '../../types/domainTypes';
 // import { Badge } from '../Badge/Badge';
 
 interface CollectionsSidebarProps {
-  collections: { id: string; name: string }[];
+  collections: { id: string; name: string; items: string[] }[];
+  activeCollectionId: string | null;
+  activeCollectionItems: EnrichedCharacter[];
+  onSelectCollection: (collectionId: string | null) => void;
+  onDeleteCollection: (collectionId: string) => void;
 }
 
 export default function CollectionsSidebar({
   collections,
+  activeCollectionId: _activeCollectionId,
+  activeCollectionItems: _activeCollectionItems,
+  onSelectCollection: _onSelectCollection,
+  onDeleteCollection: _onDeleteCollection,
 }: CollectionsSidebarProps) {
   return (
     <aside className="w-[270px] max-w-[320px] min-w-[250px] bg-zinc-950 rounded-2xl p-4 shadow-md border border-neutral-800 self-start max-h-[70vh] overflow-y-auto flex flex-col gap-4">

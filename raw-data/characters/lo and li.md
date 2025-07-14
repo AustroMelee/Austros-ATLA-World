@@ -1,3 +1,7 @@
+---
+type: character
+---
+
 ## UI - CARD VIEW
 
 ```md
@@ -43,7 +47,6 @@ They served as mentors for Azula's firebending training and as political adviser
 - Presided over Fire Nation rallies and ceremonies.
 - Mentored Azula in strategy and discipline.
 - Known for their dignified yet playful personalities.
-```
 
 ```json
 {
@@ -137,3 +140,4 @@ They served as mentors for Azula's firebending training and as political adviser
     "flags": []
   }
 }
+```

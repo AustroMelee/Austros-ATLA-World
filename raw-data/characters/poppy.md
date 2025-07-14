@@ -1,3 +1,7 @@
+---
+type: character
+---
+
 ## UI - CARD VIEW
 
 ```md

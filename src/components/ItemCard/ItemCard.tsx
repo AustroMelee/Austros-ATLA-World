@@ -5,27 +5,12 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import NationIcon from '../NationIcon/NationIcon';
 import { FaBookOpen, FaStar, FaHandshake, FaTheaterMasks, FaMagic } from 'react-icons/fa';
+import { toTitleCase, getInitials } from '../../utils/stringUtils';
 
 interface ItemCardProps {
   item: EnrichedCharacter;
   expanded: boolean;
   onExpand: () => void;
-}
-
-function toTitleCase(str?: string): string {
-  if (!str) return '';
-  return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase());
-}
-
-function getInitials(name?: string): string {
-  if (!name) return '?';
-  const words = name.trim().split(/\s+/);
-  if (words.length === 1) {
-    if (words[0].length <= 4) return words[0][0].toUpperCase();
-    return words[0].substring(0, 2).toUpperCase();
-  }
-  // Multi-word: first letter of first and last word
-  return (words[0][0] + words[words.length - 1][0]).toUpperCase();
 }
 
 export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {

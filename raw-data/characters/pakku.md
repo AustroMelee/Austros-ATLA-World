@@ -1,5 +1,5 @@
-# 🧠 ULTIMATE CHARACTER METADATA SCHEMA (v3.0) - PAKKU
-
+---
+type: character
 ---
 
 ## 🖼️ UI - CARD VIEW
