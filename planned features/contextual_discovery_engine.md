@@ -115,6 +115,6 @@ The client-side logic reads the pre-computed `relationships.json` and uses it to
 
 **Batch 4: Final Polish & Testing**
 
-1.  **Styling:** Use `vanilla-extract` to style the `CompassPanel` and the `reason` tag on the `ItemCard` to match the project's dark theme and aesthetic.
+1.  **Styling:** Use `Tailwind CSS` to style the `CompassPanel` and the `reason` tag on the `ItemCard` to match the project's dark theme and aesthetic.
 2.  **Performance:** Ensure that loading and processing the `relationships.json` file is instantaneous. It's a static asset, so it should be fetched and parsed very quickly.
 3.  **End-to-End Testing:** Create a collection, add items, and verify that The Compass provides logical, useful, and correctly formatted suggestions. Test edge cases (empty collection, a collection with only one item, etc.).
