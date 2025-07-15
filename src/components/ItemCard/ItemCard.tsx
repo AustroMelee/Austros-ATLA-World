@@ -5,6 +5,7 @@ import NationIcon from '../NationIcon/NationIcon';
 import { toTitleCase, getInitials } from '../../utils/stringUtils';
 import { useImageFallback } from '../../hooks/useImageFallback';
 import { CustomMarkdownRenderer } from '../CustomMarkdownRenderer';
+import { Badge } from '../Badge/Badge';
 
 interface ItemCardProps {
   item: EnrichedCharacter;
@@ -22,6 +23,7 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
     'yue': 'yue-avatar.jpg',
   };
   const { imgSrc, handleImageError } = useImageFallback(item.slug, imageFallbacks);
+  const hasRole = item.role && item.role.trim();
 
   return (
     <ThemedCard
@@ -40,9 +42,9 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
       {!expanded && (
         <span className="absolute top-4 right-4 text-subtle opacity-0 group-hover:opacity-80 group-focus-within:opacity-80 transition-opacity duration-150 pointer-events-none text-2xl select-none" aria-hidden="true">›</span>
       )}
-      <div className="pb-2 pt-3 flex flex-col min-h-[210px]">
-        <div className="mb-2 flex justify-center w-full px-2">
-          <div className="w-22 h-22 sm:w-24 sm:h-24 flex-shrink-0 bg-background rounded-2xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
+      <div className="pb-2 pt-3 flex flex-col min-h-[240px]">
+        <div className="relative mb-2 flex justify-center w-full px-2">
+          <div className="w-full aspect-square max-w-[80%] max-h-[60%] mx-auto bg-background rounded-2xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
             {item.slug && imgSrc ? (
               <img
                 src={imgSrc}
@@ -55,13 +57,24 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
               <span className="font-bold text-subtle text-2xl">{iconText}</span>
             )}
           </div>
+          {/* Conditional role badge with improved styling */}
+          {hasRole && (
+            <div className="pointer-events-none absolute bottom-2 right-2 z-10">
+              <Badge
+                label={item.role?.toString() || ''}
+                type="custom"
+                color="bg-neutral-900/70 text-white text-xs font-bold backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-lg"
+              />
+            </div>
+          )}
         </div>
         <div className="w-full mt-auto px-2">
           <div className="flex items-center justify-start gap-1">
             <h3 className="font-bold text-xl text-white whitespace-normal line-clamp-2">{toTitleCase(item.name)}</h3>
             {item.nation && <NationIcon nation={item.nation} size={12} className="align-middle flex-shrink-0" />}
           </div>
-          <div className="text-left text-base text-subtle mt-1 font-medium">Character</div>
+          {/* Added category text */}
+          <p className="text-sm text-neutral-400 font-medium mt-1">Character</p>
         </div>
         {expanded && (
           <div className="prose prose-xs prose-invert max-w-none text-slate-300 mt-2 w-full text-left px-2">
@@ -73,13 +86,6 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
           </div>
         )}
       </div>
-      {item.role && (
-        <div className="absolute bottom-2 right-4">
-          <span className="inline-block text-xs text-blue-300 bg-zinc-900/80 px-2 py-1 rounded shadow-md border border-blue-400/30 font-semibold pointer-events-none select-none">
-            {item.role}
-          </span>
-        </div>
-      )}
     </ThemedCard>
   );
 }

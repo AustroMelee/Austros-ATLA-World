@@ -41,3 +41,65 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 -   **Convention:** To hide a UI feature (e.g., FilterSidebar, FilterPanel, CollectionsSidebar, CollectionsPanel), set the component to return `null` and add a comment at the top: "[Component] is hidden from the UI on user request. To re-enable, restore the original export."
 -   **To Unhide:** Restore the original export and implementation in the component file.
 -   **Canonical Toggle:** This is the canonical method for feature toggling in this project—no conditional rendering in parent components, no feature flags. All toggling is done at the component export level for clarity and maintainability.
+
+### 6. Card Image Sizing: Root Cause & Solution (2024-07)
+
+- **Discovery:** Using fixed rem/pixel sizes (e.g., `w-22`, `h-22`, `w-[5.5rem]`) for card images can cause images to overflow or dominate the card, especially for portrait images or if the card width changes. This is because the image container is not sized relative to the card, and the card's width is set in `EntityGrid` (e.g., `w-[188px]`).
+- **Root Cause:** Tailwind will silently ignore non-existent classes (like `w-22`), and fixed sizes do not scale with the card. This leads to brittle, non-responsive layouts and "giant" images.
+- **Solution:** Always size the image container **relative to the card** using `w-full aspect-square max-w-[80%] max-h-[60%] mx-auto` (or similar). This ensures the image is always proportional, never overflows, and is visually balanced regardless of card or image aspect ratio.
+- **Arbitrary Values:** Only use arbitrary values for image sizing if the card width is also fixed and you want a precise ratio. For responsive or dynamic cards, always use relative sizing.
+- **SRP:** All image scaling and proportionality logic should be handled in `ItemCard`, not globally or in the card grid.
+- **Reference:** See July 2024 root cause analysis and fix for details. If image size needs to be changed again, adjust the `max-w`/`max-h` or percentage values in `ItemCard` for safe, predictable results.
+
+### 7. Card Badge Styling & Information Hierarchy (2024-07)
+
+- **Floating Role Badge:**
+  - Use a single, floating badge (modern pill style) at the bottom-right of the image area, not the card as a whole.
+  - Badge uses `bg-neutral-900/70 text-white text-xs font-bold backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-lg` for maximum readability and a premium look.
+  - Only render the badge if the character has a specific role/title (e.g., "NWT Chief"). Do **not** show a generic fallback (like "Character") in the badge—use the category text for that.
+  - The badge must always be visually legible against any image background (high contrast, shadow, subtle border).
+
+- **Category Text:**
+  - Always display the category (e.g., "Character") as plain text below the name, not as a badge, for clarity and hierarchy.
+
+- **Vertical Spacing:**
+  - Increase card min-height (`min-h-[240px]` or greater) to ensure all elements have breathing room and avoid overlap.
+  - Never allow the badge to overlap the name or category text—badge floats over the image only.
+
+- **Information Hierarchy:**
+  - Order: Image (with badge) → Name (+ NationIcon) → Category text → (optional) expanded details.
+  - Never duplicate the same information in both badge and text.
+
+- **Accessibility:**
+  - Ensure badge text is always readable by screen readers (use semantic HTML and sufficient contrast).
+
+### 8. Card Information Requirements: Titles, Categories, and Badges (2024-07)
+
+**Every card must display all three of the following, without exception:**
+
+- **Title (Name):**
+  - The character’s (or entity’s) name is always shown at the top of the card, styled for prominence and accessibility.
+  - If a NationIcon is present, it appears next to the name.
+
+- **Category:**
+  - The category (e.g., "Character", "Location", "Fauna") is always shown as plain text directly below the name.
+  - This is never omitted, never shown as a badge, and never duplicated in the badge.
+  - The category is derived from the entity type (for characters, always "Character").
+
+- **Badge (Role):**
+  - If the entity has a specific role/title (e.g., "NWT Chief", "Avatar"), a badge is shown floating at the bottom-right of the image area.
+  - If there is no specific role/title, the badge is omitted (do not show a generic fallback like "Character" in the badge).
+  - The badge must use the high-contrast, pill style described above for readability and visual hierarchy.
+
+**Non-Negotiable:**
+- All three elements (title, category, badge-if-present) are required for every card. Cards missing any of these are considered incomplete and must be fixed before release.
+- Never duplicate information between the badge and the category text.
+- The information hierarchy is: Name (with icon) → Category → Badge (if present) → Details.
+
+**Rationale:**
+- This ensures every card is instantly scannable, visually consistent, and accessible, regardless of content or background image.
+
+**Reference:**
+- See section 7 for badge styling and placement details.
+
+These conventions ensure cards are visually clean, accessible, and maintain a clear information hierarchy, regardless of content or background image.
