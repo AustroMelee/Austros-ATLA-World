@@ -63,7 +63,8 @@ A tragic love interest and key spiritual figure whose sacrifice is a pivotal mom
 {
   "id": "yue",
   "fullName": "Yue",
-  "titles": ["Princess", "Moon Spirit"],
+  "role": "NWT Princess",
+  "titles": ["Princess"],
   "aliases": [],
   "species": "human (formerly), spirit",
   "gender": "female",

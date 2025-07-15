@@ -7,12 +7,12 @@ type: character
 ```md
 - Name: Joo Dee
 - Nation: Earth Kingdom
-- Short Description: Joo Dee is the ever-smiling, brainwashed tour guide and bureaucrat of Ba Sing Se. She was programmed by the Dai Li to keep visitors compliant and neutralize outside influences, serving as both a guide and later as Supreme Bureaucratic Administrator.
+- Badge: Ba Sing Se Guide
+- Short Description: Joo Dee is the ever-smiling, eerily polite government-appointed guide for visitors to Ba Sing Se.
 ```
 
 ## UI - EXPANDED VIEW
 
-```md
 ### 📖 Overview
 
 Joo Dee is the ever-smiling, brainwashed tour guide and bureaucrat of Ba Sing Se. She was programmed by the Dai Li to keep visitors compliant and neutralize outside influences, serving as both a guide and later as Supreme Bureaucratic Administrator.
@@ -48,27 +48,30 @@ Joo Dee was one of a number of public servants in Ba Sing Se using the same name
 - Served as tour guide and caretaker for Team Avatar in Ba Sing Se.
 - Maintained composure and compliance under Dai Li brainwashing.
 - Appointed Supreme Bureaucratic Administrator by Azula.
-```
 
+---
 ```json
 {
   "id": "joo-dee",
   "slug": "joo-dee",
-  "identity": {
-    "name": "Joo Dee",
-    "fullName": "Joo Dee",
-    "aliases": [],
-    "pronouns": "she/her",
-    "nation": "Earth Kingdom",
-    "ethnicity": "Earth Kingdom",
-    "gender": "Female",
-    "age": null,
-    "hairColor": "Black",
-    "eyeColor": "Grey",
-    "skinColor": "Light tan",
-    "loveInterest": null,
-    "image": null
-  },
+  "type": "character",
+  "badge": "Ba Sing Se Guide",
+  "name": "Joo Dee",
+  "nation": "Earth Kingdom",
+  "shortDescription": "Joo Dee is the ever-smiling, eerily polite government-appointed guide for visitors to Ba Sing Se.",
+  "image": null,
+  "fullName": "Joo Dee",
+  "role": "Cultural Guide",
+  "titles": [],
+  "aliases": [],
+  "pronouns": "she/her",
+  "ethnicity": "Earth Kingdom",
+  "gender": "Female",
+  "age": null,
+  "hairColor": "Black",
+  "eyeColor": "Grey",
+  "skinColor": "Light tan",
+  "loveInterest": null,
   "abilities": {
     "bending": [],
     "weapons": [],

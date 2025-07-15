@@ -65,6 +65,7 @@ A tragic anti-hero whose story serves as a cautionary tale about how the desire 
 {
   "id": "jet",
   "fullName": "Jet",
+  "role": "Freedom Fighter",
   "titles": ["Leader"],
   "aliases": [],
   "species": "human",

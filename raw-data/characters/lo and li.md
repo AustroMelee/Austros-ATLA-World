@@ -7,7 +7,8 @@ type: character
 ```md
 - Name: Lo and Li
 - Nation: Fire Nation
-- Short Description: Lo and Li are the twin advisers and firebending instructors to Princess Azula. Though not firebenders themselves, they are respected for their wisdom, strategy, and mentorship within the Fire Nation.
+- Badge: Royal Advisers
+- Short Description: Lo and Li are the enigmatic twin advisers to Princess Azula, known for their synchronized speech and mysterious presence at the Fire Nation court.
 ```
 
 ## UI - EXPANDED VIEW
@@ -65,7 +66,9 @@ They served as mentors for Azula's firebending training and as political adviser
     "eyeColor": null,
     "skinColor": null,
     "loveInterest": null,
-    "image": null
+    "image": null,
+    "role": "Royal Tutors",
+    "titles": ["Tutor"]
   },
   "abilities": {
     "bending": [],

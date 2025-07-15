@@ -7,6 +7,7 @@ type: character
 ```md
 - Name: Azulon
 - Nation: Fire Nation
+- Role: Fire Lord
 - Short Description: The long-reigning Fire Lord who preceded Ozai. A ruthless military commander and firebending prodigy, he greatly expanded the Fire Nation's empire during the Hundred Year War.
 ```
 
@@ -62,6 +63,7 @@ A posthumous antagonist whose actions shaped the world of the series and whose d
 {
   "id": "azulon",
   "fullName": "Azulon",
+  "role": "Fire Lord",
   "titles": ["Fire Lord", "General", "Prince"],
   "aliases": [],
   "species": "human",

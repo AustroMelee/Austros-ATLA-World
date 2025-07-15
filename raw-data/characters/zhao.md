@@ -65,7 +65,8 @@ The primary antagonist of Book One, whose arrogance and short-sighted pursuit of
 {
   "id": "zhao",
   "fullName": "Zhao",
-  "titles": ["Admiral", "Commander", "Captain", "Lieutenant"],
+  "role": "FN Admiral",
+  "titles": ["Admiral"],
   "aliases": [],
   "species": "human",
   "gender": "male",

@@ -60,6 +60,7 @@ A supporting character whose silence, skill, and loyalty provide strength and st
 {
   "id": "longshot",
   "fullName": "Longshot",
+  "role": "Freedom Fighter",
   "titles": ["Archer"],
   "aliases": [],
   "species": "human",

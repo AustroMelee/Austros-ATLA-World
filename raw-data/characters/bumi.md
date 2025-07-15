@@ -63,6 +63,7 @@ A powerful master and member of the old guard who pushes Aang to think outside t
 {
   "id": "king-bumi",
   "fullName": "Bumi",
+  "role": "King of Omashu",
   "titles": ["King"],
   "aliases": [],
   "species": "human",

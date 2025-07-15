@@ -65,7 +65,8 @@ A secondary antagonist whose bubbly personality conceals a deadly fighting style
 {
   "id": "ty-lee",
   "fullName": "Ty Lee",
-  "titles": ["Kyoshi Warrior"],
+  "role": "Acrobat",
+  "titles": [],
   "aliases": [],
   "species": "human",
   "gender": "female",

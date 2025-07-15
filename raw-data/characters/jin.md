@@ -7,7 +7,8 @@ type: character
 ```md
 - Name: Jin
 - Nation: Earth Kingdom
-- Short Description: A kind-hearted refugee and earthbender from Ba Sing Se, Jin is known for her resilience, compassion, and her brief but memorable connection with Zuko during the Hundred Year War.
+- Badge: Ba Sing Se Resident
+- Short Description: Jin is a kind-hearted girl from Ba Sing Se who briefly dates Zuko during his time in the city.
 ```
 
 ---
@@ -61,6 +62,7 @@ A supporting character whose warmth and determination provide a glimpse into the
 {
   "id": "jin",
   "fullName": "Jin",
+  "role": "Ba Sing Se Resident",
   "titles": [],
   "aliases": [],
   "species": "human",

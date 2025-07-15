@@ -74,3 +74,90 @@ To prevent errors, always use the master script in `package.json` which executes
     ```
 3.  **Check for Errors:** Watch the terminal for any parsing errors or warnings.
 4.  **Refresh UI:** Hard refresh your browser (`Ctrl+F5` or `Cmd+Shift+R`) to see the changes live.
+
+---
+
+### 4. Canonical Templates & Schema Adherence
+
+#### **Character Template (Canonical Example)**
+
+```markdown
+---
+type: character
+---
+
+## UI - CARD VIEW
+```md
+- Name: Example Character
+- Nation: Earth Kingdom
+- Badge: Example Badge
+- Short Description: A brief summary of the character.
+```
+
+## UI - EXPANDED VIEW
+```md
+### Overview
+Detailed markdown content about the character.
+```
+
+## 🪪 Identity & Demographics
+```json
+{
+  "id": "example-character",
+  "slug": "example-character",
+  "fullName": "Example Character",
+  "role": "Example Role",
+  "titles": ["Title1"],
+  "species": "human",
+  "gender": "Female",
+  "ageRange": "adult",
+  "nationality": "Earth Kingdom"
+}
+```
+
+## 🔥 Abilities, Skills & Combat Profile
+```json
+{
+  "isBender": false,
+  "nonBendingSkills": ["example skill"],
+  "notableFeats": ["Did something notable."]
+}
+```
+
+## ... (other backend metadata blocks as needed)
+```
+
+#### **Location, Food, Clothing, etc. Templates**
+- Each data type must have a template with:
+  - YAML frontmatter at the top: `type: location` (or food, clothing, etc.)
+  - At least one JSON block with `id` and `slug` fields.
+  - Additional fields as required for the type.
+- Place templates in `raw-data/[type]/templates/` or `docs/`.
+
+#### **Template File Placement**
+- **Never** place template files in the main data directories (e.g., `raw-data/characters/`).
+- Place them in a `templates/` subdirectory or in `docs/`.
+- The parser will attempt to process every `.md` file in the data directory; misplaced templates will cause errors or pipeline failures.
+
+#### **Script Handling of Templates & Non-Data Files**
+- The parser does not distinguish between data and non-data files in the main data directory.
+- Any file not matching the canonical schema will cause errors or be skipped.
+- Always keep templates and documentation out of the main data directories.
+
+---
+
+### 5. Template Registry & Creation
+
+- **Canonical Templates:**
+  - Character: `raw-data/characters/templates/character_template.md` (or see above)
+  - Location: `raw-data/locations/templates/location_template.md` (create if missing)
+  - Food: `raw-data/fauna/templates/food_template.md` (create if missing)
+  - Clothing: `raw-data/clothing/templates/clothing_template.md` (create if missing)
+- For any new data type, create a template in the appropriate `templates/` directory and document it here.
+
+---
+
+> ⚠️ **WARNING:**
+> - Placing template or documentation files in the main data directories will cause the parser to fail or skip records, breaking the pipeline and causing missing data in the UI.
+> - Always validate new or edited data by running the full pipeline (`npm run build:data`) and checking for errors.
+> - Only records matching the canonical schema will be processed and appear in the UI.

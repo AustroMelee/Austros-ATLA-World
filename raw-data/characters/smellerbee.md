@@ -59,7 +59,8 @@ A supporting character whose journey from outcast to leader highlights themes of
 {
   "id": "smellerbee",
   "fullName": "Smellerbee",
-  "titles": ["Leader of the Freedom Fighters"],
+  "role": "Freedom Fighter",
+  "titles": [],
   "aliases": [],
   "species": "human",
   "gender": "female",

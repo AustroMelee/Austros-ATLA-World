@@ -7,6 +7,7 @@ type: character
 ```md
 - Name: Aunt Wu
 - Nation: Earth Kingdom
+- Role: Fortuneteller
 - Short Description: Aunt Wu is the renowned fortuneteller of Makapu Village, famous for her accurate predictions and wisdom. She uses various methods of divination and is respected by the villagers for her insight and guidance.
 ```
 
@@ -52,6 +53,7 @@ Aunt Wu plays a pivotal role in "The Fortuneteller" episode, where Team Avatar v
 {
   "id": "aunt-wu",
   "slug": "aunt-wu",
+  "role": "Fortuneteller",
   "identity": {
     "name": "Aunt Wu",
     "fullName": "Wu",
@@ -62,7 +64,9 @@ Aunt Wu plays a pivotal role in "The Fortuneteller" episode, where Team Avatar v
     "residence": "Makapu Village, Earth Kingdom",
     "gender": "Female",
     "hairColor": "Gray",
-    "age": null
+    "age": null,
+    "role": "Fortuneteller",
+    "titles": []
   },
   "abilities": {
     "bending": [],

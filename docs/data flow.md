@@ -57,3 +57,14 @@
 **In short:**  
 Data flows from enriched JSON (built from markdown) → fetched and filtered in `HomeContainer` → passed to `Home` → rendered as a grid in `EntityGrid` → each card is an `ItemCard` displaying the character’s info.
 
+
+---
+
+### 4. Data Schema Adherence & Template Guidance
+
+- All data displayed in the frontend must originate from records that strictly follow the canonical schema described in `docs/data pipeline.md`.
+- Use the provided templates (see `raw-data/[type]/templates/` or `docs/`) for each data type (character, location, food, etc.) to ensure all required fields and structure are present.
+- Only records that pass the full data pipeline (parse, enrich, index) will be available to the frontend and visible in the UI.
+- If a template for a data type does not exist, create one and document it in both the relevant `templates/` directory and in `data pipeline.md`.
+- Always validate new or edited data by running `npm run build:data` and checking for errors before expecting changes in the UI.
+

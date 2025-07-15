@@ -61,6 +61,7 @@ The Avatar's loyal animal guide, providing transportation, combat support, and s
 {
   "id": "appa",
   "fullName": "Appa",
+  "role": "Animal Companion",
   "titles": ["Avatar's Animal Guide"],
   "aliases": [],
   "species": "Sky Bison",

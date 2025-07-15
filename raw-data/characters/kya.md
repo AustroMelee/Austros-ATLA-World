@@ -59,7 +59,8 @@ A background but pivotal character whose sacrifice and memory drive Katara's jou
 {
   "id": "kya",
   "fullName": "Kya",
-  "titles": ["Healer", "Wife of the Chief"],
+  "role": "SWT Matriarch",
+  "titles": [],
   "aliases": [],
   "species": "human",
   "gender": "female",

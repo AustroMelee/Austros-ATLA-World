@@ -60,7 +60,8 @@ type: character
 {
   "id": "suki",
   "fullName": "Suki",
-  "titles": ["Leader"],
+  "role": "Kyoshi Leader",
+  "titles": ["Kyoshi Warrior Leader"],
   "aliases": [],
   "species": "human",
   "gender": "female",

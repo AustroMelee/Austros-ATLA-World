@@ -64,7 +64,8 @@ A symbol of political naivety and the dangers of isolation, whose personal growt
 {
   "id": "kuei",
   "fullName": "Kuei",
-  "titles": ["Earth King"],
+  "role": "Earth King",
+  "titles": ["King"],
   "aliases": ["The 52nd Earth King"],
   "species": "human",
   "gender": "male",

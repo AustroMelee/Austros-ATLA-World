@@ -2,9 +2,9 @@ import fs from 'fs/promises';
 import path from 'path';
 
 // --- CONFIGURATION ---
-// Maps a data type to its source directory.
-const SOURCE_DIRS_MAP = {
-  character: 'dist/parsed-data/characters'
+// Maps a data type to its source file (patched to use parsed-data.json)
+const SOURCE_FILES_MAP = {
+  character: 'data/parsed-data.json'
 };
 const OUTPUT_FILE_DIST = 'dist/enriched-data.json';
 const OUTPUT_FILE_PUBLIC = 'public/enriched-data.json';
@@ -19,39 +19,33 @@ function slugify(text) {
 
 // --- MAIN EXECUTION ---
 (async () => {
-  console.log('--- Starting Data Enrichment (v3 - Robust) ---');
+  console.log('--- Starting Data Enrichment (v3 - Robust, PATCHED) ---');
   try {
     let allRecords = [];
 
     // Process all configured data domains
-    for (const [type, dirPath] of Object.entries(SOURCE_DIRS_MAP)) {
-      console.log(`- Processing domain: '${type}' from '${dirPath}'`);
+    for (const [type, filePath] of Object.entries(SOURCE_FILES_MAP)) {
+      console.log(`- Processing domain: '${type}' from '${filePath}'`);
       try {
-        const files = await fs.readdir(dirPath);
-        for (const file of files.filter(f => f.endsWith('.json'))) {
-          const content = await fs.readFile(path.join(dirPath, file), 'utf-8');
-          const data = JSON.parse(content);
-
-          // Handle both single objects and arrays of objects in files
-          const records = Array.isArray(data) ? data : [data];
-          records.forEach(record => {
-            // --- NORMALIZATION & REPAIR ---
-            record.name = record.name || record.fullName || (record.identity && (record.identity.name || record.identity.fullName)) || '?';
-            record.nation = record.nation || record.nationality || (record.identity && (record.identity.nation || record.identity.nationality)) || 'Unknown';
-            record.id = record.id || record.slug || (record.name ? record.name.toLowerCase().replace(/\s+/g, '-') : '?');
-            record.slug = record.slug || (record.name ? record.name.toLowerCase().replace(/\s+/g, '-') : '?');
-            record.description = record.description || record.shortDescription || '';
-            record.expandedView = record.expandedView || '';
-            record.role = record.role || (record.titles && record.titles[0]) || '';
-            // Defensive: fallback to '?' for initials if name missing
-            allRecords.push({ ...record, __type: type });
-          });
-        }
+        const content = await fs.readFile(filePath, 'utf-8');
+        const records = JSON.parse(content);
+        records.forEach(record => {
+          // --- NORMALIZATION & REPAIR ---
+          record.name = record.name || record.fullName || (record.identity && (record.identity.name || record.identity.fullName)) || '?';
+          record.nation = record.nation || record.nationality || (record.identity && (record.identity.nation || record.identity.nationality)) || 'Unknown';
+          record.id = record.id || record.slug || (record.name ? record.name.toLowerCase().replace(/\s+/g, '-') : '?');
+          record.slug = record.slug || (record.name ? record.name.toLowerCase().replace(/\s+/g, '-') : '?');
+          record.description = record.description || record.shortDescription || '';
+          record.expandedView = record.expandedView || '';
+          // PATCH: Support badge field as role if present
+          record.role = record.role || record.badge || (record.titles && record.titles[0]) || '';
+          allRecords.push({ ...record, __type: type });
+        });
       } catch (error) {
         if (error.code === 'ENOENT') {
-          console.warn(`  - Directory not found, skipping: ${dirPath}`);
+          console.warn(`  - File not found, skipping: ${filePath}`);
         } else {
-          console.error(`  - Error processing directory ${dirPath}:`, error);
+          console.error(`  - Error processing file ${filePath}:`, error);
         }
       }
     }

@@ -6,6 +6,7 @@ type: character
 ```md
 - Name: Fire Nation Man
 - Nation: Earth Kingdom
+- Badge: Earth Rumble Fighter
 - Short Description: Fire Nation Man is a professional earthbending fighter in the Earth Rumble tournaments. His stage persona is a Fire Nation heel, designed to be hated and quickly defeated to excite the crowd, though he is actually from the Earth Kingdom.
 ```
 
@@ -16,21 +17,26 @@ Fire Nation Man was an earthbender who fought in the Earth Rumble tournaments in
 ---
 ```json
 {
-  "identity": {
-    "name": "Fire Nation Man",
-    "fullName": "Fire Nation Man",
-    "aliases": [],
-    "pronouns": "he/him",
-    "nation": "Earth Kingdom (by birth)",
-    "ethnicity": "Earth Kingdom",
-    "gender": "Male",
-    "age": null,
-    "hairColor": "Brown",
-    "eyeColor": null,
-    "skinColor": null,
-    "loveInterest": null,
-    "image": null
-  },
+  "id": "fire-nation-man",
+  "slug": "fire-nation-man",
+  "type": "character",
+  "badge": "Earth Rumble Fighter",
+  "name": "Fire Nation Man",
+  "nation": "Earth Kingdom",
+  "shortDescription": "Fire Nation Man is a professional earthbending fighter in the Earth Rumble tournaments. His stage persona is a Fire Nation heel, designed to be hated and quickly defeated to excite the crowd, though he is actually from the Earth Kingdom.",
+  "image": null,
+  "fullName": "Fire Nation Man",
+  "role": "Earth Rumble Fighter",
+  "titles": [],
+  "aliases": [],
+  "pronouns": "he/him",
+  "ethnicity": "Earth Kingdom",
+  "gender": "Male",
+  "age": null,
+  "hairColor": "Brown",
+  "eyeColor": null,
+  "skinColor": null,
+  "loveInterest": null,
   "abilities": {
     "bending": ["Earthbending"],
     "weapons": [],

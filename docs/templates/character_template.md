@@ -248,7 +248,7 @@
   "canonicalImportance": "core | primary | secondary | tertiary | background",
   "dataCompletenessScore": "number (0.0-1.0)", // For internal maintenance
   "searchableKeywords": "string[]", // Stemmed, lower-cased keywords
-  "fuzzySynonyms": "string[]", // Common misspellings or alternative phrases
-  "isSuggestedInXContext": "boolean[]" // Future use for predictive UI
+  "fuzzySynonyms": "string[]", // e.g., "the blue spirit", "zuko's mom"
+  "isSuggestedInXContext": "string[]" // For future context-aware suggestions
 }
 ```

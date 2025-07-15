@@ -1,9 +1,14 @@
+---
+type: character
+---
+
 ## UI - CARD VIEW
 
 ```md
 - Name: Ying
 - Nation: Earth Kingdom
-- Short Description: Ying is a refugee from the Earth Kingdom who traveled with her husband Than and gave birth to her daughter Hope with the help of Team Avatar. She is known for her optimism and strength in the face of hardship.
+- Badge: Hopeful Refugee
+- Short Description: An optimistic refugee from the Earth Kingdom, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar.
 ```
 
 ## UI - EXPANDED VIEW
@@ -11,37 +16,36 @@
 ```md
 ### 📖 Overview
 
-Ying was Than's wife and the mother of Hope. She traveled with her husband and sister-in-law through the Serpent's Pass alongside Team Avatar while heavily pregnant, intending to reach the safety of Ba Sing Se. Despite the dangers, Ying remained hopeful for her family's future. With the help of Katara and Aang, she safely gave birth to her daughter, whom she named Hope, inspired by Aang's words. Ying and her family eventually reached Ba Sing Se, but their hope was tested again when the Fire Nation took over the city.
+Ying is a refugee from the Earth Kingdom who, while heavily pregnant, traveled with her husband Than and sister-in-law to Ba Sing Se in search of safety. Forced to flee her village after a Rough Rhinos attack, Ying remained hopeful for her family's future. She met Team Avatar at the Serpent's Pass, where, with their help, she safely crossed the dangerous route and gave birth to her daughter, Hope. Ying’s optimism and resilience inspired those around her, and her story is a testament to perseverance in the face of adversity.
 
-### 🧩 Role in the Story
+### ✨ Narrative Highlights
 
-Ying represents hope and resilience among refugees in the Earth Kingdom. Her journey through the Serpent's Pass and the birth of her daughter serve as a symbol of optimism in the face of adversity. Her story highlights the struggles of ordinary people during wartime and the importance of family and perseverance.
+- Fled her village after a Rough Rhinos attack, seeking safety in Ba Sing Se.
+- Traveled the Serpent’s Pass with Team Avatar while nine months pregnant.
+- Gave birth to her daughter, Hope, with Katara’s help.
+- Inspired Aang and others with her hope and resilience.
+- Witnessed the Fire Nation’s takeover of Ba Sing Se.
+
+### 🎭 Role in the Story
+
+A minor but memorable character, Ying’s journey highlights the struggles of refugees and the importance of hope during war. Her story provides emotional depth and a sense of realism to Team Avatar’s travels.
 
 ### 🤝 Relationships
 
-- Than: Husband and travel companion.
-- Hope: Daughter, born during the journey.
-- Team Avatar: Allies who helped her through the Serpent's Pass.
+- Than – Husband; supportive partner during their journey.
+- Hope – Daughter, born at the Serpent’s Pass.
+- Than’s sister – Traveled with Ying and Than.
+- Team Avatar – Allies who helped her reach safety and deliver her baby.
 
 ### 🌟 Notable Traits
 
 - Optimistic and resilient
-- Caring and determined
-- Hopeful in adversity
+- Caring and hopeful
+- Remains positive in dire circumstances
 
-### 💬 Quotes
+### 💬 Notable Quotes
 
-> "I know what I want to name our baby now. Hope."
-> 
-> — Ying
-
-### ✨ Narrative Highlights
-
-- Survived the Serpent's Pass while pregnant.
-- Gave birth to Hope with the help of Team Avatar.
-- Remained optimistic through hardship.
-- Inspired by Aang to name her daughter Hope.
-- Reached Ba Sing Se before the Fire Nation takeover.
+- "I know what I want to name our baby now. Hope."
 ```
 
 ---
@@ -49,56 +53,59 @@ Ying represents hope and resilience among refugees in the Earth Kingdom. Her jou
 {
   "id": "ying",
   "slug": "ying",
-  "identity": {
-    "name": "Ying",
-    "fullName": "Ying",
-    "aliases": [],
-    "pronouns": "she/her",
-    "nation": "Earth Kingdom",
-    "ethnicity": "Earth Kingdom",
-    "gender": "Female",
-    "age": null,
-    "hairColor": "Black",
-    "eyeColor": null,
-    "skinColor": "Light",
-    "loveInterest": "Than (husband)",
-    "image": null
-  },
+  "type": "character",
+  "badge": "Hopeful Refugee",
+  "name": "Ying",
+  "nation": "Earth Kingdom",
+  "shortDescription": "An optimistic refugee from the Earth Kingdom, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar.",
+  "image": null,
+  "fullName": "Ying",
+  "role": "Refugee, Mother",
+  "titles": [],
+  "aliases": [],
+  "pronouns": "she/her",
+  "ethnicity": "Earth Kingdom",
+  "gender": "Female",
+  "age": null,
+  "hairColor": "Black",
+  "eyeColor": null,
+  "skinColor": "light",
+  "loveInterest": "Than (husband)",
   "abilities": {
     "bending": [],
     "weapons": [],
     "fightingStyles": [],
     "notableFeats": [
-      "Survived the Serpent's Pass while pregnant.",
-      "Gave birth to Hope with the help of Team Avatar.",
-      "Remained optimistic through hardship."
+      "Survived a Rough Rhinos attack and fled her village.",
+      "Crossed the Serpent’s Pass while pregnant.",
+      "Gave birth to her daughter, Hope, with Katara’s help."
     ]
   },
   "affiliations": {
     "primary": "Earth Kingdom",
-    "secondary": [],
-    "allies": ["Than", "Team Avatar"],
-    "enemies": ["Fire Nation", "Rough Rhinos"]
+    "secondary": ["Ba Sing Se"],
+    "allies": ["Than", "Hope", "Team Avatar"],
+    "enemies": []
   },
   "narrative": {
     "firstAppearance": "Zuko Alone",
-    "lastAppearance": "The Awakening (flashback only)",
-    "voicedBy": "Kim Mai Guest",
-    "era": "Book Two: Earth, Book Three: Fire",
-    "seasons": [2, 3],
-    "episodes": [7, 12],
+    "lastAppearance": "The Awakening (flashback)",
+    "voicedBy": ["Kim Mai Guest"],
+    "era": "Book Two: Earth",
+    "seasons": [2],
+    "episodes": [7, 8],
     "notableQuotes": [
       "I know what I want to name our baby now. Hope."
     ]
   },
   "metrics": {
-    "archetype": "Hopeful Survivor",
+    "archetype": "The Hopeful Mother",
     "moralAlignment": "Neutral Good",
-    "intelligence": 4,
-    "strength": 3,
-    "charisma": 4,
+    "intelligence": 2,
+    "strength": 2,
+    "charisma": 3,
     "leadership": 2,
-    "humor": 2
+    "humor": 1
   },
   "roles": {
     "refugee": true,
@@ -107,26 +114,27 @@ Ying represents hope and resilience among refugees in the Earth Kingdom. Her jou
   "relationships": {
     "than": "Husband",
     "hope": "Daughter",
-    "teamAvatar": "Friends"
+    "team-avatar": "Allies"
   },
   "psyche": {
     "personality": ["Optimistic", "Resilient", "Caring", "Hopeful"],
-    "emotionalState": ["Determined", "Loving"],
-    "motivation": "To protect her family and build a better future."
+    "emotionalState": ["Hopeful", "Worried"],
+    "motivation": "Protecting her family and maintaining hope."
   },
   "physical": {
     "build": "Average",
     "height": null,
-    "distinguishingFeatures": ["Black hair", "Light skin"]
+    "distinguishingFeatures": ["Black hair", "light skin"],
+    "outfitStyles": ["Earth Kingdom refugee attire"]
   },
   "dialogue": [
     "I know what I want to name our baby now. Hope."
   ],
-  "tags": ["Earth Kingdom", "Refugee", "Mother", "Book Two", "Serpent's Pass"],
+  "tags": ["Earth Kingdom", "Ba Sing Se", "Refugee", "Mother", "Book Two", "Serpent’s Pass"],
   "tagCategories": {
-    "nationTags": ["Earth Kingdom"],
+    "nationTags": ["Earth Kingdom", "Ba Sing Se"],
     "roleTags": ["Refugee", "Mother"],
-    "episodeTags": ["Book Two", "Serpent's Pass"]
+    "episodeTags": ["Book Two", "Serpent’s Pass"]
   },
   "system": {
     "schemaVersion": "3.0",

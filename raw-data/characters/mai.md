@@ -64,7 +64,8 @@ A secondary antagonist turned ally whose character arc explores how love can tri
 {
   "id": "mai",
   "fullName": "Mai",
-  "titles": ["Governor's Daughter"],
+  "role": "Noblewoman",
+  "titles": [],
   "aliases": [],
   "species": "human",
   "gender": "female",

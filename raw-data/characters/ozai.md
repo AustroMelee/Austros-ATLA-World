@@ -60,6 +60,7 @@ type: character
 {
   "id": "ozai",
   "fullName": "Ozai",
+  "role": "Fire Lord",
   "titles": ["Fire Lord", "Prince", "Phoenix King"],
   "aliases": [],
   "species": "human",

@@ -58,9 +58,10 @@ A recurring comic relief and symbol of perseverance, whose misfortunes and event
 
 ```json
 {
-  "id": "cabbage_merchant",
-  "fullName": "Cai",
-  "titles": ["Cabbage Merchant", "Founder of Cabbage Corp"],
+  "id": "cabbage-merchant",
+  "fullName": "Cabbage Merchant",
+  "role": "Cabbage Merchant",
+  "titles": [],
   "aliases": ["Cabbage Merchant"],
   "species": "human",
   "gender": "male",

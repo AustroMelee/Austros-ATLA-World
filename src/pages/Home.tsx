@@ -9,23 +9,55 @@ import { ExpandedItemModal } from '../components/ExpandedItemModal';
 interface HomeProps {
   query: string;
   setQuery: (q: string) => void;
+  filters: Record<string, string[]>;
+  activeFilters: Record<string, string[]>;
+  onToggleFilter: (filterKey: string, value: string, setSelectedId?: (id: string | null) => void) => void;
+  filterConfig: unknown;
   loading: boolean;
   error: string | null;
   filteredResults: EnrichedCharacter[];
   selectedId: string | null;
   setSelectedId: (id: string | null) => void;
   scrollContainerRef: React.RefObject<HTMLDivElement>;
+  collections: unknown[];
+  activeCollectionId: string | null;
+  activeCollectionItems: EnrichedCharacter[];
+  onSelectCollection: (id: string) => void;
+  onDeleteCollection: (id: string) => void;
+  panelOpen: boolean;
+  onClosePanel: () => void;
+  onAddItemToCollection: (collectionId: string) => void;
+  onCreateCollection: (name: string) => void;
+  suggestion: string | null;
+  textColor: string;
+  topNation: string | null;
 }
 
 export function Home({
   query,
   setQuery,
+  filters: _filters,
+  activeFilters: _activeFilters,
+  onToggleFilter: _onToggleFilter,
+  filterConfig: _filterConfig,
   loading,
   error,
   filteredResults,
   selectedId,
   setSelectedId,
   scrollContainerRef,
+  collections: _collections,
+  activeCollectionId: _activeCollectionId,
+  activeCollectionItems: _activeCollectionItems,
+  onSelectCollection: _onSelectCollection,
+  onDeleteCollection: _onDeleteCollection,
+  panelOpen: _panelOpen,
+  onClosePanel: _onClosePanel,
+  onAddItemToCollection: _onAddItemToCollection,
+  onCreateCollection: _onCreateCollection,
+  suggestion: _suggestion,
+  textColor: _textColor,
+  topNation: _topNation,
 }: HomeProps) {
   const expandedItem = selectedId ? filteredResults.find(item => item.id === selectedId) : null;
   return (

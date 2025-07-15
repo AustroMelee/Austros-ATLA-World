@@ -7,7 +7,8 @@ type: character
 ```md
 - Name: Yagoda
 - Nation: Northern Water Tribe
-- Short Description: Yagoda is a master healer and waterbending instructor from the Northern Water Tribe. She taught generations of young women the art of healing and was a close friend of Kanna.
+- Badge: Healer
+- Short Description: Yagoda is a skilled healer and respected elder of the Northern Water Tribe, known for teaching Katara and her compassion for her people.
 ```
 
 ## UI - EXPANDED VIEW
@@ -51,6 +52,13 @@ Yagoda was a female waterbender from the Northern Water Tribe, specializing in t
 ```json
 {
   "id": "yagoda",
+  "slug": "yagoda"
+}
+```
+
+```json
+{
+  "id": "yagoda",
   "slug": "yagoda",
   "identity": {
     "name": "Yagoda",
@@ -65,7 +73,9 @@ Yagoda was a female waterbender from the Northern Water Tribe, specializing in t
     "eyeColor": null,
     "skinColor": null,
     "loveInterest": null,
-    "image": null
+    "image": null,
+    "role": "NWT Healer",
+    "titles": []
   },
   "abilities": {
     "bending": ["Waterbending (Healing)"],

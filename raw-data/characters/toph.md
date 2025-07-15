@@ -65,6 +65,7 @@ The master earthbender who challenges Aang's methods and revolutionizes her elem
 {
   "id": "toph-beifong",
   "fullName": "Toph Beifong",
+  "role": "Blind Bandit",
   "titles": ["The Blind Bandit", "Chief", "Master", "Melon Lord"],
   "aliases": ["The Runaway", "Dung"],
   "species": "human",

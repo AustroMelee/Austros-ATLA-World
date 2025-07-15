@@ -64,7 +64,8 @@ The original antagonist of the Hundred Year War, whose past actions and friendsh
 {
   "id": "sozin",
   "fullName": "Sozin",
-  "titles": ["Fire Lord", "Prince"],
+  "role": "Former Fire Lord",
+  "titles": ["Fire Lord"],
   "aliases": ["Lee (undercover)"],
   "species": "human",
   "gender": "male",

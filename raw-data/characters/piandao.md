@@ -63,7 +63,9 @@ A wise master who provides Sokka with the skills and confidence he needs to beco
 ```json
 {
   "id": "piandao",
+  "slug": "piandao",
   "fullName": "Piandao",
+  "role": "Swordmaster",
   "titles": ["Master"],
   "aliases": [],
   "species": "human",

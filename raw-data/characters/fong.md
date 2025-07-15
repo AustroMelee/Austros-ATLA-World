@@ -58,6 +58,7 @@ A supporting military figure whose aggressive tactics and moral ambiguity highli
 {
   "id": "fong",
   "fullName": "Fong",
+  "role": "EK General",
   "titles": ["General"],
   "aliases": [],
   "species": "human",

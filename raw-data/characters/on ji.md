@@ -7,7 +7,8 @@ type: character
 ```md
 - Name: On Ji
 - Nation: Fire Nation
-- Short Description: A kind and plucky student at a Fire Nation school, On Ji is remembered for her friendliness, sense of humor, and her role in Aang's secret dance party.
+- Badge: Fire Nation Student
+- Short Description: On Ji is a friendly and open-minded student at a Fire Nation school, known for her brief friendship with Aang (as Kuzon).
 ```
 
 ---
@@ -57,6 +58,7 @@ A minor but memorable character whose warmth and courage helped Aang and his fri
 {
   "id": "on-ji",
   "fullName": "On Ji",
+  "role": "Fire Nation Student",
   "titles": [],
   "aliases": [],
   "species": "human",

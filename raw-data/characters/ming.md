@@ -7,12 +7,12 @@ type: character
 ```md
 - Name: Ming
 - Nation: Fire Nation
-- Short Description: Ming is a kind-hearted prison guard at the Capital City Prison. She showed compassion to Iroh during his imprisonment, sneaking him tea and food, and ultimately helped him by heeding his warning on the Day of Black Sun.
+- Badge: Kindly Jailer
+- Short Description: Ming is a compassionate prison guard in the Fire Nation, remembered for her kindness to Uncle Iroh during his imprisonment.
 ```
 
 ## UI - EXPANDED VIEW
 
-```md
 ### 📖 Overview
 
 Ming was a compassionate guard at the Capital City Prison in the Fire Nation. She is best known for her kindness toward Iroh during his imprisonment, often sneaking him rare teas and extra food. Her empathy and gentle nature set her apart from the other guards, and her actions made Iroh's days in prison more bearable.
@@ -44,26 +44,30 @@ Ming appears in "The Day of Black Sun, Part 1: The Invasion" as Iroh's primary c
 - Showed compassion to Iroh during his imprisonment.
 - Snuck in white jade tea and extra food for Iroh.
 - Heeded Iroh's warning and avoided the Day of Black Sun chaos.
-```
 
 ---
 ```json
 {
-  "identity": {
-    "name": "Ming",
-    "fullName": "Ming",
-    "aliases": [],
-    "pronouns": "she/her",
-    "nation": "Fire Nation",
-    "ethnicity": "Fire Nation",
-    "gender": "Female",
-    "age": null,
-    "hairColor": "Brown",
-    "eyeColor": null,
-    "skinColor": null,
-    "loveInterest": null,
-    "image": null
-  },
+  "id": "ming",
+  "slug": "ming",
+  "type": "character",
+  "badge": "Kindly Jailer",
+  "name": "Ming",
+  "nation": "Fire Nation",
+  "shortDescription": "Ming is a compassionate prison guard in the Fire Nation, remembered for her kindness to Uncle Iroh during his imprisonment.",
+  "image": null,
+  "fullName": "Ming",
+  "role": "Prison Guard",
+  "titles": [],
+  "aliases": [],
+  "pronouns": "she/her",
+  "ethnicity": "Fire Nation",
+  "gender": "Female",
+  "age": null,
+  "hairColor": "Brown",
+  "eyeColor": null,
+  "skinColor": null,
+  "loveInterest": null,
   "abilities": {
     "bending": [],
     "weapons": [],

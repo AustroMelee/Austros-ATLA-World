@@ -65,7 +65,8 @@ A mysterious and tragic figure whose absence haunts her children, acting as a sy
 {
   "id": "ursa",
   "fullName": "Ursa",
-  "titles": ["Princess"],
+  "role": "Fire Nation Royalty",
+  "titles": [],
   "aliases": ["Noriko"],
   "species": "human",
   "gender": "female",

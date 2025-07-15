@@ -93,7 +93,7 @@ export default function HomeContainer() {
   return (
     <Home
       query={query}
-      setQuery={setQuery}
+      setQuery={q => setQuery(q)}
       filters={filters}
       activeFilters={activeFilters}
       onToggleFilter={handleToggleFilter}

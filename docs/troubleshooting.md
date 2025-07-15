@@ -6,6 +6,18 @@
     *   **Cause 3:** The file is **missing a ` ```json ` block** with the required `id` and `slug` fields.
     *   **Cause 4 (Characters Only):** The file is missing the exact `## UI - CARD VIEW` or `## UI - EXPANDED VIEW` headers.
 
+-   **Problem: A character card's expanded info is missing in the UI.**
+    *   **Cause:** The `expandedView` field for that character is missing or empty in the final `enriched-data.json`.
+    *   **How to check:**
+        1. Open `public/enriched-data.json` and search for the character's `id` or `slug`.
+        2. Check if the `expandedView` field is present and contains content.
+    *   **Solution:**
+        1. Open the source markdown file (e.g., `raw-data/characters/[character].md`).
+        2. Ensure it contains a properly formatted `## UI - EXPANDED VIEW` section with a fenced markdown block.
+        3. Save the file as UTF-8 (no BOM).
+        4. Run `npm run build:data` to regenerate the enriched data.
+        5. Hard refresh the UI to see the update.
+
 -   **Problem: The data pipeline fails unexpectedly.**
     *   **Cause:** The version of Node.js being used may have unstable or experimental features. The original `fs.readdir({ recursive: true })` call was unreliable for this reason.
     *   **Solution:** The pipeline now uses a robust, custom recursive file walker that is compatible with all modern Node.js versions.

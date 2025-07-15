@@ -59,7 +59,8 @@ A comic relief and supporting fighter whose journey from showman to soldier high
 {
   "id": "boulder",
   "fullName": "The Boulder",
-  "titles": ["Professional Earthbending Fighter"],
+  "role": "Earth Rumble Fighter",
+  "titles": [],
   "aliases": ["The Pebble"],
   "species": "human",
   "gender": "male",

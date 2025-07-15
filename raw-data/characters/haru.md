@@ -7,7 +7,8 @@ type: character
 ```md
 - Name: Haru
 - Nation: Earth Kingdom
-- Short Description: A thoughtful and idealistic earthbender, Haru overcame oppression and imprisonment to become a courageous fighter for the Earth Kingdom, always striving to use his bending to build rather than destroy.
+- Badge: Earthbender
+- Short Description: Haru is a young earthbender from a small Earth Kingdom village who joins Team Avatar in their fight against the Fire Nation.
 ```
 
 ---
@@ -58,6 +59,7 @@ A supporting character whose journey from fearful youth to principled fighter hi
 {
   "id": "haru",
   "fullName": "Haru",
+  "role": "Earthbender",
   "titles": [],
   "aliases": [],
   "species": "human",

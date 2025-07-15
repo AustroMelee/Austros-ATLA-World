@@ -65,6 +65,7 @@ The heart and moral compass of Team Avatar, whose compassion and fierce determin
 {
   "id": "katara",
   "fullName": "Katara",
+  "role": "Waterbending Master",
   "titles": ["Master", "The Painted Lady"],
   "aliases": ["Sapphire Fire", "June Pippinpaddleopsicopolis", "Gran Gran"],
   "species": "human",

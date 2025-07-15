@@ -6,13 +6,13 @@ type: character
 
 ```md
 - Name: Kanna
-- Nation: Water Tribe
-- Short Description: Kanna, known as Gran Gran, is Katara and Sokka's wise and caring grandmother. A nonbender, she is the oldest resident of Wolf Cove and a respected elder, midwife, and healer in the Southern Water Tribe.
+- Nation: Southern Water Tribe
+- Badge: Gran Gran
+- Short Description: Kanna, affectionately known as Gran Gran, is Katara and Sokka's wise and loving grandmother in the Southern Water Tribe.
 ```
 
 ## UI - EXPANDED VIEW
 
-```md
 ### 📖 Overview
 
 Kanna, known as Gran Gran, is Katara and Sokka's wise and caring grandmother. A nonbender, she is the oldest resident of Wolf Cove and a respected elder, midwife, and healer in the Southern Water Tribe.
@@ -51,27 +51,30 @@ Born in the Northern Water Tribe, Kanna fled to the South to escape an arranged 
 - Respected elder and midwife of the Southern Water Tribe.
 - Raised Katara and Sokka after their mother's death.
 - Escaped an arranged marriage and started a new life in the South.
-```
 
+---
 ```json
 {
   "id": "kanna",
   "slug": "kanna",
-  "identity": {
-    "name": "Kanna",
-    "fullName": "Kanna",
-    "aliases": ["Gran Gran"],
-    "pronouns": "she/her",
-    "nation": "Northern Water Tribe (by birth), Southern Water Tribe (by residence)",
-    "ethnicity": "Water Tribe",
-    "gender": "Female",
-    "age": 80,
-    "hairColor": "Gray (brown in youth)",
-    "eyeColor": "Blue",
-    "skinColor": "Brown",
-    "loveInterest": "Hakoda's father (deceased), Pakku (husband)",
-    "image": null
-  },
+  "type": "character",
+  "badge": "Gran Gran",
+  "name": "Kanna",
+  "nation": "Southern Water Tribe",
+  "shortDescription": "Kanna, affectionately known as Gran Gran, is Katara and Sokka's wise and loving grandmother in the Southern Water Tribe.",
+  "image": null,
+  "fullName": "Kanna",
+  "role": "Elder, Midwife, Grandmother",
+  "titles": ["Gran Gran"],
+  "aliases": ["Gran Gran"],
+  "pronouns": "she/her",
+  "ethnicity": "Water Tribe",
+  "gender": "Female",
+  "age": 80,
+  "hairColor": "Gray (brown in youth)",
+  "eyeColor": "Blue",
+  "skinColor": "Brown",
+  "loveInterest": "Hakoda's father (deceased), Pakku (husband)",
   "abilities": {
     "bending": [],
     "weapons": [],

@@ -7,7 +7,8 @@ type: character
 ```md
 - Name: Hahn
 - Nation: Northern Water Tribe
-- Short Description: Hahn was a career-minded soldier of the Northern Water Tribe, betrothed to Princess Yue. Known for his ego and ambition, he was chosen to lead a secret attack during the Siege of the North but failed in his mission against Admiral Zhao.
+- Badge: Northern Warrior
+- Short Description: Hahn is a young warrior of the Northern Water Tribe, betrothed to Princess Yue and known for his arrogance and bravado during the Siege of the North.
 ```
 
 ## UI - EXPANDED VIEW
@@ -19,21 +20,26 @@ Although he was not a waterbender, he showed skill in handling a variety of weap
 ---
 ```json
 {
-  "identity": {
-    "name": "Hahn",
-    "fullName": "Hahn",
-    "aliases": [],
-    "pronouns": "he/him",
-    "nation": "Northern Water Tribe",
-    "ethnicity": "Water Tribe",
-    "gender": "Male",
-    "age": 17,
-    "hairColor": "Black",
-    "eyeColor": "Light blue",
-    "skinColor": null,
-    "loveInterest": "Yue (arranged betrothal)",
-    "image": null
-  },
+  "id": "hahn",
+  "slug": "hahn",
+  "type": "character",
+  "badge": "Northern Warrior",
+  "name": "Hahn",
+  "nation": "Northern Water Tribe",
+  "shortDescription": "Hahn is a young warrior of the Northern Water Tribe, betrothed to Princess Yue and known for his arrogance and bravado during the Siege of the North.",
+  "image": null,
+  "fullName": "Hahn",
+  "role": "NWT Warrior",
+  "titles": ["Warrior"],
+  "aliases": [],
+  "pronouns": "he/him",
+  "ethnicity": "Water Tribe",
+  "gender": "Male",
+  "age": 17,
+  "hairColor": "Black",
+  "eyeColor": "Light blue",
+  "skinColor": null,
+  "loveInterest": "Yue (arranged betrothal)",
   "abilities": {
     "bending": [],
     "weapons": ["Water Tribe weapons"],

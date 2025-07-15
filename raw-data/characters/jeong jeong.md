@@ -63,8 +63,10 @@ A wise but embittered mentor who introduces Aang to the dangers and responsibili
 ```json
 {
   "id": "jeong-jeong",
+  "slug": "jeong-jeong",
   "fullName": "Jeong Jeong",
-  "titles": ["The Deserter", "Admiral (defected)"],
+  "role": "The Deserter",
+  "titles": ["Admiral (ex-Fire Nation)", "Master"],
   "aliases": [],
   "species": "human",
   "gender": "male",

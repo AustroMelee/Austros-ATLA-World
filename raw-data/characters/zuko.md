@@ -65,6 +65,7 @@ The primary antagonist turned deuteragonist whose redemption arc is central to t
 {
   "id": "zuko",
   "fullName": "Zuko",
+  "role": "Exiled Prince",
   "titles": ["Prince", "Fire Lord", "Lord", "Ambassador"],
   "aliases": ["The Blue Spirit", "Lee", "Junior"],
   "species": "human",

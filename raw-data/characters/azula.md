@@ -65,6 +65,7 @@ The primary antagonist of the second and third acts, whose perfectionism and psy
 {
   "id": "azula",
   "fullName": "Azula",
+  "role": "Fire Nation Princess",
   "titles": ["Princess", "Crown Princess", "Fire Lord (uncrowned)"],
   "aliases": ["Kemurikage (disguise)"],
   "species": "human",

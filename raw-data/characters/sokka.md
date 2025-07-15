@@ -65,6 +65,7 @@ The non-bender strategist whose intellect, humor, and courage prove that you don
 {
   "id": "sokka",
   "fullName": "Sokka",
+  "role": "SWT Warrior",
   "titles": ["Chieftain", "Chairman"],
   "aliases": ["Wang Fire", "Captain Boomerang"],
   "species": "human",

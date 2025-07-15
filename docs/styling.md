@@ -55,7 +55,7 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 
 - **Floating Role Badge:**
   - Use a single, floating badge (modern pill style) at the bottom-right of the image area, not the card as a whole.
-  - Badge uses `bg-neutral-900/70 text-white text-xs font-bold backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-lg` for maximum readability and a premium look.
+  - Badge uses `bg-neutral-900 text-neutral-100 text-xs font-bold px-2.5 py-1 rounded-full border border-white/20 shadow-lg` for maximum readability and a premium look. This solid, opaque background ensures perfect contrast and legibility on both light and dark images. Do not use semi-transparent backgrounds or backdrop blur for badges.
   - Only render the badge if the character has a specific role/title (e.g., "NWT Chief"). Do **not** show a generic fallback (like "Character") in the badge—use the category text for that.
   - The badge must always be visually legible against any image background (high contrast, shadow, subtle border).
 
@@ -103,3 +103,13 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 - See section 7 for badge styling and placement details.
 
 These conventions ensure cards are visually clean, accessible, and maintain a clear information hierarchy, regardless of content or background image.
+
+### 9. Expanded Card Header: Specificity War & Inline Style Solution (2024-07)
+
+- **Problem:** The Tailwind Typography plugin (`prose`) applies high-specificity styles to all content within its scope, which can override even strong Tailwind utility classes (e.g., `text-3xl`). This caused the expanded card header (name and category) to render at the wrong size, regardless of utility class usage.
+- **Failed Fixes:** Attempts to use `not-prose` wrappers, extra utility classes, or increased selector specificity failed due to the plugin's CSS strength.
+- **Definitive Solution:** The name (`<h3>`) and category (`<p>`) in the expanded card view are rendered above the markdown and use inline `style` attributes for font size and line height. This guarantees correct appearance regardless of global or prose styles.
+- **When to Use:** Only use inline styles for font size/line height as a last resort, when all other approaches (utility classes, not-prose, etc.) fail due to plugin or global CSS specificity. Document the rationale in the component and reference this section.
+- **Reference:** See `ItemCard.tsx` (July 2024) for implementation and rationale.
+
+This ensures the expanded card header is always visually prominent, accessible, and immune to future CSS/plugin changes.

@@ -63,6 +63,7 @@ A tragic antagonist and a dark mirror for Katara, showcasing how trauma and a th
 {
   "id": "hama",
   "fullName": "Hama",
+  "role": "Puppetmaster",
   "titles": ["Master"],
   "aliases": [],
   "species": "human",

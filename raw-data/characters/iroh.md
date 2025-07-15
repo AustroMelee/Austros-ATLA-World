@@ -64,6 +64,7 @@ The primary mentor figure whose wisdom, kindness, and guidance are crucial for Z
 {
   "id": "iroh",
   "fullName": "Iroh",
+  "role": "Grand Lotus",
   "titles": ["General (retired)", "Prince", "The Dragon of the West", "Grand Lotus"],
   "aliases": ["Mushi", "Hong Mushi"],
   "species": "human",

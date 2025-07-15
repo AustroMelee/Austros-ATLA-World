@@ -63,7 +63,8 @@ A recurring neutral party whose unique skills serve as a crucial plot device, an
 {
   "id": "june",
   "fullName": "June",
-  "titles": ["Bounty Hunter", "Tea Discoverer"],
+  "role": "Bounty Hunter",
+  "titles": [],
   "aliases": [],
   "species": "human",
   "gender": "female",

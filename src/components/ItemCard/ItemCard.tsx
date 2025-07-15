@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { EnrichedCharacter } from '../../types';
 import ThemedCard from '../ThemedCard/ThemedCard';
 import NationIcon from '../NationIcon/NationIcon';
 import { toTitleCase, getInitials } from '../../utils/stringUtils';
-import { useImageFallback } from '../../hooks/useImageFallback';
 import { CustomMarkdownRenderer } from '../CustomMarkdownRenderer';
-import { Badge } from '../Badge/Badge';
+// We are no longer using the generic Badge for the role, so it can be removed if not used elsewhere
+// import { Badge } from '../Badge/Badge';
 
 interface ItemCardProps {
   item: EnrichedCharacter;
@@ -13,17 +13,29 @@ interface ItemCardProps {
   onExpand: () => void;
 }
 
+const fallbackImages: Record<string, string> = {
+  poppy: 'poppy.jpg',
+  'toph-beifong': 'toph.jpg',
+  toph: 'toph.jpg',
+  yue: 'yue-avatar.jpg',
+  gyatso: 'monk-gyatso.jpg',
+};
+
+const universalFallback = '404.jpg';
+
 export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
   const iconText = getInitials(item.name);
-  const imageFallbacks: Record<string, string> = {
-    'combustion-man': 'combustion-man.jpg',
-    'unknown': 'combustion-man.jpg',
-    'gyatso': 'monk-gyatso.jpg',
-    'toph-beifong': 'toph.jpg',
-    'yue': 'yue-avatar.jpg',
-  };
-  const { imgSrc, handleImageError } = useImageFallback(item.slug, imageFallbacks);
   const hasRole = item.role && item.role.trim();
+
+  // Determine the correct image file name
+  const imageFileName = item.image ? item.image : `${item.slug}.jpg`;
+  const [imgSrc, setImgSrc] = useState(`/assets/images/${imageFileName}`);
+
+  const handleImageError = () => {
+    // Try a specific fallback for known characters, else use universal 404
+    const fallback = fallbackImages[item.slug] || fallbackImages[item.id] || universalFallback;
+    setImgSrc(`/assets/images/${fallback}`);
+  };
 
   return (
     <ThemedCard
@@ -39,13 +51,11 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
       }
       aria-label={`View details for ${item.name}`}
     >
-      {!expanded && (
-        <span className="absolute top-4 right-4 text-subtle opacity-0 group-hover:opacity-80 group-focus-within:opacity-80 transition-opacity duration-150 pointer-events-none text-2xl select-none" aria-hidden="true">›</span>
-      )}
       <div className="pb-2 pt-3 flex flex-col min-h-[240px]">
-        <div className="relative mb-2 flex justify-center w-full px-2">
+        {/* The 'relative' class is removed, as the badge is no longer positioned against the image */}
+        <div className="mb-2 flex justify-center w-full px-2">
           <div className="w-full aspect-square max-w-[80%] max-h-[60%] mx-auto bg-background rounded-2xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
-            {item.slug && imgSrc ? (
+            {imgSrc ? (
               <img
                 src={imgSrc}
                 alt={item.name}
@@ -54,35 +64,69 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
                 onError={handleImageError}
               />
             ) : (
-              <span className="font-bold text-subtle text-2xl">{iconText}</span>
+              <span className="font-bold text-subtle text-2xl">
+                {iconText}
+              </span>
             )}
           </div>
-          {/* Conditional role badge with improved styling */}
-          {hasRole && (
-            <div className="pointer-events-none absolute bottom-2 right-2 z-10">
-              <Badge
-                label={item.role?.toString() || ''}
-                type="custom"
-                color="bg-neutral-900/70 text-white text-xs font-bold backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-lg"
-              />
+          {/* The badge was moved from here */}
+        </div>
+
+        {!expanded ? (
+          <>
+            {/* --- BADGE IN NEW POSITION --- */}
+            {hasRole && (
+              <div className="flex justify-center -mt-6 z-10">
+                <div className="bg-neutral-900/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-center p-2 border border-white/20 shadow-lg">
+                  <span className="text-white text-xs font-bold leading-none">
+                    {item.role}
+                  </span>
+                </div>
+              </div>
+            )}
+
+            {/* Text container now has padding-top to give the badge space */}
+            <div className="w-full mt-auto px-2 pt-4">
+              <div className="flex items-center justify-start gap-1">
+                <h3 className="font-bold text-xl text-white whitespace-normal line-clamp-2">
+                  {toTitleCase(item.name)}
+                </h3>
+                {item.nation && (
+                  <NationIcon
+                    nation={item.nation}
+                    size={12}
+                    className="align-middle flex-shrink-0"
+                  />
+                )}
+              </div>
+              {/* Always show the category label in the bottom left */}
+              <p className="text-xs text-neutral-400 font-bold mt-1">Character</p>
+              {/* Remove archetype/secondary line */}
             </div>
-          )}
-        </div>
-        <div className="w-full mt-auto px-2">
-          <div className="flex items-center justify-start gap-1">
-            <h3 className="font-bold text-xl text-white whitespace-normal line-clamp-2">{toTitleCase(item.name)}</h3>
-            {item.nation && <NationIcon nation={item.nation} size={12} className="align-middle flex-shrink-0" />}
-          </div>
-          {/* Added category text */}
-          <p className="text-sm text-neutral-400 font-medium mt-1">Character</p>
-        </div>
-        {expanded && (
-          <div className="prose prose-xs prose-invert max-w-none text-slate-300 mt-2 w-full text-left px-2">
-            {item.expandedView ? (
-              <CustomMarkdownRenderer markdown={item.expandedView} />
-            ) : (
-              <p className="italic text-subtle">No detailed view available.</p>
-            )}
+          </>
+        ) : (
+          <div className="w-full mt-auto px-4">
+            <div className="mb-4">
+              <h3
+                className="font-bold text-white"
+                style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }}
+              >
+                {toTitleCase(item.name)}
+              </h3>
+              {/* Always show the category label in the bottom left */}
+              <p className="text-xs text-neutral-400 font-bold mt-1">Character</p>
+              {/* Remove archetype/secondary line */}
+            </div>
+            
+            <div className="prose prose-sm prose-invert max-w-none text-slate-300 w-full text-left">
+              {item.expandedView ? (
+                <CustomMarkdownRenderer markdown={item.expandedView} />
+              ) : (
+                <p className="italic text-subtle">
+                  No detailed view available.
+                </p>
+              )}
+            </div>
           </div>
         )}
       </div>

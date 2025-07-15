@@ -60,7 +60,8 @@ A recurring animal companion whose humor, intelligence, and loyalty provided com
 {
   "id": "bosco",
   "fullName": "Bosco",
-  "titles": ["Earth King's Pet"],
+  "role": "Royal Pet",
+  "titles": [],
   "aliases": [],
   "species": "bear",
   "gender": "male",

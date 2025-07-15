@@ -1,4 +1,3 @@
-```markdown
 ---
 type: character
 ---
@@ -68,6 +67,7 @@ The protagonist of the series. His journey from a reluctant, playful child to a 
   "id": "aang",
   "slug": "aang",
   "fullName": "Aang",
+  "role": "Avatar",
   "titles": ["Avatar"],
   "aliases": ["The Avatar", "Twinkle Toes (by Toph)"],
   "species": "human",

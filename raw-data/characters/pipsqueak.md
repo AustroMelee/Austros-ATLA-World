@@ -59,7 +59,8 @@ A supporting character whose strength, loyalty, and gentle spirit provide comic 
 {
   "id": "pipsqueak",
   "fullName": "Pipsqueak",
-  "titles": ["Strongarm"],
+  "role": "Freedom Fighter",
+  "titles": [],
   "aliases": [],
   "species": "human",
   "gender": "male",

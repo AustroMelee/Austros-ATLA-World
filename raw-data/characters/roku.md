@@ -2,22 +2,38 @@
 type: character
 ---
 
-## 🖼️ UI - CARD VIEW
+## UI - CARD VIEW
 
 ```md
 - Name: Roku
 - Nation: Fire Nation
+- Badge: Spirit Advisor
 - Short Description: The Fire Nation-born Avatar who preceded Aang. His lifelong friendship and later rivalry with Fire Lord Sozin directly led to the beginning of the Hundred Year War.
 ```
 
----
-
-## 📖 UI - EXPANDED VIEW
+## UI - EXPANDED VIEW
 
 ```md
 ### 📖 Overview
 
-A kind and powerful Avatar, Roku's life was defined by his close friendship with Prince Sozin, which tragically soured as Sozin's imperial ambitions grew. Roku's struggle to balance his personal loyalty with his global duty resulted in a moment of hesitation that allowed Sozin to begin his conquest. He died protecting his home from a volcanic eruption, leaving a legacy of regret and a world on the brink of a century-long war for his successor, Aang, to resolve.
+Roku was the Fire Nation-born Avatar who preceded Aang. He was a wise and compassionate leader, striving to maintain balance in the world. Roku’s friendship with Fire Lord Sozin ultimately led to tragedy, as he failed to stop Sozin’s ambitions in time, indirectly allowing the Hundred Year War to begin. Roku’s spirit later served as a mentor to Aang, offering guidance and wisdom from the Spirit World.
+
+### 🏷️ Key Traits
+- Wise
+- Dutiful
+- Compassionate
+- Haunted by regret
+
+### 🏆 Notable Achievements
+- Mastered all four elements
+- Maintained peace during his lifetime
+- Attempted to stop Sozin’s plans for conquest
+
+### 💬 Notable Quotes
+- "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started."
+- "You must be decisive."
+- "Sometimes, the best way to solve your own problems is to help someone else."
+```
 
 ### ✨ Narrative Highlights
 
@@ -38,234 +54,119 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
 - Ta Min (Wife)
 - Zuko (Great-Grandson)
 
-### 🧬 Notable Traits
+### 🌟 Notable Traits
 
 - Wise & Merciful
 - Disciplined & Kind
 - Indecisive (at critical moments)
 - Regretful
 
-### 🗣️ Notable Quotes
+### 💬 Notable Quotes
 
 - "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started."
 - "Being the Avatar is an honor, but it's also a great burden."
 - "Some friendships are so strong, they can even transcend lifetimes."
-```
 
 ---
----
-
-## ⚙️ BACKEND METADATA (v3.0 EXPANSION) - ROKU
-
----
-
-## 🪪 Identity & Demographics
-
 ```json
 {
   "id": "roku",
+  "slug": "roku",
+  "type": "character",
+  "badge": "Spirit Advisor",
+  "name": "Roku",
+  "nation": "Fire Nation",
+  "shortDescription": "The Fire Nation-born Avatar who preceded Aang. His lifelong friendship and later rivalry with Fire Lord Sozin directly led to the beginning of the Hundred Year War.",
+  "image": null,
   "fullName": "Roku",
+  "role": "Past Avatar",
   "titles": ["Avatar"],
   "aliases": ["Ro"],
-  "species": "human",
-  "gender": "male",
-  "ageChronological": 70,
-  "ageBiological": 70,
-  "ageRange": "elder",
-  "birthDate": "82 BG",
-  "deathDate": "12 BG",
-  "nationality": "Fire Nation",
+  "pronouns": "he/him",
   "ethnicity": "Fire Nation",
-  "nativeLocation": "Fire Nation Capital",
-  "currentLocation": "Deceased (Spirit World)",
-  "socioeconomicStanding": "nobility",
-  "languagesSpoken": ["Standard Language"]
-}
-```
-
----
-
-## 🔥 Abilities, Skills & Combat Profile
-
-```json
-{
-  "isBender": true,
-  "bendingElement": "fire",
-  "bendingProficiency": "legendary",
-  "advancedBending": ["lavabending"],
-  "nonBendingSkills": ["diplomacy"],
-  "uniqueTechniques": ["simultaneous multi-element bending", "volcano containment"],
-  "powerMetrics": {
-    "rawPower": 10,
-    "technicalSkill": 10,
-    "strategicAptitude": 8
+  "gender": "Male",
+  "age": 70,
+  "hairColor": "White",
+  "eyeColor": null,
+  "skinColor": null,
+  "loveInterest": "Ta Min (wife)",
+  "abilities": {
+    "bending": ["Firebending", "Airbending", "Waterbending", "Earthbending"],
+    "weapons": [],
+    "fightingStyles": ["Avatar State", "Diplomacy"],
+    "notableFeats": [
+      "Mastered all four elements and the Avatar State.",
+      "Defeated Fire Lord Sozin in a one-on-one confrontation.",
+      "Temporarily subdued a massive volcanic eruption.",
+      "Destroyed the Fire Temple on Crescent Island."
+    ]
   },
-  "combatStyle": "defensive",
-  "vulnerabilities": ["indecisiveness", "loyalty to friends"],
-  "isLegendaryFighter": true,
-  "notableFeats": [
-    "Mastered all four elements and the Avatar State",
-    "Defeated Fire Lord Sozin in a one-on-one confrontation",
-    "Temporarily subdued a massive volcanic eruption",
-    "Destroyed the Fire Temple on Crescent Island"
-  ]
-}
-```
-
----
-
-## 🧭 Affiliations, Politics & Alignment
-
-```json
-{
-  "currentAffiliations": ["Spirit World"],
-  "pastAffiliations": ["Fire Nation"],
-  "allegianceHistory": [],
-  "isRoyalty": false,
-  "politicalPower": "ruling",
-  "politicalLeanings": ["traditionalist", "pacifist (conflicted)"],
-  "moralAlignment": "lawful good",
-  "moralCompassDrift": false
-}
-```
-
----
-
-## 🎭 Narrative Metrics
-
-```json
-{
-  "narrativeFunction": "mentor",
-  "screenTimeLevel": "supporting",
-  "firstAppearance": "108-Winter-Solstice-Part-2-Avatar-Roku",
-  "finalAppearance": "Graphic Novel: The Rift trilogy",
-  "deathStatus": "deceased",
-  "causeOfDeath": "Volcanic gas inhalation, betrayal by Sozin",
-  "narrativeArcs": [
-    { "arcType": "tragic", "status": "completed", "summary": "His failure to stop his best friend's ambition, leading directly to the Hundred Year War." }
-  ],
-  "keyTropes": ["The Mentor", "My Greatest Failure", "Posthumous Character", "Spirit Advisor", "Tragic Hero"]
-}
-```
-
----
-
-## 📚 Role By Era/Season
-
-```json
-{
-  "eraAppearances": [
-    {
-      "era": "Avatar: The Last Airbender",
-      "role": "mentor",
-      "focus": "Appearing to Aang as his primary spiritual guide, providing crucial information and context for the war.",
-      "keyEpisodes": ["108", "201", "306", "319"]
-    }
-  ]
-}
-```
-
----
-
-## 🤝 Relational Matrix
-
-```json
-{
-  "relationships": [
-    { "characterId": "sozin", "relationshipType": "rival", "status": "negative", "history": "His childhood best friend who became his greatest adversary." },
-    { "characterId": "aang", "relationshipType": "student", "status": "positive", "history": "His direct successor, whom he guides from the Spirit World." },
-    { "characterId": "gyatso", "relationshipType": "ally", "status": "positive", "history": "A close friend from his time at the Southern Air Temple." },
-    { "characterId": "fang", "relationshipType": "petCompanions", "status": "positive", "history": "His loyal dragon animal guide." },
-    { "characterId": "kyoshi", "relationshipType": "mentor", "status": "positive", "history": "His predecessor in the Avatar Cycle." },
-    { "characterId": "zuko", "relationshipType": "family", "status": "neutral", "history": "His great-grandson through his daughter, Rina." }
-  ],
-  "groupMemberships": [],
-  "petCompanions": ["Fang (dragon)"]
-}
-```
-
----
-
-## 🧠 Psycho-Emotional Profile
-
-```json
-{
-  "positiveTraits": ["wise", "kind", "merciful", "disciplined", "powerful"],
-  "negativeTraits": ["indecisive", "reluctant to act"],
-  "motivations": ["maintaining balance", "friendship", "peace"],
-  "fears": ["failing the world", "making the wrong decision"],
-  "internalConflicts": ["friendship with Sozin vs. his duty as the Avatar"],
-  "emotionalWounds": ["betrayal by Sozin", "the guilt of allowing the war to start"],
-  "copingMechanisms": ["showing restraint", "diplomacy"],
-  "worldview": "Believes in maintaining peace between the four nations, but is haunted by the consequences of his indecisiveness."
-}
-```
-
----
-
-## 📦 Physicality & Presentation
-
-```json
-{
-  "heightEstimate": "Tall",
-  "notableFeatures": ["Long white hair and beard", "Fire Nation topknot", "Crown Prince headpiece"],
-  "outfitStyles": ["Fire Nation royal robes", "Avatar training attire"],
-  "signaturePossessions": ["Crown Prince headpiece"],
-  "ageProgression": true,
-  "voiceActor": ["James Garrett", "Andrew Caldwell"]
-}
-```
-
----
-
-## 💬 Dialogue & Communication
-
-```json
-{
-  "iconicQuotes": [
+  "affiliations": {
+    "primary": "Spirit World",
+    "secondary": ["Fire Nation"],
+    "allies": ["Gyatso", "Aang", "Ta Min", "Fang (dragon)"],
+    "enemies": ["Sozin"]
+  },
+  "narrative": {
+    "firstAppearance": "Winter Solstice Part 2: Avatar Roku",
+    "lastAppearance": "The Rift trilogy",
+    "voicedBy": ["James Garrett", "Andrew Caldwell (young Roku)"] ,
+    "era": "Book One: Water, Book Two: Earth, Book Three: Fire",
+    "seasons": [1, 2, 3],
+    "episodes": [8, 21, 32, 46, 60],
+    "notableQuotes": [
+      "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.",
+      "Being the Avatar is an honor, but it's also a great burden.",
+      "Some friendships are so strong, they can even transcend lifetimes."
+    ]
+  },
+  "metrics": {
+    "archetype": "Spirit Advisor",
+    "moralAlignment": "Lawful Good",
+    "intelligence": 8,
+    "strength": 8,
+    "charisma": 7,
+    "leadership": 8,
+    "humor": 4
+  },
+  "roles": {
+    "avatar": true,
+    "mentor": true
+  },
+  "relationships": {
+    "sozin": "Best Friend turned Arch-Nemesis",
+    "aang": "Successor, Mentee",
+    "gyatso": "Close Friend, Aang's Guardian",
+    "taMin": "Wife",
+    "zuko": "Great-Grandson"
+  },
+  "psyche": {
+    "personality": ["Wise", "Merciful", "Disciplined", "Kind", "Indecisive", "Regretful"],
+    "emotionalState": ["Reflective", "Regretful"],
+    "motivation": "To maintain balance and peace, and to guide his successor."
+  },
+  "physical": {
+    "build": "Tall",
+    "height": null,
+    "distinguishingFeatures": ["Long white hair and beard", "Fire Nation topknot", "Crown Prince headpiece"],
+    "outfitStyles": ["Fire Nation royal robes", "Avatar training attire"]
+  },
+  "dialogue": [
     "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.",
-    "The four nations are meant to be separate. It is the Avatar's duty to maintain that balance.",
-    "I offer you this wisdom, Aang: You must be decisive."
+    "Being the Avatar is an honor, but it's also a great burden.",
+    "Some friendships are so strong, they can even transcend lifetimes."
   ],
-  "speakingStyle": "formal",
-  "linguisticQuirks": ["Speaks with a commanding and wise tone"],
-  "catchphrases": []
-}
-```
-
----
-
-## 🧱 Semantic & Thematic Index
-
-```json
-{
-  "archetype": "The Mentor",
-  "thematicKeywords": ["friendship", "betrayal", "duty", "regret", "indecision", "war", "legacy", "balance"],
+  "tags": ["Fire Nation", "Avatar", "Mentor", "Book One", "Winter Solstice"],
   "tagCategories": {
-    "narrativeTags": ["past avatar", "spirit advisor", "my greatest failure", "tragic hero"],
-    "combatTags": ["avatar", "firebender", "airbender", "waterbender", "earthbender", "lavabender"],
-    "relationshipTags": ["best friend of Sozin", "mentor to Aang", "predecessor to Aang", "great-grandfather of Zuko"],
-    "emotionTags": ["wise", "merciful", "regretful", "indecisive"],
-    "politicalTags": ["diplomat"],
-    "arcTags": ["died fighting volcano", "betrayed by Sozin", "failed to stop the war"],
-    "worldTags": ["Fire Nation", "Spirit World", "Crescent Island"],
-    "triviaTags": ["has a dragon", "Zuko's great-grandfather", "friends with Gyatso", "wore Sozin's headpiece"]
+    "nationTags": ["Fire Nation"],
+    "roleTags": ["Avatar", "Mentor"],
+    "episodeTags": ["Book One", "Winter Solstice"]
+  },
+  "system": {
+    "schemaVersion": "3.0",
+    "createdBy": "AI Assistant",
+    "createdAt": "2024-06-09T00:00:00Z",
+    "flags": []
   }
-}
-```
-
----
-
-## 🔮 AI/Filtering & System Flags
-
-```json
-{
-  "relatedCards": ["aang", "sozin", "gyatso", "kyoshi", "zuko", "fang"],
-  "filterWeight": 85,
-  "canonicalImportance": "primary",
-  "dataCompletenessScore": 1.0,
-  "searchableKeywords": ["roku", "avatar", "fire", "sozin", "volcano", "aang", "mentor", "spirit", "decisive", "regret"],
-  "fuzzySynonyms": ["the avatar before aang", "sozin's friend", "zuko's great grandfather"],
-  "isSuggestedInXContext": []
 }
 ```

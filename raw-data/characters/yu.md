@@ -7,7 +7,8 @@ type: character
 ```md
 - Name: Yu
 - Nation: Earth Kingdom
-- Short Description: Renowned earthbending master and head of Gaoling’s earthbending academy. Known for his teaching, subtle earthbending style, and profit-driven approach, Yu was hired to retrieve Toph Beifong but ultimately returned to his teaching profession.
+- Badge: Earthbending Instructor
+- Short Description: Yu is a professional earthbending instructor from Gaoling, hired by the Beifong family to teach Toph and later involved in the Earth Rumble tournaments.
 ```
 
 ## UI - EXPANDED VIEW
@@ -55,14 +56,21 @@ Yu was an earthbending master and a resident of the upper-class Earth Kingdom to
 ```json
 {
   "id": "yu",
-  "slug": "yu",
-  "identity": {
-    "fullName": "Yu",
-    "nativeName": "余",
-    "pronouns": "he/him",
-    "age": 23,
-    "ethnicity": "Earth Kingdom",
-    "nationality": "Gaoling, Earth Kingdom"
+  "slug": "yu"
+}
+```
+
+```json
+{
+  "id": "yu",
+  "fullName": "Yu",
+  "role": "EK General",
+  "titles": ["General"],
+  "nativeName": "余",
+  "pronouns": "he/him",
+  "age": 23,
+  "ethnicity": "Earth Kingdom",
+  "nationality": "Gaoling, Earth Kingdom"
   },
   "physical": {
     "gender": "Male",

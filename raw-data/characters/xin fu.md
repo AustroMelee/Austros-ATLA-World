@@ -7,7 +7,8 @@ type: character
 ```md
 - Name: Xin Fu
 - Nation: Earth Kingdom
-- Short Description: Proficient earthbender, cunning promoter, and relentless bounty hunter. Known for his business savvy and willingness to do anything for money, Xin Fu is both a formidable fighter and a shrewd operator in the underground earthbending scene.
+- Badge: Earth Rumble Promoter
+- Short Description: Xin Fu is the shrewd and ambitious promoter of the Earth Rumble tournaments, often scheming for profit and power.
 ```
 
 ## UI - EXPANDED VIEW
@@ -17,7 +18,15 @@ type: character
 
 Xin Fu was a prominent and ambitious Earth Kingdom fight promoter and bounty hunter. He was the host and referee of the Earth Rumble tournaments in Gaoling and was hired by Lao Beifong to capture Toph. Xin Fu was known for his cunning, persistence, and willingness to use underhanded tactics to achieve his goals. Despite his efforts, he was ultimately outsmarted by Toph and Team Avatar.
 
-### 🧩 Role in the Story
+### ✨ Narrative Highlights
+
+- Hosted and refereed the Earth Rumble tournaments.
+- Hired by Lao Beifong to capture Toph.
+- Pursued Toph and Team Avatar across the Earth Kingdom.
+- Trapped in a metal box by Toph's metalbending.
+- Known for his cunning and persistence.
+
+### 🎭 Role in the Story
 
 Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdom's underground fighting scene and the lengths to which some would go for profit and reputation. His pursuit of Toph and Team Avatar added tension and showcased Toph's ingenuity and the dangers faced by the group.
 
@@ -26,6 +35,7 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
 - Lao Beifong: Employer who hired Xin Fu to capture Toph.
 - Master Yu: Partnered with Xin Fu in the pursuit of Toph.
 - Toph Beifong: Target of Xin Fu's bounty hunt; ultimately outsmarted him.
+- Earth Rumble fighters: Allies and subordinates.
 
 ### 🌟 Notable Traits
 
@@ -33,19 +43,9 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
 - Persistent and ambitious
 - Skilled earthbender and fight promoter
 
-### 💬 Quotes
+### 💬 Notable Quotes
 
 > "Nobody cheats Xin Fu."
-> 
-> — Xin Fu
-
-### ✨ Narrative Highlights
-
-- Hosted and refereed the Earth Rumble tournaments.
-- Hired by Lao Beifong to capture Toph.
-- Pursued Toph and Team Avatar across the Earth Kingdom.
-- Trapped in a metal box by Toph's metalbending.
-- Known for his cunning and persistence.
 ```
 
 ---
@@ -53,75 +53,97 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
 {
   "id": "xin-fu",
   "slug": "xin-fu",
-  "identity": {
-    "fullName": "Xin Fu",
-    "nativeName": "辛富",
-    "aliases": [],
-    "pronouns": "he/him",
-    "age": 24,
-    "ethnicity": "Earth Kingdom",
-    "nationality": "Gaoling, Earth Kingdom"
-  },
-  "physical": {
-    "gender": "Male",
-    "eyeColor": "Gray",
-    "hairColor": "Black",
-    "height": null,
-    "build": "Muscular"
-  },
-  "affiliations": [
-    "Earth Rumble",
-    "Lao Beifong (client)",
-    "Fire Nation Man (associate)",
-    "Earth Kingdom"
-  ],
-  "roles": [
-    "Host and referee of Earth Rumble",
-    "Bounty hunter",
-    "Professional earthbending fighter (formerly)"
-  ],
+  "type": "character",
+  "badge": "Earth Rumble Promoter",
+  "name": "Xin Fu",
+  "nation": "Earth Kingdom",
+  "shortDescription": "Xin Fu is the shrewd and ambitious promoter of the Earth Rumble tournaments, often scheming for profit and power.",
+  "image": null,
+  "fullName": "Xin Fu",
+  "role": "Earth Rumble Promoter, Bounty Hunter",
+  "titles": [],
+  "aliases": [],
+  "pronouns": "he/him",
+  "ethnicity": "Earth Kingdom",
+  "gender": "Male",
+  "age": null,
+  "hairColor": "Black",
+  "eyeColor": "Gray",
+  "skinColor": null,
+  "loveInterest": null,
   "abilities": {
     "bending": ["Earthbending"],
-    "fightingStyle": "Hung Gar kung fu",
-    "weapons": ["Earth"],
+    "weapons": [],
+    "fightingStyles": ["Earthbending (Hung Gar kung fu)", "Unarmed combat"],
     "notableFeats": [
-      "Promoter and host of Earth Rumble tournament",
-      "Kidnapped Aang and Toph in metal cages",
-      "Battled Toph and lasted longer than other competitors",
-      "Tracked Toph, Zuko, and Iroh across the Earth Kingdom",
-      "Escaped from a metal prison after being trapped by Toph"
+      "Hosted and refereed the Earth Rumble tournaments.",
+      "Hired by Lao Beifong to capture Toph.",
+      "Pursued Toph and Team Avatar across the Earth Kingdom.",
+      "Trapped in a metal box by Toph's metalbending.",
+      "Known for his cunning and persistence."
     ]
   },
-  "relationships": {
-    "allies": ["Lao Beifong", "Yu", "Earth Rumble fighters", "Fire Nation Man"],
+  "affiliations": {
+    "primary": "Earth Rumble",
+    "secondary": ["Lao Beifong (client)", "Earth Rumble fighters"],
+    "allies": ["Lao Beifong", "Master Yu", "Earth Rumble fighters", "Fire Nation Man"],
     "enemies": ["Toph Beifong", "Aang", "Zuko", "Iroh", "Fung"]
   },
   "narrative": {
     "firstAppearance": "The Blind Bandit",
     "lastAppearance": "Avatar: The Last Airbender: Quest for Balance",
-    "voicedBy": [
-      {"actor": "Marc Graue", "work": "Avatar: The Last Airbender"},
-      {"actor": "Donald Chang", "work": "Quest for Balance"}
+    "voicedBy": ["Marc Graue", "Donald Chang (Quest for Balance)"] ,
+    "era": "Book Two: Earth",
+    "seasons": [2],
+    "episodes": [6, 11, 18, 19],
+    "notableQuotes": [
+      "Nobody cheats Xin Fu."
     ]
   },
-  "archetype": ["Opportunist", "Antagonist"],
-  "moralAlignment": "Neutral Evil",
+  "metrics": {
+    "archetype": "Shrewd Promoter",
+    "moralAlignment": "Neutral Evil",
+    "intelligence": 5,
+    "strength": 5,
+    "charisma": 4,
+    "leadership": 5,
+    "humor": 2
+  },
+  "roles": {
+    "promoter": true,
+    "bountyHunter": true
+  },
+  "relationships": {
+    "laoBeifong": "Employer",
+    "masterYu": "Partner",
+    "toph": "Target",
+    "earthRumbleFighters": "Allies and subordinates"
+  },
+  "psyche": {
+    "personality": ["Cunning", "Resourceful", "Persistent", "Ambitious", "Greedy"],
+    "emotionalState": ["Determined", "Scheming"],
+    "motivation": "To gain profit and power through Earth Rumble and bounty hunting."
+  },
+  "physical": {
+    "build": "Muscular",
+    "height": null,
+    "distinguishingFeatures": ["Black hair", "Gray eyes"],
+    "outfitStyles": ["Earth Rumble attire"]
+  },
+  "dialogue": [
+    "Nobody cheats Xin Fu."
+  ],
+  "tags": ["Earth Kingdom", "Earth Rumble", "Promoter", "Bounty Hunter", "Book Two", "The Blind Bandit"],
   "tagCategories": {
-    "combatTags": ["Earthbender", "Bounty Hunter", "Tournament Host"],
-    "personalityTags": ["Greedy", "Stubborn", "Business-savvy", "Persistent", "Cunning"]
-  },
-  "psychoEmotionalProfile": {
-    "traits": ["Stubborn", "Greedy", "Opportunistic", "Cunning", "Persistent"],
-    "motivation": "Profit, personal gain, reputation"
-  },
-  "era": {
-    "series": ["Avatar: The Last Airbender"],
-    "book": ["Earth"],
-    "timeline": ["100 AG"]
+    "nationTags": ["Earth Kingdom"],
+    "roleTags": ["Promoter", "Bounty Hunter"],
+    "episodeTags": ["Book Two", "The Blind Bandit"]
   },
   "system": {
-    "slug": "xin-fu",
-    "__type": "character",
-    "schemaVersion": "v3.0"
+    "schemaVersion": "3.0",
+    "createdBy": "AI Assistant",
+    "createdAt": "2024-06-09T00:00:00Z",
+    "flags": []
   }
 }
+```

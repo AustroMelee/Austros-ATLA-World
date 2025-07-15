@@ -64,7 +64,9 @@ A master of the old guard whose personal history forces him to confront his prej
 ```json
 {
   "id": "pakku",
+  "slug": "pakku",
   "fullName": "Pakku",
+  "role": "NWT Master",
   "titles": ["Master"],
   "aliases": [],
   "species": "human",

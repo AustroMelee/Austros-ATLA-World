@@ -65,7 +65,8 @@ A guiding father figure whose courage and strategic mind inspire his children an
 {
   "id": "hakoda",
   "fullName": "Hakoda",
-  "titles": ["Chieftain", "Head Chieftain"],
+  "role": "SWT Chieftain",
+  "titles": ["Chief"],
   "aliases": [],
   "species": "human",
   "gender": "male",

@@ -53,30 +53,24 @@ Combustion Man was introduced as a secondary antagonist in Book Three. Hired by 
 {
   "id": "combustion-man",
   "slug": "combustion-man",
-  "identity": {
-    "name": "Combustion Man",
-    "fullName": "Combustion Man",
-    "aliases": ["Sparky Sparky Boom Man"],
-    "pronouns": "he/him",
-    "nation": "Fire Nation",
-    "ethnicity": "Fire Nation",
-    "gender": "Male",
-    "age": null,
-    "height": "7'2" (218 cm)",
-    "hairColor": "Black (shaved)",
-    "eyeColor": "Dark",
-    "skinColor": "Light",
-    "image": "combustion-man.jpg"
-  },
-  "biography": {
-    "died": "100 AG",
-    "profession": "Assassin",
-    "position": "Firebending master",
-    "affiliation": "Contract employer",
-    "firstAppearance": "The Headband",
-    "lastAppearance": "Combustion Man on a Train",
-    "voicedBy": "Greg Baldwin"
-  },
+  "badge": "Combustionbender",
+  "name": "Combustion Man",
+  "nation": "Fire Nation",
+  "shortDescription": "A silent, towering firebending assassin with a third-eye tattoo, metal prosthetics, and the rare ability to project devastating explosions. Hired by Zuko to eliminate Avatar Aang, he became one of Team Avatar's most dangerous foes.",
+  "image": "combustion-man.jpg",
+  "fullName": "Combustion Man",
+  "role": "Assassin",
+  "titles": ["Assassin", "Firebending Master"],
+  "aliases": ["Sparky Sparky Boom Man"],
+  "pronouns": "he/him",
+  "ethnicity": "Fire Nation",
+  "gender": "Male",
+  "age": null,
+  "height": "7'2\" (218 cm)",
+  "hairColor": "Black (shaved)",
+  "eyeColor": "Dark",
+  "skinColor": "Light",
+  "loveInterest": null,
   "abilities": {
     "bending": ["Firebending", "Combustionbending"],
     "weapons": ["Fire", "Metal prosthetics"],
@@ -93,6 +87,17 @@ Combustion Man was introduced as a secondary antagonist in Book Three. Hired by 
     "secondary": ["Contract employer", "Ozai", "Town authority"],
     "allies": ["Raven eagle", "Ozai", "Town authority", "Fire Nation"],
     "enemies": ["Team Avatar"]
+  },
+  "narrative": {
+    "firstAppearance": "The Headband",
+    "lastAppearance": "Combustion Man on a Train",
+    "voicedBy": "Greg Baldwin",
+    "era": "Book Three: Fire",
+    "seasons": [3],
+    "episodes": [3, 12],
+    "notableQuotes": [
+      "I've heard about you. They say you're good at what you do, and even better at keeping secrets. The Avatar is alive. I want you to find him, and end him."
+    ]
   },
   "metrics": {
     "archetype": "Silent Assassin",
@@ -120,7 +125,7 @@ Combustion Man was introduced as a secondary antagonist in Book Three. Hired by 
   },
   "physical": {
     "build": "Imposing",
-    "height": "7'2" (218 cm)",
+    "height": "7'2\" (218 cm)",
     "distinguishingFeatures": ["Third-eye tattoo", "Metal prosthetic arm and leg", "Large physique"]
   },
   "dialogue": [
@@ -139,4 +144,4 @@ Combustion Man was introduced as a secondary antagonist in Book Three. Hired by 
     "flags": []
   }
 }
-``` 
+```
