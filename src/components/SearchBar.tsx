@@ -1,90 +1,59 @@
 // src/components/SearchBar.tsx
 
-import React from 'react';
-// NationIcon expects a nation string or null, not a custom type.
-import NationIcon from './NationIcon/NationIcon';
+import React from "react";
 
-// --- Props Interface (Unified) ---
 interface SearchBarProps {
   value: string;
   onChange: (newValue: string) => void;
-  onSubmit?: (e: React.FormEvent) => void;
-  suggestion?: string;
-  textColor?: string;
-  nationIcon?: string | null;
+  placeholder?: string;
 }
 
-// --- Unified Component with Tailwind CSS ---
 export default function SearchBar({
   value,
   onChange,
-  onSubmit,
-  suggestion,
-  textColor,
-  nationIcon,
+  placeholder = "Search characters...",
 }: SearchBarProps) {
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(e.target.value);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    // Autocomplete with Tab if a suggestion exists and the input is empty
-    if (e.key === 'Tab' && suggestion && !value) {
-      e.preventDefault();
-      onChange(suggestion); // Directly update the state with the suggestion string
-    }
-  };
-
   return (
-    <form onSubmit={onSubmit} className="w-full">
-      {/* Main container for positioning */}
-      <div className="relative w-full">
-        {/* Icon (conditionally rendered) */}
-        {nationIcon && (
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-            <NationIcon nation={nationIcon} />
-          </div>
-        )}
-
-        {/* The actual input field */}
-        <input
-          type="text"
-          placeholder="Search characters..."
-          value={value}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          // Dynamic text color and padding based on icon presence
-          style={{ color: textColor }}
-          className={`
-            w-full rounded-full border border-gray-300 dark:border-gray-600 
-            bg-gray-100 dark:bg-gray-800 
-            py-3 text-base text-gray-900 dark:text-gray-100
-            focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none 
-            transition-colors
-            ${nationIcon ? 'pl-11' : 'pl-5'} pr-5
-          `}
-        />
-
-        {/* Suggestion overlay (only shows if there's a suggestion and no input value) */}
-        {suggestion && !value && (
-          <div className={`
-            absolute top-1/2 -translate-y-1/2 
-            text-gray-400 dark:text-gray-500 
-            pointer-events-none
-            ${nationIcon ? 'left-11' : 'left-5'}
-          `}>
-            {suggestion}
-          </div>
-        )}
-      </div>
-
-      {/* Conditionally render a submit button (example, can be styled) */}
-      {/* {onSubmit && (
-        <button type="submit" className="mt-2 px-4 py-2 bg-blue-600 text-white rounded">
-          Search
-        </button>
-      )} */}
-    </form>
+    <section className="flex justify-center items-center w-full py-12">
+      <form
+        className="w-full max-w-xl"
+        role="search"
+        autoComplete="off"
+        onSubmit={e => e.preventDefault()}
+      >
+        <div className="relative w-full">
+          <input
+            type="text"
+            className="
+              w-full rounded-2xl border border-primary
+              !bg-neutral-900
+              px-6 py-3 text-lg md:text-xl
+              !text-white
+              !placeholder-white/80
+              placeholder:text-lg md:placeholder:text-xl
+              focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary
+              shadow-lg transition-all duration-150
+            "
+            placeholder={placeholder}
+            aria-label={placeholder}
+            value={value}
+            onChange={e => onChange(e.target.value)}
+          />
+          {!!value && (
+            <button
+              type="button"
+              onClick={() => onChange("")}
+              className="absolute right-5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-primary transition-all"
+              aria-label="Clear search"
+              tabIndex={0}
+            >
+              <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5">
+                <path d="M6 6l8 8M6 14L14 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </button>
+          )}
+        </div>
+      </form>
+    </section>
   );
 } 

@@ -40,9 +40,9 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
       {!expanded && (
         <span className="absolute top-4 right-4 text-subtle opacity-0 group-hover:opacity-80 group-focus-within:opacity-80 transition-opacity duration-150 pointer-events-none text-2xl select-none" aria-hidden="true">›</span>
       )}
-      <div className="pb-4 pt-6 flex flex-col min-h-[420px]">
-        <div className="mb-4 flex justify-center w-full px-4">
-          <div className="w-44 h-44 sm:w-48 sm:h-48 flex-shrink-0 bg-background rounded-2xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
+      <div className="pb-2 pt-3 flex flex-col min-h-[210px]">
+        <div className="mb-2 flex justify-center w-full px-2">
+          <div className="w-22 h-22 sm:w-24 sm:h-24 flex-shrink-0 bg-background rounded-2xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
             {item.slug && imgSrc ? (
               <img
                 src={imgSrc}
@@ -52,19 +52,19 @@ export default function ItemCard({ item, expanded, onExpand }: ItemCardProps) {
                 onError={handleImageError}
               />
             ) : (
-              <span className="font-bold text-subtle text-4xl">{iconText}</span>
+              <span className="font-bold text-subtle text-2xl">{iconText}</span>
             )}
           </div>
         </div>
-        <div className="w-full mt-auto px-4">
-          <div className="flex items-center justify-end gap-2">
-            <h3 className="font-bold text-2xl text-white truncate">{toTitleCase(item.name)}</h3>
-            {item.nation && <NationIcon nation={item.nation} size={24} className="align-middle flex-shrink-0" />}
+        <div className="w-full mt-auto px-2">
+          <div className="flex items-center justify-start gap-1">
+            <h3 className="font-bold text-xl text-white whitespace-normal line-clamp-2">{toTitleCase(item.name)}</h3>
+            {item.nation && <NationIcon nation={item.nation} size={12} className="align-middle flex-shrink-0" />}
           </div>
-          <div className="text-right text-lg text-subtle mt-1 font-medium">Character</div>
+          <div className="text-left text-base text-subtle mt-1 font-medium">Character</div>
         </div>
         {expanded && (
-          <div className="prose prose-sm prose-invert max-w-none text-slate-300 mt-4 w-full text-left px-4">
+          <div className="prose prose-xs prose-invert max-w-none text-slate-300 mt-2 w-full text-left px-2">
             {item.expandedView ? (
               <CustomMarkdownRenderer markdown={item.expandedView} />
             ) : (

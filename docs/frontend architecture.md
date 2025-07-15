@@ -22,9 +22,44 @@ All complex state management is isolated into reusable, single-purpose hooks.
 
 -   **Location:** `src/components/SearchBar.tsx`
 -   **Responsibility:** A single, flexible component that handles both simple form-based search and advanced, suggestion-aware search.
--   **Implementation:** It uses Tailwind CSS for styling and accepts optional props (`onSubmit`, `suggestion`, `nationIcon`, etc.) to conditionally render its features. This consolidation eliminates code duplication.
+-   **Logic:**
+    - Receives value and onChange props from `HomeContainer` (via `Home`).
+    - Handles input, clear button, and suggestion logic.
+    - All UI styling and toggling details are documented in `styling.md`.
 
-### 4. `stringUtils.ts`: Shared Utilities
+### 4. `EntityGrid` and `ItemCard`: Card Grid & Card Logic
+
+-   **Location:** `src/components/EntityGrid/EntityGrid.tsx`, `src/components/ItemCard/ItemCard.tsx`
+-   **Responsibility:**
+    - `EntityGrid` renders a flexbox grid of cards, each card is an `ItemCard`.
+    - Card width is controlled in `EntityGrid` (w-[188px] as of latest update).
+    - `ItemCard` is responsible for rendering the card content, including image, name, nation icon, and category.
+    - Card name uses multi-line wrapping with line clamping (`line-clamp-2`) for accessibility and SRP, ensuring most names are visible by default.
+    - Card content (image, text, etc.) is scaled to match the card size for visual consistency.
+    - All logic is designed for accessibility, maintainability, and a visually consistent grid.
+    - For styling and further details, see `styling.md`.
+
+### 5. `FilterSidebar` and `FilterPanel`: Filter UI Logic
+
+-   **Location:** `src/components/FilterSidebar.tsx`, `src/components/FilterPanel.tsx`
+-   **Responsibility:**
+    - `FilterSidebar` renders the sidebar with filter groups and filter controls (e.g., nation, element, status, gender, age group).
+    - `FilterPanel` (when used) renders filter tags or controls above the main grid.
+    - Both components receive filter state and handlers as props from `HomeContainer` and update the UI accordingly.
+-   **Toggling:**
+    - To hide or unhide these components, see `styling.md` for the canonical method.
+
+### 6. `CollectionsSidebar` and `CollectionsPanel`: Collections UI Logic
+
+-   **Location:** `src/components/CollectionsSidebar/CollectionsSidebar.tsx`, `src/components/CollectionsPanel/CollectionsPanel.tsx`
+-   **Responsibility:**
+    - `CollectionsSidebar` renders the sidebar with a list of user collections and collection controls.
+    - `CollectionsPanel` renders the modal/panel for adding to or creating collections.
+    - Both receive collection state and handlers as props from `HomeContainer` and update the UI accordingly.
+-   **Toggling:**
+    - To hide or unhide these components, see `styling.md` for the canonical method.
+
+### 7. `stringUtils.ts`: Shared Utilities
 
 -   **Location:** `src/utils/stringUtils.ts`
 -   **Responsibility:** Contains general-purpose, non-React helper functions (e.g., `toTitleCase`, `getInitials`). Components like `ItemCard` import these helpers instead of defining them locally.

@@ -1,9 +1,5 @@
-import React from 'react';
+// FilterPanel is hidden from the UI on user request. To re-enable, restore the original export.
 
-type FilterPanelProps = {
-  children: React.ReactNode;
-};
-
-export default function FilterPanel({ children }: FilterPanelProps) {
-  return <div className="flex flex-wrap gap-3 items-center mb-4">{children}</div>;
+export default function FilterPanel() {
+  return null;
 }

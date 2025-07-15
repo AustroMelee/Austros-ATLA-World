@@ -40,7 +40,7 @@ export default function EntityGrid({ items, onSelect, selectedId, scrollContaine
           <div
             key={item.id}
             ref={node => { itemRefs.current.set(item.id, node); }}
-            className="relative overflow-visible w-[300px] m-2"
+            className="relative overflow-visible w-[188px] m-2"
           >
             <div className={
               `transition-transform duration-200 ease-out${selectedId !== item.id ? ' hover:scale-[1.015] hover:z-10 hover:shadow-lg' : ''}`

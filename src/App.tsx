@@ -4,17 +4,18 @@ import Layout from './components/Layout';
 import HomeContainer from './pages/HomeContainer';
 import NotFound from './pages/NotFound';
 
-const App: React.FC = () => (
-  <Router>
-    <Layout>
-      <div className="bg-zinc-950 text-neutral-200 min-h-screen">
-        <Routes>
-          <Route path="/" element={<HomeContainer />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
-    </Layout>
-  </Router>
-);
-
-export default App;
+export default function App() {
+  return (
+    <>
+      <div className="bg-neutral-900 hidden">force-tailwind-bg-neutral-900</div>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<HomeContainer />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </>
+  );
+}
