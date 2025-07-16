@@ -11106,7 +11106,7 @@
       "createdAt": "2024-06-09T00:00:00Z",
       "flags": []
     },
-    "expandedView": "",
+    "expandedView": "### 📖 Overview\r\n\r\nRoku was the Fire Nation-born Avatar who preceded Aang. He was a wise and compassionate leader, striving to maintain balance in the world. Roku’s friendship with Fire Lord Sozin ultimately led to tragedy, as he failed to stop Sozin’s ambitions in time, indirectly allowing the Hundred Year War to begin. Roku’s spirit later served as a mentor to Aang, offering guidance and wisdom from the Spirit World.\r\n\r\n### 🏷️ Key Traits\r\n- Wise\r\n- Dutiful\r\n- Compassionate\r\n- Haunted by regret\r\n\r\n### 🏆 Notable Achievements\r\n- Mastered all four elements\r\n- Maintained peace during his lifetime\r\n- Attempted to stop Sozin’s plans for conquest\r\n\r\n### 💬 Notable Quotes\r\n- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"\r\n- \"You must be decisive.\"\r\n- \"Sometimes, the best way to solve your own problems is to help someone else.\"",
     "__type": "character"
   },
   {
@@ -12505,7 +12505,7 @@
       "createdAt": "2024-06-09T00:00:00Z",
       "flags": []
     },
-    "expandedView": "",
+    "expandedView": "### 📖 Overview\r\n\r\nThe Gecko was a contestant in the underground earthbending competition Earth Rumble. He wore a distinct bright-green mask and used unique tactics during battle, such as crawling on all fours and using his earthbending to scale walls. He relied on his quick speed and agility to climb around the ring and stay out of the reach of his opponents.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Competed in Earth Rumble VI against The Boulder.\r\n- Used unique earthbending tactics, including scaling walls and crawling on all fours.\r\n- Assisted Xin Fu and other fighters in capturing Aang and Toph.\r\n- Was quickly defeated by The Boulder and later by Toph Beifong.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor but memorable Earth Rumble fighter, The Gecko is known for his agility and unconventional fighting style, adding color to the underground earthbending scene in Gaoling.\r\n\r\n### 🤝 Relationships\r\n\r\n- Xin Fu (Ally, Promoter)\r\n- Earth Rumble fighters (Allies)\r\n- Toph Beifong (Enemy)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Nimble and agile\r\n- Quick reflexes\r\n- Unique fighting style\r\n\r\n### 💬 Notable Quotes\r\n\r\n- (No spoken lines)",
     "__type": "character"
   },
   {
@@ -13864,7 +13864,7 @@
       "createdAt": "2024-06-09T00:00:00Z",
       "flags": []
     },
-    "expandedView": "",
+    "expandedView": "### 📖 Overview\r\n\r\nXin Fu was a prominent and ambitious Earth Kingdom fight promoter and bounty hunter. He was the host and referee of the Earth Rumble tournaments in Gaoling and was hired by Lao Beifong to capture Toph. Xin Fu was known for his cunning, persistence, and willingness to use underhanded tactics to achieve his goals. Despite his efforts, he was ultimately outsmarted by Toph and Team Avatar.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Hosted and refereed the Earth Rumble tournaments.\r\n- Hired by Lao Beifong to capture Toph.\r\n- Pursued Toph and Team Avatar across the Earth Kingdom.\r\n- Trapped in a metal box by Toph's metalbending.\r\n- Known for his cunning and persistence.\r\n\r\n### 🎭 Role in the Story\r\n\r\nXin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdom's underground fighting scene and the lengths to which some would go for profit and reputation. His pursuit of Toph and Team Avatar added tension and showcased Toph's ingenuity and the dangers faced by the group.\r\n\r\n### 🤝 Relationships\r\n\r\n- Lao Beifong: Employer who hired Xin Fu to capture Toph.\r\n- Master Yu: Partnered with Xin Fu in the pursuit of Toph.\r\n- Toph Beifong: Target of Xin Fu's bounty hunt; ultimately outsmarted him.\r\n- Earth Rumble fighters: Allies and subordinates.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Cunning and resourceful\r\n- Persistent and ambitious\r\n- Skilled earthbender and fight promoter\r\n\r\n### 💬 Notable Quotes\r\n\r\n> \"Nobody cheats Xin Fu.\"",
     "__type": "character"
   },
   {
@@ -14037,145 +14037,7 @@
       "createdAt": "2024-06-09T00:00:00Z",
       "flags": []
     },
-    "expandedView": "",
-    "__type": "character"
-  },
-  {
-    "name": "Ying",
-    "nation": "Earth Kingdom",
-    "badge": "Hopeful Refugee",
-    "shortdescription": "An optimistic refugee from the Earth Kingdom, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar.",
-    "id": "ying",
-    "slug": "ying",
-    "type": "character",
-    "shortDescription": "An optimistic refugee from the Earth Kingdom, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar.",
-    "image": null,
-    "fullName": "Ying",
-    "role": "Refugee, Mother",
-    "titles": [],
-    "aliases": [],
-    "pronouns": "she/her",
-    "ethnicity": "Earth Kingdom",
-    "gender": "Female",
-    "age": null,
-    "hairColor": "Black",
-    "eyeColor": null,
-    "skinColor": "light",
-    "loveInterest": "Than (husband)",
-    "abilities": {
-      "bending": [],
-      "weapons": [],
-      "fightingStyles": [],
-      "notableFeats": [
-        "Survived a Rough Rhinos attack and fled her village.",
-        "Crossed the Serpent’s Pass while pregnant.",
-        "Gave birth to her daughter, Hope, with Katara’s help."
-      ]
-    },
-    "affiliations": {
-      "primary": "Earth Kingdom",
-      "secondary": [
-        "Ba Sing Se"
-      ],
-      "allies": [
-        "Than",
-        "Hope",
-        "Team Avatar"
-      ],
-      "enemies": []
-    },
-    "narrative": {
-      "firstAppearance": "Zuko Alone",
-      "lastAppearance": "The Awakening (flashback)",
-      "voicedBy": [
-        "Kim Mai Guest"
-      ],
-      "era": "Book Two: Earth",
-      "seasons": [
-        2
-      ],
-      "episodes": [
-        7,
-        8
-      ],
-      "notableQuotes": [
-        "I know what I want to name our baby now. Hope."
-      ]
-    },
-    "metrics": {
-      "archetype": "The Hopeful Mother",
-      "moralAlignment": "Neutral Good",
-      "intelligence": 2,
-      "strength": 2,
-      "charisma": 3,
-      "leadership": 2,
-      "humor": 1
-    },
-    "roles": {
-      "refugee": true,
-      "mother": true
-    },
-    "relationships": {
-      "than": "Husband",
-      "hope": "Daughter",
-      "team-avatar": "Allies"
-    },
-    "psyche": {
-      "personality": [
-        "Optimistic",
-        "Resilient",
-        "Caring",
-        "Hopeful"
-      ],
-      "emotionalState": [
-        "Hopeful",
-        "Worried"
-      ],
-      "motivation": "Protecting her family and maintaining hope."
-    },
-    "physical": {
-      "build": "Average",
-      "height": null,
-      "distinguishingFeatures": [
-        "Black hair",
-        "light skin"
-      ],
-      "outfitStyles": [
-        "Earth Kingdom refugee attire"
-      ]
-    },
-    "dialogue": [
-      "I know what I want to name our baby now. Hope."
-    ],
-    "tags": [
-      "Earth Kingdom",
-      "Ba Sing Se",
-      "Refugee",
-      "Mother",
-      "Book Two",
-      "Serpent’s Pass"
-    ],
-    "tagCategories": {
-      "nationTags": [
-        "Earth Kingdom",
-        "Ba Sing Se"
-      ],
-      "roleTags": [
-        "Refugee",
-        "Mother"
-      ],
-      "episodeTags": [
-        "Book Two",
-        "Serpent’s Pass"
-      ]
-    },
-    "system": {
-      "schemaVersion": "3.0",
-      "createdBy": "AI Assistant",
-      "createdAt": "2024-06-09T00:00:00Z",
-      "flags": []
-    },
-    "expandedView": "",
+    "expandedView": "### 📖 Overview\r\n\r\nYangchen was a revered and powerful Air Nomad Avatar, known for her fierce devotion to her duty and her willingness to do whatever was necessary to maintain global peace and stability. Unlike many Air Nomads, she was not a strict pacifist and understood that maintaining peace sometimes required manipulation, espionage, and force. Her tireless efforts and difficult compromises secured an entire generation of peace after her death, though her focus on humanity's problems inadvertently led to a rise in dark spirits for her successor, Kuruk.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Plagued by visions of her past lives since childhood.\r\n- Defeated the spirit General Old Iron and established a pact to protect his sacred land.\r\n- Became deeply involved in the complex politics of the four nations to prevent war.\r\n- Was so effective as the Avatar that no major wars occurred for a generation after her death.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA legendary past Avatar who serves as a crucial spiritual guide, offering a pragmatic and duty-bound perspective that contrasts with Aang's idealism.\r\n\r\n### 🤝 Relationships\r\n\r\n- Kuruk (Successor)\r\n- Szeto (Predecessor)\r\n- Kavik (Companion, Informant)\r\n- Jetsun (Older Sister Figure, Spiritual Guide)\r\n- Aang (Future Successor)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Dutiful & Determined\r\n- Compassionate & Empathetic\r\n- Pragmatic & Shrewd\r\n- Spiritually Troubled\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.\"\r\n- \"Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.\"\r\n- \"All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us.\"",
     "__type": "character"
   },
   {

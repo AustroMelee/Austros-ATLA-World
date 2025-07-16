@@ -62,8 +62,8 @@ export function Home({
   const expandedItem = selectedId ? filteredResults.find(item => item.id === selectedId) : null;
   return (
     <div className="flex flex-row gap-6 min-h-screen overflow-x-hidden">
-      <main className="flex-1 flex flex-col overflow-visible">
-        <div className="flex-shrink-0 pt-4">
+      <main className="flex-1 flex flex-col overflow-visible justify-center">
+        <div className="flex-shrink-0 mt-32">
           <SearchBar
             value={query}
             onChange={setQuery}

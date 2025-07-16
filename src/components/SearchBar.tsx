@@ -11,7 +11,7 @@ interface SearchBarProps {
 export default function SearchBar({
   value,
   onChange,
-  placeholder = "Search characters...",
+  placeholder = "",
 }: SearchBarProps) {
   return (
     <section className="flex justify-center items-center w-full py-12">
@@ -25,17 +25,26 @@ export default function SearchBar({
           <input
             type="text"
             className="
-              w-full rounded-2xl border border-primary
-              !bg-neutral-900
-              px-6 py-3 text-lg md:text-xl
-              !text-white
-              !placeholder-white/80
-              placeholder:text-lg md:placeholder:text-xl
-              focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary
-              shadow-lg transition-all duration-150
+              w-full
+              rounded-lg
+              border-4
+              text-green-200
+              text-lg
+              px-6 py-4
+              shadow-[0_0_16px_2px_rgba(112,171,108,0.5)]
+              focus:outline-none focus:ring-0
+              placeholder:text-green-300/60
+              transition-all duration-200
             "
+            style={{
+              borderColor: '#70ab6c',
+              background: `
+                radial-gradient(ellipse at center, rgba(6,25,17,0.98) 60%, rgba(6,25,17,0.85) 80%, rgba(6,25,17,0.7) 100%)
+              `,
+              backgroundColor: '#061911',
+              backgroundBlendMode: 'overlay',
+            }}
             placeholder={placeholder}
-            aria-label={placeholder}
             value={value}
             onChange={e => onChange(e.target.value)}
           />
