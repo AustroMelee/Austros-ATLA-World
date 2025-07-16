@@ -95,6 +95,18 @@ async function parseMarkdownFile(filePath) {
       expandedView: expandedViewMatch ? expandedViewMatch[1].trim() : '',
       __type: 'character',
     });
+
+    // --- FIX: FLATTEN NESTED METADATA ---
+    // This ensures a consistent, flat structure for all character records.
+    // The client-side search hook expects this consistency.
+    if (mergedData.metadata && typeof mergedData.metadata === 'object') {
+      // Copy all properties from metadata to the top-level object
+      Object.assign(mergedData, mergedData.metadata);
+      // Remove the now-redundant metadata key
+      delete mergedData.metadata;
+      console.log(`[INFO]    Flattened nested 'metadata' object for ${mergedData.id || 'record'}.`);
+    }
+    // --- END FIX ---
     
     if (mergedData.id && !mergedData.slug) {
       mergedData.slug = createSlug(mergedData.id);

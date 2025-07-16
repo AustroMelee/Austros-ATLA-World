@@ -17,7 +17,7 @@
     "build:data:parse": "node scripts/1-parse-markdown.mjs",
     "build:data:enrich": "node scripts/2-enrich-data.mjs",
     "build:data:index": "node scripts/3-build-index.mjs",
-    "build:data": "npm run build:data:parse && npm run build:data:enrich && npm run build:data:index",
+    "build:data": "npm run build:data:parse && npm run build:data:enrich",
     "lint:md": "markdownlint --config .markdownlint.json \"**/*.md\"",
     "build:tailwind": "tailwindcss -i ./src/styles/pure-tailwind.css -o ./src/styles/generated-tailwind.css --watch"
   },

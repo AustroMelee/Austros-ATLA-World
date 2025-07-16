@@ -4,8 +4,11 @@ import * as ClientSearchEngine from '../search/ClientSearchEngine';
 import { EnrichedCharacter } from '../types/domainTypes';
 
 jest.mock('../search/ClientSearchEngine', () => ({
-  init: jest.fn().mockResolvedValue(undefined),
   search: jest.fn(),
+}));
+jest.mock('../search/indexLoader', () => ({
+  loadIndex: jest.fn().mockResolvedValue({ index: {}, recordMap: new Map() }),
+  getState: jest.fn(() => ({ isInitialized: true })),
 }));
 
 const mockedSearchEngine = jest.mocked(ClientSearchEngine);

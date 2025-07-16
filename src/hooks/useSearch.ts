@@ -1,66 +1,67 @@
 import { useMemo } from 'react';
 import FlexSearch from 'flexsearch';
-import { preprocessEntities } from '../search/preprocessor';
-import { matchEntity, resolveTokens } from '../search/engine';
-import { tokenizeInput } from '../utils/tokenize';
-import type { EnrichedEntity, IndexedEntity } from '../search/types';
+import type { EnrichedEntity } from '../search/types';
 
-export interface SearchResult {
-  entity: EnrichedEntity;
-  matchedFields: { field: string; token: string }[];
+interface MatchedField {
+  field: string;
+  token: string;
 }
 
-export function useSearch(allEntities: EnrichedEntity[], query: string): SearchResult[] {
-  // All hooks are called unconditionally at the top level
-  const indexedEntities = useMemo(() => {
-    if (!allEntities || allEntities.length === 0) return [];
-    return preprocessEntities(allEntities);
+export function useSearch(
+  allEntities: EnrichedEntity[],
+  query: string,
+): Array<{ entity: EnrichedEntity; matchedFields: MatchedField[] }> {
+  // Build a map for quick lookup by id
+  const entityMapById = useMemo(() => {
+    const map = new Map<string, EnrichedEntity>();
+    allEntities.forEach((entity) => map.set(entity.id, entity));
+    return map;
   }, [allEntities]);
 
+  // 1. Create a memoized FlexSearch index.
   const index = useMemo(() => {
-    if (indexedEntities.length === 0) return null;
-    const idx = new FlexSearch.Document<IndexedEntity>({
+    const newIndex = new FlexSearch.Document<EnrichedEntity>({
       document: {
         id: 'id',
-        index: ['name', 'searchBlob'],
+        index: [
+          'name',
+          'nation',
+          'role',
+          'tags',
+          'bendingElement',
+        ],
       },
       tokenize: 'forward',
     });
-    indexedEntities.forEach(doc => idx.add(doc));
-    return idx;
-  }, [indexedEntities]);
+    allEntities.forEach((entity) => {
+      newIndex.add({ ...entity });
+    });
+    return newIndex;
+  }, [allEntities]);
 
-  const entityMap = useMemo(() => new Map(allEntities.map(e => [e.id, e])), [allEntities]);
-
-  // Logic after hooks
-  if (!query.trim()) {
-    return allEntities.map((entity) => ({ entity, matchedFields: [] }));
-  }
-
-  if (!index) {
-    return [];
-  }
-
-  // Tokenize and resolve tokens for match context
-  const rawTokens = tokenizeInput(query);
-  const searchTokens = resolveTokens(rawTokens);
-
-  // Get unique matching IDs from FlexSearch
-  const searchResults = index.search(query);
-  const allMatchingIds = searchResults.flatMap(fieldResult => fieldResult.result);
-  const uniqueIds = [...new Set(allMatchingIds)];
-
-  // For each result, get match context using matchEntity
-  const finalResults = uniqueIds
-    .map(id => {
-      const entity = entityMap.get(id as string);
-      if (!entity) return null;
-      const indexed = indexedEntities.find(e => e.id === id);
-      if (!indexed) return null;
-      const match = matchEntity(indexed, searchTokens);
-      return match ? { entity, matchedFields: match.matchedFields } : null;
-    })
-    .filter(Boolean) as SearchResult[];
-
-  return finalResults;
+  // 2. Perform the search and process the results.
+  return useMemo(() => {
+    if (!query) {
+      return allEntities.map((entity) => ({ entity, matchedFields: [] }));
+    }
+    const searchResults = index.search(query, { enrich: true }) as Array<{ field: string; result: string[] }>;
+    const resultMap = new Map<string, { entity: EnrichedEntity; matchedFields: MatchedField[] }>();
+    searchResults.forEach((fieldResult) => {
+      const fieldName = fieldResult.field;
+      fieldResult.result.forEach((id: string) => {
+        const record = entityMapById.get(id);
+        if (!record) return;
+        if (!resultMap.has(id)) {
+          resultMap.set(id, {
+            entity: record,
+            matchedFields: [{ field: fieldName, token: query }],
+          });
+        } else {
+          const existing = resultMap.get(id)!;
+          existing.matchedFields.push({ field: fieldName, token: query });
+        }
+      });
+    });
+    return Array.from(resultMap.values());
+  }, [query, index, allEntities, entityMapById]);
 } 

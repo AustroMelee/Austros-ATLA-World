@@ -1,6 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
 import type { EnrichedCharacter } from '../types/domainTypes';
-import { filterConfig } from '../config/filterConfig';
 
 // Helper to safely access nested properties from a string path
 function getNestedValue(obj: unknown, path: string): unknown {
@@ -15,32 +14,6 @@ interface UseFiltersArgs {
 
 export function useFilters({ initialItems, query, searchResults }: UseFiltersArgs) {
   const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({});
-
-  // THE NEW, CURATED FILTER CONFIG
-  const filters = useMemo(() => {
-    const out: Record<string, string[]> = {};
-    if (initialItems.length === 0) return out;
-    filterConfig.forEach(group => {
-      group.filters.forEach(({ key }) => {
-        const values = new Set<string>();
-        initialItems.forEach(item => {
-          const char = item as EnrichedCharacter;
-          if (key === 'isBender') {
-            values.add(char.isBender ? 'Bender' : 'Non-bender');
-            return;
-          }
-          const propValue = getNestedValue(char, key);
-          if (Array.isArray(propValue)) {
-            propValue.forEach(v => typeof v === 'string' && v && values.add(v.toLowerCase()));
-          } else if (typeof propValue === 'string' && propValue) {
-            values.add(propValue.toLowerCase());
-          }
-        });
-        out[key] = Array.from(values).sort();
-      });
-    });
-    return out;
-  }, [initialItems]);
 
   const itemsToShow = query
     ? searchResults.filter(item => (item as EnrichedCharacter).__type === 'character') as EnrichedCharacter[]
@@ -87,10 +60,8 @@ export function useFilters({ initialItems, query, searchResults }: UseFiltersArg
   }, []);
 
   return {
-    filters,
     activeFilters,
     setActiveFilters,
-    filterConfig,
     handleToggleFilter,
     filteredResults,
   };

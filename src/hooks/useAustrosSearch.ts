@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useDebounce } from './useDebounce';
 import type { EnrichedRecord } from '../types/domainTypes';
 import * as ClientSearchEngine from '../search/ClientSearchEngine';
+import { loadIndex } from '../search/indexLoader';
 // import * as PersonalizationEngine from '../search/PersonalizationEngine';
 
 export interface AustrosSearchResult {
@@ -37,7 +38,7 @@ export function useAustrosSearch(query: string): AustrosSearchResult {
           setLoading(false);
           return;
         }
-        await ClientSearchEngine.init();
+        await loadIndex();
         if (cancelled) return;
         const found = await ClientSearchEngine.search(trimmedQuery);
         if (cancelled) return;

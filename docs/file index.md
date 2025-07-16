@@ -1,4 +1,4 @@
-# 📁 File Index (Current as of July 2024 Refactor)
+# 📁 File Index (2024 Refactor)
 
 This file provides an up-to-date overview of all substantive source, configuration, documentation, and data files in the repository. It reflects the current client-side search architecture, two-stage data pipeline, and React frontend structure.
 
@@ -27,7 +27,7 @@ This file provides an up-to-date overview of all substantive source, configurati
 | docs/frontend architecture.md | **Source of Truth.** Describes the React component structure and data flow. |
 | docs/search engine.md | **Source of Truth.** Explains the client-side indexing and search architecture. |
 | docs/troubleshooting.md | **Source of Truth.** Practical guide for debugging data and UI issues. |
-| docs/ui-components.md | **Source of Truth.** Documents the `ItemCard` and modal system. |
+| docs/ui-components.md | Documents the `ItemCard` and modal system. |
 | docs/decisions.md | Log of architectural decisions and their rationale. |
 | docs/adding-new-domain-tutorial.md | Tutorial on how to add new data types to the project. |
 
@@ -40,7 +40,7 @@ This file provides an up-to-date overview of all substantive source, configurati
 | scripts/2-enrich-data.mjs | **Stage 2:** Cleans the parsed data, promotes UI-critical fields to the top level, and outputs the final `public/enriched-data.json`. |
 | scripts/slug-utils.mjs | Utility functions for generating unique slugs. |
 | scripts/validate-data.mjs | Validates data files against a defined schema. |
-| scripts/3-build-index.mjs | **(DEPRECATED)** This script is no longer used. Search indexing is now done client-side. |
+| scripts/3-build-index.mjs | **(DEPRECATED)** No longer used. All search indexing is now done client-side. |
 
 ---
 
@@ -74,7 +74,7 @@ This file provides an up-to-date overview of all substantive source, configurati
 | File | Description |
 |------|-------------|
 | **`components/EntityGrid/EntityGrid.tsx`** | Renders the responsive grid of cards. Passes expand/collapse state to each card. |
-| **`components/ItemCard/ItemCard.tsx`** | **A critical component.** Renders both the small grid card and the full-screen expanded modal view. Contains all logic for a single entity's display. |
+| **`components/ItemCard/ItemCard.tsx`** | Renders both the small grid card and the full-screen expanded modal view. Contains all logic for a single entity's display. |
 | **`components/CustomMarkdownRenderer.tsx`** | Renders markdown content for the expanded card view, with custom styling. |
 | **`components/ThemedCard/ThemedCard.tsx`** | A styled wrapper that applies a nation-specific border color to cards. |
 
@@ -90,4 +90,4 @@ This file provides an up-to-date overview of all substantive source, configurati
 
 ---
 
-This updated index provides a clear and accurate map of the project as it currently stands. I will now update `file index.md` with this content.
+This index provides a clear and accurate map of the project as it currently stands.

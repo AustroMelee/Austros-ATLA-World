@@ -27,49 +27,30 @@ function createSearchBlob(record: EnrichedEntity): string {
   return uniqueParts.join(' ').toLowerCase();
 }
 
-/**
- * Creates a normalized key-value map of all entity fields for structured
- * searching (e.g., "nation:fire nation").
- */
-function createFieldMap(entity: EnrichedEntity): Map<string, string[]> {
+function createFieldMap(record: EnrichedEntity): Map<string, string[]> {
   const map = new Map<string, string[]>();
-
-  // Add all metadata fields directly
-  if (entity.metadata) {
-    for (const [key, value] of Object.entries(entity.metadata)) {
-      if (value) {
-        const values = (Array.isArray(value) ? value : [value])
-          .map(String)
-          .filter(Boolean)
-          .map((v) => v.toLowerCase());
-        if (values.length > 0) {
-          map.set(key.toLowerCase(), values);
-        }
+  // Add metadata fields
+  if (record.metadata && typeof record.metadata === 'object') {
+    for (const [key, value] of Object.entries(record.metadata)) {
+      if (Array.isArray(value)) {
+        map.set(key, value.map(String));
+      } else if (typeof value === 'string') {
+        map.set(key, [value]);
       }
     }
   }
-  
-  // Add top-level tags
-  if (entity.tags && entity.tags.length > 0) {
-    map.set('tags', entity.tags.map((t) => t.toLowerCase()));
-  }
-
-  // Add a flattened 'tag' field containing ALL tags for easy searching
-  const allTags: string[] = [...(entity.tags || [])];
-  if (entity.metadata?.tagCategories && typeof entity.metadata.tagCategories === 'object') {
-    for (const category of Object.values(entity.metadata.tagCategories)) {
-      if (Array.isArray(category)) {
-        allTags.push(...category);
-      }
+  // Add top-level fields for structured search
+  if (record.nation) map.set('nation', [String(record.nation)]);
+  if (record.role) map.set('role', [String(record.role)]);
+  if (record.gender) map.set('gender', [String(record.gender)]);
+  if (record.titles) map.set('titles', record.titles.map(String));
+  if (record.tags) map.set('tags', record.tags.map(String));
+  if (record.affiliation) map.set('affiliation', record.affiliation.map(String));
+  if (record.tagCategories && typeof record.tagCategories === 'object') {
+    for (const [cat, arr] of Object.entries(record.tagCategories)) {
+      if (Array.isArray(arr)) map.set(cat, arr.map(String));
     }
   }
-  if (allTags.length > 0) {
-      map.set('tag', [...new Set(allTags)].map(t => t.toLowerCase()));
-  }
-
-  // Ensure 'name' is also in the map for targeted name searches
-  map.set('name', [entity.name.toLowerCase()]);
-
   return map;
 }
 
@@ -79,7 +60,9 @@ function createFieldMap(entity: EnrichedEntity): Map<string, string[]> {
  */
 export function preprocessEntities(entities: EnrichedEntity[]): IndexedEntity[] {
   return entities.map((entity) => ({
-    ...entity,
+    id: entity.id,
+    original: entity,
     searchBlob: createSearchBlob(entity),
+    fieldMap: createFieldMap(entity),
   }));
 } 

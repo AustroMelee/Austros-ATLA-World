@@ -7,6 +7,15 @@ export interface EnrichedEntity {
   metadata: Record<string, string | string[]>;
   tags?: string[];
   type: string;
+  // Added fields for search compatibility
+  role?: string;
+  nation?: string;
+  gender?: string;
+  titles?: string[];
+  searchableKeywords?: string[];
+  fuzzySynonyms?: string[];
+  affiliation?: string[];
+  tagCategories?: Record<string, string[]>;
 }
 
 export interface IndexedEntity {
