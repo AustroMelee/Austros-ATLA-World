@@ -7,7 +7,9 @@ type: character
 ```md
 - Name: Mai
 - Nation: Fire Nation
-- Short Description: A stoic and skilled non-bender from a privileged Fire Nation family. Mai is a master of knife-throwing who serves as a key member of Azula's team and is Zuko's primary love interest.
+- Badge: Knife-Throwing Noblewoman
+- Short Description: A stoic, skilled, and loyal female teen nonbender from a privileged Fire Nation family, Mai is a master of knife-throwing, a key member of Azula's team, and Zuko's primary love interest. Her journey explores the triumph of love over fear and apathy.
+- Tags: Fire Nation, Noblewoman, Nonbender, Female, Teen, Knife-Thrower, Loyal, Stoic, Love Interest, Book Two, Book Three, Boiling Rock, Zuko, Azula, Ty Lee, Ukano
 ```
 
 ---

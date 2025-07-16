@@ -8,7 +8,8 @@ type: character
 - Name: Kuruk
 - Nation: Northern Water Tribe
 - Badge: Tragic Hero
-- Short Description: A "go with the flow" Avatar from the Northern Water Tribe whose carefree public life hid a secret, tragic war against dark spirits that ultimately consumed him.
+- Short Description: A carefree, powerful, and tragic adult male Avatar from the Northern Water Tribe, Kuruk was a legendary bender whose secret war against dark spirits and personal losses defined his short life.
+- Tags: Northern Water Tribe, Water Tribe, Avatar, Male, Bender, Tragic Hero, Spirit World, Adult, Legendary, Book Two, Koh, Ummi
 ```
 
 ## UI - EXPANDED VIEW
@@ -60,16 +61,17 @@ A tragic past Avatar whose life serves as a cautionary tale about the spiritual 
   "badge": "Tragic Hero",
   "name": "Kuruk",
   "nation": "Northern Water Tribe",
-  "shortDescription": "A 'go with the flow' Avatar from the Northern Water Tribe whose carefree public life hid a secret, tragic war against dark spirits that ultimately consumed him.",
+  "shortDescription": "A carefree, powerful, and tragic adult male Avatar from the Northern Water Tribe, Kuruk was a legendary bender whose secret war against dark spirits and personal losses defined his short life.",
   "image": null,
   "fullName": "Kuruk",
-  "role": "Past Avatar",
+  "role": "Past Avatar, Tragic Hero, Bender, Male",
   "titles": ["Avatar"],
   "aliases": [],
   "pronouns": "he/him",
   "ethnicity": "Water Tribe",
   "gender": "Male",
   "age": 33,
+  "ageRange": "adult",
   "hairColor": "Black",
   "eyeColor": "Blue",
   "skinColor": null,
@@ -115,7 +117,9 @@ A tragic past Avatar whose life serves as a cautionary tale about the spiritual 
   },
   "roles": {
     "avatar": true,
-    "mentor": false
+    "bender": true,
+    "tragicHero": true,
+    "male": true
   },
   "relationships": {
     "ummi": "Fiancée, Lost Love",
@@ -142,11 +146,12 @@ A tragic past Avatar whose life serves as a cautionary tale about the spiritual 
     "Actively shape your own destiny, and the destiny of the world.",
     "My wife's face... it was stolen by Koh, the Face Stealer."
   ],
-  "tags": ["Northern Water Tribe", "Avatar", "Book Two", "Spirit World"],
+  "tags": ["Northern Water Tribe", "Water Tribe", "Avatar", "Male", "Bender", "Tragic Hero", "Book Two", "Spirit World"],
   "tagCategories": {
-    "nationTags": ["Northern Water Tribe"],
-    "roleTags": ["Avatar"],
-    "episodeTags": ["Book Two", "Spirit World"]
+    "nationTags": ["Northern Water Tribe", "Water Tribe"],
+    "roleTags": ["Avatar", "Bender", "Tragic Hero", "Male"],
+    "episodeTags": ["Book Two", "Spirit World"],
+    "identityTags": ["Male"]
   },
   "system": {
     "schemaVersion": "3.0",

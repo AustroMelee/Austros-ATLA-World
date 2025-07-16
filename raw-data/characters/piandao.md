@@ -7,7 +7,9 @@ type: character
 ```md
 - Name: Piandao
 - Nation: Fire Nation
-- Short Description: A legendary swordmaster and bladesmith who deserted the Fire Nation army. He believes the way of the sword belongs to no single nation and takes on Sokka as his student.
+- Badge: Swordmaster
+- Short Description: A legendary, wise, and unconventional elder male swordmaster and bladesmith from the Fire Nation, Piandao deserted the army to pursue enlightenment and art, becoming Sokka's mentor and a key member of the Order of the White Lotus.
+- Tags: Fire Nation, Swordmaster, Bladesmith, Nonbender, Male, Elder, Mentor, Teacher, Order of the White Lotus, Book Three, Sokka, Zuko, Iroh, Shu Jing
 ```
 
 ---

@@ -1,133 +1,57 @@
-# 🔍 Encyclopedia Search Engine: Architecture & Workflow
+# 🔍 Encyclopedia Search Engine: Architecture & Workflow (v2 - Client-Side)
 
 ## Overview
 
-The search engine powers all search and discovery features in the encyclopedia. It is designed for instant, full-text, and faceted search across all data types (characters, locations, etc.), with support for personalization and advanced filtering.
+The search engine is architected for maximum robustness and performance by leveraging a **client-side indexing strategy**. All data processing and index creation happens directly in the user's browser, eliminating build-step failures and ensuring the UI always has access to the most complete, up-to-date data.
 
 ---
 
-## 1. **Indexing & Data Pipeline**
+## 1. **Data Pipeline & Source**
 
-- **Source Data:** Authored in markdown (`raw-data/`), parsed and enriched via scripts, then exported as a JSON search index (`public/search-index.json`).
-- **Index Format:** Uses [FlexSearch](https://github.com/nextapps-de/flexsearch) (client-side, in-browser) for high-performance, full-text search.
-- **Indexed Fields:** Name, description, tags, synonyms, nation, bending element, archetype, moral alignment, gender, and a flattened tag field for comprehensive tag search.
-
----
-
-## 2. **Core Search Engine Implementation**
-
-### **File:** `src/search/ClientSearchEngine.ts`
-
-#### **Initialization**
-- Loads and parses `public/search-index.json` on first use.
-- Builds a FlexSearch Document index with all enriched records.
-- Stores a `recordMap` for fast lookup by slug.
-
-#### **Indexing Logic**
-- All string fields are lowercased for normalization.
-- Character-specific fields (e.g., nation, bendingElement, archetype, gender) are indexed.
-- All tags from `tagCategories` are flattened into a single searchable array.
-
-#### **API**
-- `init()`: Loads and builds the index (idempotent).
-- `search(query: string)`: Returns ranked results for a query (see below).
-- `getAllByType(type)`: Returns all records of a given type (e.g., all characters).
-- `getEntityBySlug(slug)`: Returns a single record by slug.
-
-#### **Search Logic**
-- Normalizes and tokenizes the query.
-- Runs FlexSearch across all indexed fields.
-- Deduplicates results by slug.
-- If no results, falls back to substring matching on name/slug.
-- Returns an array of enriched records.
+- **Source Data:** All character data originates from markdown files in `raw-data/` which are parsed and enriched by the data pipeline scripts (`scripts/1-parse-markdown.mjs`, `scripts/2-enrich-data.mjs`).
+- **Final Data File:** The pipeline's sole output for the frontend is **`public/enriched-data.json`**. This single file contains an array of all enriched character records, including all fields needed for both UI display (`name`, `image`, `role`) and for searching.
+- **No Pre-Built Index:** The project intentionally **does not** ship a pre-built search index file (`search-index.json`). This avoids build-time dependency issues and ensures the client always works with the raw, complete data.
 
 ---
 
-## 3. **Query Parsing & Filtering**
+## 2. **Frontend Data Flow & Indexing**
 
-### **File:** `src/search/QueryParser.ts`
+The entire search process is managed within the React application upon loading.
 
-- Parses natural language queries into structured filters (e.g., type, tag, name).
-- Recognizes keywords for types (character, location, food, etc.) and tags (elements, colors, etc.).
-- Extensible for more complex logic (AND/OR, ranges, etc.).
+#### **a. Data Fetching (`src/pages/HomeContainer.tsx`)**
+- On initial load, the `HomeContainer` component fetches the entire `public/enriched-data.json` file.
+- This array of `EnrichedEntity` objects is stored in the component's state and serves as the single source of truth for the entire application session.
 
----
+#### **b. Preprocessing (`src/search/preprocessor.ts`)**
+- The raw `EnrichedEntity` array is passed to the `preprocessEntities` function.
+- This function iterates through each record and creates a new, massive searchable string called the **`searchBlob`**.
+- The `searchBlob` concatenates all relevant text fields (`name`, `summary`, `role`, `titles`, `tags`, etc.) into a single, lowercase string. This ensures that a search for a term like "princess" will find a match regardless of which field it originally appeared in.
 
-## 4. **Personalization & Recent Searches**
-
-### **File:** `src/search/PersonalizationEngine.ts`
-
-- Tracks recent search queries and "boosted" (favorited) slugs in `localStorage`.
-- API:
-  - `getRecentSearches()`, `addRecentSearch(query)`
-  - `getBoostedSlugs()`, `boostSlug(slug)`, `unboostSlug(slug)`
-  - `clearAll()`
-- Used to personalize suggestions and ranking (future extensibility).
-
----
-
-## 5. **Frontend Integration**
-
-### **a. Search Hook**
-
-#### **File:** `src/hooks/useAustrosSearch.ts`
-- Debounces user input.
-- Calls `ClientSearchEngine.search()` with the debounced query.
-- Returns: `results`, `topHit`, `loading`, `error`.
-
-#### **File:** `src/hooks/useSearchHandler.ts`
-- Manages the search query state.
-- Uses `useAustrosSearch` for results.
-- Uses `useSuggestions` for query suggestions.
-- Uses `useNationColor` for UI theming.
-
-### **b. UI Flow**
-
-- User types in the `SearchBar` (`src/components/SearchBar.tsx`).
-- Query state is managed in `HomeContainer` via `useSearchHandler`.
-- Results are passed to `EntityGrid` and rendered as cards.
+#### **c. Index Creation & Search (`src/hooks/useSearch.ts`)**
+- The `useSearch` hook receives the array of all entities and the user's current search query.
+- **Index Building (Client-Side):**
+    - Inside a `useMemo`, the hook takes the preprocessed data (with the `searchBlob`) and uses `FlexSearch` to build a document index *in the browser*.
+    - This index is configured to be searchable on the `name` and `searchBlob` fields.
+    - This indexing process happens only once per application session, making subsequent searches instantaneous.
+- **Search Execution:**
+    - When a user types a query, the hook uses the in-memory FlexSearch index to find all matching record IDs.
+    - It then maps these IDs back to the full entity objects from the original data array.
+    - If the query is empty, it returns all entities to populate the initial grid view.
 
 ---
 
-## 6. **Index File Structure**
+## 3. **Component Interaction**
 
-### **File:** `public/search-index.json`
-- Contains:
-  - `index`: FlexSearch-serialized index data.
-  - `records`: Map of slug → enriched record (all fields for display).
-
----
-
-## 7. **Extensibility & Customization**
-
-- **Add new fields:** Update `buildIndexableRecord` in `ClientSearchEngine.ts` and the FlexSearch index config.
-- **Advanced filtering:** Extend `QueryParser.ts` and UI filter logic.
-- **Personalization:** Expand `PersonalizationEngine.ts` for more ranking/suggestion features.
+- **`HomeContainer.tsx`:** Orchestrates the data fetching and calls `useSearch`.
+- **`Home.tsx`:** A presentational component that receives the final search results (an array of character objects) and passes them to the grid.
+- **`EntityGrid.tsx` & `ItemCard.tsx`:** Render the grid and the individual cards based on the data received.
 
 ---
 
-## 8. **Error Handling & Edge Cases**
+## 4. **Key Principles & Rationale**
 
-- If the index fails to load, errors are logged and surfaced in the UI.
-- If no results are found, falls back to substring matching.
-- All search is case-insensitive and tolerant to partial matches.
-
----
-
-## 9. **Performance**
-
-- All search is performed client-side for instant results.
-- Index is loaded once per session and cached in memory.
-- Debouncing prevents excessive queries on rapid input.
-
----
-
-## 10. **Key Files Involved**
-
-- `src/search/ClientSearchEngine.ts` (core logic)
-- `src/search/QueryParser.ts` (query parsing)
-- `src/search/PersonalizationEngine.ts` (personalization)
-- `src/hooks/useAustrosSearch.ts`, `src/hooks/useSearchHandler.ts` (frontend integration)
-- `public/search-index.json` (data)
-- `docs/data pipeline.md` (pipeline overview)
+- **Robustness over Build-Time Optimization:** By performing all indexing on the client, we completely eliminate a class of silent build-step errors (e.g., an empty index file) that are difficult to debug.
+- **Single Source of Truth:** The frontend relies *only* on `public/enriched-data.json`. If a character is in that file, they will be searchable.
+- **Performance:** `useMemo` ensures the expensive preprocessing and indexing steps run only once. All subsequent searches against the in-memory index are extremely fast.
+- **Maintainability:** The entire search logic is self-contained within the frontend (`preprocessor.ts`, `useSearch.ts`), making it easy to modify or debug. To add a new searchable field, you only need to add it to the `createSearchBlob` function in `preprocessor.ts`.
 

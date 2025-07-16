@@ -2928,7 +2928,8 @@
       "Combustionbender",
       "Book Three",
       "The Headband",
-      "The Western Air Temple"
+      "The Western Air Temple",
+      "villain"
     ],
     "tagCategories": {
       "nationTags": [
@@ -3717,7 +3718,9 @@
   {
     "name": "Hama",
     "nation": "Southern Water Tribe",
-    "shortdescription": "A Southern Water Tribe waterbending master who was captured and imprisoned by the Fire Nation. To escape, she invented the dark and horrifying art of bloodbending.",
+    "badge": "Puppetmaster",
+    "shortdescription": "Hama is an old Southern Water Tribe waterbending master who was captured and imprisoned by the Fire Nation. To escape, she invented the dark and horrifying art of bloodbending.",
+    "tags": "old, waterbender, innkeeper, bloodbender, master, Southern Water Tribe",
     "id": "hama",
     "fullName": "Hama",
     "role": "Puppetmaster",
@@ -5404,7 +5407,9 @@
   {
     "name": "Jet",
     "nation": "Earth Kingdom",
-    "shortdescription": "The charismatic and vengeful leader of the Freedom Fighters, a group of young refugees fighting against the Fire Nation. His deep-seated hatred often clouds his judgment, pushing him to extremist measures.",
+    "badge": "Freedom Fighter Leader",
+    "shortdescription": "The charismatic, vengeful, and tragic male teen leader of the Freedom Fighters, Jet is a skilled swordsman whose hatred of the Fire Nation drives him to extremist measures and ultimately a tragic fate.",
+    "tags": "Earth Kingdom, Freedom Fighters, Leader, Nonbender, Male, Teen, Charismatic, Tragic Hero, Anti-Hero, Book One, Book Two, Ba Sing Se, Lake Laogai, Swordsman",
     "id": "jet",
     "fullName": "Jet",
     "role": "Freedom Fighter",
@@ -5724,7 +5729,8 @@
     "name": "Jin",
     "nation": "Earth Kingdom",
     "badge": "Ba Sing Se Resident",
-    "shortdescription": "Jin is a kind-hearted girl from Ba Sing Se who briefly dates Zuko during his time in the city.",
+    "shortdescription": "Jin is a compassionate, resilient, and romantic female teen earthbender from Ba Sing Se, known for her optimism, resourcefulness, and brief but meaningful connection with Zuko.",
+    "tags": "Earth Kingdom, Ba Sing Se, Resident, Bender, Female, Teen, Compassionate, Romantic, Survivor, Book Two, Book Three, Tales of Ba Sing Se, Zuko",
     "id": "jin",
     "fullName": "Jin",
     "role": "Ba Sing Se Resident",
@@ -6026,7 +6032,9 @@
   {
     "name": "June",
     "nation": "Earth Kingdom",
-    "shortdescription": "A confident and formidable bounty hunter, known as the best and most expensive of her time. Accompanied by her shirshu, Nyla, she tracks her targets with unerring accuracy for the highest bidder.",
+    "badge": "Bounty Hunter",
+    "shortdescription": "A confident, formidable, and sassy young adult female bounty hunter from the Earth Kingdom, June is known for her unmatched tracking skills, professional detachment, and her partnership with the shirshu Nyla. Her journey takes her from mercenary work to a new life at the Jasmine Dragon.",
+    "tags": "Earth Kingdom, Bounty Hunter, Nonbender, Female, Young Adult, Outlaw, Mercenary, Confident, Sassy, Book One, Book Three, Nyla, Jasmine Dragon",
     "id": "june",
     "fullName": "June",
     "role": "Bounty Hunter",
@@ -6296,7 +6304,9 @@
   {
     "name": "Katara",
     "nation": "Southern Water Tribe",
-    "shortdescription": "The last waterbender of the Southern Water Tribe, Katara is a determined and compassionate young woman whose hope leads her to discover the Avatar and become his first teacher.",
+    "badge": "Waterbending Master",
+    "shortdescription": "The last waterbender of the Southern Water Tribe, Katara is a determined, compassionate, and heroic teen girl whose hope leads her to discover the Avatar, become his first teacher, and grow into a legendary master and healer.",
+    "tags": "Southern Water Tribe, Water Tribe, Team Avatar, Waterbender, Female, Teen, Compassionate, Determined, Healer, Hero, Book One, Book Two, Book Three, Painted Lady, Bloodbender, Aang, Sokka, Zuko",
     "id": "katara",
     "fullName": "Katara",
     "role": "Waterbending Master",
@@ -6691,7 +6701,9 @@
   {
     "name": "Kuei",
     "nation": "Earth Kingdom",
-    "shortdescription": "The naive and sheltered 52nd Earth King of Ba Sing Se. For years, he was a puppet ruler, manipulated by his treacherous Grand Secretariat, Long Feng.",
+    "badge": "Earth King",
+    "shortdescription": "The naive, sheltered, and well-meaning young adult male Earth King of Ba Sing Se, Kuei was a puppet ruler manipulated by Long Feng before growing into a more assertive, if sometimes rash, leader. His journey reflects the Earth Kingdom's struggle for identity and change.",
+    "tags": "Earth Kingdom, Ba Sing Se, King, Royalty, Nonbender, Male, Young Adult, Naive, Sheltered, Catalyst, Book Two, Book Three, Bosco, Long Feng",
     "id": "kuei",
     "fullName": "Kuei",
     "role": "Earth King",
@@ -6970,14 +6982,24 @@
     "name": "Kuruk",
     "nation": "Northern Water Tribe",
     "badge": "Tragic Hero",
-    "shortdescription": "A \"go with the flow\" Avatar from the Northern Water Tribe whose carefree public life hid a secret, tragic war against dark spirits that ultimately consumed him.",
+    "shortdescription": "A carefree, powerful, and tragic adult male Avatar from the Northern Water Tribe, Kuruk was a legendary bender whose secret war against dark spirits and personal losses defined his short life.",
+    "tags": [
+      "Northern Water Tribe",
+      "Water Tribe",
+      "Avatar",
+      "Male",
+      "Bender",
+      "Tragic Hero",
+      "Book Two",
+      "Spirit World"
+    ],
     "id": "kuruk",
     "slug": "kuruk",
     "type": "character",
-    "shortDescription": "A 'go with the flow' Avatar from the Northern Water Tribe whose carefree public life hid a secret, tragic war against dark spirits that ultimately consumed him.",
+    "shortDescription": "A carefree, powerful, and tragic adult male Avatar from the Northern Water Tribe, Kuruk was a legendary bender whose secret war against dark spirits and personal losses defined his short life.",
     "image": null,
     "fullName": "Kuruk",
-    "role": "Past Avatar",
+    "role": "Past Avatar, Tragic Hero, Bender, Male",
     "titles": [
       "Avatar"
     ],
@@ -6986,6 +7008,7 @@
     "ethnicity": "Water Tribe",
     "gender": "Male",
     "age": 33,
+    "ageRange": "adult",
     "hairColor": "Black",
     "eyeColor": "Blue",
     "skinColor": null,
@@ -7058,7 +7081,9 @@
     },
     "roles": {
       "avatar": true,
-      "mentor": false
+      "bender": true,
+      "tragicHero": true,
+      "male": true
     },
     "relationships": {
       "ummi": "Fiancée, Lost Love",
@@ -7102,22 +7127,23 @@
       "Actively shape your own destiny, and the destiny of the world.",
       "My wife's face... it was stolen by Koh, the Face Stealer."
     ],
-    "tags": [
-      "Northern Water Tribe",
-      "Avatar",
-      "Book Two",
-      "Spirit World"
-    ],
     "tagCategories": {
       "nationTags": [
-        "Northern Water Tribe"
+        "Northern Water Tribe",
+        "Water Tribe"
       ],
       "roleTags": [
-        "Avatar"
+        "Avatar",
+        "Bender",
+        "Tragic Hero",
+        "Male"
       ],
       "episodeTags": [
         "Book Two",
         "Spirit World"
+      ],
+      "identityTags": [
+        "Male"
       ]
     },
     "system": {
@@ -7132,7 +7158,9 @@
   {
     "name": "Kya",
     "nation": "Southern Water Tribe",
-    "shortdescription": "The courageous and loving mother of Katara and Sokka, Kya sacrificed her life to protect her daughter and preserve the last of the Southern waterbenders.",
+    "badge": "SWT Matriarch",
+    "shortdescription": "The courageous, loving, and self-sacrificing adult female matriarch of the Southern Water Tribe, Kya was a skilled healer and devoted mother whose ultimate sacrifice protected Katara and shaped her family's destiny.",
+    "tags": "Southern Water Tribe, Water Tribe, Matriarch, Mother, Healer, Female, Adult, Nonbender, Compassionate, Courageous, Sacrifice, Book Two, Book Three, Katara, Sokka, Hakoda",
     "id": "kya",
     "fullName": "Kya",
     "role": "SWT Matriarch",
@@ -7425,14 +7453,32 @@
     "name": "Kyoshi",
     "nation": "Earth Kingdom",
     "badge": "Justice Incarnate",
-    "shortdescription": "The physically imposing and long-lived Earth Kingdom Avatar who believed that only true, uncompromising justice could bring peace, a philosophy that shaped the world for centuries.",
+    "shortdescription": "The physically imposing, legendary, and long-lived female elder Avatar of the Earth Kingdom, Kyoshi is a fierce bender, warrior, and founder of the Kyoshi Warriors and Dai Li, known for her uncompromising sense of justice and her relationship with Rangi.",
+    "tags": [
+      "Earth Kingdom",
+      "Avatar",
+      "Mentor",
+      "Warrior",
+      "Female",
+      "Bender",
+      "Legendary",
+      "Elder",
+      "Founder",
+      "Justice",
+      "Book Two",
+      "Kyoshi Island",
+      "Dai Li",
+      "Kyoshi Warriors",
+      "Rangi",
+      "Chin the Conqueror"
+    ],
     "id": "kyoshi",
     "slug": "kyoshi",
     "type": "character",
-    "shortDescription": "The physically imposing and long-lived Earth Kingdom Avatar who believed that only true, uncompromising justice could bring peace, a philosophy that shaped the world for centuries.",
+    "shortDescription": "The physically imposing, legendary, and long-lived female elder Avatar of the Earth Kingdom, Kyoshi is a fierce bender, warrior, and founder of the Kyoshi Warriors and Dai Li, known for her uncompromising sense of justice and her relationship with Rangi.",
     "image": null,
     "fullName": "Kyoshi",
-    "role": "Past Avatar",
+    "role": "Past Avatar, Mentor, Warrior, Founder, Legendary Bender",
     "titles": [
       "Avatar"
     ],
@@ -7441,6 +7487,7 @@
     "ethnicity": "Air Nomad-Earth Kingdom",
     "gender": "Female",
     "age": 230,
+    "ageRange": "elder",
     "hairColor": null,
     "eyeColor": null,
     "skinColor": null,
@@ -7521,7 +7568,11 @@
     },
     "roles": {
       "avatar": true,
-      "mentor": true
+      "mentor": true,
+      "warrior": true,
+      "bender": true,
+      "founder": true,
+      "legendary": true
     },
     "relationships": {
       "rangi": "Girlfriend, Firebending Master",
@@ -7566,24 +7617,25 @@
       "My friend is not a diplomat. She is the failure of diplomacy.",
       "I killed Chin the Conqueror."
     ],
-    "tags": [
-      "Earth Kingdom",
-      "Avatar",
-      "Mentor",
-      "Book Two",
-      "Kyoshi Island"
-    ],
     "tagCategories": {
       "nationTags": [
-        "Earth Kingdom"
+        "Earth Kingdom",
+        "Kyoshi Island"
       ],
       "roleTags": [
         "Avatar",
-        "Mentor"
+        "Mentor",
+        "Warrior",
+        "Bender",
+        "Founder",
+        "Legendary"
       ],
       "episodeTags": [
         "Book Two",
         "Kyoshi Island"
+      ],
+      "identityTags": [
+        "Female"
       ]
     },
     "system": {
@@ -7599,7 +7651,8 @@
     "name": "Lao Beifong",
     "nation": "Earth Kingdom",
     "badge": "Industrialist Patriarch",
-    "shortdescription": "Wealthy businessman, co-founder of the Earthen Fire Refinery, and overprotective father of Toph Beifong, Lao is a symbol of progress and reconciliation in the postwar era.",
+    "shortdescription": "A wealthy, ambitious, and progressive adult male industrialist and patriarch from Gaoling, Lao Beifong is co-founder of the Earthen Fire Refinery, overprotective father of Toph, and a symbol of reconciliation and change in the postwar era.",
+    "tags": "Earth Kingdom, Gaoling, Cranefish Town, Industrialist, Patriarch, Businessman, Nonbender, Male, Adult, Father, Progressive, Book Two, Book Three, Toph, Poppy, Earthen Fire Refinery",
     "id": "lao-beifong",
     "slug": "lao-beifong",
     "fullName": "Lao Beifong",
@@ -7841,7 +7894,17 @@
     "name": "Lo and Li",
     "nation": "Fire Nation",
     "badge": "Royal Advisers",
-    "shortdescription": "Lo and Li are the enigmatic twin advisers to Princess Azula, known for their synchronized speech and mysterious presence at the Fire Nation court.",
+    "shortdescription": "Lo and Li are enigmatic, dignified, and wise female elder twins who serve as royal advisers, mentors, and instructors to Princess Azula and the Fire Nation Royal Family. Known for their synchronized speech and mysterious presence, they are respected nonbenders and elders in the Fire Nation court.",
+    "tags": [
+      "Fire Nation",
+      "Adviser",
+      "Mentor",
+      "Instructor",
+      "Book Two",
+      "Book Three",
+      "The Avatar State",
+      "The Beach"
+    ],
     "id": "lo-and-li",
     "slug": "lo-and-li",
     "identity": {
@@ -7950,16 +8013,6 @@
     "dialogue": [
       "Azula, we are concerned for you and your well being."
     ],
-    "tags": [
-      "Fire Nation",
-      "Adviser",
-      "Mentor",
-      "Instructor",
-      "Book Two",
-      "Book Three",
-      "The Avatar State",
-      "The Beach"
-    ],
     "tagCategories": {
       "nationTags": [
         "Fire Nation"
@@ -7988,7 +8041,9 @@
   {
     "name": "Long Feng",
     "nation": "Earth Kingdom",
-    "shortdescription": "The charismatic but treacherous Grand Secretariat of Ba Sing Se. As the leader of the Dai Li, he secretly rules the city as a dictator, suppressing all mention of the Hundred Year War.",
+    "badge": "Grand Secretariat",
+    "shortdescription": "The charismatic, cunning, and manipulative adult male Grand Secretariat of Ba Sing Se, Long Feng is a master earthbender and leader of the Dai Li who secretly rules the city as a dictator, suppressing all mention of the Hundred Year War.",
+    "tags": "Earth Kingdom, Ba Sing Se, Dai Li, Grand Secretariat, Bender, Male, Adult, Vizier, Antagonist, Manipulator, Book Two, Lake Laogai, Azula, Kuei, Jet",
     "id": "long-feng",
     "fullName": "Long Feng",
     "role": "Dai Li Leader",
@@ -8293,7 +8348,9 @@
   {
     "name": "Longshot",
     "nation": "Earth Kingdom",
-    "shortdescription": "A silent, precise, and loyal archer, Longshot is a key member of the Freedom Fighters, known for his unmatched marksmanship and quiet strength.",
+    "badge": "Freedom Fighter Archer",
+    "shortdescription": "A silent, precise, and loyal male teen archer, Longshot is a key member of the Freedom Fighters, known for his unmatched marksmanship, quiet strength, and steadfast support for his friends.",
+    "tags": "Earth Kingdom, Freedom Fighters, Archer, Nonbender, Male, Teen, Loyal, Silent, Book One, Book Two, Ba Sing Se, Lake Laogai, Jet, Smellerbee, The Duke",
     "id": "longshot",
     "fullName": "Longshot",
     "role": "Freedom Fighter",
@@ -8593,7 +8650,9 @@
   {
     "name": "Mai",
     "nation": "Fire Nation",
-    "shortdescription": "A stoic and skilled non-bender from a privileged Fire Nation family. Mai is a master of knife-throwing who serves as a key member of Azula's team and is Zuko's primary love interest.",
+    "badge": "Knife-Throwing Noblewoman",
+    "shortdescription": "A stoic, skilled, and loyal female teen nonbender from a privileged Fire Nation family, Mai is a master of knife-throwing, a key member of Azula's team, and Zuko's primary love interest. Her journey explores the triumph of love over fear and apathy.",
+    "tags": "Fire Nation, Noblewoman, Nonbender, Female, Teen, Knife-Thrower, Loyal, Stoic, Love Interest, Book Two, Book Three, Boiling Rock, Zuko, Azula, Ty Lee, Ukano",
     "id": "mai",
     "fullName": "Mai",
     "role": "Noblewoman",
@@ -8921,17 +8980,24 @@
     "name": "Meng",
     "nation": "Earth Kingdom",
     "badge": "Fortuneteller's Apprentice",
-    "shortdescription": "Meng is Aunt Wu's eager apprentice in Makapu Village, known for her crush on Aang and her interest in fortune-telling.",
+    "shortdescription": "Meng is Aunt Wu's eager apprentice in Makapu Village—a cheerful, kind-hearted girl known for her crush on Aang, her optimism, and her interest in fortune-telling.",
+    "tags": "Earth Kingdom, Makapu Village, Apprentice, Assistant, Girl, Child, Nonbender, Optimistic, Comic Relief, Hopeful, Book One, The Fortuneteller, Aunt Wu, Aang, Katara",
     "id": "meng",
     "slug": "meng",
     "fullName": "Meng",
     "role": "Assistant, Apprentice",
-    "titles": [],
-    "aliases": [],
+    "titles": [
+      "Apprentice",
+      "Assistant"
+    ],
+    "aliases": [
+      "Makapu Girl",
+      "Aunt Wu's Assistant"
+    ],
     "species": "human",
     "gender": "female",
-    "ageChronological": null,
-    "ageBiological": null,
+    "ageChronological": 10,
+    "ageBiological": 10,
     "ageRange": "child",
     "birthDate": null,
     "deathDate": null,
@@ -8951,7 +9017,9 @@
       "fortune-telling assistance",
       "hospitality",
       "cooking (bean curd puffs)",
-      "optimism"
+      "optimism",
+      "cheering others up",
+      "community service"
     ],
     "uniqueTechniques": [],
     "powerMetrics": {
@@ -8962,13 +9030,15 @@
     "combatStyle": null,
     "vulnerabilities": [
       "unrequited love",
-      "clumsiness"
+      "clumsiness",
+      "naivety"
     ],
     "isLegendaryFighter": false,
     "notableFeats": [
       "Assistant to Aunt Wu, greeting guests and helping with fortune readings.",
       "Provided Aang with Aunt Wu's cloud reading book.",
-      "Known for her delicious bean curd puffs."
+      "Known for her delicious bean curd puffs.",
+      "Maintained optimism despite unrequited love."
     ],
     "currentAffiliations": [
       "Aunt Wu's Fortune Salon",
@@ -8980,11 +9050,12 @@
     "politicalPower": "none",
     "politicalLeanings": [
       "hopeful",
-      "romantic"
+      "romantic",
+      "idealistic"
     ],
     "moralAlignment": "neutral good",
     "moralCompassDrift": false,
-    "narrativeFunction": "comic relief, subplot",
+    "narrativeFunction": "comic relief, subplot, coming-of-age",
     "screenTimeLevel": "minor",
     "firstAppearance": "The Fortuneteller",
     "finalAppearance": "The Fortuneteller",
@@ -8995,12 +9066,19 @@
         "arcType": "unrequited love",
         "status": "completed",
         "summary": "Develops a crush on Aang and learns to accept unrequited feelings."
+      },
+      {
+        "arcType": "personal growth",
+        "status": "active",
+        "summary": "Learns about hope, fate, and self-acceptance."
       }
     ],
     "keyTropes": [
       "Cheerful Assistant",
       "Comic Relief",
-      "Unrequited Love"
+      "Unrequited Love",
+      "Innocent Crush",
+      "Optimistic Girl"
     ],
     "relationships": [
       {
@@ -9035,42 +9113,54 @@
       "helpful",
       "optimistic",
       "kind",
-      "persistent"
+      "persistent",
+      "innocent",
+      "forgiving"
     ],
     "negativeTraits": [
       "clumsy",
       "naive",
-      "jealous (briefly)"
+      "jealous (briefly)",
+      "overly idealistic"
     ],
     "motivations": [
       "helping Aunt Wu",
       "finding love",
-      "making others happy"
+      "making others happy",
+      "learning about fate"
     ],
     "fears": [
       "never finding love",
-      "disappointing Aunt Wu"
+      "disappointing Aunt Wu",
+      "being alone"
     ],
     "internalConflicts": [
-      "crush on Aang vs. reality of unrequited love"
+      "crush on Aang vs. reality of unrequited love",
+      "wanting to grow up but still a child"
     ],
     "emotionalWounds": [
       "unrequited love for Aang"
     ],
     "copingMechanisms": [
       "optimism",
-      "helping others"
+      "helping others",
+      "baking"
     ],
     "worldview": "Believes in fate, hope, and the power of kindness.",
     "heightEstimate": "Petite",
     "notableFeatures": [
-      "Black hair"
+      "Black hair",
+      "round face",
+      "bright eyes"
     ],
     "outfitStyles": [
       "Makapu Village attire",
       "Assistant's dress"
     ],
-    "signaturePossessions": [],
+    "signaturePossessions": [
+      "cloud reading book",
+      "apron"
+    ],
     "ageProgression": false,
     "voiceActor": [
       "Jessie Flower"
@@ -9081,13 +9171,18 @@
       "hope",
       "young love",
       "optimism",
-      "comic relief"
+      "comic relief",
+      "girl",
+      "innocence",
+      "coming of age"
     ],
     "tagCategories": {
       "narrativeTags": [
         "comic relief",
         "subplot",
-        "assistant"
+        "assistant",
+        "girl",
+        "coming of age"
       ],
       "relationshipTags": [
         "crush on Aang",
@@ -9097,28 +9192,41 @@
       "emotionTags": [
         "cheerful",
         "hopeful",
-        "smitten"
+        "smitten",
+        "innocent"
       ],
       "politicalTags": [
         "Makapu Village",
         "Earth Kingdom"
       ],
       "arcTags": [
-        "unrequited love"
+        "unrequited love",
+        "personal growth"
       ],
       "worldTags": [
         "Makapu Village",
         "Aunt Wu's Fortune Salon"
       ]
     },
-    "expandedView": "### 📖 Overview\r\n\r\nMeng was a resident of Makapu Village and the young assistant of Aunt Wu, the local fortuneteller. She greeted guests, brought snacks, and looked up to Aunt Wu as a mentor and grandmother figure. Meng was known for her optimism, helpfulness, and her crush on Aang, which provided comic relief and a subplot in \"The Fortuneteller.\" Despite her clumsiness, she was known for her delicious bean curd puffs and her hopeful outlook on love.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Became Aunt Wu's assistant and helped with fortune readings in Makapu Village.\r\n- Developed a crush on Aang, believing he was her destined love due to Aunt Wu's prediction.\r\n- Provided Aang with Aunt Wu's cloud reading book, helping him on his quest.\r\n- Known for her delicious bean curd puffs and cheerful personality.\r\n- Waved goodbye to Team Avatar, showing her good-natured spirit even after unrequited love.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor but memorable character whose subplot highlights themes of fate, hope, and young love. Meng's interactions with Aang and Team Avatar add warmth and humor to the episode \"The Fortuneteller.\"\r\n\r\n### 🤝 Relationships\r\n\r\n- **Aunt Wu** – Mentor and employer; Meng looks up to her as a grandmother figure.\r\n- **Aang** – Crush; she believed he was her destined love.\r\n- **Katara** – Friend and confidante; Meng is supportive but also a little jealous.\r\n- **Team Avatar** – Allies during their visit to Makapu Village.\r\n- **Makapu Village** – Community she serves as assistant.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Optimistic and cheerful\r\n- Helpful and kind\r\n- Persistent in her affections\r\n- Clumsy but well-meaning\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"It's just really hard when you like someone, but they don't think of you that way.\"",
+    "searchableKeywords": [
+      "girl",
+      "apprentice",
+      "assistant",
+      "optimism",
+      "fortune-teller",
+      "makapu",
+      "comic relief",
+      "young love"
+    ],
+    "expandedView": "### 📖 Overview\r\n\r\nMeng is a young girl from Makapu Village, serving as Aunt Wu's assistant and apprentice fortuneteller. She is known for her boundless optimism, helpfulness, and her innocent crush on Aang, which adds warmth and comic relief to \"The Fortuneteller.\" Despite her clumsiness, Meng is beloved for her delicious bean curd puffs and her hopeful outlook on love and fate.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Became Aunt Wu's assistant and helped with fortune readings in Makapu Village.\r\n- Developed a crush on Aang, believing he was her destined love due to Aunt Wu's prediction.\r\n- Provided Aang with Aunt Wu's cloud reading book, helping him on his quest.\r\n- Known for her delicious bean curd puffs and cheerful personality.\r\n- Waved goodbye to Team Avatar, showing her good-natured spirit even after unrequited love.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor but memorable character whose subplot highlights themes of fate, hope, young love, and the bittersweetness of unrequited feelings. Meng's interactions with Aang and Team Avatar add warmth and humor to the episode \"The Fortuneteller.\" Her story is a gentle exploration of growing up and learning to accept reality with grace.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Aunt Wu** – Mentor and employer; Meng looks up to her as a grandmother figure.\r\n- **Aang** – Crush; she believed he was her destined love.\r\n- **Katara** – Friend and confidante; Meng is supportive but also a little jealous.\r\n- **Team Avatar** – Allies during their visit to Makapu Village.\r\n- **Makapu Village** – Community she serves as assistant.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Optimistic and cheerful\r\n- Helpful and kind\r\n- Persistent in her affections\r\n- Clumsy but well-meaning\r\n- Innocent and idealistic\r\n- Quick to forgive\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"It's just really hard when you like someone, but they don't think of you that way.\"\r\n- \"You have pretty big ears, don't you? I guess they're... kind of cute.\"",
     "__type": "character"
   },
   {
     "name": "Michi",
     "nation": "Fire Nation",
     "badge": "Noble Florist",
-    "shortdescription": "A noblewoman and florist, Michi is known for her compassion, emotional strength, and for ultimately choosing her family's safety over politics during the postwar era.",
+    "shortdescription": "A caring, resilient, and supportive adult female noblewoman and florist, Michi is known for her compassion, emotional strength, and for ultimately choosing her family's safety over politics during the postwar era.",
+    "tags": "Fire Nation, Noblewoman, Mother, Florist, Female, Adult, Supportive, Protective Parent, Book Two, Book Three, New Ozai, Postwar",
     "id": "michi",
     "slug": "michi",
     "fullName": "Michi",
@@ -9343,7 +9451,9 @@
   {
     "name": "Momo",
     "nation": "Air Nomads",
-    "shortdescription": "A curious and intelligent winged lemur from the Southern Air Temple. As one of the last vestiges of his species, he becomes a loyal companion and a cherished member of Team Avatar.",
+    "badge": "Animal Companion",
+    "shortdescription": "A curious, intelligent, and loyal male winged lemur from the Southern Air Temple, Momo is one of the last of his kind and a cherished member of Team Avatar, providing comic relief and a living link to Aang's lost home.",
+    "tags": "Air Nomads, Southern Air Temple, Animal Companion, Winged Lemur, Male, Comic Relief, Loyal, Curious, Team Avatar, Book One, Book Two, Book Three, Aang, Appa, Sokka",
     "id": "momo",
     "fullName": "Momo",
     "role": "Animal Companion",
@@ -9456,7 +9566,8 @@
     "name": "On Ji",
     "nation": "Fire Nation",
     "badge": "Fire Nation Student",
-    "shortdescription": "On Ji is a friendly and open-minded student at a Fire Nation school, known for her brief friendship with Aang (as Kuzon).",
+    "shortdescription": "On Ji is a friendly, kind, and open-minded teen girl and student at a Fire Nation school, known for her brief friendship and dance partnership with Aang (as Kuzon).",
+    "tags": "Fire Nation, Student, Teen, Girl, Nonbender, Friendly, Kind, Dance Partner, Minor Character, Book Three, The Headband, Aang, Shoji, Hide",
     "id": "on-ji",
     "fullName": "On Ji",
     "role": "Fire Nation Student",
@@ -9719,7 +9830,9 @@
   {
     "name": "Ozai",
     "nation": "Fire Nation",
-    "shortdescription": "The tyrannical ruler of the Fire Nation, Fire Lord Ozai is an exceptionally powerful firebender who seeks to end the Hundred Year War by conquering the world under his absolute rule.",
+    "badge": "Fire Lord",
+    "shortdescription": "The tyrannical, power-hungry, and legendary adult male Fire Lord of the Fire Nation, Ozai is an exceptionally powerful firebender who seeks to conquer the world and rule as the Phoenix King, embodying the ultimate antagonist of the series.",
+    "tags": "Fire Nation, Fire Lord, Phoenix King, Bender, Male, Adult, Tyrant, Antagonist, Legendary, Book One, Book Two, Book Three, Zuko, Azula, Iroh, Ursa, Azulon",
     "id": "ozai",
     "fullName": "Ozai",
     "role": "Fire Lord",
@@ -9785,7 +9898,9 @@
   {
     "name": "Pakku",
     "nation": "Northern Water Tribe",
-    "shortdescription": "A powerful and traditionalist waterbending master from the Northern Water Tribe. Initially a strict and sexist instructor, he later becomes a crucial mentor to Aang and Katara.",
+    "badge": "Waterbending Master",
+    "shortdescription": "A powerful, traditionalist, and disciplined elder male waterbending master from the Northern Water Tribe, Pakku is a strict teacher who becomes a crucial mentor to Aang and Katara and a key member of the Order of the White Lotus.",
+    "tags": "Northern Water Tribe, Water Tribe, Master, Bender, Male, Elder, Mentor, Traditionalist, Teacher, Order of the White Lotus, Book One, Book Three, Katara, Kanna, Aang, Iroh",
     "id": "pakku",
     "slug": "pakku",
     "fullName": "Pakku",
@@ -10089,20 +10204,29 @@
     "name": "Guru Pathik",
     "nation": "Air Nomads",
     "badge": "Spiritual Mentor",
-    "shortdescription": "Enlightened nomad and spiritual guide, Guru Pathik helped Aang unlock the Avatar State and was a friend to the Air Nomads and Monk Gyatso.",
+    "shortdescription": "Enlightened, eccentric, and wise, Guru Pathik is a supercentenarian male nonbender, spiritual guide, and mentor to Aang, known for his deep connection to the Air Nomads, mastery of meditation and chakras, and friendship with Monk Gyatso.",
+    "tags": [
+      "Air Nomads",
+      "Mentor",
+      "Spiritual Guide",
+      "Nonbender",
+      "Elder",
+      "Male",
+      "Book Two",
+      "Eastern Air Temple"
+    ],
     "id": "pathik",
     "slug": "pathik",
     "type": "character",
     "fullName": "Guru Pathik",
-    "role": "Spiritual Mentor, Guru",
+    "role": "Spiritual Mentor, Guru, Mentor, Spiritual Guide, Elder, Nonbender",
     "titles": [
       "Guru"
     ],
     "aliases": [],
     "species": "human",
     "gender": "male",
-    "ageChronological": 150,
-    "ageBiological": 150,
+    "age": 150,
     "ageRange": "elder",
     "birthDate": "50 BG",
     "deathDate": null,
@@ -10115,6 +10239,34 @@
       "Standard Language"
     ],
     "image": "pathik.jpg",
+    "tagCategories": {
+      "narrativeTags": [
+        "mentor",
+        "spiritual guide",
+        "eccentric sage"
+      ],
+      "relationshipTags": [
+        "mentor to Aang",
+        "friend of Gyatso",
+        "helper of Appa"
+      ],
+      "emotionTags": [
+        "wise",
+        "compassionate",
+        "humorous"
+      ],
+      "politicalTags": [
+        "Eastern Air Temple",
+        "Spirit World"
+      ],
+      "arcTags": [
+        "spiritual guidance"
+      ],
+      "worldTags": [
+        "Eastern Air Temple",
+        "Spirit World"
+      ]
+    },
     "isBender": false,
     "bendingElement": null,
     "bendingProficiency": null,
@@ -10257,41 +10409,15 @@
       "peace",
       "wisdom"
     ],
-    "tagCategories": {
-      "narrativeTags": [
-        "mentor",
-        "spiritual guide",
-        "eccentric sage"
-      ],
-      "relationshipTags": [
-        "mentor to Aang",
-        "friend of Gyatso",
-        "helper of Appa"
-      ],
-      "emotionTags": [
-        "wise",
-        "compassionate",
-        "humorous"
-      ],
-      "politicalTags": [
-        "Eastern Air Temple",
-        "Spirit World"
-      ],
-      "arcTags": [
-        "spiritual guidance"
-      ],
-      "worldTags": [
-        "Eastern Air Temple",
-        "Spirit World"
-      ]
-    },
     "expandedView": "### 📖 Overview\r\n\r\nGuru Pathik was a supercentenarian spiritual master who resided at the Eastern Air Temple. A personal friend of Monk Gyatso and spiritual brother to the Air Nomads, Pathik possessed deep knowledge of the Spirit World, chakras, and the Avatar State. He guided Aang through the process of opening his chakras, helping him come closer to mastering the Avatar State. Pathik was known for his wisdom, compassion, and eccentric sense of humor, and he aided both people and animals in finding peace and balance.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Guided Aang through the process of opening his chakras to unlock the Avatar State.\r\n- Befriended and aided Appa during his journey to reunite with Aang.\r\n- Was a spiritual brother to the Air Nomads and a personal friend of Monk Gyatso.\r\n- Lived to at least 150 years old, making him one of the oldest known humans in the series.\r\n- Helped many people and animals achieve spiritual clarity and peace.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA wise and eccentric mentor, Pathik’s teachings on chakras and spiritual balance are pivotal to Aang’s journey. His presence bridges the gap between the lost Air Nomad culture and the new world.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Aang** – Student; Pathik is Aang’s spiritual mentor and guide.\r\n- **Appa** – Helped Appa find peace and reunite with Aang.\r\n- **Monk Gyatso** – Personal friend and spiritual brother.\r\n- **Air Nomads** – Spiritual kin.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Spiritually enlightened and wise\r\n- Compassionate and patient\r\n- Eccentric sense of humor\r\n- Master of meditation and chi sensing\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"I was a spiritual brother of your people and a personal friend of Monk Gyatso.\"",
     "__type": "character"
   },
   {
     "name": "Piandao",
     "nation": "Fire Nation",
-    "shortdescription": "A legendary swordmaster and bladesmith who deserted the Fire Nation army. He believes the way of the sword belongs to no single nation and takes on Sokka as his student.",
+    "badge": "Swordmaster",
+    "shortdescription": "A legendary, wise, and unconventional elder male swordmaster and bladesmith from the Fire Nation, Piandao deserted the army to pursue enlightenment and art, becoming Sokka's mentor and a key member of the Order of the White Lotus.",
+    "tags": "Fire Nation, Swordmaster, Bladesmith, Nonbender, Male, Elder, Mentor, Teacher, Order of the White Lotus, Book Three, Sokka, Zuko, Iroh, Shu Jing",
     "id": "piandao",
     "slug": "piandao",
     "fullName": "Piandao",
@@ -10865,17 +10991,28 @@
     "name": "Poppy Beifong",
     "nation": "Earth Kingdom",
     "badge": "Protective Matriarch",
-    "shortdescription": "Cheerful and polite, Poppy Beifong is Toph’s loving but overprotective mother, a high-status figure in Gaoling who struggled to accept her daughter’s true strength.",
+    "shortdescription": "Cheerful, polite, and deeply loving, Poppy Beifong is Toph’s overprotective mother and a noble matriarch of Gaoling. Her journey explores the challenges of parental love and learning to let go.",
+    "tags": [
+      "Earth Kingdom",
+      "Gaoling",
+      "Mother",
+      "Matriarch",
+      "Female",
+      "Nobility",
+      "Book Two",
+      "The Blind Bandit"
+    ],
     "id": "poppy-beifong",
     "slug": "poppy-beifong",
     "fullName": "Poppy Beifong",
-    "role": "Matriarch",
+    "role": "Matriarch, Mother, Nobility",
     "titles": [
       "Lady Beifong"
     ],
     "aliases": [],
     "species": "human",
     "gender": "Female",
+    "age": 38,
     "ageRange": "adult",
     "nationality": "Earth Kingdom",
     "ethnicity": "Earth Kingdom",
@@ -10938,175 +11075,25 @@
       "Gabrielle Carteris",
       "Michelle Wong"
     ],
-    "expandedView": "### 📖 Overview\r\n\r\nPoppy Beifong is the mother of Toph and wife of Lao Beifong, known for her wealth and status in Gaoling. Deeply caring but extremely protective, Poppy believed her daughter’s blindness made her weak, and she supported her husband’s efforts to shelter Toph from the world. After Toph ran away to join Team Avatar, Poppy’s relationship with Lao became strained, but she eventually reconciled with her family. Poppy is remembered for her warmth, politeness, and unwavering concern for her daughter’s safety.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Raised Toph in a sheltered environment, believing it was for her safety.\r\n- Supported Lao’s decisions but blamed him for Toph’s departure.\r\n- Commissioned Xin Fu and Yu to bring Toph home after her disappearance.\r\n- Reconciled with Lao after he accepted Toph’s true abilities.\r\n- Sheltered her granddaughter Suyin years later.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor but emotionally resonant character, Poppy’s arc explores the challenges of parental love, overprotection, and learning to let go. Her journey mirrors the struggles of many parents in a changing world.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Lao Beifong** – Husband; their relationship is tested by Toph’s departure.\r\n- **Toph Beifong** – Daughter; Poppy is loving but overprotective.\r\n- **Yu** – Toph’s earthbending instructor, trusted by Poppy.\r\n- **Beifong family** – Extended kinship and support.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Cheerful and polite\r\n- Deeply loving and protective\r\n- Submissive to her husband’s decisions (initially)\r\n- Grows more assertive after Toph’s departure\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"Poor Toph. She must be so scared.\"",
-    "__type": "character"
-  },
-  {
-    "name": "Roku",
-    "nation": "Fire Nation",
-    "badge": "Spirit Advisor",
-    "shortdescription": "The Fire Nation-born Avatar who preceded Aang. His lifelong friendship and later rivalry with Fire Lord Sozin directly led to the beginning of the Hundred Year War.",
-    "id": "roku",
-    "slug": "roku",
-    "type": "character",
-    "shortDescription": "The Fire Nation-born Avatar who preceded Aang. His lifelong friendship and later rivalry with Fire Lord Sozin directly led to the beginning of the Hundred Year War.",
-    "image": null,
-    "fullName": "Roku",
-    "role": "Past Avatar",
-    "titles": [
-      "Avatar"
-    ],
-    "aliases": [
-      "Ro"
-    ],
-    "pronouns": "he/him",
-    "ethnicity": "Fire Nation",
-    "gender": "Male",
-    "age": 70,
-    "hairColor": "White",
-    "eyeColor": null,
-    "skinColor": null,
-    "loveInterest": "Ta Min (wife)",
-    "abilities": {
-      "bending": [
-        "Firebending",
-        "Airbending",
-        "Waterbending",
-        "Earthbending"
-      ],
-      "weapons": [],
-      "fightingStyles": [
-        "Avatar State",
-        "Diplomacy"
-      ],
-      "notableFeats": [
-        "Mastered all four elements and the Avatar State.",
-        "Defeated Fire Lord Sozin in a one-on-one confrontation.",
-        "Temporarily subdued a massive volcanic eruption.",
-        "Destroyed the Fire Temple on Crescent Island."
-      ]
-    },
-    "affiliations": {
-      "primary": "Spirit World",
-      "secondary": [
-        "Fire Nation"
-      ],
-      "allies": [
-        "Gyatso",
-        "Aang",
-        "Ta Min",
-        "Fang (dragon)"
-      ],
-      "enemies": [
-        "Sozin"
-      ]
-    },
-    "narrative": {
-      "firstAppearance": "Winter Solstice Part 2: Avatar Roku",
-      "lastAppearance": "The Rift trilogy",
-      "voicedBy": [
-        "James Garrett",
-        "Andrew Caldwell (young Roku)"
-      ],
-      "era": "Book One: Water, Book Two: Earth, Book Three: Fire",
-      "seasons": [
-        1,
-        2,
-        3
-      ],
-      "episodes": [
-        8,
-        21,
-        32,
-        46,
-        60
-      ],
-      "notableQuotes": [
-        "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.",
-        "Being the Avatar is an honor, but it's also a great burden.",
-        "Some friendships are so strong, they can even transcend lifetimes."
-      ]
-    },
-    "metrics": {
-      "archetype": "Spirit Advisor",
-      "moralAlignment": "Lawful Good",
-      "intelligence": 8,
-      "strength": 8,
-      "charisma": 7,
-      "leadership": 8,
-      "humor": 4
-    },
-    "roles": {
-      "avatar": true,
-      "mentor": true
-    },
-    "relationships": {
-      "sozin": "Best Friend turned Arch-Nemesis",
-      "aang": "Successor, Mentee",
-      "gyatso": "Close Friend, Aang's Guardian",
-      "taMin": "Wife",
-      "zuko": "Great-Grandson"
-    },
-    "psyche": {
-      "personality": [
-        "Wise",
-        "Merciful",
-        "Disciplined",
-        "Kind",
-        "Indecisive",
-        "Regretful"
-      ],
-      "emotionalState": [
-        "Reflective",
-        "Regretful"
-      ],
-      "motivation": "To maintain balance and peace, and to guide his successor."
-    },
-    "physical": {
-      "build": "Tall",
-      "height": null,
-      "distinguishingFeatures": [
-        "Long white hair and beard",
-        "Fire Nation topknot",
-        "Crown Prince headpiece"
-      ],
-      "outfitStyles": [
-        "Fire Nation royal robes",
-        "Avatar training attire"
-      ]
-    },
-    "dialogue": [
-      "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.",
-      "Being the Avatar is an honor, but it's also a great burden.",
-      "Some friendships are so strong, they can even transcend lifetimes."
-    ],
-    "tags": [
-      "Fire Nation",
-      "Avatar",
-      "Mentor",
-      "Book One",
-      "Winter Solstice"
-    ],
     "tagCategories": {
       "nationTags": [
-        "Fire Nation"
+        "Earth Kingdom",
+        "Gaoling"
       ],
       "roleTags": [
-        "Avatar",
-        "Mentor"
+        "Mother",
+        "Matriarch",
+        "Nobility"
       ],
       "episodeTags": [
-        "Book One",
-        "Winter Solstice"
+        "Book Two",
+        "The Blind Bandit"
+      ],
+      "identityTags": [
+        "Female"
       ]
     },
-    "system": {
-      "schemaVersion": "3.0",
-      "createdBy": "AI Assistant",
-      "createdAt": "2024-06-09T00:00:00Z",
-      "flags": []
-    },
-    "expandedView": "### 📖 Overview\r\n\r\nRoku was the Fire Nation-born Avatar who preceded Aang. He was a wise and compassionate leader, striving to maintain balance in the world. Roku’s friendship with Fire Lord Sozin ultimately led to tragedy, as he failed to stop Sozin’s ambitions in time, indirectly allowing the Hundred Year War to begin. Roku’s spirit later served as a mentor to Aang, offering guidance and wisdom from the Spirit World.\r\n\r\n### 🏷️ Key Traits\r\n- Wise\r\n- Dutiful\r\n- Compassionate\r\n- Haunted by regret\r\n\r\n### 🏆 Notable Achievements\r\n- Mastered all four elements\r\n- Maintained peace during his lifetime\r\n- Attempted to stop Sozin’s plans for conquest\r\n\r\n### 💬 Notable Quotes\r\n- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"\r\n- \"You must be decisive.\"\r\n- \"Sometimes, the best way to solve your own problems is to help someone else.\"",
+    "expandedView": "### 📖 Overview\r\n\r\nPoppy Beifong is the mother of Toph and wife of Lao Beifong, known for her wealth and status in Gaoling. Deeply caring but extremely protective, Poppy believed her daughter’s blindness made her weak, and she supported her husband’s efforts to shelter Toph from the world. After Toph ran away to join Team Avatar, Poppy’s relationship with Lao became strained, but she eventually reconciled with her family. Poppy is remembered for her warmth, politeness, and unwavering concern for her daughter’s safety.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Raised Toph in a sheltered environment, believing it was for her safety.\r\n- Supported Lao’s decisions but blamed him for Toph’s departure.\r\n- Commissioned Xin Fu and Yu to bring Toph home after her disappearance.\r\n- Reconciled with Lao after he accepted Toph’s true abilities.\r\n- Sheltered her granddaughter Suyin years later.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor but emotionally resonant character, Poppy’s arc explores the challenges of parental love, overprotection, and learning to let go. Her journey mirrors the struggles of many parents in a changing world.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Lao Beifong** – Husband; their relationship is tested by Toph’s departure.\r\n- **Toph Beifong** – Daughter; Poppy is loving but overprotective.\r\n- **Yu** – Toph’s earthbending instructor, trusted by Poppy.\r\n- **Beifong family** – Extended kinship and support.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Cheerful and polite\r\n- Deeply loving and protective\r\n- Submissive to her husband’s decisions (initially)\r\n- Grows more assertive after Toph’s departure\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"Poor Toph. She must be so scared.\"",
     "__type": "character"
   },
   {
@@ -12164,7 +12151,8 @@
     "name": "The Big Bad Hippo",
     "nation": "Earth Kingdom",
     "badge": "Earth Rumble Heavyweight",
-    "shortdescription": "A massive earthbender from Gaoling, The Big Bad Hippo is known for his strength, unique fighting style, and memorable third-person speech in the Earth Rumble tournaments and Fire Nation invasion.",
+    "shortdescription": "A massive, strong, and comic male earthbender from Gaoling, The Big Bad Hippo is known for his unique third-person speech, memorable stage presence, and role as both a minor antagonist and ally in the Earth Rumble tournaments and Fire Nation invasion.",
+    "tags": "Earth Kingdom, Earth Rumble, Fighter, Bender, Male, Comic Relief, Minor Antagonist, Ally, Book Two, The Blind Bandit, Fire Nation Invasion",
     "id": "the-big-bad-hippo",
     "slug": "the-big-bad-hippo",
     "fullName": "The Big Bad Hippo",
@@ -12379,140 +12367,11 @@
     "__type": "character"
   },
   {
-    "name": "The Gecko",
-    "nation": "Earth Kingdom",
-    "badge": "Earth Rumble Fighter",
-    "shortdescription": "The Gecko is a nimble and agile fighter in the Earth Rumble tournaments, recognized for his quick movements and unique style.",
-    "id": "the-gecko",
-    "slug": "the-gecko",
-    "type": "character",
-    "shortDescription": "The Gecko is a nimble and agile fighter in the Earth Rumble tournaments, recognized for his quick movements and unique style.",
-    "image": null,
-    "fullName": "The Gecko",
-    "role": "Earth Rumble Fighter",
-    "titles": [],
-    "aliases": [],
-    "pronouns": "he/him",
-    "ethnicity": "Earth Kingdom",
-    "gender": "Male",
-    "age": null,
-    "hairColor": null,
-    "eyeColor": null,
-    "skinColor": null,
-    "loveInterest": null,
-    "abilities": {
-      "bending": [
-        "Earthbending"
-      ],
-      "weapons": [],
-      "fightingStyles": [
-        "Earthbending",
-        "Agility",
-        "Wall-crawling"
-      ],
-      "notableFeats": [
-        "Competed in Earth Rumble VI against The Boulder.",
-        "Used unique earthbending tactics, including scaling walls and crawling on all fours.",
-        "Assisted Xin Fu and other fighters in capturing Aang and Toph."
-      ]
-    },
-    "affiliations": {
-      "primary": "Earth Rumble",
-      "secondary": [],
-      "allies": [
-        "Xin Fu",
-        "Earth Rumble fighters"
-      ],
-      "enemies": [
-        "Toph Beifong"
-      ]
-    },
-    "narrative": {
-      "firstAppearance": "The Blind Bandit",
-      "lastAppearance": "I Am Toph",
-      "voicedBy": null,
-      "era": "Book Two: Earth",
-      "seasons": [
-        2
-      ],
-      "episodes": [
-        6
-      ],
-      "notableQuotes": []
-    },
-    "metrics": {
-      "archetype": "Agile Fighter",
-      "moralAlignment": "Neutral",
-      "intelligence": 2,
-      "strength": 3,
-      "charisma": 2,
-      "leadership": 1,
-      "humor": 1
-    },
-    "roles": {
-      "fighter": true
-    },
-    "relationships": {
-      "xinFu": "Ally, Promoter",
-      "earthRumbleFighters": "Allies",
-      "toph": "Enemy"
-    },
-    "psyche": {
-      "personality": [
-        "Nimble",
-        "Agile",
-        "Quick reflexes",
-        "Unconventional"
-      ],
-      "emotionalState": [
-        "Focused"
-      ],
-      "motivation": "To win Earth Rumble matches using agility and unique tactics."
-    },
-    "physical": {
-      "build": "Lean",
-      "height": null,
-      "distinguishingFeatures": [
-        "Bright-green mask"
-      ],
-      "outfitStyles": [
-        "Earth Rumble costume"
-      ]
-    },
-    "dialogue": [],
-    "tags": [
-      "Earth Kingdom",
-      "Earth Rumble",
-      "Fighter",
-      "Book Two",
-      "The Blind Bandit"
-    ],
-    "tagCategories": {
-      "nationTags": [
-        "Earth Kingdom"
-      ],
-      "roleTags": [
-        "Fighter"
-      ],
-      "episodeTags": [
-        "Book Two",
-        "The Blind Bandit"
-      ]
-    },
-    "system": {
-      "schemaVersion": "3.0",
-      "createdBy": "AI Assistant",
-      "createdAt": "2024-06-09T00:00:00Z",
-      "flags": []
-    },
-    "expandedView": "### 📖 Overview\r\n\r\nThe Gecko was a contestant in the underground earthbending competition Earth Rumble. He wore a distinct bright-green mask and used unique tactics during battle, such as crawling on all fours and using his earthbending to scale walls. He relied on his quick speed and agility to climb around the ring and stay out of the reach of his opponents.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Competed in Earth Rumble VI against The Boulder.\r\n- Used unique earthbending tactics, including scaling walls and crawling on all fours.\r\n- Assisted Xin Fu and other fighters in capturing Aang and Toph.\r\n- Was quickly defeated by The Boulder and later by Toph Beifong.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor but memorable Earth Rumble fighter, The Gecko is known for his agility and unconventional fighting style, adding color to the underground earthbending scene in Gaoling.\r\n\r\n### 🤝 Relationships\r\n\r\n- Xin Fu (Ally, Promoter)\r\n- Earth Rumble fighters (Allies)\r\n- Toph Beifong (Enemy)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Nimble and agile\r\n- Quick reflexes\r\n- Unique fighting style\r\n\r\n### 💬 Notable Quotes\r\n\r\n- (No spoken lines)",
-    "__type": "character"
-  },
-  {
     "name": "The Gopher",
     "nation": "Earth Kingdom",
     "badge": "Earth Rumble Fighter",
-    "shortdescription": "An earthbender from Gaoling, The Gopher is known for his tunneling tactics and participation in the Earth Rumble tournaments.",
+    "shortdescription": "An agile, resourceful, and comic male earthbender from Gaoling, The Gopher is known for his tunneling tactics, unique fighting style, and role as a minor antagonist and comic relief in the Earth Rumble tournaments.",
+    "tags": "Earth Kingdom, Earth Rumble, Fighter, Bender, Male, Comic Relief, Minor Antagonist, Book Two, The Blind Bandit",
     "id": "the-gopher",
     "slug": "the-gopher",
     "fullName": "The Gopher",
@@ -13711,163 +13570,6 @@
     "slug": "ursa"
   },
   {
-    "name": "Xin Fu",
-    "nation": "Earth Kingdom",
-    "badge": "Earth Rumble Promoter",
-    "shortdescription": "Xin Fu is the shrewd and ambitious promoter of the Earth Rumble tournaments, often scheming for profit and power.",
-    "id": "xin-fu",
-    "slug": "xin-fu",
-    "type": "character",
-    "shortDescription": "Xin Fu is the shrewd and ambitious promoter of the Earth Rumble tournaments, often scheming for profit and power.",
-    "image": null,
-    "fullName": "Xin Fu",
-    "role": "Earth Rumble Promoter, Bounty Hunter",
-    "titles": [],
-    "aliases": [],
-    "pronouns": "he/him",
-    "ethnicity": "Earth Kingdom",
-    "gender": "Male",
-    "age": null,
-    "hairColor": "Black",
-    "eyeColor": "Gray",
-    "skinColor": null,
-    "loveInterest": null,
-    "abilities": {
-      "bending": [
-        "Earthbending"
-      ],
-      "weapons": [],
-      "fightingStyles": [
-        "Earthbending (Hung Gar kung fu)",
-        "Unarmed combat"
-      ],
-      "notableFeats": [
-        "Hosted and refereed the Earth Rumble tournaments.",
-        "Hired by Lao Beifong to capture Toph.",
-        "Pursued Toph and Team Avatar across the Earth Kingdom.",
-        "Trapped in a metal box by Toph's metalbending.",
-        "Known for his cunning and persistence."
-      ]
-    },
-    "affiliations": {
-      "primary": "Earth Rumble",
-      "secondary": [
-        "Lao Beifong (client)",
-        "Earth Rumble fighters"
-      ],
-      "allies": [
-        "Lao Beifong",
-        "Master Yu",
-        "Earth Rumble fighters",
-        "Fire Nation Man"
-      ],
-      "enemies": [
-        "Toph Beifong",
-        "Aang",
-        "Zuko",
-        "Iroh",
-        "Fung"
-      ]
-    },
-    "narrative": {
-      "firstAppearance": "The Blind Bandit",
-      "lastAppearance": "Avatar: The Last Airbender: Quest for Balance",
-      "voicedBy": [
-        "Marc Graue",
-        "Donald Chang (Quest for Balance)"
-      ],
-      "era": "Book Two: Earth",
-      "seasons": [
-        2
-      ],
-      "episodes": [
-        6,
-        11,
-        18,
-        19
-      ],
-      "notableQuotes": [
-        "Nobody cheats Xin Fu."
-      ]
-    },
-    "metrics": {
-      "archetype": "Shrewd Promoter",
-      "moralAlignment": "Neutral Evil",
-      "intelligence": 5,
-      "strength": 5,
-      "charisma": 4,
-      "leadership": 5,
-      "humor": 2
-    },
-    "roles": {
-      "promoter": true,
-      "bountyHunter": true
-    },
-    "relationships": {
-      "laoBeifong": "Employer",
-      "masterYu": "Partner",
-      "toph": "Target",
-      "earthRumbleFighters": "Allies and subordinates"
-    },
-    "psyche": {
-      "personality": [
-        "Cunning",
-        "Resourceful",
-        "Persistent",
-        "Ambitious",
-        "Greedy"
-      ],
-      "emotionalState": [
-        "Determined",
-        "Scheming"
-      ],
-      "motivation": "To gain profit and power through Earth Rumble and bounty hunting."
-    },
-    "physical": {
-      "build": "Muscular",
-      "height": null,
-      "distinguishingFeatures": [
-        "Black hair",
-        "Gray eyes"
-      ],
-      "outfitStyles": [
-        "Earth Rumble attire"
-      ]
-    },
-    "dialogue": [
-      "Nobody cheats Xin Fu."
-    ],
-    "tags": [
-      "Earth Kingdom",
-      "Earth Rumble",
-      "Promoter",
-      "Bounty Hunter",
-      "Book Two",
-      "The Blind Bandit"
-    ],
-    "tagCategories": {
-      "nationTags": [
-        "Earth Kingdom"
-      ],
-      "roleTags": [
-        "Promoter",
-        "Bounty Hunter"
-      ],
-      "episodeTags": [
-        "Book Two",
-        "The Blind Bandit"
-      ]
-    },
-    "system": {
-      "schemaVersion": "3.0",
-      "createdBy": "AI Assistant",
-      "createdAt": "2024-06-09T00:00:00Z",
-      "flags": []
-    },
-    "expandedView": "### 📖 Overview\r\n\r\nXin Fu was a prominent and ambitious Earth Kingdom fight promoter and bounty hunter. He was the host and referee of the Earth Rumble tournaments in Gaoling and was hired by Lao Beifong to capture Toph. Xin Fu was known for his cunning, persistence, and willingness to use underhanded tactics to achieve his goals. Despite his efforts, he was ultimately outsmarted by Toph and Team Avatar.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Hosted and refereed the Earth Rumble tournaments.\r\n- Hired by Lao Beifong to capture Toph.\r\n- Pursued Toph and Team Avatar across the Earth Kingdom.\r\n- Trapped in a metal box by Toph's metalbending.\r\n- Known for his cunning and persistence.\r\n\r\n### 🎭 Role in the Story\r\n\r\nXin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdom's underground fighting scene and the lengths to which some would go for profit and reputation. His pursuit of Toph and Team Avatar added tension and showcased Toph's ingenuity and the dangers faced by the group.\r\n\r\n### 🤝 Relationships\r\n\r\n- Lao Beifong: Employer who hired Xin Fu to capture Toph.\r\n- Master Yu: Partnered with Xin Fu in the pursuit of Toph.\r\n- Toph Beifong: Target of Xin Fu's bounty hunt; ultimately outsmarted him.\r\n- Earth Rumble fighters: Allies and subordinates.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Cunning and resourceful\r\n- Persistent and ambitious\r\n- Skilled earthbender and fight promoter\r\n\r\n### 💬 Notable Quotes\r\n\r\n> \"Nobody cheats Xin Fu.\"",
-    "__type": "character"
-  },
-  {
     "name": "Yagoda",
     "nation": "Northern Water Tribe",
     "badge": "Healer",
@@ -13875,169 +13577,6 @@
     "id": "yagoda",
     "slug": "yagoda",
     "expandedView": "### 📖 Overview\r\n\r\nYagoda is a master healer and waterbending instructor from the Northern Water Tribe. She taught generations of young women the art of healing and was a close friend of Kanna.\r\n\r\n### 🧩 Role in the Story\r\n\r\nYagoda was a female waterbender from the Northern Water Tribe, specializing in the art of healing. She instructed young women of Agna Qel'a on how to use their waterbending abilities for healing. Yagoda was a kind and laid-back teacher, respected for her skill and wisdom. She was a close friend of Kanna, Katara and Sokka's grandmother, and recognized Katara's betrothal necklace as Pakku's work. Yagoda attempted to heal Princess Yue as a newborn, but was unable to help, leading Chief Arnook to seek aid from the Moon Spirit.\r\n\r\n### 🤝 Relationships\r\n\r\n- Katara: Student\r\n- Kanna: Friend\r\n- Northern Water Tribe: Community\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Kind\r\n- Patient\r\n- Laid-back\r\n- Traditional\r\n- Supportive\r\n- Calm\r\n\r\n### 💬 Quotes\r\n\r\n> \"Are you here for the healing lesson?\"\r\n> — Yagoda\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Master healer and instructor in the Northern Water Tribe.\r\n- Attempted to heal Princess Yue as a newborn.\r\n- Recognized Katara's betrothal necklace as Pakku's work.",
-    "__type": "character"
-  },
-  {
-    "name": "Yangchen",
-    "nation": "Air Nomads",
-    "badge": "Avatar of Duty",
-    "shortdescription": "A revered and powerful Air Nomad Avatar known for her fierce devotion to her duty. She was willing to do whatever was necessary to maintain global peace and stability.",
-    "id": "yangchen",
-    "slug": "yangchen",
-    "type": "character",
-    "shortDescription": "A revered and powerful Air Nomad Avatar known for her fierce devotion to her duty. She was willing to do whatever was necessary to maintain global peace and stability.",
-    "image": null,
-    "fullName": "Yangchen",
-    "role": "Past Avatar",
-    "titles": [
-      "Avatar"
-    ],
-    "aliases": [],
-    "pronouns": "she/her",
-    "ethnicity": "Air Nomad",
-    "gender": "Female",
-    "age": 100,
-    "hairColor": null,
-    "eyeColor": "Gray",
-    "skinColor": null,
-    "loveInterest": null,
-    "abilities": {
-      "bending": [
-        "Airbending",
-        "Waterbending",
-        "Earthbending",
-        "Firebending"
-      ],
-      "weapons": [],
-      "fightingStyles": [
-        "Avatar State",
-        "Espionage",
-        "Political Manipulation",
-        "Diplomacy"
-      ],
-      "notableFeats": [
-        "Negotiated a lasting peace treaty with General Old Iron.",
-        "Prevented wars through espionage and manipulation.",
-        "Ushered in a generation of peace following her death.",
-        "Highly revered as a holy figure in the Earth Kingdom."
-      ]
-    },
-    "affiliations": {
-      "primary": "Spirit World",
-      "secondary": [
-        "Yangchen's network"
-      ],
-      "allies": [
-        "Kuruk",
-        "Szeto",
-        "Kavik",
-        "Jetsun",
-        "Aang"
-      ],
-      "enemies": [
-        "General Old Iron",
-        "Dark Spirits"
-      ]
-    },
-    "narrative": {
-      "firstAppearance": "The Avatar State",
-      "lastAppearance": "The Rift",
-      "voicedBy": [
-        "Tress MacNeille"
-      ],
-      "era": "Book Two: Earth",
-      "seasons": [
-        2
-      ],
-      "episodes": [
-        1,
-        19
-      ],
-      "notableQuotes": [
-        "Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.",
-        "Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.",
-        "All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us."
-      ]
-    },
-    "metrics": {
-      "archetype": "The Ruler",
-      "moralAlignment": "Neutral Good",
-      "intelligence": 9,
-      "strength": 8,
-      "charisma": 8,
-      "leadership": 9,
-      "humor": 3
-    },
-    "roles": {
-      "avatar": true,
-      "mentor": true
-    },
-    "relationships": {
-      "kuruk": "Successor",
-      "szeto": "Predecessor",
-      "kavik": "Companion, Informant",
-      "jetsun": "Older Sister Figure, Spiritual Guide",
-      "aang": "Future Successor"
-    },
-    "psyche": {
-      "personality": [
-        "Dutiful",
-        "Determined",
-        "Compassionate",
-        "Empathetic",
-        "Pragmatic",
-        "Shrewd",
-        "Spiritually Troubled"
-      ],
-      "emotionalState": [
-        "Resolute",
-        "Burdened"
-      ],
-      "motivation": "To maintain balance and peace in the world, no matter the personal cost."
-    },
-    "physical": {
-      "build": "Average",
-      "height": null,
-      "distinguishingFeatures": [
-        "Air Nomad tattoos",
-        "gray eyes"
-      ],
-      "outfitStyles": [
-        "Traditional Air Nomad nun robes"
-      ]
-    },
-    "dialogue": [
-      "Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.",
-      "Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.",
-      "All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us."
-    ],
-    "tags": [
-      "Air Nomads",
-      "Avatar",
-      "Mentor",
-      "Book Two",
-      "The Avatar State"
-    ],
-    "tagCategories": {
-      "nationTags": [
-        "Air Nomads"
-      ],
-      "roleTags": [
-        "Avatar",
-        "Mentor"
-      ],
-      "episodeTags": [
-        "Book Two",
-        "The Avatar State"
-      ]
-    },
-    "system": {
-      "schemaVersion": "3.0",
-      "createdBy": "AI Assistant",
-      "createdAt": "2024-06-09T00:00:00Z",
-      "flags": []
-    },
-    "expandedView": "### 📖 Overview\r\n\r\nYangchen was a revered and powerful Air Nomad Avatar, known for her fierce devotion to her duty and her willingness to do whatever was necessary to maintain global peace and stability. Unlike many Air Nomads, she was not a strict pacifist and understood that maintaining peace sometimes required manipulation, espionage, and force. Her tireless efforts and difficult compromises secured an entire generation of peace after her death, though her focus on humanity's problems inadvertently led to a rise in dark spirits for her successor, Kuruk.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Plagued by visions of her past lives since childhood.\r\n- Defeated the spirit General Old Iron and established a pact to protect his sacred land.\r\n- Became deeply involved in the complex politics of the four nations to prevent war.\r\n- Was so effective as the Avatar that no major wars occurred for a generation after her death.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA legendary past Avatar who serves as a crucial spiritual guide, offering a pragmatic and duty-bound perspective that contrasts with Aang's idealism.\r\n\r\n### 🤝 Relationships\r\n\r\n- Kuruk (Successor)\r\n- Szeto (Predecessor)\r\n- Kavik (Companion, Informant)\r\n- Jetsun (Older Sister Figure, Spiritual Guide)\r\n- Aang (Future Successor)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Dutiful & Determined\r\n- Compassionate & Empathetic\r\n- Pragmatic & Shrewd\r\n- Spiritually Troubled\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.\"\r\n- \"Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.\"\r\n- \"All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us.\"",
     "__type": "character"
   },
   {

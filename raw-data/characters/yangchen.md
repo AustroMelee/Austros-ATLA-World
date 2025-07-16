@@ -8,7 +8,8 @@ type: character
 - Name: Yangchen
 - Nation: Air Nomads
 - Badge: Avatar of Duty
-- Short Description: A revered and powerful Air Nomad Avatar known for her fierce devotion to her duty. She was willing to do whatever was necessary to maintain global peace and stability.
+- Short Description: A revered and powerful female Air Nomad Avatar, spiritual leader, and legendary bender, Yangchen was known for her fierce devotion to duty and willingness to do whatever was necessary to maintain global peace and stability.
+- Tags: Air Nomads, Avatar, Mentor, Female, Bender, Spiritual Leader, Legendary, Past Avatar, Diplomat, Peacemaker, Spirit World, Book Two, The Avatar State
 ```
 
 ## UI - EXPANDED VIEW
@@ -60,16 +61,17 @@ A legendary past Avatar who serves as a crucial spiritual guide, offering a prag
   "badge": "Avatar of Duty",
   "name": "Yangchen",
   "nation": "Air Nomads",
-  "shortDescription": "A revered and powerful Air Nomad Avatar known for her fierce devotion to her duty. She was willing to do whatever was necessary to maintain global peace and stability.",
+  "shortDescription": "A revered and powerful female Air Nomad Avatar, spiritual leader, and legendary bender, Yangchen was known for her fierce devotion to duty and willingness to do whatever was necessary to maintain global peace and stability.",
   "image": null,
   "fullName": "Yangchen",
-  "role": "Past Avatar",
+  "role": "Past Avatar, Mentor, Spiritual Leader, Diplomat, Peacemaker",
   "titles": ["Avatar"],
   "aliases": [],
   "pronouns": "she/her",
   "ethnicity": "Air Nomad",
   "gender": "Female",
   "age": 100,
+  "ageRange": "elder",
   "hairColor": null,
   "eyeColor": "Gray",
   "skinColor": null,
@@ -115,7 +117,11 @@ A legendary past Avatar who serves as a crucial spiritual guide, offering a prag
   },
   "roles": {
     "avatar": true,
-    "mentor": true
+    "mentor": true,
+    "spiritualLeader": true,
+    "diplomat": true,
+    "peacemaker": true,
+    "bender": true
   },
   "relationships": {
     "kuruk": "Successor",
@@ -140,11 +146,12 @@ A legendary past Avatar who serves as a crucial spiritual guide, offering a prag
     "Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.",
     "All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us."
   ],
-  "tags": ["Air Nomads", "Avatar", "Mentor", "Book Two", "The Avatar State"],
+  "tags": ["Air Nomads", "Avatar", "Mentor", "Female", "Bender", "Spiritual Leader", "Legendary", "Past Avatar", "Diplomat", "Peacemaker", "Spirit World", "Book Two", "The Avatar State"],
   "tagCategories": {
     "nationTags": ["Air Nomads"],
-    "roleTags": ["Avatar", "Mentor"],
-    "episodeTags": ["Book Two", "The Avatar State"]
+    "roleTags": ["Avatar", "Mentor", "Spiritual Leader", "Diplomat", "Peacemaker", "Bender"],
+    "episodeTags": ["Book Two", "The Avatar State"],
+    "identityTags": ["Female", "Legendary", "Past Avatar", "Spirit World"]
   },
   "system": {
     "schemaVersion": "3.0",
@@ -153,4 +160,3 @@ A legendary past Avatar who serves as a crucial spiritual guide, offering a prag
     "flags": []
   }
 }
-```

@@ -7,7 +7,9 @@ type: character
 ```md
 - Name: Ozai
 - Nation: Fire Nation
-- Short Description: The tyrannical ruler of the Fire Nation, Fire Lord Ozai is an exceptionally powerful firebender who seeks to end the Hundred Year War by conquering the world under his absolute rule.
+- Badge: Fire Lord
+- Short Description: The tyrannical, power-hungry, and legendary adult male Fire Lord of the Fire Nation, Ozai is an exceptionally powerful firebender who seeks to conquer the world and rule as the Phoenix King, embodying the ultimate antagonist of the series.
+- Tags: Fire Nation, Fire Lord, Phoenix King, Bender, Male, Adult, Tyrant, Antagonist, Legendary, Book One, Book Two, Book Three, Zuko, Azula, Iroh, Ursa, Azulon
 ```
 
 ---

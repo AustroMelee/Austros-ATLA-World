@@ -8,7 +8,8 @@ type: character
 - Name: Xin Fu
 - Nation: Earth Kingdom
 - Badge: Earth Rumble Promoter
-- Short Description: Xin Fu is the shrewd and ambitious promoter of the Earth Rumble tournaments, often scheming for profit and power.
+- Short Description: Xin Fu is a shrewd, ambitious, and cunning male Earth Kingdom earthbender, fight promoter, and recurring antagonist. He schemes for profit and power as the host of the Earth Rumble tournaments and a persistent bounty hunter.
+- Tags: Earth Kingdom, Earth Rumble, Promoter, Bounty Hunter, Antagonist, Villain, Fighter, Earthbender, Underground, Male, Book Two, The Blind Bandit
 ```
 
 ## UI - EXPANDED VIEW
@@ -57,16 +58,17 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
   "badge": "Earth Rumble Promoter",
   "name": "Xin Fu",
   "nation": "Earth Kingdom",
-  "shortDescription": "Xin Fu is the shrewd and ambitious promoter of the Earth Rumble tournaments, often scheming for profit and power.",
+  "shortDescription": "Xin Fu is a shrewd, ambitious, and cunning male Earth Kingdom earthbender, fight promoter, and recurring antagonist. He schemes for profit and power as the host of the Earth Rumble tournaments and a persistent bounty hunter.",
   "image": null,
   "fullName": "Xin Fu",
-  "role": "Earth Rumble Promoter, Bounty Hunter",
+  "role": "Earth Rumble Promoter, Bounty Hunter, Antagonist, Villain, Fighter",
   "titles": [],
   "aliases": [],
   "pronouns": "he/him",
   "ethnicity": "Earth Kingdom",
   "gender": "Male",
-  "age": null,
+  "age": 38,
+  "ageRange": "adult",
   "hairColor": "Black",
   "eyeColor": "Gray",
   "skinColor": null,
@@ -111,7 +113,11 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
   },
   "roles": {
     "promoter": true,
-    "bountyHunter": true
+    "bountyHunter": true,
+    "antagonist": true,
+    "villain": true,
+    "fighter": true,
+    "bender": true
   },
   "relationships": {
     "laoBeifong": "Employer",
@@ -133,11 +139,12 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
   "dialogue": [
     "Nobody cheats Xin Fu."
   ],
-  "tags": ["Earth Kingdom", "Earth Rumble", "Promoter", "Bounty Hunter", "Book Two", "The Blind Bandit"],
+  "tags": ["Earth Kingdom", "Earth Rumble", "Promoter", "Bounty Hunter", "Antagonist", "Villain", "Fighter", "Earthbender", "Underground", "Male", "Book Two", "The Blind Bandit"],
   "tagCategories": {
     "nationTags": ["Earth Kingdom"],
-    "roleTags": ["Promoter", "Bounty Hunter"],
-    "episodeTags": ["Book Two", "The Blind Bandit"]
+    "roleTags": ["Promoter", "Bounty Hunter", "Antagonist", "Villain", "Fighter", "Bender"],
+    "episodeTags": ["Book Two", "The Blind Bandit"],
+    "identityTags": ["Male", "Underground"]
   },
   "system": {
     "schemaVersion": "3.0",
@@ -146,4 +153,3 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
     "flags": []
   }
 }
-```

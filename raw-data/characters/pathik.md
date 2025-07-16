@@ -8,7 +8,8 @@ type: character
 - Name: Guru Pathik
 - Nation: Air Nomads
 - Badge: Spiritual Mentor
-- Short Description: Enlightened nomad and spiritual guide, Guru Pathik helped Aang unlock the Avatar State and was a friend to the Air Nomads and Monk Gyatso.
+- Short Description: Enlightened, eccentric, and wise, Guru Pathik is a supercentenarian male nonbender, spiritual guide, and mentor to Aang, known for his deep connection to the Air Nomads, mastery of meditation and chakras, and friendship with Monk Gyatso.
+- Tags: Air Nomads, Mentor, Spiritual Guide, Nonbender, Elder, Male, Guru, Eccentric, Wise, Book Two, Eastern Air Temple, Aang, Appa, Monk Gyatso
 ```
 
 ## 📖 UI - EXPANDED VIEW
@@ -53,11 +54,7 @@ A wise and eccentric mentor, Pathik’s teachings on chakras and spiritual balan
 ---
 ---
 
-## ⚙️ BACKEND METADATA (v3.0 EXPANSION) - GURU PATHIK
-
----
-
-## 🪪 Identity & Demographics
+## 🦪 Identity & Demographics
 
 ```json
 {
@@ -65,14 +62,13 @@ A wise and eccentric mentor, Pathik’s teachings on chakras and spiritual balan
   "slug": "pathik",
   "type": "character",
   "fullName": "Guru Pathik",
-  "role": "Spiritual Mentor, Guru",
+  "role": "Spiritual Mentor, Guru, Mentor, Spiritual Guide, Elder, Nonbender",
   "badge": "Spiritual Mentor",
   "titles": ["Guru"],
   "aliases": [],
   "species": "human",
   "gender": "male",
-  "ageChronological": 150,
-  "ageBiological": 150,
+  "age": 150,
   "ageRange": "elder",
   "birthDate": "50 BG",
   "deathDate": null,
@@ -83,6 +79,21 @@ A wise and eccentric mentor, Pathik’s teachings on chakras and spiritual balan
   "socioeconomicStanding": "nomad",
   "languagesSpoken": ["Standard Language"],
   "image": "pathik.jpg"
+}
+```
+
+---
+
+## 🏷️ Tags & Categories
+```json
+{
+  "tags": ["Air Nomads", "Mentor", "Spiritual Guide", "Nonbender", "Elder", "Male", "Book Two", "Eastern Air Temple"],
+  "tagCategories": {
+    "nationTags": ["Air Nomads", "Eastern Air Temple"],
+    "roleTags": ["Mentor", "Spiritual Guide", "Nonbender", "Elder"],
+    "episodeTags": ["Book Two"],
+    "identityTags": ["Male"]
+  }
 }
 ```
 

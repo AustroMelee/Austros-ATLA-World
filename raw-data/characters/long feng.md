@@ -7,7 +7,9 @@ type: character
 ```md
 - Name: Long Feng
 - Nation: Earth Kingdom
-- Short Description: The charismatic but treacherous Grand Secretariat of Ba Sing Se. As the leader of the Dai Li, he secretly rules the city as a dictator, suppressing all mention of the Hundred Year War.
+- Badge: Grand Secretariat
+- Short Description: The charismatic, cunning, and manipulative adult male Grand Secretariat of Ba Sing Se, Long Feng is a master earthbender and leader of the Dai Li who secretly rules the city as a dictator, suppressing all mention of the Hundred Year War.
+- Tags: Earth Kingdom, Ba Sing Se, Dai Li, Grand Secretariat, Bender, Male, Adult, Vizier, Antagonist, Manipulator, Book Two, Lake Laogai, Azula, Kuei, Jet
 ```
 
 ---

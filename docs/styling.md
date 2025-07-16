@@ -116,3 +116,16 @@ These conventions ensure cards are visually clean, accessible, and maintain a cl
 - **Reference:** See `ItemCard.tsx` (July 2024) for implementation and rationale.
 
 This ensures the expanded card header is always visually prominent, accessible, and immune to future CSS/plugin changes.
+
+## 10. Terminal-Style Search Bar: Font & Block Cursor (2024-07)
+
+- **Search System Reference:** The search bar is the entry point to the new client-side search/indexing system. For a full explanation of the search architecture, see `docs/search engine.md`. For debugging and troubleshooting, see `docs/troubleshooting.md`.
+- **Font:** The search bar uses the custom Glass_TTY_VT220.ttf font, loaded via @font-face in custom.css and applied with the .font-tty-glass utility class. This gives the input a retro terminal/CRT look.
+- **Font Sizing:** The input, overlay, and block cursor use a font size of 23px for bold, readable terminal aesthetics. The input's padding, border, and overall scale remain unchanged for layout consistency.
+- **Block Cursor:** A custom blinking block cursor is rendered as an absolutely positioned overlay, using Tailwind's animate-blink utility (defined in tailwind.config.js as a 1s steps(2, start) infinite animation). The block is a green rectangle (w-2 h-6 bg-green-400) that blinks in sync with the input focus.
+- **Pixel-Perfect Alignment:** The overlay uses a hidden span (visibility: hidden, whitespace-pre) to measure the exact rendered width of the input value. The block cursor is placed immediately after this span, inside a flex container absolutely positioned with left: 1.5rem (matching px-6 input padding). This ensures the block cursor is always flush with the end of the text, regardless of font quirks or browser.
+- **Caret Hiding:** The native input caret is hidden (caret-color: transparent) so only the custom block cursor is visible, for full terminal authenticity.
+- **Accessibility:** The input remains fully accessible and keyboard navigable. The overlay is pointer-events-none and select-none, so it does not interfere with user interaction or screen readers.
+- **Customization:** Font size, block size, and color can be tweaked in SearchBar.tsx and custom.css. The block cursor can be further styled for CRT/scanline effects if desired.
+
+This approach delivers a visually authentic, highly readable, and fully accessible terminal search bar, with a block cursor that is always perfectly flush with the text.

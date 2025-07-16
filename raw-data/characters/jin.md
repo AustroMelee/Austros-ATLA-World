@@ -8,7 +8,8 @@ type: character
 - Name: Jin
 - Nation: Earth Kingdom
 - Badge: Ba Sing Se Resident
-- Short Description: Jin is a kind-hearted girl from Ba Sing Se who briefly dates Zuko during his time in the city.
+- Short Description: Jin is a compassionate, resilient, and romantic female teen earthbender from Ba Sing Se, known for her optimism, resourcefulness, and brief but meaningful connection with Zuko.
+- Tags: Earth Kingdom, Ba Sing Se, Resident, Bender, Female, Teen, Compassionate, Romantic, Survivor, Book Two, Book Three, Tales of Ba Sing Se, Zuko
 ```
 
 ---

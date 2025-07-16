@@ -8,7 +8,8 @@ type: character
 - Name: The Big Bad Hippo
 - Nation: Earth Kingdom
 - Badge: Earth Rumble Heavyweight
-- Short Description: A massive earthbender from Gaoling, The Big Bad Hippo is known for his strength, unique fighting style, and memorable third-person speech in the Earth Rumble tournaments and Fire Nation invasion.
+- Short Description: A massive, strong, and comic male earthbender from Gaoling, The Big Bad Hippo is known for his unique third-person speech, memorable stage presence, and role as both a minor antagonist and ally in the Earth Rumble tournaments and Fire Nation invasion.
+- Tags: Earth Kingdom, Earth Rumble, Fighter, Bender, Male, Comic Relief, Minor Antagonist, Ally, Book Two, The Blind Bandit, Fire Nation Invasion
 ```
 
 ## 📖 UI - EXPANDED VIEW

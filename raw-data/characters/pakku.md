@@ -7,7 +7,9 @@ type: character
 ```md
 - Name: Pakku
 - Nation: Northern Water Tribe
-- Short Description: A powerful and traditionalist waterbending master from the Northern Water Tribe. Initially a strict and sexist instructor, he later becomes a crucial mentor to Aang and Katara.
+- Badge: Waterbending Master
+- Short Description: A powerful, traditionalist, and disciplined elder male waterbending master from the Northern Water Tribe, Pakku is a strict teacher who becomes a crucial mentor to Aang and Katara and a key member of the Order of the White Lotus.
+- Tags: Northern Water Tribe, Water Tribe, Master, Bender, Male, Elder, Mentor, Traditionalist, Teacher, Order of the White Lotus, Book One, Book Three, Katara, Kanna, Aang, Iroh
 ```
 
 ---

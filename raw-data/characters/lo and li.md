@@ -8,7 +8,8 @@ type: character
 - Name: Lo and Li
 - Nation: Fire Nation
 - Badge: Royal Advisers
-- Short Description: Lo and Li are the enigmatic twin advisers to Princess Azula, known for their synchronized speech and mysterious presence at the Fire Nation court.
+- Short Description: Lo and Li are enigmatic, dignified, and wise female elder twins who serve as royal advisers, mentors, and instructors to Princess Azula and the Fire Nation Royal Family. Known for their synchronized speech and mysterious presence, they are respected nonbenders and elders in the Fire Nation court.
+- Tags: Fire Nation, Adviser, Mentor, Instructor, Female, Elder, Nonbender, Book Two, Book Three, The Avatar State, The Beach, Azula, Zuko, Twins, Synchronized
 ```
 
 ## UI - EXPANDED VIEW

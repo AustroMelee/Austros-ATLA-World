@@ -8,7 +8,8 @@ type: character
 - Name: The Gecko
 - Nation: Earth Kingdom
 - Badge: Earth Rumble Fighter
-- Short Description: The Gecko is a nimble and agile fighter in the Earth Rumble tournaments, recognized for his quick movements and unique style.
+- Short Description: The Gecko is a nimble, agile, and unconventional male Earth Kingdom earthbender and underground fighter, recognized for his quick movements and unique style in the Earth Rumble tournaments.
+- Tags: Earth Kingdom, Earth Rumble, Fighter, Earthbender, Underground, Male, Book Two, The Blind Bandit
 ```
 
 ## UI - EXPANDED VIEW
@@ -55,16 +56,17 @@ A minor but memorable Earth Rumble fighter, The Gecko is known for his agility a
   "badge": "Earth Rumble Fighter",
   "name": "The Gecko",
   "nation": "Earth Kingdom",
-  "shortDescription": "The Gecko is a nimble and agile fighter in the Earth Rumble tournaments, recognized for his quick movements and unique style.",
+  "shortDescription": "The Gecko is a nimble, agile, and unconventional male Earth Kingdom earthbender and underground fighter, recognized for his quick movements and unique style in the Earth Rumble tournaments.",
   "image": null,
   "fullName": "The Gecko",
-  "role": "Earth Rumble Fighter",
+  "role": "Earth Rumble Fighter, Underground Fighter",
   "titles": [],
   "aliases": [],
   "pronouns": "he/him",
   "ethnicity": "Earth Kingdom",
   "gender": "Male",
-  "age": null,
+  "age": 22,
+  "ageRange": "young adult",
   "hairColor": null,
   "eyeColor": null,
   "skinColor": null,
@@ -104,7 +106,8 @@ A minor but memorable Earth Rumble fighter, The Gecko is known for his agility a
     "humor": 1
   },
   "roles": {
-    "fighter": true
+    "fighter": true,
+    "bender": true
   },
   "relationships": {
     "xinFu": "Ally, Promoter",
@@ -123,11 +126,12 @@ A minor but memorable Earth Rumble fighter, The Gecko is known for his agility a
     "outfitStyles": ["Earth Rumble costume"]
   },
   "dialogue": [],
-  "tags": ["Earth Kingdom", "Earth Rumble", "Fighter", "Book Two", "The Blind Bandit"],
+  "tags": ["Earth Kingdom", "Earth Rumble", "Fighter", "Earthbender", "Underground", "Male", "Book Two", "The Blind Bandit"],
   "tagCategories": {
     "nationTags": ["Earth Kingdom"],
-    "roleTags": ["Fighter"],
-    "episodeTags": ["Book Two", "The Blind Bandit"]
+    "roleTags": ["Fighter", "Bender"],
+    "episodeTags": ["Book Two", "The Blind Bandit"],
+    "identityTags": ["Male", "Underground"]
   },
   "system": {
     "schemaVersion": "3.0",
@@ -136,4 +140,3 @@ A minor but memorable Earth Rumble fighter, The Gecko is known for his agility a
     "flags": []
   }
 }
-```

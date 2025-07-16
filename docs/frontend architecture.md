@@ -1,101 +1,76 @@
-## 🏗️ Frontend Architecture & Logic
+# 🏗️ Frontend Architecture & Logic (Updated & Current)
 
-The frontend is architected around the Single Responsibility Principle, with clear separation between state management, data fetching, and presentation.
-
-### 1. `HomeContainer.tsx`: The Orchestrator
-
-This component is the "brain" of the main page but contains minimal logic itself. Its primary responsibility is to orchestrate a series of custom hooks.
-
--   Fetches initial character data via `ClientSearchEngine`.
--   Calls custom hooks (`useSearchHandler`, `useFilters`, `useSuggestions`).
--   Passes the state and handlers from these hooks down to the presentational `<Home />` component.
-
-### 2. Custom Hooks: The Logic Hubs
-
-All complex state management is isolated into reusable, single-purpose hooks.
-
--   **`useSearchHandler.ts`**: Manages the search query state and calls the `useAustrosSearch` hook to get results.
--   **`useFilters.ts`**: Manages all filter-related logic: deriving filter options from data, handling active filter state, and returning the filtered list of items.
--   **`useSuggestions.ts`**: Encapsulates the logic for generating search query suggestions based on search results.
-
-### 3. `SearchBar.tsx`: The Unified Component
-
--   **Location:** `src/components/SearchBar.tsx`
--   **Responsibility:** A single, flexible component that handles both simple form-based search and advanced, suggestion-aware search.
--   **Logic:**
-    - Receives value and onChange props from `HomeContainer` (via `Home`).
-    - Handles input, clear button, and suggestion logic.
-    - All UI styling and toggling details are documented in `styling.md`.
-
-### 4. `EntityGrid` and `ItemCard`: Card Grid & Card Logic
-
--   **Location:** `src/components/EntityGrid/EntityGrid.tsx`, `src/components/ItemCard/ItemCard.tsx`
--   **Responsibility:**
-    - `EntityGrid` renders a flexbox grid of cards, each card is an `ItemCard`.
-    - Card width is controlled in `EntityGrid` (w-[188px] as of latest update).
-    - `ItemCard` is responsible for rendering the card content, including image, name, nation icon, and category.
-    - Card name uses multi-line wrapping with line clamping (`line-clamp-2`) for accessibility and SRP, ensuring most names are visible by default.
-    - Card content (image, text, etc.) is scaled to match the card size for visual consistency.
-    - All logic is designed for accessibility, maintainability, and a visually consistent grid.
-    - For styling and further details, see `styling.md`.
-
-#### 4.1. Expanded Card Header: Specificity War & Inline Style Solution (2024-07)
-
-- **Problem:** When rendering expanded card details, the Tailwind Typography plugin (`prose`) applied high-specificity styles to all content, overriding intended font sizes for the name and category header.
-- **Failed Attempts:** Utility classes and `not-prose` wrappers were insufficient due to CSS specificity.
-- **Definitive Solution:** The name (`<h3>`) and category (`<p>`) are always rendered above the markdown content, outside the prose block, and use inline `style` attributes for font size and line height. This guarantees correct visual hierarchy regardless of global or prose styles.
-- **Logic:**
-    - Collapsed view: Card shows name, category, and badge in a compact layout.
-    - Expanded view: Name and category are always rendered at the top, with forced font size via inline styles, followed by the markdown content (which may include its own headings, but never replaces the main header).
-- **Rationale:** This approach ensures the card header is always prominent, accessible, and immune to future CSS/plugin changes.
-
-### 5. `FilterSidebar` and `FilterPanel`: Filter UI Logic
-
--   **Location:** `src/components/FilterSidebar.tsx`, `src/components/FilterPanel.tsx`
--   **Responsibility:**
-    - `FilterSidebar` renders the sidebar with filter groups and filter controls (e.g., nation, element, status, gender, age group).
-    - `FilterPanel` (when used) renders filter tags or controls above the main grid.
-    - Both components receive filter state and handlers as props from `HomeContainer` and update the UI accordingly.
--   **Toggling:**
-    - To hide or unhide these components, see `styling.md` for the canonical method.
-
-### 6. `CollectionsSidebar` and `CollectionsPanel`: Collections UI Logic
-
--   **Location:** `src/components/CollectionsSidebar/CollectionsSidebar.tsx`, `src/components/CollectionsPanel/CollectionsPanel.tsx`
--   **Responsibility:**
-    - `CollectionsSidebar` renders the sidebar with a list of user collections and collection controls.
-    - `CollectionsPanel` renders the modal/panel for adding to or creating collections.
-    - Both receive collection state and handlers as props from `HomeContainer` and update the UI accordingly.
--   **Toggling:**
-    - To hide or unhide these components, see `styling.md` for the canonical method.
-
-### 7. `stringUtils.ts`: Shared Utilities
-
--   **Location:** `src/utils/stringUtils.ts`
--   **Responsibility:** Contains general-purpose, non-React helper functions (e.g., `toTitleCase`, `getInitials`). Components like `ItemCard` import these helpers instead of defining them locally.
+The frontend is architected around a clear separation of concerns, with a central container managing state and data flow to presentational components. The search system is now fully client-side for maximum robustness.
 
 ---
 
-## 8. Data Structure Requirements & Template Usage
+## 1. HomeContainer.tsx: The Central Orchestrator
 
-To ensure seamless integration between the backend data pipeline and the frontend UI, all data records (characters, locations, foods, etc.) must strictly follow the canonical schema described in `docs/data pipeline.md`.
+This component is the "brain" of the main page. It is responsible for:
 
-- **Character Data:**
-  - Must use the canonical character template (see `raw-data/characters/templates/character_template.md` or the example in `data pipeline.md`).
-  - All required fields and block structure must be present for the parser and enrichment scripts to succeed.
-  - The frontend expects each character to have a nested, well-structured object with fields like `id`, `slug`, `name`, `nation`, `role`, `expandedView`, `image`, etc.
+- **Data Fetching:** On initial load, it fetches the single data source for the entire app: `public/enriched-data.json`.
+- **State Management:** It manages all primary UI state, including:
+    - The user's current search query.
+    - The `expandedCardId` to track which card is expanded into a modal.
+- **Search Logic:** It calls the `useSearch` custom hook, passing it the full dataset and the current query.
+- **Prop Drilling:** It passes the final search results and state handlers down to the presentational `<Home />` component.
 
-- **Other Data Types (Locations, Foods, Clothing, etc.):**
-  - Each type should have its own template, modeled after the character template, with required fields and at least one JSON block containing `id` and `slug`.
-  - If a template does not exist, create one in the relevant `raw-data/[type]/templates/` directory and document it in `data pipeline.md`.
-  - The frontend expects all data to be normalized and consistent for rendering in grids, cards, and detail views.
+---
 
-- **Template Files:**
-  - Template files are for documentation/reference only and must NOT be placed in the main data directories, or the parser will attempt to process them and may fail.
-  - Place templates in a `templates/` subdirectory or in `docs/`.
+## 2. Custom Hooks: The useSearch Hook
 
-- **Validation:**
-  - Always validate new or edited data files by running the full pipeline (`npm run build:data`) and checking for errors.
-  - The frontend will only display records that pass all pipeline stages and are present in the final search index.
+All complex search logic is now consolidated into a single, powerful hook.
 
-See `docs/data pipeline.md` for canonical templates and required structure for each data type.
+- **`useSearch.ts`:**
+    - Receives the complete array of character data and the search query.
+    - **Client-Side Preprocessing:** Uses a preprocessor to create a `searchBlob` for each character, combining all searchable text fields (name, role, titles, tags, etc.) into one.
+    - **Client-Side Indexing:** Uses FlexSearch to build a full-text search index in the browser based on the `searchBlob`. This is memoized (`useMemo`) to happen only once.
+    - Returns a final, filtered array of characters based on the query. If the query is empty, it returns all characters.
+
+---
+
+## 3. Presentational Layer (Home.tsx)
+
+This component is purely presentational. It receives all data and handlers as props from `HomeContainer`.
+
+- Renders the main layout, including the `SearchBar` and the `EntityGrid`, passing the relevant props down.
+
+---
+
+## 4. Card Grid & Modal System (EntityGrid, ItemCard)
+
+- **`EntityGrid.tsx`:**
+    - Receives the array of search results and the `expandedCardId`.
+    - Renders a responsive grid of `ItemCard` components.
+    - Dynamically sets the `expanded` and `onExpand` props for each card based on whether its ID matches the `expandedCardId`.
+
+- **`ItemCard.tsx`:**
+    - Has two render states: collapsed (the grid card) and expanded (a full-screen modal).
+    - **Expanded View:** When the `expanded` prop is true, it renders a responsive, full-screen modal overlay. This modal is self-contained and manages its own layout to fit any screen size without breaking the page. (See `docs/ui-components.md` for full styling details).
+
+---
+
+## 5. Filter & Collections Sidebars (Currently Disabled)
+
+- **`FilterSidebar.tsx` & `CollectionsSidebar.tsx`:** These components are currently disabled in the UI. The old logic (`useFilters`, etc.) was removed during the search engine refactor. They can be re-integrated in the future by wiring them up to modify the main search query string in `HomeContainer`.
+
+---
+
+## 6. stringUtils.ts: Shared Utilities
+
+- **Location:** `src/utils/stringUtils.ts`
+- **Responsibility:** Contains general-purpose helper functions like `toTitleCase`. This file is unchanged and remains a stable utility.
+
+---
+
+## 7. Data Structure & Pipeline Adherence
+
+To function correctly, the frontend relies on the data pipeline producing a complete `public/enriched-data.json`.
+
+- Each record in this file must have all top-level fields required by the UI (e.g., `id`, `name`, `image`, `role`, `expandedView`).
+- The data pipeline is responsible for "promoting" these UI fields from the raw markdown data to the top level of the final JSON records.
+- See `docs/data pipeline.md` and `docs/troubleshooting.md` for canonical data structures and debugging steps.
+
+---
+
+This updated document accurately reflects the current state of the application after our refactoring work.

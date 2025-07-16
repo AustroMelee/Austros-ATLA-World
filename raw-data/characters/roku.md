@@ -8,7 +8,8 @@ type: character
 - Name: Roku
 - Nation: Fire Nation
 - Badge: Spirit Advisor
-- Short Description: The Fire Nation-born Avatar who preceded Aang. His lifelong friendship and later rivalry with Fire Lord Sozin directly led to the beginning of the Hundred Year War.
+- Short Description: Roku is a wise, compassionate, and legendary male Fire Nation Avatar, spirit advisor, and mentor to Aang. His friendship and rivalry with Sozin shaped the fate of the world.
+- Tags: Fire Nation, Avatar, Mentor, Spirit Advisor, Male, Bender, Past Avatar, Legendary, Book One, Book Two, Book Three, Winter Solstice
 ```
 
 ## UI - EXPANDED VIEW
@@ -76,16 +77,17 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
   "badge": "Spirit Advisor",
   "name": "Roku",
   "nation": "Fire Nation",
-  "shortDescription": "The Fire Nation-born Avatar who preceded Aang. His lifelong friendship and later rivalry with Fire Lord Sozin directly led to the beginning of the Hundred Year War.",
+  "shortDescription": "Roku is a wise, compassionate, and legendary male Fire Nation Avatar, spirit advisor, and mentor to Aang. His friendship and rivalry with Sozin shaped the fate of the world.",
   "image": null,
   "fullName": "Roku",
-  "role": "Past Avatar",
+  "role": "Past Avatar, Mentor, Spirit Advisor, Legendary Bender",
   "titles": ["Avatar"],
   "aliases": ["Ro"],
   "pronouns": "he/him",
   "ethnicity": "Fire Nation",
   "gender": "Male",
   "age": 70,
+  "ageRange": "elder",
   "hairColor": "White",
   "eyeColor": null,
   "skinColor": null,
@@ -131,7 +133,9 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
   },
   "roles": {
     "avatar": true,
-    "mentor": true
+    "mentor": true,
+    "spiritAdvisor": true,
+    "bender": true
   },
   "relationships": {
     "sozin": "Best Friend turned Arch-Nemesis",
@@ -156,11 +160,12 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
     "Being the Avatar is an honor, but it's also a great burden.",
     "Some friendships are so strong, they can even transcend lifetimes."
   ],
-  "tags": ["Fire Nation", "Avatar", "Mentor", "Book One", "Winter Solstice"],
+  "tags": ["Fire Nation", "Avatar", "Mentor", "Spirit Advisor", "Male", "Bender", "Past Avatar", "Legendary", "Book One", "Book Two", "Book Three", "Winter Solstice"],
   "tagCategories": {
     "nationTags": ["Fire Nation"],
-    "roleTags": ["Avatar", "Mentor"],
-    "episodeTags": ["Book One", "Winter Solstice"]
+    "roleTags": ["Avatar", "Mentor", "Spirit Advisor", "Bender"],
+    "episodeTags": ["Book One", "Book Two", "Book Three", "Winter Solstice"],
+    "identityTags": ["Male", "Legendary", "Past Avatar"]
   },
   "system": {
     "schemaVersion": "3.0",
@@ -169,4 +174,3 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
     "flags": []
   }
 }
-```

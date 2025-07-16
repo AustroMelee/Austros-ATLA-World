@@ -32,7 +32,18 @@ body {
   }
 }
 
+@font-face {
+  font-family: 'Glass_TTY_VT220';
+  src: url('/assets/fonts/Glass_TTY_VT220.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer utilities {
+  .font-tty-glass {
+    font-family: 'Glass_TTY_VT220', monospace;
+  }
   .transform-style-preserve-3d {
     transform-style: preserve-3d;
   }

@@ -1,67 +1,52 @@
-// HomeContainer: Handles all state, data fetching, and logic for the Home page. SRP-compliant container.
-import React, { useState, useMemo, useRef } from 'react';
+// src/pages/HomeContainer.tsx (Corrected Refactor)
+
+import React, { useState, useEffect } from 'react';
 import { Home } from './Home';
-import { useSearchHandler } from '../hooks/useSearchHandler';
-import { useRecentSearchRecorder } from '../hooks/useRecentSearchRecorder';
-import * as ClientSearchEngine from '../search/ClientSearchEngine';
-import type { EnrichedCharacter, EnrichedRecord } from '../types/domainTypes';
-import { useFilters } from '../hooks/useFilters';
+import { useSearch } from '../hooks/useSearch';
+import type { EnrichedEntity } from '../search/types';
 
-export default function HomeContainer() {
-  const {
-    query,
-    setQuery,
-    searchResults,
-    loading,
-    error,
-    topHit,
-    suggestion,
-    textColor,
-  } = useSearchHandler();
-  const [initialItems, setInitialItems] = useState<EnrichedCharacter[]>([]);
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
-
-  React.useEffect(() => {
-    ClientSearchEngine.getAllByType<EnrichedCharacter>('character').then(setInitialItems);
+export function HomeContainer() {
+  const [allEntities, setAllEntities] = useState<EnrichedEntity[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [query, setQuery] = useState('');
+  // --- START: NEW EXPANSION LOGIC ---
+  const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
+  const handleCardExpand = (cardId: string) => {
+    setExpandedCardId(prevId => (prevId === cardId ? null : cardId));
+  };
+  // --- END: NEW EXPANSION LOGIC ---
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/enriched-data.json');
+        if (!response.ok) throw new Error('Failed to fetch data');
+        const data: EnrichedEntity[] = await response.json();
+        setAllEntities(data);
+      } catch (error) {
+        console.error('Error fetching enriched data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
   }, []);
-
-  useRecentSearchRecorder(query);
-
-  // Memoized filter for EnrichedCharacter[]
-  const characterSearchResults = useMemo(
-    () => (searchResults as EnrichedRecord[]).filter(
-      (item): item is EnrichedCharacter => item.__type === 'character'
-    ),
-    [searchResults]
-  );
-
-  // Use the new useFilters hook
-  const {
-    activeFilters,
-    filters,
-    handleToggleFilter,
-    filteredResults,
-    filterConfig,
-  } = useFilters({ initialItems, query, searchResults: characterSearchResults });
-
+  const results = useSearch(allEntities, query);
   return (
     <Home
-      query={query}
-      setQuery={q => setQuery(q)}
-      filters={filters}
-      activeFilters={activeFilters}
-      onToggleFilter={handleToggleFilter}
-      filterConfig={filterConfig}
+      searchResults={results}
       loading={loading}
-      error={error}
-      filteredResults={filteredResults}
-      selectedId={selectedId}
-      setSelectedId={setSelectedId}
-      scrollContainerRef={scrollContainerRef}
-      suggestion={suggestion}
-      textColor={textColor}
-      topNation={topHit?.nation || null}
+      query={query}
+      handleSearchChange={setQuery}
+      // --- PASS NEW PROPS ---
+      expandedCardId={expandedCardId}
+      onCardExpand={handleCardExpand}
+      // --- END NEW PROPS ---
+      filterOptions={{}}
+      activeFilters={{}}
+      handleFilterChange={() => {}}
+      filterCounts={{}}
     />
   );
-} 
+}
+
+export default HomeContainer; 

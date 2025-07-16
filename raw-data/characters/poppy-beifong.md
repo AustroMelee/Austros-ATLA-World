@@ -8,7 +8,8 @@ type: character
 - Name: Poppy Beifong
 - Nation: Earth Kingdom
 - Badge: Protective Matriarch
-- Short Description: Cheerful and polite, Poppy Beifong is Toph’s loving but overprotective mother, a high-status figure in Gaoling who struggled to accept her daughter’s true strength.
+- Short Description: Cheerful, polite, and deeply loving, Poppy Beifong is Toph’s overprotective mother and a noble matriarch of Gaoling. Her journey explores the challenges of parental love and learning to let go.
+- Tags: Earth Kingdom, Gaoling, Mother, Matriarch, Female, Nobility, Book Two, The Blind Bandit
 ```
 
 ## UI - EXPANDED VIEW
@@ -53,17 +54,18 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 
 ⚙️ BACKEND METADATA
 
-#### 🪪 Identity & Demographics
+#### 🦪 Identity & Demographics
 ```json
 {
   "id": "poppy-beifong",
   "slug": "poppy-beifong",
   "fullName": "Poppy Beifong",
-  "role": "Matriarch",
+  "role": "Matriarch, Mother, Nobility",
   "titles": ["Lady Beifong"],
   "aliases": [],
   "species": "human",
   "gender": "Female",
+  "age": 38,
   "ageRange": "adult",
   "nationality": "Earth Kingdom",
   "ethnicity": "Earth Kingdom",
@@ -129,6 +131,19 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 {
     "image": "poppy.jpg",
     "voiceActor": ["Gabrielle Carteris", "Michelle Wong"]
+}
+```
+
+#### 🏷️ Tags & Categories
+```json
+{
+  "tags": ["Earth Kingdom", "Gaoling", "Mother", "Matriarch", "Female", "Nobility", "Book Two", "The Blind Bandit"],
+  "tagCategories": {
+    "nationTags": ["Earth Kingdom", "Gaoling"],
+    "roleTags": ["Mother", "Matriarch", "Nobility"],
+    "episodeTags": ["Book Two", "The Blind Bandit"],
+    "identityTags": ["Female"]
+  }
 }
 ```
 

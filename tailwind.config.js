@@ -18,9 +18,14 @@ export default {
           '0%': { 'background-position': '0% 50%' },
           '100%': { 'background-position': '100% 50%' },
         },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
       },
       animation: {
         'flowing-border': 'flowing-border 3s linear infinite',
+        blink: 'blink 1s steps(2, start) infinite',
       },
       typography: (theme) => ({
         DEFAULT: {

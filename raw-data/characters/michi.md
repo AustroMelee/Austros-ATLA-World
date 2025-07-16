@@ -8,7 +8,8 @@ type: character
 - Name: Michi
 - Nation: Fire Nation
 - Badge: Noble Florist
-- Short Description: A noblewoman and florist, Michi is known for her compassion, emotional strength, and for ultimately choosing her family's safety over politics during the postwar era.
+- Short Description: A caring, resilient, and supportive adult female noblewoman and florist, Michi is known for her compassion, emotional strength, and for ultimately choosing her family's safety over politics during the postwar era.
+- Tags: Fire Nation, Noblewoman, Mother, Florist, Female, Adult, Supportive, Protective Parent, Book Two, Book Three, New Ozai, Postwar
 ```
 
 ## 📖 UI - EXPANDED VIEW

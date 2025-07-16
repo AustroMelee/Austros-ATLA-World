@@ -72,8 +72,11 @@
 
 ### **Scripts**
 - **Location:** `scripts/`
-- **Purpose:** Data pipeline (parsing, enriching, indexing), validation, and utility scripts.
-- **Key scripts:** `1-parse-markdown.mjs`, `2-enrich-data.mjs`, `3-build-index.mjs`, `validate-data.mjs`, etc.
+- **Purpose:** Data pipeline (parsing, enriching), validation, and utility scripts.
+- **Key scripts:**
+    - `1-parse-markdown.mjs`: Parses raw markdown files into structured JSON.
+    - `2-enrich-data.mjs`: Cleans and structures the parsed data into the final `public/enriched-data.json`.
+- **Note:** The old `3-build-index.mjs` script is no longer used. All search indexing is now performed client-side.
 
 ---
 
@@ -112,10 +115,12 @@
 
 ## 6. Data & Search
 
-- **Data Pipeline:** See `docs/data pipeline.md`
-- **Search Index:** `public/search-index.json` (FlexSearch, auto-generated)
-- **Data Types:** Defined in `src/types/`
-- **Search Engine:** `src/search/ClientSearchEngine.ts` (see "Search Engine" doc for details)
+- **Data Pipeline:** A two-stage process that produces a single `public/enriched-data.json` file. See `docs/data pipeline.md` for full details.
+- **Data Source:** The frontend fetches `public/enriched-data.json` at runtime.
+- **Search Logic:**
+    - **`src/hooks/useSearch.ts`:** The core search hook. It takes the enriched data, preprocesses it in the browser to create a `searchBlob`, and builds an in-memory `FlexSearch` index for instant searching.
+    - **No Pre-Built Index:** The app does not load a pre-built search index file. This strategy is more robust and avoids build-time errors.
+- **Data Types:** Defined in `src/types/`.
 
 ---
 
@@ -129,11 +134,11 @@
 ## 8. Project Structure
 
 - **src/**: Main app code (components, hooks, search, types, etc.)
-- **public/**: Static assets, search index, images
-- **raw-data/**: Source markdown data
-- **scripts/**: Data pipeline and utility scripts
-- **eslint-plugin-local/**: Custom ESLint rules
-- **docs/**: Project documentation
+- **public/**: Static assets, the primary `enriched-data.json` file, and images.
+- **raw-data/**: Source markdown data.
+- **scripts/**: Data pipeline and utility scripts.
+- **eslint-plugin-local/**: Custom ESLint rules.
+- **docs/**: Project documentation.
 
 ---
 
@@ -150,16 +155,16 @@
 
 ## 10. How to Reproduce/Setup
 
-1. `npm install`
-2. `npm run build:data` (to generate search index)
-3. `npm run build:tailwind` (after any style change)
-4. `npm run dev` (to start Vite dev server)
+1.  `npm install`
+2.  `npm run build:data` (to generate `public/enriched-data.json`)
+3.  `npm run build:tailwind` (after any style change)
+4.  `npm run dev` (to start Vite dev server)
 
 ---
 
-**For more details, see:**  
-- `docs/source_of_truth.md`  
-- `docs/data pipeline.md`  
-- `projectrules.mdc`  
-- `README.md` (if present)
+**For more details, see:**
+- `docs/data pipeline.md`
+- `docs/frontend architecture.md`
+- `docs/troubleshooting.md`
+- `projectrules.mdc`
 

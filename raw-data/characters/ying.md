@@ -8,7 +8,8 @@ type: character
 - Name: Ying
 - Nation: Earth Kingdom
 - Badge: Hopeful Refugee
-- Short Description: An optimistic refugee from the Earth Kingdom, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar.
+- Short Description: An optimistic, pregnant Earth Kingdom refugee and nonbender, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar. Her resilience and hope inspired those around her during the war.
+- Tags: Earth Kingdom, Ba Sing Se, Refugee, Mother, Nonbender, Civilian, Pregnant, Hope, War Survivor, Female, Team Avatar, Book Two, Serpent’s Pass
 ```
 
 ## UI - EXPANDED VIEW
@@ -57,16 +58,17 @@ A minor but memorable character, Ying’s journey highlights the struggles of re
   "badge": "Hopeful Refugee",
   "name": "Ying",
   "nation": "Earth Kingdom",
-  "shortDescription": "An optimistic refugee from the Earth Kingdom, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar.",
+  "shortDescription": "An optimistic, pregnant Earth Kingdom refugee and nonbender, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar. Her resilience and hope inspired those around her during the war.",
   "image": null,
   "fullName": "Ying",
-  "role": "Refugee, Mother",
+  "role": "Refugee, Mother, Civilian",
   "titles": [],
   "aliases": [],
   "pronouns": "she/her",
   "ethnicity": "Earth Kingdom",
   "gender": "Female",
-  "age": null,
+  "age": 25,
+  "ageRange": "adult",
   "hairColor": "Black",
   "eyeColor": null,
   "skinColor": "light",
@@ -109,7 +111,9 @@ A minor but memorable character, Ying’s journey highlights the struggles of re
   },
   "roles": {
     "refugee": true,
-    "mother": true
+    "mother": true,
+    "civilian": true,
+    "nonbender": true
   },
   "relationships": {
     "than": "Husband",
@@ -130,11 +134,12 @@ A minor but memorable character, Ying’s journey highlights the struggles of re
   "dialogue": [
     "I know what I want to name our baby now. Hope."
   ],
-  "tags": ["Earth Kingdom", "Ba Sing Se", "Refugee", "Mother", "Book Two", "Serpent’s Pass"],
+  "tags": ["Earth Kingdom", "Ba Sing Se", "Refugee", "Mother", "Nonbender", "Civilian", "Pregnant", "Hope", "War Survivor", "Female", "Team Avatar", "Book Two", "Serpent’s Pass"],
   "tagCategories": {
     "nationTags": ["Earth Kingdom", "Ba Sing Se"],
-    "roleTags": ["Refugee", "Mother"],
-    "episodeTags": ["Book Two", "Serpent’s Pass"]
+    "roleTags": ["Refugee", "Mother", "Civilian", "Nonbender"],
+    "episodeTags": ["Book Two", "Serpent’s Pass"],
+    "identityTags": ["Female", "Pregnant", "War Survivor", "Hope", "Team Avatar"]
   },
   "system": {
     "schemaVersion": "3.0",

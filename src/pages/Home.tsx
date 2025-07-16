@@ -1,71 +1,62 @@
 // Home: Presentational/stateless component for Home page. Receives all data/handlers as props from HomeContainer.
 import React from 'react';
+import Navbar from '../components/Navbar';
 import SearchBar from '../components/SearchBar';
 import EntityGrid from '../components/EntityGrid/EntityGrid';
-import LoadingSpinner from '../components/LoadingSpinner';
-import type { EnrichedCharacter } from '../types';
-import { ExpandedItemModal } from '../components/ExpandedItemModal';
+import Layout from '../components/Layout';
+import NoResults from '../components/NoResults';
+import type { MatchResult, EnrichedEntity } from '../search/types';
+// import type { EnrichedCharacter } from '../types/domainTypes';
+
+export interface GridItem {
+  record: EnrichedEntity;
+  matchedFields: MatchResult['matchedFields'];
+}
 
 interface HomeProps {
-  query: string;
-  setQuery: (q: string) => void;
-  filters: Record<string, string[]>;
-  activeFilters: Record<string, string[]>;
-  onToggleFilter: (filterKey: string, value: string, setSelectedId?: (id: string | null) => void) => void;
-  filterConfig: unknown;
+  searchResults: Array<{ entity: EnrichedEntity; matchedFields: MatchResult['matchedFields'] }>;
   loading: boolean;
-  error: string | null;
-  filteredResults: EnrichedCharacter[];
-  selectedId: string | null;
-  setSelectedId: (id: string | null) => void;
-  scrollContainerRef: React.RefObject<HTMLDivElement>;
-  suggestion: string | null;
-  textColor: string;
-  topNation: string | null;
+  query: string;
+  handleSearchChange: (query: string) => void;
+  expandedCardId: string | null; // <-- Add prop
+  onCardExpand: (cardId: string) => void; // <-- Add prop
 }
 
 export function Home({
-  query,
-  setQuery,
-  filters: _filters,
-  activeFilters: _activeFilters,
-  onToggleFilter: _onToggleFilter,
-  filterConfig: _filterConfig,
+  searchResults,
   loading,
-  error,
-  filteredResults,
-  selectedId,
-  setSelectedId,
-  scrollContainerRef,
-  suggestion: _suggestion,
-  textColor: _textColor,
-  topNation: _topNation,
+  query,
+  handleSearchChange,
+  expandedCardId, // <-- Destructure prop
+  onCardExpand, // <-- Destructure prop
 }: HomeProps) {
-  const expandedItem = selectedId ? filteredResults.find(item => item.id === selectedId) : null;
+  // --- CORRECTED ADAPTER ---
+  const gridItems: GridItem[] = searchResults.map((result) => ({
+    record: result.entity,
+    matchedFields: result.matchedFields,
+  }));
+  // --- END ADAPTER ---
+
+  console.log('Data being passed to EntityGrid:', gridItems);
+
   return (
-    <div className="flex flex-row gap-6 min-h-screen overflow-x-hidden">
-      <main className="flex-1 flex flex-col overflow-visible justify-center">
-        <div className="flex-shrink-0 mt-32">
-          <SearchBar
-            value={query}
-            onChange={setQuery}
+    <Layout>
+      <Navbar />
+      <div className="flex flex-col items-center w-full">
+        <SearchBar value={query} onChange={handleSearchChange} />
+        {loading ? (
+          <div className="mt-8 text-neutral-400">Loading...</div>
+        ) : gridItems.length === 0 ? (
+          <NoResults />
+        ) : (
+          <EntityGrid
+            items={gridItems}
+            expandedCardId={expandedCardId}
+            onCardExpand={onCardExpand}
           />
-        </div>
-        <div ref={scrollContainerRef} className="pt-6 pr-2 overflow-visible">
-          {loading ? <LoadingSpinner /> : error ? <div className="text-red-400">{error}</div> : (
-            <EntityGrid
-              items={filteredResults}
-              onSelect={setSelectedId}
-              selectedId={selectedId}
-              scrollContainerRef={scrollContainerRef}
-            />
-          )}
-          {expandedItem && (
-            <ExpandedItemModal item={expandedItem} onClose={() => setSelectedId(null)} />
-          )}
-        </div>
-      </main>
-    </div>
+        )}
+      </div>
+    </Layout>
   );
 }
 

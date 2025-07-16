@@ -131,7 +131,7 @@ Combustion Man was introduced as a secondary antagonist in Book Three. Hired by 
   "dialogue": [
     "I've heard about you. They say you're good at what you do, and even better at keeping secrets. The Avatar is alive. I want you to find him, and end him."
   ],
-  "tags": ["Fire Nation", "Assassin", "Combustionbender", "Book Three", "The Headband", "The Western Air Temple"],
+  "tags": ["Fire Nation", "Assassin", "Combustionbender", "Book Three", "The Headband", "The Western Air Temple", "villain"],
   "tagCategories": {
     "nationTags": ["Fire Nation"],
     "roleTags": ["Assassin", "Firebending Master"],

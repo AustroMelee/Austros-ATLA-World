@@ -7,7 +7,9 @@ type: character
 ```md
 - Name: Kuei
 - Nation: Earth Kingdom
-- Short Description: The naive and sheltered 52nd Earth King of Ba Sing Se. For years, he was a puppet ruler, manipulated by his treacherous Grand Secretariat, Long Feng.
+- Badge: Earth King
+- Short Description: The naive, sheltered, and well-meaning young adult male Earth King of Ba Sing Se, Kuei was a puppet ruler manipulated by Long Feng before growing into a more assertive, if sometimes rash, leader. His journey reflects the Earth Kingdom's struggle for identity and change.
+- Tags: Earth Kingdom, Ba Sing Se, King, Royalty, Nonbender, Male, Young Adult, Naive, Sheltered, Catalyst, Book Two, Book Three, Bosco, Long Feng
 ```
 
 ---

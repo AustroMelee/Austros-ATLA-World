@@ -8,7 +8,8 @@ type: character
 - Name: Meng
 - Nation: Earth Kingdom
 - Badge: Fortuneteller's Apprentice
-- Short Description: Meng is Aunt Wu's eager apprentice in Makapu Village, known for her crush on Aang and her interest in fortune-telling.
+- Short Description: Meng is Aunt Wu's eager apprentice in Makapu Village—a cheerful, kind-hearted girl known for her crush on Aang, her optimism, and her interest in fortune-telling.
+- Tags: Earth Kingdom, Makapu Village, Apprentice, Assistant, Girl, Child, Nonbender, Optimistic, Comic Relief, Hopeful, Book One, The Fortuneteller, Aunt Wu, Aang, Katara
 ```
 
 ## 📖 UI - EXPANDED VIEW
@@ -16,7 +17,7 @@ type: character
 ```md
 ### 📖 Overview
 
-Meng was a resident of Makapu Village and the young assistant of Aunt Wu, the local fortuneteller. She greeted guests, brought snacks, and looked up to Aunt Wu as a mentor and grandmother figure. Meng was known for her optimism, helpfulness, and her crush on Aang, which provided comic relief and a subplot in "The Fortuneteller." Despite her clumsiness, she was known for her delicious bean curd puffs and her hopeful outlook on love.
+Meng is a young girl from Makapu Village, serving as Aunt Wu's assistant and apprentice fortuneteller. She is known for her boundless optimism, helpfulness, and her innocent crush on Aang, which adds warmth and comic relief to "The Fortuneteller." Despite her clumsiness, Meng is beloved for her delicious bean curd puffs and her hopeful outlook on love and fate.
 
 ### ✨ Narrative Highlights
 
@@ -28,7 +29,7 @@ Meng was a resident of Makapu Village and the young assistant of Aunt Wu, the lo
 
 ### 🎭 Role in the Story
 
-A minor but memorable character whose subplot highlights themes of fate, hope, and young love. Meng's interactions with Aang and Team Avatar add warmth and humor to the episode "The Fortuneteller."
+A minor but memorable character whose subplot highlights themes of fate, hope, young love, and the bittersweetness of unrequited feelings. Meng's interactions with Aang and Team Avatar add warmth and humor to the episode "The Fortuneteller." Her story is a gentle exploration of growing up and learning to accept reality with grace.
 
 ### 🤝 Relationships
 
@@ -44,11 +45,13 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
 - Helpful and kind
 - Persistent in her affections
 - Clumsy but well-meaning
+- Innocent and idealistic
+- Quick to forgive
 
 ### 💬 Notable Quotes
 
 - "It's just really hard when you like someone, but they don't think of you that way."
-
+- "You have pretty big ears, don't you? I guess they're... kind of cute."
 ```
 
 ---
@@ -67,12 +70,12 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
   "fullName": "Meng",
   "role": "Assistant, Apprentice",
   "badge": "Fortuneteller's Apprentice",
-  "titles": [],
-  "aliases": [],
+  "titles": ["Apprentice", "Assistant"],
+  "aliases": ["Makapu Girl", "Aunt Wu's Assistant"],
   "species": "human",
   "gender": "female",
-  "ageChronological": null,
-  "ageBiological": null,
+  "ageChronological": 10,
+  "ageBiological": 10,
   "ageRange": "child",
   "birthDate": null,
   "deathDate": null,
@@ -95,7 +98,7 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
   "bendingElement": null,
   "bendingProficiency": null,
   "advancedBending": [],
-  "nonBendingSkills": ["fortune-telling assistance", "hospitality", "cooking (bean curd puffs)", "optimism"],
+  "nonBendingSkills": ["fortune-telling assistance", "hospitality", "cooking (bean curd puffs)", "optimism", "cheering others up", "community service"],
   "uniqueTechniques": [],
   "powerMetrics": {
     "rawPower": 1,
@@ -103,12 +106,13 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
     "strategicAptitude": 2
   },
   "combatStyle": null,
-  "vulnerabilities": ["unrequited love", "clumsiness"],
+  "vulnerabilities": ["unrequited love", "clumsiness", "naivety"],
   "isLegendaryFighter": false,
   "notableFeats": [
     "Assistant to Aunt Wu, greeting guests and helping with fortune readings.",
     "Provided Aang with Aunt Wu's cloud reading book.",
-    "Known for her delicious bean curd puffs."
+    "Known for her delicious bean curd puffs.",
+    "Maintained optimism despite unrequited love."
   ]
 }
 ```
@@ -124,7 +128,7 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
   "allegianceHistory": [],
   "isRoyalty": false,
   "politicalPower": "none",
-  "politicalLeanings": ["hopeful", "romantic"],
+  "politicalLeanings": ["hopeful", "romantic", "idealistic"],
   "moralAlignment": "neutral good",
   "moralCompassDrift": false
 }
@@ -136,16 +140,17 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
 
 ```json
 {
-  "narrativeFunction": "comic relief, subplot",
+  "narrativeFunction": "comic relief, subplot, coming-of-age",
   "screenTimeLevel": "minor",
   "firstAppearance": "The Fortuneteller",
   "finalAppearance": "The Fortuneteller",
   "deathStatus": "alive",
   "causeOfDeath": null,
   "narrativeArcs": [
-    { "arcType": "unrequited love", "status": "completed", "summary": "Develops a crush on Aang and learns to accept unrequited feelings." }
+    { "arcType": "unrequited love", "status": "completed", "summary": "Develops a crush on Aang and learns to accept unrequited feelings." },
+    { "arcType": "personal growth", "status": "active", "summary": "Learns about hope, fate, and self-acceptance." }
   ],
-  "keyTropes": ["Cheerful Assistant", "Comic Relief", "Unrequited Love"]
+  "keyTropes": ["Cheerful Assistant", "Comic Relief", "Unrequited Love", "Innocent Crush", "Optimistic Girl"]
 }
 ```
 
@@ -172,13 +177,13 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
 
 ```json
 {
-  "positiveTraits": ["cheerful", "helpful", "optimistic", "kind", "persistent"],
-  "negativeTraits": ["clumsy", "naive", "jealous (briefly)"],
-  "motivations": ["helping Aunt Wu", "finding love", "making others happy"],
-  "fears": ["never finding love", "disappointing Aunt Wu"],
-  "internalConflicts": ["crush on Aang vs. reality of unrequited love"],
+  "positiveTraits": ["cheerful", "helpful", "optimistic", "kind", "persistent", "innocent", "forgiving"],
+  "negativeTraits": ["clumsy", "naive", "jealous (briefly)", "overly idealistic"],
+  "motivations": ["helping Aunt Wu", "finding love", "making others happy", "learning about fate"],
+  "fears": ["never finding love", "disappointing Aunt Wu", "being alone"],
+  "internalConflicts": ["crush on Aang vs. reality of unrequited love", "wanting to grow up but still a child"],
   "emotionalWounds": ["unrequited love for Aang"],
-  "copingMechanisms": ["optimism", "helping others"],
+  "copingMechanisms": ["optimism", "helping others", "baking"],
   "worldview": "Believes in fate, hope, and the power of kindness."
 }
 ```
@@ -190,9 +195,9 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
 ```json
 {
   "heightEstimate": "Petite",
-  "notableFeatures": ["Black hair"],
+  "notableFeatures": ["Black hair", "round face", "bright eyes"],
   "outfitStyles": ["Makapu Village attire", "Assistant's dress"],
-  "signaturePossessions": [],
+  "signaturePossessions": ["cloud reading book", "apron"],
   "ageProgression": false,
   "voiceActor": ["Jessie Flower"]
 }
@@ -205,14 +210,15 @@ A minor but memorable character whose subplot highlights themes of fate, hope, a
 ```json
 {
   "archetype": "Cheerful Assistant",
-  "thematicKeywords": ["fate", "hope", "young love", "optimism", "comic relief"],
+  "thematicKeywords": ["fate", "hope", "young love", "optimism", "comic relief", "girl", "innocence", "coming of age"],
   "tagCategories": {
-    "narrativeTags": ["comic relief", "subplot", "assistant"],
+    "narrativeTags": ["comic relief", "subplot", "assistant", "girl", "coming of age"],
     "relationshipTags": ["crush on Aang", "apprentice to Aunt Wu", "friend of Katara"],
-    "emotionTags": ["cheerful", "hopeful", "smitten"],
+    "emotionTags": ["cheerful", "hopeful", "smitten", "innocent"],
     "politicalTags": ["Makapu Village", "Earth Kingdom"],
-    "arcTags": ["unrequited love"],
+    "arcTags": ["unrequited love", "personal growth"],
     "worldTags": ["Makapu Village", "Aunt Wu's Fortune Salon"]
-  }
+  },
+  "searchableKeywords": ["girl", "apprentice", "assistant", "optimism", "fortune-teller", "makapu", "comic relief", "young love"]
 }
 ```

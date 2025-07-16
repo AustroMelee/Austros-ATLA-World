@@ -7,7 +7,9 @@ type: character
 ```md
 - Name: Kya
 - Nation: Southern Water Tribe
-- Short Description: The courageous and loving mother of Katara and Sokka, Kya sacrificed her life to protect her daughter and preserve the last of the Southern waterbenders.
+- Badge: SWT Matriarch
+- Short Description: The courageous, loving, and self-sacrificing adult female matriarch of the Southern Water Tribe, Kya was a skilled healer and devoted mother whose ultimate sacrifice protected Katara and shaped her family's destiny.
+- Tags: Southern Water Tribe, Water Tribe, Matriarch, Mother, Healer, Female, Adult, Nonbender, Compassionate, Courageous, Sacrifice, Book Two, Book Three, Katara, Sokka, Hakoda
 ```
 
 ---

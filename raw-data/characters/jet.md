@@ -7,7 +7,9 @@ type: character
 ```md
 - Name: Jet
 - Nation: Earth Kingdom
-- Short Description: The charismatic and vengeful leader of the Freedom Fighters, a group of young refugees fighting against the Fire Nation. His deep-seated hatred often clouds his judgment, pushing him to extremist measures.
+- Badge: Freedom Fighter Leader
+- Short Description: The charismatic, vengeful, and tragic male teen leader of the Freedom Fighters, Jet is a skilled swordsman whose hatred of the Fire Nation drives him to extremist measures and ultimately a tragic fate.
+- Tags: Earth Kingdom, Freedom Fighters, Leader, Nonbender, Male, Teen, Charismatic, Tragic Hero, Anti-Hero, Book One, Book Two, Ba Sing Se, Lake Laogai, Swordsman
 ```
 
 ---

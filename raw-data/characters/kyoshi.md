@@ -8,7 +8,8 @@ type: character
 - Name: Kyoshi
 - Nation: Earth Kingdom
 - Badge: Justice Incarnate
-- Short Description: The physically imposing and long-lived Earth Kingdom Avatar who believed that only true, uncompromising justice could bring peace, a philosophy that shaped the world for centuries.
+- Short Description: The physically imposing, legendary, and long-lived female elder Avatar of the Earth Kingdom, Kyoshi is a fierce bender, warrior, and founder of the Kyoshi Warriors and Dai Li, known for her uncompromising sense of justice and her relationship with Rangi.
+- Tags: Earth Kingdom, Avatar, Mentor, Warrior, Female, Bender, Legendary, Elder, Founder, Justice, Book Two, Kyoshi Island, Dai Li, Kyoshi Warriors, Rangi, Chin the Conqueror
 ```
 
 ## UI - EXPANDED VIEW
@@ -59,16 +60,17 @@ A legendary predecessor to Aang whose life and ruthless methods serve as a stark
   "badge": "Justice Incarnate",
   "name": "Kyoshi",
   "nation": "Earth Kingdom",
-  "shortDescription": "The physically imposing and long-lived Earth Kingdom Avatar who believed that only true, uncompromising justice could bring peace, a philosophy that shaped the world for centuries.",
+  "shortDescription": "The physically imposing, legendary, and long-lived female elder Avatar of the Earth Kingdom, Kyoshi is a fierce bender, warrior, and founder of the Kyoshi Warriors and Dai Li, known for her uncompromising sense of justice and her relationship with Rangi.",
   "image": null,
   "fullName": "Kyoshi",
-  "role": "Past Avatar",
+  "role": "Past Avatar, Mentor, Warrior, Founder, Legendary Bender",
   "titles": ["Avatar"],
   "aliases": [],
   "pronouns": "she/her",
   "ethnicity": "Air Nomad-Earth Kingdom",
   "gender": "Female",
   "age": 230,
+  "ageRange": "elder",
   "hairColor": null,
   "eyeColor": null,
   "skinColor": null,
@@ -114,7 +116,11 @@ A legendary predecessor to Aang whose life and ruthless methods serve as a stark
   },
   "roles": {
     "avatar": true,
-    "mentor": true
+    "mentor": true,
+    "warrior": true,
+    "bender": true,
+    "founder": true,
+    "legendary": true
   },
   "relationships": {
     "rangi": "Girlfriend, Firebending Master",
@@ -139,11 +145,12 @@ A legendary predecessor to Aang whose life and ruthless methods serve as a stark
     "My friend is not a diplomat. She is the failure of diplomacy.",
     "I killed Chin the Conqueror."
   ],
-  "tags": ["Earth Kingdom", "Avatar", "Mentor", "Book Two", "Kyoshi Island"],
+  "tags": ["Earth Kingdom", "Avatar", "Mentor", "Warrior", "Female", "Bender", "Legendary", "Elder", "Founder", "Justice", "Book Two", "Kyoshi Island", "Dai Li", "Kyoshi Warriors", "Rangi", "Chin the Conqueror"],
   "tagCategories": {
-    "nationTags": ["Earth Kingdom"],
-    "roleTags": ["Avatar", "Mentor"],
-    "episodeTags": ["Book Two", "Kyoshi Island"]
+    "nationTags": ["Earth Kingdom", "Kyoshi Island"],
+    "roleTags": ["Avatar", "Mentor", "Warrior", "Bender", "Founder", "Legendary"],
+    "episodeTags": ["Book Two", "Kyoshi Island"],
+    "identityTags": ["Female"]
   },
   "system": {
     "schemaVersion": "3.0",

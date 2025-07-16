@@ -8,7 +8,8 @@ type: character
 - Name: On Ji
 - Nation: Fire Nation
 - Badge: Fire Nation Student
-- Short Description: On Ji is a friendly and open-minded student at a Fire Nation school, known for her brief friendship with Aang (as Kuzon).
+- Short Description: On Ji is a friendly, kind, and open-minded teen girl and student at a Fire Nation school, known for her brief friendship and dance partnership with Aang (as Kuzon).
+- Tags: Fire Nation, Student, Teen, Girl, Nonbender, Friendly, Kind, Dance Partner, Minor Character, Book Three, The Headband, Aang, Shoji, Hide
 ```
 
 ---

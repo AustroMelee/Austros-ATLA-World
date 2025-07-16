@@ -8,7 +8,8 @@ type: character
 - Name: The Gopher
 - Nation: Earth Kingdom
 - Badge: Earth Rumble Fighter
-- Short Description: An earthbender from Gaoling, The Gopher is known for his tunneling tactics and participation in the Earth Rumble tournaments.
+- Short Description: An agile, resourceful, and comic male earthbender from Gaoling, The Gopher is known for his tunneling tactics, unique fighting style, and role as a minor antagonist and comic relief in the Earth Rumble tournaments.
+- Tags: Earth Kingdom, Earth Rumble, Fighter, Bender, Male, Comic Relief, Minor Antagonist, Book Two, The Blind Bandit
 ```
 
 ## 📖 UI - EXPANDED VIEW
