@@ -19,15 +19,6 @@ interface HomeProps {
   selectedId: string | null;
   setSelectedId: (id: string | null) => void;
   scrollContainerRef: React.RefObject<HTMLDivElement>;
-  collections: unknown[];
-  activeCollectionId: string | null;
-  activeCollectionItems: EnrichedCharacter[];
-  onSelectCollection: (id: string) => void;
-  onDeleteCollection: (id: string) => void;
-  panelOpen: boolean;
-  onClosePanel: () => void;
-  onAddItemToCollection: (collectionId: string) => void;
-  onCreateCollection: (name: string) => void;
   suggestion: string | null;
   textColor: string;
   topNation: string | null;
@@ -46,15 +37,6 @@ export function Home({
   selectedId,
   setSelectedId,
   scrollContainerRef,
-  collections: _collections,
-  activeCollectionId: _activeCollectionId,
-  activeCollectionItems: _activeCollectionItems,
-  onSelectCollection: _onSelectCollection,
-  onDeleteCollection: _onDeleteCollection,
-  panelOpen: _panelOpen,
-  onClosePanel: _onClosePanel,
-  onAddItemToCollection: _onAddItemToCollection,
-  onCreateCollection: _onCreateCollection,
   suggestion: _suggestion,
   textColor: _textColor,
   topNation: _topNation,
