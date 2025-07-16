@@ -26,7 +26,7 @@ Never use empty `catch` blocks. All errors must be logged to the console with su
 ### 🎨 Frontend UI & User Experience
 
 #### 6. Image Fallbacks
-If a character card image fails to load, the `useImageFallback` hook (located in `src/hooks/useImageFallback.ts`) intercepts the error. It provides a default placeholder image or icon, ensuring that the UI remains visually consistent and does not show broken image links.
+If a card image fails to load, the `useImageFallback` hook (located in `src/hooks/useImageFallback.ts`) intercepts the error. The hook now provides a `status` state (`'loading' | 'loaded' | 'error'`), `handleImageError`, and `handleImageLoad` callbacks, and robust fallback logic. This ensures the UI remains visually consistent and does not show broken image links, always providing a placeholder or fallback icon as needed.
 
 #### 7. Keyboard Accessibility & Focus Management
 The application prioritizes accessibility. Interactive elements like modals and expanded cards use a focus-trapping mechanism managed by the `useModalFocus.ts` hook. This ensures that keyboard focus remains within the active component. All interactive elements must be fully keyboard-navigable (Tab, Shift+Tab, Enter) and use semantic HTML with appropriate ARIA roles. See `docs/styling.md` for detailed requirements.
@@ -46,62 +46,65 @@ Modals utilize the `useModalFocus.ts` hook for focus trapping and ARIA roles for
 #### 12. Adding/Updating Images and Static Assets
 Place all new images in `public/assets/images/` and reference them using relative paths (e.g., `/assets/images/my-image.png`). Do not import image assets directly into TypeScript/TSX files, as this can interfere with Vite's optimized asset handling.
 
+#### 13. API Endpoints and Config
+All API endpoints and static resource paths are now centralized in `src/config/constants.ts` for maintainability and consistency.
+
 ---
 
 ### 🏗️ Application Architecture & State
 
-#### 13. State Persistence on Reload
+#### 14. State Persistence on Reload
 The application state, including the current search query and any expanded card IDs, is managed in-memory using React state hooks. There is no persistence layer (like `localStorage` or `sessionStorage`). A page reload will reset the application to its default initial state.
 
-#### 14. Browser History & Modal State
+#### 15. Browser History & Modal State
 The state of UI overlays like modals is not currently synchronized with the browser's history stack. This means using the browser's "back" or "forward" buttons will not close or open a modal. Navigation is managed independently of the UI overlay state.
 
-#### 15. React ErrorBoundary Behavior
+#### 16. React ErrorBoundary Behavior
 The root application is wrapped in a custom `ErrorBoundary` component (see `src/components/ErrorBoundary.tsx`). If a critical rendering error occurs in a child component, this boundary will catch it and display a user-friendly fallback UI instead of a blank page or a crashed application.
 
-#### 16. Analytics & Telemetry
+#### 17. Analytics & Telemetry
 The application is privacy-first. There are no analytics, user tracking, or telemetry scripts included in the codebase.
 
-#### 17. Internationalization (i18n) Readiness
+#### 18. Internationalization (i18n) Readiness
 All user-facing strings must be externalized from components and prepared for future internationalization. Do not hardcode user-visible text directly in the JSX. A central string management solution should be used.
 
-#### 18. Environment Variables
+#### 19. Environment Variables
 This project does not use environment variables (`.env` files) for runtime configuration. All configuration is managed via static files (e.g., `tailwind.config.js`, `vite.config.ts`) or hardcoded constants within the source code.
 
 ---
 
 ### ⚙️ Development & Maintenance
 
-#### 19. Adding a New Nation Color/Theme
+#### 20. Adding a New Nation Color/Theme
 To add a theme for a new nation, two files must be updated:
 1.  **`src/theme/nationThemes.ts`**: Add a new entry to the `nationThemeMap` object, defining the color identifiers for the new nation.
 2.  **`tailwind.config.js`**: Add the corresponding color classes (e.g., `bg-nation-new`, `border-nation-new`) to the `theme` configuration and safelist. After changes, run `npm run build:tailwind`.
 
-#### 20. Upgrading Core Dependencies
+#### 21. Upgrading Core Dependencies
 All dependencies are pinned in `package.json` for stability. To upgrade a package, manually update its version, delete `node_modules` and `package-lock.json`, and run `npm install`. Thoroughly test the application locally for breaking changes. `FlexSearch` is specifically pinned and should not be upgraded without careful verification.
 
-#### 21. Hot Module Reload (HMR) Caveats
+#### 22. Hot Module Reload (HMR) Caveats
 The project uses Vite, which provides excellent HMR for React components and most styles. However, changes to global configuration files require a manual step:
 -   **`tailwind.config.js`**: Changes require running `npm run build:tailwind` and a full page reload.
 -   **Global CSS (`custom.css`)**: Changes may require a full page reload to apply correctly.
 
-#### 22. Adding and Running Tests
+#### 23. Adding and Running Tests
 To add a new test, create a file with a `.test.ts` or `.test.tsx` suffix in the same directory as the module being tested. Use Jest and React Testing Library. To run all tests, execute `npm test`.
 
-#### 23. Performance Profiling
+#### 24. Performance Profiling
 To identify performance bottlenecks, use the React DevTools Profiler. Apply memoization techniques (`React.memo`, `useMemo`, `useCallback`) only after a clear need has been identified through profiling.
 
-#### 24. Updating or Removing Dependencies
+#### 25. Updating or Removing Dependencies
 Run `npm outdated` to check for new versions. Use `npm uninstall <package-name>` to remove unused packages and then run `npm install` to update the `package-lock.json` file. Keeping dependencies clean is a project requirement.
 
-#### 25. Creating Custom Scripts
+#### 26. Creating Custom Scripts
 New automation or utility scripts should be placed in the `scripts/` directory. Document their purpose with comments and add a corresponding command to the `"scripts"` section of `package.json` for easy execution.
 
-#### 26. Contributing Changes
+#### 27. Contributing Changes
 This project follows a trunk-based development model. Work directly on the `main` branch. Before committing, ensure all code passes local checks (`npm run lint`, `npm run type-check`). There are no pull requests or feature branches.
 
-#### 27. Experimenting with AI-driven Changes
+#### 28. Experimenting with AI-driven Changes
 To safely test changes, especially those generated by AI, follow the sandbox workflow detailed in `docs/sandbox_env.md`. All significant changes must be validated in a sandbox environment before being committed to the main branch.
 
-#### 28. Getting Help or Reporting a Bug
+#### 29. Getting Help or Reporting a Bug
 First, consult this FAQ and other project documentation. If the issue is not covered, add a new, concise entry to this FAQ or document the bug in the designated project management tool.

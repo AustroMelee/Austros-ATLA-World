@@ -6,20 +6,24 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ## 1. HomeContainer.tsx: The Central Orchestrator
 
-- **Data Fetching:** On initial load, fetches `public/enriched-data.json` (the only data file used by the app).
+- **Data Fetching:** On initial load, fetches `public/enriched-data.json` (the only data file used by the app) using the `useEnrichedData` hook.
 - **State Management:** Manages the user's search query and the `expandedCardId` for modal views.
 - **Search Logic:** Calls the `useSearch` hook, passing the full dataset and the current query.
 - **Prop Drilling:** Passes the final search results and state handlers down to the presentational `<Home />` component.
 
 ---
 
-## 2. Custom Hooks: useSearch
+## 2. Custom Hooks: useSearch, useEnrichedData, useImageFallback
 
 - **`useSearch.ts`:**
   - Receives the complete array of data and the search query.
   - Uses a preprocessor to create a `searchBlob` for each record (combining all searchable fields).
   - Builds a FlexSearch index in-browser, memoized for performance.
   - Returns a filtered array of results for the UI.
+- **`useEnrichedData.ts`:**
+  - Fetches and manages the enriched data from the API endpoint, with robust error handling and loading state.
+- **`useImageFallback.ts`:**
+  - Manages image loading, error fallback, and status for entity images, providing a robust fallback for missing or broken images.
 
 ---
 
@@ -39,16 +43,11 @@ The frontend is organized around a clear separation of concerns, with a central 
 - **`ItemCard.tsx`:**
   - Renders both the collapsed grid card and the full-screen expanded modal view.
   - Expanded view is a modal overlay, fully responsive and accessible.
+  - Uses the `useImageFallback` hook for robust image handling.
 
 ---
 
-## 5. Disabled/Legacy Features
-
-- **FilterSidebar, CollectionsSidebar, etc.:** These components are currently disabled. The old logic was removed during the search refactor. To re-enable, restore the original export in the component file.
-
----
-
-## 6. Data Structure & Pipeline Adherence
+## 5. Data Structure & Pipeline Adherence
 
 - The frontend relies on `public/enriched-data.json` having all top-level fields required by the UI (e.g., `id`, `name`, `image`, `role`, `expandedView`).
 - The data pipeline is responsible for promoting these fields from the raw markdown data.
@@ -56,7 +55,7 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
-## 7. DOM & HTML Structure
+## 6. DOM & HTML Structure
 
 The application renders a modern, accessible, and responsive DOM structure, optimized for clarity and maintainability. The main elements and their roles are as follows:
 

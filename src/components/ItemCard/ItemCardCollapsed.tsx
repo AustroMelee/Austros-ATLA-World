@@ -5,6 +5,7 @@ import NationIcon from '../NationIcon/NationIcon';
 import { toTitleCase, getInitials } from '../../utils/stringUtils';
 import { useImageFallback } from '../../hooks/useImageFallback';
 import { fallbackImages, universalFallback } from './imageFallbacks';
+import { getField } from '../../utils/data';
 
 interface MatchedField {
   field: string;
@@ -17,12 +18,6 @@ interface ItemCardCollapsedProps {
   matchedFields?: MatchedField[];
 }
 
-function getField<T = string>(item: EnrichedEntity, key: string): T | undefined {
-  // @ts-expect-error: dynamic access
-  if (item[key] !== undefined) return item[key];
-  if (item.metadata && item.metadata[key] !== undefined) return item.metadata[key] as T;
-  return undefined;
-}
 
 function formatFieldName(field: string) {
   if (field === 'global') return 'Content';
@@ -36,7 +31,7 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields }: Ite
   const slug = getField(item, 'slug');
   const image = getField(item, 'image');
   const slugKey = (slug || item.id) as string;
-  const { imgSrc, handleImageError, setImgSrc } = useImageFallback(slugKey, {
+  const { imgSrc, status, handleImageError, handleImageLoad, setImgSrc } = useImageFallback(slugKey, {
     [slugKey]: fallbackImages[slugKey] || fallbackImages[item.id] || universalFallback,
   });
 
@@ -61,18 +56,19 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields }: Ite
         <div className="pb-1.5 pt-2 flex flex-col min-h-[144px]">
           <div className="mb-1.5 flex justify-center w-full px-1.5">
             <div className="w-full aspect-square max-w-[85%] max-h-[65%] mx-auto bg-background rounded-xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
-              {imgSrc ? (
+              {status === 'error' || !imgSrc ? (
+                <span className="font-bold text-subtle text-[18px]">
+                  {iconText}
+                </span>
+              ) : (
                 <img
                   src={imgSrc}
                   alt={item.name}
                   className="w-full h-full rounded-xl object-cover border-none"
                   draggable={false}
                   onError={handleImageError}
+                  onLoad={handleImageLoad}
                 />
-              ) : (
-                <span className="font-bold text-subtle text-[18px]">
-                  {iconText}
-                </span>
               )}
             </div>
           </div>

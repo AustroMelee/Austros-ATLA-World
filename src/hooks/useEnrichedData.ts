@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { EnrichedEntity } from '../search/types';
+import { API_ENDPOINTS } from '../config/constants';
 
 export interface UseEnrichedDataResult {
   data: EnrichedEntity[];
@@ -15,7 +16,7 @@ export function useEnrichedData(): UseEnrichedDataResult {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/enriched-data.json');
+        const response = await fetch(API_ENDPOINTS.ENRICHED_DATA);
         if (!response.ok) throw new Error('Failed to fetch data');
         const json: EnrichedEntity[] = await response.json();
         setData(json);
@@ -32,4 +33,4 @@ export function useEnrichedData(): UseEnrichedDataResult {
   return { data, loading, error };
 }
 
-export default useEnrichedData; 
+export default useEnrichedData;

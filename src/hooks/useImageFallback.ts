@@ -6,25 +6,40 @@ import { useState, useEffect, useCallback } from 'react';
  * @param iconText Fallback initials
  * @returns { imgSrc, handleImageError, resetImage }
  */
-export function useImageFallback(slug?: string, imageFallbacks: Record<string, string> = {}) {
-  const [imgSrc, setImgSrc] = useState<string | undefined>(slug ? `/assets/images/${slug}.jpg` : undefined);
+export function useImageFallback(
+  slug?: string,
+  imageFallbacks: Record<string, string> = {},
+) {
+  const [imgSrc, setImgSrc] = useState<string | undefined>(
+    slug ? `/assets/images/${slug}.jpg` : undefined,
+  );
+  const [status, setStatus] = useState<'loading' | 'loaded' | 'error'>(
+    slug ? 'loading' : 'error',
+  );
 
   useEffect(() => {
     setImgSrc(slug ? `/assets/images/${slug}.jpg` : undefined);
+    setStatus(slug ? 'loading' : 'error');
   }, [slug]);
 
-  const handleImageError = useCallback((e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    if (!slug) return;
+  const handleImageLoad = useCallback(() => {
+    setStatus('loaded');
+  }, []);
+
+  const handleImageError = useCallback(() => {
+    if (!slug) {
+      setStatus('error');
+      setImgSrc(undefined);
+      return;
+    }
     if (imgSrc && imageFallbacks[slug] && !imgSrc.endsWith(imageFallbacks[slug])) {
       setImgSrc(`/assets/images/${imageFallbacks[slug]}`);
+      setStatus('loading');
     } else {
-      // fallback to initials if all fail
-      const parent = (e.target as HTMLImageElement).parentElement;
-      if (parent) {
-        parent.innerHTML = `<span class='font-bold text-subtle text-4xl'>?</span>`;
-      }
+      setImgSrc(undefined);
+      setStatus('error');
     }
-  }, [imgSrc, slug, imageFallbacks]);
+  }, [slug, imgSrc, imageFallbacks]);
 
-  return { imgSrc, handleImageError, setImgSrc };
+  return { imgSrc, status, handleImageError, handleImageLoad, setImgSrc };
 }

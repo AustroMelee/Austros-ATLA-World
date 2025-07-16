@@ -3,18 +3,18 @@ import { preprocessEntities } from './preprocessor';
 import type { EnrichedEntity, IndexedEntity } from './types';
 
 export interface BuiltIndex {
-  index: FlexSearch.Document<IndexedEntity>;
+  index: FlexSearch.Document<IndexedEntity, true>;
   entityMap: Map<string, EnrichedEntity>;
 }
 
 export function buildIndex(docs: EnrichedEntity[]): BuiltIndex {
   const indexed = preprocessEntities(docs);
-  const index = new FlexSearch.Document<IndexedEntity>({
-    doc: {
+  const index = new FlexSearch.Document<IndexedEntity, true>({
+    document: {
       id: 'id',
-      field: ['name', 'searchBlob']
+      index: ['name', 'searchBlob'],
+      store: true,
     },
-    store: true,
     tokenize: 'forward',
   });
   indexed.forEach(doc => index.add(doc));
@@ -22,4 +22,4 @@ export function buildIndex(docs: EnrichedEntity[]): BuiltIndex {
   const entityMap = new Map(docs.map(e => [e.id, e]));
 
   return { index, entityMap };
-} 
+}
