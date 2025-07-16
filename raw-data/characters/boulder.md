@@ -74,7 +74,8 @@ A comic relief and supporting fighter whose journey from showman to soldier high
   "nativeLocation": "Gaoling, Earth Kingdom",
   "currentLocation": "Earth Kingdom",
   "socioeconomicStanding": "commoner",
-  "languagesSpoken": ["Standard Language"]
+  "languagesSpoken": ["Standard Language"],
+  "image": "the-boulder.jpg"
 }
 ```
 

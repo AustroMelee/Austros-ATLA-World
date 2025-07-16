@@ -55,62 +55,62 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields }: Ite
       tabIndex={0}
       aria-label={`Expand details for ${item.name}`}
       onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onExpand(); }}
-      className="cursor-pointer"
+      className="cursor-pointer w-[113px]"
     >
       <ThemedCard nation={nation}>
-        <div className="pb-2 pt-3 flex flex-col min-h-[240px]">
-          <div className="mb-2 flex justify-center w-full px-2">
-            <div className="w-full aspect-square max-w-[80%] max-h-[60%] mx-auto bg-background rounded-2xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
+        <div className="pb-1.5 pt-2 flex flex-col min-h-[144px]">
+          <div className="mb-1.5 flex justify-center w-full px-1.5">
+            <div className="w-full aspect-square max-w-[85%] max-h-[65%] mx-auto bg-background rounded-xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
               {imgSrc ? (
                 <img
                   src={imgSrc}
                   alt={item.name}
-                  className="w-full h-full rounded-2xl object-cover border-none"
+                  className="w-full h-full rounded-xl object-cover border-none"
                   draggable={false}
                   onError={handleImageError}
                 />
               ) : (
-                <span className="font-bold text-subtle text-2xl">
+                <span className="font-bold text-subtle text-[18px]">
                   {iconText}
                 </span>
               )}
             </div>
           </div>
           {hasRole && (
-            <div className="flex justify-center -mt-6 z-10">
-              <div className="bg-neutral-900/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-center p-2 border border-white/20 shadow-lg">
-                <span className="text-white text-xs font-bold leading-none">
+            <div className="flex justify-center -mt-3.5 z-10">
+              <div className="bg-neutral-900/80 backdrop-blur-sm rounded flex items-center justify-center text-center p-1.5 border border-white/20 shadow-lg">
+                <span className="text-white text-[12px] font-bold leading-none">
                   {role}
                 </span>
               </div>
             </div>
           )}
           {matchedFields && matchedFields.length > 0 && (
-            <div className="mt-2 flex flex-wrap justify-center gap-1">
+            <div className="mt-1.5 flex flex-wrap justify-center gap-1">
               {matchedFields.map((match, index) => (
                 <span
                   key={`${match.field}-${index}`}
-                  className="bg-neutral-700 text-neutral-300 text-xs font-medium px-2 py-0.5 rounded-full"
+                  className="bg-neutral-700 text-neutral-300 text-[10px] font-medium px-1.5 py-0.5 rounded-full"
                 >
                   Matched: {formatFieldName(match.field)}
                 </span>
               ))}
             </div>
           )}
-          <div className="w-full mt-auto px-2 pt-4">
+          <div className="w-full mt-auto px-1.5 pt-2.5">
             <div className="flex items-center justify-start gap-1">
-              <h3 className="font-bold text-xl text-white whitespace-normal line-clamp-2">
+              <h3 className="font-bold text-lg text-white whitespace-normal line-clamp-2">
                 {toTitleCase(item.name)}
               </h3>
               {nation && (
                 <NationIcon
                   nation={nation}
-                  size={12}
+                  size={8}
                   className="align-middle flex-shrink-0"
                 />
               )}
             </div>
-            <p className="text-xs text-neutral-400 font-bold mt-1">Character</p>
+            <p className="text-[12px] text-neutral-400 font-bold mt-1">Character</p>
           </div>
         </div>
       </ThemedCard>

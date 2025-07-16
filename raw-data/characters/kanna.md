@@ -14,6 +14,7 @@ type: character
 
 ## UI - EXPANDED VIEW
 
+```md
 ### 📖 Overview
 
 Kanna, known as Gran Gran, is Katara and Sokka's wise and caring grandmother. A nonbender, she is the oldest resident of Wolf Cove and a respected elder, midwife, and healer in the Southern Water Tribe.
@@ -52,6 +53,7 @@ Born in the Northern Water Tribe, Kanna fled to the South to escape an arranged 
 - Respected elder and midwife of the Southern Water Tribe.
 - Raised Katara and Sokka after their mother's death.
 - Escaped an arranged marriage and started a new life in the South.
+```
 
 ---
 ```json
@@ -152,3 +154,4 @@ Born in the Northern Water Tribe, Kanna fled to the South to escape an arranged 
     "flags": []
   }
 }
+```

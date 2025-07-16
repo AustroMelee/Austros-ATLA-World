@@ -2151,6 +2151,7 @@
       "badgermole tattoo",
       "pet crococat"
     ],
+    "image": "the-boulder.jpg",
     "nation": "Earth Kingdom",
     "role": "Earth Rumble Fighter",
     "gender": "male",
@@ -3277,6 +3278,187 @@
     }
   },
   {
+    "id": "fire-nation-man",
+    "name": "Fire Nation Man",
+    "summary": "",
+    "type": "character",
+    "slug": "fire-nation-man",
+    "tags": [
+      "performer",
+      "comic relief",
+      "earthbender",
+      "confident",
+      "Earth Kingdom",
+      "Earth Rumble",
+      "Gaoling",
+      "stage villain"
+    ],
+    "nation": "Earth Kingdom",
+    "role": "Earth Rumble Fighter",
+    "gender": "male",
+    "species": "human",
+    "nationality": "Earth Kingdom",
+    "ethnicity": "Earth Kingdom",
+    "titles": [],
+    "expandedView": "### 📖 Overview\r\n\r\nAn immigrant from the Si Wong Desert, \"Fire Nation Man\" is a professional earthbender who fights in the Earth Rumble tournaments. His stage persona—a red cloak, Fire Nation flag, and singing the Fire Nation anthem—is a deliberate act to portray himself as a villain, or \"heel,\" to rile up the audience and amplify the drama.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Competed in Earth Rumble VI as a theatrical stage villain.\r\n- Was quickly defeated by both The Boulder and Toph Beifong.\r\n- Demonstrated a commitment to showmanship over actual victory.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor character serving as comic relief and establishing the entertainment-focused world of the Gaoling earthbending circuit.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Xin Fu** – His promoter and the organizer of the Earth Rumble tournament.\r\n- **The Boulder** – Rival who defeated him in the ring.\r\n- **Toph Beifong** – Rival who also easily defeated him.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Dramatic and thoroughly committed to his performance.\r\n- A showman at heart, prioritizing entertainment over winning.\r\n- Confident in his stage persona, despite his lack of fighting prowess.\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"Fire Lord, my flame burns for thee!\"",
+    "metadata": {
+      "shortdescription": "A professional earthbender whose stage persona is a Fire Nation heel, playing the villain to excite the crowd at Earth Rumble tournaments.",
+      "slug": "fire-nation-man",
+      "fullName": "Fire Nation Man",
+      "aliases": [],
+      "ageChronological": null,
+      "ageBiological": null,
+      "ageRange": "adult",
+      "birthDate": null,
+      "deathDate": null,
+      "nativeLocation": "Si Wong Desert, Earth Kingdom",
+      "socioeconomicStanding": "commoner",
+      "languagesSpoken": [
+        "Standard Language"
+      ],
+      "isBender": true,
+      "bendingElement": "earth",
+      "bendingProficiency": "proficient",
+      "advancedBending": [],
+      "nonBendingSkills": [
+        "showmanship"
+      ],
+      "uniqueTechniques": [
+        "dirt-based attacks"
+      ],
+      "powerMetrics": {
+        "rawPower": 4,
+        "technicalSkill": 3,
+        "strategicAptitude": 2
+      },
+      "combatStyle": "showy",
+      "vulnerabilities": [
+        "stage persona limits tactics"
+      ],
+      "isLegendaryFighter": false,
+      "notableFeats": [
+        "Professional earthbending fighter in Earth Rumble tournaments.",
+        "Played the heel persona to excite the crowd.",
+        "Quickly defeated by The Boulder and Toph."
+      ],
+      "currentAffiliations": [
+        "Earth Rumble"
+      ],
+      "pastAffiliations": [],
+      "allegianceHistory": [],
+      "isRoyalty": false,
+      "politicalPower": "none",
+      "politicalLeanings": [
+        "performer"
+      ],
+      "moralAlignment": "chaotic neutral",
+      "moralCompassDrift": false,
+      "narrativeFunction": "comic relief",
+      "screenTimeLevel": "minor",
+      "firstAppearance": "The Blind Bandit",
+      "finalAppearance": "The Blind Bandit",
+      "deathStatus": "alive",
+      "causeOfDeath": null,
+      "narrativeArcs": [],
+      "keyTropes": [
+        "Heel Performer",
+        "Comic Relief"
+      ],
+      "relationships": [
+        {
+          "characterId": "xin-fu",
+          "relationshipType": "promoter",
+          "status": "neutral",
+          "history": "Fought in tournaments promoted by Xin Fu."
+        },
+        {
+          "characterId": "the-boulder",
+          "relationshipType": "rival",
+          "status": "resolved",
+          "history": "Quickly defeated by The Boulder in Earth Rumble VI."
+        },
+        {
+          "characterId": "toph-beifong",
+          "relationshipType": "rival",
+          "status": "resolved",
+          "history": "Quickly defeated by Toph in Earth Rumble VI."
+        }
+      ],
+      "groupMemberships": [
+        {
+          "groupId": "earth-rumble",
+          "roleInGroup": "performer"
+        }
+      ],
+      "petCompanions": [],
+      "positiveTraits": [
+        "dramatic",
+        "showy",
+        "confident"
+      ],
+      "negativeTraits": [
+        "over-the-top",
+        "ineffective fighter"
+      ],
+      "motivations": [
+        "entertaining the crowd"
+      ],
+      "fears": [
+        "being unmemorable"
+      ],
+      "internalConflicts": [],
+      "emotionalWounds": [],
+      "copingMechanisms": [
+        "performing for the audience"
+      ],
+      "worldview": "Winning isn't everything—sometimes you just need to put on a good show.",
+      "heightEstimate": "Average",
+      "notableFeatures": [
+        "Fire Nation costume",
+        "red cloak"
+      ],
+      "outfitStyles": [
+        "theatrical earthbender attire",
+        "Fire Nation flag"
+      ],
+      "signaturePossessions": [],
+      "ageProgression": false,
+      "voiceActor": [],
+      "archetype": "The Performer",
+      "thematicKeywords": [
+        "showmanship",
+        "entertainment",
+        "performance",
+        "villainy",
+        "earthbending"
+      ],
+      "tagCategories": {
+        "narrativeTags": [
+          "performer",
+          "comic relief"
+        ],
+        "combatTags": [
+          "earthbender"
+        ],
+        "relationshipTags": [],
+        "emotionTags": [
+          "confident"
+        ],
+        "politicalTags": [],
+        "arcTags": [],
+        "worldTags": [
+          "Earth Kingdom",
+          "Earth Rumble",
+          "Gaoling"
+        ],
+        "triviaTags": [
+          "stage villain"
+        ]
+      },
+      "__type": "character"
+    }
+  },
+  {
     "id": "fong",
     "name": "Fong",
     "summary": "",
@@ -3749,6 +3931,234 @@
         "createdBy": "AI Assistant",
         "createdAt": "2024-06-09T00:00:00Z",
         "flags": []
+      },
+      "__type": "character"
+    }
+  },
+  {
+    "id": "hahn",
+    "name": "Hahn",
+    "summary": "",
+    "type": "character",
+    "slug": "hahn",
+    "tags": [
+      "minor antagonist",
+      "comic relief",
+      "status-seeker",
+      "warrior",
+      "rival of Sokka",
+      "betrothed to Yue",
+      "arrogant",
+      "insecure",
+      "siege of the north",
+      "arranged marriage",
+      "Northern Water Tribe",
+      "defeated by Zhao",
+      "most handsome warrior (self-proclaimed)"
+    ],
+    "nation": "Northern Water Tribe",
+    "role": "NWT Warrior",
+    "gender": "male",
+    "species": "human",
+    "nationality": "Northern Water Tribe",
+    "ethnicity": "Water Tribe",
+    "titles": [
+      "Warrior"
+    ],
+    "expandedView": "### 📖 Overview\r\n\r\nHahn is a career-minded, ambitious young warrior of the Northern Water Tribe. Betrothed to Princess Yue, he is known for his arrogance, bravado, and desire to impress his superiors. Despite his high status and confidence, his skills are ultimately shown to be less impressive than he believes, especially during the Siege of the North.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Chosen by Chief Arnook to lead a secret attack on Admiral Zhao during the Siege of the North.\r\n- Betrothed to Princess Yue in an arranged marriage that never took place.\r\n- Known for his bravado and attempts to gain favor with the tribe's leadership.\r\n- Defeated and humiliated by Admiral Zhao during his mission.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor antagonist and comic relief, Hahn's overconfidence and social climbing serve as a foil to Sokka and highlight the political dynamics of the Northern Water Tribe.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Princess Yue** – Arranged fiancée, relationship never realized.\r\n- **Chief Arnook** – Future father-in-law, arranged the betrothal.\r\n- **Sokka** – Rival, often the target of Hahn's arrogance.\r\n- **Admiral Zhao** – Enemy, defeated Hahn during the siege.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Ambitious and egotistical.\r\n- Confident, but ultimately insecure.\r\n- Focused on status and recognition.\r\n- Not a bender, but skilled with weapons.\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"Let me tell you, Sokka, I've courted a lot of girls, but Yue is the finest and she comes with the most perks. [...] I mean, Yue's nice and everything, but the points I'll gain with the chief aren't bad either.\"",
+    "metadata": {
+      "badge": "Northern Warrior",
+      "shortdescription": "Hahn is a young warrior of the Northern Water Tribe, betrothed to Princess Yue and known for his arrogance and bravado during the Siege of the North.",
+      "slug": "hahn",
+      "fullName": "Hahn",
+      "aliases": [],
+      "ageChronological": 17,
+      "ageBiological": 17,
+      "ageRange": "teen",
+      "birthDate": null,
+      "deathDate": null,
+      "nativeLocation": "Northern Water Tribe",
+      "socioeconomicStanding": "warrior class",
+      "languagesSpoken": [
+        "Standard Language"
+      ],
+      "isBender": false,
+      "bendingElement": null,
+      "bendingProficiency": null,
+      "advancedBending": [],
+      "nonBendingSkills": [
+        "weapon mastery",
+        "leadership",
+        "combat tactics"
+      ],
+      "uniqueTechniques": [
+        "Water Tribe weaponry"
+      ],
+      "powerMetrics": {
+        "rawPower": 4,
+        "technicalSkill": 3,
+        "strategicAptitude": 2
+      },
+      "combatStyle": "direct",
+      "vulnerabilities": [
+        "overconfidence",
+        "inexperience in real battle"
+      ],
+      "isLegendaryFighter": false,
+      "notableFeats": [
+        "Chosen to lead a secret attack on Admiral Zhao during the Siege of the North.",
+        "Respected as a warrior among the Northern Water Tribe.",
+        "Courted several girls before his engagement to Yue."
+      ],
+      "currentAffiliations": [
+        "Northern Water Tribe"
+      ],
+      "pastAffiliations": [],
+      "allegianceHistory": [],
+      "isRoyalty": false,
+      "politicalPower": "none",
+      "politicalLeanings": [
+        "status-seeking",
+        "traditionalist"
+      ],
+      "moralAlignment": "neutral selfish",
+      "moralCompassDrift": false,
+      "narrativeFunction": "minor antagonist, comic relief",
+      "screenTimeLevel": "minor",
+      "firstAppearance": "The Siege of the North, Part 1",
+      "finalAppearance": "The Siege of the North, Part 2",
+      "deathStatus": "alive",
+      "causeOfDeath": null,
+      "narrativeArcs": [
+        {
+          "arcType": "status-seeking",
+          "status": "completed",
+          "summary": "Attempts to gain status through betrothal and military action, ultimately fails."
+        }
+      ],
+      "keyTropes": [
+        "The Braggart",
+        "Comic Relief",
+        "Arranged Marriage"
+      ],
+      "relationships": [
+        {
+          "characterId": "yue",
+          "relationshipType": "arranged betrothal",
+          "status": "failed",
+          "history": "Betrothed to Yue by Chief Arnook, but the marriage never took place."
+        },
+        {
+          "characterId": "arnook",
+          "relationshipType": "future father-in-law",
+          "status": "neutral",
+          "history": "Arranged the betrothal to Yue."
+        },
+        {
+          "characterId": "sokka",
+          "relationshipType": "rival",
+          "status": "antagonistic",
+          "history": "Often the target of Hahn's arrogance and rivalry."
+        },
+        {
+          "characterId": "zhao",
+          "relationshipType": "enemy",
+          "status": "defeated",
+          "history": "Defeated and humiliated Hahn during the siege."
+        }
+      ],
+      "groupMemberships": [
+        {
+          "groupId": "northern-water-tribe",
+          "roleInGroup": "warrior"
+        }
+      ],
+      "petCompanions": [],
+      "positiveTraits": [
+        "ambitious",
+        "confident",
+        "determined"
+      ],
+      "negativeTraits": [
+        "arrogant",
+        "egotistical",
+        "insecure",
+        "status-obsessed"
+      ],
+      "motivations": [
+        "gain status",
+        "impress superiors",
+        "marry into power"
+      ],
+      "fears": [
+        "failure",
+        "humiliation",
+        "being overlooked"
+      ],
+      "internalConflicts": [
+        "confidence vs. insecurity"
+      ],
+      "emotionalWounds": [
+        "public defeat by Zhao"
+      ],
+      "copingMechanisms": [
+        "bravado",
+        "boasting"
+      ],
+      "worldview": "Believes that status and recognition are the keys to success.",
+      "heightEstimate": "Average",
+      "notableFeatures": [
+        "Black hair",
+        "Light blue eyes"
+      ],
+      "outfitStyles": [
+        "Northern Water Tribe warrior attire"
+      ],
+      "signaturePossessions": [
+        "Water Tribe weapons"
+      ],
+      "ageProgression": false,
+      "voiceActor": [
+        "Ben Diskin"
+      ],
+      "archetype": "The Braggart",
+      "thematicKeywords": [
+        "status",
+        "ambition",
+        "failure",
+        "recognition",
+        "warrior culture",
+        "arranged marriage"
+      ],
+      "tagCategories": {
+        "narrativeTags": [
+          "minor antagonist",
+          "comic relief",
+          "status-seeker"
+        ],
+        "combatTags": [
+          "warrior"
+        ],
+        "relationshipTags": [
+          "rival of Sokka",
+          "betrothed to Yue"
+        ],
+        "emotionTags": [
+          "arrogant",
+          "insecure"
+        ],
+        "politicalTags": [],
+        "arcTags": [
+          "siege of the north",
+          "arranged marriage"
+        ],
+        "worldTags": [
+          "Northern Water Tribe"
+        ],
+        "triviaTags": [
+          "defeated by Zhao",
+          "most handsome warrior (self-proclaimed)"
+        ]
       },
       "__type": "character"
     }
@@ -6757,6 +7167,276 @@
     }
   },
   {
+    "id": "joo-dee",
+    "name": "Joo Dee",
+    "summary": "",
+    "type": "character",
+    "slug": "joo-dee",
+    "tags": [
+      "E",
+      "a",
+      "r",
+      "t",
+      "h",
+      " ",
+      "K",
+      "i",
+      "n",
+      "g",
+      "d",
+      "o",
+      "m",
+      ",",
+      "B",
+      "S",
+      "e",
+      "T",
+      "u",
+      "G",
+      "c",
+      "F",
+      "l",
+      "N",
+      "b",
+      "k",
+      "w",
+      "C",
+      "y",
+      "f",
+      "W",
+      "s",
+      "D",
+      "L",
+      "A",
+      "z",
+      "comic relief",
+      "bureaucratic foil",
+      "brainwashed",
+      "servant of Dai Li",
+      "subordinate to Azula",
+      "guide to Team Avatar",
+      "cheerful",
+      "mechanical",
+      "Ba Sing Se bureaucracy",
+      "city of walls and secrets",
+      "brainwashing",
+      "Earth Kingdom",
+      "Ba Sing Se",
+      "multiple Joo Dees",
+      "perpetual smile"
+    ],
+    "nation": "Earth Kingdom",
+    "role": "Cultural Guide",
+    "gender": "female",
+    "species": "human",
+    "nationality": "Earth Kingdom",
+    "ethnicity": "Earth Kingdom",
+    "titles": [],
+    "expandedView": "### 📖 Overview\r\n\r\nJoo Dee is the ever-smiling, brainwashed tour guide and bureaucrat of Ba Sing Se. She was programmed by the Dai Li to keep visitors compliant and neutralize outside influences, serving as both a guide and later as Supreme Bureaucratic Administrator.\r\n\r\n### 🧩 Role in the Story\r\n\r\nJoo Dee was one of a number of public servants in Ba Sing Se using the same name who had been brainwashed by the Dai Li to be a guide for important visitors to the city. Her robotic, cheery demeanor, mechanical mannerisms, and tendency to hold the party line were all the result of brainwashing. Joo Dee once served as a caretaker and tour guide for Team Avatar after their arrival in the city, and later as Supreme Bureaucratic Administrator under Azula. Her primary purpose was to neutralize unwanted outside influences and maintain the city's official narrative.\r\n\r\n### 🤝 Relationships\r\n\r\n- Dai Li: Controllers\r\n- Azula: Superior\r\n- Team Avatar: Charges\r\n- Fire Nation: Ally\r\n- Long Feng: Secondary affiliation\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Cheerful\r\n- Compliant\r\n- Mechanical\r\n- Diplomatic\r\n- Calm\r\n- Controlled\r\n\r\n### 💬 Quotes\r\n\r\n> \"You're in Ba Sing Se now. Everyone is safe here.\"\r\n> — Joo Dee\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Served as tour guide and caretaker for Team Avatar in Ba Sing Se.\r\n- Maintained composure and compliance under Dai Li brainwashing.\r\n- Appointed Supreme Bureaucratic Administrator by Azula.",
+    "metadata": {
+      "badge": "Ba Sing Se Guide",
+      "shortdescription": "Joo Dee is the ever-smiling, eerily polite, and brainwashed female nonbender who serves as a government-appointed tour guide and bureaucrat for visitors to Ba Sing Se, maintaining order under the Dai Li and Azula.",
+      "slug": "joo-dee",
+      "fullName": "Joo Dee",
+      "aliases": [],
+      "ageChronological": null,
+      "ageBiological": null,
+      "ageRange": "adult",
+      "birthDate": null,
+      "deathDate": null,
+      "nativeLocation": "Ba Sing Se",
+      "socioeconomicStanding": "bureaucrat",
+      "languagesSpoken": [
+        "Standard Language"
+      ],
+      "isBender": false,
+      "bendingElement": null,
+      "bendingProficiency": null,
+      "advancedBending": [],
+      "nonBendingSkills": [
+        "diplomacy",
+        "protocol",
+        "public relations",
+        "compliance"
+      ],
+      "uniqueTechniques": [
+        "bureaucratic efficiency"
+      ],
+      "powerMetrics": {
+        "rawPower": 2,
+        "technicalSkill": 4,
+        "strategicAptitude": 3
+      },
+      "combatStyle": "none",
+      "vulnerabilities": [
+        "brainwashing",
+        "lack of autonomy"
+      ],
+      "isLegendaryFighter": false,
+      "notableFeats": [
+        "Served as tour guide and caretaker for Team Avatar in Ba Sing Se.",
+        "Maintained composure and compliance under Dai Li brainwashing.",
+        "Appointed Supreme Bureaucratic Administrator by Azula."
+      ],
+      "currentAffiliations": [
+        "Dai Li",
+        "Ba Sing Se"
+      ],
+      "pastAffiliations": [
+        "Fire Nation (under Azula)",
+        "Long Feng"
+      ],
+      "allegianceHistory": [],
+      "isRoyalty": false,
+      "politicalPower": "bureaucratic",
+      "politicalLeanings": [
+        "compliance",
+        "order"
+      ],
+      "moralAlignment": "lawful neutral",
+      "moralCompassDrift": true,
+      "narrativeFunction": "comic relief, bureaucratic foil",
+      "screenTimeLevel": "minor",
+      "firstAppearance": "City of Walls and Secrets",
+      "finalAppearance": "Going Home Again",
+      "deathStatus": "alive",
+      "causeOfDeath": null,
+      "narrativeArcs": [
+        {
+          "arcType": "compliance",
+          "status": "ongoing",
+          "summary": "Maintains order and compliance in Ba Sing Se under the Dai Li and Azula."
+        }
+      ],
+      "keyTropes": [
+        "The Brainwashed",
+        "The Bureaucrat",
+        "Stepford Smiler"
+      ],
+      "relationships": [
+        {
+          "characterId": "dai-li",
+          "relationshipType": "controller",
+          "status": "dominant",
+          "history": "Brainwashed and controlled by the Dai Li."
+        },
+        {
+          "characterId": "azula",
+          "relationshipType": "superior",
+          "status": "subordinate",
+          "history": "Served as Supreme Bureaucratic Administrator under Azula."
+        },
+        {
+          "characterId": "team-avatar",
+          "relationshipType": "charges",
+          "status": "neutral",
+          "history": "Served as tour guide and caretaker for Team Avatar."
+        },
+        {
+          "characterId": "long-feng",
+          "relationshipType": "secondary affiliation",
+          "status": "past",
+          "history": "Worked under Long Feng's regime before Azula's takeover."
+        }
+      ],
+      "groupMemberships": [
+        {
+          "groupId": "ba-sing-se-bureaucracy",
+          "roleInGroup": "guide"
+        }
+      ],
+      "petCompanions": [],
+      "positiveTraits": [
+        "cheerful",
+        "compliant",
+        "diplomatic",
+        "calm"
+      ],
+      "negativeTraits": [
+        "mechanical",
+        "emotionally distant",
+        "lacks autonomy"
+      ],
+      "motivations": [
+        "maintain order",
+        "comply with authority"
+      ],
+      "fears": [
+        "displeasing superiors",
+        "chaos"
+      ],
+      "internalConflicts": [
+        "obedience vs. autonomy"
+      ],
+      "emotionalWounds": [
+        "brainwashing by Dai Li"
+      ],
+      "copingMechanisms": [
+        "smiling",
+        "repeating official lines"
+      ],
+      "worldview": "Order and compliance are the highest virtues.",
+      "heightEstimate": "Average",
+      "notableFeatures": [
+        "Black hair",
+        "Grey eyes",
+        "Light tan skin",
+        "perpetual smile"
+      ],
+      "outfitStyles": [
+        "Ba Sing Se bureaucrat attire"
+      ],
+      "signaturePossessions": [],
+      "ageProgression": false,
+      "voiceActor": [
+        "Lauren Tom (ATLA)",
+        "Suzie Yeung (Quest for Balance)"
+      ],
+      "archetype": "The Brainwashed Bureaucrat",
+      "thematicKeywords": [
+        "compliance",
+        "order",
+        "brainwashing",
+        "bureaucracy",
+        "control",
+        "facade"
+      ],
+      "tagCategories": {
+        "narrativeTags": [
+          "comic relief",
+          "bureaucratic foil",
+          "brainwashed"
+        ],
+        "combatTags": [],
+        "relationshipTags": [
+          "servant of Dai Li",
+          "subordinate to Azula",
+          "guide to Team Avatar"
+        ],
+        "emotionTags": [
+          "cheerful",
+          "mechanical"
+        ],
+        "politicalTags": [
+          "Ba Sing Se bureaucracy"
+        ],
+        "arcTags": [
+          "city of walls and secrets",
+          "brainwashing"
+        ],
+        "worldTags": [
+          "Earth Kingdom",
+          "Ba Sing Se"
+        ],
+        "triviaTags": [
+          "multiple Joo Dees",
+          "perpetual smile"
+        ]
+      },
+      "__type": "character"
+    }
+  },
+  {
     "id": "june",
     "name": "June",
     "summary": "",
@@ -7095,6 +7775,165 @@
       "isSuggestedInXContext": [],
       "__type": "character",
       "slug": "june"
+    }
+  },
+  {
+    "id": "kanna",
+    "name": "Kanna",
+    "summary": "Kanna, affectionately known as Gran Gran, is Katara and Sokka's wise and loving grandmother in the Southern Water Tribe.",
+    "type": "character",
+    "slug": "kanna",
+    "tags": [
+      "Southern Water Tribe",
+      "Northern Water Tribe",
+      "Elder",
+      "Midwife",
+      "Grandmother",
+      "Book One",
+      "The Boy in the Iceberg",
+      "Water Tribe"
+    ],
+    "image": null,
+    "nation": "Southern Water Tribe",
+    "role": "Elder, Midwife, Grandmother",
+    "gender": "Female",
+    "ethnicity": "Water Tribe",
+    "titles": [
+      "Gran Gran"
+    ],
+    "expandedView": "### 📖 Overview\r\n\r\nKanna, known as Gran Gran, is Katara and Sokka's wise and caring grandmother. A nonbender, she is the oldest resident of Wolf Cove and a respected elder, midwife, and healer in the Southern Water Tribe.\r\n\r\n### 🧩 Role in the Story\r\n\r\nBorn in the Northern Water Tribe, Kanna fled to the South to escape an arranged marriage to Pakku, later becoming a respected elder and midwife in the Southern Water Tribe. She raised Katara and Sokka after their mother's death and their father's departure. After the Siege of the North, she reunited with Pakku and eventually married him. Kanna is known for her wisdom, resilience, and deep love for her family and tribe.\r\n\r\n### 🤝 Relationships\r\n\r\n- Katara: Granddaughter\r\n- Sokka: Grandson\r\n- Hakoda: Son\r\n- Kya: Daughter-in-law\r\n- Pakku: Husband\r\n- Hama: Friend\r\n- Yagoda: Friend\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Wise\r\n- Caring\r\n- Resilient\r\n- Hopeful\r\n- Pragmatic\r\n- Loving\r\n- Protective\r\n\r\n### 💬 Quotes\r\n\r\n> \"It's been so long since I've had hope, but you brought it back to life, my little waterbender.\"\r\n> — Kanna\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Respected elder and midwife of the Southern Water Tribe.\r\n- Raised Katara and Sokka after their mother's death.\r\n- Escaped an arranged marriage and started a new life in the South.",
+    "metadata": {
+      "badge": "Gran Gran",
+      "shortdescription": "Kanna, affectionately known as Gran Gran, is a wise, loving, and protective elderly female nonbender who serves as Katara and Sokka's grandmother, midwife, and respected elder of the Southern Water Tribe.",
+      "slug": "kanna",
+      "shortDescription": "Kanna, affectionately known as Gran Gran, is Katara and Sokka's wise and loving grandmother in the Southern Water Tribe.",
+      "fullName": "Kanna",
+      "aliases": [
+        "Gran Gran"
+      ],
+      "pronouns": "she/her",
+      "age": 80,
+      "hairColor": "Gray (brown in youth)",
+      "eyeColor": "Blue",
+      "skinColor": "Brown",
+      "loveInterest": "Hakoda's father (deceased), Pakku (husband)",
+      "abilities": {
+        "bending": [],
+        "weapons": [],
+        "fightingStyles": [],
+        "notableFeats": [
+          "Respected elder and midwife of the Southern Water Tribe.",
+          "Raised Katara and Sokka after their mother's death.",
+          "Escaped an arranged marriage and started a new life in the South."
+        ]
+      },
+      "affiliations": {
+        "primary": "Southern Water Tribe",
+        "secondary": [
+          "Northern Water Tribe"
+        ],
+        "allies": [
+          "Team Avatar",
+          "Yagoda",
+          "Hama",
+          "Pakku",
+          "Southern Water Tribe",
+          "Northern Water Tribe"
+        ],
+        "enemies": [
+          "Southern Raiders"
+        ]
+      },
+      "narrative": {
+        "firstAppearance": "The Boy in the Iceberg",
+        "lastAppearance": "Avatar: Generations",
+        "voicedBy": "Melendy Britt",
+        "era": "Book One: Water, Book Three: Fire",
+        "seasons": [
+          1,
+          3
+        ],
+        "episodes": [
+          1,
+          2,
+          8
+        ],
+        "notableQuotes": [
+          "It's been so long since I've had hope, but you brought it back to life, my little waterbender."
+        ]
+      },
+      "metrics": {
+        "archetype": "Wise Elder",
+        "moralAlignment": "Lawful Good",
+        "intelligence": 7,
+        "strength": 3,
+        "charisma": 6,
+        "leadership": 7,
+        "humor": 4
+      },
+      "roles": {
+        "elder": true,
+        "midwife": true,
+        "grandmother": true
+      },
+      "relationships": {
+        "katara": "Granddaughter",
+        "sokka": "Grandson",
+        "hakoda": "Son",
+        "kya": "Daughter-in-law",
+        "pakku": "Husband",
+        "hama": "Friend",
+        "yagoda": "Friend"
+      },
+      "psyche": {
+        "personality": [
+          "Wise",
+          "Caring",
+          "Resilient",
+          "Hopeful",
+          "Pragmatic"
+        ],
+        "emotionalState": [
+          "Loving",
+          "Protective"
+        ],
+        "motivation": "To care for her family and guide her tribe with wisdom."
+      },
+      "physical": {
+        "build": "Elderly",
+        "height": null,
+        "distinguishingFeatures": [
+          "Gray hair",
+          "Blue eyes",
+          "Brown skin"
+        ]
+      },
+      "dialogue": [
+        "It's been so long since I've had hope, but you brought it back to life, my little waterbender."
+      ],
+      "tagCategories": {
+        "nationTags": [
+          "Southern Water Tribe",
+          "Northern Water Tribe",
+          "Water Tribe"
+        ],
+        "roleTags": [
+          "Elder",
+          "Midwife",
+          "Grandmother"
+        ],
+        "episodeTags": [
+          "Book One",
+          "The Boy in the Iceberg"
+        ]
+      },
+      "system": {
+        "schemaVersion": "3.0",
+        "createdBy": "AI Assistant",
+        "createdAt": "2024-06-09T00:00:00Z",
+        "flags": []
+      },
+      "__type": "character"
     }
   },
   {
@@ -10565,281 +11404,304 @@
   {
     "id": "michi",
     "name": "Michi",
-    "summary": "",
+    "summary": "A caring, resilient, and supportive adult female noblewoman and florist, Michi is known for her compassion, emotional strength, and for ultimately choosing her family's safety over politics during the postwar era.",
     "type": "character",
     "slug": "michi",
     "tags": [
-      "F",
-      "i",
-      "r",
-      "e",
-      " ",
-      "N",
-      "a",
-      "t",
-      "o",
-      "n",
-      ",",
-      "b",
-      "l",
-      "w",
-      "m",
-      "M",
-      "h",
-      "s",
-      "A",
-      "d",
-      "u",
-      "S",
-      "p",
-      "v",
-      "P",
-      "c",
-      "B",
-      "k",
-      "T",
-      "O",
-      "z",
-      "supporting",
-      "parent",
-      "noblewoman",
-      "estranged spouse",
-      "mother of Mai",
-      "mother of Tom-Tom",
-      "sister of Mura",
-      "estranged wife of Ukano",
-      "caring",
-      "emotional",
-      "resilient",
-      "Fire Nation nobility",
-      "postwar adjustment",
-      "family loyalty",
-      "personal growth",
       "Fire Nation",
+      "Noblewoman",
+      "Mother",
+      "Florist",
+      "Book Two",
+      "Book Three",
       "New Ozai",
-      "Mura's Flower Shop"
+      "Postwar",
+      "Family loyalty",
+      "Personal growth",
+      "Mother of Mai",
+      "Mother of Tom-Tom",
+      "Sister of Mura",
+      "Estranged wife of Ukano",
+      "Caring",
+      "Emotional",
+      "Resilient",
+      "Fire Nation nobility",
+      "Postwar adjustment"
     ],
+    "image": null,
     "nation": "Fire Nation",
     "role": "Florist, Noblewoman, Mother",
-    "gender": "female",
-    "species": "human",
-    "nationality": "Fire Nation",
+    "gender": "Female",
     "ethnicity": "Fire Nation",
     "titles": [
       "Lady Michi"
     ],
-    "expandedView": "### 📖 Overview\r\n\r\nMichi was a Fire Nation noblewoman, the wife of Ukano (former governor of New Ozai), and mother to Mai and Tom-Tom. Proud of her social standing, she supported her husband's career but ultimately prioritized her family's safety and well-being. After the Hundred Year War, she became skeptical of Ukano's opposition to Fire Lord Zuko and separated from him when he tried to indoctrinate their children against the new government. Michi later helped her sister Mura run a flower shop and encouraged her children to seek new opportunities, supporting them through difficult times.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Maintained a high-status household in the Fire Nation and New Ozai.\r\n- Survived an attack by the Omashu Resistance and was saved by Team Avatar.\r\n- Separated from Ukano to protect her children from political indoctrination.\r\n- Assisted her sister Mura in running a flower shop after leaving Ukano.\r\n- Encouraged Mai to pursue new opportunities and praised her positive traits.\r\n- Supported her family through the abduction of Tom-Tom and the family's adjustment to postwar life.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA supporting character whose arc highlights the tension between loyalty to family and political allegiance. Michi's journey from a status-focused noblewoman to a protective, independent parent adds depth to the postwar Fire Nation narrative.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Ukano** – Husband (estranged); former governor of New Ozai.\r\n- **Mai** – Daughter; Michi is strict but caring, encouraging Mai to blossom and seek new challenges.\r\n- **Tom-Tom** – Son; Michi is protective and deeply concerned for his safety.\r\n- **Mura** – Sister; business partner in the flower shop.\r\n- **Warden** – Sibling; warden of the Boiling Rock prison.\r\n- **Fire Nation** – Ally by birth and marriage.\r\n- **Yung, Omashu Resistance** – Enemies during the occupation of Omashu.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Caring and supportive parent\r\n- Emotional and resilient\r\n- Values family over politics\r\n- Proud of social standing but willing to change for her children\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"I finally realized he cares more about politics than his own children's safety. So we're here now, on our own.\"",
+    "expandedView": "### 📖 Overview\r\n\r\nMichi was a Fire Nation noblewoman, the wife of Ukano (former governor of New Ozai), and mother to Mai and Tom-Tom. Proud of her social standing, she supported her husband's career but ultimately prioritized her family's safety and well-being. After the Hundred Year War, she became skeptical of Ukano's opposition to Fire Lord Zuko and separated from him when he tried to indoctrinate their children against the new government. Michi later helped her sister Mura run a flower shop and encouraged her children to seek new opportunities, supporting them through difficult times.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Maintained a high-status household in the Fire Nation and New Ozai.\r\n- Survived an attack by the Omashu Resistance and was saved by Team Avatar.\r\n- Separated from Ukano to protect her children from political indoctrination.\r\n- Assisted her sister Mura in running a flower shop after leaving Ukano.\r\n- Encouraged Mai to pursue new opportunities and praised her positive traits.\r\n- Supported her family through the abduction of Tom-Tom and the family's adjustment to postwar life.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA supporting character whose arc highlights the tension between loyalty to family and political allegiance. Michi's journey from a status-focused noblewoman to a protective, independent parent adds depth to the postwar Fire Nation narrative.\r\n\r\n### 🤝 Relationships\r\n\r\n- Ukano – Husband (estranged); former governor of New Ozai.\r\n- Mai – Daughter; Michi is strict but caring, encouraging Mai to blossom and seek new challenges.\r\n- Tom-Tom – Son; Michi is protective and deeply concerned for his safety.\r\n- Mura – Sister; business partner in the flower shop.\r\n- Warden – Sibling; warden of the Boiling Rock prison.\r\n- Fire Nation – Ally by birth and marriage.\r\n- Yung, Omashu Resistance – Enemies during the occupation of Omashu.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Caring and supportive parent\r\n- Emotional and resilient\r\n- Values family over politics\r\n- Proud of social standing but willing to change for her children\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"I finally realized he cares more about politics than his own children's safety. So we're here now, on our own.\"",
     "metadata": {
       "badge": "Noble Florist",
       "shortdescription": "A caring, resilient, and supportive adult female noblewoman and florist, Michi is known for her compassion, emotional strength, and for ultimately choosing her family's safety over politics during the postwar era.",
       "slug": "michi",
+      "shortDescription": "A caring, resilient, and supportive adult female noblewoman and florist, Michi is known for her compassion, emotional strength, and for ultimately choosing her family's safety over politics during the postwar era.",
       "fullName": "Michi",
       "aliases": [],
-      "ageChronological": null,
-      "ageBiological": null,
-      "ageRange": "adult",
-      "birthDate": null,
-      "deathDate": null,
-      "nativeLocation": "Fire Nation",
-      "currentLocation": "Fire Nation (postwar)",
-      "socioeconomicStanding": "nobility",
-      "languagesSpoken": [
-        "Standard Language"
-      ],
-      "isBender": false,
-      "bendingElement": null,
-      "bendingProficiency": null,
-      "advancedBending": [],
-      "nonBendingSkills": [
-        "floristry",
-        "household management",
-        "emotional support"
-      ],
-      "uniqueTechniques": [],
-      "powerMetrics": {
-        "rawPower": 1,
-        "technicalSkill": 3,
-        "strategicAptitude": 4
+      "pronouns": "she/her",
+      "age": null,
+      "hairColor": "Black",
+      "eyeColor": null,
+      "skinColor": null,
+      "loveInterest": "Ukano (estranged)",
+      "abilities": {
+        "bending": [],
+        "weapons": [],
+        "fightingStyles": [],
+        "notableFeats": [
+          "Maintained a high-status household in the Fire Nation and New Ozai.",
+          "Separated from Ukano to protect her children.",
+          "Helped run a flower shop with her sister Mura."
+        ]
       },
-      "combatStyle": null,
-      "vulnerabilities": [
-        "emotional stress",
-        "family in danger"
-      ],
-      "isLegendaryFighter": false,
-      "notableFeats": [
-        "Maintained a high-status household in the Fire Nation and New Ozai.",
-        "Separated from Ukano to protect her children.",
-        "Helped run a flower shop with her sister Mura."
-      ],
-      "currentAffiliations": [
-        "Mura's Flower Shop"
-      ],
-      "pastAffiliations": [
-        "Fire Nation Nobility",
-        "New Ozai (as governor's wife)",
-        "Ukano's household"
-      ],
-      "allegianceHistory": [
-        {
-          "affiliation": "Fire Nation Nobility",
-          "startDate": null,
-          "endDate": "postwar",
-          "reasonForLeaving": "Separated from Ukano, left political life."
-        }
-      ],
-      "isRoyalty": false,
-      "politicalPower": "minor (by marriage)",
-      "politicalLeanings": [
-        "traditionalist",
-        "family-first"
-      ],
-      "moralAlignment": "lawful good",
-      "moralCompassDrift": false,
-      "narrativeFunction": "supporting",
-      "screenTimeLevel": "minor",
-      "firstAppearance": "Return to Omashu",
-      "finalAppearance": "Ashes of the Academy",
-      "deathStatus": "alive",
-      "causeOfDeath": null,
-      "narrativeArcs": [
-        {
-          "arcType": "family loyalty",
-          "status": "completed",
-          "summary": "Chose her children's safety over political allegiance."
-        },
-        {
-          "arcType": "personal growth",
-          "status": "completed",
-          "summary": "Transitioned from status-focused noblewoman to independent, supportive parent."
-        }
-      ],
-      "keyTropes": [
-        "Protective Parent",
-        "Noblewoman",
-        "Estranged Spouse",
-        "Supportive Mother"
-      ],
-      "relationships": [
-        {
-          "characterId": "ukano",
-          "relationshipType": "spouse (estranged)",
-          "status": "negative",
-          "history": "Separated after Ukano prioritized politics over family."
-        },
-        {
-          "characterId": "mai",
-          "relationshipType": "parent",
-          "status": "positive",
-          "history": "Strict but caring mother, encouraged Mai to seek new opportunities."
-        },
-        {
-          "characterId": "tom-tom",
-          "relationshipType": "parent",
-          "status": "positive",
-          "history": "Protective and loving mother."
-        },
-        {
-          "characterId": "mura",
-          "relationshipType": "sibling",
-          "status": "positive",
-          "history": "Business partner and emotional support."
-        },
-        {
-          "characterId": "warden",
-          "relationshipType": "sibling",
-          "status": "neutral",
-          "history": "Sibling, warden of the Boiling Rock."
-        }
-      ],
-      "groupMemberships": [],
-      "petCompanions": [],
-      "positiveTraits": [
-        "caring",
-        "supportive",
-        "resilient",
-        "emotional"
-      ],
-      "negativeTraits": [
-        "elitist (initially)",
-        "rule-oriented",
-        "emotional (under stress)"
-      ],
-      "motivations": [
-        "protecting her children",
-        "providing a stable home",
-        "supporting family"
-      ],
-      "fears": [
-        "losing her children",
-        "family in danger"
-      ],
-      "internalConflicts": [
-        "loyalty to husband vs. children's safety",
-        "status vs. family"
-      ],
-      "emotionalWounds": [
-        "estrangement from Ukano",
-        "political turmoil"
-      ],
-      "copingMechanisms": [
-        "working with Mura",
-        "focusing on children"
-      ],
-      "worldview": "Family is more important than politics or status.",
-      "heightEstimate": "Average",
-      "notableFeatures": [
-        "Black hair"
-      ],
-      "outfitStyles": [
-        "Noble Fire Nation attire",
-        "Florist's dress"
-      ],
-      "signaturePossessions": [],
-      "ageProgression": false,
-      "voiceActor": [
-        "Grey DeLisle"
-      ],
-      "archetype": "Protective Parent",
-      "thematicKeywords": [
-        "family",
-        "loyalty",
-        "change",
-        "parenthood",
-        "politics",
-        "postwar Fire Nation"
+      "affiliations": {
+        "primary": "Fire Nation",
+        "secondary": [
+          "Mura's Flower Shop",
+          "Fire Nation Nobility",
+          "New Ozai (as governor's wife)",
+          "Ukano's household"
+        ],
+        "allies": [
+          "Mai",
+          "Tom-Tom",
+          "Mura",
+          "Warden"
+        ],
+        "enemies": [
+          "Yung",
+          "Omashu Resistance"
+        ]
+      },
+      "narrative": {
+        "firstAppearance": "Return to Omashu",
+        "lastAppearance": "Ashes of the Academy",
+        "voicedBy": "Grey DeLisle",
+        "era": "Book Two: Earth, Book Three: Fire",
+        "seasons": [
+          2,
+          3
+        ],
+        "episodes": [],
+        "notableQuotes": [
+          "I finally realized he cares more about politics than his own children's safety. So we're here now, on our own."
+        ]
+      },
+      "metrics": {
+        "archetype": "Protective Parent",
+        "moralAlignment": "Lawful Good",
+        "intelligence": 5,
+        "strength": 3,
+        "charisma": 5,
+        "leadership": 4,
+        "humor": 3
+      },
+      "roles": {
+        "noblewoman": true,
+        "florist": true,
+        "mother": true
+      },
+      "relationships": {
+        "ukano": "Husband (estranged)",
+        "mai": "Daughter",
+        "tom-tom": "Son",
+        "mura": "Sister",
+        "warden": "Sibling"
+      },
+      "psyche": {
+        "personality": [
+          "Caring",
+          "Supportive",
+          "Resilient",
+          "Emotional"
+        ],
+        "emotionalState": [
+          "Protective",
+          "Family-first"
+        ],
+        "motivation": "To protect her children and provide a stable, loving home."
+      },
+      "physical": {
+        "build": "Average",
+        "height": null,
+        "distinguishingFeatures": [
+          "Black hair"
+        ],
+        "outfitStyles": [
+          "Noble Fire Nation attire",
+          "Florist's dress"
+        ]
+      },
+      "dialogue": [
+        "I finally realized he cares more about politics than his own children's safety. So we're here now, on our own."
       ],
       "tagCategories": {
-        "narrativeTags": [
-          "supporting",
-          "parent",
-          "noblewoman",
-          "estranged spouse"
+        "nationTags": [
+          "Fire Nation"
+        ],
+        "roleTags": [
+          "Noblewoman",
+          "Florist",
+          "Mother"
+        ],
+        "arcTags": [
+          "Family loyalty",
+          "Personal growth"
         ],
         "relationshipTags": [
-          "mother of Mai",
-          "mother of Tom-Tom",
-          "sister of Mura",
-          "estranged wife of Ukano"
+          "Mother of Mai",
+          "Mother of Tom-Tom",
+          "Sister of Mura",
+          "Estranged wife of Ukano"
         ],
         "emotionTags": [
-          "caring",
-          "emotional",
-          "resilient"
+          "Caring",
+          "Emotional",
+          "Resilient"
         ],
         "politicalTags": [
           "Fire Nation nobility",
-          "postwar adjustment"
-        ],
-        "arcTags": [
-          "family loyalty",
-          "personal growth"
-        ],
-        "worldTags": [
-          "Fire Nation",
-          "New Ozai",
-          "Mura's Flower Shop"
+          "Postwar adjustment"
         ]
+      },
+      "system": {
+        "schemaVersion": "3.0",
+        "createdBy": "AI Assistant",
+        "createdAt": "2024-06-09T00:00:00Z",
+        "flags": []
+      },
+      "__type": "character"
+    }
+  },
+  {
+    "id": "ming",
+    "name": "Ming",
+    "summary": "Ming is a compassionate, kind-hearted, and empathetic female nonbender who served as a prison guard in the Fire Nation, remembered for her kindness to Uncle Iroh during his imprisonment.",
+    "type": "character",
+    "slug": "ming",
+    "tags": [
+      "Fire Nation",
+      "Prison Guard",
+      "Book Three",
+      "The Day of Black Sun"
+    ],
+    "image": null,
+    "nation": "Fire Nation",
+    "role": "Prison Guard",
+    "gender": "Female",
+    "ethnicity": "Fire Nation",
+    "titles": [],
+    "expandedView": "### 📖 Overview\r\n\r\nMing was a compassionate guard at the Capital City Prison in the Fire Nation. She is best known for her kindness toward Iroh during his imprisonment, often sneaking him rare teas and extra food. Her empathy and gentle nature set her apart from the other guards, and her actions made Iroh's days in prison more bearable.\r\n\r\n### 🧩 Role in the Story\r\n\r\nMing appears in \"The Day of Black Sun, Part 1: The Invasion\" as Iroh's primary caretaker in prison. She develops a quiet friendship with Iroh, showing him small acts of kindness. On the Day of Black Sun, Iroh warns her to take the day off, which she understands as a sign to avoid the coming chaos, thus sparing her from the events of his escape.\r\n\r\n### 🤝 Relationships\r\n\r\n- Iroh: She is sympathetic to Iroh, sneaking him tea and food, and is trusted enough to receive his warning.\r\n- Fire Nation: Loyal to her nation but guided by her own sense of compassion.\r\n- Warden Poon: Disapproves of his harsh treatment of prisoners.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Kind-hearted and empathetic\r\n- Discreet and supportive\r\n- Appreciates rare teas\r\n- Courageous in her quiet way\r\n\r\n### 💬 Quotes\r\n\r\n> \"I snuck in some white jade tea. I know you like rare teas.\"\r\n> — Ming\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Showed compassion to Iroh during his imprisonment.\r\n- Snuck in white jade tea and extra food for Iroh.\r\n- Heeded Iroh's warning and avoided the Day of Black Sun chaos.",
+    "metadata": {
+      "badge": "Kindly Jailer",
+      "shortdescription": "Ming is a compassionate, kind-hearted, and empathetic female nonbender who served as a prison guard in the Fire Nation, remembered for her kindness to Uncle Iroh during his imprisonment.",
+      "slug": "ming",
+      "shortDescription": "Ming is a compassionate, kind-hearted, and empathetic female nonbender who served as a prison guard in the Fire Nation, remembered for her kindness to Uncle Iroh during his imprisonment.",
+      "fullName": "Ming",
+      "aliases": [],
+      "pronouns": "she/her",
+      "age": null,
+      "hairColor": "Brown",
+      "eyeColor": null,
+      "skinColor": null,
+      "loveInterest": null,
+      "abilities": {
+        "bending": [],
+        "weapons": [],
+        "fightingStyles": [],
+        "notableFeats": [
+          "Showed compassion to Iroh during his imprisonment.",
+          "Snuck in white jade tea and extra food for Iroh.",
+          "Heeded Iroh's warning and avoided the Day of Black Sun chaos."
+        ]
+      },
+      "affiliations": {
+        "primary": "Fire Nation Military",
+        "secondary": [
+          "Capital City Prison"
+        ],
+        "allies": [
+          "Fire Nation",
+          "Iroh"
+        ],
+        "enemies": []
+      },
+      "narrative": {
+        "firstAppearance": "The Day of Black Sun, Part 1: The Invasion",
+        "lastAppearance": "The Day of Black Sun, Part 1: The Invasion",
+        "voicedBy": "Serena Williams",
+        "era": "Book Three: Fire",
+        "seasons": [
+          3
+        ],
+        "episodes": [
+          10
+        ],
+        "notableQuotes": [
+          "I snuck in some white jade tea. I know you like rare teas."
+        ]
+      },
+      "metrics": {
+        "archetype": "Compassionate Guard",
+        "moralAlignment": "Neutral Good",
+        "intelligence": 4,
+        "strength": 2,
+        "charisma": 4,
+        "leadership": 2,
+        "humor": 2
+      },
+      "roles": {
+        "prisonGuard": true
+      },
+      "relationships": {
+        "iroh": "Friend/Protege"
+      },
+      "psyche": {
+        "personality": [
+          "Kind",
+          "Empathetic",
+          "Discreet",
+          "Supportive"
+        ],
+        "emotionalState": [
+          "Caring",
+          "Cautious"
+        ],
+        "motivation": "To help those in need and do the right thing."
+      },
+      "physical": {
+        "build": "Average",
+        "height": null,
+        "distinguishingFeatures": [
+          "Brown hair"
+        ]
+      },
+      "dialogue": [
+        "I snuck in some white jade tea. I know you like rare teas."
+      ],
+      "tagCategories": {
+        "nationTags": [
+          "Fire Nation"
+        ],
+        "roleTags": [
+          "Prison Guard"
+        ],
+        "episodeTags": [
+          "Book Three",
+          "The Day of Black Sun"
+        ]
+      },
+      "system": {
+        "schemaVersion": "3.0",
+        "createdBy": "AI Assistant",
+        "createdAt": "2024-06-09T00:00:00Z",
+        "flags": []
       },
       "__type": "character"
     }
@@ -12808,6 +13670,197 @@
     }
   },
   {
+    "id": "roku",
+    "name": "Roku",
+    "summary": "Roku is a wise, compassionate, and legendary male Fire Nation Avatar, spirit advisor, and mentor to Aang. His friendship and rivalry with Sozin shaped the fate of the world.",
+    "type": "character",
+    "slug": "roku",
+    "tags": [
+      "Fire Nation",
+      "Avatar",
+      "Mentor",
+      "Spirit Advisor",
+      "Male",
+      "Bender",
+      "Past Avatar",
+      "Legendary",
+      "Book One",
+      "Book Two",
+      "Book Three",
+      "Winter Solstice"
+    ],
+    "image": null,
+    "nation": "Fire Nation",
+    "role": "Past Avatar, Mentor, Spirit Advisor, Legendary Bender",
+    "gender": "Male",
+    "ethnicity": "Fire Nation",
+    "titles": [
+      "Avatar"
+    ],
+    "expandedView": "### 📖 Overview\r\n\r\nRoku was the Fire Nation-born Avatar who preceded Aang. He was a wise and compassionate leader, striving to maintain balance in the world. Roku’s friendship with Fire Lord Sozin ultimately led to tragedy, as he failed to stop Sozin’s ambitions in time, indirectly allowing the Hundred Year War to begin. Roku’s spirit later served as a mentor to Aang, offering guidance and wisdom from the Spirit World.\r\n\r\n### 🏷️ Key Traits\r\n- Wise\r\n- Dutiful\r\n- Compassionate\r\n- Haunted by regret\r\n\r\n### 🏆 Notable Achievements\r\n- Mastered all four elements\r\n- Maintained peace during his lifetime\r\n- Attempted to stop Sozin’s plans for conquest\r\n\r\n### 💬 Notable Quotes\r\n- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"\r\n- \"You must be decisive.\"\r\n- \"Sometimes, the best way to solve your own problems is to help someone else.\"\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Grew up as the best friend of Prince Sozin, who would later become Fire Lord.\r\n- Confronted and defeated Sozin, sparing his life out of friendship.\r\n- Died fighting a volcanic eruption after being betrayed by Sozin.\r\n- Served as Aang's primary spiritual guide from beyond the grave.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA guiding spirit and tragic figure whose past mistakes serve as a crucial lesson for Aang on the importance of decisiveness.\r\n\r\n### 🤝 Relationships\r\n\r\n- Sozin (Best Friend turned Arch-Nemesis)\r\n- Aang (Successor, Mentee)\r\n- Gyatso (Close Friend, Aang's Guardian)\r\n- Ta Min (Wife)\r\n- Zuko (Great-Grandson)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Wise & Merciful\r\n- Disciplined & Kind\r\n- Indecisive (at critical moments)\r\n- Regretful\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"\r\n- \"Being the Avatar is an honor, but it's also a great burden.\"\r\n- \"Some friendships are so strong, they can even transcend lifetimes.\"",
+    "metadata": {
+      "badge": "Spirit Advisor",
+      "shortdescription": "Roku is a wise, compassionate, and legendary male Fire Nation Avatar, spirit advisor, and mentor to Aang. His friendship and rivalry with Sozin shaped the fate of the world.",
+      "slug": "roku",
+      "shortDescription": "Roku is a wise, compassionate, and legendary male Fire Nation Avatar, spirit advisor, and mentor to Aang. His friendship and rivalry with Sozin shaped the fate of the world.",
+      "fullName": "Roku",
+      "aliases": [
+        "Ro"
+      ],
+      "pronouns": "he/him",
+      "age": 70,
+      "ageRange": "elder",
+      "hairColor": "White",
+      "eyeColor": null,
+      "skinColor": null,
+      "loveInterest": "Ta Min (wife)",
+      "abilities": {
+        "bending": [
+          "Firebending",
+          "Airbending",
+          "Waterbending",
+          "Earthbending"
+        ],
+        "weapons": [],
+        "fightingStyles": [
+          "Avatar State",
+          "Diplomacy"
+        ],
+        "notableFeats": [
+          "Mastered all four elements and the Avatar State.",
+          "Defeated Fire Lord Sozin in a one-on-one confrontation.",
+          "Temporarily subdued a massive volcanic eruption.",
+          "Destroyed the Fire Temple on Crescent Island."
+        ]
+      },
+      "affiliations": {
+        "primary": "Spirit World",
+        "secondary": [
+          "Fire Nation"
+        ],
+        "allies": [
+          "Gyatso",
+          "Aang",
+          "Ta Min",
+          "Fang (dragon)"
+        ],
+        "enemies": [
+          "Sozin"
+        ]
+      },
+      "narrative": {
+        "firstAppearance": "Winter Solstice Part 2: Avatar Roku",
+        "lastAppearance": "The Rift trilogy",
+        "voicedBy": [
+          "James Garrett",
+          "Andrew Caldwell (young Roku)"
+        ],
+        "era": "Book One: Water, Book Two: Earth, Book Three: Fire",
+        "seasons": [
+          1,
+          2,
+          3
+        ],
+        "episodes": [
+          8,
+          21,
+          32,
+          46,
+          60
+        ],
+        "notableQuotes": [
+          "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.",
+          "Being the Avatar is an honor, but it's also a great burden.",
+          "Some friendships are so strong, they can even transcend lifetimes."
+        ]
+      },
+      "metrics": {
+        "archetype": "Spirit Advisor",
+        "moralAlignment": "Lawful Good",
+        "intelligence": 8,
+        "strength": 8,
+        "charisma": 7,
+        "leadership": 8,
+        "humor": 4
+      },
+      "roles": {
+        "avatar": true,
+        "mentor": true,
+        "spiritAdvisor": true,
+        "bender": true
+      },
+      "relationships": {
+        "sozin": "Best Friend turned Arch-Nemesis",
+        "aang": "Successor, Mentee",
+        "gyatso": "Close Friend, Aang's Guardian",
+        "taMin": "Wife",
+        "zuko": "Great-Grandson"
+      },
+      "psyche": {
+        "personality": [
+          "Wise",
+          "Merciful",
+          "Disciplined",
+          "Kind",
+          "Indecisive",
+          "Regretful"
+        ],
+        "emotionalState": [
+          "Reflective",
+          "Regretful"
+        ],
+        "motivation": "To maintain balance and peace, and to guide his successor."
+      },
+      "physical": {
+        "build": "Tall",
+        "height": null,
+        "distinguishingFeatures": [
+          "Long white hair and beard",
+          "Fire Nation topknot",
+          "Crown Prince headpiece"
+        ],
+        "outfitStyles": [
+          "Fire Nation royal robes",
+          "Avatar training attire"
+        ]
+      },
+      "dialogue": [
+        "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.",
+        "Being the Avatar is an honor, but it's also a great burden.",
+        "Some friendships are so strong, they can even transcend lifetimes."
+      ],
+      "tagCategories": {
+        "nationTags": [
+          "Fire Nation"
+        ],
+        "roleTags": [
+          "Avatar",
+          "Mentor",
+          "Spirit Advisor",
+          "Bender"
+        ],
+        "episodeTags": [
+          "Book One",
+          "Book Two",
+          "Book Three",
+          "Winter Solstice"
+        ],
+        "identityTags": [
+          "Male",
+          "Legendary",
+          "Past Avatar"
+        ]
+      },
+      "system": {
+        "schemaVersion": "3.0",
+        "createdBy": "AI Assistant",
+        "createdAt": "2024-06-09T00:00:00Z",
+        "flags": []
+      },
+      "__type": "character"
+    }
+  },
+  {
     "id": "smellerbee",
     "name": "Smellerbee",
     "summary": "",
@@ -14248,6 +15301,151 @@
     }
   },
   {
+    "id": "the-gecko",
+    "name": "The Gecko",
+    "summary": "The Gecko is a nimble, agile, and unconventional male Earth Kingdom earthbender and underground fighter, recognized for his quick movements and unique style in the Earth Rumble tournaments.",
+    "type": "character",
+    "slug": "the-gecko",
+    "tags": [
+      "Earth Kingdom",
+      "Earth Rumble",
+      "Fighter",
+      "Earthbender",
+      "Underground",
+      "Male",
+      "Book Two",
+      "The Blind Bandit",
+      "Bender"
+    ],
+    "image": null,
+    "nation": "Earth Kingdom",
+    "role": "Earth Rumble Fighter, Underground Fighter",
+    "gender": "Male",
+    "ethnicity": "Earth Kingdom",
+    "titles": [],
+    "expandedView": "### 📖 Overview\r\n\r\nThe Gecko was a contestant in the underground earthbending competition Earth Rumble. He wore a distinct bright-green mask and used unique tactics during battle, such as crawling on all fours and using his earthbending to scale walls. He relied on his quick speed and agility to climb around the ring and stay out of the reach of his opponents.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Competed in Earth Rumble VI against The Boulder.\r\n- Used unique earthbending tactics, including scaling walls and crawling on all fours.\r\n- Assisted Xin Fu and other fighters in capturing Aang and Toph.\r\n- Was quickly defeated by The Boulder and later by Toph Beifong.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor but memorable Earth Rumble fighter, The Gecko is known for his agility and unconventional fighting style, adding color to the underground earthbending scene in Gaoling.\r\n\r\n### 🤝 Relationships\r\n\r\n- Xin Fu (Ally, Promoter)\r\n- Earth Rumble fighters (Allies)\r\n- Toph Beifong (Enemy)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Nimble and agile\r\n- Quick reflexes\r\n- Unique fighting style\r\n\r\n### 💬 Notable Quotes\r\n\r\n- (No spoken lines)",
+    "metadata": {
+      "badge": "Earth Rumble Fighter",
+      "shortdescription": "The Gecko is a nimble, agile, and unconventional male Earth Kingdom earthbender and underground fighter, recognized for his quick movements and unique style in the Earth Rumble tournaments.",
+      "slug": "the-gecko",
+      "shortDescription": "The Gecko is a nimble, agile, and unconventional male Earth Kingdom earthbender and underground fighter, recognized for his quick movements and unique style in the Earth Rumble tournaments.",
+      "fullName": "The Gecko",
+      "aliases": [],
+      "pronouns": "he/him",
+      "age": 22,
+      "ageRange": "young adult",
+      "hairColor": null,
+      "eyeColor": null,
+      "skinColor": null,
+      "loveInterest": null,
+      "abilities": {
+        "bending": [
+          "Earthbending"
+        ],
+        "weapons": [],
+        "fightingStyles": [
+          "Earthbending",
+          "Agility",
+          "Wall-crawling"
+        ],
+        "notableFeats": [
+          "Competed in Earth Rumble VI against The Boulder.",
+          "Used unique earthbending tactics, including scaling walls and crawling on all fours.",
+          "Assisted Xin Fu and other fighters in capturing Aang and Toph."
+        ]
+      },
+      "affiliations": {
+        "primary": "Earth Rumble",
+        "secondary": [],
+        "allies": [
+          "Xin Fu",
+          "Earth Rumble fighters"
+        ],
+        "enemies": [
+          "Toph Beifong"
+        ]
+      },
+      "narrative": {
+        "firstAppearance": "The Blind Bandit",
+        "lastAppearance": "I Am Toph",
+        "voicedBy": null,
+        "era": "Book Two: Earth",
+        "seasons": [
+          2
+        ],
+        "episodes": [
+          6
+        ],
+        "notableQuotes": []
+      },
+      "metrics": {
+        "archetype": "Agile Fighter",
+        "moralAlignment": "Neutral",
+        "intelligence": 2,
+        "strength": 3,
+        "charisma": 2,
+        "leadership": 1,
+        "humor": 1
+      },
+      "roles": {
+        "fighter": true,
+        "bender": true
+      },
+      "relationships": {
+        "xinFu": "Ally, Promoter",
+        "earthRumbleFighters": "Allies",
+        "toph": "Enemy"
+      },
+      "psyche": {
+        "personality": [
+          "Nimble",
+          "Agile",
+          "Quick reflexes",
+          "Unconventional"
+        ],
+        "emotionalState": [
+          "Focused"
+        ],
+        "motivation": "To win Earth Rumble matches using agility and unique tactics."
+      },
+      "physical": {
+        "build": "Lean",
+        "height": null,
+        "distinguishingFeatures": [
+          "Bright-green mask"
+        ],
+        "outfitStyles": [
+          "Earth Rumble costume"
+        ]
+      },
+      "dialogue": [],
+      "tagCategories": {
+        "nationTags": [
+          "Earth Kingdom"
+        ],
+        "roleTags": [
+          "Fighter",
+          "Bender"
+        ],
+        "episodeTags": [
+          "Book Two",
+          "The Blind Bandit"
+        ],
+        "identityTags": [
+          "Male",
+          "Underground"
+        ]
+      },
+      "system": {
+        "schemaVersion": "3.0",
+        "createdBy": "AI Assistant",
+        "createdAt": "2024-06-09T00:00:00Z",
+        "flags": []
+      },
+      "__type": "character"
+    }
+  },
+  {
     "id": "the-gopher",
     "name": "The Gopher",
     "summary": "",
@@ -15622,6 +16820,187 @@
     }
   },
   {
+    "id": "xin-fu",
+    "name": "Xin Fu",
+    "summary": "Xin Fu is a shrewd, ambitious, and cunning male Earth Kingdom earthbender, fight promoter, and recurring antagonist. He schemes for profit and power as the host of the Earth Rumble tournaments and a persistent bounty hunter.",
+    "type": "character",
+    "slug": "xin-fu",
+    "tags": [
+      "Earth Kingdom",
+      "Earth Rumble",
+      "Promoter",
+      "Bounty Hunter",
+      "Antagonist",
+      "Villain",
+      "Fighter",
+      "Earthbender",
+      "Underground",
+      "Male",
+      "Book Two",
+      "The Blind Bandit",
+      "Bender"
+    ],
+    "image": null,
+    "nation": "Earth Kingdom",
+    "role": "Earth Rumble Promoter, Bounty Hunter, Antagonist, Villain, Fighter",
+    "gender": "Male",
+    "ethnicity": "Earth Kingdom",
+    "titles": [],
+    "expandedView": "### 📖 Overview\r\n\r\nXin Fu was a prominent and ambitious Earth Kingdom fight promoter and bounty hunter. He was the host and referee of the Earth Rumble tournaments in Gaoling and was hired by Lao Beifong to capture Toph. Xin Fu was known for his cunning, persistence, and willingness to use underhanded tactics to achieve his goals. Despite his efforts, he was ultimately outsmarted by Toph and Team Avatar.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Hosted and refereed the Earth Rumble tournaments.\r\n- Hired by Lao Beifong to capture Toph.\r\n- Pursued Toph and Team Avatar across the Earth Kingdom.\r\n- Trapped in a metal box by Toph's metalbending.\r\n- Known for his cunning and persistence.\r\n\r\n### 🎭 Role in the Story\r\n\r\nXin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdom's underground fighting scene and the lengths to which some would go for profit and reputation. His pursuit of Toph and Team Avatar added tension and showcased Toph's ingenuity and the dangers faced by the group.\r\n\r\n### 🤝 Relationships\r\n\r\n- Lao Beifong: Employer who hired Xin Fu to capture Toph.\r\n- Master Yu: Partnered with Xin Fu in the pursuit of Toph.\r\n- Toph Beifong: Target of Xin Fu's bounty hunt; ultimately outsmarted him.\r\n- Earth Rumble fighters: Allies and subordinates.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Cunning and resourceful\r\n- Persistent and ambitious\r\n- Skilled earthbender and fight promoter\r\n\r\n### 💬 Notable Quotes\r\n\r\n> \"Nobody cheats Xin Fu.\"",
+    "metadata": {
+      "badge": "Earth Rumble Promoter",
+      "shortdescription": "Xin Fu is a shrewd, ambitious, and cunning male Earth Kingdom earthbender, fight promoter, and recurring antagonist. He schemes for profit and power as the host of the Earth Rumble tournaments and a persistent bounty hunter.",
+      "slug": "xin-fu",
+      "shortDescription": "Xin Fu is a shrewd, ambitious, and cunning male Earth Kingdom earthbender, fight promoter, and recurring antagonist. He schemes for profit and power as the host of the Earth Rumble tournaments and a persistent bounty hunter.",
+      "fullName": "Xin Fu",
+      "aliases": [],
+      "pronouns": "he/him",
+      "age": 38,
+      "ageRange": "adult",
+      "hairColor": "Black",
+      "eyeColor": "Gray",
+      "skinColor": null,
+      "loveInterest": null,
+      "abilities": {
+        "bending": [
+          "Earthbending"
+        ],
+        "weapons": [],
+        "fightingStyles": [
+          "Earthbending (Hung Gar kung fu)",
+          "Unarmed combat"
+        ],
+        "notableFeats": [
+          "Hosted and refereed the Earth Rumble tournaments.",
+          "Hired by Lao Beifong to capture Toph.",
+          "Pursued Toph and Team Avatar across the Earth Kingdom.",
+          "Trapped in a metal box by Toph's metalbending.",
+          "Known for his cunning and persistence."
+        ]
+      },
+      "affiliations": {
+        "primary": "Earth Rumble",
+        "secondary": [
+          "Lao Beifong (client)",
+          "Earth Rumble fighters"
+        ],
+        "allies": [
+          "Lao Beifong",
+          "Master Yu",
+          "Earth Rumble fighters",
+          "Fire Nation Man"
+        ],
+        "enemies": [
+          "Toph Beifong",
+          "Aang",
+          "Zuko",
+          "Iroh",
+          "Fung"
+        ]
+      },
+      "narrative": {
+        "firstAppearance": "The Blind Bandit",
+        "lastAppearance": "Avatar: The Last Airbender: Quest for Balance",
+        "voicedBy": [
+          "Marc Graue",
+          "Donald Chang (Quest for Balance)"
+        ],
+        "era": "Book Two: Earth",
+        "seasons": [
+          2
+        ],
+        "episodes": [
+          6,
+          11,
+          18,
+          19
+        ],
+        "notableQuotes": [
+          "Nobody cheats Xin Fu."
+        ]
+      },
+      "metrics": {
+        "archetype": "Shrewd Promoter",
+        "moralAlignment": "Neutral Evil",
+        "intelligence": 5,
+        "strength": 5,
+        "charisma": 4,
+        "leadership": 5,
+        "humor": 2
+      },
+      "roles": {
+        "promoter": true,
+        "bountyHunter": true,
+        "antagonist": true,
+        "villain": true,
+        "fighter": true,
+        "bender": true
+      },
+      "relationships": {
+        "laoBeifong": "Employer",
+        "masterYu": "Partner",
+        "toph": "Target",
+        "earthRumbleFighters": "Allies and subordinates"
+      },
+      "psyche": {
+        "personality": [
+          "Cunning",
+          "Resourceful",
+          "Persistent",
+          "Ambitious",
+          "Greedy"
+        ],
+        "emotionalState": [
+          "Determined",
+          "Scheming"
+        ],
+        "motivation": "To gain profit and power through Earth Rumble and bounty hunting."
+      },
+      "physical": {
+        "build": "Muscular",
+        "height": null,
+        "distinguishingFeatures": [
+          "Black hair",
+          "Gray eyes"
+        ],
+        "outfitStyles": [
+          "Earth Rumble attire"
+        ]
+      },
+      "dialogue": [
+        "Nobody cheats Xin Fu."
+      ],
+      "tagCategories": {
+        "nationTags": [
+          "Earth Kingdom"
+        ],
+        "roleTags": [
+          "Promoter",
+          "Bounty Hunter",
+          "Antagonist",
+          "Villain",
+          "Fighter",
+          "Bender"
+        ],
+        "episodeTags": [
+          "Book Two",
+          "The Blind Bandit"
+        ],
+        "identityTags": [
+          "Male",
+          "Underground"
+        ]
+      },
+      "system": {
+        "schemaVersion": "3.0",
+        "createdBy": "AI Assistant",
+        "createdAt": "2024-06-09T00:00:00Z",
+        "flags": []
+      },
+      "__type": "character"
+    }
+  },
+  {
     "id": "yagoda",
     "name": "Yagoda",
     "summary": "",
@@ -15633,6 +17012,357 @@
       "badge": "Healer",
       "shortdescription": "Yagoda is a skilled healer and respected elder of the Northern Water Tribe, known for teaching Katara and her compassion for her people.",
       "slug": "yagoda",
+      "__type": "character"
+    }
+  },
+  {
+    "id": "yangchen",
+    "name": "Yangchen",
+    "summary": "A revered and powerful female Air Nomad Avatar, spiritual leader, and legendary bender, Yangchen was known for her fierce devotion to duty and willingness to do whatever was necessary to maintain global peace and stability.",
+    "type": "character",
+    "slug": "yangchen",
+    "tags": [
+      "Air Nomads",
+      "Avatar",
+      "Mentor",
+      "Female",
+      "Bender",
+      "Spiritual Leader",
+      "Legendary",
+      "Past Avatar",
+      "Diplomat",
+      "Peacemaker",
+      "Spirit World",
+      "Book Two",
+      "The Avatar State"
+    ],
+    "image": null,
+    "nation": "Air Nomads",
+    "role": "Past Avatar, Mentor, Spiritual Leader, Diplomat, Peacemaker",
+    "gender": "Female",
+    "ethnicity": "Air Nomad",
+    "titles": [
+      "Avatar"
+    ],
+    "expandedView": "### 📖 Overview\r\n\r\nYangchen was a revered and powerful Air Nomad Avatar, known for her fierce devotion to her duty and her willingness to do whatever was necessary to maintain global peace and stability. Unlike many Air Nomads, she was not a strict pacifist and understood that maintaining peace sometimes required manipulation, espionage, and force. Her tireless efforts and difficult compromises secured an entire generation of peace after her death, though her focus on humanity's problems inadvertently led to a rise in dark spirits for her successor, Kuruk.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Plagued by visions of her past lives since childhood.\r\n- Defeated the spirit General Old Iron and established a pact to protect his sacred land.\r\n- Became deeply involved in the complex politics of the four nations to prevent war.\r\n- Was so effective as the Avatar that no major wars occurred for a generation after her death.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA legendary past Avatar who serves as a crucial spiritual guide, offering a pragmatic and duty-bound perspective that contrasts with Aang's idealism.\r\n\r\n### 🤝 Relationships\r\n\r\n- Kuruk (Successor)\r\n- Szeto (Predecessor)\r\n- Kavik (Companion, Informant)\r\n- Jetsun (Older Sister Figure, Spiritual Guide)\r\n- Aang (Future Successor)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Dutiful & Determined\r\n- Compassionate & Empathetic\r\n- Pragmatic & Shrewd\r\n- Spiritually Troubled\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.\"\r\n- \"Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.\"\r\n- \"All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us.\"",
+    "metadata": {
+      "badge": "Avatar of Duty",
+      "shortdescription": "A revered and powerful female Air Nomad Avatar, spiritual leader, and legendary bender, Yangchen was known for her fierce devotion to duty and willingness to do whatever was necessary to maintain global peace and stability.",
+      "slug": "yangchen",
+      "shortDescription": "A revered and powerful female Air Nomad Avatar, spiritual leader, and legendary bender, Yangchen was known for her fierce devotion to duty and willingness to do whatever was necessary to maintain global peace and stability.",
+      "fullName": "Yangchen",
+      "aliases": [],
+      "pronouns": "she/her",
+      "age": 100,
+      "ageRange": "elder",
+      "hairColor": null,
+      "eyeColor": "Gray",
+      "skinColor": null,
+      "loveInterest": null,
+      "abilities": {
+        "bending": [
+          "Airbending",
+          "Waterbending",
+          "Earthbending",
+          "Firebending"
+        ],
+        "weapons": [],
+        "fightingStyles": [
+          "Avatar State",
+          "Espionage",
+          "Political Manipulation",
+          "Diplomacy"
+        ],
+        "notableFeats": [
+          "Negotiated a lasting peace treaty with General Old Iron.",
+          "Prevented wars through espionage and manipulation.",
+          "Ushered in a generation of peace following her death.",
+          "Highly revered as a holy figure in the Earth Kingdom."
+        ]
+      },
+      "affiliations": {
+        "primary": "Spirit World",
+        "secondary": [
+          "Yangchen's network"
+        ],
+        "allies": [
+          "Kuruk",
+          "Szeto",
+          "Kavik",
+          "Jetsun",
+          "Aang"
+        ],
+        "enemies": [
+          "General Old Iron",
+          "Dark Spirits"
+        ]
+      },
+      "narrative": {
+        "firstAppearance": "The Avatar State",
+        "lastAppearance": "The Rift",
+        "voicedBy": [
+          "Tress MacNeille"
+        ],
+        "era": "Book Two: Earth",
+        "seasons": [
+          2
+        ],
+        "episodes": [
+          1,
+          19
+        ],
+        "notableQuotes": [
+          "Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.",
+          "Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.",
+          "All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us."
+        ]
+      },
+      "metrics": {
+        "archetype": "The Ruler",
+        "moralAlignment": "Neutral Good",
+        "intelligence": 9,
+        "strength": 8,
+        "charisma": 8,
+        "leadership": 9,
+        "humor": 3
+      },
+      "roles": {
+        "avatar": true,
+        "mentor": true,
+        "spiritualLeader": true,
+        "diplomat": true,
+        "peacemaker": true,
+        "bender": true
+      },
+      "relationships": {
+        "kuruk": "Successor",
+        "szeto": "Predecessor",
+        "kavik": "Companion, Informant",
+        "jetsun": "Older Sister Figure, Spiritual Guide",
+        "aang": "Future Successor"
+      },
+      "psyche": {
+        "personality": [
+          "Dutiful",
+          "Determined",
+          "Compassionate",
+          "Empathetic",
+          "Pragmatic",
+          "Shrewd",
+          "Spiritually Troubled"
+        ],
+        "emotionalState": [
+          "Resolute",
+          "Burdened"
+        ],
+        "motivation": "To maintain balance and peace in the world, no matter the personal cost."
+      },
+      "physical": {
+        "build": "Average",
+        "height": null,
+        "distinguishingFeatures": [
+          "Air Nomad tattoos",
+          "gray eyes"
+        ],
+        "outfitStyles": [
+          "Traditional Air Nomad nun robes"
+        ]
+      },
+      "dialogue": [
+        "Selfless duty calls you to sacrifice your own spiritual needs and do whatever it takes to protect the world.",
+        "Many great and wise Air Nomads have detached themselves and achieved spiritual enlightenment. But the Avatar can never do it.",
+        "All Avatars are connected, like a chain. When you broke off your relationship with Roku, you damaged your connection with all of us."
+      ],
+      "tagCategories": {
+        "nationTags": [
+          "Air Nomads"
+        ],
+        "roleTags": [
+          "Avatar",
+          "Mentor",
+          "Spiritual Leader",
+          "Diplomat",
+          "Peacemaker",
+          "Bender"
+        ],
+        "episodeTags": [
+          "Book Two",
+          "The Avatar State"
+        ],
+        "identityTags": [
+          "Female",
+          "Legendary",
+          "Past Avatar",
+          "Spirit World"
+        ]
+      },
+      "system": {
+        "schemaVersion": "3.0",
+        "createdBy": "AI Assistant",
+        "createdAt": "2024-06-09T00:00:00Z",
+        "flags": []
+      },
+      "__type": "character"
+    }
+  },
+  {
+    "id": "ying",
+    "name": "Ying",
+    "summary": "An optimistic, pregnant Earth Kingdom refugee and nonbender, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar. Her resilience and hope inspired those around her during the war.",
+    "type": "character",
+    "slug": "ying",
+    "tags": [
+      "Earth Kingdom",
+      "Ba Sing Se",
+      "Refugee",
+      "Mother",
+      "Nonbender",
+      "Civilian",
+      "Pregnant",
+      "Hope",
+      "War Survivor",
+      "Female",
+      "Team Avatar",
+      "Book Two",
+      "Serpent’s Pass"
+    ],
+    "image": null,
+    "nation": "Earth Kingdom",
+    "role": "Refugee, Mother, Civilian",
+    "gender": "Female",
+    "ethnicity": "Earth Kingdom",
+    "titles": [],
+    "expandedView": "### 📖 Overview\r\n\r\nYing is a refugee from the Earth Kingdom who, while heavily pregnant, traveled with her husband Than and sister-in-law to Ba Sing Se in search of safety. Forced to flee her village after a Rough Rhinos attack, Ying remained hopeful for her family's future. She met Team Avatar at the Serpent's Pass, where, with their help, she safely crossed the dangerous route and gave birth to her daughter, Hope. Ying’s optimism and resilience inspired those around her, and her story is a testament to perseverance in the face of adversity.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Fled her village after a Rough Rhinos attack, seeking safety in Ba Sing Se.\r\n- Traveled the Serpent’s Pass with Team Avatar while nine months pregnant.\r\n- Gave birth to her daughter, Hope, with Katara’s help.\r\n- Inspired Aang and others with her hope and resilience.\r\n- Witnessed the Fire Nation’s takeover of Ba Sing Se.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA minor but memorable character, Ying’s journey highlights the struggles of refugees and the importance of hope during war. Her story provides emotional depth and a sense of realism to Team Avatar’s travels.\r\n\r\n### 🤝 Relationships\r\n\r\n- Than – Husband; supportive partner during their journey.\r\n- Hope – Daughter, born at the Serpent’s Pass.\r\n- Than’s sister – Traveled with Ying and Than.\r\n- Team Avatar – Allies who helped her reach safety and deliver her baby.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Optimistic and resilient\r\n- Caring and hopeful\r\n- Remains positive in dire circumstances\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"I know what I want to name our baby now. Hope.\"",
+    "metadata": {
+      "badge": "Hopeful Refugee",
+      "shortdescription": "An optimistic, pregnant Earth Kingdom refugee and nonbender, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar. Her resilience and hope inspired those around her during the war.",
+      "slug": "ying",
+      "shortDescription": "An optimistic, pregnant Earth Kingdom refugee and nonbender, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar. Her resilience and hope inspired those around her during the war.",
+      "fullName": "Ying",
+      "aliases": [],
+      "pronouns": "she/her",
+      "age": 25,
+      "ageRange": "adult",
+      "hairColor": "Black",
+      "eyeColor": null,
+      "skinColor": "light",
+      "loveInterest": "Than (husband)",
+      "abilities": {
+        "bending": [],
+        "weapons": [],
+        "fightingStyles": [],
+        "notableFeats": [
+          "Survived a Rough Rhinos attack and fled her village.",
+          "Crossed the Serpent’s Pass while pregnant.",
+          "Gave birth to her daughter, Hope, with Katara’s help."
+        ]
+      },
+      "affiliations": {
+        "primary": "Earth Kingdom",
+        "secondary": [
+          "Ba Sing Se"
+        ],
+        "allies": [
+          "Than",
+          "Hope",
+          "Team Avatar"
+        ],
+        "enemies": []
+      },
+      "narrative": {
+        "firstAppearance": "Zuko Alone",
+        "lastAppearance": "The Awakening (flashback)",
+        "voicedBy": [
+          "Kim Mai Guest"
+        ],
+        "era": "Book Two: Earth",
+        "seasons": [
+          2
+        ],
+        "episodes": [
+          7,
+          8
+        ],
+        "notableQuotes": [
+          "I know what I want to name our baby now. Hope."
+        ]
+      },
+      "metrics": {
+        "archetype": "The Hopeful Mother",
+        "moralAlignment": "Neutral Good",
+        "intelligence": 2,
+        "strength": 2,
+        "charisma": 3,
+        "leadership": 2,
+        "humor": 1
+      },
+      "roles": {
+        "refugee": true,
+        "mother": true,
+        "civilian": true,
+        "nonbender": true
+      },
+      "relationships": {
+        "than": "Husband",
+        "hope": "Daughter",
+        "team-avatar": "Allies"
+      },
+      "psyche": {
+        "personality": [
+          "Optimistic",
+          "Resilient",
+          "Caring",
+          "Hopeful"
+        ],
+        "emotionalState": [
+          "Hopeful",
+          "Worried"
+        ],
+        "motivation": "Protecting her family and maintaining hope."
+      },
+      "physical": {
+        "build": "Average",
+        "height": null,
+        "distinguishingFeatures": [
+          "Black hair",
+          "light skin"
+        ],
+        "outfitStyles": [
+          "Earth Kingdom refugee attire"
+        ]
+      },
+      "dialogue": [
+        "I know what I want to name our baby now. Hope."
+      ],
+      "tagCategories": {
+        "nationTags": [
+          "Earth Kingdom",
+          "Ba Sing Se"
+        ],
+        "roleTags": [
+          "Refugee",
+          "Mother",
+          "Civilian",
+          "Nonbender"
+        ],
+        "episodeTags": [
+          "Book Two",
+          "Serpent’s Pass"
+        ],
+        "identityTags": [
+          "Female",
+          "Pregnant",
+          "War Survivor",
+          "Hope",
+          "Team Avatar"
+        ]
+      },
+      "system": {
+        "schemaVersion": "3.0",
+        "createdBy": "AI Assistant",
+        "createdAt": "2024-06-09T00:00:00Z",
+        "flags": []
+      },
       "__type": "character"
     }
   },

@@ -34,7 +34,6 @@ Roku was the Fire Nation-born Avatar who preceded Aang. He was a wise and compas
 - "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started."
 - "You must be decisive."
 - "Sometimes, the best way to solve your own problems is to help someone else."
-```
 
 ### ✨ Narrative Highlights
 
@@ -67,6 +66,7 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
 - "If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started."
 - "Being the Avatar is an honor, but it's also a great burden."
 - "Some friendships are so strong, they can even transcend lifetimes."
+```
 
 ---
 ```json
@@ -112,7 +112,7 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
   "narrative": {
     "firstAppearance": "Winter Solstice Part 2: Avatar Roku",
     "lastAppearance": "The Rift trilogy",
-    "voicedBy": ["James Garrett", "Andrew Caldwell (young Roku)"] ,
+    "voicedBy": ["James Garrett", "Andrew Caldwell (young Roku)"],
     "era": "Book One: Water, Book Two: Earth, Book Three: Fire",
     "seasons": [1, 2, 3],
     "episodes": [8, 21, 32, 46, 60],
@@ -174,3 +174,4 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
     "flags": []
   }
 }
+```

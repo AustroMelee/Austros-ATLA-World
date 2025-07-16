@@ -94,7 +94,7 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
   "narrative": {
     "firstAppearance": "The Blind Bandit",
     "lastAppearance": "Avatar: The Last Airbender: Quest for Balance",
-    "voicedBy": ["Marc Graue", "Donald Chang (Quest for Balance)"] ,
+    "voicedBy": ["Marc Graue", "Donald Chang (Quest for Balance)"],
     "era": "Book Two: Earth",
     "seasons": [2],
     "episodes": [6, 11, 18, 19],
@@ -153,3 +153,4 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
     "flags": []
   }
 }
+```

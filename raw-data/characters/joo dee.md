@@ -2,7 +2,7 @@
 type: character
 ---
 
-## UI - CARD VIEW
+## 🖼️ UI - CARD VIEW
 
 ```md
 - Name: Joo Dee
@@ -12,8 +12,9 @@ type: character
 - Tags: Earth Kingdom, Ba Sing Se, Tour Guide, Bureaucrat, Female, Nonbender, Book Two, City of Walls and Secrets, Brainwashed, Dai Li, Azula
 ```
 
-## UI - EXPANDED VIEW
+## 📖 UI - EXPANDED VIEW
 
+```md
 ### 📖 Overview
 
 Joo Dee is the ever-smiling, brainwashed tour guide and bureaucrat of Ba Sing Se. She was programmed by the Dai Li to keep visitors compliant and neutralize outside influences, serving as both a guide and later as Supreme Bureaucratic Administrator.
@@ -49,98 +50,172 @@ Joo Dee was one of a number of public servants in Ba Sing Se using the same name
 - Served as tour guide and caretaker for Team Avatar in Ba Sing Se.
 - Maintained composure and compliance under Dai Li brainwashing.
 - Appointed Supreme Bureaucratic Administrator by Azula.
+```
 
 ---
+---
+
+## ⚙️ BACKEND METADATA (v3.0 EXPANSION) - JOO DEE
+
+---
+
+## 🪪 Identity & Demographics
+
 ```json
 {
   "id": "joo-dee",
   "slug": "joo-dee",
-  "type": "character",
-  "badge": "Ba Sing Se Guide",
-  "name": "Joo Dee",
-  "nation": "Earth Kingdom",
-  "shortDescription": "Joo Dee is the ever-smiling, eerily polite government-appointed guide for visitors to Ba Sing Se.",
-  "image": null,
   "fullName": "Joo Dee",
   "role": "Cultural Guide",
   "titles": [],
   "aliases": [],
-  "pronouns": "she/her",
+  "species": "human",
+  "gender": "female",
+  "ageChronological": null,
+  "ageBiological": null,
+  "ageRange": "adult",
+  "birthDate": null,
+  "deathDate": null,
+  "nationality": "Earth Kingdom",
   "ethnicity": "Earth Kingdom",
-  "gender": "Female",
-  "age": null,
-  "hairColor": "Black",
-  "eyeColor": "Grey",
-  "skinColor": "Light tan",
-  "loveInterest": null,
-  "abilities": {
-    "bending": [],
-    "weapons": [],
-    "fightingStyles": [],
-    "notableFeats": [
-      "Served as tour guide and caretaker for Team Avatar in Ba Sing Se.",
-      "Maintained composure and compliance under Dai Li brainwashing.",
-      "Appointed Supreme Bureaucratic Administrator by Azula."
-    ]
+  "nativeLocation": "Ba Sing Se",
+  "socioeconomicStanding": "bureaucrat",
+  "languagesSpoken": ["Standard Language"]
+}
+```
+
+---
+
+## 🔥 Abilities, Skills & Combat Profile
+
+```json
+{
+  "isBender": false,
+  "bendingElement": null,
+  "bendingProficiency": null,
+  "advancedBending": [],
+  "nonBendingSkills": ["diplomacy", "protocol", "public relations", "compliance"],
+  "uniqueTechniques": ["bureaucratic efficiency"],
+  "powerMetrics": {
+    "rawPower": 2,
+    "technicalSkill": 4,
+    "strategicAptitude": 3
   },
-  "affiliations": {
-    "primary": "Dai Li",
-    "secondary": ["Ba Sing Se", "Fire Nation (under Azula)", "Long Feng"],
-    "allies": ["Azula", "Dai Li", "Fire Nation"],
-    "enemies": ["Team Avatar", "Earth Kingdom"]
-  },
-  "narrative": {
-    "firstAppearance": "City of Walls and Secrets",
-    "lastAppearance": "Going Home Again",
-    "voicedBy": "Lauren Tom (ATLA), Suzie Yeung (Quest for Balance)",
-    "era": "Book Two: Earth",
-    "seasons": [2],
-    "episodes": [14, 17],
-    "notableQuotes": [
-      "You're in Ba Sing Se now. Everyone is safe here."
-    ]
-  },
-  "metrics": {
-    "archetype": "Brainwashed Bureaucrat",
-    "moralAlignment": "Lawful Neutral",
-    "intelligence": 4,
-    "strength": 2,
-    "charisma": 4,
-    "leadership": 3,
-    "humor": 1
-  },
-  "roles": {
-    "tourGuide": true,
-    "bureaucrat": true
-  },
-  "relationships": {
-    "daiLi": "Controllers",
-    "azula": "Superior",
-    "teamAvatar": "Charges"
-  },
-  "psyche": {
-    "personality": ["Cheerful", "Compliant", "Mechanical", "Diplomatic"],
-    "emotionalState": ["Calm", "Controlled"],
-    "motivation": "To maintain order and compliance in Ba Sing Se."
-  },
-  "physical": {
-    "build": "Average",
-    "height": null,
-    "distinguishingFeatures": ["Black hair", "Grey eyes", "Light tan skin"]
-  },
-  "dialogue": [
-    "You're in Ba Sing Se now. Everyone is safe here."
+  "combatStyle": "none",
+  "vulnerabilities": ["brainwashing", "lack of autonomy"],
+  "isLegendaryFighter": false,
+  "notableFeats": [
+    "Served as tour guide and caretaker for Team Avatar in Ba Sing Se.",
+    "Maintained composure and compliance under Dai Li brainwashing.",
+    "Appointed Supreme Bureaucratic Administrator by Azula."
+  ]
+}
+```
+
+---
+
+## 🧭 Affiliations, Politics & Alignment
+
+```json
+{
+  "currentAffiliations": ["Dai Li", "Ba Sing Se"],
+  "pastAffiliations": ["Fire Nation (under Azula)", "Long Feng"],
+  "allegianceHistory": [],
+  "isRoyalty": false,
+  "politicalPower": "bureaucratic",
+  "politicalLeanings": ["compliance", "order"],
+  "moralAlignment": "lawful neutral",
+  "moralCompassDrift": true
+}
+```
+
+---
+
+## 🎭 Narrative Metrics
+
+```json
+{
+  "narrativeFunction": "comic relief, bureaucratic foil",
+  "screenTimeLevel": "minor",
+  "firstAppearance": "City of Walls and Secrets",
+  "finalAppearance": "Going Home Again",
+  "deathStatus": "alive",
+  "causeOfDeath": null,
+  "narrativeArcs": [
+    { "arcType": "compliance", "status": "ongoing", "summary": "Maintains order and compliance in Ba Sing Se under the Dai Li and Azula." }
   ],
-  "tags": ["Earth Kingdom", "Ba Sing Se", "Tour Guide", "Bureaucrat", "Book Two", "City of Walls and Secrets"],
+  "keyTropes": ["The Brainwashed", "The Bureaucrat", "Stepford Smiler"]
+}
+```
+
+---
+
+## 🤝 Relational Matrix
+
+```json
+{
+  "relationships": [
+    { "characterId": "dai-li", "relationshipType": "controller", "status": "dominant", "history": "Brainwashed and controlled by the Dai Li." },
+    { "characterId": "azula", "relationshipType": "superior", "status": "subordinate", "history": "Served as Supreme Bureaucratic Administrator under Azula." },
+    { "characterId": "team-avatar", "relationshipType": "charges", "status": "neutral", "history": "Served as tour guide and caretaker for Team Avatar." },
+    { "characterId": "long-feng", "relationshipType": "secondary affiliation", "status": "past", "history": "Worked under Long Feng's regime before Azula's takeover." }
+  ],
+  "groupMemberships": [
+    { "groupId": "ba-sing-se-bureaucracy", "roleInGroup": "guide" }
+  ],
+  "petCompanions": []
+}
+```
+
+---
+
+## 🧠 Psycho-Emotional Profile
+
+```json
+{
+  "positiveTraits": ["cheerful", "compliant", "diplomatic", "calm"],
+  "negativeTraits": ["mechanical", "emotionally distant", "lacks autonomy"],
+  "motivations": ["maintain order", "comply with authority"],
+  "fears": ["displeasing superiors", "chaos"],
+  "internalConflicts": ["obedience vs. autonomy"],
+  "emotionalWounds": ["brainwashing by Dai Li"],
+  "copingMechanisms": ["smiling", "repeating official lines"],
+  "worldview": "Order and compliance are the highest virtues."
+}
+```
+
+---
+
+## 📦 Physicality & Presentation
+
+```json
+{
+  "heightEstimate": "Average",
+  "notableFeatures": ["Black hair", "Grey eyes", "Light tan skin", "perpetual smile"],
+  "outfitStyles": ["Ba Sing Se bureaucrat attire"],
+  "signaturePossessions": [],
+  "ageProgression": false,
+  "voiceActor": ["Lauren Tom (ATLA)", "Suzie Yeung (Quest for Balance)"]
+}
+```
+
+---
+
+## 🧱 Semantic & Thematic Index
+
+```json
+{
+  "archetype": "The Brainwashed Bureaucrat",
+  "thematicKeywords": ["compliance", "order", "brainwashing", "bureaucracy", "control", "facade"],
   "tagCategories": {
-    "nationTags": ["Earth Kingdom", "Ba Sing Se"],
-    "roleTags": ["Tour Guide", "Bureaucrat"],
-    "episodeTags": ["Book Two", "City of Walls and Secrets"]
-  },
-  "system": {
-    "schemaVersion": "3.0",
-    "createdBy": "AI Assistant",
-    "createdAt": "2024-06-09T00:00:00Z",
-    "flags": []
+    "narrativeTags": ["comic relief", "bureaucratic foil", "brainwashed"],
+    "combatTags": [],
+    "relationshipTags": ["servant of Dai Li", "subordinate to Azula", "guide to Team Avatar"],
+    "emotionTags": ["cheerful", "mechanical"],
+    "politicalTags": ["Ba Sing Se bureaucracy"],
+    "arcTags": ["city of walls and secrets", "brainwashing"],
+    "worldTags": ["Earth Kingdom", "Ba Sing Se"],
+    "triviaTags": ["multiple Joo Dees", "perpetual smile"]
   }
 }
+```

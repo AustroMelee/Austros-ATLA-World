@@ -1,110 +1,222 @@
 ---
 type: character
 ---
-## UI - CARD VIEW
+
+## 🖼️ UI - CARD VIEW
 
 ```md
 - Name: Fire Nation Man
 - Nation: Earth Kingdom
-- Badge: Earth Rumble Fighter
-- Short Description: Fire Nation Man is a professional earthbending fighter in the Earth Rumble tournaments. His stage persona is a Fire Nation heel, designed to be hated and quickly defeated to excite the crowd, though he is actually from the Earth Kingdom.
+- Short Description: A professional earthbender whose stage persona is a Fire Nation heel, playing the villain to excite the crowd at Earth Rumble tournaments.
 ```
 
-## UI - EXPANDED VIEW
+## 📖 UI - EXPANDED VIEW
 
-Fire Nation Man was an earthbender who fought in the Earth Rumble tournaments in Gaoling. His stage name and persona were designed to generate audience enthusiasm by playing the villain, but he was not actually a Fire Nation citizen. An immigrant from the Si Wong Desert, he specialized in dirt-based attacks and showmanship. He was quickly defeated by The Boulder and later by Toph Beifong. His persona included a Fire Nation flag, red cloak, and a stereotypical Fire Nation hairstyle, and he would sing the Fire Nation anthem before matches.
+```md
+### 📖 Overview
+
+An immigrant from the Si Wong Desert, "Fire Nation Man" is a professional earthbender who fights in the Earth Rumble tournaments. His stage persona—a red cloak, Fire Nation flag, and singing the Fire Nation anthem—is a deliberate act to portray himself as a villain, or "heel," to rile up the audience and amplify the drama.
+
+### ✨ Narrative Highlights
+
+- Competed in Earth Rumble VI as a theatrical stage villain.
+- Was quickly defeated by both The Boulder and Toph Beifong.
+- Demonstrated a commitment to showmanship over actual victory.
+
+### 🎭 Role in the Story
+
+A minor character serving as comic relief and establishing the entertainment-focused world of the Gaoling earthbending circuit.
+
+### 🤝 Relationships
+
+- **Xin Fu** – His promoter and the organizer of the Earth Rumble tournament.
+- **The Boulder** – Rival who defeated him in the ring.
+- **Toph Beifong** – Rival who also easily defeated him.
+
+### 🌟 Notable Traits
+
+- Dramatic and thoroughly committed to his performance.
+- A showman at heart, prioritizing entertainment over winning.
+- Confident in his stage persona, despite his lack of fighting prowess.
+
+### 💬 Notable Quotes
+
+- "Fire Lord, my flame burns for thee!"
+```
 
 ---
+
+## 🪪 Identity & Demographics
+
 ```json
 {
   "id": "fire-nation-man",
   "slug": "fire-nation-man",
-  "type": "character",
-  "badge": "Earth Rumble Fighter",
-  "name": "Fire Nation Man",
-  "nation": "Earth Kingdom",
-  "shortDescription": "Fire Nation Man is a professional earthbending fighter in the Earth Rumble tournaments. His stage persona is a Fire Nation heel, designed to be hated and quickly defeated to excite the crowd, though he is actually from the Earth Kingdom.",
-  "image": null,
   "fullName": "Fire Nation Man",
   "role": "Earth Rumble Fighter",
   "titles": [],
   "aliases": [],
-  "pronouns": "he/him",
+  "species": "human",
+  "gender": "male",
+  "ageChronological": null,
+  "ageBiological": null,
+  "ageRange": "adult",
+  "birthDate": null,
+  "deathDate": null,
+  "nationality": "Earth Kingdom",
   "ethnicity": "Earth Kingdom",
-  "gender": "Male",
-  "age": null,
-  "hairColor": "Brown",
-  "eyeColor": null,
-  "skinColor": null,
-  "loveInterest": null,
-  "abilities": {
-    "bending": ["Earthbending"],
-    "weapons": [],
-    "fightingStyles": ["Dirt-based earthbending", "Showmanship"],
-    "notableFeats": [
-      "Professional earthbending fighter in Earth Rumble tournaments.",
-      "Specialized in dirt-based attacks and dramatic entrances.",
-      "Played the heel persona to excite the crowd."
-    ]
+  "nativeLocation": "Si Wong Desert, Earth Kingdom",
+  "socioeconomicStanding": "commoner",
+  "languagesSpoken": ["Standard Language"]
+}
+```
+
+---
+
+## 🔥 Abilities, Skills & Combat Profile
+
+```json
+{
+  "isBender": true,
+  "bendingElement": "earth",
+  "bendingProficiency": "proficient",
+  "advancedBending": [],
+  "nonBendingSkills": ["showmanship"],
+  "uniqueTechniques": ["dirt-based attacks"],
+  "powerMetrics": {
+    "rawPower": 4,
+    "technicalSkill": 3,
+    "strategicAptitude": 2
   },
-  "affiliations": {
-    "primary": "Earth Rumble",
-    "secondary": [],
-    "allies": ["Earth Rumble fighters", "Xin Fu"],
-    "enemies": ["Toph Beifong"]
-  },
-  "narrative": {
-    "firstAppearance": "The Blind Bandit",
-    "lastAppearance": "The Blind Bandit",
-    "voicedBy": null,
-    "era": "Book Two: Earth",
-    "seasons": [2],
-    "episodes": [6],
-    "notableQuotes": [
-      "Fire Lord, my flame burns for thee!"
-    ]
-  },
-  "metrics": {
-    "archetype": "Heel Performer",
-    "moralAlignment": "Chaotic Neutral",
-    "intelligence": 3,
-    "strength": 4,
-    "charisma": 4,
-    "leadership": 1,
-    "humor": 3
-  },
-  "roles": {
-    "fighter": true,
-    "performer": true
-  },
-  "relationships": {
-    "xinFu": "Promoter",
-    "theBoulder": "Rival",
-    "toph": "Rival"
-  },
-  "psyche": {
-    "personality": ["Dramatic", "Showy", "Comedic", "Competitive"],
-    "emotionalState": ["Confident", "Playful"],
-    "motivation": "To entertain the crowd and win matches."
-  },
-  "physical": {
-    "build": "Average",
-    "height": null,
-    "distinguishingFeatures": ["Brown hair", "Fire Nation costume"]
-  },
-  "dialogue": [
-    "Fire Lord, my flame burns for thee!"
+  "combatStyle": "showy",
+  "vulnerabilities": ["stage persona limits tactics"],
+  "isLegendaryFighter": false,
+  "notableFeats": [
+    "Professional earthbending fighter in Earth Rumble tournaments.",
+    "Played the heel persona to excite the crowd.",
+    "Quickly defeated by The Boulder and Toph."
+  ]
+}
+```
+
+---
+
+## 🧭 Affiliations, Politics & Alignment
+
+```json
+{
+  "currentAffiliations": ["Earth Rumble"],
+  "pastAffiliations": [],
+  "allegianceHistory": [],
+  "isRoyalty": false,
+  "politicalPower": "none",
+  "politicalLeanings": ["performer"],
+  "moralAlignment": "chaotic neutral",
+  "moralCompassDrift": false
+}
+```
+
+---
+
+## 🎭 Narrative Metrics
+
+```json
+{
+  "narrativeFunction": "comic relief",
+  "screenTimeLevel": "minor",
+  "firstAppearance": "The Blind Bandit",
+  "finalAppearance": "The Blind Bandit",
+  "deathStatus": "alive",
+  "causeOfDeath": null,
+  "narrativeArcs": [],
+  "keyTropes": ["Heel Performer", "Comic Relief"]
+}
+```
+
+---
+
+## 🤝 Relational Matrix
+
+```json
+{
+  "relationships": [
+    {
+      "characterId": "xin-fu",
+      "relationshipType": "promoter",
+      "status": "neutral",
+      "history": "Fought in tournaments promoted by Xin Fu."
+    },
+    {
+      "characterId": "the-boulder",
+      "relationshipType": "rival",
+      "status": "resolved",
+      "history": "Quickly defeated by The Boulder in Earth Rumble VI."
+    },
+    {
+      "characterId": "toph-beifong",
+      "relationshipType": "rival",
+      "status": "resolved",
+      "history": "Quickly defeated by Toph in Earth Rumble VI."
+    }
   ],
-  "tags": ["Earth Kingdom", "Earth Rumble", "Fighter", "Performer", "Book Two", "The Blind Bandit"],
+  "groupMemberships": [
+    { "groupId": "earth-rumble", "roleInGroup": "performer" }
+  ],
+  "petCompanions": []
+}
+```
+
+---
+
+## 🧠 Psycho-Emotional Profile
+
+```json
+{
+  "positiveTraits": ["dramatic", "showy", "confident"],
+  "negativeTraits": ["over-the-top", "ineffective fighter"],
+  "motivations": ["entertaining the crowd"],
+  "fears": ["being unmemorable"],
+  "internalConflicts": [],
+  "emotionalWounds": [],
+  "copingMechanisms": ["performing for the audience"],
+  "worldview": "Winning isn't everything—sometimes you just need to put on a good show."
+}
+```
+
+---
+
+## 📦 Physicality & Presentation
+
+```json
+{
+  "heightEstimate": "Average",
+  "notableFeatures": ["Fire Nation costume", "red cloak"],
+  "outfitStyles": ["theatrical earthbender attire", "Fire Nation flag"],
+  "signaturePossessions": [],
+  "ageProgression": false,
+  "voiceActor": []
+}
+```
+
+---
+
+## 🧱 Semantic & Thematic Index
+
+```json
+{
+  "archetype": "The Performer",
+  "thematicKeywords": ["showmanship", "entertainment", "performance", "villainy", "earthbending"],
   "tagCategories": {
-    "nationTags": ["Earth Kingdom"],
-    "roleTags": ["Fighter", "Performer"],
-    "episodeTags": ["Book Two", "The Blind Bandit"]
-  },
-  "system": {
-    "schemaVersion": "3.0",
-    "createdBy": "AI Assistant",
-    "createdAt": "2024-06-09T00:00:00Z",
-    "flags": []
+    "narrativeTags": ["performer", "comic relief"],
+    "combatTags": ["earthbender"],
+    "relationshipTags": [],
+    "emotionTags": ["confident"],
+    "politicalTags": [],
+    "arcTags": [],
+    "worldTags": ["Earth Kingdom", "Earth Rumble", "Gaoling"],
+    "triviaTags": ["stage villain"]
   }
 }
+```
+
+---

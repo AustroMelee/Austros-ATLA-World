@@ -14,6 +14,7 @@ type: character
 
 ## UI - EXPANDED VIEW
 
+```md
 ### 📖 Overview
 
 Ming was a compassionate guard at the Capital City Prison in the Fire Nation. She is best known for her kindness toward Iroh during his imprisonment, often sneaking him rare teas and extra food. Her empathy and gentle nature set her apart from the other guards, and her actions made Iroh's days in prison more bearable.
@@ -45,6 +46,7 @@ Ming appears in "The Day of Black Sun, Part 1: The Invasion" as Iroh's primary c
 - Showed compassion to Iroh during his imprisonment.
 - Snuck in white jade tea and extra food for Iroh.
 - Heeded Iroh's warning and avoided the Day of Black Sun chaos.
+```
 
 ---
 ```json
@@ -137,3 +139,4 @@ Ming appears in "The Day of Black Sun, Part 1: The Invasion" as Iroh's primary c
     "flags": []
   }
 }
+```

@@ -2,7 +2,7 @@
 type: character
 ---
 
-## 🖼️ UI - CARD VIEW
+## UI - CARD VIEW
 
 ```md
 - Name: Michi
@@ -12,7 +12,7 @@ type: character
 - Tags: Fire Nation, Noblewoman, Mother, Florist, Female, Adult, Supportive, Protective Parent, Book Two, Book Three, New Ozai, Postwar
 ```
 
-## 📖 UI - EXPANDED VIEW
+## UI - EXPANDED VIEW
 
 ```md
 ### 📖 Overview
@@ -34,13 +34,13 @@ A supporting character whose arc highlights the tension between loyalty to famil
 
 ### 🤝 Relationships
 
-- **Ukano** – Husband (estranged); former governor of New Ozai.
-- **Mai** – Daughter; Michi is strict but caring, encouraging Mai to blossom and seek new challenges.
-- **Tom-Tom** – Son; Michi is protective and deeply concerned for his safety.
-- **Mura** – Sister; business partner in the flower shop.
-- **Warden** – Sibling; warden of the Boiling Rock prison.
-- **Fire Nation** – Ally by birth and marriage.
-- **Yung, Omashu Resistance** – Enemies during the occupation of Omashu.
+- Ukano – Husband (estranged); former governor of New Ozai.
+- Mai – Daughter; Michi is strict but caring, encouraging Mai to blossom and seek new challenges.
+- Tom-Tom – Son; Michi is protective and deeply concerned for his safety.
+- Mura – Sister; business partner in the flower shop.
+- Warden – Sibling; warden of the Boiling Rock prison.
+- Fire Nation – Ally by birth and marriage.
+- Yung, Omashu Resistance – Enemies during the occupation of Omashu.
 
 ### 🌟 Notable Traits
 
@@ -52,175 +52,107 @@ A supporting character whose arc highlights the tension between loyalty to famil
 ### 💬 Notable Quotes
 
 - "I finally realized he cares more about politics than his own children's safety. So we're here now, on our own."
-
 ```
 
 ---
----
-
-## ⚙️ BACKEND METADATA (v3.0 EXPANSION) - MICHI
-
----
-
-## 🪪 Identity & Demographics
-
 ```json
 {
   "id": "michi",
   "slug": "michi",
+  "type": "character",
+  "badge": "Noble Florist",
+  "name": "Michi",
+  "nation": "Fire Nation",
+  "shortDescription": "A caring, resilient, and supportive adult female noblewoman and florist, Michi is known for her compassion, emotional strength, and for ultimately choosing her family's safety over politics during the postwar era.",
+  "image": null,
   "fullName": "Michi",
   "role": "Florist, Noblewoman, Mother",
-  "badge": "Noble Florist",
   "titles": ["Lady Michi"],
   "aliases": [],
-  "species": "human",
-  "gender": "female",
-  "ageChronological": null,
-  "ageBiological": null,
-  "ageRange": "adult",
-  "birthDate": null,
-  "deathDate": null,
-  "nationality": "Fire Nation",
+  "pronouns": "she/her",
   "ethnicity": "Fire Nation",
-  "nativeLocation": "Fire Nation",
-  "currentLocation": "Fire Nation (postwar)",
-  "socioeconomicStanding": "nobility",
-  "languagesSpoken": ["Standard Language"]
-}
-```
-
----
-
-## 🔥 Abilities, Skills & Combat Profile
-
-```json
-{
-  "isBender": false,
-  "bendingElement": null,
-  "bendingProficiency": null,
-  "advancedBending": [],
-  "nonBendingSkills": ["floristry", "household management", "emotional support"],
-  "uniqueTechniques": [],
-  "powerMetrics": {
-    "rawPower": 1,
-    "technicalSkill": 3,
-    "strategicAptitude": 4
+  "gender": "Female",
+  "age": null,
+  "hairColor": "Black",
+  "eyeColor": null,
+  "skinColor": null,
+  "loveInterest": "Ukano (estranged)",
+  "abilities": {
+    "bending": [],
+    "weapons": [],
+    "fightingStyles": [],
+    "notableFeats": [
+      "Maintained a high-status household in the Fire Nation and New Ozai.",
+      "Separated from Ukano to protect her children.",
+      "Helped run a flower shop with her sister Mura."
+    ]
   },
-  "combatStyle": null,
-  "vulnerabilities": ["emotional stress", "family in danger"],
-  "isLegendaryFighter": false,
-  "notableFeats": [
-    "Maintained a high-status household in the Fire Nation and New Ozai.",
-    "Separated from Ukano to protect her children.",
-    "Helped run a flower shop with her sister Mura."
-  ]
-}
-```
-
----
-
-## 🧭 Affiliations, Politics & Alignment
-
-```json
-{
-  "currentAffiliations": ["Mura's Flower Shop"],
-  "pastAffiliations": ["Fire Nation Nobility", "New Ozai (as governor's wife)", "Ukano's household"],
-  "allegianceHistory": [
-    { "affiliation": "Fire Nation Nobility", "startDate": null, "endDate": "postwar", "reasonForLeaving": "Separated from Ukano, left political life." }
+  "affiliations": {
+    "primary": "Fire Nation",
+    "secondary": ["Mura's Flower Shop", "Fire Nation Nobility", "New Ozai (as governor's wife)", "Ukano's household"],
+    "allies": ["Mai", "Tom-Tom", "Mura", "Warden"],
+    "enemies": ["Yung", "Omashu Resistance"]
+  },
+  "narrative": {
+    "firstAppearance": "Return to Omashu",
+    "lastAppearance": "Ashes of the Academy",
+    "voicedBy": "Grey DeLisle",
+    "era": "Book Two: Earth, Book Three: Fire",
+    "seasons": [2, 3],
+    "episodes": [],
+    "notableQuotes": [
+      "I finally realized he cares more about politics than his own children's safety. So we're here now, on our own."
+    ]
+  },
+  "metrics": {
+    "archetype": "Protective Parent",
+    "moralAlignment": "Lawful Good",
+    "intelligence": 5,
+    "strength": 3,
+    "charisma": 5,
+    "leadership": 4,
+    "humor": 3
+  },
+  "roles": {
+    "noblewoman": true,
+    "florist": true,
+    "mother": true
+  },
+  "relationships": {
+    "ukano": "Husband (estranged)",
+    "mai": "Daughter",
+    "tom-tom": "Son",
+    "mura": "Sister",
+    "warden": "Sibling"
+  },
+  "psyche": {
+    "personality": ["Caring", "Supportive", "Resilient", "Emotional"],
+    "emotionalState": ["Protective", "Family-first"],
+    "motivation": "To protect her children and provide a stable, loving home."
+  },
+  "physical": {
+    "build": "Average",
+    "height": null,
+    "distinguishingFeatures": ["Black hair"],
+    "outfitStyles": ["Noble Fire Nation attire", "Florist's dress"]
+  },
+  "dialogue": [
+    "I finally realized he cares more about politics than his own children's safety. So we're here now, on our own."
   ],
-  "isRoyalty": false,
-  "politicalPower": "minor (by marriage)",
-  "politicalLeanings": ["traditionalist", "family-first"],
-  "moralAlignment": "lawful good",
-  "moralCompassDrift": false
-}
-```
-
----
-
-## 🎭 Narrative Metrics
-
-```json
-{
-  "narrativeFunction": "supporting",
-  "screenTimeLevel": "minor",
-  "firstAppearance": "Return to Omashu",
-  "finalAppearance": "Ashes of the Academy",
-  "deathStatus": "alive",
-  "causeOfDeath": null,
-  "narrativeArcs": [
-    { "arcType": "family loyalty", "status": "completed", "summary": "Chose her children's safety over political allegiance." },
-    { "arcType": "personal growth", "status": "completed", "summary": "Transitioned from status-focused noblewoman to independent, supportive parent." }
-  ],
-  "keyTropes": ["Protective Parent", "Noblewoman", "Estranged Spouse", "Supportive Mother"]
-}
-```
-
----
-
-## 🤝 Relational Matrix
-
-```json
-{
-  "relationships": [
-    { "characterId": "ukano", "relationshipType": "spouse (estranged)", "status": "negative", "history": "Separated after Ukano prioritized politics over family." },
-    { "characterId": "mai", "relationshipType": "parent", "status": "positive", "history": "Strict but caring mother, encouraged Mai to seek new opportunities." },
-    { "characterId": "tom-tom", "relationshipType": "parent", "status": "positive", "history": "Protective and loving mother." },
-    { "characterId": "mura", "relationshipType": "sibling", "status": "positive", "history": "Business partner and emotional support." },
-    { "characterId": "warden", "relationshipType": "sibling", "status": "neutral", "history": "Sibling, warden of the Boiling Rock." }
-  ],
-  "groupMemberships": [],
-  "petCompanions": []
-}
-```
-
----
-
-## 🧠 Psycho-Emotional Profile
-
-```json
-{
-  "positiveTraits": ["caring", "supportive", "resilient", "emotional"],
-  "negativeTraits": ["elitist (initially)", "rule-oriented", "emotional (under stress)"],
-  "motivations": ["protecting her children", "providing a stable home", "supporting family"],
-  "fears": ["losing her children", "family in danger"],
-  "internalConflicts": ["loyalty to husband vs. children's safety", "status vs. family"],
-  "emotionalWounds": ["estrangement from Ukano", "political turmoil"],
-  "copingMechanisms": ["working with Mura", "focusing on children"],
-  "worldview": "Family is more important than politics or status."
-}
-```
-
----
-
-## 📦 Physicality & Presentation
-
-```json
-{
-  "heightEstimate": "Average",
-  "notableFeatures": ["Black hair"],
-  "outfitStyles": ["Noble Fire Nation attire", "Florist's dress"],
-  "signaturePossessions": [],
-  "ageProgression": false,
-  "voiceActor": ["Grey DeLisle"]
-}
-```
-
----
-
-## 🧱 Semantic & Thematic Index
-
-```json
-{
-  "archetype": "Protective Parent",
-  "thematicKeywords": ["family", "loyalty", "change", "parenthood", "politics", "postwar Fire Nation"],
+  "tags": ["Fire Nation", "Noblewoman", "Mother", "Florist", "Book Two", "Book Three", "New Ozai", "Postwar"],
   "tagCategories": {
-    "narrativeTags": ["supporting", "parent", "noblewoman", "estranged spouse"],
-    "relationshipTags": ["mother of Mai", "mother of Tom-Tom", "sister of Mura", "estranged wife of Ukano"],
-    "emotionTags": ["caring", "emotional", "resilient"],
-    "politicalTags": ["Fire Nation nobility", "postwar adjustment"],
-    "arcTags": ["family loyalty", "personal growth"],
-    "worldTags": ["Fire Nation", "New Ozai", "Mura's Flower Shop"]
+    "nationTags": ["Fire Nation"],
+    "roleTags": ["Noblewoman", "Florist", "Mother"],
+    "arcTags": ["Family loyalty", "Personal growth"],
+    "relationshipTags": ["Mother of Mai", "Mother of Tom-Tom", "Sister of Mura", "Estranged wife of Ukano"],
+    "emotionTags": ["Caring", "Emotional", "Resilient"],
+    "politicalTags": ["Fire Nation nobility", "Postwar adjustment"]
+  },
+  "system": {
+    "schemaVersion": "3.0",
+    "createdBy": "AI Assistant",
+    "createdAt": "2024-06-09T00:00:00Z",
+    "flags": []
   }
 }
 ```
