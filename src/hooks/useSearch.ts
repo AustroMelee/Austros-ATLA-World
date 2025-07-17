@@ -28,6 +28,7 @@ export function useSearch(
           'nation',
           'role',
           'tags',
+          'searchAliases',
           'bendingElement',
         ],
       },
@@ -70,14 +71,18 @@ export function useSearch(
     if (!skipPartialTagMatch) {
       allEntities.forEach((entity) => {
         if (entity.tags && entity.tags.some(tag => tag.toLowerCase().includes(lowerQuery))) {
-          if (!resultMap.has(entity.id)) {
+          const existing = resultMap.get(entity.id);
+          // Only add a partial match if an exact match for that same token doesn't already exist
+          const hasExactTagOrAliasMatch = existing && existing.matchedFields.some(field =>
+            (field.field === 'tags' || field.field === 'searchAliases') && field.token === query
+          );
+          if (!existing) {
             resultMap.set(entity.id, {
               entity,
               matchedFields: [{ field: 'partialTag', token: query }],
             });
-          } else {
+          } else if (!hasExactTagOrAliasMatch) {
             // If already present, add partialTag to matchedFields if not already present
-            const existing = resultMap.get(entity.id)!;
             if (!existing.matchedFields.some(mf => mf.field === 'partialTag' && mf.token === query)) {
               existing.matchedFields.push({ field: 'partialTag', token: query });
             }
@@ -96,7 +101,7 @@ export function useSearch(
     //        0 = other
     function getMatchPriority(matchedFields: MatchedField[]): number {
       if (matchedFields.some(f => f.field === 'name')) return 5;
-      if (matchedFields.some(f => f.field === 'tags')) return 4;
+      if (matchedFields.some(f => f.field === 'tags' || f.field === 'searchAliases')) return 4;
       if (matchedFields.some(f => f.field === 'gender' || f.field === 'role')) return 3;
       if (matchedFields.some(f => f.field === 'main')) return 2;
       if (matchedFields.some(f => f.field === 'partialTag')) return 1;
@@ -104,10 +109,10 @@ export function useSearch(
     }
 
     function getTagMatchScore(entity: EnrichedEntity): number {
-      if (!entity.tags || !Array.isArray(entity.tags)) return 0;
-      const lowerTags = entity.tags.map(t => t.toLowerCase());
-      // 1. Exact tag match
-      if (lowerTags.includes(lowerQuery)) return 4;
+      const lowerTags = (entity.tags || []).map(t => t.toLowerCase());
+      const lowerAliases = (entity.searchAliases || []).map(a => a.toLowerCase());
+      // 1. Exact tag or alias match
+      if (lowerTags.includes(lowerQuery) || lowerAliases.includes(lowerQuery)) return 4;
 
       // 2. Gender+age/role match for gendered queries
       const genderedQueries = ['boy', 'girl', 'male', 'female'];

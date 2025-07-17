@@ -1,0 +1,6722 @@
+{
+  "112_years_old": {
+    "displayName": "112 Years Old",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "a": {
+    "displayName": "A",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "aangs_animal_guide": {
+    "displayName": "Aangs Animal Guide",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "abandoned_siege": {
+    "displayName": "Abandoned Siege",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "abusive_parent": {
+    "displayName": "Abusive Parent",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "achieved_enlightenment": {
+    "displayName": "Achieved Enlightenment",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "acrobat": {
+    "displayName": "Acrobat",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "acrobatic_fighter": {
+    "displayName": "Acrobatic Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "action_dad": {
+    "displayName": "Action Dad",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "adaptation": {
+    "displayName": "Adaptation",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "admiral": {
+    "displayName": "Admiral",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "admiral_defected": {
+    "displayName": "Admiral Defected",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "adviser": {
+    "displayName": "Adviser",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "advisor_to_pakku": {
+    "displayName": "Advisor To Pakku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "affectionate": {
+    "displayName": "Affectionate",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "afraid_of_fire": {
+    "displayName": "Afraid Of Fire",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "aggressive": {
+    "displayName": "Aggressive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "agna_qela": {
+    "displayName": "Agna Qela",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "agni_kai": {
+    "displayName": "Agni Kai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "agni_kai_vs_zuko": {
+    "displayName": "Agni Kai Vs Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "air_nomads": {
+    "displayName": "Air Nomads",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "airbender": {
+    "displayName": "Airbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ally": {
+    "displayName": "Ally",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ally_of_aang": {
+    "displayName": "Ally Of Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ally_of_team_avatar": {
+    "displayName": "Ally Of Team Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ally_of_xin_fu": {
+    "displayName": "Ally Of Xin Fu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ally_of_zuko": {
+    "displayName": "Ally Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ambassador": {
+    "displayName": "Ambassador",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ambitious": {
+    "displayName": "Ambitious",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "androgynous_appearance": {
+    "displayName": "Androgynous Appearance",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "angry": {
+    "displayName": "Angry",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "animal_companion": {
+    "displayName": "Animal Companion",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "annihilated_southern_water_tribe": {
+    "displayName": "Annihilated Southern Water Tribe",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "antagonist": {
+    "displayName": "Antagonist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "antihero": {
+    "displayName": "Antihero",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "antisexism_advocate": {
+    "displayName": "Antisexism Advocate",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "apathetic": {
+    "displayName": "Apathetic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "appas_lost_days": {
+    "displayName": "Appas Lost Days",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "apprentice_to_aunt_wu": {
+    "displayName": "Apprentice To Aunt Wu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "archer": {
+    "displayName": "Archer",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "arena_fighter": {
+    "displayName": "Arena Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "aristocracy": {
+    "displayName": "Aristocracy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "arranged_marriage": {
+    "displayName": "Arranged Marriage",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "arrogant": {
+    "displayName": "Arrogant",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ascended_to_godhood": {
+    "displayName": "Ascended To Godhood",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ascended_to_spirit_world": {
+    "displayName": "Ascended To Spirit World",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "assassin": {
+    "displayName": "Assassin",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "assassinated": {
+    "displayName": "Assassinated",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "assistant": {
+    "displayName": "Assistant",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "attempted_to_flood_gaipan": {
+    "displayName": "Attempted To Flood Gaipan",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "attempted_to_trigger_avatar_state": {
+    "displayName": "Attempted To Trigger Avatar State",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "aunt_wus_fortune_salon": {
+    "displayName": "Aunt Wus Fortune Salon",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "avatar": {
+    "displayName": "Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "avatar_state": {
+    "displayName": "Avatar State",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "azulas_namesake": {
+    "displayName": "Azulas Namesake",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "azulas_team": {
+    "displayName": "Azulas Team",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "b": {
+    "displayName": "B",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ba_sing_se": {
+    "displayName": "Ba Sing Se",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ba_sing_se_bureaucracy": {
+    "displayName": "Ba Sing Se Bureaucracy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "background_motivation": {
+    "displayName": "Background Motivation",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bad_artist": {
+    "displayName": "Bad Artist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bad_tea_maker": {
+    "displayName": "Bad Tea Maker",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "badass_normal": {
+    "displayName": "Badass Normal",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "badgermole_tattoo": {
+    "displayName": "Badgermole Tattoo",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "baked_for_the_temple": {
+    "displayName": "Baked For The Temple",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "baker": {
+    "displayName": "Baker",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "banished_from_fire_nation": {
+    "displayName": "Banished From Fire Nation",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "banished_zuko": {
+    "displayName": "Banished Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "became_a_master_swordsman": {
+    "displayName": "Became A Master Swordsman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "became_a_tea_discoverer": {
+    "displayName": "Became A Tea Discoverer",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "became_fire_lord": {
+    "displayName": "Became Fire Lord",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "became_the_moon_spirit": {
+    "displayName": "Became The Moon Spirit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "becomes_the_master": {
+    "displayName": "Becomes The Master",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "befriending_aang": {
+    "displayName": "Befriending Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bender": {
+    "displayName": "Bender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "best_friend_of_aang": {
+    "displayName": "Best Friend Of Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "best_friend_of_roku": {
+    "displayName": "Best Friend Of Roku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "best_friend_of_the_duke": {
+    "displayName": "Best Friend Of The Duke",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "best_friends_to_enemies": {
+    "displayName": "Best Friends To Enemies",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "betrayed_azula": {
+    "displayName": "Betrayed Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "betrayed_by_friends": {
+    "displayName": "Betrayed By Friends",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "betrayed_roku": {
+    "displayName": "Betrayed Roku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "betrothed_to_yue": {
+    "displayName": "Betrothed To Yue",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bitter": {
+    "displayName": "Bitter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bladesmith": {
+    "displayName": "Bladesmith",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "blind_bandit": {
+    "displayName": "Blind Bandit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bloodbender": {
+    "displayName": "Bloodbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bloodbender_inventor": {
+    "displayName": "Bloodbender Inventor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bloodbending": {
+    "displayName": "Bloodbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "blue_fire": {
+    "displayName": "Blue Fire",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "blue_spirit": {
+    "displayName": "Blue Spirit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "boiling_rock_escapee": {
+    "displayName": "Boiling Rock Escapee",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "boiling_rock_incident": {
+    "displayName": "Boiling Rock Incident",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bombastic": {
+    "displayName": "Bombastic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "book_1_villain": {
+    "displayName": "Book 1 Villain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "book_2_villain": {
+    "displayName": "Book 2 Villain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "book_one": {
+    "displayName": "Book One",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "book_three": {
+    "displayName": "Book Three",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "book_two": {
+    "displayName": "Book Two",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "boomerang": {
+    "displayName": "Boomerang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bored": {
+    "displayName": "Bored",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bounty_hunter": {
+    "displayName": "Bounty Hunter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "boyfriend_of_mai": {
+    "displayName": "Boyfriend Of Mai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "boyfriend_of_malina": {
+    "displayName": "Boyfriend Of Malina",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "boyfriend_of_suki": {
+    "displayName": "Boyfriend Of Suki",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brainwashed": {
+    "displayName": "Brainwashed",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brainwashed_by_dai_li": {
+    "displayName": "Brainwashed By Dai Li",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brainwashing": {
+    "displayName": "Brainwashing",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brave": {
+    "displayName": "Brave",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bridge_to_spirit_world": {
+    "displayName": "Bridge To Spirit World",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brilliant": {
+    "displayName": "Brilliant",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "broke_up_with_zuko": {
+    "displayName": "Broke Up With Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brooding": {
+    "displayName": "Brooding",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brother_of_azula": {
+    "displayName": "Brother Of Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brother_of_iroh": {
+    "displayName": "Brother Of Iroh",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brother_of_katara": {
+    "displayName": "Brother Of Katara",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brother_of_ozai": {
+    "displayName": "Brother Of Ozai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brutal": {
+    "displayName": "Brutal",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "brute_strength": {
+    "displayName": "Brute Strength",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bubbly": {
+    "displayName": "Bubbly",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "builder": {
+    "displayName": "Builder",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "bureaucratic_foil": {
+    "displayName": "Bureaucratic Foil",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "business_partner_of_loban": {
+    "displayName": "Business Partner Of Loban",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "businessman": {
+    "displayName": "Businessman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "c": {
+    "displayName": "C",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cabbage_cart_destruction": {
+    "displayName": "Cabbage Cart Destruction",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cabbage_corp": {
+    "displayName": "Cabbage Corp",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "calligrapher": {
+    "displayName": "Calligrapher",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "calm": {
+    "displayName": "Calm",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cant_flirt": {
+    "displayName": "Cant Flirt",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cant_read": {
+    "displayName": "Cant Read",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "caring": {
+    "displayName": "Caring",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "carved_betrothal_necklace": {
+    "displayName": "Carved Betrothal Necklace",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "changed_her_face": {
+    "displayName": "Changed Her Face",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "charismatic": {
+    "displayName": "Charismatic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "charismatic_leader": {
+    "displayName": "Charismatic Leader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "charming": {
+    "displayName": "Charming",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cheerful": {
+    "displayName": "Cheerful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "chews_wheat": {
+    "displayName": "Chews Wheat",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "chiblocking": {
+    "displayName": "Chiblocking",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "chief": {
+    "displayName": "Chief",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "chief_of_police": {
+    "displayName": "Chief Of Police",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "chieftain": {
+    "displayName": "Chieftain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "child_prodigy": {
+    "displayName": "Child Prodigy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "childhood_trauma": {
+    "displayName": "Childhood Trauma",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "chin_the_conqueror": {
+    "displayName": "Chin The Conqueror",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "chosen_one": {
+    "displayName": "Chosen One",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "circus_performer": {
+    "displayName": "Circus Performer",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "citizen_of_ba_sing_se": {
+    "displayName": "Citizen Of Ba Sing Se",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "city_of_walls_and_secrets": {
+    "displayName": "City Of Walls And Secrets",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "civilian": {
+    "displayName": "Civilian",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "classmate_of_shoji": {
+    "displayName": "Classmate Of Shoji",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "club_fighter": {
+    "displayName": "Club Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cofounder_of_republic_city": {
+    "displayName": "Cofounder Of Republic City",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "combustionbender": {
+    "displayName": "Combustionbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "comic": {
+    "displayName": "Comic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "comic_relief": {
+    "displayName": "Comic Relief",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "coming_of_age": {
+    "displayName": "Coming Of Age",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "commander": {
+    "displayName": "Commander",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "commander_of_earth_kingdom_troops": {
+    "displayName": "Commander Of Earth Kingdom Troops",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "communicates_with_eyes": {
+    "displayName": "Communicates With Eyes",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "compassionate": {
+    "displayName": "Compassionate",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "composed": {
+    "displayName": "Composed",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "confidant_of_longshot": {
+    "displayName": "Confidant Of Longshot",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "confidant_of_smellerbee": {
+    "displayName": "Confidant Of Smellerbee",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "confident": {
+    "displayName": "Confident",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "conflicted": {
+    "displayName": "Conflicted",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "conflicted_initially": {
+    "displayName": "Conflicted Initially",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "confrontational": {
+    "displayName": "Confrontational",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "confronted_mothers_killer": {
+    "displayName": "Confronted Mothers Killer",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "confronted_ozai_in_prison": {
+    "displayName": "Confronted Ozai In Prison",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "confronted_zuko_in_ba_sing_se": {
+    "displayName": "Confronted Zuko In Ba Sing Se",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "conqueror": {
+    "displayName": "Conqueror",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cool_old_guy": {
+    "displayName": "Cool Old Guy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "corrupted_katara": {
+    "displayName": "Corrupted Katara",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "council": {
+    "displayName": "Council",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "council_chairman": {
+    "displayName": "Council Chairman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "council_elder": {
+    "displayName": "Council Elder",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "council_member": {
+    "displayName": "Council Member",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "council_of_elders": {
+    "displayName": "Council Of Elders",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "courageous": {
+    "displayName": "Courageous",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cranefish_town": {
+    "displayName": "Cranefish Town",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "creative": {
+    "displayName": "Creative",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cruel": {
+    "displayName": "Cruel",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "crush_on_aang": {
+    "displayName": "Crush On Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "crush_on_katara": {
+    "displayName": "Crush On Katara",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "crush_on_on_ji": {
+    "displayName": "Crush On On Ji",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "crush_on_sokka": {
+    "displayName": "Crush On Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cultural_minister": {
+    "displayName": "Cultural Minister",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cunning": {
+    "displayName": "Cunning",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cynical": {
+    "displayName": "Cynical",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "d": {
+    "displayName": "D",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dai_li": {
+    "displayName": "Dai Li",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dai_li_style": {
+    "displayName": "Dai Li Style",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dance_partner": {
+    "displayName": "Dance Partner",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dance_party": {
+    "displayName": "Dance Party",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dark_mentor": {
+    "displayName": "Dark Mentor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dark_mirror": {
+    "displayName": "Dark Mirror",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "daughter_of_arnook": {
+    "displayName": "Daughter Of Arnook",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "daughter_of_ozai": {
+    "displayName": "Daughter Of Ozai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "daughter_of_ukano": {
+    "displayName": "Daughter Of Ukano",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "day_of_black_sun_invasion": {
+    "displayName": "Day Of Black Sun Invasion",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "deadpan_snarker": {
+    "displayName": "Deadpan Snarker",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "deceptive": {
+    "displayName": "Deceptive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "decisive_later": {
+    "displayName": "Decisive Later",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "defeat_of_ozai": {
+    "displayName": "Defeat Of Ozai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "defeated_azula": {
+    "displayName": "Defeated Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "defeated_by_aang": {
+    "displayName": "Defeated By Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "defeated_by_azula": {
+    "displayName": "Defeated By Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "defeated_by_zhao": {
+    "displayName": "Defeated By Zhao",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "defensive": {
+    "displayName": "Defensive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "defensive_firebending": {
+    "displayName": "Defensive Firebending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "demanding": {
+    "displayName": "Demanding",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "deposed_by_azula": {
+    "displayName": "Deposed By Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "descendant_of_roku": {
+    "displayName": "Descendant Of Roku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "deserter": {
+    "displayName": "Deserter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "determined": {
+    "displayName": "Determined",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "deuteragonist": {
+    "displayName": "Deuteragonist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "devoted": {
+    "displayName": "Devoted",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dictator": {
+    "displayName": "Dictator",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "died_at_lake_laogai": {
+    "displayName": "Died At Lake Laogai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "diplomat": {
+    "displayName": "Diplomat",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "disability_superpower": {
+    "displayName": "Disability Superpower",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "disciplined": {
+    "displayName": "Disciplined",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ditzy": {
+    "displayName": "Ditzy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "domineering": {
+    "displayName": "Domineering",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dragon_of_the_west": {
+    "displayName": "Dragon Of The West",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "drank_cactus_juice": {
+    "displayName": "Drank Cactus Juice",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dual_hook_swords": {
+    "displayName": "Dual Hook Swords",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dual_wielder": {
+    "displayName": "Dual Wielder",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "dutiful": {
+    "displayName": "Dutiful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "e": {
+    "displayName": "E",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earth_kingdom": {
+    "displayName": "Earth Kingdom",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earth_kingdom_fortress": {
+    "displayName": "Earth Kingdom Fortress",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earth_rumble": {
+    "displayName": "Earth Rumble",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earthbender": {
+    "displayName": "Earthbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earthbending_with_face": {
+    "displayName": "Earthbending With Face",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earthbending_with_hands": {
+    "displayName": "Earthbending With Hands",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earthen_fire_refinery": {
+    "displayName": "Earthen Fire Refinery",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "eastern_air_temple": {
+    "displayName": "Eastern Air Temple",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "easygoing": {
+    "displayName": "Easygoing",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "eats_hay": {
+    "displayName": "Eats Hay",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "eccentric": {
+    "displayName": "Eccentric",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "eccentric_sage": {
+    "displayName": "Eccentric Sage",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "egomaniac": {
+    "displayName": "Egomaniac",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "elder": {
+    "displayName": "Elder",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "embittered": {
+    "displayName": "Embittered",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "embracing_identity": {
+    "displayName": "Embracing Identity",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "emotional": {
+    "displayName": "Emotional",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "empathetic": {
+    "displayName": "Empathetic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "enemy_of_aang": {
+    "displayName": "Enemy Of Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "enemy_of_azula": {
+    "displayName": "Enemy Of Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "enemy_of_team_avatar": {
+    "displayName": "Enemy Of Team Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "enemy_of_zuko": {
+    "displayName": "Enemy Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "energetic": {
+    "displayName": "Energetic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "energybending": {
+    "displayName": "Energybending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "entrepreneur": {
+    "displayName": "Entrepreneur",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "escaped_prison": {
+    "displayName": "Escaped Prison",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "estranged_wife_of_ukano": {
+    "displayName": "Estranged Wife Of Ukano",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "evil_counterpart": {
+    "displayName": "Evil Counterpart",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "f": {
+    "displayName": "F",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "face_bending": {
+    "displayName": "Face Bending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fall_of_ba_sing_se": {
+    "displayName": "Fall Of Ba Sing Se",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "family_loyalty": {
+    "displayName": "Family Loyalty",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_azula": {
+    "displayName": "Father Of Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_azulon": {
+    "displayName": "Father Of Azulon",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_houting": {
+    "displayName": "Father Of Houting",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_iroh": {
+    "displayName": "Father Of Iroh",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_katara": {
+    "displayName": "Father Of Katara",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_lau_ganlan": {
+    "displayName": "Father Of Lau Ganlan",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_lu_ten": {
+    "displayName": "Father Of Lu Ten",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_ozai": {
+    "displayName": "Father Of Ozai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_sokka": {
+    "displayName": "Father Of Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_toph": {
+    "displayName": "Father Of Toph",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_yue": {
+    "displayName": "Father Of Yue",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "father_of_zuko": {
+    "displayName": "Father Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "favoritism": {
+    "displayName": "Favoritism",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fearful": {
+    "displayName": "Fearful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "female": {
+    "displayName": "Female",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fighter": {
+    "displayName": "Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "figurehead": {
+    "displayName": "Figurehead",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "final_boss": {
+    "displayName": "Final Boss",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_lord": {
+    "displayName": "Fire Lord",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation": {
+    "displayName": "Fire Nation",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation_circus": {
+    "displayName": "Fire Nation Circus",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation_navy": {
+    "displayName": "Fire Nation Navy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation_nobility": {
+    "displayName": "Fire Nation Nobility",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation_prisoner": {
+    "displayName": "Fire Nation Prisoner",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation_royal_family": {
+    "displayName": "Fire Nation Royal Family",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation_royalty": {
+    "displayName": "Fire Nation Royalty",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation_school": {
+    "displayName": "Fire Nation School",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "firebender": {
+    "displayName": "Firebender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "firebending_master": {
+    "displayName": "Firebending Master",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "firebending_prodigy": {
+    "displayName": "Firebending Prodigy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "firebreath": {
+    "displayName": "Firebreath",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "first_deserter": {
+    "displayName": "First Deserter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "first_earth_king_to_leave_ba_sing_se": {
+    "displayName": "First Earth King To Leave Ba Sing Se",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "first_love_yue": {
+    "displayName": "First Love Yue",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "flight": {
+    "displayName": "Flight",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "florist": {
+    "displayName": "Florist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fog_of_lost_souls": {
+    "displayName": "Fog Of Lost Souls",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "foggy_swamp": {
+    "displayName": "Foggy Swamp",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "follower_of_jet": {
+    "displayName": "Follower Of Jet",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "foodloving": {
+    "displayName": "Foodloving",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "forgave_zuko": {
+    "displayName": "Forgave Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "forged_space_sword": {
+    "displayName": "Forged Space Sword",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fortuneteller": {
+    "displayName": "Fortuneteller",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "found_by_zuko": {
+    "displayName": "Found By Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "found_his_mother": {
+    "displayName": "Found His Mother",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "founder": {
+    "displayName": "Founder",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "freed_by_zuko": {
+    "displayName": "Freed By Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "freedom_fighter": {
+    "displayName": "Freedom Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "freedom_fighters": {
+    "displayName": "Freedom Fighters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend": {
+    "displayName": "Friend",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_aang": {
+    "displayName": "Friend Of Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_azula_former": {
+    "displayName": "Friend Of Azula Former",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_gyatso": {
+    "displayName": "Friend Of Gyatso",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_kanna": {
+    "displayName": "Friend Of Kanna",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_katara": {
+    "displayName": "Friend Of Katara",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_mai": {
+    "displayName": "Friend Of Mai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_momo": {
+    "displayName": "Friend Of Momo",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_nini": {
+    "displayName": "Friend Of Nini",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_roku": {
+    "displayName": "Friend Of Roku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_smellerbee": {
+    "displayName": "Friend Of Smellerbee",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_sokka": {
+    "displayName": "Friend Of Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_susu": {
+    "displayName": "Friend Of Susu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_teo_and_the_duke": {
+    "displayName": "Friend Of Teo And The Duke",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_the_avatar": {
+    "displayName": "Friend Of The Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_the_duke": {
+    "displayName": "Friend Of The Duke",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friend_of_ty_lee": {
+    "displayName": "Friend Of Ty Lee",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "friendly": {
+    "displayName": "Friendly",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "from_entertainer_to_patriot": {
+    "displayName": "From Entertainer To Patriot",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "from_follower_to_coleader": {
+    "displayName": "From Follower To Coleader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "from_follower_to_friend": {
+    "displayName": "From Follower To Friend",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "from_outcast_to_leader": {
+    "displayName": "From Outcast To Leader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "from_unlucky_vendor_to_mogul": {
+    "displayName": "From Unlucky Vendor To Mogul",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "from_wild_to_royal_pet": {
+    "displayName": "From Wild To Royal Pet",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "frozen_in_iceberg": {
+    "displayName": "Frozen In Iceberg",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fruit_pie_attack": {
+    "displayName": "Fruit Pie Attack",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fruit_pie_attacks": {
+    "displayName": "Fruit Pie Attacks",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fugitive": {
+    "displayName": "Fugitive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "g": {
+    "displayName": "G",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "gaoling": {
+    "displayName": "Gaoling",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "general": {
+    "displayName": "General",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "general_retired": {
+    "displayName": "General Retired",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "gentle": {
+    "displayName": "Gentle",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "gentle_giant": {
+    "displayName": "Gentle Giant",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "girl": {
+    "displayName": "Girl",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "girlfriend_of_hide_ambiguous": {
+    "displayName": "Girlfriend Of Hide Ambiguous",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "girlfriend_of_zuko": {
+    "displayName": "Girlfriend Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "glider": {
+    "displayName": "Glider",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "gloomy": {
+    "displayName": "Gloomy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "goofy": {
+    "displayName": "Goofy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "governors_daughter": {
+    "displayName": "Governors Daughter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "grampakku": {
+    "displayName": "Grampakku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "grand_lotus": {
+    "displayName": "Grand Lotus",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "grand_secretariat": {
+    "displayName": "Grand Secretariat",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "granddaughter_of_gonggong": {
+    "displayName": "Granddaughter Of Gonggong",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "granddaughter_of_roku": {
+    "displayName": "Granddaughter Of Roku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "grandfather_of_iroh": {
+    "displayName": "Grandfather Of Iroh",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "grandfather_of_zuko": {
+    "displayName": "Grandfather Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "grandmother": {
+    "displayName": "Grandmother",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "gray_eyes": {
+    "displayName": "Gray Eyes",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "greatgrandfather_of_zuko": {
+    "displayName": "Greatgrandfather Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "griefstricken": {
+    "displayName": "Griefstricken",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "grieving": {
+    "displayName": "Grieving",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "grows_the_beard": {
+    "displayName": "Grows The Beard",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "guardian_of_avatar": {
+    "displayName": "Guardian Of Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "guerrilla_fighter": {
+    "displayName": "Guerrilla Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "guide_to_team_avatar": {
+    "displayName": "Guide To Team Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "h": {
+    "displayName": "H",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "had_a_second_family": {
+    "displayName": "Had A Second Family",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "had_a_vision_of_roku": {
+    "displayName": "Had A Vision Of Roku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hakodas_forces": {
+    "displayName": "Hakodas Forces",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "handtohand_combat": {
+    "displayName": "Handtohand Combat",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "handtohand_combatant": {
+    "displayName": "Handtohand Combatant",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "harmony_restoration_movement": {
+    "displayName": "Harmony Restoration Movement",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "has_a_dragon": {
+    "displayName": "Has A Dragon",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "has_a_pet_bear": {
+    "displayName": "Has A Pet Bear",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "has_a_scar": {
+    "displayName": "Has A Scar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "has_a_shirshu": {
+    "displayName": "Has A Shirshu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "has_six_sisters": {
+    "displayName": "Has Six Sisters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hates_being_called_a_monster": {
+    "displayName": "Hates Being Called A Monster",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hates_firebending": {
+    "displayName": "Hates Firebending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hates_orange": {
+    "displayName": "Hates Orange",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hates_shoes": {
+    "displayName": "Hates Shoes",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hates_snow": {
+    "displayName": "Hates Snow",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "haunted": {
+    "displayName": "Haunted",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "head_chieftain": {
+    "displayName": "Head Chieftain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "head_of_dai_li": {
+    "displayName": "Head Of Dai Li",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "headband": {
+    "displayName": "Headband",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "healer": {
+    "displayName": "Healer",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "heat_redirection": {
+    "displayName": "Heat Redirection",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "heelface_turn": {
+    "displayName": "Heelface Turn",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "helped_zuko": {
+    "displayName": "Helped Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "helper_of_appa": {
+    "displayName": "Helper Of Appa",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "herbalist": {
+    "displayName": "Herbalist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hero": {
+    "displayName": "Hero",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hidden_heart_of_gold": {
+    "displayName": "Hidden Heart Of Gold",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hiraa": {
+    "displayName": "Hiraa",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hired_by_zuko": {
+    "displayName": "Hired By Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "honorable": {
+    "displayName": "Honorable",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hook_swords": {
+    "displayName": "Hook Swords",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hope": {
+    "displayName": "Hope",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hopeful": {
+    "displayName": "Hopeful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "houting_dynasty": {
+    "displayName": "Houting Dynasty",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "humanitarian": {
+    "displayName": "Humanitarian",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "humble": {
+    "displayName": "Humble",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "humorous": {
+    "displayName": "Humorous",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hundred_year_war": {
+    "displayName": "Hundred Year War",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hunted_her_mother": {
+    "displayName": "Hunted Her Mother",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hunted_iroh": {
+    "displayName": "Hunted Iroh",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "hunted_the_avatar": {
+    "displayName": "Hunted The Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "husband": {
+    "displayName": "Husband",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "husband_of_kanna": {
+    "displayName": "Husband Of Kanna",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "husband_of_kya": {
+    "displayName": "Husband Of Kya",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "husband_of_poppy": {
+    "displayName": "Husband Of Poppy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "husband_of_ursa": {
+    "displayName": "Husband Of Ursa",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "i": {
+    "displayName": "I",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ice_bending": {
+    "displayName": "Ice Bending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "identity_amnesia": {
+    "displayName": "Identity Amnesia",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "immortalized_in_republic_city": {
+    "displayName": "Immortalized In Republic City",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "impulsive": {
+    "displayName": "Impulsive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "innocent": {
+    "displayName": "Innocent",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "insecure": {
+    "displayName": "Insecure",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "instigator_of_war": {
+    "displayName": "Instigator Of War",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "instructor": {
+    "displayName": "Instructor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "insurance_policies": {
+    "displayName": "Insurance Policies",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "interim_fire_lord": {
+    "displayName": "Interim Fire Lord",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "invasion_and_imprisonment": {
+    "displayName": "Invasion And Imprisonment",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "invasion_of_fire_nation": {
+    "displayName": "Invasion Of Fire Nation",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "invented_bloodbending": {
+    "displayName": "Invented Bloodbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "invented_boba_tea": {
+    "displayName": "Invented Boba Tea",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "invented_metalbending": {
+    "displayName": "Invented Metalbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "inventor": {
+    "displayName": "Inventor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "inventor_of_bloodbending": {
+    "displayName": "Inventor Of Bloodbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "irohs_crush": {
+    "displayName": "Irohs Crush",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "jasmine_dragon": {
+    "displayName": "Jasmine Dragon",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "jennamite": {
+    "displayName": "Jennamite",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "jian": {
+    "displayName": "Jian",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "joined_kyoshi_warriors": {
+    "displayName": "Joined Kyoshi Warriors",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "joined_team_avatar": {
+    "displayName": "Joined Team Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "just_a_bear": {
+    "displayName": "Just A Bear",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "justice": {
+    "displayName": "Justice",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "k": {
+    "displayName": "K",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "kataras_necklace": {
+    "displayName": "Kataras Necklace",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "kemurikage_plot": {
+    "displayName": "Kemurikage Plot",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "kidnapped": {
+    "displayName": "Kidnapped",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "killed_by_long_feng": {
+    "displayName": "Killed By Long Feng",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "killed_by_the_narrative": {
+    "displayName": "Killed By The Narrative",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "killed_the_moon_spirit": {
+    "displayName": "Killed The Moon Spirit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "killer_of_jet": {
+    "displayName": "Killer Of Jet",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "kind": {
+    "displayName": "Kind",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "king": {
+    "displayName": "King",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "king_of_omashu": {
+    "displayName": "King Of Omashu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "knew_kataras_grandmother": {
+    "displayName": "Knew Kataras Grandmother",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "knew_sokkas_identity": {
+    "displayName": "Knew Sokkas Identity",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "knife_fighter": {
+    "displayName": "Knife Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "knifethrower": {
+    "displayName": "Knifethrower",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "kyoshi_island": {
+    "displayName": "Kyoshi Island",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "kyoshi_warriors": {
+    "displayName": "Kyoshi Warriors",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "kyoshi_warriors_ally": {
+    "displayName": "Kyoshi Warriors Ally",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "l": {
+    "displayName": "L",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lake_laogai": {
+    "displayName": "Lake Laogai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lake_laogai_conspiracy": {
+    "displayName": "Lake Laogai Conspiracy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lake_laogai_rescue": {
+    "displayName": "Lake Laogai Rescue",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "last_of_his_kind": {
+    "displayName": "Last Of His Kind",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "last_stand_at_southern_air_temple": {
+    "displayName": "Last Stand At Southern Air Temple",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "leader": {
+    "displayName": "Leader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "leader_of_freedom_fighters": {
+    "displayName": "Leader Of Freedom Fighters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "leader_of_her_own_team": {
+    "displayName": "Leader Of Her Own Team",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "leader_of_team_avatar": {
+    "displayName": "Leader Of Team Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "leader_of_the_dai_li": {
+    "displayName": "Leader Of The Dai Li",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "legacy_of_courage": {
+    "displayName": "Legacy Of Courage",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "legendary": {
+    "displayName": "Legendary",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "legendary_archer": {
+    "displayName": "Legendary Archer",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "liberated_ba_sing_se": {
+    "displayName": "Liberated Ba Sing Se",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "liberated_omashu": {
+    "displayName": "Liberated Omashu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lie_detector": {
+    "displayName": "Lie Detector",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lightning": {
+    "displayName": "Lightning",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lightning_generation": {
+    "displayName": "Lightning Generation",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lightning_redirection": {
+    "displayName": "Lightning Redirection",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lightning_redirection_inventor": {
+    "displayName": "Lightning Redirection Inventor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lived_to_102": {
+    "displayName": "Lived To 102",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "longestreigning_fire_lord": {
+    "displayName": "Longestreigning Fire Lord",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "loss_of_home": {
+    "displayName": "Loss Of Home",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "loss_of_yue": {
+    "displayName": "Loss Of Yue",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lost_his_bending": {
+    "displayName": "Lost His Bending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "love_interest": {
+    "displayName": "Love Interest",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "love_interest_of_katara": {
+    "displayName": "Love Interest Of Katara",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "love_interest_of_sokka": {
+    "displayName": "Love Interest Of Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "loves_pai_sho": {
+    "displayName": "Loves Pai Sho",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "loves_tea": {
+    "displayName": "Loves Tea",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "loving": {
+    "displayName": "Loving",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "lower_ring": {
+    "displayName": "Lower Ring",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "loyal": {
+    "displayName": "Loyal",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "m": {
+    "displayName": "M",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mad_genius": {
+    "displayName": "Mad Genius",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "main_antagonist_book_1": {
+    "displayName": "Main Antagonist Book 1",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "makapu_village": {
+    "displayName": "Makapu Village",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "male": {
+    "displayName": "Male",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mama_bear": {
+    "displayName": "Mama Bear",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "manchild": {
+    "displayName": "Manchild",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "maniacal": {
+    "displayName": "Maniacal",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "manicured_claws": {
+    "displayName": "Manicured Claws",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "manipulated_by_long_feng": {
+    "displayName": "Manipulated By Long Feng",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "manipulative": {
+    "displayName": "Manipulative",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "manipulator_of_kuei": {
+    "displayName": "Manipulator Of Kuei",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "marble_trick": {
+    "displayName": "Marble Trick",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mark_of_the_wise": {
+    "displayName": "Mark Of The Wise",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "markswoman": {
+    "displayName": "Markswoman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_airbender": {
+    "displayName": "Master Airbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_bender": {
+    "displayName": "Master Bender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_earthbender": {
+    "displayName": "Master Earthbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_firebender": {
+    "displayName": "Master Firebender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_herbalist": {
+    "displayName": "Master Herbalist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_of_appa": {
+    "displayName": "Master Of Appa",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_swordsman": {
+    "displayName": "Master Swordsman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_tactician": {
+    "displayName": "Master Tactician",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "master_waterbender": {
+    "displayName": "Master Waterbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mastered_bloodbending": {
+    "displayName": "Mastered Bloodbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mastering_the_elements": {
+    "displayName": "Mastering The Elements",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mastermind_of_invasion": {
+    "displayName": "Mastermind Of Invasion",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "maternal_wisdom": {
+    "displayName": "Maternal Wisdom",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "matriarch": {
+    "displayName": "Matriarch",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "meat_and_sarcasm_guy": {
+    "displayName": "Meat And Sarcasm Guy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mechanical": {
+    "displayName": "Mechanical",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "megalomaniacal": {
+    "displayName": "Megalomaniacal",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "melon_lord": {
+    "displayName": "Melon Lord",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "member_of_kyoshi_warriors": {
+    "displayName": "Member Of Kyoshi Warriors",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "member_of_white_lotus": {
+    "displayName": "Member Of White Lotus",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mental_breakdown": {
+    "displayName": "Mental Breakdown",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mentor": {
+    "displayName": "Mentor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mentor_to_aang": {
+    "displayName": "Mentor To Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mentor_to_korra": {
+    "displayName": "Mentor To Korra",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mentor_to_two_avatars": {
+    "displayName": "Mentor To Two Avatars",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mentored_zuko": {
+    "displayName": "Mentored Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mercenary": {
+    "displayName": "Mercenary",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "merchant": {
+    "displayName": "Merchant",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "metalbender_inventor": {
+    "displayName": "Metalbender Inventor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "metalbending_police_force": {
+    "displayName": "Metalbending Police Force",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "midwife": {
+    "displayName": "Midwife",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "military": {
+    "displayName": "Military",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "military_leader": {
+    "displayName": "Military Leader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "minor_antagonist": {
+    "displayName": "Minor Antagonist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "minor_character": {
+    "displayName": "Minor Character",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "misgendered": {
+    "displayName": "Misgendered",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "misnomer_name": {
+    "displayName": "Misnomer Name",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "monarch": {
+    "displayName": "Monarch",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "monk": {
+    "displayName": "Monk",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "monster_of_the_week": {
+    "displayName": "Monster Of The Week",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "moon_spirit": {
+    "displayName": "Moon Spirit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "moral_compass": {
+    "displayName": "Moral Compass",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "most_handsome_warrior_selfproclaimed": {
+    "displayName": "Most Handsome Warrior Selfproclaimed",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother": {
+    "displayName": "Mother",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_azula": {
+    "displayName": "Mother Of Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_faces": {
+    "displayName": "Mother Of Faces",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_katara_and_sokka": {
+    "displayName": "Mother Of Katara And Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_lin": {
+    "displayName": "Mother Of Lin",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_mai": {
+    "displayName": "Mother Of Mai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_suyin": {
+    "displayName": "Mother Of Suyin",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_tenzin": {
+    "displayName": "Mother Of Tenzin",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_tomtom": {
+    "displayName": "Mother Of Tomtom",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mother_of_zuko": {
+    "displayName": "Mother Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "multiple_joo_dees": {
+    "displayName": "Multiple Joo Dees",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mustache": {
+    "displayName": "Mustache",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "my_cabbages": {
+    "displayName": "My Cabbages",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "my_greatest_failure": {
+    "displayName": "My Greatest Failure",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "mystery_character": {
+    "displayName": "Mystery Character",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "n": {
+    "displayName": "N",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "naive": {
+    "displayName": "Naive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "name_means_moon": {
+    "displayName": "Name Means Moon",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "narcissistic": {
+    "displayName": "Narcissistic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "narrator_of_opening_sequence": {
+    "displayName": "Narrator Of Opening Sequence",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "naval_commander": {
+    "displayName": "Naval Commander",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nephew_of_iroh": {
+    "displayName": "Nephew Of Iroh",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "never_shown_firebending_after_defeat": {
+    "displayName": "Never Shown Firebending After Defeat",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "new_ozai": {
+    "displayName": "New Ozai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nobility": {
+    "displayName": "Nobility",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "noblewoman": {
+    "displayName": "Noblewoman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nonbender": {
+    "displayName": "Nonbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nonbender_master": {
+    "displayName": "Nonbender Master",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nonbender_mortal": {
+    "displayName": "Nonbender Mortal",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "none": {
+    "displayName": "None",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "northern_style_waterbending": {
+    "displayName": "Northern Style Waterbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "northern_water_tribe": {
+    "displayName": "Northern Water Tribe",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "not_a_bender": {
+    "displayName": "Not A Bender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nurturing": {
+    "displayName": "Nurturing",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "o": {
+    "displayName": "O",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "obsessive": {
+    "displayName": "Obsessive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "octopus_form": {
+    "displayName": "Octopus Form",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "old_master": {
+    "displayName": "Old Master",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "oldest_earthbender": {
+    "displayName": "Oldest Earthbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "omashu": {
+    "displayName": "Omashu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "one_of_seven_sisters": {
+    "displayName": "One Of Seven Sisters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "oneepisode_wonder": {
+    "displayName": "Oneepisode Wonder",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "opportunistic": {
+    "displayName": "Opportunistic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "optimist": {
+    "displayName": "Optimist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "optimistic": {
+    "displayName": "Optimistic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "order_of_the_white_lotus": {
+    "displayName": "Order Of The White Lotus",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ordered_zukos_death": {
+    "displayName": "Ordered Zukos Death",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "original_antagonist": {
+    "displayName": "Original Antagonist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "originally_voiced_by_mako": {
+    "displayName": "Originally Voiced By Mako",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "outcast": {
+    "displayName": "Outcast",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "overcame_prejudice": {
+    "displayName": "Overcame Prejudice",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "overcame_sexism": {
+    "displayName": "Overcame Sexism",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "overthrew_long_feng": {
+    "displayName": "Overthrew Long Feng",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "overwhelming": {
+    "displayName": "Overwhelming",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "owner_of_bosco": {
+    "displayName": "Owner Of Bosco",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "owner_of_nyla": {
+    "displayName": "Owner Of Nyla",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "p": {
+    "displayName": "P",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "painted_lady": {
+    "displayName": "Painted Lady",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "paranoid": {
+    "displayName": "Paranoid",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "parent": {
+    "displayName": "Parent",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "parental_reconciliation": {
+    "displayName": "Parental Reconciliation",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "parents_are_politicians": {
+    "displayName": "Parents Are Politicians",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "partner_of_katara": {
+    "displayName": "Partner Of Katara",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "passionate_internally": {
+    "displayName": "Passionate Internally",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "past_avatar": {
+    "displayName": "Past Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "patient": {
+    "displayName": "Patient",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "peacemaker": {
+    "displayName": "Peacemaker",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "performer": {
+    "displayName": "Performer",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "perky": {
+    "displayName": "Perky",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "perpetual_smile": {
+    "displayName": "Perpetual Smile",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "persistent": {
+    "displayName": "Persistent",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "personal_growth": {
+    "displayName": "Personal Growth",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "pessimistic": {
+    "displayName": "Pessimistic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "pet_crococat": {
+    "displayName": "Pet Crococat",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "pet_of_earth_king_kuei": {
+    "displayName": "Pet Of Earth King Kuei",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "pet_owner": {
+    "displayName": "Pet Owner",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "philosopher": {
+    "displayName": "Philosopher",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "phoenix_king": {
+    "displayName": "Phoenix King",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "playful": {
+    "displayName": "Playful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "plot_device": {
+    "displayName": "Plot Device",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "plucky": {
+    "displayName": "Plucky",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "poisoned": {
+    "displayName": "Poisoned",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "poisoned_azulon": {
+    "displayName": "Poisoned Azulon",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "poisoner": {
+    "displayName": "Poisoner",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "possessive": {
+    "displayName": "Possessive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "posthumous_character": {
+    "displayName": "Posthumous Character",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "postwar": {
+    "displayName": "Postwar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "postwar_adjustment": {
+    "displayName": "Postwar Adjustment",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "postwar_reunion": {
+    "displayName": "Postwar Reunion",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "pragmatic": {
+    "displayName": "Pragmatic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "precision": {
+    "displayName": "Precision",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "predictable": {
+    "displayName": "Predictable",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "pregnant": {
+    "displayName": "Pregnant",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "pride_before_a_fall": {
+    "displayName": "Pride Before A Fall",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "prideful": {
+    "displayName": "Prideful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "prince": {
+    "displayName": "Prince",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "prince_former": {
+    "displayName": "Prince Former",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "princess": {
+    "displayName": "Princess",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "prison_breakout": {
+    "displayName": "Prison Breakout",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "prison_guard": {
+    "displayName": "Prison Guard",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "prison_rig": {
+    "displayName": "Prison Rig",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "prisoner_of_war": {
+    "displayName": "Prisoner Of War",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "prodigy": {
+    "displayName": "Prodigy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "professional": {
+    "displayName": "Professional",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "progress_and_peace": {
+    "displayName": "Progress And Peace",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "promoter": {
+    "displayName": "Promoter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "protagonist": {
+    "displayName": "Protagonist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "protective": {
+    "displayName": "Protective",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "protector_of_the_duke": {
+    "displayName": "Protector Of The Duke",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "protest_and_resistance": {
+    "displayName": "Protest And Resistance",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "protg_of_jet": {
+    "displayName": "Protg Of Jet",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "proud": {
+    "displayName": "Proud",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "provided_troops_for_invasion": {
+    "displayName": "Provided Troops For Invasion",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "puppet_king": {
+    "displayName": "Puppet King",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "puppetmaster": {
+    "displayName": "Puppetmaster",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "quicktempered": {
+    "displayName": "Quicktempered",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "quiet": {
+    "displayName": "Quiet",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "quiet_one": {
+    "displayName": "Quiet One",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "r": {
+    "displayName": "R",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ran_away_from_home": {
+    "displayName": "Ran Away From Home",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ran_away_to_join_the_circus": {
+    "displayName": "Ran Away To Join The Circus",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rangi": {
+    "displayName": "Rangi",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rarely_speaks": {
+    "displayName": "Rarely Speaks",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reads_auras": {
+    "displayName": "Reads Auras",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reasonable_authority_figure": {
+    "displayName": "Reasonable Authority Figure",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rebel": {
+    "displayName": "Rebel",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rebellious_rich_kid": {
+    "displayName": "Rebellious Rich Kid",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reconciled_with_family": {
+    "displayName": "Reconciled With Family",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "recurring_character": {
+    "displayName": "Recurring Character",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "recurring_gag": {
+    "displayName": "Recurring Gag",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "redemption": {
+    "displayName": "Redemption",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "redemption_arc": {
+    "displayName": "Redemption Arc",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "refers_to_self_in_third_person": {
+    "displayName": "Refers To Self In Third Person",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "refugee": {
+    "displayName": "Refugee",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "regained_memory": {
+    "displayName": "Regained Memory",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reigned_for_75_years": {
+    "displayName": "Reigned For 75 Years",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reignited_romance_with_mai": {
+    "displayName": "Reignited Romance With Mai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rekindled_romance_with_zuko": {
+    "displayName": "Rekindled Romance With Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reliable": {
+    "displayName": "Reliable",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reluctant_hero": {
+    "displayName": "Reluctant Hero",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reluctant_teacher": {
+    "displayName": "Reluctant Teacher",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reluctant_warrior": {
+    "displayName": "Reluctant Warrior",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "republic_city": {
+    "displayName": "Republic City",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "resilient": {
+    "displayName": "Resilient",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "resistance": {
+    "displayName": "Resistance",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "resistance_fighter": {
+    "displayName": "Resistance Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "resourceful": {
+    "displayName": "Resourceful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "responsible": {
+    "displayName": "Responsible",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "retired_bounty_hunter": {
+    "displayName": "Retired Bounty Hunter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reunited_with_kanna": {
+    "displayName": "Reunited With Kanna",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "reunited_with_sisters": {
+    "displayName": "Reunited With Sisters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "revealed_true_self": {
+    "displayName": "Revealed True Self",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "revenge_arc": {
+    "displayName": "Revenge Arc",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "revived_the_avatar": {
+    "displayName": "Revived The Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rival_ally_of_toph": {
+    "displayName": "Rival Ally Of Toph",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rival_of_aang": {
+    "displayName": "Rival Of Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rival_of_sokka": {
+    "displayName": "Rival Of Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rival_of_the_boulder": {
+    "displayName": "Rival Of The Boulder",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rival_of_toph": {
+    "displayName": "Rival Of Toph",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rival_of_zuko": {
+    "displayName": "Rival Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "romantic_interest": {
+    "displayName": "Romantic Interest",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "romantic_interest_of_zuko": {
+    "displayName": "Romantic Interest Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "royal_fire_academy": {
+    "displayName": "Royal Fire Academy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "royal_palace": {
+    "displayName": "Royal Palace",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "royal_pet": {
+    "displayName": "Royal Pet",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "royalty": {
+    "displayName": "Royalty",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ruthless": {
+    "displayName": "Ruthless",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "s": {
+    "displayName": "S",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sacrifice": {
+    "displayName": "Sacrifice",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sacrifice_for_family": {
+    "displayName": "Sacrifice For Family",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sacrificed_herself": {
+    "displayName": "Sacrificed Herself",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sacrificial_lion": {
+    "displayName": "Sacrificial Lion",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sad": {
+    "displayName": "Sad",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sadistic": {
+    "displayName": "Sadistic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sage": {
+    "displayName": "Sage",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sandbender": {
+    "displayName": "Sandbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sarcastic": {
+    "displayName": "Sarcastic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sassy": {
+    "displayName": "Sassy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "saved_by_moon_spirit": {
+    "displayName": "Saved By Moon Spirit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "school_bully": {
+    "displayName": "School Bully",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "schoolyard_rivalry": {
+    "displayName": "Schoolyard Rivalry",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "secondary_antagonist": {
+    "displayName": "Secondary Antagonist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "secret_dance_party": {
+    "displayName": "Secret Dance Party",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "secret_ruler": {
+    "displayName": "Secret Ruler",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "seeks_approval_from_headmaster": {
+    "displayName": "Seeks Approval From Headmaster",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "seismic_sense": {
+    "displayName": "Seismic Sense",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "serpents_pass": {
+    "displayName": "Serpents Pass",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "servant_of_dai_li": {
+    "displayName": "Servant Of Dai Li",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sexist_formerly": {
+    "displayName": "Sexist Formerly",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "shadowed_waterbender_in_opening": {
+    "displayName": "Shadowed Waterbender In Opening",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sheltered": {
+    "displayName": "Sheltered",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sheltered_aristocrat": {
+    "displayName": "Sheltered Aristocrat",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "shirshu_rider": {
+    "displayName": "Shirshu Rider",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "shu_jing": {
+    "displayName": "Shu Jing",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "shuriken": {
+    "displayName": "Shuriken",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "si_wong_desert": {
+    "displayName": "Si Wong Desert",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "siege_of_the_north": {
+    "displayName": "Siege Of The North",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sifu_hotman": {
+    "displayName": "Sifu Hotman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "silent": {
+    "displayName": "Silent",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sister_of_mura": {
+    "displayName": "Sister Of Mura",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sister_of_sokka": {
+    "displayName": "Sister Of Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sister_of_zuko": {
+    "displayName": "Sister Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "six_legs": {
+    "displayName": "Six Legs",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "skilled_at_shurikenjutsu": {
+    "displayName": "Skilled At Shurikenjutsu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sky_bison": {
+    "displayName": "Sky Bison",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "smitten": {
+    "displayName": "Smitten",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "smug_snake": {
+    "displayName": "Smug Snake",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sokkas_father": {
+    "displayName": "Sokkas Father",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sokkas_first_girlfriend": {
+    "displayName": "Sokkas First Girlfriend",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "son_of_azulon": {
+    "displayName": "Son Of Azulon",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "son_of_hakoda": {
+    "displayName": "Son Of Hakoda",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "son_of_kanna": {
+    "displayName": "Son Of Kanna",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "son_of_ozai": {
+    "displayName": "Son Of Ozai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "son_of_sozin": {
+    "displayName": "Son Of Sozin",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "son_of_tyro": {
+    "displayName": "Son Of Tyro",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "son_of_ursa": {
+    "displayName": "Son Of Ursa",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "southern_air_temple": {
+    "displayName": "Southern Air Temple",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "southern_reconstruction": {
+    "displayName": "Southern Reconstruction",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "southern_tribe_elder": {
+    "displayName": "Southern Tribe Elder",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "southern_water_tribe": {
+    "displayName": "Southern Water Tribe",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sozins_comet": {
+    "displayName": "Sozins Comet",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sozins_comet_is_named_for_him": {
+    "displayName": "Sozins Comet Is Named For Him",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "space_sword": {
+    "displayName": "Space Sword",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spirit": {
+    "displayName": "Spirit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spirit_advisor": {
+    "displayName": "Spirit Advisor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spirit_oasis": {
+    "displayName": "Spirit Oasis",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spirit_water": {
+    "displayName": "Spirit Water",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spirit_world": {
+    "displayName": "Spirit World",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spirit_world_resident": {
+    "displayName": "Spirit World Resident",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spiritual": {
+    "displayName": "Spiritual",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spiritual_guidance": {
+    "displayName": "Spiritual Guidance",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spiritual_guide": {
+    "displayName": "Spiritual Guide",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spiritual_leader": {
+    "displayName": "Spiritual Leader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "spiritual_vision": {
+    "displayName": "Spiritual Vision",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "stage_villain": {
+    "displayName": "Stage Villain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "started_the_hundred_year_war": {
+    "displayName": "Started The Hundred Year War",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "starter_villain": {
+    "displayName": "Starter Villain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "statue_in_republic_city": {
+    "displayName": "Statue In Republic City",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "statusseeker": {
+    "displayName": "Statusseeker",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "stepgrandfather_of_sokka": {
+    "displayName": "Stepgrandfather Of Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "stern_teacher": {
+    "displayName": "Stern Teacher",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "stiletto": {
+    "displayName": "Stiletto",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "stoic": {
+    "displayName": "Stoic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "strategic": {
+    "displayName": "Strategic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "strategist": {
+    "displayName": "Strategist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "strict": {
+    "displayName": "Strict",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "strong": {
+    "displayName": "Strong",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "strongarm": {
+    "displayName": "Strongarm",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "stubborn": {
+    "displayName": "Stubborn",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "student": {
+    "displayName": "Student",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "student_of_badgermoles": {
+    "displayName": "Student Of Badgermoles",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "student_of_hama": {
+    "displayName": "Student Of Hama",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "student_of_jeong_jeong": {
+    "displayName": "Student Of Jeong Jeong",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "student_of_pakku": {
+    "displayName": "Student Of Pakku",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "student_of_piandao": {
+    "displayName": "Student Of Piandao",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "student_of_toph": {
+    "displayName": "Student Of Toph",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "subordinate_to_azula": {
+    "displayName": "Subordinate To Azula",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "subplot": {
+    "displayName": "Subplot",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "supporting": {
+    "displayName": "Supporting",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "supporting_character": {
+    "displayName": "Supporting Character",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "supportive": {
+    "displayName": "Supportive",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "surrogate_parent": {
+    "displayName": "Surrogate Parent",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "survivor": {
+    "displayName": "Survivor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sword_fighter": {
+    "displayName": "Sword Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "swordsman": {
+    "displayName": "Swordsman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "t": {
+    "displayName": "T",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tactician": {
+    "displayName": "Tactician",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tail_whip": {
+    "displayName": "Tail Whip",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "taught_the_avatar": {
+    "displayName": "Taught The Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "teacher": {
+    "displayName": "Teacher",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "teacher_of_aang": {
+    "displayName": "Teacher Of Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "teacher_of_katara": {
+    "displayName": "Teacher Of Katara",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "teacher_of_sokka": {
+    "displayName": "Teacher Of Sokka",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "teacher_of_zhao": {
+    "displayName": "Teacher Of Zhao",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "teacher_of_zuko": {
+    "displayName": "Teacher Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "teaches_chiblocking": {
+    "displayName": "Teaches Chiblocking",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "team_avatar": {
+    "displayName": "Team Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "team_mom": {
+    "displayName": "Team Mom",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "team_pet": {
+    "displayName": "Team Pet",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "team_tyro": {
+    "displayName": "Team Tyro",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "teamwork": {
+    "displayName": "Teamwork",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "technical": {
+    "displayName": "Technical",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ten_tons": {
+    "displayName": "Ten Tons",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "terrible_balance": {
+    "displayName": "Terrible Balance",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "terrorized_village": {
+    "displayName": "Terrorized Village",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_atoner": {
+    "displayName": "The Atoner",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_avatar": {
+    "displayName": "The Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_avatar_state": {
+    "displayName": "The Avatar State",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_beach": {
+    "displayName": "The Beach",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_big_guy": {
+    "displayName": "The Big Guy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_blind_bandit": {
+    "displayName": "The Blind Bandit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_boy_in_the_iceberg": {
+    "displayName": "The Boy In The Iceberg",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_chessmaster": {
+    "displayName": "The Chessmaster",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_day_of_black_sun": {
+    "displayName": "The Day Of Black Sun",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_deserter": {
+    "displayName": "The Deserter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_ditz": {
+    "displayName": "The Ditz",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_dragon": {
+    "displayName": "The Dragon",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_emperor": {
+    "displayName": "The Emperor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_exile": {
+    "displayName": "The Exile",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_fortuneteller": {
+    "displayName": "The Fortuneteller",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_good_captain": {
+    "displayName": "The Good Captain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_good_king": {
+    "displayName": "The Good King",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_goth": {
+    "displayName": "The Goth",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_headband": {
+    "displayName": "The Headband",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_heart": {
+    "displayName": "The Heart",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_hermit": {
+    "displayName": "The Hermit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_lancer": {
+    "displayName": "The Lancer",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_leader": {
+    "displayName": "The Leader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_lost_lenore": {
+    "displayName": "The Lost Lenore",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_man_behind_the_man": {
+    "displayName": "The Man Behind The Man",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_promise": {
+    "displayName": "The Promise",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_rival": {
+    "displayName": "The Rival",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_smart_guy": {
+    "displayName": "The Smart Guy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_stoic": {
+    "displayName": "The Stoic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_strategist": {
+    "displayName": "The Strategist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_tyrant": {
+    "displayName": "The Tyrant",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_western_air_temple": {
+    "displayName": "The Western Air Temple",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "the_wise_old_man": {
+    "displayName": "The Wise Old Man",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "thoughtful": {
+    "displayName": "Thoughtful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tomboy": {
+    "displayName": "Tomboy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tough": {
+    "displayName": "Tough",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tournament_fighter": {
+    "displayName": "Tournament Fighter",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "traditional": {
+    "displayName": "Traditional",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tragic_hero": {
+    "displayName": "Tragic Hero",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tragic_love_interest": {
+    "displayName": "Tragic Love Interest",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tragic_past": {
+    "displayName": "Tragic Past",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tragic_villain": {
+    "displayName": "Tragic Villain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "trained_two_avatars": {
+    "displayName": "Trained Two Avatars",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "traitor": {
+    "displayName": "Traitor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "traitor_amnestied": {
+    "displayName": "Traitor Amnestied",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "trapped_in_spirit_world": {
+    "displayName": "Trapped In Spirit World",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tribal_leader": {
+    "displayName": "Tribal Leader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tribal_leaders_family": {
+    "displayName": "Tribal Leaders Family",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "trusting": {
+    "displayName": "Trusting",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tsungi_horn": {
+    "displayName": "Tsungi Horn",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "twinkle_toes": {
+    "displayName": "Twinkle Toes",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "u": {
+    "displayName": "U",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "uncaring": {
+    "displayName": "Uncaring",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "uncle_of_zuko": {
+    "displayName": "Uncle Of Zuko",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "unclear_death": {
+    "displayName": "Unclear Death",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "underdog": {
+    "displayName": "Underdog",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "underground": {
+    "displayName": "Underground",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "united_republic": {
+    "displayName": "United Republic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "unlucky": {
+    "displayName": "Unlucky",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "unrequited_love": {
+    "displayName": "Unrequited Love",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "unstable": {
+    "displayName": "Unstable",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "usurped_the_throne": {
+    "displayName": "Usurped The Throne",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "usurper": {
+    "displayName": "Usurper",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "v": {
+    "displayName": "V",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "vegetarian": {
+    "displayName": "Vegetarian",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "vengeful": {
+    "displayName": "Vengeful",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "vigilante": {
+    "displayName": "Vigilante",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "villain": {
+    "displayName": "Villain",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "villainous_breakdown": {
+    "displayName": "Villainous Breakdown",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "visionary": {
+    "displayName": "Visionary",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_andr_sogliuzzo": {
+    "displayName": "Voiced By Andr Sogliuzzo",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_clancy_brown": {
+    "displayName": "Voiced By Clancy Brown",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_dee_bradley_baker": {
+    "displayName": "Voiced By Dee Bradley Baker",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_jason_isaacs": {
+    "displayName": "Voiced By Jason Isaacs",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_jennifer_hale": {
+    "displayName": "Voiced By Jennifer Hale",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_keone_young": {
+    "displayName": "Voiced By Keone Young",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_mae_whitman": {
+    "displayName": "Voiced By Mae Whitman",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_mark_hamill": {
+    "displayName": "Voiced By Mark Hamill",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_phil_lamarr": {
+    "displayName": "Voiced By Phil Lamarr",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_robert_patrick": {
+    "displayName": "Voiced By Robert Patrick",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "voiced_by_tress_macneille": {
+    "displayName": "Voiced By Tress Macneille",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "vulnerable": {
+    "displayName": "Vulnerable",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "w": {
+    "displayName": "W",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wang_fire": {
+    "displayName": "Wang Fire",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "war_criminal": {
+    "displayName": "War Criminal",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "war_leader": {
+    "displayName": "War Leader",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "war_survivor": {
+    "displayName": "War Survivor",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "warmonger": {
+    "displayName": "Warmonger",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "warrior": {
+    "displayName": "Warrior",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "warrior_training": {
+    "displayName": "Warrior Training",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "was_never_a_player": {
+    "displayName": "Was Never A Player",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "water_tribe": {
+    "displayName": "Water Tribe",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "water_whip": {
+    "displayName": "Water Whip",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "waterbender": {
+    "displayName": "Waterbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "waterbender_spirit": {
+    "displayName": "Waterbender Spirit",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wears_a_queue": {
+    "displayName": "Wears A Queue",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wellintentioned_extremist": {
+    "displayName": "Wellintentioned Extremist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wen_bakery": {
+    "displayName": "Wen Bakery",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "whip_master": {
+    "displayName": "Whip Master",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "white_hair": {
+    "displayName": "White Hair",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "white_lotus": {
+    "displayName": "White Lotus",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wife_of_aang": {
+    "displayName": "Wife Of Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wife_of_hakoda": {
+    "displayName": "Wife Of Hakoda",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wife_of_noren": {
+    "displayName": "Wife Of Noren",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wife_of_ozai": {
+    "displayName": "Wife Of Ozai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "winter_solstice": {
+    "displayName": "Winter Solstice",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wiped_out_the_air_nomads": {
+    "displayName": "Wiped Out The Air Nomads",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wise": {
+    "displayName": "Wise",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wolf_cove": {
+    "displayName": "Wolf Cove",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wooden_club": {
+    "displayName": "Wooden Club",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wore_mothers_necklace": {
+    "displayName": "Wore Mothers Necklace",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "workaholic": {
+    "displayName": "Workaholic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "works_for_iroh": {
+    "displayName": "Works For Iroh",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "world_travels": {
+    "displayName": "World Travels",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wrestler": {
+    "displayName": "Wrestler",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "y": {
+    "displayName": "Y",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "yip_yip": {
+    "displayName": "Yip Yip",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "yu_dao": {
+    "displayName": "Yu Dao",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "zukos_date": {
+    "displayName": "Zukos Date",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "zuzu": {
+    "displayName": "Zuzu",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "zuzus_sister": {
+    "displayName": "Zuzus Sister",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  }
+}

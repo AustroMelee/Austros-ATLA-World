@@ -15,6 +15,7 @@ export interface EnrichedEntity {
   searchableKeywords?: string[];
   fuzzySynonyms?: string[];
   affiliation?: string[];
+  searchAliases?: string[];
   tagCategories?: Record<string, string[]>;
 }
 
@@ -38,4 +39,4 @@ export interface MatchResult {
     field: string;
     token: string;
   }[];
-} 
+}

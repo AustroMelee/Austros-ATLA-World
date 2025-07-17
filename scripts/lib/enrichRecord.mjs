@@ -8,13 +8,14 @@ export const UI_FIELDS_TO_PROMOTE = [
   'ethnicity',
   'affiliation',
   'titles',
+  'searchAliases',
   'expandedView',
 ];
 
 const generateSlug = (name) =>
   name ? name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') : '';
 
-export default function enrichRecord(record) {
+export default function enrichRecord(record, tagDictionary = {}) {
   const id = record.id || generateSlug(record.name);
   const name = record.name || 'Unnamed Record';
   const summary = record.summary || record.shortDescription || '';
@@ -46,6 +47,38 @@ export default function enrichRecord(record) {
   const singleWordTags = normalizedTags.filter(t => /^[a-z0-9_]+$/.test(t) && !t.includes(' '));
   const uniqueTags = [...new Set(singleWordTags)];
 
+  // Validate tags against the dictionary and resolve aliases
+  const finalTags = new Set();
+  for (const tag of uniqueTags) {
+    if (tagDictionary[tag]) {
+      finalTags.add(tag);
+      if (Array.isArray(tagDictionary[tag].implies)) {
+        tagDictionary[tag].implies.forEach(t => finalTags.add(t));
+      }
+    } else {
+      const canonical = Object.keys(tagDictionary).find(key =>
+        (tagDictionary[key].aliases || [])
+          .map(a => a.toLowerCase().replace(/\s+/g, '_'))
+          .includes(tag)
+      );
+      if (canonical) {
+        finalTags.add(canonical);
+        const entry = tagDictionary[canonical];
+        if (Array.isArray(entry.implies)) entry.implies.forEach(t => finalTags.add(t));
+      } else {
+        throw new Error(`Unknown tag '${tag}' on record ${id}`);
+      }
+    }
+  }
+
+  // Basic inference based on key fields
+  if (record.isBender && record.bendingElement) {
+    const element = String(record.bendingElement).toLowerCase();
+    if (['earth', 'fire', 'water', 'air'].includes(element)) {
+      finalTags.add(`${element}bender`);
+    }
+  }
+
   const promotedFields = {};
   for (const field of UI_FIELDS_TO_PROMOTE) {
     if (record[field] !== undefined) {
@@ -69,8 +102,8 @@ export default function enrichRecord(record) {
     summary,
     type,
     slug: record.slug || id,
-    tags: uniqueTags.length > 0 ? uniqueTags : undefined,
+    tags: finalTags.size > 0 ? Array.from(finalTags) : undefined,
     ...promotedFields,
     metadata,
   };
-} 
+}

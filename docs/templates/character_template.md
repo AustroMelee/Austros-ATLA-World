@@ -249,6 +249,7 @@
   "dataCompletenessScore": "number (0.0-1.0)", // For internal maintenance
   "searchableKeywords": "string[]", // Stemmed, lower-cased keywords
   "fuzzySynonyms": "string[]", // e.g., "the blue spirit", "zuko's mom"
+  "searchAliases": "string[]", // Extra terms indexed equally with tags
   "isSuggestedInXContext": "string[]" // For future context-aware suggestions
 }
 ```

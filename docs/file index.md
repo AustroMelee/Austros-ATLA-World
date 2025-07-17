@@ -14,6 +14,9 @@
   - Valid: `water_nation`, `firebender`, `main_villain`
   - Invalid: `water nation`, `main villain`, `main/villain`, `Main Villain`
 
+The dictionary of allowed tags lives in `src/data/tag_dictionary.json`. Aliases
+defined there are treated the same as the canonical tag during search.
+
 ---
 
 ## Root Configuration & Metadata

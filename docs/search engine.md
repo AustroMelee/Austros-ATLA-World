@@ -13,7 +13,7 @@ The search engine is now fully client-side, leveraging FlexSearch to build and q
   - On load, the app fetches `public/enriched-data.json`.
   - The `useSearch` hook (see `src/hooks/useSearch.ts`) receives the full data array and the user's query.
   - The hook uses a preprocessor (`src/search/preprocessor.ts`) to create a `searchBlob` for each record (concatenating all searchable fields).
-  - FlexSearch builds an in-memory index on fields like `name`, `role`, `tags`, and the `searchBlob`.
+  - FlexSearch builds an in-memory index on fields like `name`, `role`, `tags`, `searchAliases`, and the `searchBlob`.
   - All searching and filtering is performed in-browser, with results mapped back to the full entity objects for display.
 
 ---
@@ -37,7 +37,7 @@ The search engine is now fully client-side, leveraging FlexSearch to build and q
 - **Result Hierarchy:**
   - Results are ordered by a robust scoring system:
     1. **Direct name match** (e.g., searching 'toph' puts Toph Beifong first if her name matches the query exactly).
-    2. **Exact tag match** (e.g., searching 'bear' puts Bosco first if he has the tag 'bear').
+    2. **Exact tag or alias match** (e.g., searching 'white lotus' matches any entry tagged `order_of_the_white_lotus`).
     3. **Gender/age/role match** for gendered queries (e.g., 'boy', 'girl', 'male', 'female' boost characters with matching gender and age/role).
     4. **Main cast/primary role** (e.g., tags like 'protagonist', 'main', 'main_cast', 'lead').
     5. **Partial tag match** (e.g., searching 'knife' matches 'knife_thrower').

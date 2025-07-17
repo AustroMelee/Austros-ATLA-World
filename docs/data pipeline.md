@@ -16,6 +16,17 @@ The project uses a robust, two-stage pipeline to transform raw markdown data int
   - Valid: `water_nation`, `firebender`, `main_villain`
   - Invalid: `water nation`, `main villain`, `main/villain`, `Main Villain`
 
+### Central Tag Dictionary
+
+All tags are validated against `src/data/tag_dictionary.json`. If a tag or alias
+isn't found in this dictionary, the build fails. Each dictionary entry defines
+its display name, category, optional aliases, weight, and implied tags.
+
+### Search Aliases
+
+Records may include a `searchAliases` array in their JSON metadata. These terms
+are promoted to the top level and indexed alongside regular tags.
+
 ---
 
 ## 1. Data Authoring: Unified Markdown Format

@@ -5280,7 +5280,8 @@
       "earth_rumble",
       "earth_kingdom",
       "gaoling",
-      "male"
+      "male",
+      "earthbender"
     ],
     "nation": "Earth Kingdom",
     "role": "Earth Rumble Fighter",
@@ -5496,7 +5497,8 @@
       "fire_nation_school",
       "schoolyard_rivalry",
       "fire_nation",
-      "male"
+      "male",
+      "firebender"
     ],
     "nation": "Fire Nation",
     "role": "Student, Bully",
@@ -15489,7 +15491,8 @@
       "earth_kingdom",
       "redemption",
       "gaoling",
-      "male"
+      "male",
+      "earthbender"
     ],
     "nation": "Earth Kingdom",
     "role": "Earth Rumble Heavyweight, Soldier",
@@ -15890,7 +15893,8 @@
       "earth_rumble",
       "earth_kingdom",
       "gaoling",
-      "male"
+      "male",
+      "earthbender"
     ],
     "nation": "Earth Kingdom",
     "role": "Earth Rumble Fighter",
@@ -17814,7 +17818,8 @@
       "saved_by_moon_spirit",
       "sokkas_first_girlfriend",
       "name_means_moon",
-      "female"
+      "female",
+      "waterbender"
     ],
     "nation": "Northern Water Tribe",
     "role": "NWT Princess",
