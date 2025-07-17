@@ -24,7 +24,27 @@ export default function enrichRecord(record) {
     ...(record.tags || []),
     ...(record.tagCategories ? Object.values(record.tagCategories).flat() : []),
   ];
-  const uniqueTags = [...new Set(tags)];
+  // Remove any existing gender tags (case-insensitive, with or without prefix)
+  let filteredTags = tags.filter(
+    t => !/^male$|^female$/i.test(t.trim().toLowerCase()) && !/\bmale\b|\bfemale\b/i.test(t.trim().toLowerCase())
+  );
+
+  // Add normalized gender tag if present
+  if (record.gender) {
+    const gender = record.gender.trim().toLowerCase();
+    if (gender === 'male' || gender === 'female') {
+      filteredTags.push(gender);
+    }
+  }
+
+  // Normalize all tags: replace spaces and slashes with underscores, remove non-word chars, and lowercase
+  const normalizedTags = filteredTags
+    .map(t => t.trim().toLowerCase().replace(/[\s\/]+/g, '_').replace(/[^a-z0-9_]/g, ''))
+    .filter(t => t.length > 0 && !t.includes('__') && !t.startsWith('_') && !t.endsWith('_'));
+
+  // Only keep single-word tags (no underscores at start/end, no double underscores)
+  const singleWordTags = normalizedTags.filter(t => /^[a-z0-9_]+$/.test(t) && !t.includes(' '));
+  const uniqueTags = [...new Set(singleWordTags)];
 
   const promotedFields = {};
   for (const field of UI_FIELDS_TO_PROMOTE) {

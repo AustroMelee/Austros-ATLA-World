@@ -1,6 +1,61 @@
 # 🩺 Troubleshooting Guide (2024 Refactor)
 
-This guide provides a systematic way to debug data and search issues in the new client-side architecture.
+---
+
+## 🚨 Non-Negotiable Tag Rule
+
+**All tags in markdown files must be single, underscore-joined words.**
+- No spaces, slashes, or multi-word phrases are allowed in any tag.
+- Spaces and slashes are replaced with underscores (e.g., `water nation` → `water_nation`).
+- All tags are lowercased (e.g., `Firebender` → `firebender`).
+- This rule applies to all present and future markdown files.
+- The enrichment/data pipeline will enforce this and strip or reject any non-compliant tags.
+- **Example:**
+  - Valid: `water_nation`, `firebender`, `main_villain`
+  - Invalid: `water nation`, `main villain`, `main/villain`, `Main Villain`
+
+---
+
+## [2025-07-17] Character Badge/Role Not Displaying
+
+**Symptom:**
+Some character cards (e.g., Yagoda, Yu, Lo and Li) do not display their badge/role in the UI, even though the badge/role is present in the markdown or enriched data.
+
+**Root Cause:**
+The badge/role field may be stored in different locations in the enriched data depending on the data pipeline version or markdown structure:
+- As a top-level `role` field
+- As `metadata.badge`
+- As `metadata.role`
+
+The frontend previously only checked one location, so badges could be missing if the field was elsewhere.
+
+**Solution:**
+The badge extraction logic in the card component (`ItemCardCollapsed.tsx`) was updated to:
+- Prefer `item.role` if present and non-empty
+- Otherwise, use `item.metadata.badge` if present and non-empty
+- Otherwise, use `item.metadata.role` if present and non-empty
+- Handles both string and string[] values for robustness
+
+**Implementation Example:**
+```ts
+function getBadge(item: EnrichedEntity): string | undefined {
+  const tryGet = (val: unknown): string | undefined => {
+    if (typeof val === 'string' && val.trim()) return val;
+    if (Array.isArray(val) && val.length > 0 && typeof val[0] === 'string') return val[0];
+    return undefined;
+  };
+  if (tryGet(item.role)) return tryGet(item.role);
+  if (item.metadata) {
+    if (tryGet(item.metadata.badge)) return tryGet(item.metadata.badge);
+    if (tryGet(item.metadata.role)) return tryGet(item.metadata.role);
+  }
+  return undefined;
+}
+```
+
+**Impact:**
+- All character cards now reliably display their badge/role, regardless of where the field is stored in the data.
+- The UI is robust to future data pipeline changes regarding badge/role placement.
 
 ---
 
@@ -20,6 +75,35 @@ This guide provides a systematic way to debug data and search issues in the new 
 3. Is the field present at the top level (e.g., `role`, `image`)?
    - **YES:** The pipeline is correct. The problem is in the frontend mapping/prop-drilling.
    - **NO:** The pipeline is broken. Check `scripts/1-parse-markdown.mjs` and `scripts/2-enrich-data.mjs`.
+
+---
+
+## 2a. Quick Script: Find Empty or Corrupted Markdown Files
+
+If you suspect some character markdown files are corrupted, empty, or missing required content, you can use this PowerShell script to quickly identify them:
+
+```powershell
+Get-ChildItem raw-data/characters/*.md | % {
+  $lines = (Get-Content $_.FullName).Count
+  if ($lines -lt 20) { Write-Host "$($_.Name): $lines lines" }
+}
+```
+
+**How to use:**
+1. Open PowerShell in your project root.
+2. Paste and run the script above.
+3. Any file with a suspiciously low line count (e.g., 1 line) will be printed. These are likely empty or corrupted.
+
+**What to do if files are flagged:**
+- Open each flagged file in your editor.
+- Re-create or restore it using the canonical template in `docs/templates/character_template.md` and reference other well-formed character files.
+- After fixing, re-run your data pipeline (`npm run build:data`).
+
+**Why this works:**
+- Most valid character files are 100+ lines. Any file with <20 lines is almost certainly missing required sections or is empty due to a previous error.
+
+**Tip:**
+- Use this script any time you suspect silent data issues or after a batch edit to catch accidental file corruption.
 
 ---
 

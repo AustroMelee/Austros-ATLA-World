@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Fortuneteller's Apprentice
 - Short Description: Meng is Aunt Wu's eager apprentice in Makapu Village—a cheerful, kind-hearted girl known for her crush on Aang, her optimism, and her interest in fortune-telling.
-- Tags: Earth Kingdom, Makapu Village, Apprentice, Assistant, Girl, Child, Nonbender, Optimistic, Comic Relief, Hopeful, Book One, The Fortuneteller, Aunt Wu, Aang, Katara
+- Tags: Female, Friend, Civilian, Optimist, Survivor, Outcast, Peasant
 ```
 
 ## 📖 UI - EXPANDED VIEW

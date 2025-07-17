@@ -9,7 +9,7 @@ type: character
 - Nation: Air Nomads
 - Badge: Avatar of Duty
 - Short Description: A revered and powerful female Air Nomad Avatar, spiritual leader, and legendary bender, Yangchen was known for her fierce devotion to duty and willingness to do whatever was necessary to maintain global peace and stability.
-- Tags: Air Nomads, Avatar, Mentor, Female, Bender, Spiritual Leader, Legendary, Past Avatar, Diplomat, Peacemaker, Spirit World, Book Two, The Avatar State
+- Tags: Female, Avatar, Airbender, Monk, Mentor, Teacher, Sage, Survivor, Outcast, Hero, Prodigy, Optimist
 ```
 
 ## UI - EXPANDED VIEW

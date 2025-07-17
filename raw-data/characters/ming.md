@@ -9,7 +9,7 @@ type: character
 - Nation: Fire Nation
 - Badge: Kindly Jailer
 - Short Description: Ming is a compassionate, kind-hearted, and empathetic female nonbender who served as a prison guard in the Fire Nation, remembered for her kindness to Uncle Iroh during his imprisonment.
-- Tags: Fire Nation, Prison Guard, Nonbender, Female, Compassionate, Book Three, The Day of Black Sun, Iroh, Kindness
+- Tags: Female, Friend, Civilian, Optimist, Survivor, Outcast, Peasant
 ```
 
 ## UI - EXPANDED VIEW

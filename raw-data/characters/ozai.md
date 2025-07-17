@@ -7,9 +7,7 @@ type: character
 ```md
 - Name: Ozai
 - Nation: Fire Nation
-- Badge: Fire Lord
-- Short Description: The tyrannical, power-hungry, and legendary adult male Fire Lord of the Fire Nation, Ozai is an exceptionally powerful firebender who seeks to conquer the world and rule as the Phoenix King, embodying the ultimate antagonist of the series.
-- Tags: Fire Nation, Fire Lord, Phoenix King, Bender, Male, Adult, Tyrant, Antagonist, Legendary, Book One, Book Two, Book Three, Zuko, Azula, Iroh, Ursa, Azulon
+- Short Description: The tyrannical Fire Lord and ultimate antagonist of the Hundred Year War, Ozai is a legendary firebender whose ambition, cruelty, and power threaten the balance of the world.
 ```
 
 ---
@@ -17,36 +15,41 @@ type: character
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-- Name: Ozai
-- Nation: Fire Nation
-- Age: 40s (in Avatar: The Last Airbender)
-- Overview: As the ruthless and power-hungry Fire Lord, Ozai represents the culmination of a century of Fire Nation aggression. After usurping the throne from his brother, he rules with an iron fist, showing no mercy to his enemies or even his own family. His ultimate goal is to use the power of Sozin's Comet to burn down the Earth Kingdom and declare himself the supreme ruler of the world, the Phoenix King.
+### 📖 Overview
 
-- Narrative Highlights:
-  - Usurped the throne from his brother Iroh after their father's mysterious death.
-  - Permanently scarred and banished his own son, Zuko, for speaking out of turn.
-  - Planned to use Sozin's Comet to commit genocide on a global scale.
-  - Was defeated by Avatar Aang, who permanently removed his firebending abilities.
+As Fire Lord, Ozai embodies the peak of Fire Nation ambition and cruelty. Usurping the throne from his brother Iroh, he rules with an iron fist, seeking to conquer the world and declare himself Phoenix King. His reign is marked by ruthless tactics, the abuse of his own family, and the near-destruction of the Earth Kingdom during Sozin's Comet. Ultimately, he is defeated by Avatar Aang, who removes his bending and ends his tyranny.
 
-- Role in the Story: The main antagonist and final boss of the series, representing the ultimate personification of tyranny, abuse, and unbalanced ambition.
+### ✨ Narrative Highlights
 
-- Relationships:
-  - Zuko (Son, Object of Abuse and Scorn)
-  - Azula (Daughter, Favored Child, Weapon)
-  - Iroh (Brother, Rival)
-  - Ursa (Wife, Banished)
-  - Azulon (Father, Murdered)
+- Usurped the throne from his brother Iroh after Azulon's death.
+- Permanently scarred and banished his son Zuko for speaking out of turn.
+- Planned to use Sozin's Comet to burn down the Earth Kingdom and rule as Phoenix King.
+- Defeated by Avatar Aang, who took away his firebending.
 
-- Personality Traits:
-  - Megalomaniacal & Power-hungry
-  - Cruel & Sadistic
-  - Domineering & Narcissistic
-  - Charismatic & Cunning
+### 🎭 Role in the Story
 
-- Notable Quotes:
-  - "You will learn respect, and suffering will be your teacher."
-  - "There is no right or wrong apart from what you decide. What you choose, by definition, is right."
-  - "Prepare to join them. Prepare to die!"
+The main antagonist and final boss of the series, representing tyranny, abuse, and unbalanced ambition.
+
+### 🤝 Relationships
+
+- **Zuko** – Son, object of abuse and scorn.
+- **Azula** – Daughter, favored child and weapon.
+- **Iroh** – Brother, rival and original heir.
+- **Ursa** – Wife, banished after conspiring to save Zuko.
+- **Azulon** – Father, murdered to secure the throne.
+
+### 🌟 Notable Traits
+
+- Megalomaniacal and power-hungry
+- Cruel, sadistic, and domineering
+- Charismatic and cunning
+- Lacks empathy
+
+### 💬 Notable Quotes
+
+- "You will learn respect, and suffering will be your teacher."
+- "There is no right or wrong apart from what you decide. What you choose, by definition, is right."
+- "Prepare to join them. Prepare to die!"
 ```
 
 ---
@@ -63,7 +66,7 @@ type: character
   "id": "ozai",
   "fullName": "Ozai",
   "role": "Fire Lord",
-  "titles": ["Fire Lord", "Prince", "Phoenix King"],
+  "titles": ["Fire Lord", "Phoenix King", "Prince"],
   "aliases": [],
   "species": "human",
   "gender": "male",
@@ -87,7 +90,7 @@ type: character
 
 ```json
 {
-  "isBender": false,
+  "isBender": true,
   "bendingElement": "fire",
   "bendingProficiency": "legendary",
   "advancedBending": ["lightning generation"],
@@ -107,5 +110,166 @@ type: character
     "Nearly conquered the entire world",
     "Fought an Avatar-State-empowered Aang"
   ]
+}
+```
+
+---
+
+## 🧭 Affiliations, Politics & Alignment
+
+```json
+{
+  "currentAffiliations": ["Fire Nation Royal Family"],
+  "pastAffiliations": ["Fire Nation military"],
+  "allegianceHistory": [
+    { "affiliation": "Fire Nation", "startDate": "c. 55 AG", "endDate": null, "reasonForLeaving": null }
+  ],
+  "isRoyalty": true,
+  "politicalPower": "ruling",
+  "politicalLeanings": ["imperialist", "authoritarian", "supremacist"],
+  "moralAlignment": "lawful evil",
+  "moralCompassDrift": false
+}
+```
+
+---
+
+## 🎭 Narrative Metrics
+
+```json
+{
+  "narrativeFunction": "antagonist",
+  "screenTimeLevel": "main",
+  "firstAppearance": "101-The-Boy-in-the-Iceberg",
+  "finalAppearance": "321-Sozin's-Comet-Part-4",
+  "deathStatus": "alive",
+  "causeOfDeath": null,
+  "narrativeArcs": [
+    { "arcType": "corruption", "status": "completed", "summary": "His rise from prince to tyrant, culminating in his defeat and loss of power." }
+  ],
+  "keyTropes": ["The Tyrant", "Final Boss", "Abusive Parent", "The Corrupter", "Villainous Breakdown"]
+}
+```
+
+---
+
+## 📚 Role By Era/Season
+
+```json
+{
+  "eraAppearances": [
+    {
+      "era": "Avatar: The Last Airbender - Book 1-3",
+      "role": "villain",
+      "focus": "Ruling the Fire Nation, orchestrating the war, and seeking world domination.",
+      "keyEpisodes": ["101", "112", "220", "321"]
+    }
+  ]
+}
+```
+
+---
+
+## 🤝 Relational Matrix
+
+```json
+{
+  "relationships": [
+    { "characterId": "zuko", "relationshipType": "family", "status": "negative", "history": "His son, whom he abused and banished." },
+    { "characterId": "azula", "relationshipType": "family", "status": "negative", "history": "His daughter, whom he favored and weaponized." },
+    { "characterId": "iroh", "relationshipType": "family", "status": "negative", "history": "His older brother, whom he usurped." },
+    { "characterId": "ursa", "relationshipType": "family", "status": "negative", "history": "His wife, whom he banished after conspiring to save Zuko." },
+    { "characterId": "azulon", "relationshipType": "family", "status": "negative", "history": "His father, whom he murdered to secure the throne." }
+  ],
+  "groupMemberships": [
+    { "groupId": "fire-nation-royal-family", "roleInGroup": "leader" }
+  ],
+  "petCompanions": []
+}
+```
+
+---
+
+## 🧠 Psycho-Emotional Profile
+
+```json
+{
+  "positiveTraits": ["charismatic", "cunning", "ambitious"],
+  "negativeTraits": ["cruel", "sadistic", "domineering", "megalomaniacal", "lacks empathy"],
+  "motivations": ["power", "domination", "legacy", "control"],
+  "fears": ["loss of power", "betrayal", "failure"],
+  "internalConflicts": ["ambition vs. family loyalty"],
+  "emotionalWounds": ["paternal favoritism toward Iroh", "betrayal by Ursa"],
+  "copingMechanisms": ["intimidation", "violence", "manipulation"],
+  "worldview": "Believes that power and domination are the only paths to security and legacy."
+}
+```
+
+---
+
+## 📦 Physicality & Presentation
+
+```json
+{
+  "heightEstimate": "Tall",
+  "notableFeatures": ["Sharp features", "intense eyes", "Fire Lord's topknot"],
+  "outfitStyles": ["Fire Lord royal robes", "Phoenix King armor"],
+  "signaturePossessions": ["Phoenix King crown"],
+  "ageProgression": true,
+  "voiceActor": ["Mark Hamill"]
+}
+```
+
+---
+
+## 💬 Dialogue & Communication
+
+```json
+{
+  "iconicQuotes": [
+    "You will learn respect, and suffering will be your teacher.",
+    "There is no right or wrong apart from what you decide. What you choose, by definition, is right.",
+    "Prepare to join them. Prepare to die!"
+  ],
+  "speakingStyle": "formal",
+  "linguisticQuirks": ["grandiose proclamations", "threatening tone"],
+  "catchphrases": []
+}
+```
+
+---
+
+## 🧱 Semantic & Thematic Index
+
+```json
+{
+  "archetype": "The Tyrant",
+  "thematicKeywords": ["tyranny", "power", "ambition", "abuse", "war", "legacy", "domination", "family", "betrayal"],
+  "tagCategories": {
+    "narrativeTags": ["antagonist", "final boss", "abusive parent", "the tyrant", "villainous breakdown"],
+    "combatTags": ["firebender", "lightning", "master firebender", "phoenix king"],
+    "relationshipTags": ["father of zuko", "father of azula", "husband of ursa", "brother of iroh", "son of azulon"],
+    "emotionTags": ["cruel", "sadistic", "domineering", "megalomaniacal"],
+    "politicalTags": ["fire lord", "phoenix king", "usurper", "war criminal"],
+    "arcTags": ["usurped the throne", "banished zuko", "defeated by aang", "lost his bending"],
+    "worldTags": ["fire nation", "fire nation royal family", "hundred year war", "sozin's comet"],
+    "triviaTags": ["voiced by mark hamill", "never shown firebending after defeat"]
+  }
+}
+```
+
+---
+
+## 🔮 AI/Filtering & System Flags
+
+```json
+{
+  "relatedCards": ["zuko", "azula", "iroh", "ursa", "azulon", "sozin"],
+  "filterWeight": 100,
+  "canonicalImportance": "core",
+  "dataCompletenessScore": 1.0,
+  "searchableKeywords": ["ozai", "fire lord", "phoenix king", "villain", "tyrant", "lightning", "firebender", "zuko", "azula", "ursa", "iroh", "azulon"],
+  "fuzzySynonyms": ["the fire lord", "phoenix king", "zuko's father", "azula's father", "final boss"],
+  "isSuggestedInXContext": []
 }
 ```

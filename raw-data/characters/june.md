@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Bounty Hunter
 - Short Description: A confident, formidable, and sassy young adult female bounty hunter from the Earth Kingdom, June is known for her unmatched tracking skills, professional detachment, and her partnership with the shirshu Nyla. Her journey takes her from mercenary work to a new life at the Jasmine Dragon.
-- Tags: Earth Kingdom, Bounty Hunter, Nonbender, Female, Young Adult, Outlaw, Mercenary, Confident, Sassy, Book One, Book Three, Nyla, Jasmine Dragon
+- Tags: Female, BountyHunter, Fighter, Survivor, Outcast, Mercenary, Loyalist
 ```
 
 ---

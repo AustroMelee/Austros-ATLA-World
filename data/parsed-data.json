@@ -2206,12 +2206,13 @@
   {
     "name": "King Bumi",
     "nation": "Earth Kingdom",
-    "shortdescription": "The eccentric and wildly powerful elderly King of Omashu. As Avatar Aang's only surviving childhood friend, he uses his \"mad genius\" philosophy and mastery of earthbending to test and guide the young Avatar.",
+    "role": "King of Omashu",
+    "shortdescription": "The eccentric, wildly powerful King of Omashu. Aang's only surviving childhood friend, Bumi is a \"mad genius\" earthbending master and brilliant tactician.",
     "id": "king-bumi",
     "fullName": "Bumi",
-    "role": "King of Omashu",
     "titles": [
-      "King"
+      "King",
+      "Earthbending Master"
     ],
     "aliases": [],
     "species": "human",
@@ -2219,15 +2220,15 @@
     "ageChronological": 112,
     "ageBiological": 112,
     "ageRange": "elder",
-    "birthDate": "12 BG",
-    "deathDate": "Between 102 and 124 AG",
-    "nationality": "Earth Kingdom",
-    "ethnicity": "Earth Kingdom",
-    "nativeLocation": "Omashu",
-    "currentLocation": "Deceased",
+    "birthDate": "12_BG",
+    "deathDate": "Between_102_and_124_AG",
+    "nationality": "earth_kingdom",
+    "ethnicity": "earth_kingdom",
+    "nativeLocation": "omashu",
+    "currentLocation": "omashu",
     "socioeconomicStanding": "royalty",
     "languagesSpoken": [
-      "Standard Language"
+      "standard_language"
     ],
     "isBender": true,
     "bendingElement": "earth",
@@ -2235,255 +2236,281 @@
     "advancedBending": [],
     "nonBendingSkills": [
       "strategy",
-      "leadership",
-      "philosophy (jing)"
+      "tactics",
+      "leadership"
     ],
     "uniqueTechniques": [
-      "face-bending",
-      "large-scale earth manipulation",
-      "quicksand creation"
+      "earthbending_with_face",
+      "massive_earth_manipulation",
+      "bending_jennamite"
     ],
     "powerMetrics": {
-      "rawPower": 10,
-      "technicalSkill": 8,
-      "strategicAptitude": 9
+      "rawPower": 9,
+      "technicalSkill": 10,
+      "strategicAptitude": 10
     },
-    "combatStyle": "opportunistic",
+    "combatStyle": "unpredictable",
     "vulnerabilities": [
-      "apparent frailty (deceptive)"
+      "eccentricity",
+      "underestimation_by_others"
     ],
     "isLegendaryFighter": true,
     "notableFeats": [
-      "Single-handedly liberated the city of Omashu",
-      "Fought Aang to a standstill without serious intent to harm",
-      "Could earthbend using only his face",
-      "Helped liberate Ba Sing Se from the Fire Nation"
+      "single_handedly_liberated_omashu",
+      "fought_on_front_lines_liberation_ba_sing_se",
+      "earthbent_while_encased_in_metal",
+      "mentored_aang_in_creative_thinking"
     ],
     "currentAffiliations": [
-      "Order of the White Lotus",
-      "Earth Kingdom"
+      "earth_kingdom",
+      "order_of_the_white_lotus"
     ],
     "pastAffiliations": [],
-    "allegianceHistory": [],
+    "allegianceHistory": [
+      {
+        "affiliation": "earth_kingdom",
+        "startDate": "12_BG",
+        "endDate": null,
+        "reasonForLeaving": null
+      }
+    ],
     "isRoyalty": true,
     "politicalPower": "ruling",
     "politicalLeanings": [
-      "strategist",
-      "monarchist"
+      "defensive",
+      "resistant",
+      "open_minded"
     ],
-    "moralAlignment": "chaotic good",
+    "moralAlignment": "chaotic_good",
     "moralCompassDrift": false,
     "narrativeFunction": "mentor",
-    "screenTimeLevel": "minor",
-    "firstAppearance": "105-The-King-of-Omashu",
-    "finalAppearance": "Avatar: The Last Airbender: Quest for Balance",
+    "screenTimeLevel": "supporting",
+    "firstAppearance": "105_the_king_of_omashu",
+    "finalAppearance": "avatar_the_last_airbender_quest_for_balance",
     "deathStatus": "deceased",
-    "causeOfDeath": "Unknown (old age)",
-    "narrativeArcs": [],
+    "causeOfDeath": "old_age",
+    "narrativeArcs": [
+      {
+        "arcType": "wisdom",
+        "status": "completed",
+        "summary": "Guided Aang and Team Avatar with unconventional wisdom and earthbending mastery."
+      }
+    ],
     "keyTropes": [
-      "The Mentor",
-      "Obfuscating Insanity",
-      "Trickster Mentor",
-      "King Incognito",
-      "Never Mess with a Grandpa"
+      "mad_genius",
+      "eccentric_mentor",
+      "old_master",
+      "comic_relief"
     ],
     "eraAppearances": [
       {
-        "era": "Avatar: The Last Airbender - Book 1",
-        "role": "neutral",
-        "focus": "Testing Aang through a series of challenges to impart wisdom.",
+        "era": "avatar_the_last_airbender_book_1_3",
+        "role": "mentor",
+        "focus": "ruling_omashu_aiding_team_avatar_fighting_white_lotus",
         "keyEpisodes": [
-          "105"
-        ]
-      },
-      {
-        "era": "Avatar: The Last Airbender - Book 2",
-        "role": "supporting",
-        "focus": "Demonstrating neutral jing by allowing himself to be captured.",
-        "keyEpisodes": [
-          "203"
-        ]
-      },
-      {
-        "era": "Avatar: The Last Airbender - Book 3",
-        "role": "hero",
-        "focus": "Liberating Omashu and joining the Order of the White Lotus to free Ba Sing Se.",
-        "keyEpisodes": [
+          "105",
+          "203",
           "319",
-          "320"
+          "320",
+          "321"
         ]
       }
     ],
     "relationships": [
       {
         "characterId": "aang",
-        "relationshipType": "ally",
+        "relationshipType": "friend",
         "status": "positive",
-        "history": "His childhood best friend, whom he tests and guides as the Avatar."
+        "history": "childhood_friend_and_mentor"
       },
       {
         "characterId": "flopsie",
-        "relationshipType": "petCompanions",
+        "relationshipType": "pet",
         "status": "positive",
-        "history": "His beloved pet goat gorilla."
+        "history": "loyal_animal_companion"
       },
       {
-        "characterId": "iroh",
+        "characterId": "order_of_the_white_lotus",
         "relationshipType": "ally",
         "status": "positive",
-        "history": "Fellow high-ranking member of the Order of the White Lotus."
+        "history": "fellow_grandmasters_and_allies"
       },
       {
-        "characterId": "toph-beifong",
-        "relationshipType": "rival",
-        "status": "neutral",
-        "history": "A fellow earthbending master with whom he has a friendly rivalry."
+        "characterId": "ozai",
+        "relationshipType": "enemy",
+        "status": "negative",
+        "history": "opposed_fire_lord_ozai"
+      },
+      {
+        "characterId": "azula",
+        "relationshipType": "enemy",
+        "status": "negative",
+        "history": "enemy_during_occupation_of_omashu"
       }
     ],
     "groupMemberships": [
       {
-        "groupId": "order-of-the-white-lotus",
-        "roleInGroup": "specialist"
+        "groupId": "order_of_the_white_lotus",
+        "roleInGroup": "grandmaster"
       }
     ],
     "petCompanions": [
-      "Flopsie"
+      "flopsie"
     ],
     "positiveTraits": [
+      "open_minded",
       "brilliant",
-      "patient",
-      "wise",
-      "playful",
-      "unpredictable"
+      "loyal",
+      "caring",
+      "patient"
     ],
     "negativeTraits": [
       "eccentric",
+      "unpredictable",
       "cryptic"
     ],
     "motivations": [
-      "liberating his kingdom",
-      "guiding the Avatar",
-      "fun"
+      "wisdom",
+      "defense_of_omashu",
+      "helping_friends",
+      "freedom"
     ],
-    "fears": [],
-    "internalConflicts": [],
-    "emotionalWounds": [],
+    "fears": [
+      "loss_of_omashu",
+      "failure_to_protect_friends"
+    ],
+    "internalConflicts": [
+      "eccentricity_vs_responsibility"
+    ],
+    "emotionalWounds": [
+      "survived_hundred_year_war",
+      "outlived_most_friends"
+    ],
     "copingMechanisms": [
-      "eccentricity",
       "humor",
-      "strategic patience (neutral jing)"
+      "eccentric_behavior",
+      "strategic_patience"
     ],
-    "worldview": "Believes in keeping an open mind to all possibilities and that creative, unexpected thinking is the key to victory.",
-    "heightEstimate": "Average",
+    "worldview": "keep_your_mind_open_to_the_possibilities",
+    "heightEstimate": "tall",
     "notableFeatures": [
-      "Wild white hair and mustache",
-      "hunched posture (deceptive)",
-      "maniacal laugh"
+      "wild_eyes",
+      "muscular_physique",
+      "long_white_hair"
     ],
     "outfitStyles": [
-      "Omashu royal robes"
+      "earth_kingdom_royal_robes",
+      "battle_attire"
     ],
     "signaturePossessions": [
-      "Jennamite crystals"
+      "omashu_crown",
+      "flopsie"
     ],
     "ageProgression": true,
     "voiceActor": [
-      "André Sogliuzzo"
+      "andre_sogliuzzo",
+      "kevin_ng",
+      "sunil_malhotra"
     ],
     "iconicQuotes": [
-      "I hope you will think like a mad genius!",
-      "My cabbages!",
-      "You have to open your brain to the possibilities."
+      "i_hope_you_will_think_like_a_mad_genius",
+      "you_will_always_remember_what_you_never_expected",
+      "neutral_jing_is_the_key"
     ],
     "speakingStyle": "eccentric",
     "linguisticQuirks": [
-      "Frequent cackling laughter",
-      "speaks in riddles"
+      "cackling_laughter",
+      "cryptic_advice",
+      "unexpected_wisdom"
     ],
-    "catchphrases": [],
-    "archetype": "The Trickster",
+    "catchphrases": [
+      "mad_genius"
+    ],
+    "archetype": "mad_genius",
     "thematicKeywords": [
       "wisdom",
-      "patience",
-      "strategy",
       "eccentricity",
-      "possibility",
-      "jing",
-      "old age"
+      "earthbending",
+      "strategy",
+      "friendship",
+      "freedom",
+      "resistance",
+      "open_mindedness"
     ],
     "tagCategories": {
       "narrativeTags": [
-        "trickster mentor",
-        "obfuscating insanity",
-        "old master",
-        "king"
+        "mentor",
+        "comic_relief",
+        "old_master",
+        "mad_genius"
       ],
       "combatTags": [
         "earthbender",
-        "master earthbender",
-        "face-bending",
-        "neutral jing"
+        "master_earthbender",
+        "face_bending",
+        "jennamite"
       ],
       "relationshipTags": [
-        "friend of Aang",
-        "member of White Lotus",
-        "rival of Toph"
+        "friend_of_aang",
+        "member_of_white_lotus",
+        "king_of_omashu"
       ],
       "emotionTags": [
         "eccentric",
-        "wild",
-        "playful",
-        "wise",
-        "patient"
+        "brilliant",
+        "loyal",
+        "caring"
       ],
       "politicalTags": [
         "king",
-        "monarch"
+        "royalty",
+        "white_lotus"
       ],
       "arcTags": [
-        "liberated Omashu",
-        "tested the Avatar",
-        "liberated Ba Sing Se"
+        "liberated_omashu",
+        "liberated_ba_sing_se",
+        "mentor_to_aang"
       ],
       "worldTags": [
-        "Earth Kingdom",
-        "Omashu",
-        "Order of the White Lotus"
+        "earth_kingdom",
+        "omashu",
+        "order_of_the_white_lotus"
       ],
       "triviaTags": [
-        "mad genius",
-        "likes cabbages (to eat)",
-        "112 years old",
-        "has a goat gorilla"
+        "earthbending_with_face",
+        "mad_genius",
+        "oldest_earthbender"
       ]
     },
     "relatedCards": [
       "aang",
-      "toph-beifong",
-      "iroh",
-      "flopsie"
+      "toph",
+      "order_of_the_white_lotus",
+      "flopsie",
+      "ozai",
+      "azula"
     ],
-    "filterWeight": 70,
-    "canonicalImportance": "secondary",
-    "dataCompletenessScore": 0.95,
+    "filterWeight": 90,
+    "canonicalImportance": "primary",
+    "dataCompletenessScore": 1,
     "searchableKeywords": [
       "bumi",
       "king",
       "omashu",
-      "earth",
-      "mad",
-      "genius",
-      "jing",
-      "old",
-      "lotus"
+      "earthbender",
+      "mad_genius",
+      "white_lotus",
+      "aang",
+      "flopsie"
     ],
     "fuzzySynonyms": [
-      "the mad genius",
-      "king of omashu",
-      "aang's old friend"
+      "mad_genius",
+      "king_of_omashu",
+      "earth_kingdom_king",
+      "aangs_friend"
     ],
     "isSuggestedInXContext": [],
-    "expandedView": "### 📖 Overview\r\n\r\nAang's childhood friend and the King of Omashu, Bumi appears to be a senile and eccentric old man. This facade conceals one of the most powerful earthbenders in the world and a brilliant, patient tactician. He tests Aang with a series of bizarre challenges to teach him the importance of creative thinking and neutral jing, ultimately proving to be a formidable ally in the war against the Fire Nation.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Subjected Aang to three \"deadly\" challenges to test his growth as the Avatar.\r\n- Allowed himself to be captured, waiting for the opportune moment to liberate Omashu.\r\n- Single-handedly retook his entire city from the Fire Nation during the Day of Black Sun.\r\n- As a member of the White Lotus, helped liberate Ba Sing Se from Fire Nation control.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA powerful master and member of the old guard who pushes Aang to think outside the box and embrace the \"mad genius\" within.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Aang** – Childhood best friend, mentee.\r\n- **Flopsie** – Pet goat gorilla.\r\n- **Order of the White Lotus** – Fellow member.\r\n- **Toph Beifong** – Earthbending rival.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Eccentric and wild.\r\n- Cunning, patient, and powerful.\r\n- Confident, playful, and humorous.\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"You've got to keep an open mind.\"\r\n- \"I hope you will think like a mad genius!\"\r\n- \"Lettuce leaf?\"",
+    "expandedView": "### 📖 Overview\r\n\r\nBumi was the wild-eyed, eccentric, elderly King of Omashu. Prior to the Hundred Year War, he was a close friend of Avatar Aang and remained the only known friend from Aang's childhood still alive by 100 AG. Despite his apparent frailty, Bumi was an earthbending master, claiming to be \"the most powerful earthbender you'll ever see.\" His eccentricity arose from always keeping his mind \"open to the possibilities,\" earning him the nickname \"mad genius.\" Bumi was a brilliant and patient tactician, willing to wait for the opportune moment to strike.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Childhood friend of Aang; known for his \"mad genius\" and open-mindedness.\r\n- Became King of Omashu and led the city through the Hundred Year War.\r\n- Single-handedly liberated Omashu from Fire Nation control during the Day of Black Sun.\r\n- Member of the Order of the White Lotus; helped liberate Ba Sing Se.\r\n- Advised Aang to seek an earthbending teacher who waits and listens (Toph).\r\n\r\n### 🎭 Role in the Story\r\n\r\nA legendary earthbending master, comic relief, and wise mentor whose eccentricity hides deep wisdom and tactical brilliance.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Aang** – Childhood friend, mentee.\r\n- **Flopsie** – Loyal pet.\r\n- **Order of the White Lotus** – Fellow grandmasters and allies.\r\n- **Team Avatar** – Allies.\r\n- **Ozai, Azula, Ukano** – Enemies.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Eccentric and unpredictable\r\n- Brilliant strategist and tactician\r\n- Loyal and caring\r\n- Physically powerful despite age\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"I hope you will think like a mad genius!\"\r\n- \"You will always remember what you never expected.\"\r\n- \"Neutral jing is the key. It's the art of waiting and listening.\"",
     "__type": "character",
     "slug": "king-bumi"
   },
@@ -3540,11 +3567,18 @@
       "All I want is for him to be happy."
     ],
     "tags": [
-      "Air Nomads",
+      "Male",
+      "Airbender",
+      "Monk",
       "Mentor",
-      "Council Elder",
-      "Book One",
-      "Southern Air Temple"
+      "Teacher",
+      "Friend",
+      "Survivor",
+      "Sage",
+      "Outcast",
+      "Hero",
+      "Prodigy",
+      "Optimist"
     ],
     "tagCategories": {
       "nationTags": [
@@ -4094,8 +4128,8 @@
     "name": "Hama",
     "nation": "Southern Water Tribe",
     "badge": "Puppetmaster",
-    "shortdescription": "Hama is an old Southern Water Tribe waterbending master who was captured and imprisoned by the Fire Nation. To escape, she invented the dark and horrifying art of bloodbending.",
-    "tags": "old, waterbender, innkeeper, bloodbender, master, Southern Water Tribe",
+    "shortdescription": "Hama is an old Southern Water Tribe waterbender master who was captured and imprisoned by the Fire Nation. To escape, she invented the dark and horrifying art of bloodbending.",
+    "tags": "Female, Waterbender, Villain, Survivor, Outcast, Fighter, Teacher, Rebel, Mentor",
     "id": "hama",
     "fullName": "Hama",
     "role": "Puppetmaster",
@@ -6105,7 +6139,7 @@
     "nation": "Earth Kingdom",
     "badge": "Ba Sing Se Resident",
     "shortdescription": "Jin is a compassionate, resilient, and romantic female teen earthbender from Ba Sing Se, known for her optimism, resourcefulness, and brief but meaningful connection with Zuko.",
-    "tags": "Earth Kingdom, Ba Sing Se, Resident, Bender, Female, Teen, Compassionate, Romantic, Survivor, Book Two, Book Three, Tales of Ba Sing Se, Zuko",
+    "tags": "Female, Friend, Civilian, Optimist, Survivor, Outcast, Peasant",
     "id": "jin",
     "fullName": "Jin",
     "role": "Ba Sing Se Resident",
@@ -6409,7 +6443,7 @@
     "nation": "Earth Kingdom",
     "badge": "Ba Sing Se Guide",
     "shortdescription": "Joo Dee is the ever-smiling, eerily polite, and brainwashed female nonbender who serves as a government-appointed tour guide and bureaucrat for visitors to Ba Sing Se, maintaining order under the Dai Li and Azula.",
-    "tags": "Earth Kingdom, Ba Sing Se, Tour Guide, Bureaucrat, Female, Nonbender, Book Two, City of Walls and Secrets, Brainwashed, Dai Li, Azula",
+    "tags": "Female, Civilian, Diplomat, Loyalist, Survivor, Outcast, Peasant",
     "id": "joo-dee",
     "slug": "joo-dee",
     "fullName": "Joo Dee",
@@ -6622,7 +6656,7 @@
     "nation": "Earth Kingdom",
     "badge": "Bounty Hunter",
     "shortdescription": "A confident, formidable, and sassy young adult female bounty hunter from the Earth Kingdom, June is known for her unmatched tracking skills, professional detachment, and her partnership with the shirshu Nyla. Her journey takes her from mercenary work to a new life at the Jasmine Dragon.",
-    "tags": "Earth Kingdom, Bounty Hunter, Nonbender, Female, Young Adult, Outlaw, Mercenary, Confident, Sassy, Book One, Book Three, Nyla, Jasmine Dragon",
+    "tags": "Female, BountyHunter, Fighter, Survivor, Outcast, Mercenary, Loyalist",
     "id": "june",
     "fullName": "June",
     "role": "Bounty Hunter",
@@ -7046,9 +7080,9 @@
   {
     "name": "Katara",
     "nation": "Southern Water Tribe",
-    "badge": "Waterbending Master",
+    "badge": "Waterbender Master",
     "shortdescription": "The last waterbender of the Southern Water Tribe, Katara is a determined, compassionate, and heroic teen girl whose hope leads her to discover the Avatar, become his first teacher, and grow into a legendary master and healer.",
-    "tags": "Southern Water Tribe, Water Tribe, Team Avatar, Waterbender, Female, Teen, Compassionate, Determined, Healer, Hero, Book One, Book Two, Book Three, Painted Lady, Bloodbender, Aang, Sokka, Zuko",
+    "tags": "Waterbender, Female, Healer, Sibling, Orphan, Leader, Fighter, Teacher, Survivor, Optimist, Activist, Friend, Daughter, Student, Hero, Rebel, Hope, Peasant, Prodigy, Diplomat",
     "id": "katara",
     "fullName": "Katara",
     "role": "Waterbending Master",
@@ -7445,7 +7479,7 @@
     "nation": "Earth Kingdom",
     "badge": "Earth King",
     "shortdescription": "The naive, sheltered, and well-meaning young adult male Earth King of Ba Sing Se, Kuei was a puppet ruler manipulated by Long Feng before growing into a more assertive, if sometimes rash, leader. His journey reflects the Earth Kingdom's struggle for identity and change.",
-    "tags": "Earth Kingdom, Ba Sing Se, King, Royalty, Nonbender, Male, Young Adult, Naive, Sheltered, Catalyst, Book Two, Book Three, Bosco, Long Feng",
+    "tags": "Male, King, Royalty, Survivor, Outcast, Peasant, Optimist, Diplomat",
     "id": "kuei",
     "fullName": "Kuei",
     "role": "Earth King",
@@ -7902,7 +7936,7 @@
     "nation": "Southern Water Tribe",
     "badge": "SWT Matriarch",
     "shortdescription": "The courageous, loving, and self-sacrificing adult female matriarch of the Southern Water Tribe, Kya was a skilled healer and devoted mother whose ultimate sacrifice protected Katara and shaped her family's destiny.",
-    "tags": "Southern Water Tribe, Water Tribe, Matriarch, Mother, Healer, Female, Adult, Nonbender, Compassionate, Courageous, Sacrifice, Book Two, Book Three, Katara, Sokka, Hakoda",
+    "tags": "Female, Mother, Waterbender, Survivor, Outcast, Peasant, Hero",
     "id": "kya",
     "fullName": "Kya",
     "role": "SWT Matriarch",
@@ -8394,7 +8428,7 @@
     "nation": "Earth Kingdom",
     "badge": "Industrialist Patriarch",
     "shortdescription": "A wealthy, ambitious, and progressive adult male industrialist and patriarch from Gaoling, Lao Beifong is co-founder of the Earthen Fire Refinery, overprotective father of Toph, and a symbol of reconciliation and change in the postwar era.",
-    "tags": "Earth Kingdom, Gaoling, Cranefish Town, Industrialist, Patriarch, Businessman, Nonbender, Male, Adult, Father, Progressive, Book Two, Book Three, Toph, Poppy, Earthen Fire Refinery",
+    "tags": "Male, Father, Noble, Survivor, Outcast, Peasant, Loyalist",
     "id": "lao-beifong",
     "slug": "lao-beifong",
     "fullName": "Lao Beifong",
@@ -8785,7 +8819,7 @@
     "nation": "Earth Kingdom",
     "badge": "Grand Secretariat",
     "shortdescription": "The charismatic, cunning, and manipulative adult male Grand Secretariat of Ba Sing Se, Long Feng is a master earthbender and leader of the Dai Li who secretly rules the city as a dictator, suppressing all mention of the Hundred Year War.",
-    "tags": "Earth Kingdom, Ba Sing Se, Dai Li, Grand Secretariat, Bender, Male, Adult, Vizier, Antagonist, Manipulator, Book Two, Lake Laogai, Azula, Kuei, Jet",
+    "tags": "Male, DaiLi, Leader, Villain, Survivor, Outcast, Diplomat, Loyalist",
     "id": "long-feng",
     "fullName": "Long Feng",
     "role": "Dai Li Leader",
@@ -9092,7 +9126,7 @@
     "nation": "Earth Kingdom",
     "badge": "Freedom Fighter Archer",
     "shortdescription": "A silent, precise, and loyal male teen archer, Longshot is a key member of the Freedom Fighters, known for his unmatched marksmanship, quiet strength, and steadfast support for his friends.",
-    "tags": "Earth Kingdom, Freedom Fighters, Archer, Nonbender, Male, Teen, Loyal, Silent, Book One, Book Two, Ba Sing Se, Lake Laogai, Jet, Smellerbee, The Duke",
+    "tags": "Male, Archer, Fighter, Survivor, Outcast, Rebel, Loyalist",
     "id": "longshot",
     "fullName": "Longshot",
     "role": "Freedom Fighter",
@@ -9394,7 +9428,7 @@
     "nation": "Fire Nation",
     "badge": "Knife-Throwing Noblewoman",
     "shortdescription": "A stoic, skilled, and loyal female teen nonbender from a privileged Fire Nation family, Mai is a master of knife-throwing, a key member of Azula's team, and Zuko's primary love interest. Her journey explores the triumph of love over fear and apathy.",
-    "tags": "Fire Nation, Noblewoman, Nonbender, Female, Teen, Knife-Thrower, Loyal, Stoic, Love Interest, Book Two, Book Three, Boiling Rock, Zuko, Azula, Ty Lee, Ukano",
+    "tags": "Female, Friend, Sibling, Daughter, Fighter, Rebel, Outcast, Hero, Student, Noble, Prodigy, Strategist, Stoic, Loyalist",
     "id": "mai",
     "fullName": "Mai",
     "role": "Noblewoman",
@@ -9723,7 +9757,7 @@
     "nation": "Earth Kingdom",
     "badge": "Fortuneteller's Apprentice",
     "shortdescription": "Meng is Aunt Wu's eager apprentice in Makapu Village—a cheerful, kind-hearted girl known for her crush on Aang, her optimism, and her interest in fortune-telling.",
-    "tags": "Earth Kingdom, Makapu Village, Apprentice, Assistant, Girl, Child, Nonbender, Optimistic, Comic Relief, Hopeful, Book One, The Fortuneteller, Aunt Wu, Aang, Katara",
+    "tags": "Female, Friend, Civilian, Optimist, Survivor, Outcast, Peasant",
     "id": "meng",
     "slug": "meng",
     "fullName": "Meng",
@@ -10254,7 +10288,7 @@
     "nation": "Air Nomads",
     "badge": "Animal Companion",
     "shortdescription": "A curious, intelligent, and loyal male winged lemur from the Southern Air Temple, Momo is one of the last of his kind and a cherished member of Team Avatar, providing comic relief and a living link to Aang's lost home.",
-    "tags": "Air Nomads, Southern Air Temple, Animal Companion, Winged Lemur, Male, Comic Relief, Loyal, Curious, Team Avatar, Book One, Book Two, Book Three, Aang, Appa, Sokka",
+    "tags": "Male, Lemur, Animal, Pet, Friend, Loyal, Small, Survivor, Companion",
     "id": "momo",
     "fullName": "Momo",
     "role": "Animal Companion",
@@ -10364,11 +10398,336 @@
     "slug": "momo"
   },
   {
+    "name": "Monk Gyatso",
+    "nation": "Air Nomads",
+    "shortdescription": "A wise, compassionate, and playful airbending master, Gyatso was Aang's mentor, father figure, and a leading elder of the Southern Air Temple, renowned for his kindness, humor, and powerful airbending.",
+    "id": "monk-gyatso",
+    "fullName": "Gyatso",
+    "role": "High Monk, Airbending Master, Council Elder",
+    "titles": [
+      "Monk",
+      "Master",
+      "Council Elder"
+    ],
+    "aliases": [],
+    "species": "human",
+    "gender": "male",
+    "ageChronological": 78,
+    "ageBiological": 78,
+    "ageRange": "elder",
+    "birthDate": "c. 78 BG",
+    "deathDate": "0 AG",
+    "nationality": "Air Nomads",
+    "ethnicity": "Air Nomad",
+    "nativeLocation": "Southern Air Temple",
+    "currentLocation": "Deceased",
+    "socioeconomicStanding": "monastic",
+    "languagesSpoken": [
+      "Standard Language"
+    ],
+    "isBender": true,
+    "bendingElement": "air",
+    "bendingProficiency": "legendary",
+    "advancedBending": [],
+    "nonBendingSkills": [
+      "cooking",
+      "diplomacy",
+      "teaching",
+      "pranks"
+    ],
+    "uniqueTechniques": [
+      "fruit pie attacks",
+      "airbending glider mastery"
+    ],
+    "powerMetrics": {
+      "rawPower": 8,
+      "technicalSkill": 10,
+      "strategicAptitude": 9
+    },
+    "combatStyle": "elusive",
+    "vulnerabilities": [
+      "attachment to loved ones",
+      "grief over loss"
+    ],
+    "isLegendaryFighter": true,
+    "notableFeats": [
+      "Defeated many comet-enhanced Fire Nation soldiers in his final stand",
+      "Youngest airbender to complete the eighteenth tier in decades",
+      "Mentored both Avatar Roku and Avatar Aang"
+    ],
+    "currentAffiliations": [
+      "Air Nomads",
+      "Southern Air Temple",
+      "Council of Elders"
+    ],
+    "pastAffiliations": [],
+    "allegianceHistory": [
+      {
+        "affiliation": "Southern Air Temple",
+        "startDate": "c. 78 BG",
+        "endDate": "0 AG",
+        "reasonForLeaving": "Deceased"
+      }
+    ],
+    "isRoyalty": false,
+    "politicalPower": "council",
+    "politicalLeanings": [
+      "pacifist",
+      "diplomatic",
+      "open-minded"
+    ],
+    "moralAlignment": "neutral good",
+    "moralCompassDrift": false,
+    "narrativeFunction": "mentor",
+    "screenTimeLevel": "minor",
+    "firstAppearance": "103-The-Southern-Air-Temple",
+    "finalAppearance": "306-The-Avatar-and-the-Fire-Lord",
+    "deathStatus": "deceased",
+    "causeOfDeath": "Killed during the Air Nomad genocide",
+    "narrativeArcs": [
+      {
+        "arcType": "mentor",
+        "status": "completed",
+        "summary": "Guided and protected Aang, shaped the Avatar's early philosophy, and died defending the Southern Air Temple."
+      }
+    ],
+    "keyTropes": [
+      "The Mentor",
+      "Tragic Hero",
+      "Comic Relief",
+      "Wise Old Man"
+    ],
+    "eraAppearances": [
+      {
+        "era": "Avatar: The Last Airbender - Book 1-3",
+        "role": "mentor",
+        "focus": "Mentoring Aang, council leadership, and defending the Air Nomads.",
+        "keyEpisodes": [
+          "103",
+          "112",
+          "219",
+          "220",
+          "306"
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "characterId": "aang",
+        "relationshipType": "mentor",
+        "status": "positive",
+        "history": "Mentor, guardian, and father figure to Aang."
+      },
+      {
+        "characterId": "roku",
+        "relationshipType": "friend",
+        "status": "positive",
+        "history": "Close friend and companion during youth."
+      },
+      {
+        "characterId": "yama",
+        "relationshipType": "family",
+        "status": "negative",
+        "history": "Older sister, whose death deeply affected him."
+      },
+      {
+        "characterId": "lola",
+        "relationshipType": "pet",
+        "status": "positive",
+        "history": "Sky bison companion."
+      },
+      {
+        "characterId": "pathik",
+        "relationshipType": "friend",
+        "status": "positive",
+        "history": "Friend and spiritual peer."
+      },
+      {
+        "characterId": "council-of-elders",
+        "relationshipType": "colleague",
+        "status": "positive",
+        "history": "Fellow council members at the Southern Air Temple."
+      },
+      {
+        "characterId": "sozin",
+        "relationshipType": "enemy",
+        "status": "negative",
+        "history": "Fire Lord who led the genocide of the Air Nomads."
+      }
+    ],
+    "groupMemberships": [
+      {
+        "groupId": "council-of-elders",
+        "roleInGroup": "elder"
+      }
+    ],
+    "petCompanions": [
+      "lola"
+    ],
+    "positiveTraits": [
+      "compassionate",
+      "wise",
+      "humorous",
+      "patient",
+      "diplomatic"
+    ],
+    "negativeTraits": [
+      "playful to a fault",
+      "attachment to loved ones",
+      "grief-stricken"
+    ],
+    "motivations": [
+      "teaching",
+      "protecting Aang",
+      "helping others",
+      "spreading joy"
+    ],
+    "fears": [
+      "loss of loved ones",
+      "failure to protect the Air Nomads"
+    ],
+    "internalConflicts": [
+      "duty vs. attachment",
+      "grief vs. hope"
+    ],
+    "emotionalWounds": [
+      "loss of sister Yama",
+      "loss of the Air Nomads"
+    ],
+    "copingMechanisms": [
+      "humor",
+      "baking",
+      "pranks",
+      "spiritual practice"
+    ],
+    "worldview": "Act with compassion and joy, even in the face of suffering.",
+    "heightEstimate": "Average",
+    "notableFeatures": [
+      "Shaven head",
+      "light brown eyes",
+      "Air Nomad tattoos"
+    ],
+    "outfitStyles": [
+      "Air Nomad monk robes"
+    ],
+    "signaturePossessions": [
+      "airbending staff",
+      "fruit pies"
+    ],
+    "ageProgression": false,
+    "voiceActor": [
+      "Sab Shimono",
+      "Sean Marquette (young Gyatso)"
+    ],
+    "iconicQuotes": [
+      "We can't concern ourselves with what was. We must act on what is.",
+      "There are things in this world that can break us, but I've learned there's always a way to heal.",
+      "Let us have some pie!"
+    ],
+    "speakingStyle": "gentle",
+    "linguisticQuirks": [
+      "playful advice",
+      "baking metaphors",
+      "spiritual wisdom"
+    ],
+    "catchphrases": [
+      "Let us have some pie!"
+    ],
+    "archetype": "The Mentor",
+    "thematicKeywords": [
+      "compassion",
+      "wisdom",
+      "airbending",
+      "joy",
+      "loss",
+      "healing",
+      "teaching",
+      "sacrifice"
+    ],
+    "tagCategories": {
+      "narrativeTags": [
+        "mentor",
+        "comic relief",
+        "council elder",
+        "tragic hero"
+      ],
+      "combatTags": [
+        "airbender",
+        "master airbender",
+        "glider",
+        "fruit pie attack"
+      ],
+      "relationshipTags": [
+        "mentor to aang",
+        "friend of roku",
+        "council elder",
+        "guardian of avatar"
+      ],
+      "emotionTags": [
+        "compassionate",
+        "humorous",
+        "wise",
+        "grief-stricken"
+      ],
+      "politicalTags": [
+        "monk",
+        "council",
+        "elder"
+      ],
+      "arcTags": [
+        "mentor to two avatars",
+        "last stand at southern air temple",
+        "comic relief"
+      ],
+      "worldTags": [
+        "air nomads",
+        "southern air temple",
+        "council of elders"
+      ],
+      "triviaTags": [
+        "fruit pie attacks",
+        "baked for the temple",
+        "mentor to two avatars"
+      ]
+    },
+    "relatedCards": [
+      "aang",
+      "roku",
+      "yama",
+      "lola",
+      "pathik",
+      "council-of-elders"
+    ],
+    "filterWeight": 85,
+    "canonicalImportance": "primary",
+    "dataCompletenessScore": 1,
+    "searchableKeywords": [
+      "gyatso",
+      "monk",
+      "airbender",
+      "mentor",
+      "council",
+      "aang",
+      "roku",
+      "southern air temple"
+    ],
+    "fuzzySynonyms": [
+      "monk gyatso",
+      "aang's mentor",
+      "council elder",
+      "air nomad master"
+    ],
+    "isSuggestedInXContext": [],
+    "expandedView": "### 📖 Overview\r\n\r\nMonk Gyatso was a master airbender, high monk, and council elder of the Southern Air Temple. A close friend of Avatar Roku and later the mentor and father figure to Avatar Aang, Gyatso was known for his deep compassion, sense of humor, and wisdom. He taught Aang not only airbending but also the importance of joy, kindness, and balance. Gyatso was slain during the Fire Nation's genocide of the Air Nomads, but not before defeating many comet-enhanced firebenders in a heroic last stand.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Childhood friend and companion of Avatar Roku; helped shape Roku's diplomatic approach.\r\n- Became a council elder and high monk at the Southern Air Temple.\r\n- Served as Aang's airbending master, mentor, and father figure.\r\n- Advocated for Aang's happiness and resisted the council's decision to separate them.\r\n- Made a heroic last stand against the Fire Nation, defeating many soldiers before his death.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA wise mentor, comic relief, and tragic figure whose teachings and loss deeply shaped Aang's journey and the fate of the Air Nomads.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Aang** – Student, ward, and surrogate son.\r\n- **Roku** – Close friend and companion.\r\n- **Yama** – Older sister (deceased).\r\n- **Lola** – Sky bison companion.\r\n- **Pathik** – Friend.\r\n- **Southern Air Temple Council** – Colleagues.\r\n- **Fire Nation, Sozin** – Enemies.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Deeply compassionate and empathetic\r\n- Playful and humorous\r\n- Wise and diplomatic\r\n- Fiercely protective of loved ones\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"We can't concern ourselves with what was. We must act on what is.\"\r\n- \"There are things in this world that can break us, but I've learned there's always a way to heal.\"\r\n- \"Let us have some pie!\"",
+    "__type": "character",
+    "slug": "monk-gyatso"
+  },
+  {
     "name": "On Ji",
     "nation": "Fire Nation",
     "badge": "Fire Nation Student",
     "shortdescription": "On Ji is a friendly, kind, and open-minded teen girl and student at a Fire Nation school, known for her brief friendship and dance partnership with Aang (as Kuzon).",
-    "tags": "Fire Nation, Student, Teen, Girl, Nonbender, Friendly, Kind, Dance Partner, Minor Character, Book Three, The Headband, Aang, Shoji, Hide",
+    "tags": "Female, Friend, Civilian, Optimist, Survivor, Outcast, Peasant",
     "id": "on-ji",
     "fullName": "On Ji",
     "role": "Fire Nation Student",
@@ -10631,16 +10990,14 @@
   {
     "name": "Ozai",
     "nation": "Fire Nation",
-    "badge": "Fire Lord",
-    "shortdescription": "The tyrannical, power-hungry, and legendary adult male Fire Lord of the Fire Nation, Ozai is an exceptionally powerful firebender who seeks to conquer the world and rule as the Phoenix King, embodying the ultimate antagonist of the series.",
-    "tags": "Fire Nation, Fire Lord, Phoenix King, Bender, Male, Adult, Tyrant, Antagonist, Legendary, Book One, Book Two, Book Three, Zuko, Azula, Iroh, Ursa, Azulon",
+    "shortdescription": "The tyrannical Fire Lord and ultimate antagonist of the Hundred Year War, Ozai is a legendary firebender whose ambition, cruelty, and power threaten the balance of the world.",
     "id": "ozai",
     "fullName": "Ozai",
     "role": "Fire Lord",
     "titles": [
       "Fire Lord",
-      "Prince",
-      "Phoenix King"
+      "Phoenix King",
+      "Prince"
     ],
     "aliases": [],
     "species": "human",
@@ -10658,7 +11015,7 @@
     "languagesSpoken": [
       "Standard Language"
     ],
-    "isBender": false,
+    "isBender": true,
     "bendingElement": "fire",
     "bendingProficiency": "legendary",
     "advancedBending": [
@@ -10692,7 +11049,261 @@
       "Nearly conquered the entire world",
       "Fought an Avatar-State-empowered Aang"
     ],
-    "expandedView": "- Name: Ozai\r\n- Nation: Fire Nation\r\n- Age: 40s (in Avatar: The Last Airbender)\r\n- Overview: As the ruthless and power-hungry Fire Lord, Ozai represents the culmination of a century of Fire Nation aggression. After usurping the throne from his brother, he rules with an iron fist, showing no mercy to his enemies or even his own family. His ultimate goal is to use the power of Sozin's Comet to burn down the Earth Kingdom and declare himself the supreme ruler of the world, the Phoenix King.\r\n\r\n- Narrative Highlights:\r\n  - Usurped the throne from his brother Iroh after their father's mysterious death.\r\n  - Permanently scarred and banished his own son, Zuko, for speaking out of turn.\r\n  - Planned to use Sozin's Comet to commit genocide on a global scale.\r\n  - Was defeated by Avatar Aang, who permanently removed his firebending abilities.\r\n\r\n- Role in the Story: The main antagonist and final boss of the series, representing the ultimate personification of tyranny, abuse, and unbalanced ambition.\r\n\r\n- Relationships:\r\n  - Zuko (Son, Object of Abuse and Scorn)\r\n  - Azula (Daughter, Favored Child, Weapon)\r\n  - Iroh (Brother, Rival)\r\n  - Ursa (Wife, Banished)\r\n  - Azulon (Father, Murdered)\r\n\r\n- Personality Traits:\r\n  - Megalomaniacal & Power-hungry\r\n  - Cruel & Sadistic\r\n  - Domineering & Narcissistic\r\n  - Charismatic & Cunning\r\n\r\n- Notable Quotes:\r\n  - \"You will learn respect, and suffering will be your teacher.\"\r\n  - \"There is no right or wrong apart from what you decide. What you choose, by definition, is right.\"\r\n  - \"Prepare to join them. Prepare to die!\"",
+    "currentAffiliations": [
+      "Fire Nation Royal Family"
+    ],
+    "pastAffiliations": [
+      "Fire Nation military"
+    ],
+    "allegianceHistory": [
+      {
+        "affiliation": "Fire Nation",
+        "startDate": "c. 55 AG",
+        "endDate": null,
+        "reasonForLeaving": null
+      }
+    ],
+    "isRoyalty": true,
+    "politicalPower": "ruling",
+    "politicalLeanings": [
+      "imperialist",
+      "authoritarian",
+      "supremacist"
+    ],
+    "moralAlignment": "lawful evil",
+    "moralCompassDrift": false,
+    "narrativeFunction": "antagonist",
+    "screenTimeLevel": "main",
+    "firstAppearance": "101-The-Boy-in-the-Iceberg",
+    "finalAppearance": "321-Sozin's-Comet-Part-4",
+    "deathStatus": "alive",
+    "causeOfDeath": null,
+    "narrativeArcs": [
+      {
+        "arcType": "corruption",
+        "status": "completed",
+        "summary": "His rise from prince to tyrant, culminating in his defeat and loss of power."
+      }
+    ],
+    "keyTropes": [
+      "The Tyrant",
+      "Final Boss",
+      "Abusive Parent",
+      "The Corrupter",
+      "Villainous Breakdown"
+    ],
+    "eraAppearances": [
+      {
+        "era": "Avatar: The Last Airbender - Book 1-3",
+        "role": "villain",
+        "focus": "Ruling the Fire Nation, orchestrating the war, and seeking world domination.",
+        "keyEpisodes": [
+          "101",
+          "112",
+          "220",
+          "321"
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "characterId": "zuko",
+        "relationshipType": "family",
+        "status": "negative",
+        "history": "His son, whom he abused and banished."
+      },
+      {
+        "characterId": "azula",
+        "relationshipType": "family",
+        "status": "negative",
+        "history": "His daughter, whom he favored and weaponized."
+      },
+      {
+        "characterId": "iroh",
+        "relationshipType": "family",
+        "status": "negative",
+        "history": "His older brother, whom he usurped."
+      },
+      {
+        "characterId": "ursa",
+        "relationshipType": "family",
+        "status": "negative",
+        "history": "His wife, whom he banished after conspiring to save Zuko."
+      },
+      {
+        "characterId": "azulon",
+        "relationshipType": "family",
+        "status": "negative",
+        "history": "His father, whom he murdered to secure the throne."
+      }
+    ],
+    "groupMemberships": [
+      {
+        "groupId": "fire-nation-royal-family",
+        "roleInGroup": "leader"
+      }
+    ],
+    "petCompanions": [],
+    "positiveTraits": [
+      "charismatic",
+      "cunning",
+      "ambitious"
+    ],
+    "negativeTraits": [
+      "cruel",
+      "sadistic",
+      "domineering",
+      "megalomaniacal",
+      "lacks empathy"
+    ],
+    "motivations": [
+      "power",
+      "domination",
+      "legacy",
+      "control"
+    ],
+    "fears": [
+      "loss of power",
+      "betrayal",
+      "failure"
+    ],
+    "internalConflicts": [
+      "ambition vs. family loyalty"
+    ],
+    "emotionalWounds": [
+      "paternal favoritism toward Iroh",
+      "betrayal by Ursa"
+    ],
+    "copingMechanisms": [
+      "intimidation",
+      "violence",
+      "manipulation"
+    ],
+    "worldview": "Believes that power and domination are the only paths to security and legacy.",
+    "heightEstimate": "Tall",
+    "notableFeatures": [
+      "Sharp features",
+      "intense eyes",
+      "Fire Lord's topknot"
+    ],
+    "outfitStyles": [
+      "Fire Lord royal robes",
+      "Phoenix King armor"
+    ],
+    "signaturePossessions": [
+      "Phoenix King crown"
+    ],
+    "ageProgression": true,
+    "voiceActor": [
+      "Mark Hamill"
+    ],
+    "iconicQuotes": [
+      "You will learn respect, and suffering will be your teacher.",
+      "There is no right or wrong apart from what you decide. What you choose, by definition, is right.",
+      "Prepare to join them. Prepare to die!"
+    ],
+    "speakingStyle": "formal",
+    "linguisticQuirks": [
+      "grandiose proclamations",
+      "threatening tone"
+    ],
+    "catchphrases": [],
+    "archetype": "The Tyrant",
+    "thematicKeywords": [
+      "tyranny",
+      "power",
+      "ambition",
+      "abuse",
+      "war",
+      "legacy",
+      "domination",
+      "family",
+      "betrayal"
+    ],
+    "tagCategories": {
+      "narrativeTags": [
+        "antagonist",
+        "final boss",
+        "abusive parent",
+        "the tyrant",
+        "villainous breakdown"
+      ],
+      "combatTags": [
+        "firebender",
+        "lightning",
+        "master firebender",
+        "phoenix king"
+      ],
+      "relationshipTags": [
+        "father of zuko",
+        "father of azula",
+        "husband of ursa",
+        "brother of iroh",
+        "son of azulon"
+      ],
+      "emotionTags": [
+        "cruel",
+        "sadistic",
+        "domineering",
+        "megalomaniacal"
+      ],
+      "politicalTags": [
+        "fire lord",
+        "phoenix king",
+        "usurper",
+        "war criminal"
+      ],
+      "arcTags": [
+        "usurped the throne",
+        "banished zuko",
+        "defeated by aang",
+        "lost his bending"
+      ],
+      "worldTags": [
+        "fire nation",
+        "fire nation royal family",
+        "hundred year war",
+        "sozin's comet"
+      ],
+      "triviaTags": [
+        "voiced by mark hamill",
+        "never shown firebending after defeat"
+      ]
+    },
+    "relatedCards": [
+      "zuko",
+      "azula",
+      "iroh",
+      "ursa",
+      "azulon",
+      "sozin"
+    ],
+    "filterWeight": 100,
+    "canonicalImportance": "core",
+    "dataCompletenessScore": 1,
+    "searchableKeywords": [
+      "ozai",
+      "fire lord",
+      "phoenix king",
+      "villain",
+      "tyrant",
+      "lightning",
+      "firebender",
+      "zuko",
+      "azula",
+      "ursa",
+      "iroh",
+      "azulon"
+    ],
+    "fuzzySynonyms": [
+      "the fire lord",
+      "phoenix king",
+      "zuko's father",
+      "azula's father",
+      "final boss"
+    ],
+    "isSuggestedInXContext": [],
+    "expandedView": "### 📖 Overview\r\n\r\nAs Fire Lord, Ozai embodies the peak of Fire Nation ambition and cruelty. Usurping the throne from his brother Iroh, he rules with an iron fist, seeking to conquer the world and declare himself Phoenix King. His reign is marked by ruthless tactics, the abuse of his own family, and the near-destruction of the Earth Kingdom during Sozin's Comet. Ultimately, he is defeated by Avatar Aang, who removes his bending and ends his tyranny.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Usurped the throne from his brother Iroh after Azulon's death.\r\n- Permanently scarred and banished his son Zuko for speaking out of turn.\r\n- Planned to use Sozin's Comet to burn down the Earth Kingdom and rule as Phoenix King.\r\n- Defeated by Avatar Aang, who took away his firebending.\r\n\r\n### 🎭 Role in the Story\r\n\r\nThe main antagonist and final boss of the series, representing tyranny, abuse, and unbalanced ambition.\r\n\r\n### 🤝 Relationships\r\n\r\n- **Zuko** – Son, object of abuse and scorn.\r\n- **Azula** – Daughter, favored child and weapon.\r\n- **Iroh** – Brother, rival and original heir.\r\n- **Ursa** – Wife, banished after conspiring to save Zuko.\r\n- **Azulon** – Father, murdered to secure the throne.\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Megalomaniacal and power-hungry\r\n- Cruel, sadistic, and domineering\r\n- Charismatic and cunning\r\n- Lacks empathy\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"You will learn respect, and suffering will be your teacher.\"\r\n- \"There is no right or wrong apart from what you decide. What you choose, by definition, is right.\"\r\n- \"Prepare to join them. Prepare to die!\"",
     "__type": "character",
     "slug": "ozai"
   },
@@ -10701,7 +11312,7 @@
     "nation": "Northern Water Tribe",
     "badge": "Waterbending Master",
     "shortdescription": "A powerful, traditionalist, and disciplined elder male waterbending master from the Northern Water Tribe, Pakku is a strict teacher who becomes a crucial mentor to Aang and Katara and a key member of the Order of the White Lotus.",
-    "tags": "Northern Water Tribe, Water Tribe, Master, Bender, Male, Elder, Mentor, Traditionalist, Teacher, Order of the White Lotus, Book One, Book Three, Katara, Kanna, Aang, Iroh",
+    "tags": "Male, Waterbender, Master, Teacher, Elder, Survivor, Outcast, Loyalist",
     "id": "pakku",
     "slug": "pakku",
     "fullName": "Pakku",
@@ -11218,7 +11829,7 @@
     "nation": "Fire Nation",
     "badge": "Swordmaster",
     "shortdescription": "A legendary, wise, and unconventional elder male swordmaster and bladesmith from the Fire Nation, Piandao deserted the army to pursue enlightenment and art, becoming Sokka's mentor and a key member of the Order of the White Lotus.",
-    "tags": "Fire Nation, Swordmaster, Bladesmith, Nonbender, Male, Elder, Mentor, Teacher, Order of the White Lotus, Book Three, Sokka, Zuko, Iroh, Shu Jing",
+    "tags": "Male, Swordmaster, Mentor, Teacher, Survivor, Outcast, Hero, Prodigy, Loyalist",
     "id": "piandao",
     "slug": "piandao",
     "fullName": "Piandao",
@@ -13140,7 +13751,7 @@
     "nation": "Earth Kingdom",
     "badge": "Earth Rumble Heavyweight",
     "shortdescription": "A massive, strong, and comic male earthbender from Gaoling, The Big Bad Hippo is known for his unique third-person speech, memorable stage presence, and role as both a minor antagonist and ally in the Earth Rumble tournaments and Fire Nation invasion.",
-    "tags": "Earth Kingdom, Earth Rumble, Fighter, Bender, Male, Comic Relief, Minor Antagonist, Ally, Book Two, The Blind Bandit, Fire Nation Invasion",
+    "tags": "Male, Fighter, Wrestler, Survivor, Outcast, Villain, Mercenary",
     "id": "the-big-bad-hippo",
     "slug": "the-big-bad-hippo",
     "fullName": "The Big Bad Hippo",
@@ -13499,7 +14110,7 @@
     "nation": "Earth Kingdom",
     "badge": "Earth Rumble Fighter",
     "shortdescription": "An agile, resourceful, and comic male earthbender from Gaoling, The Gopher is known for his tunneling tactics, unique fighting style, and role as a minor antagonist and comic relief in the Earth Rumble tournaments.",
-    "tags": "Earth Kingdom, Earth Rumble, Fighter, Bender, Male, Comic Relief, Minor Antagonist, Book Two, The Blind Bandit",
+    "tags": "Male, Fighter, Wrestler, Survivor, Outcast, Villain, Mercenary",
     "id": "the-gopher",
     "slug": "the-gopher",
     "fullName": "The Gopher",

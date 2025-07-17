@@ -7,9 +7,9 @@ type: character
 ```md
 - Name: Katara
 - Nation: Southern Water Tribe
-- Badge: Waterbending Master
+- Badge: Waterbender Master
 - Short Description: The last waterbender of the Southern Water Tribe, Katara is a determined, compassionate, and heroic teen girl whose hope leads her to discover the Avatar, become his first teacher, and grow into a legendary master and healer.
-- Tags: Southern Water Tribe, Water Tribe, Team Avatar, Waterbender, Female, Teen, Compassionate, Determined, Healer, Hero, Book One, Book Two, Book Three, Painted Lady, Bloodbender, Aang, Sokka, Zuko
+- Tags: Waterbender, Female, Healer, Sibling, Orphan, Leader, Fighter, Teacher, Survivor, Optimist, Activist, Friend, Daughter, Student, Hero, Rebel, Hope, Peasant, Prodigy, Diplomat
 ```
 
 ---

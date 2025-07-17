@@ -9,7 +9,7 @@ type: character
 - Nation: Air Nomads
 - Badge: Animal Companion
 - Short Description: A curious, intelligent, and loyal male winged lemur from the Southern Air Temple, Momo is one of the last of his kind and a cherished member of Team Avatar, providing comic relief and a living link to Aang's lost home.
-- Tags: Air Nomads, Southern Air Temple, Animal Companion, Winged Lemur, Male, Comic Relief, Loyal, Curious, Team Avatar, Book One, Book Two, Book Three, Aang, Appa, Sokka
+- Tags: Male, Lemur, Animal, Pet, Friend, Loyal, Small, Survivor, Companion
 ```
 
 ---

@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Justice Incarnate
 - Short Description: The physically imposing, legendary, and long-lived female elder Avatar of the Earth Kingdom, Kyoshi is a fierce bender, warrior, and founder of the Kyoshi Warriors and Dai Li, known for her uncompromising sense of justice and her relationship with Rangi.
-- Tags: Earth Kingdom, Avatar, Mentor, Warrior, Female, Bender, Legendary, Elder, Founder, Justice, Book Two, Kyoshi Island, Dai Li, Kyoshi Warriors, Rangi, Chin the Conqueror
+- Tags: Female, Avatar, Earthbender, Warrior, Survivor, Outcast, Hero, Prodigy, Sage, Leader
 ```
 
 ## UI - EXPANDED VIEW

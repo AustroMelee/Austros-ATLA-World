@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Earth Rumble Fighter
 - Short Description: The Gecko is a nimble, agile, and unconventional male Earth Kingdom earthbender and underground fighter, recognized for his quick movements and unique style in the Earth Rumble tournaments.
-- Tags: Earth Kingdom, Earth Rumble, Fighter, Earthbender, Underground, Male, Book Two, The Blind Bandit
+- Tags: Male, Fighter, Wrestler, Survivor, Outcast, Villain, Mercenary
 ```
 
 ## UI - EXPANDED VIEW

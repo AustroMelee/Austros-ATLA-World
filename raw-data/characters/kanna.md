@@ -9,7 +9,7 @@ type: character
 - Nation: Southern Water Tribe
 - Badge: Gran Gran
 - Short Description: Kanna, affectionately known as Gran Gran, is a wise, loving, and protective elderly female nonbender who serves as Katara and Sokka's grandmother, midwife, and respected elder of the Southern Water Tribe.
-- Tags: Southern Water Tribe, Northern Water Tribe, Elder, Midwife, Grandmother, Female, Nonbender, Wise, Protective, Book One, Book Three, Wolf Cove, Pakku
+- Tags: Female, Elder, Grandmother, Survivor, Outcast, Peasant, Mentor, Teacher
 ```
 
 ## UI - EXPANDED VIEW

@@ -1,6 +1,42 @@
 # System Behavior & Development FAQ
 
-This document outlines answers to common technical questions regarding the application's architecture, error handling, and development practices.
+---
+
+## 🚨 Non-Negotiable Tag Rule
+
+**All tags in markdown files must be single, underscore-joined words.**
+- No spaces, slashes, or multi-word phrases are allowed in any tag.
+- Spaces and slashes are replaced with underscores (e.g., `water nation` → `water_nation`).
+- All tags are lowercased (e.g., `Firebender` → `firebender`).
+- This rule applies to all present and future markdown files.
+- The enrichment/data pipeline will enforce this and strip or reject any non-compliant tags.
+- **Example:**
+  - Valid: `water_nation`, `firebender`, `main_villain`
+  - Invalid: `water nation`, `main villain`, `main/villain`, `Main Villain`
+
+---
+
+### 🏆 Search Result Ordering & Tag Matching (2024 Update)
+
+**How are search results ordered?**
+- Results are ranked by a robust scoring system:
+  1. Exact tag match (e.g., 'bear' returns Bosco first if he has the tag 'bear').
+  2. Gender/age/role match for gendered queries (e.g., 'boy', 'girl', 'male', 'female' boost characters with matching gender and age/role).
+  3. Main cast/primary role (e.g., tags like 'protagonist', 'main', 'main_cast', 'lead').
+  4. Partial tag match (e.g., 'knife' matches 'knife_thrower').
+  5. Other matches (fallback).
+- This ensures the most relevant results appear first for all tag-based queries.
+
+**What is partial tag matching?**
+- If your query is a substring of a tag, the entity will be included in results (e.g., 'knife' matches 'knife_thrower').
+- Exact matches are always prioritized above partials.
+- This makes search flexible and typo-tolerant, but may sometimes include tangential results. The hierarchy ensures the best matches are always at the top.
+- **Exception:** For mutually exclusive queries like 'male' and 'female', partial tag matching is skipped and only exact matches are allowed. For example, searching 'male' will not return 'female', and vice versa.
+
+**Examples:**
+- Searching 'bear' returns Bosco first.
+- Searching 'boy' returns Aang, Sokka, and Zuko first, then others.
+- Searching 'knife' returns all entities with tags containing 'knife', but 'knife_thrower' will be prioritized if it is an exact match.
 
 ---
 

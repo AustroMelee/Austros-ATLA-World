@@ -9,7 +9,7 @@ type: character
 - Nation: Air Nomads
 - Badge: Spiritual Mentor
 - Short Description: Enlightened, eccentric, and wise, Guru Pathik is a supercentenarian male nonbender, spiritual guide, and mentor to Aang, known for his deep connection to the Air Nomads, mastery of meditation and chakras, and friendship with Monk Gyatso.
-- Tags: Air Nomads, Mentor, Spiritual Guide, Nonbender, Elder, Male, Guru, Eccentric, Wise, Book Two, Eastern Air Temple, Aang, Appa, Monk Gyatso
+- Tags: Male, Guru, Monk, Mentor, Teacher, Sage, Survivor, Outcast, Hero, Prodigy, Optimist
 ```
 
 ## 📖 UI - EXPANDED VIEW

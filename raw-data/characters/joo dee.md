@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Ba Sing Se Guide
 - Short Description: Joo Dee is the ever-smiling, eerily polite, and brainwashed female nonbender who serves as a government-appointed tour guide and bureaucrat for visitors to Ba Sing Se, maintaining order under the Dai Li and Azula.
-- Tags: Earth Kingdom, Ba Sing Se, Tour Guide, Bureaucrat, Female, Nonbender, Book Two, City of Walls and Secrets, Brainwashed, Dai Li, Azula
+- Tags: Female, Civilian, Diplomat, Loyalist, Survivor, Outcast, Peasant
 ```
 
 ## 📖 UI - EXPANDED VIEW

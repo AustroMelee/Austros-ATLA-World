@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Protective Matriarch
 - Short Description: Cheerful, polite, and deeply loving, Poppy Beifong is Toph’s overprotective mother and a noble matriarch of Gaoling. Her journey explores the challenges of parental love and learning to let go.
-- Tags: Earth Kingdom, Gaoling, Mother, Matriarch, Female, Nobility, Book Two, The Blind Bandit
+- Tags: Female, Mother, Noble, Survivor, Outcast, Peasant, Loyalist
 ```
 
 ## UI - EXPANDED VIEW

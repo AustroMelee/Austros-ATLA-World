@@ -8,8 +8,8 @@ type: character
 - Name: Hama
 - Nation: Southern Water Tribe
 - Badge: Puppetmaster
-- Short Description: Hama is an old Southern Water Tribe waterbending master who was captured and imprisoned by the Fire Nation. To escape, she invented the dark and horrifying art of bloodbending.
-- Tags: old, waterbender, innkeeper, bloodbender, master, Southern Water Tribe
+- Short Description: Hama is an old Southern Water Tribe waterbender master who was captured and imprisoned by the Fire Nation. To escape, she invented the dark and horrifying art of bloodbending.
+- Tags: Female, Waterbender, Villain, Survivor, Outcast, Fighter, Teacher, Rebel, Mentor
 ```
 
 ---

@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Earth Rumble Promoter
 - Short Description: Xin Fu is a shrewd, ambitious, and cunning male Earth Kingdom earthbender, fight promoter, and recurring antagonist. He schemes for profit and power as the host of the Earth Rumble tournaments and a persistent bounty hunter.
-- Tags: Earth Kingdom, Earth Rumble, Promoter, Bounty Hunter, Antagonist, Villain, Fighter, Earthbender, Underground, Male, Book Two, The Blind Bandit
+- Tags: Male, Fighter, Outcast, Survivor, Villain, Mercenary
 ```
 
 ## UI - EXPANDED VIEW

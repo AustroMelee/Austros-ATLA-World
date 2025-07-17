@@ -9,7 +9,7 @@ type: character
 - Nation: Northern Water Tribe
 - Badge: Tragic Hero
 - Short Description: A carefree, powerful, and tragic adult male Avatar from the Northern Water Tribe, Kuruk was a legendary bender whose secret war against dark spirits and personal losses defined his short life.
-- Tags: Northern Water Tribe, Water Tribe, Avatar, Male, Bender, Tragic Hero, Spirit World, Adult, Legendary, Book Two, Koh, Ummi
+- Tags: Male, Waterbender, Avatar, Survivor, Outcast, Hero, Prodigy, Sage
 ```
 
 ## UI - EXPANDED VIEW

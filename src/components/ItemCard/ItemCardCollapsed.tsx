@@ -24,6 +24,21 @@ function getField<T = string>(item: EnrichedEntity, key: string): T | undefined 
   return undefined;
 }
 
+function getBadge(item: EnrichedEntity): string | undefined {
+  // Prefer top-level role, then metadata.badge, then metadata.role
+  const tryGet = (val: unknown): string | undefined => {
+    if (typeof val === 'string' && val.trim()) return val;
+    if (Array.isArray(val) && val.length > 0 && typeof val[0] === 'string') return val[0];
+    return undefined;
+  };
+  if (tryGet(item.role)) return tryGet(item.role);
+  if (item.metadata) {
+    if (tryGet(item.metadata.badge)) return tryGet(item.metadata.badge);
+    if (tryGet(item.metadata.role)) return tryGet(item.metadata.role);
+  }
+  return undefined;
+}
+
 function formatFieldName(field: string) {
   if (field === 'global') return 'Content';
   return toTitleCase(field.replace('metadata.', ''));
@@ -31,7 +46,7 @@ function formatFieldName(field: string) {
 
 export default function ItemCardCollapsed({ item, onExpand, matchedFields }: ItemCardCollapsedProps) {
   const iconText = (item.name && typeof item.name === 'string') ? getInitials(item.name) : '';
-  const role = getField(item, 'role');
+  const badge = getBadge(item);
   const nation = getField(item, 'nation');
   const slug = getField(item, 'slug');
   const image = getField(item, 'image');
@@ -45,8 +60,6 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields }: Ite
       setImgSrc(`/assets/images/${image}`);
     }
   }, [image, setImgSrc]);
-
-  const hasRole = role && String(role).trim();
 
   return (
     <div
@@ -76,11 +89,11 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields }: Ite
               )}
             </div>
           </div>
-          {hasRole && (
+          {badge && (
             <div className="flex justify-center -mt-3.5 z-10">
               <div className="bg-neutral-900/80 backdrop-blur-sm rounded flex items-center justify-center text-center p-1.5 border border-white/20 shadow-lg">
                 <span className="text-white text-[12px] font-bold leading-none">
-                  {role}
+                  {badge}
                 </span>
               </div>
             </div>

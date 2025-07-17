@@ -4,6 +4,20 @@ The project uses a robust, two-stage pipeline to transform raw markdown data int
 
 ---
 
+## 🚨 Non-Negotiable Tag Rule
+
+**All tags in markdown files must be single, underscore-joined words.**
+- No spaces, slashes, or multi-word phrases are allowed in any tag.
+- Spaces and slashes are replaced with underscores (e.g., `water nation` → `water_nation`).
+- All tags are lowercased (e.g., `Firebender` → `firebender`).
+- This rule applies to all present and future markdown files.
+- The enrichment/data pipeline will enforce this and strip or reject any non-compliant tags.
+- **Example:**
+  - Valid: `water_nation`, `firebender`, `main_villain`
+  - Invalid: `water nation`, `main villain`, `main/villain`, `Main Villain`
+
+---
+
 ## 1. Data Authoring: Unified Markdown Format
 
 - All data is authored in markdown files in `raw-data/`.

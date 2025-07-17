@@ -1,6 +1,6 @@
 // Home: Presentational/stateless component for Home page. Receives all data/handlers as props from HomeContainer.
 import React from 'react';
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
 import SearchBar from '../components/SearchBar';
 import EntityGrid from '../components/EntityGrid/EntityGrid';
 import Layout from '../components/Layout';
@@ -37,11 +37,10 @@ export function Home({
   }));
   // --- END ADAPTER ---
 
-  console.log('Data being passed to EntityGrid:', gridItems);
 
   return (
     <Layout>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="flex flex-col items-center w-full">
         <SearchBar value={query} onChange={handleSearchChange} />
         {loading ? (

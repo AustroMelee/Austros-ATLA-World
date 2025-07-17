@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Freedom Fighter Archer
 - Short Description: A silent, precise, and loyal male teen archer, Longshot is a key member of the Freedom Fighters, known for his unmatched marksmanship, quiet strength, and steadfast support for his friends.
-- Tags: Earth Kingdom, Freedom Fighters, Archer, Nonbender, Male, Teen, Loyal, Silent, Book One, Book Two, Ba Sing Se, Lake Laogai, Jet, Smellerbee, The Duke
+- Tags: Male, Archer, Fighter, Survivor, Outcast, Rebel, Loyalist
 ```
 
 ---

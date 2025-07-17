@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Hopeful Refugee
 - Short Description: An optimistic, pregnant Earth Kingdom refugee and nonbender, Ying journeyed to Ba Sing Se with her family and gave birth to her daughter, Hope, with help from Team Avatar. Her resilience and hope inspired those around her during the war.
-- Tags: Earth Kingdom, Ba Sing Se, Refugee, Mother, Nonbender, Civilian, Pregnant, Hope, War Survivor, Female, Team Avatar, Book Two, Serpent’s Pass
+- Tags: Female, Mother, Civilian, Survivor, Outcast, Peasant, Loyalist
 ```
 
 ## UI - EXPANDED VIEW

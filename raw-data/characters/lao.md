@@ -9,7 +9,7 @@ type: character
 - Nation: Earth Kingdom
 - Badge: Industrialist Patriarch
 - Short Description: A wealthy, ambitious, and progressive adult male industrialist and patriarch from Gaoling, Lao Beifong is co-founder of the Earthen Fire Refinery, overprotective father of Toph, and a symbol of reconciliation and change in the postwar era.
-- Tags: Earth Kingdom, Gaoling, Cranefish Town, Industrialist, Patriarch, Businessman, Nonbender, Male, Adult, Father, Progressive, Book Two, Book Three, Toph, Poppy, Earthen Fire Refinery
+- Tags: Male, Father, Noble, Survivor, Outcast, Peasant, Loyalist
 ```
 
 ## 📖 UI - EXPANDED VIEW

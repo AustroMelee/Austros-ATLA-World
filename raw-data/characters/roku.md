@@ -9,7 +9,7 @@ type: character
 - Nation: Fire Nation
 - Badge: Spirit Advisor
 - Short Description: Roku is a wise, compassionate, and legendary male Fire Nation Avatar, spirit advisor, and mentor to Aang. His friendship and rivalry with Sozin shaped the fate of the world.
-- Tags: Fire Nation, Avatar, Mentor, Spirit Advisor, Male, Bender, Past Avatar, Legendary, Book One, Book Two, Book Three, Winter Solstice
+- Tags: Male, Firebender, Avatar, Mentor, Teacher, Sage, Survivor, Outcast, Hero, Prodigy
 ```
 
 ## UI - EXPANDED VIEW

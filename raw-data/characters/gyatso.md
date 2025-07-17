@@ -141,7 +141,7 @@ A guiding father figure whose love and wisdom profoundly shaped Aang's character
     "Come closer. I have some wisdom for you... *splat*",
     "All I want is for him to be happy."
   ],
-  "tags": ["Air Nomads", "Mentor", "Council Elder", "Book One", "Southern Air Temple"],
+  "tags": ["Male", "Airbender", "Monk", "Mentor", "Teacher", "Friend", "Survivor", "Sage", "Outcast", "Hero", "Prodigy", "Optimist"],
   "tagCategories": {
     "nationTags": ["Air Nomads", "Southern Air Temple"],
     "roleTags": ["Mentor", "Council Elder"],
