@@ -1,10 +1,10 @@
 import React from 'react';
 import { useModalFocus } from '../hooks/useModalFocus';
 import ItemCard from './ItemCard/ItemCard';
-import type { EnrichedCharacter } from '../types/domainTypes';
+import type { EnrichedEntity } from '../search/types';
 
 interface ExpandedItemModalProps {
-  item: EnrichedCharacter;
+  item: EnrichedEntity;
   onClose: () => void;
 }
 

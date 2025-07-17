@@ -13,14 +13,14 @@
 
 **File:** `src/pages/HomeContainer.tsx`
 
-- On initial load, the application fetches the entire `public/enriched-data.json` file and stores it in state.
+- On initial load, the application fetches the entire `public/enriched-data.json` file using the `useEnrichedData` hook and stores it in state.
 - It manages the user's search query and the `expandedCardId` for the modal view.
 - It passes the full dataset and the query to the `useSearch` hook.
 
 **File:** `src/hooks/useSearch.ts`
 
-- This is the core of the search logic. It receives all character data.
-- **Preprocessing:** Uses a preprocessor to create a `searchBlob` for each character by combining all searchable text fields (name, role, titles, tags, etc.).
+- This is the core of the search logic. It receives all entity data.
+- **Preprocessing:** Uses a preprocessor to create a `searchBlob` for each entity by combining all searchable text fields (name, role, titles, tags, etc.).
 - **Client-Side Indexing:** Builds a FlexSearch index in the browser using the preprocessed data. This is memoized to only happen once per session.
 - Performs searches against this in-memory index and returns the filtered results.
 
@@ -43,11 +43,12 @@
 
 **File:** `src/components/ItemCard/ItemCard.tsx`
 
-- Receives a single character object (`item`) and the `expanded` boolean.
+- Receives a single entity object (`item`) and the `expanded` boolean.
 - If `expanded` is false: Renders the small, collapsed grid card.
-- If `expanded` is true: Renders a full-screen, responsive modal overlay containing the detailed character view with a large image and scrollable text.
-- **Type:** `EnrichedCharacter` (defined in `src/types/domainTypes.ts`)
+- If `expanded` is true: Renders a full-screen, responsive modal overlay containing the detailed entity view with a large image and scrollable text.
+- **Type:** `EnrichedEntity` (defined in `src/search/types.ts`)
 - Contains all top-level fields needed for display: `name`, `nation`, `role`, `slug`, `expandedView`, `image`, etc.
+- Uses the `useImageFallback` hook for robust image handling.
 
 ---
 
@@ -55,14 +56,14 @@
 
 - **Data pipeline:** `docs/data pipeline.md`, scripts in `/scripts/` (`1-parse-markdown.mjs`, `2-enrich-data.mjs`).
 - **Type definitions:** `src/types/domainTypes.ts`, `src/search/types.ts`.
-- **Data fetching/state:** `src/pages/HomeContainer.tsx`.
+- **Data fetching/state:** `src/pages/HomeContainer.tsx`, `src/hooks/useEnrichedData.ts`.
 - **Search Logic:** `src/hooks/useSearch.ts`, `src/search/preprocessor.ts`.
 - **Presentational:** `src/pages/Home.tsx`.
 - **Grid & Card:** `src/components/EntityGrid/EntityGrid.tsx`, `src/components/ItemCard/ItemCard.tsx`.
 - **Styling/utility:** `src/components/ThemedCard/ThemedCard.tsx`, `src/components/NationIcon/NationIcon.tsx`, `src/components/CustomMarkdownRenderer.tsx`, `src/utils/stringUtils.ts`.
 
 **In short:**
-Data flows from `enriched-data.json` → fetched by `HomeContainer` → indexed and filtered by the `useSearch` hook in the browser → passed to `Home` → rendered as a grid in `EntityGrid` → each card is an `ItemCard` which can expand into a full-screen modal.
+Data flows from `enriched-data.json` → fetched by `HomeContainer` (via `useEnrichedData`) → indexed and filtered by the `useSearch` hook in the browser → passed to `Home` → rendered as a grid in `EntityGrid` → each card is an `ItemCard` which can expand into a full-screen modal.
 
 ---
 

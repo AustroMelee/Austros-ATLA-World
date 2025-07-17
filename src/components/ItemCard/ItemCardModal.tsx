@@ -6,18 +6,13 @@ import { toTitleCase } from '../../utils/stringUtils';
 import { CustomMarkdownRenderer } from '../CustomMarkdownRenderer';
 import { useImageFallback } from '../../hooks/useImageFallback';
 import { fallbackImages, universalFallback } from './imageFallbacks';
+import { getField } from '../../utils/data';
 
 interface ItemCardModalProps {
   item: EnrichedEntity;
   onClose: () => void;
 }
 
-function getField<T = string>(item: EnrichedEntity, key: string): T | undefined {
-  // @ts-expect-error: dynamic access
-  if (item[key] !== undefined) return item[key];
-  if (item.metadata && item.metadata[key] !== undefined) return item.metadata[key] as T;
-  return undefined;
-}
 
 export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
   const role = getField(item, 'role');
@@ -25,7 +20,7 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
   const slug = getField(item, 'slug');
   const image = getField(item, 'image');
   const slugKey = (slug || item.id) as string;
-  const { imgSrc, handleImageError, setImgSrc } = useImageFallback(slugKey, {
+  const { imgSrc, status, handleImageError, handleImageLoad, setImgSrc } = useImageFallback(slugKey, {
     [slugKey]: fallbackImages[slugKey] || fallbackImages[item.id] || universalFallback,
   });
 
@@ -55,12 +50,19 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
         <ThemedCard nation={nation}>
           <div className="flex flex-col p-4 md:p-6">
             <div className="w-full mb-4">
-              <img
-                src={imgSrc}
-                alt={item.name}
-                className="w-full h-auto max-h-80 object-contain rounded-lg mx-auto"
-                onError={handleImageError}
-              />
+              {status === 'error' || !imgSrc ? (
+                <div className="w-full h-auto max-h-80 flex items-center justify-center rounded-lg bg-neutral-700">
+                  <span className="font-bold text-subtle text-4xl">?</span>
+                </div>
+              ) : (
+                <img
+                  src={imgSrc}
+                  alt={item.name}
+                  className="w-full h-auto max-h-80 object-contain rounded-lg mx-auto"
+                  onError={handleImageError}
+                  onLoad={handleImageLoad}
+                />
+              )}
             </div>
             <div className="w-full">
               <h2 className="text-3xl font-bold text-center md:text-left">
@@ -78,4 +80,4 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
       </div>
     </div>
   );
-} 
+}

@@ -68,4 +68,4 @@ See `docs/templates/character_template.md` for the full, up-to-date schema and r
 **Summary:**
 - The only data file used by the frontend is `public/enriched-data.json`.
 - All search and filtering is performed client-side, in-browser, using FlexSearch.
-- The pipeline is robust, transparent, and easy to debug.
+- The pipeline is strictly two-stage and robust, transparent, and easy to debug.

@@ -8,10 +8,7 @@ import NoResults from '../components/NoResults';
 import type { MatchResult, EnrichedEntity } from '../search/types';
 // import type { EnrichedCharacter } from '../types/domainTypes';
 
-export interface GridItem {
-  record: EnrichedEntity;
-  matchedFields: MatchResult['matchedFields'];
-}
+import type { GridItem } from '../types/grid';
 
 interface HomeProps {
   searchResults: Array<{ entity: EnrichedEntity; matchedFields: MatchResult['matchedFields'] }>;
