@@ -72,6 +72,8 @@ A tragic past Avatar whose life serves as a cautionary tale about the spiritual 
   "gender": "Male",
   "age": 33,
   "ageRange": "adult",
+  "isBender": true,
+  "bendingElement": "water",
   "hairColor": "Black",
   "eyeColor": "Blue",
   "skinColor": null,

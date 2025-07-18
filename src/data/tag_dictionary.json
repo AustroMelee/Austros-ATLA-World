@@ -6103,6 +6103,13 @@
     "weight": 50,
     "description": ""
   },
+  "the_waterbending_master": {
+    "displayName": "The Waterbending Master",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "thoughtful": {
     "displayName": "Thoughtful",
     "category": "general",

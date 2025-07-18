@@ -26,6 +26,8 @@
 - **React Markdown:** ^10.1.0
 - **React Icons:** ^5.5.0
 - **remark-gfm:** ^4.0.1
+- **Filtering System (2025):** Multi-layered filtering with nation, category, and subcategory filters
+- **Filtering Features (2025):** Partial string matching for nations, comprehensive sub-filter mapping, multi-field coverage
 
 ### **Search & Data**
 - **FlexSearch:** ^0.7.43 (client-side full-text search)

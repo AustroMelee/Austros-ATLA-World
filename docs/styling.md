@@ -453,3 +453,30 @@ Character cards now feature glassmorphism effects that allow the Matrix rain to 
   }
 }
 ```
+
+## Matrix Rain Styling & Performance
+
+### Canvas Styling
+The Matrix Rain canvas uses the following CSS properties:
+```css
+position: fixed;
+top: 0;
+left: 0;
+z-index: -1;
+pointer-events: none;
+opacity: modalOpen ? 0.5 : 1;
+```
+
+### Performance Optimizations
+- **requestAnimationFrame:** Replaces `setInterval` for smoother animation
+- **Frame Skipping:** 3x frame skip when modal is open to reduce CPU usage
+- **Adaptive Opacity:** Reduces fade opacity from 0.2 to 0.15 when modal is open
+- **Color Dimming:** Leading characters use dimmed color when modal is open
+- **Trail Opacity:** Reduces trail opacity from 0.7 to 0.4 when modal is open
+- **Canvas Opacity:** Reduces overall canvas opacity from 1 to 0.5 when modal is open
+
+### Browser Compatibility
+- Requires Canvas API support (Chrome 76+, Firefox 103+, Safari 9+)
+- Hardware acceleration recommended for optimal performance
+- Graceful fallback for older browsers (static background)
+- Respects `prefers-reduced-motion` accessibility setting

@@ -65,6 +65,7 @@ Aunt Wu plays a pivotal role in "The Fortuneteller" episode, where Team Avatar v
     "gender": "Female",
     "hairColor": "Gray",
     "age": null,
+    "ageRange": "elder",
     "role": "Fortuneteller",
     "titles": []
   },

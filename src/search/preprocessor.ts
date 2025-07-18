@@ -18,6 +18,22 @@ function createSearchBlob(record: EnrichedEntity): string {
     ...(record.tags || []),
     ...(record.affiliation || []),
   ];
+  
+  // Add age-related metadata
+  if (record.metadata?.ageRange) {
+    if (Array.isArray(record.metadata.ageRange)) {
+      textParts.push(...record.metadata.ageRange);
+    } else {
+      textParts.push(record.metadata.ageRange);
+    }
+  }
+  if (record.metadata?.ageChronological) {
+    textParts.push(String(record.metadata.ageChronological));
+  }
+  if (record.metadata?.ageBiological) {
+    textParts.push(String(record.metadata.ageBiological));
+  }
+  
   if (record.tagCategories && typeof record.tagCategories === 'object') {
     for (const category of Object.values(record.tagCategories)) {
       if (Array.isArray(category)) textParts.push(...category);

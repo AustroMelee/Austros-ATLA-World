@@ -63,6 +63,7 @@ They served as mentors for Azula's firebending training and as political adviser
     "ethnicity": "Fire Nation",
     "gender": "Female",
     "age": null,
+    "ageRange": "elder",
     "hairColor": "White (brown in youth)",
     "eyeColor": null,
     "skinColor": null,

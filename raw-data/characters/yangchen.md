@@ -72,6 +72,8 @@ A legendary past Avatar who serves as a crucial spiritual guide, offering a prag
   "gender": "Female",
   "age": 100,
   "ageRange": "elder",
+  "isBender": true,
+  "bendingElement": "air",
   "hairColor": null,
   "eyeColor": "Gray",
   "skinColor": null,

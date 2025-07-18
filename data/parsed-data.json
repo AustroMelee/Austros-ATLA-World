@@ -844,22 +844,6 @@
     "shortdescription": "Aunt Wu is the renowned fortuneteller of Makapu Village, famous for her accurate predictions and wisdom. She uses various methods of divination and is respected by the villagers for her insight and guidance.",
     "id": "aunt-wu",
     "slug": "aunt-wu",
-    "identity": {
-      "name": "Aunt Wu",
-      "fullName": "Wu",
-      "aliases": [
-        "Aunt Wu"
-      ],
-      "pronouns": "she/her",
-      "nation": "Earth Kingdom",
-      "ethnicity": "Earth Kingdom",
-      "residence": "Makapu Village, Earth Kingdom",
-      "gender": "Female",
-      "hairColor": "Gray",
-      "age": null,
-      "role": "Fortuneteller",
-      "titles": []
-    },
     "abilities": {
       "bending": [],
       "weapons": [],
@@ -963,7 +947,19 @@
       "flags": []
     },
     "expandedView": "### 📖 Overview\n\nAunt Wu is the celebrated fortuneteller of Makapu Village, known for her wisdom, wit, and uncanny accuracy in predicting the future. Her reputation led the villagers to trust her readings above all else, even foregoing their annual volcano checks in favor of her guidance. She employs a variety of divination methods, including palmistry, osteomancy, and cloud reading, and is respected for her insight and calm demeanor.\n\n### 🧩 Role in the Story\n\nAunt Wu plays a pivotal role in \"The Fortuneteller\" episode, where Team Avatar visits Makapu Village. Her predictions influence the actions of the villagers and Team Avatar, and she ultimately teaches Aang and the others that while fate can be read, people have the power to shape their own destinies. She also appears briefly in \"Bato of the Water Tribe.\"\n\n### 🤝 Relationships\n\n- Meng: Her assistant and apprentice in fortune-telling.\n- Team Avatar: She provides readings and guidance to Aang, Katara, and Sokka.\n- Makapu Village: Deeply trusted by the entire community.\n- Iroh: She finds him attractive and offers to tell his fortune.\n\n### 🌟 Notable Traits\n\n- Wise and insightful\n- Calm and composed\n- Skilled in multiple forms of divination\n- Witty and respected\n\n### 💬 Quotes\n\n> \"I'll tell you a little secret, young airbender. Just as you reshaped those clouds, you have the power to shape your own destiny.\"\n> — Aunt Wu\n\n### ✨ Narrative Highlights\n\n- Predicted the fate of Team Avatar and the villagers of Makapu.\n- Used cloud reading and osteomancy for divination.\n- Taught the lesson that people are the masters of their own fate.\n- Maintained composure even in the face of danger from the Fire Nation.",
-    "__type": "character"
+    "__type": "character",
+    "fullName": "Wu",
+    "aliases": [
+      "Aunt Wu"
+    ],
+    "pronouns": "she/her",
+    "ethnicity": "Earth Kingdom",
+    "residence": "Makapu Village, Earth Kingdom",
+    "gender": "Female",
+    "hairColor": "Gray",
+    "age": null,
+    "ageRange": "elder",
+    "titles": []
   },
   {
     "name": "Azula",
@@ -2848,6 +2844,9 @@
     "ethnicity": "Fire Nation",
     "gender": "Male",
     "age": null,
+    "ageRange": "adult",
+    "isBender": true,
+    "bendingElement": "fire",
     "height": "7'2\" (218 cm)",
     "hairColor": "Black (shaved)",
     "eyeColor": "Dark",
@@ -6483,7 +6482,7 @@
     "gender": "female",
     "ageChronological": 25,
     "ageBiological": 25,
-    "ageRange": "young adult",
+    "ageRange": "adult",
     "birthDate": "c. 75 AG",
     "deathDate": null,
     "nationality": "Earth Kingdom",
@@ -6771,6 +6770,7 @@
     "ethnicity": "Water Tribe",
     "gender": "Female",
     "age": 80,
+    "ageRange": "elder",
     "hairColor": "Gray (brown in youth)",
     "eyeColor": "Blue",
     "skinColor": "Brown",
@@ -7602,6 +7602,8 @@
     "gender": "Male",
     "age": 33,
     "ageRange": "adult",
+    "isBender": true,
+    "bendingElement": "water",
     "hairColor": "Black",
     "eyeColor": "Blue",
     "skinColor": null,
@@ -8081,6 +8083,8 @@
     "gender": "Female",
     "age": 230,
     "ageRange": "elder",
+    "isBender": true,
+    "bendingElement": "earth",
     "hairColor": null,
     "eyeColor": null,
     "skinColor": null,
@@ -8500,25 +8504,6 @@
     ],
     "id": "lo-and-li",
     "slug": "lo-and-li",
-    "identity": {
-      "name": "Lo and Li",
-      "fullName": "Lo and Li",
-      "aliases": [],
-      "pronouns": "they/them",
-      "nation": "Fire Nation",
-      "ethnicity": "Fire Nation",
-      "gender": "Female",
-      "age": null,
-      "hairColor": "White (brown in youth)",
-      "eyeColor": null,
-      "skinColor": null,
-      "loveInterest": null,
-      "image": null,
-      "role": "Royal Tutors",
-      "titles": [
-        "Tutor"
-      ]
-    },
     "abilities": {
       "bending": [],
       "weapons": [],
@@ -8629,7 +8614,23 @@
       "flags": []
     },
     "expandedView": "### 📖 Overview\r\n\r\nLo and Li are the twin advisers and firebending instructors to Princess Azula. Though not firebenders themselves, they are respected for their wisdom, strategy, and mentorship within the Fire Nation. They are known for their dignified yet playful personalities and for being the first known nonbender firebending teachers in the Avatar franchise.\r\n\r\n### 🧩 Role in the Story\r\n\r\nThey served as mentors for Azula's firebending training and as political advisers to the Fire Nation Royal Family. The sisters spent much of their lives at their Ember Island beach house, escaping the chaos of the Fire Nation Capital. They accompanied Azula on her journey to the Earth Kingdom and played a key role in her strategies, presiding over rallies and offering wisdom to the younger generation.\r\n\r\n### 🤝 Relationships\r\n\r\n- Azula: Mentee\r\n- Zuko: Ally\r\n- Mai: Ally\r\n- Ty Lee: Ally\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Focused\r\n- Dignified\r\n- Playful\r\n- Wise\r\n- Calm\r\n\r\n### 💬 Quotes\r\n\r\n> \"Azula, we are concerned for you and your well being.\"\r\n> — Lo and Li\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Served as firebending instructors and political advisers to Princess Azula.\r\n- Presided over Fire Nation rallies and ceremonies.\r\n- Mentored Azula in strategy and discipline.\r\n- Known for their dignified yet playful personalities.",
-    "__type": "character"
+    "__type": "character",
+    "fullName": "Lo and Li",
+    "aliases": [],
+    "pronouns": "they/them",
+    "ethnicity": "Fire Nation",
+    "gender": "Female",
+    "age": null,
+    "ageRange": "elder",
+    "hairColor": "White (brown in youth)",
+    "eyeColor": null,
+    "skinColor": null,
+    "loveInterest": null,
+    "image": null,
+    "role": "Royal Tutors",
+    "titles": [
+      "Tutor"
+    ]
   },
   {
     "name": "Long Feng",
@@ -9844,6 +9845,7 @@
     "ethnicity": "Fire Nation",
     "gender": "Female",
     "age": null,
+    "ageRange": "adult",
     "hairColor": "Black",
     "eyeColor": null,
     "skinColor": null,
@@ -10001,6 +10003,7 @@
     "ethnicity": "Fire Nation",
     "gender": "Female",
     "age": null,
+    "ageRange": "adult",
     "hairColor": "Brown",
     "eyeColor": null,
     "skinColor": null,
@@ -12362,6 +12365,8 @@
     "gender": "Male",
     "age": 70,
     "ageRange": "elder",
+    "isBender": true,
+    "bendingElement": "fire",
     "hairColor": "White",
     "eyeColor": null,
     "skinColor": null,
@@ -13811,6 +13816,8 @@
     "gender": "Male",
     "age": 22,
     "ageRange": "young adult",
+    "isBender": true,
+    "bendingElement": "earth",
     "hairColor": null,
     "eyeColor": null,
     "skinColor": null,
@@ -14142,7 +14149,7 @@
     "gender": "female",
     "ageChronological": 86,
     "ageBiological": 86,
-    "ageRange": "teen",
+    "ageRange": "child",
     "birthDate": "88 AG",
     "deathDate": null,
     "nationality": "Earth Kingdom",
@@ -15158,6 +15165,8 @@
     "gender": "Male",
     "age": 38,
     "ageRange": "adult",
+    "isBender": true,
+    "bendingElement": "earth",
     "hairColor": "Black",
     "eyeColor": "Gray",
     "skinColor": null,
@@ -15308,8 +15317,134 @@
     "shortdescription": "Yagoda is a skilled healer and respected elder of the Northern Water Tribe, known for teaching Katara and her compassion for her people.",
     "id": "yagoda",
     "slug": "yagoda",
+    "abilities": {
+      "bending": [
+        "Waterbending (Healing)"
+      ],
+      "weapons": [],
+      "fightingStyles": [
+        "Healing"
+      ],
+      "notableFeats": [
+        "Master healer and instructor in the Northern Water Tribe.",
+        "Attempted to heal Princess Yue as a newborn.",
+        "Recognized Katara's betrothal necklace as Pakku's work."
+      ]
+    },
+    "affiliations": {
+      "primary": "Northern Water Tribe",
+      "secondary": [],
+      "allies": [
+        "Katara",
+        "Kanna",
+        "Northern Water Tribe"
+      ],
+      "enemies": [
+        "Fire Nation"
+      ]
+    },
+    "narrative": {
+      "firstAppearance": "The Waterbending Master",
+      "lastAppearance": "The Siege of the North, Part 2 (flashback only)",
+      "voicedBy": "Lucille Bliss",
+      "era": "Book One: Water",
+      "seasons": [
+        1
+      ],
+      "episodes": [
+        18,
+        20
+      ],
+      "notableQuotes": [
+        "Are you here for the healing lesson?"
+      ]
+    },
+    "metrics": {
+      "archetype": "Healer",
+      "moralAlignment": "Lawful Good",
+      "intelligence": 6,
+      "strength": 2,
+      "charisma": 5,
+      "leadership": 5,
+      "humor": 3
+    },
+    "roles": {
+      "healer": true,
+      "instructor": true
+    },
+    "relationships": {
+      "katara": "Student",
+      "kanna": "Friend",
+      "northernWaterTribe": "Community"
+    },
+    "psyche": {
+      "personality": [
+        "Kind",
+        "Patient",
+        "Laid-back",
+        "Traditional"
+      ],
+      "emotionalState": [
+        "Supportive",
+        "Calm"
+      ],
+      "motivation": "To teach and heal the next generation of waterbenders."
+    },
+    "physical": {
+      "build": "Elderly",
+      "height": null,
+      "distinguishingFeatures": [
+        "Gray hair"
+      ]
+    },
+    "dialogue": [
+      "Are you here for the healing lesson?"
+    ],
+    "tags": [
+      "Northern Water Tribe",
+      "Healer",
+      "Instructor",
+      "Book One",
+      "The Waterbending Master"
+    ],
+    "tagCategories": {
+      "nationTags": [
+        "Northern Water Tribe",
+        "Water Tribe"
+      ],
+      "roleTags": [
+        "Healer",
+        "Instructor"
+      ],
+      "episodeTags": [
+        "Book One",
+        "The Waterbending Master"
+      ]
+    },
+    "system": {
+      "schemaVersion": "3.0",
+      "createdBy": "AI Assistant",
+      "createdAt": "2024-06-09T00:00:00Z",
+      "flags": []
+    },
     "expandedView": "### 📖 Overview\r\n\r\nYagoda is a master healer and waterbending instructor from the Northern Water Tribe. She taught generations of young women the art of healing and was a close friend of Kanna.\r\n\r\n### 🧩 Role in the Story\r\n\r\nYagoda was a female waterbender from the Northern Water Tribe, specializing in the art of healing. She instructed young women of Agna Qel'a on how to use their waterbending abilities for healing. Yagoda was a kind and laid-back teacher, respected for her skill and wisdom. She was a close friend of Kanna, Katara and Sokka's grandmother, and recognized Katara's betrothal necklace as Pakku's work. Yagoda attempted to heal Princess Yue as a newborn, but was unable to help, leading Chief Arnook to seek aid from the Moon Spirit.\r\n\r\n### 🤝 Relationships\r\n\r\n- Katara: Student\r\n- Kanna: Friend\r\n- Northern Water Tribe: Community\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Kind\r\n- Patient\r\n- Laid-back\r\n- Traditional\r\n- Supportive\r\n- Calm\r\n\r\n### 💬 Quotes\r\n\r\n> \"Are you here for the healing lesson?\"\r\n> — Yagoda\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Master healer and instructor in the Northern Water Tribe.\r\n- Attempted to heal Princess Yue as a newborn.\r\n- Recognized Katara's betrothal necklace as Pakku's work.",
-    "__type": "character"
+    "__type": "character",
+    "fullName": "Yagoda",
+    "aliases": [],
+    "pronouns": "she/her",
+    "ethnicity": "Water Tribe",
+    "gender": "Female",
+    "age": 80,
+    "ageRange": "elder",
+    "isBender": true,
+    "bendingElement": "water",
+    "hairColor": "Gray (brown in youth)",
+    "eyeColor": null,
+    "skinColor": null,
+    "loveInterest": null,
+    "image": null,
+    "role": "NWT Healer",
+    "titles": []
   },
   {
     "name": "Yangchen",
@@ -15347,6 +15482,8 @@
     "gender": "Female",
     "age": 100,
     "ageRange": "elder",
+    "isBender": true,
+    "bendingElement": "air",
     "hairColor": null,
     "eyeColor": "Gray",
     "skinColor": null,

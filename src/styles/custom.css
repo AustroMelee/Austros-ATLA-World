@@ -383,10 +383,13 @@ input[type="text"]::-moz-selection {
   /* CRT Glow Effects */
   .crt-glow-text {
     text-shadow: 
-      0 0 2px var(--crt-green),
-      0 0 4px var(--crt-green-glow),
-      0 0 6px var(--crt-green-glow);
-    filter: brightness(1.1);
+      0 0 5px var(--crt-green-glow),
+      0 0 10px var(--crt-green-glow),
+      0 0 15px var(--crt-green-glow);
+  }
+  
+  .crt-glow-text-subtle {
+    text-shadow: 0 0 5px var(--crt-green-glow);
   }
   
   .crt-glow-border {

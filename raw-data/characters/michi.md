@@ -73,6 +73,7 @@ A supporting character whose arc highlights the tension between loyalty to famil
   "ethnicity": "Fire Nation",
   "gender": "Female",
   "age": null,
+  "ageRange": "adult",
   "hairColor": "Black",
   "eyeColor": null,
   "skinColor": null,

@@ -67,6 +67,7 @@ Ming appears in "The Day of Black Sun, Part 1: The Invasion" as Iroh's primary c
   "ethnicity": "Fire Nation",
   "gender": "Female",
   "age": null,
+  "ageRange": "adult",
   "hairColor": "Brown",
   "eyeColor": null,
   "skinColor": null,

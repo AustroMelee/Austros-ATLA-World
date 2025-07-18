@@ -89,6 +89,53 @@
 
 ---
 
+### 🏆 Enhanced Filtering System (2025 Update)
+
+**What new filtering options are available?**
+- **Age Range Filters:** Child, teen, young adult, adult, elder for character classification
+- **Gender Filters:** Male/female filters with visual icons (♂/♀)
+- **Bender Classification:** Bender/nonbender filters for character classification
+- **Enhanced Nation Filtering:** Partial string matching for full nation names
+- **Comprehensive Sub-Filters:** Dynamic filters based on selected categories
+
+**How does age range filtering work?**
+- **Child:** Characters like Toph (12 years old during main series)
+- **Teen:** Characters like Aang, Katara, Sokka, Zuko (12-17 years old)
+- **Young Adult:** Characters like Azula, Ty Lee, Mai (18-25 years old)
+- **Adult:** Characters like June, Iroh, Pakku (26-50 years old)
+- **Elder:** Characters like Hama, King Bumi, Monk Gyatso (50+ years old)
+- **Animal Exclusion:** Animals (bison, lemur, bear, animal, spirit) are excluded from age filters
+
+**How does gender filtering work?**
+- **Male:** Characters with gender: "male" field
+- **Female:** Characters with gender: "female" field
+- **Visual Indicators:** React icons (♂/♀) for clear visual distinction
+- **Multi-Select:** Can select both male and female simultaneously
+
+**How does bender classification work?**
+- **Bender:** Characters with isBender: true and bendingElement field
+- **Nonbender:** Characters with isBender: false or missing bendingElement
+- **Comprehensive Coverage:** All characters now have proper bender classification
+- **Element Display:** Bender filters show the specific bending element when applicable
+
+**What is the filtering order?**
+The system applies filters in this specific sequence:
+1. **Collection Filter:** If active collection is selected
+2. **Nation Filter:** Filter by selected nations (case-insensitive)
+3. **Core Filter:** Filter by entity type (characters, locations, etc.)
+4. **Sub Filter:** Filter by tags, age ranges, gender, and bender classification
+5. **Search Filter:** Apply text search to the filtered dataset
+
+**How do I use the filtering system?**
+- **Nations:** Click nation buttons to filter by Fire, Water, Earth, Air (multi-select)
+- **Categories:** Click category buttons to filter by main entity types (single-select)
+- **Subcategories:** Dynamic buttons appear when a category is selected (multi-select)
+- **Age/Gender/Bender:** Available when "characters" category is selected
+- **Visual Feedback:** Active filters are highlighted with different colors
+- **Clear Filters:** Click active filters to deselect them
+
+---
+
 ### 🏆 Search Result Ordering & Tag Matching (2024 Update)
 
 **How are search results ordered?**
@@ -130,92 +177,104 @@ Deprecated fields from the raw data are ignored by the data pipeline. The enrich
 #### 5. Handling Errors and Logging in New Code
 Never use empty `catch` blocks. All errors must be logged to the console with sufficient context for debugging. If an error is user-actionable, it should be surfaced in the UI. Use assertions and type-guards to catch potential errors early during development.
 
+#### 6. Character Classification Data Issues
+**What if a character is missing age range, gender, or bender classification?**
+- The enrichment script validates and ensures all characters have proper classification fields
+- Missing fields are logged during the build process
+- Characters without proper classification may not appear in relevant filters
+- Always run `npm run build:data` to validate data integrity
+
+**How are animals handled in age filters?**
+- Animals (bison, lemur, bear, animal, spirit) are automatically excluded from age range filters
+- This prevents inappropriate classification of non-human entities
+- Examples: Appa (Sky Bison), Momo (Lemur), Bosco (Bear) are excluded
+
 ---
 
 ### 🎨 Frontend UI & User Experience
 
-#### 6. Image Fallbacks
+#### 7. Image Fallbacks
 If a card image fails to load, the `useImageFallback` hook (located in `src/hooks/useImageFallback.ts`) intercepts the error. The hook now provides a `status` state (`'loading' | 'loaded' | 'error'`), `handleImageError`, and `handleImageLoad` callbacks, and robust fallback logic. This ensures the UI remains visually consistent and does not show broken image links, always providing a placeholder or fallback icon as needed.
 
-#### 7. Keyboard Accessibility & Focus Management
+#### 8. Keyboard Accessibility & Focus Management
 The application prioritizes accessibility. Interactive elements like modals and expanded cards use a focus-trapping mechanism managed by the `useModalFocus.ts` hook. This ensures that keyboard focus remains within the active component. All interactive elements must be fully keyboard-navigable (Tab, Shift+Tab, Enter) and use semantic HTML with appropriate ARIA roles. See `docs/styling.md` for detailed requirements.
 
-#### 8. Mobile & Touch Interactions
+#### 9. Mobile & Touch Interactions
 The application is fully responsive. Layouts, components, and interactive controls are designed with touch-friendly hit targets. Modals and other overlays are optimized for mobile viewports, featuring larger tap areas and native scroll behavior to ensure a smooth user experience.
 
-#### 9. Custom Font Loading
+#### 10. Custom Font Loading
 Custom web fonts are self-hosted in the `public/assets/fonts/` directory and are loaded via `@font-face` rules in `src/styles/custom.css`. The CSS font stack is configured with standard system fallbacks, so if a custom font fails to load, the browser will seamlessly render the next available font.
 
-#### 10. Markdown Rendering
+#### 11. Markdown Rendering
 Markdown content, primarily used in the expanded card views, is rendered using the `react-markdown` library with the `remark-gfm` plugin for GitHub Flavored Markdown support. Custom components are used for styling specific markdown elements like headings and links to match the application's theme.
 
-#### 11. Modal and Overlay Management
+#### 12. Modal and Overlay Management
 Modals utilize the `useModalFocus.ts` hook for focus trapping and ARIA roles for accessibility. Only one modal can be open at a time. Upon closing, focus is programmatically returned to the element that triggered the modal.
 
-#### 12. Adding/Updating Images and Static Assets
+#### 13. Adding/Updating Images and Static Assets
 Place all new images in `public/assets/images/` and reference them using relative paths (e.g., `/assets/images/my-image.png`). Do not import image assets directly into TypeScript/TSX files, as this can interfere with Vite's optimized asset handling.
 
-#### 13. API Endpoints and Config
+#### 14. API Endpoints and Config
 All API endpoints and static resource paths are now centralized in `src/config/constants.ts` for maintainability and consistency.
 
 ---
 
 ### 🏗️ Application Architecture & State
 
-#### 14. State Persistence on Reload
+#### 15. State Persistence on Reload
 The application state, including the current search query and any expanded card IDs, is managed in-memory using React state hooks. There is no persistence layer (like `localStorage` or `sessionStorage`). A page reload will reset the application to its default initial state.
 
-#### 15. Browser History & Modal State
+#### 16. Browser History & Modal State
 The state of UI overlays like modals is not currently synchronized with the browser's history stack. This means using the browser's "back" or "forward" buttons will not close or open a modal. Navigation is managed independently of the UI overlay state.
 
-#### 16. React ErrorBoundary Behavior
+#### 17. React ErrorBoundary Behavior
 The root application is wrapped in a custom `ErrorBoundary` component (see `src/components/ErrorBoundary.tsx`). If a critical rendering error occurs in a child component, this boundary will catch it and display a user-friendly fallback UI instead of a blank page or a crashed application.
 
-#### 17. Analytics & Telemetry
+#### 18. Analytics & Telemetry
 The application is privacy-first. There are no analytics, user tracking, or telemetry scripts included in the codebase.
 
-#### 18. Internationalization (i18n) Readiness
+#### 19. Internationalization (i18n) Readiness
 All user-facing strings must be externalized from components and prepared for future internationalization. Do not hardcode user-visible text directly in the JSX. A central string management solution should be used.
 
-#### 19. Environment Variables
+#### 20. Environment Variables
 This project does not use environment variables (`.env` files) for runtime configuration. All configuration is managed via static files (e.g., `tailwind.config.js`, `vite.config.ts`) or hardcoded constants within the source code.
 
 ---
 
 ### ⚙️ Development & Maintenance
 
-#### 20. Adding a New Nation Color/Theme
+#### 21. Adding a New Nation Color/Theme
 To add a theme for a new nation, two files must be updated:
 1.  **`src/theme/nationThemes.ts`**: Add a new entry to the `nationThemeMap` object, defining the color identifiers for the new nation.
 2.  **`tailwind.config.js`**: Add the corresponding color classes (e.g., `bg-nation-new`, `border-nation-new`) to the `theme` configuration and safelist. After changes, run `npm run build:tailwind`.
 
-#### 21. Upgrading Core Dependencies
+#### 22. Upgrading Core Dependencies
 All dependencies are pinned in `package.json` for stability. To upgrade a package, manually update its version, delete `node_modules` and `package-lock.json`, and run `npm install`. Thoroughly test the application locally for breaking changes. `FlexSearch` is specifically pinned and should not be upgraded without careful verification.
 
-#### 22. Hot Module Reload (HMR) Caveats
+#### 23. Hot Module Reload (HMR) Caveats
 The project uses Vite, which provides excellent HMR for React components and most styles. However, changes to global configuration files require a manual step:
 -   **`tailwind.config.js`**: Changes require running `npm run build:tailwind` and a full page reload.
 -   **Global CSS (`custom.css`)**: Changes may require a full page reload to apply correctly.
 
-#### 23. Adding and Running Tests
+#### 24. Adding and Running Tests
 To add a new test, create a file with a `.test.ts` or `.test.tsx` suffix in the same directory as the module being tested. Use Jest and React Testing Library. To run all tests, execute `npm test`.
 
-#### 24. Performance Profiling
+#### 25. Performance Profiling
 To identify performance bottlenecks, use the React DevTools Profiler. Apply memoization techniques (`React.memo`, `useMemo`, `useCallback`) only after a clear need has been identified through profiling.
 
-#### 25. Updating or Removing Dependencies
+#### 26. Updating or Removing Dependencies
 Run `npm outdated` to check for new versions. Use `npm uninstall <package-name>` to remove unused packages and then run `npm install` to update the `package-lock.json` file. Keeping dependencies clean is a project requirement.
 
-#### 26. Creating Custom Scripts
+#### 27. Creating Custom Scripts
 New automation or utility scripts should be placed in the `scripts/` directory. Document their purpose with comments and add a corresponding command to the `"scripts"` section of `package.json` for easy execution.
 
-#### 27. Contributing Changes
+#### 28. Contributing Changes
 This project follows a trunk-based development model. Work directly on the `main` branch. Before committing, ensure all code passes local checks (`npm run lint`, `npm run type-check`). There are no pull requests or feature branches.
 
-#### 28. Experimenting with AI-driven Changes
+#### 29. Experimenting with AI-driven Changes
 To safely test changes, especially those generated by AI, follow the sandbox workflow detailed in `docs/sandbox_env.md`. All significant changes must be validated in a sandbox environment before being committed to the main branch.
 
-#### 29. Getting Help or Reporting a Bug
+#### 30. Getting Help or Reporting a Bug
 First, consult this FAQ and other project documentation. If the issue is not covered, add a new, concise entry to this FAQ or document the bug in the designated project management tool.
 
 ---
@@ -225,7 +284,7 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 **What is the Matrix Rain effect?**
 - The application now features an authentic Matrix-style digital rain background using HTML5 Canvas
 - Characters are randomly generated Japanese Katakana and binary symbols, just like in the movies
-- The effect runs at 30fps with hardware acceleration for smooth performance
+- The effect uses `requestAnimationFrame` for smooth 60fps animation with adaptive frame skipping
 - Bright green leading characters (`#c8ffc8`) trail behind with standard green (`#70ab6c`) for movie accuracy
 
 **How does the Matrix Rain integrate with the UI?**
@@ -238,7 +297,7 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 - The previous implementation used 287 lines of CSS with 24 hardcoded `<div>` elements
 - It had no real randomness - just predetermined character sequences
 - Performance was poor due to excessive DOM manipulation
-- The new Canvas solution is 80 lines, truly random, and much more performant
+- The new Canvas solution is 122 lines, truly random, and much more performant
 
 **Can I disable the Matrix Rain effect?**
 - The effect respects the `prefers-reduced-motion` accessibility setting
@@ -257,10 +316,24 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 - Modern browsers (Chrome 76+, Firefox 103+, Safari 9+) fully support the effects
 
 **Are there any performance considerations?**
-- The Matrix Rain uses `requestAnimationFrame` for smooth 30fps animation
+- The Matrix Rain uses `requestAnimationFrame` for smooth 60fps animation
 - Canvas rendering is hardware-accelerated with `will-change: transform`
 - Window resize events are properly debounced to prevent excessive recalculations
 - Memory cleanup occurs on component unmount to prevent leaks
+- **Modal Integration:** When a modal is open, the rain effect reduces intensity:
+  - Frame skipping (3x slower animation)
+  - Reduced fade opacity (0.15 vs 0.2)
+  - Dimmed leading characters (`#70ab6c` vs `#c8ffc8`)
+  - Reduced trail opacity (0.4 vs 0.7)
+  - Overall canvas opacity reduced to 0.5
+
+**What are the performance optimizations?**
+- **requestAnimationFrame:** Replaces `setInterval` for smoother animation and better performance
+- **Frame Skipping:** Reduces animation intensity when modal is open (3x frame skip)
+- **Adaptive Opacity:** Reduces fade opacity from 0.2 to 0.15 when modal is open
+- **Color Dimming:** Leading characters use dimmed color when modal is open
+- **Trail Opacity:** Reduces trail opacity from 0.7 to 0.4 when modal is open
+- **Canvas Opacity:** Reduces overall canvas opacity from 1 to 0.5 when modal is open
 
 ---
 
@@ -304,6 +377,91 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 - Currently collections are private to your browser
 - Sharing feature planned for future updates
 - Export/import functionality coming soon
+
+---
+
+### 🔍 Multi-Layered Filtering System (2025 Update)
+
+**How does the filtering system work?**
+- The filtering system provides three layers of filtering: Nations, Categories, and Subcategories
+- Filters are applied sequentially: Collections → Nations → Categories → Subcategories → Search
+- All filters work together to narrow down results progressively
+
+**What are the different filter types?**
+- **Nations:** Multi-select buttons for Fire, Water, Earth, and Air nations
+- **Categories:** Single-select buttons for main entity types (characters, foods, locations, bending, fauna, spirits)
+- **Subcategories:** Dynamic multi-select buttons that appear when a category is selected
+
+**How do I use the filters?**
+- **Nation Filters:** Click any nation button to toggle it on/off (multiple nations can be selected)
+- **Category Filters:** Click a category button to select it (only one category can be active at a time)
+- **Subcategory Filters:** When a category is selected, relevant subcategory buttons appear below
+- **Combining Filters:** You can use nations + categories + subcategories together for precise filtering
+
+**What subcategories are available?**
+- **Characters:** heroes, villains, mentors
+- **Foods:** meat, vegetables, desserts
+- **Locations:** cities, temples, wilderness
+- **Bending:** firebending, waterbending, earthbending, airbending
+- **Fauna:** domestic, wild, spirit
+- **Spirits:** benign, malevolent, neutral
+
+**How do I clear filters?**
+- **Nations:** Click an active nation button again to deselect it
+- **Categories:** Click the active category button again to deselect it
+- **Subcategories:** Click active subcategory buttons to deselect them
+- **All Filters:** Deselect all filters manually, or refresh the page to reset
+
+**Do filters work with search?**
+- Yes! Search is applied after all other filters
+- This means you can filter by nation/category first, then search within those results
+- The search bar works on the filtered dataset, not the entire database
+
+**How do filters work with collections?**
+- Collections are applied first in the filtering pipeline
+- If you have an active collection, all other filters work within that collection
+- You can combine collection filtering with nation/category/subcategory filters
+
+**How do nation filters work?**
+- Nation filters use partial string matching to handle the data format
+- Data contains full names: "Fire Nation", "Earth Kingdom", "Air Nomads", "Northern Water Tribe"
+- Filter buttons use single words: "fire", "earth", "air", "water"
+- The system matches "fire" within "Fire Nation", "earth" within "Earth Kingdom", etc.
+- Multiple nations can be selected simultaneously (OR logic)
+- Water filter matches both "Northern Water Tribe" and "Southern Water Tribe"
+
+**How do sub-filters work?**
+- Sub-filters use a mapping system to translate filter button terms to actual data values
+- **Character Sub-filters:**
+  - "villains" → matches "antagonist" and "villain" in data
+  - "heroes" → matches "protagonist", "hero", "deuteragonist", and "mentor" in data
+  - "mentors" → matches "mentor" in data
+- **Data Field Coverage:** Sub-filters check multiple data locations:
+  - `tags` array (e.g., "villain", "hero")
+  - `role` field (e.g., "EK General", "SWT Warrior")
+  - `metadata.narrativeFunction` (e.g., "antagonist", "protagonist", "mentor")
+  - `metadata.eraAppearances[].role` (e.g., "hero", "villain", "supporting")
+- **Examples:**
+  - Long Feng shows up as Earth villain (narrativeFunction: "antagonist")
+  - Sokka shows up as Water hero (eraAppearances role: "hero")
+  - Bumi shows up as Earth hero (narrativeFunction: "mentor")
+
+**Are the filters accessible?**
+- All filter buttons are keyboard-navigable
+- Proper ARIA labels and roles are implemented
+- Screen readers can access all filter options
+- High contrast colors maintain accessibility standards
+
+**What happens when no results match the filters?**
+- The grid shows empty (no "No results" message)
+- This maintains the clean, minimalist interface
+- Simply adjust your filters to see results again
+
+**How is the filtering system themed?**
+- Uses Matrix green colors (`#70ab6c`) for consistency
+- Glassmorphism effects with semi-transparent backgrounds
+- Hover effects with increased glow intensity
+- Responsive design that works on all screen sizes
 
 ---
 

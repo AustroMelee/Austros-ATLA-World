@@ -69,6 +69,7 @@ Yu was an earthbending master and a resident of the upper-class Earth Kingdom to
   "nativeName": "余",
   "pronouns": "he/him",
   "age": 23,
+  "ageRange": "young adult",
   "ethnicity": "Earth Kingdom",
   "nationality": "Gaoling, Earth Kingdom"
   },

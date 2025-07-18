@@ -69,6 +69,9 @@ Yagoda was a female waterbender from the Northern Water Tribe, specializing in t
     "ethnicity": "Water Tribe",
     "gender": "Female",
     "age": 80,
+    "ageRange": "elder",
+    "isBender": true,
+    "bendingElement": "water",
     "hairColor": "Gray (brown in youth)",
     "eyeColor": null,
     "skinColor": null,
@@ -148,3 +151,4 @@ Yagoda was a female waterbender from the Northern Water Tribe, specializing in t
     "flags": []
   }
 }
+```

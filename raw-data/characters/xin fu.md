@@ -69,6 +69,8 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
   "gender": "Male",
   "age": 38,
   "ageRange": "adult",
+  "isBender": true,
+  "bendingElement": "earth",
   "hairColor": "Black",
   "eyeColor": "Gray",
   "skinColor": null,

@@ -108,7 +108,7 @@ defined there are treated the same as the canonical tag during search.
 | **`components/SearchBar.tsx`** | Terminal-style search input with phosphor persistence effect (characters flash brighter when typed), cursor wake-up animation, scan lines, custom fonts, block cursor animation, 28px font size, disabled spell-check, custom text selection, and comprehensive CRT effects. |
 | **`components/EntityGrid/EntityGrid.tsx`** | Renders the responsive grid of cards. Passes expand/collapse state to each card. **Matrix Integration:** Uses `bg-transparent` to allow Matrix rain to flow through gaps between cards. Shows empty grid without "No results" message when no matches found. |
 | **`components/ItemCard/ItemCard.tsx`** | Renders both the small grid card and the full-screen expanded modal view. Contains all logic for a single entity's display. Features responsive text sizing and proper flex layout to prevent name truncation. **Matrix Transparency:** Removed `bg-background` to prevent grey boxes blocking Matrix rain. |
-| **`components/MatrixRain/MatrixRain.tsx`** | **NEW (2025):** Canvas-based Matrix digital rain background effect with authentic movie-style characteristics, true randomness, and optimized performance. Replaces 287 lines of CSS with 80-line React component. |
+| **`components/MatrixRain/MatrixRain.tsx`** | **NEW (2025):** Canvas-based Matrix digital rain background effect with authentic movie-style characteristics, true randomness, and optimized performance. Uses `requestAnimationFrame` for smooth 60fps animation with adaptive frame skipping when modals are open. Replaces 287 lines of CSS with 122-line React component. |
 | **`components/CustomMarkdownRenderer.tsx`** | Renders markdown content for the expanded card view, with custom styling. |
 | **`components/ThemedCard/ThemedCard.tsx`** | A styled wrapper that applies nation-specific border colors to cards. **Matrix Update:** Added glassmorphism effects with semi-transparent backgrounds, backdrop blur, and Matrix green hover glow. |
 | **`components/Layout.tsx`** | Main application layout wrapper component. **Matrix Integration:** Includes MatrixRain component and transparent backgrounds to allow rain effect visibility. |
@@ -121,6 +121,7 @@ defined there are treated the same as the canonical tag during search.
 | **`components/Collections/CollectionCardButton.tsx`** | Button component that appears on each card for adding/removing from collections. Uses forwardRef for proper positioning of popover. |
 | **`components/Collections/AddToCollectionPopover.tsx`** | Popover menu for managing collection membership. Uses React Portal to prevent clipping issues. |
 | **`components/Collections/CollectionsSidebar.tsx`** | Sidebar component for viewing and managing collections. |
+| **`components/Filters/FilterBar.tsx`** | **NEW (2025):** Multi-layered filtering interface with nation filters, core category filters, and dynamic sub-filters. Features Matrix-themed styling with glassmorphism effects and responsive design. |
 
 #### **TypeScript Types & Configuration**
 | File | Description |

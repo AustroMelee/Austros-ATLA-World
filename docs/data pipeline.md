@@ -81,3 +81,17 @@ See `docs/templates/character_template.md` for the full, up-to-date schema and r
 - The only data file used by the frontend is `public/enriched-data.json`.
 - All search and filtering is performed client-side, in-browser, using FlexSearch.
 - The pipeline is strictly two-stage and robust, transparent, and easy to debug.
+
+## Performance Considerations
+
+### Data Processing
+- The pipeline processes all markdown files in parallel for efficiency
+- Large datasets (>1000 items) may take several seconds to process
+- Memory usage scales linearly with data size
+- Consider chunking very large datasets for better performance
+
+### Frontend Integration
+- Matrix Rain uses `requestAnimationFrame` for smooth 60fps animation
+- Data loading doesn't affect rain performance due to separate rendering contexts
+- Large datasets may cause brief loading delays but don't impact visual effects
+- Canvas rendering is hardware-accelerated and independent of data operations

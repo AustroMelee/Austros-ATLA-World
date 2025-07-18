@@ -72,7 +72,7 @@ A recurring neutral party whose unique skills serve as a crucial plot device, an
   "gender": "female",
   "ageChronological": 25,
   "ageBiological": 25,
-  "ageRange": "young adult",
+  "ageRange": "adult",
   "birthDate": "c. 75 AG",
   "deathDate": null,
   "nationality": "Earth Kingdom",

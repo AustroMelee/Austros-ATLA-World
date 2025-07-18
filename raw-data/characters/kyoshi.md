@@ -71,6 +71,8 @@ A legendary predecessor to Aang whose life and ruthless methods serve as a stark
   "gender": "Female",
   "age": 230,
   "ageRange": "elder",
+  "isBender": true,
+  "bendingElement": "earth",
   "hairColor": null,
   "eyeColor": null,
   "skinColor": null,

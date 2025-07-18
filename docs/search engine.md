@@ -72,3 +72,17 @@ The search engine is now fully client-side, leveraging FlexSearch to build and q
 - **Performance:** Indexing is memoized and only happens once per session; searches are instant.
 - **Maintainability:** To change search behavior, update the preprocessor or the index fields in `useSearch.ts`.
 
+## Performance Considerations
+
+### Search Performance
+- FlexSearch index is built once on component mount and memoized
+- Search results are cached and only recomputed when query or data changes
+- Large datasets (>1000 items) may experience initial indexing delay
+- Consider implementing virtual scrolling for very large result sets
+
+### Matrix Rain Integration
+- Matrix Rain uses `requestAnimationFrame` for smooth 60fps animation
+- When modals are open, rain effect reduces intensity (3x frame skip, dimmed colors)
+- Search interactions don't affect rain performance due to separate rendering contexts
+- Canvas rendering is hardware-accelerated and doesn't interfere with search operations
+

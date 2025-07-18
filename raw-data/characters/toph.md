@@ -72,7 +72,7 @@ The master earthbender who challenges Aang's methods and revolutionizes her elem
   "gender": "female",
   "ageChronological": 86,
   "ageBiological": 86,
-  "ageRange": "teen",
+  "ageRange": "child",
   "birthDate": "88 AG",
   "deathDate": null,
   "nationality": "Earth Kingdom",

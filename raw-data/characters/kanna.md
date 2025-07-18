@@ -74,6 +74,7 @@ Born in the Northern Water Tribe, Kanna fled to the South to escape an arranged 
   "ethnicity": "Water Tribe",
   "gender": "Female",
   "age": 80,
+  "ageRange": "elder",
   "hairColor": "Gray (brown in youth)",
   "eyeColor": "Blue",
   "skinColor": "Brown",

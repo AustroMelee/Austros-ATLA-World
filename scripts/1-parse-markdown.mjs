@@ -106,6 +106,15 @@ async function parseMarkdownFile(filePath) {
       delete mergedData.metadata;
       console.log(`[INFO]    Flattened nested 'metadata' object for ${mergedData.id || 'record'}.`);
     }
+    
+    // Also flatten the identity object to ensure all fields are at the top level
+    if (mergedData.identity && typeof mergedData.identity === 'object') {
+      // Copy all properties from identity to the top-level object
+      Object.assign(mergedData, mergedData.identity);
+      // Remove the now-redundant identity key
+      delete mergedData.identity;
+      console.log(`[INFO]    Flattened nested 'identity' object for ${mergedData.id || 'record'}.`);
+    }
     // --- END FIX ---
     
     if (mergedData.id && !mergedData.slug) {

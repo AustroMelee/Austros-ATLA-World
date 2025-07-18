@@ -46,6 +46,7 @@ This document is the canonical, always-up-to-date reference for how all data is 
 - **Data Pipeline:** See `docs/data pipeline.md` for the full authoring and build process.
 - **Search Engine:** See `docs/search engine.md` for the client-side search architecture.
 - **Frontend Architecture:** See `docs/frontend architecture.md` for the React component structure and data flow.
+- **Data Flow:** See `docs/data flow.md` for the complete data flow including filtering system.
 - **Troubleshooting:** See `docs/troubleshooting.md` for debugging steps and lessons learned.
 
 ---
