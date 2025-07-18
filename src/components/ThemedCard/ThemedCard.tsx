@@ -12,14 +12,28 @@ export default function ThemedCard({ children, nation, className, ...props }: Th
   const theme = nationThemeMap[nation?.toLowerCase() || 'default'] || nationThemeMap.default;
 
   const cardStyle: React.CSSProperties = {
-    backgroundColor: 'var(--color-surface, #161B22)',
+    backgroundColor: 'rgba(22, 27, 34, 0.8)', // Semi-transparent dark background
     backgroundImage: `radial-gradient(circle at 50% 0%, ${theme.glow} 0%, transparent 50%)`,
-    borderColor: 'var(--nation-color, #8b949e)',
+    borderColor: `${theme.main}20`, // 20% opacity border using theme color
     // @ts-expect-error --nation-color is a custom CSS property for theming
     '--nation-color': theme.main,
+    '--nation-glow': `${theme.main}50`, // 50% opacity glow
   };
 
-  const baseClasses = `relative overflow-hidden rounded-xl border transition-all duration-300 ease-in-out`;
+  const baseClasses = `
+    relative 
+    overflow-hidden 
+    rounded-xl 
+    border 
+    backdrop-blur-sm 
+    transition-all 
+    duration-300 
+    ease-in-out
+    hover:border-opacity-50
+    hover:bg-opacity-90
+    hover:backdrop-blur-md
+    matrix-card-glow
+  `;
 
   return (
     <div

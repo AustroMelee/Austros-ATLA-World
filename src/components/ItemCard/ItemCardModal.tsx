@@ -70,7 +70,7 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
         <ThemedCard nation={nation}>
-          <div className="flex flex-col p-4 md:p-6">
+          <div className="flex flex-col p-4 md:p-6 crt-screen">
             <div className="w-full mb-4">
               {status === 'error' || !imgSrc ? (
                 <div className="w-full h-auto max-h-80 flex items-center justify-center rounded-lg bg-neutral-700">

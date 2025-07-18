@@ -38,6 +38,7 @@
 - Receives an array of search results and the `expandedCardId`.
 - Maps over the items and renders an `ItemCard` for each.
 - Dynamically sets the `expanded` and `onExpand` props for each card to manage the modal view.
+- **Matrix Integration (2025):** Uses `bg-transparent` to allow Matrix rain to flow through gaps between cards.
 
 ### d. Card Component & Modal
 
@@ -46,9 +47,30 @@
 - Receives a single entity object (`item`) and the `expanded` boolean.
 - If `expanded` is false: Renders the small, collapsed grid card.
 - If `expanded` is true: Renders a full-screen, responsive modal overlay containing the detailed entity view with a large image and scrollable text.
+- **Matrix Transparency (2025):** Removed `bg-background` to prevent grey boxes blocking Matrix rain.
 - **Type:** `EnrichedEntity` (defined in `src/search/types.ts`)
 - Contains all top-level fields needed for display: `name`, `nation`, `role`, `slug`, `expandedView`, `image`, etc.
 - Uses the `useImageFallback` hook for robust image handling.
+
+### e. Background Effects & Layout
+
+**File:** `src/components/Layout.tsx`
+- Main application layout wrapper that includes the new Matrix Rain background.
+- Manages overall application structure and responsive behavior.
+
+**File:** `src/components/MatrixRain/MatrixRain.tsx` (NEW 2025)
+- Canvas-based Matrix digital rain effect with authentic movie-style characteristics.
+- **Authentic Characters:** Uses Japanese Katakana and binary characters for true Matrix aesthetic.
+- **True Randomness:** Every character is randomly generated each frame (not predetermined sequences).
+- **Performance Optimized:** 30fps animation with efficient Canvas rendering and hardware acceleration.
+- **Responsive Design:** Auto-calculates column count based on screen width.
+- **Progressive Fade:** Dual-layer rendering with optimized fade opacity to prevent background pollution.
+
+**File:** `src/components/ThemedCard/ThemedCard.tsx`
+- Styled wrapper that applies nation-specific border colors to cards.
+- **Glassmorphism Effects (2025):** Semi-transparent backgrounds with backdrop blur for depth.
+- **Matrix Glow on Hover:** CRT green glow effects using multiple box-shadow layers.
+- **Nation Border Enhancement:** Maintains nation-specific colors while adding Matrix green overlay.
 
 ---
 
@@ -60,10 +82,12 @@
 - **Search Logic:** `src/hooks/useSearch.ts`, `src/search/preprocessor.ts`.
 - **Presentational:** `src/pages/Home.tsx`.
 - **Grid & Card:** `src/components/EntityGrid/EntityGrid.tsx`, `src/components/ItemCard/ItemCard.tsx`.
-- **Styling/utility:** `src/components/ThemedCard/ThemedCard.tsx`, `src/components/NationIcon/NationIcon.tsx`, `src/components/CustomMarkdownRenderer.tsx`, `src/utils/stringUtils.ts`.
+- **Matrix Rain & Effects (2025):** `src/components/MatrixRain/MatrixRain.tsx`, `src/components/Layout.tsx`.
+- **Glassmorphism Styling:** `src/components/ThemedCard/ThemedCard.tsx`, `src/styles/custom.css`.
+- **Styling/utility:** `src/components/CustomMarkdownRenderer.tsx`, `src/components/NationIcon/NationIcon.tsx`, `src/utils/stringUtils.ts`.
 
 **In short:**
-Data flows from `enriched-data.json` → fetched by `HomeContainer` (via `useEnrichedData`) → indexed and filtered by the `useSearch` hook in the browser → passed to `Home` → rendered as a grid in `EntityGrid` → each card is an `ItemCard` which can expand into a full-screen modal.
+Data flows from `enriched-data.json` → fetched by `HomeContainer` (via `useEnrichedData`) → indexed and filtered by the `useSearch` hook in the browser → passed to `Home` → rendered as a grid in `EntityGrid` → each card is an `ItemCard` which can expand into a full-screen modal. **NEW (2025):** The entire interface is overlaid with an authentic Matrix digital rain effect that flows through transparent glassmorphism cards, creating a cohesive cyberpunk terminal aesthetic.
 
 ---
 

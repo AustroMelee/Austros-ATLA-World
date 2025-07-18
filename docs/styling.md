@@ -164,3 +164,164 @@ This approach delivers a visually authentic, highly readable, and fully accessib
   - Consistent border-radius (6px) throughout all scrollbar elements
 
 This creates a cohesive CRT terminal experience where even the scrolling elements contribute to the authentic retro computing aesthetic.
+
+---
+
+## Matrix Rain & Glassmorphism Effects (2025 Update)
+
+### **Matrix Digital Rain Background**
+
+The application now features an authentic Matrix-style digital rain effect implemented using HTML5 Canvas for optimal performance and visual fidelity.
+
+#### **Implementation Details:**
+- **Component:** `src/components/MatrixRain/MatrixRain.tsx`
+- **Rendering:** HTML5 Canvas with 30fps animation
+- **Characters:** Japanese Katakana and binary characters for authenticity
+- **Performance:** Hardware-accelerated with `will-change: transform`
+
+#### **Visual Characteristics:**
+- **Leading Characters:** Bright green (`#c8ffc8`) for movie-accurate effect
+- **Trail Characters:** Standard green (`#70ab6c`) with progressive fade
+- **Background Fade:** Optimized `rgba(13, 17, 23, 0.2)` to prevent muddy accumulation
+- **Column Spacing:** Auto-calculated based on screen width (20px character width)
+- **Drop Speed:** Randomized fall rates for natural variation
+
+#### **CSS Integration:**
+```css
+.matrix-rain-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+}
+```
+
+### **Glassmorphism Card Effects**
+
+Character cards now feature glassmorphism effects that allow the Matrix rain to show through while maintaining readability.
+
+#### **ThemedCard Glassmorphism:**
+```css
+.glassmorphism-card {
+  background: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glassmorphism-card:hover {
+  background: rgba(22, 27, 34, 0.9);
+  transform: scale(1.02);
+  box-shadow: 
+    0 0 20px rgba(112, 171, 108, 0.3),
+    0 0 40px rgba(112, 171, 108, 0.2),
+    0 0 80px rgba(112, 171, 108, 0.1);
+}
+```
+
+#### **Matrix Glow Effects:**
+- **Multi-Layer Shadows:** Three-tier glow effect with varying opacity and distance
+- **CRT Green Theme:** Uses Matrix rain color palette (`#70ab6c`, `#c8ffc8`)
+- **Animated Pulse:** Subtle background pulse animation on hover
+- **Nation Border Enhancement:** Maintains nation-specific borders with Matrix green overlay
+
+#### **Transparency Integration:**
+- **EntityGrid:** Uses `bg-transparent` to allow rain to flow through gaps
+- **Layout Background:** Transparent containers prevent rain obstruction
+- **Card Backgrounds:** Semi-transparent with backdrop blur for depth
+
+### **Matrix Card Hover Animation**
+
+#### **Pulse Animation:**
+```css
+@keyframes matrix-pulse {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+.matrix-card-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(112, 171, 108, 0.1) 50%, 
+    transparent 70%);
+  border-radius: inherit;
+  animation: matrix-pulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+```
+
+#### **Hover State Enhancement:**
+- **Gentle Scale:** 1.02x scale to maintain card dimensions
+- **Progressive Glow:** Three-layer box-shadow with increasing radius
+- **Background Enhancement:** Increased opacity on hover for better content visibility
+- **Border Glow:** CRT green border enhancement while preserving nation colors
+
+### **Performance Optimizations**
+
+#### **Canvas Rendering:**
+- **RequestAnimationFrame:** Smooth 30fps animation loop
+- **Efficient Redraw:** Only redraws changed areas
+- **Memory Management:** Proper cleanup on component unmount
+- **Resize Handling:** Auto-recalculates on window resize
+
+#### **CSS Performance:**
+- **Hardware Acceleration:** `will-change: transform` on animated elements
+- **Backdrop Filter:** GPU-accelerated blur effects
+- **Transform3d:** Uses 3D transforms for better performance
+- **Layer Creation:** Strategic use of `transform` to create compositing layers
+
+### **Cross-Browser Compatibility**
+
+#### **Backdrop Filter Support:**
+```css
+.glassmorphism-card {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(8px)) {
+  .glassmorphism-card {
+    background: rgba(22, 27, 34, 0.95);
+  }
+}
+```
+
+#### **Canvas API:**
+- **Fallback Handling:** Graceful degradation if Canvas not supported
+- **Event Listener Cleanup:** Proper memory management across browsers
+- **Resize Debouncing:** Prevents excessive recalculations
+
+### **Accessibility Considerations**
+
+#### **Motion Sensitivity:**
+- **Reduced Motion Support:** Respects `prefers-reduced-motion` user preference
+- **Performance Throttling:** Automatically reduces frame rate on slower devices
+- **Contrast Maintenance:** Ensures sufficient contrast for text readability
+
+#### **Visual Accessibility:**
+- **High Contrast Mode:** Glassmorphism effects maintain readability
+- **Focus Indicators:** Clear focus states maintained through transparent backgrounds
+- **Color Independence:** Effects don't rely solely on color for information
+
+#### **Implementation:**
+```css
+@media (prefers-reduced-motion: reduce) {
+  .matrix-rain-canvas {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  
+  .matrix-card-glow::before {
+    animation: none;
+  }
+}
+```

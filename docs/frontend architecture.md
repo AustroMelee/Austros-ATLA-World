@@ -1,6 +1,6 @@
-# 🏗️ Frontend Architecture & Logic (2024 Refactor)
+# 🏗️ Frontend Architecture & Logic (2025 Matrix Update)
 
-The frontend is organized around a clear separation of concerns, with a central container managing state and data flow to presentational components. The search system is now fully client-side for maximum robustness and transparency.
+The frontend is organized around a clear separation of concerns, with a central container managing state and data flow to presentational components. The search system is now fully client-side for maximum robustness and transparency. **NEW:** Added authentic Matrix-style digital rain background with glassmorphism card effects for a cyberpunk terminal aesthetic.
 
 ---
 
@@ -13,7 +13,22 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
-## 2. Custom Hooks: useSearch, useEnrichedData, useImageFallback
+## 2. Layout & Background Effects (2025 Matrix Update)
+
+- **`Layout.tsx`:** Main application layout wrapper that includes the new Matrix Rain background
+- **`MatrixRain.tsx`:** Canvas-based Matrix digital rain effect with authentic movie-style characteristics:
+  - **Authentic Characters:** Uses Japanese Katakana and binary characters for true Matrix aesthetic
+  - **True Randomness:** Every character is randomly generated each frame (not predetermined sequences)
+  - **Movie-Accurate Effects:** Bright leading characters (`#c8ffc8`) with trailing characters (`#70ab6c`)
+  - **Performance Optimized:** 30fps animation with efficient Canvas rendering
+  - **Responsive Design:** Auto-calculates column count based on screen width
+  - **Progressive Fade:** Dual-layer rendering with optimized fade opacity to prevent background pollution
+  - **Hardware Accelerated:** Uses `will-change: transform` for smooth GPU rendering
+  - **Proper Cleanup:** Handles window resize events and component unmounting correctly
+
+---
+
+## 3. Custom Hooks: useSearch, useEnrichedData, useImageFallback
 
 - **`useSearch.ts`:**
   - Receives the complete array of data and the search query.
@@ -27,14 +42,15 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
-## 3. Presentational Layer (Home.tsx)
+## 4. Presentational Layer (Home.tsx)
 
 - Purely presentational; receives all data and handlers as props from `HomeContainer`.
 - Renders the main layout, including the `SearchBar` and the `EntityGrid`.
+- **Matrix Integration:** Background remains transparent to allow Matrix rain to show through card gaps
 
 ---
 
-## 3a. Enhanced Search Bar (SearchBar.tsx) - 2025 Update
+## 5. Enhanced Search Bar (SearchBar.tsx) - 2025 Update
 
 - **Terminal Aesthetic:** Provides an authentic CRT terminal experience with custom Glass_TTY_VT220 font
 - **Typography:** Uses 28px font size for enhanced readability with reduced padding (`py-2`) for compact appearance
@@ -50,19 +66,29 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
-## 4. Card Grid & Modal System
+## 6. Card Grid & Modal System with Glassmorphism Effects
 
 - **`EntityGrid.tsx`:**
   - Receives the array of search results and the `expandedCardId`.
   - Renders a responsive grid of `ItemCard` components.
+  - **Matrix Integration:** Uses `bg-transparent` to allow Matrix rain to flow through gaps between cards
   - Dynamically sets the `expanded` and `onExpand` props for each card.
+
+- **`ThemedCard.tsx` (2025 Glassmorphism Update):**
+  - **Glassmorphism Effects:** Semi-transparent background with `backdrop-blur-sm` for depth
+  - **Matrix Glow on Hover:** CRT green glow effects using multiple box-shadow layers
+  - **Animated Pulse Background:** Subtle matrix-pulse animation using `::before` pseudo-element
+  - **Nation-Themed Borders:** Maintains nation-specific colors while adding Matrix green hover enhancement
+  - **Minimal Scale Effect:** Very gentle 1.02x scale on hover to maintain card dimensions
+  - **Cross-Browser Support:** Includes `-webkit-backdrop-filter` for Safari compatibility
+
 - **`ItemCard.tsx`:**
   - Renders both the collapsed grid card and the full-screen expanded modal view.
   - **Collapsed Card Features:**
     - Fixed width of 113px with responsive text sizing (`text-sm` for optimal fit)
     - Uses `flex-1 min-w-0` layout to ensure proper text truncation with ellipsis
     - Displays character name with `overflow-hidden text-ellipsis` for graceful handling of long names
-    - **Text Display Improvements (2025):** Removed deprecated `@tailwindcss/line-clamp` plugin in favor of built-in Tailwind utilities for better compatibility and performance
+    - **Matrix Transparency:** Removed `bg-background` to prevent grey boxes blocking Matrix rain
     - Shows nation icon alongside the name in a flex container
     - Displays badge/role information with fallback logic for different data locations
   - **Expanded Modal Features (2025 Update):**
@@ -78,7 +104,33 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
-## 5. Data Structure & Pipeline Adherence
+## 7. Matrix Rain Technical Implementation
+
+The Matrix rain effect represents a significant upgrade from the previous CSS-based implementation:
+
+### **Previous Implementation Issues:**
+- 287 lines of CSS with 24 hardcoded `<div>` elements
+- No randomness - predetermined character sequences
+- Performance issues with excessive DOM manipulation
+- Limited customization and responsiveness
+
+### **New Canvas-Based Solution:**
+- **Single Component:** 80-line React component replacing 287+ lines of CSS
+- **True Randomness:** Every character randomly generated each frame
+- **Authentic Aesthetic:** Movie-accurate bright leading characters with proper trails
+- **Performance:** 30fps with efficient Canvas rendering and hardware acceleration
+- **Responsive:** Auto-calculates columns based on screen width
+- **Clean Integration:** Transparent backgrounds allow rain to show through UI gaps
+
+### **Rendering Strategy:**
+1. **Dual-Layer Rendering:** Fade layer followed by character layer for clean trails
+2. **Progressive Fade:** Optimized fade opacity (`rgba(13, 17, 23, 0.2)`) prevents muddy background
+3. **Character Hierarchy:** Bright leaders (`#c8ffc8`) over standard trails (`#70ab6c`)
+4. **Memory Management:** Proper cleanup of animation frames and event listeners
+
+---
+
+## 8. Data Structure & Pipeline Adherence
 
 - The frontend relies on `public/enriched-data.json` having all top-level fields required by the UI (e.g., `id`, `name`, `image`, `role`, `expandedView`).
 - The data pipeline is responsible for promoting these fields from the raw markdown data.
@@ -86,7 +138,7 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
-## 6. DOM & HTML Structure
+## 9. DOM & HTML Structure
 
 The application renders a modern, accessible, and responsive DOM structure, optimized for clarity and maintainability. The main elements and their roles are as follows:
 
@@ -125,7 +177,7 @@ This structure ensures a robust, accessible, and visually consistent UI, with cl
 
 ---
 
-## 7. Getting Started for New Developers
+## 10. Getting Started for New Developers
 
 ### **Understanding the Data Flow**
 1. **Start with the data**: Examine `public/enriched-data.json` to understand the data structure

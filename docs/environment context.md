@@ -47,6 +47,13 @@
   - **Search Bar Enhancements:** Terminal-style search input with 28px font size, custom block cursor with 4px spacing, disabled spell-check, and authentic CRT styling
   - **Text Selection:** Custom selection colors using CRT green background with black text for consistent terminal aesthetic
 - **CSS Variables:** CRT theming controlled via `--crt-green` and `--crt-green-glow` variables
+- **Matrix Rain & Glassmorphism (2025 Update):**
+  - **Matrix Digital Rain:** Canvas-based background effect with authentic movie-style characteristics
+  - **Glassmorphism Cards:** Semi-transparent backgrounds with `backdrop-blur-sm` effects
+  - **Matrix Glow Effects:** CRT green hover glow with multi-layer box-shadows
+  - **Performance Optimized:** Hardware-accelerated rendering with proper memory management
+  - **Cross-Browser Support:** Includes `-webkit-backdrop-filter` for Safari compatibility
+  - **Accessibility Compliant:** Respects `prefers-reduced-motion` for motion sensitivity
 
 ### **Build & Tooling**
 - **Vite:** ^5.4.19 (build tool)

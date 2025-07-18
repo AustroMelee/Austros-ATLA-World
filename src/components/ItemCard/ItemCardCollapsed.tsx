@@ -66,11 +66,11 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields }: Ite
       className="cursor-pointer w-[113px]"
     >
       <ThemedCard nation={nation}>
-        <div className="pb-1.5 pt-2 flex flex-col min-h-[144px]">
+        <div className="pb-1.5 pt-2 flex flex-col min-h-[144px] crt-screen">
           <div className="mb-1.5 flex justify-center w-full px-1.5">
-            <div className="w-full aspect-square max-w-[85%] max-h-[65%] mx-auto bg-background rounded-xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
+            <div className="w-full aspect-square max-w-[85%] max-h-[65%] mx-auto bg-transparent rounded-xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
               {status === 'error' || !imgSrc ? (
-                <span className="font-bold text-subtle text-[18px]">
+                <span className="font-bold text-subtle text-[18px] bg-black/30 rounded-lg px-2 py-1 backdrop-blur-sm">
                   {iconText}
                 </span>
               ) : (

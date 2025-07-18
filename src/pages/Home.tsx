@@ -38,7 +38,7 @@ export function Home({
   return (
     <Layout>
       {/* <Navbar /> */}
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center w-full pt-32">
         <SearchBar value={query} onChange={handleSearchChange} />
         {loading ? (
           <div className="mt-8 text-neutral-400">Loading...</div>

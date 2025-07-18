@@ -3421,189 +3421,6 @@
     "slug": "fong"
   },
   {
-    "name": "Monk Gyatso",
-    "nation": "Air Nomads",
-    "badge": "Compassionate Mentor",
-    "shortdescription": "A wise and kind-hearted airbending master from the Southern Air Temple. He was a lifelong friend to Avatar Roku and later became the beloved guardian and father figure to Avatar Aang.",
-    "id": "gyatso",
-    "slug": "gyatso",
-    "type": "character",
-    "shortDescription": "A wise and kind-hearted airbending master from the Southern Air Temple. He was a lifelong friend to Avatar Roku and later became the beloved guardian and father figure to Avatar Aang.",
-    "image": null,
-    "fullName": "Gyatso",
-    "role": "Air Nomad Mentor, Council Elder",
-    "titles": [
-      "Monk",
-      "Airbending Master",
-      "Council Elder"
-    ],
-    "aliases": [],
-    "pronouns": "he/him",
-    "ethnicity": "Air Nomad",
-    "gender": "Male",
-    "age": 78,
-    "hairColor": "White (shaven)",
-    "eyeColor": "Light brown",
-    "skinColor": "Light",
-    "loveInterest": null,
-    "abilities": {
-      "bending": [
-        "Airbending"
-      ],
-      "weapons": [
-        "Air"
-      ],
-      "fightingStyles": [
-        "Airbending"
-      ],
-      "notableFeats": [
-        "Considered one of the greatest airbenders of his time.",
-        "Defeated numerous comet-enhanced Fire Nation soldiers before his death.",
-        "Invented the Air Nomad joke 'Flamey-O'.",
-        "Renowned for his fruit pies and pranks."
-      ]
-    },
-    "affiliations": {
-      "primary": "Air Nomads",
-      "secondary": [
-        "Council of Elders",
-        "Southern Air Temple"
-      ],
-      "allies": [
-        "Aang",
-        "Roku",
-        "Pathik",
-        "Lola",
-        "Pasang",
-        "Tashi",
-        "Malaya",
-        "Disha"
-      ],
-      "enemies": [
-        "Fire Nation",
-        "Sozin",
-        "Western Kingdom Trading Company",
-        "Ulo",
-        "Amihan"
-      ]
-    },
-    "narrative": {
-      "firstAppearance": "The Southern Air Temple",
-      "lastAppearance": "Something Meaningful",
-      "voicedBy": [
-        "Sab Shimono",
-        "Sean Marquette (young Gyatso)"
-      ],
-      "era": "Book One: Water, Book Two: Earth, Book Three: Fire",
-      "seasons": [
-        1,
-        2,
-        3
-      ],
-      "episodes": [
-        3,
-        12,
-        46,
-        60
-      ],
-      "notableQuotes": [
-        "We can't concern ourselves with what was. We must act on what is.",
-        "Come closer. I have some wisdom for you... *splat*",
-        "All I want is for him to be happy."
-      ]
-    },
-    "metrics": {
-      "archetype": "Compassionate Mentor",
-      "moralAlignment": "Lawful Good",
-      "intelligence": 8,
-      "strength": 7,
-      "charisma": 7,
-      "leadership": 8,
-      "humor": 8
-    },
-    "roles": {
-      "mentor": true,
-      "councilElder": true
-    },
-    "relationships": {
-      "aang": "Student, Surrogate Son",
-      "roku": "Best Friend",
-      "pathik": "Friend",
-      "yama": "Older Sister",
-      "lola": "Sky Bison Companion"
-    },
-    "psyche": {
-      "personality": [
-        "Kind",
-        "Compassionate",
-        "Wise",
-        "Patient",
-        "Humorous",
-        "Playful",
-        "Protective"
-      ],
-      "emotionalState": [
-        "Calm",
-        "Joyful",
-        "Determined"
-      ],
-      "motivation": "To guide and protect the next Avatar, and to spread joy and wisdom."
-    },
-    "physical": {
-      "build": "Average",
-      "height": null,
-      "distinguishingFeatures": [
-        "Air Nomad master tattoos",
-        "shaved head",
-        "long white mustache and eyebrows"
-      ],
-      "outfitStyles": [
-        "Air Nomad monk robes"
-      ]
-    },
-    "dialogue": [
-      "We can't concern ourselves with what was. We must act on what is.",
-      "Come closer. I have some wisdom for you... *splat*",
-      "All I want is for him to be happy."
-    ],
-    "tags": [
-      "Male",
-      "Airbender",
-      "Monk",
-      "Mentor",
-      "Teacher",
-      "Friend",
-      "Survivor",
-      "Sage",
-      "Outcast",
-      "Hero",
-      "Prodigy",
-      "Optimist"
-    ],
-    "tagCategories": {
-      "nationTags": [
-        "Air Nomads",
-        "Southern Air Temple"
-      ],
-      "roleTags": [
-        "Mentor",
-        "Council Elder"
-      ],
-      "episodeTags": [
-        "Book One",
-        "Southern Air Temple"
-      ]
-    },
-    "system": {
-      "schemaVersion": "3.0",
-      "createdBy": "AI Assistant",
-      "createdAt": "2024-06-09T00:00:00Z",
-      "flags": []
-    },
-    "expandedView": "### 📖 Overview\r\n\r\nMonk Gyatso was an airbending master, monk, and a member of the Southern Air Temple's Council of Elders. He was a lifelong friend to Avatar Roku and later became the beloved guardian and father figure to Avatar Aang. Known for his wisdom, humor, and compassion, Gyatso was a guiding force for both Avatars and a key figure in the Air Nomads' history.\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Close personal friend of Avatar Roku.\r\n- Served as the primary guardian, mentor, and father figure to Avatar Aang.\r\n- His compassionate approach to Aang's training conflicted with the other council elders.\r\n- Died defending the Southern Air Temple, taking many Fire Nation soldiers with him.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA guiding father figure whose love and wisdom profoundly shaped Aang's character, and whose death represents Aang's greatest personal loss.\r\n\r\n### 🤝 Relationships\r\n\r\n- Aang (Student, Surrogate Son)\r\n- Roku (Best Friend)\r\n- Pathik (Friend)\r\n- The Council of Elders (Colleagues)\r\n- Lola (Sky Bison Companion)\r\n- Yama (Older Sister)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Kind & Compassionate\r\n- Wise & Patient\r\n- Humorous & Playful\r\n- Fiercely Protective\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"We can't concern ourselves with what was. We must act on what is.\"\r\n- \"Come closer. I have some wisdom for you... *splat*\"\r\n- \"All I want is for him to be happy.\"",
-    "__type": "character"
-  },
-  {
     "name": "Hahn",
     "nation": "Northern Water Tribe",
     "badge": "Northern Warrior",
@@ -12627,7 +12444,7 @@
     "relationships": {
       "sozin": "Best Friend turned Arch-Nemesis",
       "aang": "Successor, Mentee",
-      "gyatso": "Close Friend, Aang's Guardian",
+      "monk-gyatso": "Close Friend, Aang's Guardian",
       "taMin": "Wife",
       "zuko": "Great-Grandson"
     },
@@ -12692,7 +12509,7 @@
       "createdAt": "2024-06-09T00:00:00Z",
       "flags": []
     },
-    "expandedView": "### 📖 Overview\r\n\r\nRoku was the Fire Nation-born Avatar who preceded Aang. He was a wise and compassionate leader, striving to maintain balance in the world. Roku’s friendship with Fire Lord Sozin ultimately led to tragedy, as he failed to stop Sozin’s ambitions in time, indirectly allowing the Hundred Year War to begin. Roku’s spirit later served as a mentor to Aang, offering guidance and wisdom from the Spirit World.\r\n\r\n### 🏷️ Key Traits\r\n- Wise\r\n- Dutiful\r\n- Compassionate\r\n- Haunted by regret\r\n\r\n### 🏆 Notable Achievements\r\n- Mastered all four elements\r\n- Maintained peace during his lifetime\r\n- Attempted to stop Sozin’s plans for conquest\r\n\r\n### 💬 Notable Quotes\r\n- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"\r\n- \"You must be decisive.\"\r\n- \"Sometimes, the best way to solve your own problems is to help someone else.\"\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Grew up as the best friend of Prince Sozin, who would later become Fire Lord.\r\n- Confronted and defeated Sozin, sparing his life out of friendship.\r\n- Died fighting a volcanic eruption after being betrayed by Sozin.\r\n- Served as Aang's primary spiritual guide from beyond the grave.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA guiding spirit and tragic figure whose past mistakes serve as a crucial lesson for Aang on the importance of decisiveness.\r\n\r\n### 🤝 Relationships\r\n\r\n- Sozin (Best Friend turned Arch-Nemesis)\r\n- Aang (Successor, Mentee)\r\n- Gyatso (Close Friend, Aang's Guardian)\r\n- Ta Min (Wife)\r\n- Zuko (Great-Grandson)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Wise & Merciful\r\n- Disciplined & Kind\r\n- Indecisive (at critical moments)\r\n- Regretful\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"\r\n- \"Being the Avatar is an honor, but it's also a great burden.\"\r\n- \"Some friendships are so strong, they can even transcend lifetimes.\"",
+    "expandedView": "### 📖 Overview\r\n\r\nRoku was the Fire Nation-born Avatar who preceded Aang. He was a wise and compassionate leader, striving to maintain balance in the world. Roku’s friendship with Fire Lord Sozin ultimately led to tragedy, as he failed to stop Sozin’s ambitions in time, indirectly allowing the Hundred Year War to begin. Roku’s spirit later served as a mentor to Aang, offering guidance and wisdom from the Spirit World.\r\n\r\n### 🏷️ Key Traits\r\n- Wise\r\n- Dutiful\r\n- Compassionate\r\n- Haunted by regret\r\n\r\n### 🏆 Notable Achievements\r\n- Mastered all four elements\r\n- Maintained peace during his lifetime\r\n- Attempted to stop Sozin’s plans for conquest\r\n\r\n### 💬 Notable Quotes\r\n- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"\r\n- \"You must be decisive.\"\r\n- \"Sometimes, the best way to solve your own problems is to help someone else.\"\r\n\r\n### ✨ Narrative Highlights\r\n\r\n- Grew up as the best friend of Prince Sozin, who would later become Fire Lord.\r\n- Confronted and defeated Sozin, sparing his life out of friendship.\r\n- Died fighting a volcanic eruption after being betrayed by Sozin.\r\n- Served as Aang's primary spiritual guide from beyond the grave.\r\n\r\n### 🎭 Role in the Story\r\n\r\nA guiding spirit and tragic figure whose past mistakes serve as a crucial lesson for Aang on the importance of decisiveness.\r\n\r\n### 🤝 Relationships\r\n\r\n- Sozin (Best Friend turned Arch-Nemesis)\r\n- Aang (Successor, Mentee)\r\n- Monk Gyatso (Close Friend, Aang's Guardian)\r\n- Ta Min (Wife)\r\n- Zuko (Great-Grandson)\r\n\r\n### 🌟 Notable Traits\r\n\r\n- Wise & Merciful\r\n- Disciplined & Kind\r\n- Indecisive (at critical moments)\r\n- Regretful\r\n\r\n### 💬 Notable Quotes\r\n\r\n- \"If I had been more decisive and acted sooner, I could have stopped Sozin and stopped the War before it started.\"\r\n- \"Being the Avatar is an honor, but it's also a great burden.\"\r\n- \"Some friendships are so strong, they can even transcend lifetimes.\"",
     "__type": "character"
   },
   {

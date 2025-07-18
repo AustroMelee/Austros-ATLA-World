@@ -332,6 +332,138 @@ If a character card is missing entirely, or its expanded info does not show up, 
 
 ---
 
+---
+
+## [2025-01-27] Duplicate Character Issue Resolution
+
+**Symptom:**
+Character appears twice in search results with different information or IDs (e.g., "Gyatso" appearing as both "gyatso" and "monk-gyatso").
+
+**Root Cause:**
+Multiple markdown files exist for the same character in `raw-data/characters/`, creating duplicate entries in the enriched data.
+
+**Solution Process:**
+1. **Identify duplicates**: Search for character files with similar names or content
+2. **Compare file quality**: 
+   - Check file size and comprehensiveness
+   - Review metadata completeness 
+   - Verify which file has better structured data
+3. **Choose canonical file**: Keep the more comprehensive version
+4. **Update references**: Search for any references to the removed file's ID in other markdown files and update them
+5. **Delete duplicate**: Remove the inferior duplicate file
+6. **Rebuild data**: Run `npm run build:data` to regenerate the enriched data
+
+**Example Resolution (Gyatso):**
+- Found two files: `gyatso.md` (157 lines) and `monk-gyatso.md` (279 lines)
+- Kept `monk-gyatso.md` (more comprehensive with complete metadata)
+- Updated reference in `roku.md` from `"gyatso"` to `"monk-gyatso"`
+- Deleted `raw-data/characters/gyatso.md`
+- Image fallback mapping already handled the change correctly
+
+**Prevention:**
+- Check for similar character names before creating new files
+- Use canonical character names consistently across all references
+- Review enriched data for duplicate IDs after major data additions
+
+---
+
 **Summary:**
 - All data and search issues can be traced by following the data from `enriched-data.json` through the preprocessor, search hook, and UI.
 - The new architecture is robust and transparent—debugging is straightforward if you follow the data.
+
+---
+
+## Matrix Rain & Glassmorphism Effects Issues (2025)
+
+### **Matrix Rain Not Appearing**
+
+**Symptoms:** No digital rain effect visible in background
+**Cause:** Canvas rendering or component integration issues
+**Fix:**
+1. Check browser console for Canvas-related errors
+2. Verify `MatrixRain` component is imported in `Layout.tsx`
+3. Ensure Canvas element has correct z-index (-1) and positioning
+4. Check if `prefers-reduced-motion` is enabled (effect respects accessibility setting)
+
+### **Grey Boxes Blocking Matrix Rain**
+
+**Symptoms:** Solid grey rectangles appear over the Matrix rain effect
+**Cause:** Components using opaque backgrounds instead of transparent ones
+**Fix:**
+1. Check `EntityGrid` has `bg-transparent` class, not `bg-background`
+2. Verify `ItemCardCollapsed` doesn't have `bg-background` on containers
+3. Look for any component using solid backgrounds that should be transparent
+4. Ensure glassmorphism cards use `rgba()` backgrounds, not solid colors
+
+### **Matrix Rain Performance Issues**
+
+**Symptoms:** Stuttering, low frame rate, or browser lag
+**Cause:** Canvas rendering performance or memory issues
+**Fix:**
+1. Check if multiple Matrix Rain instances are running
+2. Verify proper cleanup in `useEffect` return function
+3. Monitor browser memory usage - ensure no memory leaks
+4. Check if `requestAnimationFrame` is being properly canceled
+5. Consider reducing animation frame rate on slower devices
+
+### **Glassmorphism Effects Not Working**
+
+**Symptoms:** Cards appear solid instead of semi-transparent with blur
+**Cause:** Browser doesn't support `backdrop-filter` or CSS is incorrect
+**Fix:**
+1. Check browser support: Chrome 76+, Firefox 103+, Safari 9+
+2. Verify both `backdrop-filter` and `-webkit-backdrop-filter` are present
+3. Check if fallback styles are applying correctly
+4. Ensure parent containers don't have overflow properties that break backdrop filters
+
+### **Matrix Glow Effects Not Appearing**
+
+**Symptoms:** Cards don't glow green on hover
+**Cause:** CSS classes not applying or conflicting styles
+**Fix:**
+1. Verify `matrix-card-glow` class is applied to cards
+2. Check if box-shadow styles are being overridden
+3. Ensure hover states are properly defined in CSS
+4. Look for conflicting z-index or transform properties
+
+### **Canvas Not Resizing Properly**
+
+**Symptoms:** Matrix rain doesn't adapt to window size changes
+**Cause:** Resize event handler not updating Canvas dimensions
+**Fix:**
+1. Check `initializeCanvas()` function is called on window resize
+2. Verify Canvas width/height are updated with actual pixel dimensions
+3. Ensure drops array is recalculated for new column count
+4. Check if resize event listeners are properly attached and cleaned up
+
+### **Matrix Characters Not Displaying Correctly**
+
+**Symptoms:** Strange symbols or empty spaces instead of Matrix characters
+**Cause:** Character encoding or font rendering issues
+**Fix:**
+1. Verify Japanese Katakana characters are properly encoded in the character array
+2. Check browser font support for Unicode characters
+3. Ensure Canvas context font settings are correct
+4. Test with fallback ASCII characters if Unicode fails
+
+### **Accessibility Issues with Effects**
+
+**Symptoms:** Users report motion sickness or difficulty reading content
+**Cause:** Effects not respecting accessibility preferences
+**Fix:**
+1. Implement `prefers-reduced-motion` media query to disable animations
+2. Ensure sufficient color contrast in glassmorphism effects
+3. Provide option to disable Matrix rain in settings
+4. Test with screen readers to ensure effects don't interfere
+
+### **Development Hot Reload Issues**
+
+**Symptoms:** Matrix rain doesn't restart properly during development
+**Cause:** Canvas context or animation loops not cleaning up properly
+**Fix:**
+1. Ensure `useEffect` cleanup function cancels `requestAnimationFrame`
+2. Remove all event listeners in cleanup
+3. Clear any intervals or timeouts
+4. Reset Canvas context state if needed
+
+---

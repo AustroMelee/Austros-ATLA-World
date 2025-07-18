@@ -11,7 +11,7 @@ interface EntityGridProps {
 
 export default function EntityGrid({ items, expandedCardId, onCardExpand }: EntityGridProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-4 p-4">
+    <div className="flex flex-wrap justify-center gap-4 bg-transparent">
       {items.map((gridItem) => (
         <ItemCard
           key={gridItem.record.id}

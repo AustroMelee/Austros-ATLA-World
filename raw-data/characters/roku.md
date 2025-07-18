@@ -50,7 +50,7 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
 
 - Sozin (Best Friend turned Arch-Nemesis)
 - Aang (Successor, Mentee)
-- Gyatso (Close Friend, Aang's Guardian)
+- Monk Gyatso (Close Friend, Aang's Guardian)
 - Ta Min (Wife)
 - Zuko (Great-Grandson)
 
@@ -140,7 +140,7 @@ A guiding spirit and tragic figure whose past mistakes serve as a crucial lesson
   "relationships": {
     "sozin": "Best Friend turned Arch-Nemesis",
     "aang": "Successor, Mentee",
-    "gyatso": "Close Friend, Aang's Guardian",
+    "monk-gyatso": "Close Friend, Aang's Guardian",
     "taMin": "Wife",
     "zuko": "Great-Grandson"
   },

@@ -101,12 +101,13 @@ defined there are treated the same as the canonical tag during search.
 #### **UI Components**
 | File | Description |
 |------|-------------|
-| **`components/EntityGrid/EntityGrid.tsx`** | Renders the responsive grid of cards. Passes expand/collapse state to each card. |
-| **`components/ItemCard/ItemCard.tsx`** | Renders both the small grid card and the full-screen expanded modal view. Contains all logic for a single entity's display. Features responsive text sizing and proper flex layout to prevent name truncation. |
+| **`components/EntityGrid/EntityGrid.tsx`** | Renders the responsive grid of cards. Passes expand/collapse state to each card. **Matrix Integration:** Uses `bg-transparent` to allow Matrix rain to flow through gaps between cards. |
+| **`components/ItemCard/ItemCard.tsx`** | Renders both the small grid card and the full-screen expanded modal view. Contains all logic for a single entity's display. Features responsive text sizing and proper flex layout to prevent name truncation. **Matrix Transparency:** Removed `bg-background` to prevent grey boxes blocking Matrix rain. |
+| **`components/MatrixRain/MatrixRain.tsx`** | **NEW (2025):** Canvas-based Matrix digital rain background effect with authentic movie-style characteristics, true randomness, and optimized performance. Replaces 287 lines of CSS with 80-line React component. |
 | **`components/CustomMarkdownRenderer.tsx`** | Renders markdown content for the expanded card view, with custom styling. |
-| **`components/ThemedCard/ThemedCard.tsx`** | A styled wrapper that applies a nation-specific border color to cards. |
+| **`components/ThemedCard/ThemedCard.tsx`** | A styled wrapper that applies nation-specific border colors to cards. **Matrix Update:** Added glassmorphism effects with semi-transparent backgrounds, backdrop blur, and Matrix green hover glow. |
 | **`components/SearchBar.tsx`** | Terminal-style search input with custom fonts, block cursor animation, 28px font size, disabled spell-check, custom text selection, and comprehensive CRT effects. |
-| **`components/Layout.tsx`** | Main application layout wrapper component. |
+| **`components/Layout.tsx`** | Main application layout wrapper component. **Matrix Integration:** Includes MatrixRain component and transparent backgrounds to allow rain effect visibility. |
 | **`components/NationIcon/NationIcon.tsx`** | Displays nation-specific icons using React Icons. |
 | **`components/Badge/Badge.tsx`** | Reusable badge component for displaying roles and categories. |
 | **`components/QuoteBlock/QuoteBlock.tsx`** | Renders quoted text with special styling for markdown content. |
