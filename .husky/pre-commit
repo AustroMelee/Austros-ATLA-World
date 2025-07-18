@@ -1,5 +1,4 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
 
 echo "🚀 NASA-Level Pre-Commit Quality Gates"
 echo "======================================"
@@ -152,7 +151,7 @@ const srcFiles = allFiles.filter(file => file.startsWith('src/') && (file.endsWi
 const orphanedFiles = [];
 for (const file of srcFiles) {
   const relativePath = path.relative('.', file);
-  const importPath = relativePath.replace(/\\/g, '/').replace(/\.(ts|tsx|js|jsx)$/, '');
+  const importPath = relativePath.replace(/\\\\/g, '/').replace(/\\.(ts|tsx|js|jsx)$/, '');
   
   // Check if this file is imported anywhere
   let isImported = false;
