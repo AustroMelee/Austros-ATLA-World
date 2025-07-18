@@ -85,6 +85,49 @@
 - Maintains consistent spacing regardless of result count
 - Uses flex layout with proper gap handling
 
+### 10. Smooth Scrolling Navigation (2025 Update)
+
+#### Global CSS Implementation
+- **Automatic Smooth Scrolling:** All native anchor links (`<a href="#section">`) automatically scroll smoothly due to the global CSS rule in `src/styles/custom.css`:
+  ```css
+  html {
+    scroll-behavior: smooth;
+  }
+  ```
+- **Browser Native:** Uses the browser's built-in smooth scrolling for optimal performance
+- **No Additional Code:** No component-level implementation needed for standard anchor links
+
+#### JavaScript Utility for Programmatic Scrolling
+- **Utility Function:** Located in `src/utils/navigationUtils.ts`:
+  ```typescript
+  export function scrollToElementById(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    } else {
+      console.warn(`[scrollToElementById] Element with ID "${elementId}" not found.`);
+    }
+  }
+  ```
+- **Usage in Components:** Import and use in onClick handlers or other events:
+  ```typescript
+  import { scrollToElementById } from '../utils/navigationUtils';
+  
+  // In component
+  <button onClick={() => scrollToElementById('my-section')}>
+    Scroll to Section
+  </button>
+  ```
+
+#### Implementation Guidelines
+- **Consistent Experience:** Both CSS and JavaScript methods provide the same smooth behavior
+- **Accessibility:** Maintains focus and provides visual continuity for screen readers
+- **Performance:** Uses native browser smooth scrolling for optimal performance
+- **Fallback:** Older browsers gracefully fall back to instant scrolling without breaking functionality
+
 ## 1. CSS Source of Truth: Tailwind CSS (v3.4.3)
 
 The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable environmental bug with the v4+ CLI installer on the primary development machine.

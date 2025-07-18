@@ -85,9 +85,10 @@
 - **Matrix Rain & Effects (2025):** `src/components/MatrixRain/MatrixRain.tsx`, `src/components/Layout.tsx`.
 - **Glassmorphism Styling:** `src/components/ThemedCard/ThemedCard.tsx`, `src/styles/custom.css`.
 - **Styling/utility:** `src/components/CustomMarkdownRenderer.tsx`, `src/components/NationIcon/NationIcon.tsx`, `src/utils/stringUtils.ts`.
+- **Navigation:** `src/utils/navigationUtils.ts` (smooth scrolling utility).
 
 **In short:**
-Data flows from `enriched-data.json` → fetched by `HomeContainer` (via `useEnrichedData`) → indexed and filtered by the `useSearch` hook in the browser → passed to `Home` → rendered as a grid in `EntityGrid` → each card is an `ItemCard` which can expand into a full-screen modal. **NEW (2025):** The entire interface is overlaid with an authentic Matrix digital rain effect that flows through transparent glassmorphism cards, creating a cohesive cyberpunk terminal aesthetic.
+Data flows from `enriched-data.json` → fetched by `HomeContainer` (via `useEnrichedData`) → indexed and filtered by the `useSearch` hook in the browser → passed to `Home` → rendered as a grid in `EntityGrid` → each card is an `ItemCard` which can expand into a full-screen modal. **NEW (2025):** The entire interface is overlaid with an authentic Matrix digital rain effect that flows through transparent glassmorphism cards, creating a cohesive cyberpunk terminal aesthetic. **Navigation:** Smooth scrolling is enabled globally via CSS and programmatically via the `navigationUtils.ts` utility.
 
 ---
 

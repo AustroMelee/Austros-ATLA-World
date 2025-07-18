@@ -193,7 +193,30 @@ This structure ensures a robust, accessible, and visually consistent UI, with cl
 
 ---
 
-## 10. Getting Started for New Developers
+## 10. Smooth Scrolling Navigation (2025 Update)
+
+The application implements buttery smooth scrolling through a dual approach:
+
+### Global CSS Implementation
+- **Automatic Behavior:** All native anchor links (`<a href="#section">`) automatically scroll smoothly due to the global CSS rule in `src/styles/custom.css`
+- **Browser Native:** Uses the browser's built-in `scroll-behavior: smooth` for optimal performance
+- **Zero Configuration:** No component-level implementation needed for standard anchor links
+
+### JavaScript Utility for Programmatic Scrolling
+- **Utility Function:** Located in `src/utils/navigationUtils.ts` with the `scrollToElementById` function
+- **Usage Pattern:** Import and use in onClick handlers or other events for programmatic navigation
+- **Error Handling:** Includes proper error logging when target elements are not found
+- **Consistent Experience:** Provides the same smooth behavior as CSS anchor links
+
+### Integration Points
+- **Components:** Any component can use the utility function for custom scroll behavior
+- **Accessibility:** Maintains focus and provides visual continuity for screen readers
+- **Performance:** Uses native browser smooth scrolling for optimal performance
+- **Fallback:** Older browsers gracefully fall back to instant scrolling without breaking functionality
+
+---
+
+## 11. Getting Started for New Developers
 
 ### **Understanding the Data Flow**
 1. **Start with the data**: Examine `public/enriched-data.json` to understand the data structure

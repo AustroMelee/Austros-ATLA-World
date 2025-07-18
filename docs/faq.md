@@ -304,3 +304,38 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 - Currently collections are private to your browser
 - Sharing feature planned for future updates
 - Export/import functionality coming soon
+
+---
+
+### 🚀 Smooth Scrolling Navigation (2025 Update)
+
+**How does smooth scrolling work in the application?**
+- **Global CSS Implementation:** All native anchor links (`<a href="#section">`) automatically scroll smoothly due to `html { scroll-behavior: smooth; }` in the global CSS
+- **JavaScript Utility:** Programmatic scrolling is available via the `scrollToElementById` function in `src/utils/navigationUtils.ts`
+- **Consistent Experience:** Both methods provide the same smooth, non-jarring navigation experience
+
+**How do I use smooth scrolling in my components?**
+- **For anchor links:** Simply use standard HTML anchor links with hash fragments - they will automatically scroll smoothly
+- **For programmatic scrolling:** Import and use the utility function:
+  ```typescript
+  import { scrollToElementById } from '../utils/navigationUtils';
+  
+  // In an onClick handler or other event
+  scrollToElementById('my-section-id');
+  ```
+
+**What are the benefits of the smooth scrolling implementation?**
+- **User Experience:** Eliminates jarring instant jumps when navigating to page sections
+- **Accessibility:** Maintains focus and provides visual continuity for screen readers
+- **Performance:** Uses native browser smooth scrolling for optimal performance
+- **Consistency:** All navigation uses the same smooth behavior throughout the application
+
+**Are there any browser compatibility considerations?**
+- The `scroll-behavior: smooth` CSS property is supported in all modern browsers
+- The `scrollIntoView` JavaScript method with `behavior: 'smooth'` is also widely supported
+- Older browsers will gracefully fall back to instant scrolling without breaking functionality
+
+**How do I add smooth scrolling to new components?**
+- **For new anchor links:** No additional code needed - they automatically inherit smooth behavior
+- **For new programmatic scrolling:** Import the utility function and call it with the target element ID
+- **For custom scroll behavior:** The utility function can be extended or modified as needed

@@ -65,13 +65,13 @@ defined there are treated the same as the canonical tag during search.
 | src/App.tsx | React Router setup. |
 | src/types/ | Core TypeScript types (`domainTypes.ts`, `rawTypes.ts`, `grid.ts`). |
 | src/theme/ | Theming files, like `nationThemes.ts` for card colors. |
-| src/utils/ | Shared helper functions (`stringUtils.ts`, `tokenize.ts`). |
+| src/utils/ | Shared helper functions (`stringUtils.ts`, `tokenize.ts`, `navigationUtils.ts`). |
 | src/hooks/ | All custom React hooks (see below). |
 | src/components/ | All reusable UI components (cards, grid, nav, modal, etc.). |
 | src/pages/ | Page-level components that compose the UI. |
 | src/search/ | Client-side search utilities. |
 | src/styles/ | CSS files. |
-| src/styles/custom.css | Custom CSS with CRT utilities (crt-glow-text, crt-glow-border, crt-dither), scrollbar theming, and font definitions. |
+| src/styles/custom.css | Custom CSS with CRT utilities (crt-glow-text, crt-glow-border, crt-dither), scrollbar theming, font definitions, and smooth scrolling behavior for anchor links. |
 | src/styles/generated-tailwind.css | Generated Tailwind CSS output (must be rebuilt after config changes). |
 | src/config/constants.ts | Centralized API endpoints and config constants. |
 | src/components/ItemCard/ItemCardModal.tsx | Modal for expanded card view. Implements scroll lock, single scroll container, click-outside-to-close, and accessibility improvements. |
