@@ -18,6 +18,9 @@ export default function ThemedCard({ children, nation, className, ...props }: Th
     // @ts-expect-error --nation-color is a custom CSS property for theming
     '--nation-color': theme.main,
     '--nation-glow': `${theme.main}50`, // 50% opacity glow
+    transform: 'translateZ(0)', // Force GPU acceleration
+    backfaceVisibility: 'hidden', // Reduce painting
+    perspective: '1000px', // Improve 3D performance
   };
 
   const baseClasses = `
@@ -33,6 +36,8 @@ export default function ThemedCard({ children, nation, className, ...props }: Th
     hover:bg-opacity-90
     hover:backdrop-blur-md
     matrix-card-glow
+    will-change-transform
+    will-change-opacity
   `;
 
   return (

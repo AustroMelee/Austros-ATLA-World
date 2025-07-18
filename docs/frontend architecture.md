@@ -1,14 +1,13 @@
 # 🏗️ Frontend Architecture & Logic (2025 Matrix Update)
 
-The frontend is organized around a clear separation of concerns, with a central container managing state and data flow to presentational components. The search system is now fully client-side for maximum robustness and transparency. **NEW:** Added authentic Matrix-style digital rain background with glassmorphism card effects for a cyberpunk terminal aesthetic.
-
 ---
 
 ## 1. HomeContainer.tsx: The Central Orchestrator
 
 - **Data Fetching:** On initial load, fetches `public/enriched-data.json` (the only data file used by the app) using the `useEnrichedData` hook.
-- **State Management:** Manages the user's search query and the `expandedCardId` for modal views.
-- **Search Logic:** Calls the `useSearch` hook, passing the full dataset and the current query.
+- **State Management:** Manages the user's search query, collection selection, and the `expandedCardId` for modal views.
+- **Search Logic:** Calls the `useSearch` hook, passing the filtered dataset and the current query.
+- **Collections:** Uses the `useCollections` hook to create, store, and filter collections via `localStorage`.
 - **Prop Drilling:** Passes the final search results and state handlers down to the presentational `<Home />` component.
 
 ---
@@ -28,7 +27,7 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
-## 3. Custom Hooks: useSearch, useEnrichedData, useImageFallback
+## 3. Custom Hooks: useSearch, useEnrichedData, useImageFallback, useCollections
 
 - **`useSearch.ts`:**
   - Receives the complete array of data and the search query.
@@ -39,6 +38,9 @@ The frontend is organized around a clear separation of concerns, with a central 
   - Fetches and manages the enriched data from the API endpoint, with robust error handling and loading state.
 - **`useImageFallback.ts`:**
   - Manages image loading, error fallback, and status for entity images, providing a robust fallback for missing or broken images.
+- **`useCollections.ts`:**
+  - Stores user-defined collections in `localStorage`.
+  - Provides create, add/remove card, and filtering utilities for the app.
 
 ---
 
@@ -71,41 +73,50 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
-## 6. Card Grid & Modal System with Glassmorphism Effects
+## 6. Collections System Architecture
 
-- **`EntityGrid.tsx`:**
-  - Receives the array of search results and the `expandedCardId`.
-  - Renders a responsive grid of `ItemCard` components.
-  - **Matrix Integration:** Uses `bg-transparent` to allow Matrix rain to flow through gaps between cards
-  - Dynamically sets the `expanded` and `onExpand` props for each card.
+The collections feature follows the project's client-first architecture, using browser localStorage for persistence and React Portals for UI components.
 
-- **`ThemedCard.tsx` (2025 Glassmorphism Update):**
-  - **Glassmorphism Effects:** Semi-transparent background with `backdrop-blur-sm` for depth
-  - **Matrix Glow on Hover:** CRT green glow effects using multiple box-shadow layers
-  - **Animated Pulse Background:** Subtle matrix-pulse animation using `::before` pseudo-element
-  - **Nation-Themed Borders:** Maintains nation-specific colors while adding Matrix green hover enhancement
-  - **Minimal Scale Effect:** Very gentle 1.02x scale on hover to maintain card dimensions
-  - **Cross-Browser Support:** Includes `-webkit-backdrop-filter` for Safari compatibility
+### Storage & State Management (`useCollections.ts`)
+- Uses localStorage with key `austros-atla-collections`
+- Provides CRUD operations for collections
+- Handles persistence automatically
+- Returns memoized helper functions for collection operations
+- Maintains collection state with functional updates for reliability
 
-- **`ItemCard.tsx`:**
-  - Renders both the collapsed grid card and the full-screen expanded modal view.
-  - **Collapsed Card Features:**
-    - Fixed width of 113px with responsive text sizing (`text-sm` for optimal fit)
-    - Uses `flex-1 min-w-0` layout to ensure proper text truncation with ellipsis
-    - Displays character name with `overflow-hidden text-ellipsis` for graceful handling of long names
-    - **Matrix Transparency:** Removed `bg-background` to prevent grey boxes blocking Matrix rain
-    - Shows nation icon alongside the name in a flex container
-    - Displays badge/role information with fallback logic for different data locations
-  - **Expanded Modal Features (2025 Update):**
-    - Full-screen, responsive modal overlay with detailed entity view
-    - **Nation-Colored Titles:** Card titles now use nation-specific colors (e.g., green for Earth Kingdom characters like Bosco)
-    - **Click-to-Close:** Users can click anywhere outside the content area to close the modal
-    - **Keyboard Navigation:** Escape key closes the modal with proper accessibility support
-    - **React Icons Consistency:** All icon displays use React Icons for consistent styling
-    - Large image display with scrollable text content and custom CRT-themed scrollbars
-    - Uses the `useImageFallback` hook for robust image handling
-  - **Type:** `EnrichedEntity` (defined in `src/search/types.ts`)
-  - Contains all top-level fields needed for display: `name`, `nation`, `role`, `slug`, `expandedView`, `image`, etc.
+### UI Components
+1. **CollectionCardButton (`CollectionCardButton.tsx`)**
+   - Uses forwardRef for proper ref handling
+   - Appears on each card in the grid
+   - Shows + for non-collected items, ✓ for collected
+   - Matrix-themed styling with glow effects
+
+2. **Collection Popover (`AddToCollectionPopover.tsx`)**
+   - Uses React Portal to prevent clipping issues
+   - Renders at document.body level
+   - Positions itself relative to the button
+   - Shows temporary success state (1.5s checkmark)
+   - Handles click-outside for dismissal
+
+3. **Collections Sidebar (`CollectionsSidebar.tsx`)**
+   - Shows all user collections
+   - Provides collection filtering
+   - Allows collection creation
+   - Shows item counts per collection
+
+### Integration Points
+- **HomeContainer:** Manages active collection filtering
+- **EntityGrid:** Receives filtered results based on active collection
+- **ItemCard:** Hosts collection button and manages popover state
+
+### Data Flow
+1. User clicks + button on card
+2. Popover appears via Portal
+3. User selects/creates collection
+4. State updates through useCollections
+5. Changes persist to localStorage
+6. UI updates with temporary success state
+7. Grid filters if collection is active
 
 ---
 
@@ -186,39 +197,22 @@ This structure ensures a robust, accessible, and visually consistent UI, with cl
 
 ### **Understanding the Data Flow**
 1. **Start with the data**: Examine `public/enriched-data.json` to understand the data structure
-2. **Follow the pipeline**: Review `docs/data pipeline.md` to understand how data is processed
-3. **Trace the search**: Look at `src/hooks/useSearch.ts` to see how client-side indexing works
-4. **Examine components**: Start with `HomeContainer.tsx` and follow the prop flow down
+2. **Follow the pipeline**: Review `docs/data pipeline.md`
 
-### **Making Your First Change**
-1. **UI changes**: Most visual changes happen in `src/components/ItemCard/ItemCardCollapsed.tsx`
-2. **Search changes**: Modify `src/search/preprocessor.ts` to change what fields are searchable
-3. **Data changes**: Edit markdown files in `raw-data/characters/` then run `npm run build:data`
-4. **Style changes**: Update Tailwind classes, then run `npm run build:tailwind`
+---
 
-### **Essential Commands**
-```bash
-# Development workflow
-npm run dev                    # Start development server
-npm run build:data            # Rebuild data from markdown
-npm run build:tailwind        # Rebuild CSS after style changes
-npm run type-check            # Check TypeScript errors
-npm run lint:fix              # Fix linting issues
+## Modal & Overlay System
+- The expanded card modal (`ItemCardModal.tsx`) now uses a single scroll container for all content (image, name, role, details).
+- Modal locks background scroll when open using the `useScrollLock.ts` hook.
+- Clicking outside the modal content closes the modal (overlay is a button for accessibility).
+- Close button remains fixed and accessible.
+- All modal interactions are keyboard-navigable (Escape key closes modal, Tab order preserved).
+- Overlay and modal use proper ARIA roles and labels for accessibility.
 
-# Testing and validation
-npm test                      # Run test suite
-npm run validate:data         # Validate data integrity
-```
+---
 
-### **Key Files to Know**
-- `src/pages/HomeContainer.tsx` - Central state management
-- `src/components/ItemCard/ItemCardCollapsed.tsx` - Card display logic
-- `src/hooks/useSearch.ts` - Search functionality
-- `docs/troubleshooting.md` - When things go wrong
-- `projectrules.mdc` - Project conventions and rules
-
-### **Common Tasks**
-- **Add new character**: Create markdown file in `raw-data/characters/`, run `npm run build:data`
-- **Fix search issues**: Check `src/search/preprocessor.ts` and `docs/troubleshooting.md`
-- **Update styling**: Modify Tailwind classes, run `npm run build:tailwind`
-- **Debug data issues**: Check `public/enriched-data.json` first, then trace backwards
+## Collections System
+- The collection button (+) in `CollectionCardButton.tsx` is now perfectly centered, larger, and more visually prominent.
+- Button uses bolder font, stronger glow, and improved hover/focus states.
+- Button is accessible: uses ARIA labels and is keyboard focusable.
+- Popover menu is positioned correctly and only one can be open at a time.

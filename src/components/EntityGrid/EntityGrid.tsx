@@ -5,11 +5,12 @@ import type { GridItem } from '../../types/grid';
 
 interface EntityGridProps {
   items: GridItem[];
-  expandedCardId: string | null; // <-- Add prop
-  onCardExpand: (cardId: string) => void; // <-- Add prop
+  expandedCardId: string | null;
+  onCardExpand: (cardId: string) => void;
+  collectionsApi: import('../../hooks/useCollections').UseCollectionsReturn;
 }
 
-export default function EntityGrid({ items, expandedCardId, onCardExpand }: EntityGridProps) {
+export default function EntityGrid({ items, expandedCardId, onCardExpand, collectionsApi }: EntityGridProps) {
   return (
     <div className="flex flex-wrap justify-center gap-4 bg-transparent">
       {items.map((gridItem) => (
@@ -19,6 +20,7 @@ export default function EntityGrid({ items, expandedCardId, onCardExpand }: Enti
           matchedFields={gridItem.matchedFields}
           expanded={gridItem.record.id === expandedCardId}
           onExpand={() => onCardExpand(gridItem.record.id)}
+          collectionsApi={collectionsApi}
         />
       ))}
     </div>

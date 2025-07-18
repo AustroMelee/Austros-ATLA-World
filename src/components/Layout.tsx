@@ -4,9 +4,10 @@ import MatrixRain from './MatrixRain';
 
 interface LayoutProps {
   children: React.ReactNode;
+  modalOpen?: boolean;
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, modalOpen = false }: LayoutProps) {
   return (
     // The `isolate` class is still important to ensure the z-index works correctly!
     <div className="flex flex-col min-h-screen bg-transparent relative isolate">
@@ -14,7 +15,7 @@ export default function Layout({ children }: LayoutProps) {
         Replace ALL 24 of the old divs with this one component.
         We also set the parent background to transparent so the canvas is visible.
       */}
-      <MatrixRain />
+      <MatrixRain modalOpen={modalOpen} />
       
       {/* <Navbar /> */}
       <main className="flex-1 flex flex-col">{children}</main>

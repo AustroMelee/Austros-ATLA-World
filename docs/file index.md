@@ -74,6 +74,9 @@ defined there are treated the same as the canonical tag during search.
 | src/styles/custom.css | Custom CSS with CRT utilities (crt-glow-text, crt-glow-border, crt-dither), scrollbar theming, and font definitions. |
 | src/styles/generated-tailwind.css | Generated Tailwind CSS output (must be rebuilt after config changes). |
 | src/config/constants.ts | Centralized API endpoints and config constants. |
+| src/components/ItemCard/ItemCardModal.tsx | Modal for expanded card view. Implements scroll lock, single scroll container, click-outside-to-close, and accessibility improvements. |
+| src/components/Collections/CollectionCardButton.tsx | Button for adding/removing cards to collections. Now larger, centered, more visible, and accessible. |
+| src/hooks/useScrollLock.ts | Custom hook for scroll locking when modal is open. |
 
 ---
 
@@ -82,7 +85,7 @@ defined there are treated the same as the canonical tag during search.
 #### **Data Flow & State**
 | File | Description |
 |------|-------------|
-| **`pages/HomeContainer.tsx`** | The stateful "brain" of the app. Fetches `enriched-data.json`, manages `query` and `expandedCardId` state, and calls the `useSearch` hook. |
+| **`pages/HomeContainer.tsx`** | The stateful "brain" of the app. Fetches `enriched-data.json`, manages search and collection state, and calls the `useSearch` hook. |
 | **`hooks/useSearch.ts`** | **The core of the search system.** Receives all data, preprocesses it, builds the FlexSearch index in-browser, and returns filtered results. |
 | **`hooks/useEnrichedData.ts`** | Fetches and manages the enriched data from the API endpoint, with robust error handling. |
 | **`hooks/useImageFallback.ts`** | Manages image loading, error fallback, and status for entity images. |
@@ -95,6 +98,7 @@ defined there are treated the same as the canonical tag during search.
 | **`hooks/useDebounce.ts`** | Debounces rapid input changes for performance. |
 | **`hooks/useSuggestions.ts`** | Provides search suggestions and autocomplete. |
 | **`hooks/useRecentSearchRecorder.ts`** | Records and manages recent search history. |
+| **`hooks/useCollections.ts`** | CRUD and persistence layer for user-defined collections stored in `localStorage`. |
 | **`search/preprocessor.ts`** | Helper for `useSearch`. Creates the `searchBlob` from each record to enable comprehensive full-text search. |
 | **`pages/Home.tsx`** | The presentational "body" of the app. Receives props from `HomeContainer` and renders the UI. |
 
@@ -114,6 +118,9 @@ defined there are treated the same as the canonical tag during search.
 | **`components/SectionBlock/SectionBlock.tsx`** | Renders structured sections in expanded views. |
 | **`components/FilterSidebar.tsx`** | Sidebar for filtering options (can be hidden via returning null). |
 | **`components/CollectionsSidebar.tsx`** | Sidebar for collection management (can be hidden via returning null). |
+| **`components/Collections/CollectionCardButton.tsx`** | Button component that appears on each card for adding/removing from collections. Uses forwardRef for proper positioning of popover. |
+| **`components/Collections/AddToCollectionPopover.tsx`** | Popover menu for managing collection membership. Uses React Portal to prevent clipping issues. |
+| **`components/Collections/CollectionsSidebar.tsx`** | Sidebar component for viewing and managing collections. |
 
 #### **TypeScript Types & Configuration**
 | File | Description |

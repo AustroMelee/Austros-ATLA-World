@@ -1,6 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 
-const MatrixRain: React.FC = () => {
+interface MatrixRainProps {
+  modalOpen?: boolean;
+}
+
+const MatrixRain: React.FC<MatrixRainProps> = ({ modalOpen = false }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -34,25 +38,23 @@ const MatrixRain: React.FC = () => {
     
     // --- The Animation Loop ---
     const draw = () => {
-      // --- CHANGE #1: Higher transparency for a cleaner background ---
-      // We can use a higher value now because our leading character will be brighter.
-      // This makes old trails fade out much faster. Try values between 0.2 and 0.3.
-      ctx.fillStyle = 'rgba(13, 17, 23, 0.2)'; 
+      // Reduce opacity and slow down animation when modal is open
+      const fadeOpacity = modalOpen ? 0.1 : 0.2;
+      ctx.fillStyle = `rgba(13, 17, 23, ${fadeOpacity})`; 
       ctx.fillRect(0, 0, width, height);
 
-      // --- CHANGE #2: We will now set two different colors inside the loop ---
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = characters.charAt(Math.floor(Math.random() * characters.length));
         
-        // --- CHANGE #3: Draw the standard green trail character first ---
-        ctx.fillStyle = '#70ab6c'; // Your standard --crt-green
+        // Reduce trail brightness when modal is open
+        const trailOpacity = modalOpen ? 0.5 : 1;
+        ctx.fillStyle = `rgba(112, 171, 108, ${trailOpacity})`; // Your standard --crt-green with reduced opacity
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-        // --- CHANGE #4: Draw a bright "leading" character on top ---
-        // This makes the head of the drop pop, creating the iconic effect.
-        ctx.fillStyle = '#c8ffc8'; // A bright, light-green/white color
+        // Reduce leading character brightness when modal is open
+        ctx.fillStyle = modalOpen ? '#70ab6c' : '#c8ffc8'; // Use darker color when modal is open
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
         if (drops[i] * fontSize > height && Math.random() > 0.975) {
@@ -63,7 +65,9 @@ const MatrixRain: React.FC = () => {
       }
     };
 
-    const intervalId = setInterval(draw, 33);
+    // Slow down animation when modal is open
+    const interval = modalOpen ? 100 : 33;
+    const intervalId = setInterval(draw, interval);
 
     const handleResize = () => {
       initializeCanvas();
@@ -75,7 +79,7 @@ const MatrixRain: React.FC = () => {
       window.removeEventListener('resize', handleResize);
     };
 
-  }, []);
+  }, [modalOpen]); // Add modalOpen to dependencies
 
   return (
     <canvas
@@ -86,6 +90,7 @@ const MatrixRain: React.FC = () => {
         left: 0,
         zIndex: -1,
         pointerEvents: 'none',
+        opacity: modalOpen ? 0.5 : 1, // Reduce overall opacity when modal is open
       }}
     />
   );

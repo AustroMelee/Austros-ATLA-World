@@ -263,3 +263,44 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 - Memory cleanup occurs on component unmount to prevent leaks
 
 ---
+
+### 📁 Collections System
+
+**Where are my collections stored?**
+- Collections are stored in your browser's `localStorage`
+- They never leave your device or sync to any server
+- Data persists between sessions but is limited to your current browser
+
+**How do I add items to a collection?**
+- Click the + button on any character card
+- Select an existing collection or create a new one
+- A temporary checkmark will appear to confirm the addition
+- The checkmark disappears after 1.5 seconds
+
+**Can I view my collections?**
+- Yes, use the collections sidebar on the left
+- Shows all your collections with item counts
+- Click a collection to filter the view to just those items
+- Click "All Items" to return to the full view
+
+**How do I create a new collection?**
+- Use the "Create new collection" button in the collections sidebar
+- Or click the + on any card and choose "Create new collection"
+- Collection names must be unique
+- Empty collections are allowed
+
+**Are there limits to collections?**
+- No limit on number of collections
+- No limit on items per collection
+- Limited only by your browser's localStorage capacity
+- Items can be in multiple collections simultaneously
+
+**What happens if I clear my browser data?**
+- Collections stored in localStorage will be cleared
+- Consider exporting important collections (feature coming soon)
+- No way to recover cleared collections
+
+**Can I share my collections?**
+- Currently collections are private to your browser
+- Sharing feature planned for future updates
+- Export/import functionality coming soon

@@ -467,3 +467,95 @@ Multiple markdown files exist for the same character in `raw-data/characters/`, 
 4. Reset Canvas context state if needed
 
 ---
+
+### Collections System Issues
+
+**Collection Popover is Cut Off or Not Visible**
+- Issue: The collection popover menu is being clipped by parent containers
+- Solution: The popover uses React Portal to render at document.body level
+- Check that the buttonRef is properly passed and the Portal is working
+- Verify z-index values if other elements are overlapping
+
+**Collection Changes Not Persisting**
+- Issue: Collections disappear after page refresh
+- Check: Open DevTools → Application → Local Storage
+- Verify the 'austros-atla-collections' key exists
+- Check for localStorage errors in console
+- Ensure you're not in incognito/private mode
+
+**Checkmark State Issues**
+- Issue: Checkmark stays visible permanently
+- Solution: The success state uses a 1.5s timeout
+- Check that the timeout is not being interrupted
+- Verify the successStates object is being updated correctly
+
+**Collection Filtering Not Working**
+- Issue: Grid doesn't update when selecting a collection
+- Check HomeContainer's activeCollectionId state
+- Verify the collection's cardIds array
+- Check that filtered results are being passed to EntityGrid
+
+**Collection Button Reference Issues**
+- Issue: Popover positioning is incorrect
+- Ensure CollectionCardButton is using forwardRef correctly
+- Check that the ref is being passed through all components
+- Verify the button's getBoundingClientRect() values
+
+**Multiple Popovers Appearing**
+- Issue: Multiple collection popovers visible at once
+- Solution: Ensure showPopover state is being toggled correctly
+- Check that click-outside handling is working
+- Verify onClose is being called properly
+
+---
+
+# [2025-07] UI/UX & Collections System Improvements
+
+**Summary of July 2025 Updates:**
+
+- **Modal Scroll Lock:** When a card is expanded, background scrolling is disabled, locking the user into the modal until it is closed.
+- **Single Scroll Container:** The expanded card modal now scrolls all content (image, name, role, and details) together, improving usability for cards with limited information.
+- **Click-Outside-to-Close:** Clicking anywhere outside the expanded card content closes the modal, providing a more intuitive and accessible experience.
+- **Accessibility Fixes:**
+  - Overlay and modal use proper ARIA roles and keyboard navigation (Escape key closes modal).
+  - Overlay uses a button for click-outside, ensuring screen reader compatibility.
+  - Focus management and tab order are preserved.
+- **Collection Button Improvements:**
+  - The + (add to collection) icon is now perfectly centered and more visually prominent.
+  - Button uses a larger size, bolder font, and stronger glow/hover effects for better discoverability.
+  - Accessibility: Button uses proper ARIA labels and keyboard focus.
+- **Popover/Popover Menu:**
+  - Collection popover is positioned correctly and does not get cut off.
+  - Only one popover can be open at a time.
+- **General UI Polish:**
+  - All changes maintain the Matrix/CRT aesthetic and are fully responsive.
+  - All interactive elements are accessible and keyboard-navigable.
+
+---
+
+## Modal Scroll Lock Not Working
+- **Symptom:** When a card is expanded, you can still scroll the background content.
+- **Solution:** Ensure the `useScrollLock` hook is imported and called with `true` in `ItemCardModal.tsx`. The hook should set `document.body.style.overflow = 'hidden'` and restore it on cleanup.
+- **Check:** The modal should trap scroll and background should not move until the modal is closed.
+
+## Click-Outside-to-Close Not Working
+- **Symptom:** Clicking outside the expanded card does not close the modal.
+- **Solution:** The modal overlay should be a button or div with an `onClick` handler that calls the modal's `onClose` prop. The modal content should stop event propagation with `onClick={e => e.stopPropagation()}`.
+- **Check:** Clicking anywhere outside the modal content closes the modal.
+
+## Collection Button Not Visible or Not Centered
+- **Symptom:** The + (add to collection) icon is not visible, is off-center, or is hard to see.
+- **Solution:**
+  - Ensure the button uses the correct Tailwind classes for size, color, and positioning (`absolute top-2 right-2 flex items-center justify-center w-7 h-7 ...`).
+  - The icon should be wrapped in a flex container and use `translate-y-[-1px]` for vertical centering.
+  - For visibility, use a bolder font, larger size, and stronger glow/hover effects.
+- **Check:** The button is clearly visible, centered, and responds to hover/focus.
+
+## Modal or Button Accessibility Issues
+- **Symptom:** Modal or collection button is not accessible via keyboard, or screen readers do not announce them properly.
+- **Solution:**
+  - Modal overlay should use `role="dialog"` and `aria-modal="true"`.
+  - Overlay should be a button or focusable element for accessibility.
+  - Close button and collection button should have `aria-label` attributes and be focusable via Tab.
+  - Escape key should close the modal (handled in `ItemCardModal.tsx`).
+- **Check:** All interactive elements are keyboard-navigable and screen reader accessible.

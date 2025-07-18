@@ -1,0 +1,40 @@
+diff --git a/docs/faq.md b/docs/faq.md
+index d9fd14c93add20d3fbebe235445fcda83cfad4a0..44f8f1afaa5a2906025bcb00a8949cadd45d77eb 100644
+--- a/docs/faq.md
++++ b/docs/faq.md
+@@ -240,26 +240,32 @@ First, consult this FAQ and other project documentation. If the issue is not cov
+ - Performance was poor due to excessive DOM manipulation
+ - The new Canvas solution is 80 lines, truly random, and much more performant
+ 
+ **Can I disable the Matrix Rain effect?**
+ - The effect respects the `prefers-reduced-motion` accessibility setting
+ - Users with motion sensitivity will see a static or minimal version
+ - The application maintains full functionality without the animated background
+ 
+ **How do glassmorphism effects work?**
+ - Cards use `backdrop-filter: blur()` for the frosted glass effect
+ - Semi-transparent backgrounds allow the Matrix rain to show through
+ - Hover states add Matrix green glow with multiple box-shadow layers
+ - Cross-browser support includes Safari `-webkit-backdrop-filter` fallbacks
+ 
+ **What happens if my browser doesn't support backdrop filters?**
+ - The application gracefully falls back to higher opacity backgrounds
+ - All functionality remains intact with slightly less transparency
+ - Modern browsers (Chrome 76+, Firefox 103+, Safari 9+) fully support the effects
+ 
+ **Are there any performance considerations?**
+ - The Matrix Rain uses `requestAnimationFrame` for smooth 30fps animation
+ - Canvas rendering is hardware-accelerated with `will-change: transform`
+ - Window resize events are properly debounced to prevent excessive recalculations
+ - Memory cleanup occurs on component unmount to prevent leaks
+ 
+----
+\ No newline at end of file
++---
++
++### 📁 Collections System
++
++**Where are my collections stored?**
++
++Your custom collections are kept in your browser's `localStorage`. They never leave your device or sync to any server.
+\ No newline at end of file 

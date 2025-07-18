@@ -13,12 +13,13 @@ interface ItemCardProps {
   expanded: boolean;
   onExpand: () => void;
   matchedFields?: MatchedField[];
+  collectionsApi: import('../../hooks/useCollections').UseCollectionsReturn;
 }
 
-export default function ItemCard({ item, expanded, onExpand, matchedFields }: ItemCardProps) {
+export default function ItemCard({ item, expanded, onExpand, matchedFields, collectionsApi }: ItemCardProps) {
   return expanded ? (
     <ItemCardModal item={item} onClose={onExpand} />
   ) : (
-    <ItemCardCollapsed item={item} matchedFields={matchedFields} onExpand={onExpand} />
+    <ItemCardCollapsed item={item} matchedFields={matchedFields} onExpand={onExpand} collectionsApi={collectionsApi} />
   );
 }

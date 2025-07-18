@@ -150,6 +150,15 @@ export type EnrichedSpiritWorld = {
   relations?: string[];
 };
 
+export interface Collection {
+  id: string;
+  name: string;
+  description?: string;
+  icon?: string; // Matrix-theme compatible icon/emoji
+  createdAt: string; // ISO 8601 string
+  cardIds: string[];
+}
+
 export type EnrichedRecord =
   | EnrichedBending
   | EnrichedCharacter
