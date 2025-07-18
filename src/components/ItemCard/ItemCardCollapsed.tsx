@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { EnrichedEntity } from '../../search/types';
 import ThemedCard from '../ThemedCard/ThemedCard';
 import NationIcon from '../NationIcon/NationIcon';
@@ -54,7 +54,6 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
   });
   const [showPopover, setShowPopover] = useState(false);
   const [showCreateModal, setShowCreateModal] = useState(false);
-  const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     if (image) {
@@ -75,7 +74,6 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
         <ThemedCard nation={nation}>
           <div className="pb-1.5 pt-2 flex flex-col min-h-[144px] crt-screen relative">
             <CollectionCardButton
-              ref={buttonRef}
               isInCollection={collectionsApi.isCardInAnyCollection(item.id)}
               onClick={(e) => {
                 e.stopPropagation();
@@ -84,7 +82,6 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
             />
             {showPopover && (
               <AddToCollectionPopover
-                buttonRef={buttonRef}
                 onClose={() => setShowPopover(false)}
                 cardId={item.id}
                 collections={collectionsApi.collections}
@@ -162,11 +159,12 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
       </div>
       {showCreateModal && (
         <CreateCollectionModal
-          onSubmit={(name) => {
+          isOpen={showCreateModal}
+          onClose={() => setShowCreateModal(false)}
+          onCreate={(name: string) => {
             collectionsApi.createCollection(name, item.id);
             setShowCreateModal(false);
           }}
-          onCancel={() => setShowCreateModal(false)}
         />
       )}
     </>

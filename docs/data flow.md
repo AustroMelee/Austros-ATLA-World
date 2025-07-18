@@ -1,187 +1,253 @@
-# Data Flow (Current as of 2025-01-18)
+# Data Flow
 
-## 1. Data Source and Pipeline
+## Overview
 
-- Data originates from markdown files in `raw-data/` (see `docs/data pipeline.md`).
-- These are parsed and enriched by scripts into a single, comprehensive JSON file: `public/enriched-data.json`. This is the only data file the frontend consumes.
-- **NEW (2025):** Template files in `templates/` subdirectories are automatically excluded from processing.
+This document describes how data flows through the Austros ATLA World application, from raw markdown files to the user interface.
+
+## 🔄 Data Flow Architecture
+
+```mermaid
+graph TD
+    A[raw-data/] --> B[scripts/1-parse-markdown.mjs]
+    B --> C[parsed-data.json]
+    C --> D[scripts/2-enrich-data.mjs]
+    D --> E[enriched-data.json]
+    E --> F[HomeContainer]
+    F --> G[useEnrichedData Hook]
+    G --> H[useSearch Hook]
+    H --> I[EntityGrid]
+    I --> J[ItemCard Components]
+    
+    K[Search Input] --> L[useSearch Hook]
+    L --> M[FlexSearch Index]
+    M --> N[Filtered Results]
+    N --> I
+    
+    O[Filter Controls] --> P[useFilters Hook]
+    P --> Q[Filtered Data]
+    Q --> I
+    
+    R[Collections] --> S[useCollections Hook]
+    S --> T[localStorage]
+    T --> U[Collection UI]
+    
+    V[Matrix Rain] --> W[useCardExpansion Hook]
+    W --> X[Modal Display]
+    
+    style A fill:#e1f5fe
+    style E fill:#c8e6c9
+    style F fill:#fff3e0
+    style I fill:#f3e5f5
+    style J fill:#ffebee
+```
+
+## 📊 Detailed Flow Breakdown
+
+### 1. Data Ingestion Phase
+```mermaid
+graph LR
+    A[raw-data/characters/] --> B[Markdown Parser]
+    C[raw-data/groups/] --> B
+    D[raw-data/foods/] --> B
+    E[raw-data/locations/] --> B
+    F[raw-data/fauna/] --> B
+    G[raw-data/episodes/] --> B
+    
+    B --> H[YAML Frontmatter Extraction]
+    H --> I[JSON Metadata Parsing]
+    I --> J[Expanded View Content]
+    J --> K[parsed-data.json]
+    
+    style A fill:#e3f2fd
+    style C fill:#e3f2fd
+    style D fill:#e3f2fd
+    style E fill:#e3f2fd
+    style F fill:#e3f2fd
+    style G fill:#e3f2fd
+    style K fill:#c8e6c9
+```
+
+### 2. Data Enrichment Phase
+```mermaid
+graph TD
+    A[parsed-data.json] --> B[enrichRecord.mjs]
+    B --> C[Tag Processing]
+    C --> D[Search Aliases]
+    D --> E[Type Classification]
+    E --> F[Image Validation]
+    F --> G[enriched-data.json]
+    
+    H[tag_dictionary.json] --> C
+    I[imageFallbacks.ts] --> F
+    
+    style A fill:#fff3e0
+    style G fill:#c8e6c9
+    style H fill:#f3e5f5
+    style I fill:#e8f5e8
+```
+
+### 3. Frontend Data Consumption
+```mermaid
+graph TD
+    A[enriched-data.json] --> B[useEnrichedData Hook]
+    B --> C[Data State Management]
+    C --> D[useSearch Hook]
+    D --> E[FlexSearch Index]
+    E --> F[Search Results]
+    
+    G[Filter Controls] --> H[useFilters Hook]
+    H --> I[Filtered Data]
+    
+    F --> J[EntityGrid]
+    I --> J
+    J --> K[ItemCard Components]
+    
+    L[Collections State] --> M[useCollections Hook]
+    M --> N[localStorage]
+    N --> O[Collection UI]
+    
+    style A fill:#c8e6c9
+    style J fill:#f3e5f5
+    style K fill:#ffebee
+    style N fill:#e8f5e8
+```
+
+### 4. Component Hierarchy
+```mermaid
+graph TD
+    A[App.tsx] --> B[Layout.tsx]
+    B --> C[HomeContainer.tsx]
+    C --> D[SearchBar.tsx]
+    C --> E[FilterBar.tsx]
+    C --> F[EntityGrid.tsx]
+    C --> G[CollectionsSidebar.tsx]
+    
+    F --> H[ItemCard.tsx]
+    H --> I[ItemCardCollapsed.tsx]
+    H --> J[ItemCardModal.tsx]
+    
+    E --> K[Filter Components]
+    G --> L[Collection Components]
+    
+    M[MatrixRain.tsx] --> B
+    
+    style A fill:#e1f5fe
+    style C fill:#fff3e0
+    style F fill:#f3e5f5
+    style H fill:#ffebee
+    style M fill:#fce4ec
+```
+
+## 🔧 Hook Dependencies
+
+### Core Data Hooks
+```mermaid
+graph LR
+    A[useEnrichedData] --> B[enriched-data.json]
+    C[useSearch] --> A
+    D[useFilters] --> A
+    E[useCollections] --> F[localStorage]
+    
+    G[useCardExpansion] --> H[Modal State]
+    I[useImageFallback] --> J[Image Loading]
+    K[useDebounce] --> L[Search Input]
+    
+    style A fill:#c8e6c9
+    style C fill:#fff3e0
+    style D fill:#fff3e0
+    style E fill:#e8f5e8
+```
+
+## 📈 Performance Flow
+
+### Search Performance
+```mermaid
+graph TD
+    A[User Types] --> B[useDebounce Hook]
+    B --> C[500ms Delay]
+    C --> D[useSearch Hook]
+    D --> E[FlexSearch Index]
+    E --> F[Filtered Results]
+    F --> G[EntityGrid Re-render]
+    
+    style A fill:#e3f2fd
+    style C fill:#fff3e0
+    style E fill:#c8e6c9
+    style G fill:#f3e5f5
+```
+
+### Image Loading Flow
+```mermaid
+graph TD
+    A[ItemCard Renders] --> B[useImageFallback Hook]
+    B --> C[Primary Image Load]
+    C --> D{Image Success?}
+    D -->|Yes| E[Display Image]
+    D -->|No| F[Fallback Image]
+    F --> G{Fallback Success?}
+    G -->|Yes| H[Display Fallback]
+    G -->|No| I[Display Text Icon]
+    
+    style A fill:#f3e5f5
+    style C fill:#e8f5e8
+    style E fill:#c8e6c9
+    style I fill:#ffebee
+```
+
+## 🔄 State Management Flow
+
+### Collections State
+```mermaid
+graph TD
+    A[User Action] --> B[useCollections Hook]
+    B --> C[State Update]
+    C --> D[localStorage Save]
+    D --> E[UI Re-render]
+    
+    F[Page Load] --> G[localStorage Read]
+    G --> H[State Restoration]
+    H --> E
+    
+    style A fill:#e3f2fd
+    style C fill:#fff3e0
+    style D fill:#e8f5e8
+    style E fill:#f3e5f5
+```
+
+## 🎯 Key Data Transformations
+
+### Raw Markdown → Enriched JSON
+1. **YAML Frontmatter** → Structured metadata
+2. **Markdown Content** → Expanded view HTML
+3. **Image References** → Validated file paths
+4. **Tag Arrays** → Normalized and validated
+5. **Search Aliases** → Generated from content
+
+### Enriched JSON → UI Components
+1. **Type Classification** → Component selection
+2. **Image Loading** → Fallback handling
+3. **Search Indexing** → FlexSearch optimization
+4. **Filter Processing** → Real-time filtering
+5. **Collection State** → localStorage persistence
+
+## 📊 Data Volume Metrics
+
+- **Raw Markdown Files:** ~60+ files
+- **Parsed Records:** ~60+ JSON objects
+- **Enriched Records:** ~60+ with additional metadata
+- **Search Index:** ~60+ indexed documents
+- **Image Assets:** ~60+ character/group images
+- **Tag Dictionary:** ~200+ normalized tags
+
+## 🔗 Related Documentation
+
+- **Data Pipeline:** See `docs/data_pipeline.md` for processing details
+- **Frontend Architecture:** See `docs/frontend_architecture.md` for component structure
+- **Troubleshooting:** See `docs/troubleshooting.md` for flow issues
+- **Source of Truth:** See `docs/source_of_truth.md` for standards
 
 ---
 
-## 2. Frontend Data Flow
-
-### a. Data Fetching and Client-Side Indexing
-
-**File:** `src/pages/HomeContainer.tsx`
-
-- On initial load, the application fetches the entire `public/enriched-data.json` file using the `useEnrichedData` hook and stores it in state.
-- It manages the user's search query and the `expandedCardId` for the modal view.
-- It passes the full dataset and the query to the `useSearch` hook.
-
-**File:** `src/hooks/useSearch.ts`
-
-- This is the core of the search logic. It receives all entity data.
-- **Preprocessing:** Uses a preprocessor to create a `searchBlob` for each entity by combining all searchable text fields (name, role, titles, tags, ageRange, etc.).
-- **Client-Side Indexing:** Builds a FlexSearch index in the browser using the preprocessed data. This is memoized to only happen once per session.
-- Performs searches against this in-memory index and returns the filtered results.
-
-### b. Presentational Layer
-
-**File:** `src/pages/Home.tsx`
-
-- Receives the final search results from `HomeContainer`.
-- Is a purely presentational component that renders the main layout and passes data down to the `EntityGrid`.
-
-### c. Card Grid
-
-**File:** `src/components/EntityGrid/EntityGrid.tsx`
-
-- Receives an array of search results and the `expandedCardId`.
-- Maps over the items and renders an `ItemCard` for each.
-- Dynamically sets the `expanded` and `onExpand` props for each card to manage the modal view.
-- **Matrix Integration (2025):** Uses `bg-transparent` to allow Matrix rain to flow through gaps between cards.
-
-### d. Card Component & Modal
-
-**File:** `src/components/ItemCard/ItemCard.tsx`
-
-- Receives a single entity object (`item`) and the `expanded` boolean.
-- If `expanded` is false: Renders the small, collapsed grid card.
-- If `expanded` is true: Renders a full-screen, responsive modal overlay containing the detailed entity view with a large image and scrollable text.
-- **Matrix Transparency (2025):** Removed `bg-background` to prevent grey boxes blocking Matrix rain.
-- **Type:** `EnrichedEntity` (defined in `src/search/types.ts`)
-- Contains all top-level fields needed for display: `name`, `nation`, `role`, `slug`, `expandedView`, `image`, etc.
-- Uses the `useImageFallback` hook for robust image handling.
-
-### e. Background Effects & Layout
-
-**File:** `src/components/Layout.tsx`
-- Main application layout wrapper that includes the new Matrix Rain background.
-- Manages overall application structure and responsive behavior.
-
-### f. Enhanced Multi-Layered Filtering System (2025 Update)
-
-**File:** `src/pages/HomeContainer.tsx`
-- Implements the sequential filtering pipeline: Collections → Nations → Categories → Subcategories → Search
-- **Nation Filtering:** Uses partial string matching to handle full nation names ("Fire Nation", "Earth Kingdom") with single-word filter buttons ("fire", "earth")
-- **Core Filtering:** Maps filter names to entity types (characters → character, locations → location, groups → group)
-- **Sub-Filtering:** Applies comprehensive filtering with mapping system and multi-field coverage
-- **Sub-Filter Mapping:** Translates filter button terms to data values (e.g., "villains" → "antagonist", "heroes" → "protagonist", "deuteragonist", "mentor")
-- **Multi-Field Coverage:** Checks tags array, role field, narrativeFunction, and eraAppearances roles
-- **State Management:** Maintains active filter states using React hooks and Set objects
-- **Age Range Filtering:** Filters by ageRange field (child, teen, young adult, adult, elder) with animal exclusion logic
-- **Gender Filtering:** Filters by gender field with male/female symbols using React icons
-- **Bender Filtering:** Filters by isBender and bendingElement fields for bender/nonbender classification
-
-**File:** `src/components/Filters/FilterBar.tsx`
-- Renders the multi-layered filtering interface with Matrix-themed styling
-- **Nations:** Multi-select buttons for Fire, Water, Earth, Air nations using PNG images
-- **Nation Images:** Uses custom PNG images from `public/assets/images/` (air_nation.png, water_nation.png, earth_nation.png, fire_nation.png)
-- **Categories:** Single-select buttons for main entity types (Characters, Groups, Locations, Foods, Fauna, Spirits)
-- **Subcategories:** Dynamic multi-select buttons that appear when a category is selected
-- **Age Ranges:** Child, teen, young adult, adult, elder filters for characters
-- **Gender Filters:** Male/female filters with React icon symbols
-- **Bender Filters:** Bender/nonbender filters for character classification
-- **Responsive Design:** Uses flex-wrap layout for adaptive button arrangement
-
-**File:** `src/components/MatrixRain/MatrixRain.tsx` (NEW 2025)
-- Canvas-based Matrix digital rain effect with authentic movie-style characteristics.
-- **Authentic Characters:** Uses Japanese Katakana and binary characters for true Matrix aesthetic.
-- **True Randomness:** Every character is randomly generated each frame (not predetermined sequences).
-- **Performance Optimized:** 30fps animation with efficient Canvas rendering and hardware acceleration.
-- **Responsive Design:** Auto-calculates column count based on screen width.
-- **Progressive Fade:** Dual-layer rendering with optimized fade opacity to prevent background pollution.
-
-**File:** `src/components/ThemedCard/ThemedCard.tsx`
-- Styled wrapper that applies nation-specific border colors to cards.
-- **Glassmorphism Effects (2025):** Semi-transparent backgrounds with backdrop blur for depth.
-- **Matrix Glow on Hover:** CRT green glow effects using multiple box-shadow layers.
-- **Nation Border Enhancement:** Maintains nation-specific colors while adding Matrix green overlay.
-
----
-
-## 3. Data Schema Updates & Character Classification
-
-### Age Range Classification
-- **Child:** Characters like Toph (12 years old during main series)
-- **Teen:** Characters like Aang, Katara, Sokka, Zuko (12-17 years old)
-- **Young Adult:** Characters like Azula, Ty Lee, Mai (18-25 years old)
-- **Adult:** Characters like June, Iroh, Pakku (26-50 years old)
-- **Elder:** Characters like Hama, King Bumi, Monk Gyatso (50+ years old)
-- **Animal Exclusion:** Animals (bison, lemur, bear, animal, spirit) are excluded from age filters
-
-### Gender Classification
-- **Male:** Characters with gender: "male" field
-- **Female:** Characters with gender: "female" field
-- **Visual Indicators:** React icons (♂/♀) for clear visual distinction
-
-### Bender Classification
-- **Bender:** Characters with isBender: true and bendingElement field
-- **Nonbender:** Characters with isBender: false or missing bendingElement
-- **Comprehensive Coverage:** All characters now have proper bender classification
-
-### Data Pipeline Improvements (2025 Update)
-- **Identity Flattening:** Updated parsing script to flatten identity object fields
-- **Tag Dictionary:** Added missing tags like "the_waterbending_master" to tag dictionary
-- **Field Validation:** Ensured all characters have required fields for proper filtering
-- **Template Exclusion:** Automatic exclusion of template files from data processing
-- **Expanded View Processing:** Enhanced parsing of ```md blocks for expanded content
-- **Image Path Validation:** Verification that image paths match actual files
-- **JSON Syntax Validation:** Removal of trailing commas and syntax errors
-
-### New Data Types (2025 Update)
-
-#### Groups (`type: group`)
-- **Location:** `raw-data/groups/`
-- **Total:** 12 groups
-- **Features:** Organizational profiles with leadership, membership, and historical data
-- **Groups:** Dai Li, Order of the White Lotus, Team Avatar, Water Tribe Military, Fire Nation Military, Earth Kingdom Military, Si Wong Tribes, Kyoshi Warriors, Freedom Fighters, Yuyan Archers, Rough Rhinos, Southern Raiders
-- **UI Integration:** Dynamic type labels show "Group" instead of "Character"
-- **Filter Integration:** Groups appear when "Groups" filter is selected
-
-#### Foods (`type: food`)
-- **Location:** `raw-data/foods/`
-- **Features:** Culinary data with ingredients, cultural significance, and regional information
-
-#### Locations (`type: location`)
-- **Location:** `raw-data/locations/`
-- **Features:** Geographical and historical data with notable events and cultural significance
-
-#### Episodes (`type: episode`)
-- **Location:** `raw-data/episodes/`
-- **Features:** Narrative data with plot points, character focus, and thematic analysis
-
----
-
-## 4. Summary of File Involvement
-
-- **Data pipeline:** `docs/data pipeline.md`, scripts in `/scripts/` (`1-parse-markdown.mjs`, `2-enrich-data.mjs`).
-- **Type definitions:** `src/types/domainTypes.ts`, `src/search/types.ts`.
-- **Data fetching/state:** `src/pages/HomeContainer.tsx`, `src/hooks/useEnrichedData.ts`.
-- **Search Logic:** `src/hooks/useSearch.ts`, `src/search/preprocessor.ts`.
-- **Presentational:** `src/pages/Home.tsx`.
-- **Grid & Card:** `src/components/EntityGrid/EntityGrid.tsx`, `src/components/ItemCard/ItemCard.tsx`.
-- **Matrix Rain & Effects (2025):** `src/components/MatrixRain/MatrixRain.tsx`, `src/components/Layout.tsx`.
-- **Glassmorphism Styling:** `src/components/ThemedCard/ThemedCard.tsx`, `src/styles/custom.css`.
-- **Enhanced Filtering System (2025):** `src/components/Filters/FilterBar.tsx`, filtering logic in `src/pages/HomeContainer.tsx`.
-- **Collections System (2025):** `src/components/Collections/CollectionCardButton.tsx`, `src/components/Collections/AddToCollectionPopover.tsx`, `src/components/Collections/CreateCollectionModal.tsx`, `src/components/Collections/CollectionsSidebar.tsx`, `src/hooks/useCollections.ts`.
-- **Styling/utility:** `src/components/CustomMarkdownRenderer.tsx`, `src/components/NationIcon/NationIcon.tsx`, `src/utils/stringUtils.ts`.
-- **Navigation:** `src/utils/navigationUtils.ts` (smooth scrolling utility).
-
-**In short:**
-Data flows from `enriched-data.json` → fetched by `HomeContainer` (via `useEnrichedData`) → **filtered by the enhanced sequential filtering pipeline** (Collections → Nations → Categories → Subcategories → Age/Gender/Bender) → indexed and filtered by the `useSearch` hook in the browser → passed to `Home` → rendered as a grid in `EntityGrid` → each card is an `ItemCard` which can expand into a full-screen modal. **NEW (2025):** The entire interface is overlaid with an authentic Matrix digital rain effect that flows through transparent glassmorphism cards, creating a cohesive cyberpunk terminal aesthetic. **Enhanced Filtering:** Multi-layered filtering system with PNG nation images, partial string matching for nation filters, comprehensive sub-filter mapping, multi-field coverage for accurate character classification, age range filtering with animal exclusion, gender filtering with visual icons, and bender/nonbender classification. **Collections System:** Matrix-themed collection management with localStorage persistence and seamless UI integration. **New Data Types:** Support for groups, foods, locations, and episodes with dynamic type detection and proper filtering. **Navigation:** Smooth scrolling is enabled globally via CSS and programmatically via the `navigationUtils.ts` utility.
-
----
-
-## 5. Data Schema Adherence & Template Guidance
-
-- All data displayed in the frontend must originate from records in `public/enriched-data.json` that strictly follow the canonical schema described in `docs/data pipeline.md`.
-- The enrichment script (`2-enrich-data.mjs`) is responsible for "promoting" all necessary UI fields (e.g., image, role, nation) to the top level of each record.
-- **Character Classification:** All characters now have proper ageRange, gender, isBender, and bendingElement fields for comprehensive filtering.
-- **Data Validation:** Always validate new or edited markdown data by running `npm run build:data` and checking for errors before expecting changes in the UI.
-- **Tag Standards:** All tags must be single, underscore-joined words (e.g., "water_nation", "firebender", "main_villain").
-- **Template Exclusion:** Template files in `templates/` subdirectories are automatically excluded from processing.
-- **Expanded View Format:** Expanded view content must be wrapped in ```md code blocks for proper parsing.
-- **Image Path Validation:** All image paths must match actual files in `public/assets/images/`.
-- **JSON Syntax Compliance:** All JSON blocks must have valid syntax without trailing commas.
+*Last Updated: January 2025*  
+*Flow Diagrams: Mermaid.js*
 

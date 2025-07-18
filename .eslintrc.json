@@ -41,5 +41,19 @@
       }
     }
   ],
-  "ignorePatterns": ["dist/", "node_modules/"]
+  "ignorePatterns": [
+    "dist/", 
+    "node_modules/", 
+    "vite.config.ts",
+    "tailwind.config.js",
+    "postcss.config.cjs",
+    "jest.config.cjs",
+    "madge.config.js",
+    ".husky/",
+    "scripts/",
+    "public/",
+    "raw-data/",
+    "docs/",
+    "eslint-plugin-local/"
+  ]
 } 

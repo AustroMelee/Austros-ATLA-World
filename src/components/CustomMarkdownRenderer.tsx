@@ -8,11 +8,6 @@ interface CustomMarkdownRendererProps {
   markdown: string;
 }
 
-type MarkdownComponentProps = {
-  children: React.ReactNode;
-  [key: string]: unknown;
-};
-
 // Memoize icon components to prevent recreation
 const icons = {
   overview: <FaBookOpen className="inline-block align-middle text-blue-400 mr-2" size={18} />,
@@ -25,7 +20,7 @@ const icons = {
 export function CustomMarkdownRenderer({ markdown }: CustomMarkdownRendererProps) {
   // Memoize the components object to prevent recreation on every render
   const components = useMemo<Components>(() => ({
-    h3: ({ children, ...props }: MarkdownComponentProps) => {
+    h3: ({ children, ...props }) => {
       const text = String(children).toLowerCase();
       let icon = null;
       if (text.includes('overview')) icon = icons.overview;
@@ -41,21 +36,21 @@ export function CustomMarkdownRenderer({ markdown }: CustomMarkdownRendererProps
         </h3>
       );
     },
-    ul: ({ children, ...props }: MarkdownComponentProps) => (
+    ul: ({ children, ...props }) => (
       <ul className="list-disc pl-6 space-y-1 text-sm text-gray-200 border-t border-white/10 pt-4 mt-4" {...props}>
         {children}
       </ul>
     ),
-    li: ({ children, ...props }: MarkdownComponentProps) => (
+    li: ({ children, ...props }) => (
       <li className="leading-snug" {...props}>{children}</li>
     ),
-    strong: ({ children, ...props }: MarkdownComponentProps) => (
+    strong: ({ children, ...props }) => (
       <strong className="font-semibold text-white" {...props}>{children}</strong>
     ),
-    em: ({ children, ...props }: MarkdownComponentProps) => (
+    em: ({ children, ...props }) => (
       <em className="italic text-blue-300" {...props}>{children}</em>
     ),
-    p: ({ children, ...props }: MarkdownComponentProps) => (
+    p: ({ children, ...props }) => (
       <p className="mt-4 mb-2" {...props}>{children}</p>
     ),
   }), []); // Empty dependency array since these don't depend on props

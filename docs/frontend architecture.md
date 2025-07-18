@@ -1,5 +1,104 @@
 # 🏗️ Frontend Architecture & Logic (2025 January Update)
 
+## 📊 Component Hierarchy
+
+```mermaid
+graph TD
+    A[App.tsx] --> B[Layout.tsx]
+    B --> C[MatrixRain.tsx]
+    B --> D[HomeContainer.tsx]
+    
+    D --> E[Home.tsx]
+    E --> F[CollectionsSidebar.tsx]
+    E --> G[Main Content Area]
+    
+    G --> H[FilterBar.tsx]
+    G --> I[SearchBar.tsx]
+    G --> J[EntityGrid.tsx]
+    
+    F --> K[CreateCollectionModal.tsx]
+    F --> L[Collection Management]
+    
+    H --> M[Nation Filters]
+    H --> N[Core Filters]
+    H --> O[Sub-Filters]
+    
+    J --> P[ItemCard.tsx]
+    P --> Q[ItemCardCollapsed.tsx]
+    P --> R[ItemCardModal.tsx]
+    
+    Q --> S[CollectionCardButton.tsx]
+    Q --> T[AddToCollectionPopover.tsx]
+    
+    R --> U[CustomMarkdownRenderer.tsx]
+    R --> V[QuoteBlock.tsx]
+    R --> W[SectionBlock.tsx]
+    
+    X[useEnrichedData Hook] --> D
+    Y[useSearch Hook] --> D
+    Z[useFilters Hook] --> D
+    AA[useCollections Hook] --> D
+    BB[useCardExpansion Hook] --> D
+    
+    style A fill:#e1f5fe
+    style D fill:#fff3e0
+    style J fill:#f3e5f5
+    style P fill:#ffebee
+    style C fill:#fce4ec
+```
+
+## 🔧 Hook Dependencies
+
+```mermaid
+graph LR
+    A[enriched-data.json] --> B[useEnrichedData]
+    B --> C[useSearch]
+    B --> D[useFilters]
+    B --> E[useCollections]
+    
+    F[Search Input] --> G[useDebounce]
+    G --> C
+    
+    H[Filter Controls] --> D
+    I[Collection Actions] --> E
+    
+    J[Card Expansion] --> K[useCardExpansion]
+    L[Image Loading] --> M[useImageFallback]
+    
+    style A fill:#c8e6c9
+    style B fill:#fff3e0
+    style C fill:#e3f2fd
+    style D fill:#e3f2fd
+    style E fill:#e8f5e8
+```
+
+## 🎯 Data Flow Architecture
+
+```mermaid
+graph TD
+    A[HomeContainer] --> B[State Management]
+    B --> C[Filter Pipeline]
+    B --> D[Search Pipeline]
+    B --> E[Collections Pipeline]
+    
+    C --> F[Filtered Results]
+    D --> G[Searched Results]
+    E --> H[Collection Results]
+    
+    F --> I[EntityGrid]
+    G --> I
+    H --> I
+    
+    I --> J[ItemCard Components]
+    
+    K[User Interactions] --> L[State Updates]
+    L --> M[UI Re-renders]
+    
+    style A fill:#fff3e0
+    style I fill:#f3e5f5
+    style J fill:#ffebee
+```
+
 ---
 
 ## 1. HomeContainer.tsx: The Central Orchestrator

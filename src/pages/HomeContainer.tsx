@@ -148,7 +148,7 @@ export function HomeContainer() {
         
         // Check bender/nonbender status
         if (mappedTerms.includes('bender') || mappedTerms.includes('nonbender')) {
-          const isBender = item.metadata?.isBender === true;
+          const isBender = Boolean(item.metadata?.isBender);
           const hasBendingElement = item.metadata?.bendingElement !== null && item.metadata?.bendingElement !== undefined;
           
           if (mappedTerms.includes('bender') && (isBender || hasBendingElement)) {

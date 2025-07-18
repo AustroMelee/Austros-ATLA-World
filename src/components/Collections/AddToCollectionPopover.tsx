@@ -7,9 +7,10 @@ interface Props {
   addCard: (collectionId: string, cardId: string) => void;
   removeCard: (collectionId: string, cardId: string) => void;
   onCreateNew: () => void;
+  onClose: () => void;
 }
 
-export default function AddToCollectionPopover({ collections, cardId, addCard, removeCard, onCreateNew }: Props) {
+export default function AddToCollectionPopover({ collections, cardId, addCard, removeCard, onCreateNew, onClose: _onClose }: Props) {
   return (
     <div 
       className="absolute top-10 right-2 w-48 bg-black/80 backdrop-blur-sm border border-[#70ab6c]/20 rounded shadow-lg p-2 z-20 text-sm text-[#c8ffc8] crt-screen"

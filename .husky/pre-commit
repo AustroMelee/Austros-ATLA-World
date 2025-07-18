@@ -1,0 +1,204 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 NASA-Level Pre-Commit Quality Gates"
+echo "======================================"
+
+# 1. Data Pipeline Validation
+echo "📊 Validating data pipeline..."
+npm run validate:data
+if [ $? -ne 0 ]; then
+    echo "❌ Data validation failed. Please fix data issues before committing."
+    exit 1
+fi
+
+# 2. TypeScript Type Checking
+echo "🔍 Running TypeScript type check..."
+npm run type-check
+if [ $? -ne 0 ]; then
+    echo "❌ TypeScript errors found. Please fix type issues before committing."
+    exit 1
+fi
+
+# 3. ESLint Linting
+echo "🧹 Running ESLint..."
+npm run lint
+if [ $? -ne 0 ]; then
+    echo "❌ ESLint errors found. Please fix linting issues before committing."
+    exit 1
+fi
+
+# 4. Tailwind CSS Build
+echo "🎨 Building Tailwind CSS..."
+npm run build:tailwind:once
+if [ $? -ne 0 ]; then
+    echo "❌ Tailwind build failed. Please fix CSS issues before committing."
+    exit 1
+fi
+
+# 5. Data Pipeline Build
+echo "🔄 Building data pipeline..."
+npm run build:data
+if [ $? -ne 0 ]; then
+    echo "❌ Data pipeline build failed. Please fix data issues before committing."
+    exit 1
+fi
+
+# 6. Check for Orphaned Files (Non-Negotiable Rule)
+echo "🔗 Checking for orphaned files..."
+node -e "
+const fs = require('fs');
+const path = require('path');
+
+// Files that are allowed to be unconnected
+const allowedUnconnected = [
+  'README.md',
+  'package.json',
+  'package-lock.json',
+  'tsconfig.json',
+  'vite.config.ts',
+  'tailwind.config.js',
+  'postcss.config.cjs',
+  'jest.config.cjs',
+  'madge.config.js',
+  '.eslintrc.cjs',
+  '.gitignore',
+  '.markdownlint.json',
+  'index.html',
+  'favicon.ico'
+];
+
+// Directories to exclude
+const excludeDirs = [
+  'node_modules',
+  '.git',
+  'dist',
+  'build',
+  'coverage',
+  'docs',
+  'tests',
+  'test',
+  '__tests__',
+  'raw-data',
+  'scripts',
+  'public/assets',
+  'public/noise',
+  'src/data',
+  'src/sandbox',
+  'eslint-plugin-local',
+  'planned features',
+  'bugs'
+];
+
+// Files to exclude
+const excludeFiles = [
+  'enriched-data.json',
+  'parsed-data.json',
+  'generated-tailwind.css',
+  'pure-tailwind.css',
+  'custom.css',
+  'tailwind.css'
+];
+
+function isExcluded(filePath) {
+  const relativePath = path.relative('.', filePath);
+  
+  // Check if file is in excluded directories
+  for (const excludeDir of excludeDirs) {
+    if (relativePath.startsWith(excludeDir + '/') || relativePath === excludeDir) {
+      return true;
+    }
+  }
+  
+  // Check if file is in allowed unconnected list
+  if (allowedUnconnected.includes(path.basename(filePath))) {
+    return true;
+  }
+  
+  // Check if file is in exclude files list
+  if (excludeFiles.includes(path.basename(filePath))) {
+    return true;
+  }
+  
+  return false;
+}
+
+function findUnconnectedFiles(dir, unconnected = []) {
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      if (!isExcluded(fullPath)) {
+        findUnconnectedFiles(fullPath, unconnected);
+      }
+    } else {
+      if (!isExcluded(fullPath)) {
+        unconnected.push(fullPath);
+      }
+    }
+  }
+  
+  return unconnected;
+}
+
+// Get all files that should be connected
+const allFiles = findUnconnectedFiles('.');
+const srcFiles = allFiles.filter(file => file.startsWith('src/') && (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js') || file.endsWith('.jsx')));
+
+// Check if any source files are not imported anywhere
+const orphanedFiles = [];
+for (const file of srcFiles) {
+  const relativePath = path.relative('.', file);
+  const importPath = relativePath.replace(/\\/g, '/').replace(/\.(ts|tsx|js|jsx)$/, '');
+  
+  // Check if this file is imported anywhere
+  let isImported = false;
+  
+  for (const otherFile of srcFiles) {
+    if (otherFile !== file) {
+      try {
+        const content = fs.readFileSync(otherFile, 'utf8');
+        // Check for various import patterns
+        if (content.includes(\`from '\${importPath}'\`) || 
+            content.includes(\`from \".\${importPath}\"\`) ||
+            content.includes(\`import '\${importPath}'\`) ||
+            content.includes(\`import \".\${importPath}\"\`) ||
+            content.includes(\`require('\${importPath}')\`) ||
+            content.includes(\`require(\".\${importPath}\")\`)) {
+          isImported = true;
+          break;
+        }
+      } catch (err) {
+        // Ignore read errors
+      }
+    }
+  }
+  
+  if (!isImported) {
+    orphanedFiles.push(relativePath);
+  }
+}
+
+if (orphanedFiles.length > 0) {
+  console.log('❌ Orphaned files found (violates Non-Negotiable Rule):');
+  orphanedFiles.forEach(file => console.log(\`  - \${file}\`));
+  console.log('\\nPlease either:');
+  console.log('1. Import these files somewhere in the codebase');
+  console.log('2. Move them to an excluded directory (docs/, tests/, etc.)');
+  console.log('3. Delete them if they are no longer needed');
+  process.exit(1);
+} else {
+  console.log('✅ All files are properly connected!');
+}
+"
+
+if [ $? -ne 0 ]; then
+    echo "❌ Orphaned files found. Please fix the Non-Negotiable Rule violations before committing."
+    exit 1
+fi
+
+echo "✅ All quality gates passed! Ready for commit."
+echo "🚀 NASA-level automation complete."

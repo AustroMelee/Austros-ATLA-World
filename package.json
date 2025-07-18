@@ -5,22 +5,40 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src --max-warnings=0",
-    "lint:fix": "eslint src --fix --max-warnings=0",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
     "test": "jest",
     "type-check": "tsc --noEmit",
     "parse:characters": "node scripts/parse-character-md.mjs",
     "validate:data": "node scripts/validate-data.mjs",
-    "enrich:data": "node scripts/enrich-data.mjs",
-    "build:index": "node scripts/build-index.mjs",
+    "enrich:data": "node scripts/2-enrich-data.mjs",
+    "build:index": "echo 'Index building handled by FlexSearch at runtime'",
     "build:data:parse": "node scripts/1-parse-markdown.mjs",
     "build:data:enrich": "node scripts/2-enrich-data.mjs",
     "build:data:index": "node scripts/3-build-index.mjs",
-    "build:data": "npm run build:data:parse && npm run build:data:enrich",
+    "build:data": "npm run validate:data && npm run enrich:data && npm run build:index",
     "lint:md": "markdownlint --config .markdownlint.json \"**/*.md\"",
-    "build:tailwind": "tailwindcss -i ./src/styles/pure-tailwind.css -o ./src/styles/generated-tailwind.css"
+    "build:tailwind": "tailwindcss -i ./src/styles/custom.css -o ./src/styles/generated-tailwind.css --watch",
+    "build:tailwind:once": "tailwindcss -i ./src/styles/custom.css -o ./src/styles/generated-tailwind.css",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx,mjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx,js,jsx,mjs}": [
+      "npm run type-check"
+    ]
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
@@ -38,11 +56,13 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.1.7",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
+    "lint-staged": "^16.1.2",
     "madge": "^8.0.0",
     "markdownlint-cli": "^0.39.0",
-    "prettier": "^3.2.5",
+    "prettier": "^3.6.2",
     "tailwindcss": "^3.4.3",
     "ts-jest": "^29.4.0",
     "typescript": "^5.8.3",
