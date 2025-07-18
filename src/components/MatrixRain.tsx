@@ -63,16 +63,54 @@ const MatrixRain: React.FC = () => {
       }
     };
 
-    const intervalId = setInterval(draw, 33);
+    // Use requestAnimationFrame for smoother animation
+    const fps = 30;
+    const frameInterval = 1000 / fps;
+    let lastTime = 0;
+    let animationFrameId: number;
+
+    const render = (time: number) => {
+      if (time - lastTime >= frameInterval) {
+        draw();
+        lastTime = time;
+      }
+      animationFrameId = requestAnimationFrame(render);
+    };
+
+    const start = () => {
+      if (!animationFrameId) {
+        animationFrameId = requestAnimationFrame(render);
+      }
+    };
+
+    const stop = () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = 0;
+      }
+    };
+
+    start();
 
     const handleResize = () => {
       initializeCanvas();
     };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        stop();
+      } else {
+        start();
+      }
+    };
+
     window.addEventListener('resize', handleResize);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
-      clearInterval(intervalId);
+      stop();
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
 
   }, []);
