@@ -68,7 +68,7 @@ export function HomeContainer() {
   }
 
   if (activeCoreFilter) {
-    const typeMap: Record<string, string> = { characters: 'character', locations: 'location', fauna: 'fauna', foods: 'food', bending: 'bending', spirits: 'spirit-world' };
+    const typeMap: Record<string, string> = { characters: 'character', locations: 'location', fauna: 'fauna', foods: 'food', groups: 'group', spirits: 'spirit-world' };
     const targetType = typeMap[activeCoreFilter];
     if (targetType) itemsToFilter = itemsToFilter.filter(item => item.type === targetType);
   }

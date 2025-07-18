@@ -10,7 +10,6 @@ interface Props {
 }
 
 export default function CollectionsSidebar({ collections, activeId, onActivate, createCollection }: Props) {
-  const [newName, setNewName] = useState('');
   const [showCreateModal, setShowCreateModal] = useState(false);
 
   return (
@@ -46,11 +45,12 @@ export default function CollectionsSidebar({ collections, activeId, onActivate, 
       </button>
       {showCreateModal && (
         <CreateCollectionModal
-          onSubmit={(name) => {
+          isOpen={showCreateModal}
+          onClose={() => setShowCreateModal(false)}
+          onCreate={(name: string) => {
             createCollection(name);
             setShowCreateModal(false);
           }}
-          onCancel={() => setShowCreateModal(false)}
         />
       )}
     </aside>

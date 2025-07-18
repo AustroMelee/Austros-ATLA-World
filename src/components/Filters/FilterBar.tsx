@@ -25,7 +25,7 @@ export default function FilterBar({
     { key: 'earth', image: '/assets/images/earth_nation.png', color: '#34D399', glow: '#34D39950' },
     { key: 'fire', image: '/assets/images/fire_nation.png', color: '#F87171', glow: '#F8717150' }
   ];
-  const coreFilters = ['characters', 'foods', 'locations', 'bending', 'fauna', 'spirits'];
+  const coreFilters = ['characters', 'foods', 'locations', 'groups', 'fauna', 'spirits'];
 
   return (
     <div className="w-full max-w-4xl mb-6 flex flex-col items-center">

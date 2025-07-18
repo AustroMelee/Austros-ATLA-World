@@ -1,4 +1,4 @@
-# 🏗️ Frontend Architecture & Logic (2025 Matrix Update)
+# 🏗️ Frontend Architecture & Logic (2025 January Update)
 
 ---
 
@@ -10,6 +10,7 @@
 - **Collections:** Uses the `useCollections` hook to create, store, and filter collections via `localStorage`.
 - **Enhanced Filtering:** Manages comprehensive filtering state including nations, categories, subcategories, age ranges, gender, and bender classification.
 - **Sequential Pipeline:** Implements the filtering pipeline: Collections → Nations → Categories → Subcategories → Age/Gender/Bender → Search.
+- **NEW (2025):** Template exclusion system prevents template files from being processed as data.
 
 ---
 
@@ -35,9 +36,10 @@
 - **Visual Effects:** Glowing terminal indicators with Matrix-themed styling
 
 **Core Filtering:**
-- **Categories:** Characters, foods, locations, bending, fauna, spirits
+- **Categories:** Characters, Groups, Locations, Foods, Fauna, Spirits
 - **Single-Select:** Only one category can be active at a time
 - **Sharp Terminal Keys:** Matrix-themed button styling with glassmorphism effects
+- **NEW (2025):** Groups filter replaces the old 'bending' filter
 
 **Sub-Filtering:**
 - **Dynamic Options:** Sub-filters appear only when a core filter is selected
@@ -57,7 +59,7 @@
 **Sequential Pipeline:**
 1. **Collections Filter:** Filter by selected collection IDs
 2. **Nation Filter:** Filter by nation using partial string matching
-3. **Category Filter:** Filter by entity type (character, location, etc.)
+3. **Category Filter:** Filter by entity type (character, location, group, etc.)
 4. **Sub-Filter:** Apply comprehensive sub-filtering with mapping
 5. **Search:** Apply text search to filtered results
 
@@ -127,9 +129,21 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **Responsive Images:** Adapts to different screen sizes
 - **Loading States:** Graceful handling of image loading and errors
 
+### ItemCardCollapsed Component (Updated 2025)
+
+**Dynamic Type Labels:**
+- **Enhancement:** Dynamic type detection instead of hardcoded "Character"
+- **Logic:** Displays "Group", "Location", "Food", "Fauna", "Spirit", or "Character" based on item type
+- **Accessibility:** Updated aria-label from "Character details" to "Item details"
+
+**Collections Integration:**
+- **Collection Button:** Matrix-themed button in top-right corner
+- **Visual States:** Different icons for in/out of collection states
+- **Hover Effects:** CRT green glow effects matching the theme
+
 ---
 
-## 6. Collections System
+## 6. Collections System (2025 Update)
 
 ### CollectionsSidebar Component (`src/components/Collections/CollectionsSidebar.tsx`)
 
@@ -140,9 +154,26 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 **Collection Management:**
 - **Create Collections:** Modal interface for creating new collections
-- **Add/Remove Cards:** Drag-and-drop or button-based card management
+- **Add/Remove Cards:** Button-based card management with popover interface
 - **Collection Filtering:** Filter entire dataset by collection membership
 - **Visual Feedback:** Clear indication of active collection
+
+### Collection Components
+
+**CollectionCardButton:**
+- **Matrix Styling:** CRT green glow effects with backdrop blur
+- **Visual States:** Plus icon for add, checkmark for in collection
+- **Positioning:** Top-right corner of each card
+
+**AddToCollectionPopover:**
+- **Dropdown Interface:** Shows all collections with checkboxes
+- **Create New:** Option to create new collection
+- **Matrix Theme:** Semi-transparent background with CRT styling
+
+**CreateCollectionModal:**
+- **Modal Interface:** Clean form for collection creation
+- **Validation:** Ensures unique collection names
+- **Matrix Styling:** Consistent with overall theme
 
 ---
 
@@ -163,7 +194,34 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 8. Styling Architecture
+## 8. Data Pipeline Integration (2025 Update)
+
+### Template Exclusion System
+- **Parser Enhancement:** Automatic exclusion of files in `templates/` subdirectories
+- **Implementation:** Added filter in `scripts/1-parse-markdown.mjs`
+- **Pattern:** `!/[/\\\\]templates[/\\\\]/.test(p)`
+- **Benefit:** Prevents template files from being processed as real data
+
+### Expanded View Processing
+- **Format Requirement:** Content must be wrapped in ```md code blocks
+- **Parser Logic:** Extracts content between ```md and ``` markers
+- **Debug Logging:** Shows `[DEBUG] Found Expanded View block: true/false`
+- **Issue Resolution:** Fixed double ```md blocks in group files
+
+### Image Path Validation
+- **Requirement:** Image paths must match actual files in `public/assets/images/`
+- **Validation:** All image paths verified during processing
+- **Fixes Applied:** Corrected paths for Order of the White Lotus, Si Wong Tribes, Water Tribe Military
+
+### JSON Syntax Validation
+- **Requirement:** All JSON blocks must have valid syntax
+- **Common Issues:** Trailing commas in arrays and objects
+- **Validation:** Parser checks for JSON syntax errors and reports them
+- **Fixes Applied:** Removed trailing commas from all group files
+
+---
+
+## 9. Styling Architecture
 
 ### Tailwind CSS Integration
 - **Utility-First:** All styling done through Tailwind classes
@@ -179,7 +237,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 9. Performance Optimizations
+## 10. Performance Optimizations
 
 ### React Optimizations
 - **Memoization:** `useMemo` and `useCallback` for expensive operations
@@ -195,7 +253,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 10. Accessibility & Responsive Design
+## 11. Accessibility & Responsive Design
 
 ### Accessibility Features
 - **ARIA Labels:** All interactive elements properly labeled
@@ -213,11 +271,15 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ## Summary
 
-The frontend architecture provides a robust, performant, and accessible foundation for the Austros ATLA World encyclopedia. The 2025 update introduces:
+The frontend architecture provides a robust, performant, and accessible foundation for the Austros ATLA World encyclopedia. The 2025 January update introduces:
 
 - **Enhanced Multi-Layered Filtering:** Comprehensive filtering with PNG nation images, age ranges, gender, and bender classification
 - **Matrix Rain Integration:** Authentic background effects with adaptive performance
 - **Glassmorphism UI:** Modern visual effects with depth and transparency
+- **Collections System:** Matrix-themed collection management with localStorage persistence
+- **New Data Types:** Support for groups, foods, locations, and episodes with dynamic type detection
+- **Template Exclusion:** Automatic exclusion of template files from data processing
+- **Enhanced Data Validation:** Image path validation, JSON syntax checking, and expanded view processing
 - **Responsive Design:** Works seamlessly across all devices
 - **Accessibility Compliance:** Inclusive user experience for all users
 

@@ -148,7 +148,14 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
                   />
                 )}
               </div>
-              <p className="text-[12px] text-neutral-400 font-bold mt-1">Character</p>
+              <p className="text-[12px] text-neutral-400 font-bold mt-1">
+                {item.type === 'group' ? 'Group' : 
+                 item.type === 'location' ? 'Location' : 
+                 item.type === 'food' ? 'Food' : 
+                 item.type === 'fauna' ? 'Fauna' : 
+                 item.type === 'spirit-world' ? 'Spirit' : 
+                 'Character'}
+              </p>
             </div>
           </div>
         </ThemedCard>

@@ -1,4 +1,4 @@
-# ⚙️ Data Pipeline Workflow (2024 Refactor)
+# ⚙️ Data Pipeline Workflow (2025 January Update)
 
 The project uses a robust, two-stage pipeline to transform raw markdown data into a single, client-ready JSON file. All search indexing is now performed client-side for maximum reliability and transparency.
 
@@ -38,6 +38,37 @@ are promoted to the top level and indexed alongside regular tags.
   - `## UI - CARD VIEW` block (summary fields)
   - `## UI - EXPANDED VIEW` block (detailed markdown)
 
+### Template Exclusion System (2025 Update)
+
+- **Automatic Exclusion:** Files in `templates/` subdirectories are automatically excluded from processing
+- **Implementation:** Added filter in `scripts/1-parse-markdown.mjs` using pattern `!/[/\\\\]templates[/\\\\]/.test(p)`
+- **Benefit:** Prevents template files from being parsed as real data entries
+- **Pattern:** Any file path containing `/templates/` or `\templates\` is skipped
+
+### Expanded View Processing (2025 Update)
+
+- **Format Requirement:** Expanded view content must be wrapped in ```md code blocks
+- **Parser Logic:** Extracts content between ```md and ``` markers
+- **Validation:** Debug logging shows `[DEBUG] Found Expanded View block: true/false`
+- **Common Issues:** Double ```md blocks prevent content from being parsed correctly
+- **Fix Applied:** Removed duplicate ```md markers from all group files
+
+### Image Path Validation (2025 Update)
+
+- **Requirement:** Image paths in JSON metadata must match actual filenames in `public/assets/images/`
+- **Validation:** All image paths verified against actual files during processing
+- **Common Issues:** Mismatched filenames (e.g., `order-of-the-white-lotus.jpg` vs `order-of-the-white-lotus.jpg`)
+- **Fixes Applied:** Corrected image paths for Order of the White Lotus, Si Wong Tribes, and Water Tribe Military
+- **Pattern:** `"image": "exact-filename.jpg"` must match actual file in assets directory
+
+### JSON Syntax Validation (2025 Update)
+
+- **Requirement:** All JSON blocks must have valid syntax
+- **Common Issues:** Trailing commas in arrays and objects
+- **Validation:** Parser checks for JSON syntax errors and reports them
+- **Fixes Applied:** Removed trailing commas from all group files
+- **Pattern:** No trailing commas in arrays `["item1", "item2"]` or objects `{"key": "value"}`
+
 ---
 
 ## 2. The Automated Scripts & Data Flow
@@ -45,6 +76,9 @@ are promoted to the top level and indexed alongside regular tags.
 ### Stage 1: Parse Markdown (`scripts/1-parse-markdown.mjs`)
 - Reads YAML frontmatter, UI blocks, and all JSON blocks.
 - Merges all data into a single object per file.
+- **NEW (2025):** Automatically excludes template files using path filtering
+- **NEW (2025):** Enhanced expanded view parsing with proper ```md block detection
+- **NEW (2025):** JSON syntax validation with error reporting
 
 ### Stage 2: Enrich Data (`scripts/2-enrich-data.mjs`)
 - Promotes UI-critical fields (e.g., image, role, nation) to the top level of each record.
@@ -69,11 +103,27 @@ are promoted to the top level and indexed alongside regular tags.
 3. **Check for Errors:** Watch the terminal for parsing/enrichment errors.
 4. **Refresh the UI:** Hard refresh your browser to see changes.
 
+### Validation Checklist (2025 Update)
+
+Before running `npm run build:data`, ensure:
+- [ ] All JSON blocks have valid syntax (no trailing commas)
+- [ ] Image paths match actual files in `public/assets/images/`
+- [ ] Expanded view content is wrapped in ```md blocks
+- [ ] Template files are in `templates/` subdirectories
+- [ ] All tags are single, underscore-joined words
+
 ---
 
 ## 4. Canonical Templates & Schema
 
 See `docs/templates/character_template.md` for the full, up-to-date schema and required fields for all data types.
+
+### New Template Types (2025 Update)
+
+- **Group Template:** `raw-data/groups/templates/group_template.md`
+- **Food Template:** `raw-data/foods/templates/food_template.md`
+- **Location Template:** `raw-data/locations/templates/location_template.md`
+- **Episode Template:** `raw-data/episodes/templates/episode_template.md`
 
 ---
 
@@ -81,6 +131,7 @@ See `docs/templates/character_template.md` for the full, up-to-date schema and r
 - The only data file used by the frontend is `public/enriched-data.json`.
 - All search and filtering is performed client-side, in-browser, using FlexSearch.
 - The pipeline is strictly two-stage and robust, transparent, and easy to debug.
+- **NEW (2025):** Template exclusion, enhanced expanded view processing, image path validation, and JSON syntax validation.
 
 ## Performance Considerations
 

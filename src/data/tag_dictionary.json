@@ -6725,5 +6725,306 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "earthbending": {
+    "displayName": "Earthbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "firebending": {
+    "displayName": "Firebending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "waterbending": {
+    "displayName": "Waterbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "airbending": {
+    "displayName": "Airbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "secret_police": {
+    "displayName": "Secret Police",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "antagonists": {
+    "displayName": "Antagonists",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "elite": {
+    "displayName": "Elite",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "military": {
+    "displayName": "Military",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "army": {
+    "displayName": "Army",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "navy": {
+    "displayName": "Navy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "air_force": {
+    "displayName": "Air Force",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "fire_nation": {
+    "displayName": "Fire Nation",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earth_kingdom": {
+    "displayName": "Earth Kingdom",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "water_tribe": {
+    "displayName": "Water Tribe",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "rebels": {
+    "displayName": "Rebels",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "resistance": {
+    "displayName": "Resistance",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "guerrilla_warfare": {
+    "displayName": "Guerrilla Warfare",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "warriors": {
+    "displayName": "Warriors",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "non-benders": {
+    "displayName": "Non-Benders",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "kyoshi_island": {
+    "displayName": "Kyoshi Island",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "allies": {
+    "displayName": "Allies",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "female_fighters": {
+    "displayName": "Female Fighters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nonbenders": {
+    "displayName": "Nonbenders",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "secret_society": {
+    "displayName": "Secret Society",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "philosophy": {
+    "displayName": "Philosophy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "masters": {
+    "displayName": "Masters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "pai_sho": {
+    "displayName": "Pai Sho",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "neutral": {
+    "displayName": "Neutral",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "ancient": {
+    "displayName": "Ancient",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cavalry": {
+    "displayName": "Cavalry",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "komodo_rhino": {
+    "displayName": "Komodo Rhino",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tribe": {
+    "displayName": "Tribe",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "sandbenders": {
+    "displayName": "Sandbenders",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "desert": {
+    "displayName": "Desert",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nomads": {
+    "displayName": "Nomads",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "special_forces": {
+    "displayName": "Special Forces",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "navy": {
+    "displayName": "Navy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "protagonists": {
+    "displayName": "Protagonists",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "main_characters": {
+    "displayName": "Main Characters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "four_nations": {
+    "displayName": "Four Nations",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "heroes": {
+    "displayName": "Heroes",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "avatar_aang": {
+    "displayName": "Avatar Aang",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "archers": {
+    "displayName": "Archers",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
   }
 }

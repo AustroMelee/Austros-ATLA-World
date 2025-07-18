@@ -15,7 +15,6 @@ export interface UseCollectionsReturn {
 export function useCollections(): UseCollectionsReturn {
   const [collections, setCollections] = useState<Collection[]>([]);
 
-  // Load from localStorage only on the initial mount
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -23,49 +22,42 @@ export function useCollections(): UseCollectionsReturn {
     } catch (err) { console.error('Failed to load collections', err); }
   }, []);
 
-  // Persist to localStorage whenever collections state changes
-  useEffect(() => {
+  const persist = useCallback((cols: Collection[]) => {
+    setCollections(cols);
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(collections));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(cols));
     } catch (err) { console.error('Failed to save collections', err); }
-  }, [collections]);
+  }, []);
 
   const createCollection = useCallback((name: string, initialCardId?: string) => {
     const trimmed = name.trim();
-    if (!trimmed) return;
-    
-    // Use functional update form to get the latest state
-    setCollections(prevCollections => {
-      if (prevCollections.some(c => c.name.toLowerCase() === trimmed.toLowerCase())) {
-        return prevCollections; // Abort if name exists
-      }
-      const newCol: Collection = {
-        id: `c${Date.now().toString(36)}`,
-        name: trimmed,
-        createdAt: new Date().toISOString(),
-        cardIds: initialCardId ? [initialCardId] : [],
-      };
-      return [...prevCollections, newCol];
-    });
-  }, []);
+    if (!trimmed || collections.some(c => c.name.toLowerCase() === trimmed.toLowerCase())) return;
+    const newCol: Collection = {
+      id: `c${Date.now().toString(36)}`,
+      name: trimmed,
+      createdAt: new Date().toISOString(),
+      cardIds: initialCardId ? [initialCardId] : [],
+    };
+    persist([...collections, newCol]);
+  }, [collections, persist]);
 
-  const addCardToCollection = useCallback((collectionId: string, cardId:string) => {
-    // Use functional update form
-    setCollections(prevCollections => prevCollections.map(c => 
+  const addCardToCollection = useCallback((collectionId: string, cardId: string) => {
+    const updated = collections.map(c => 
       c.id === collectionId && !c.cardIds.includes(cardId) 
         ? { ...c, cardIds: [...c.cardIds, cardId] } 
         : c
-    ));
-  }, []);
+    );
+    persist(updated);
+  }, [collections, persist]);
 
   const removeCardFromCollection = useCallback((collectionId: string, cardId: string) => {
-    // Use functional update form
-    setCollections(prevCollections => prevCollections.map(c => 
+    const updated = collections.map(c => 
       c.id === collectionId 
         ? { ...c, cardIds: c.cardIds.filter(cid => cid !== cardId) } 
         : c
-    ));
-  }, []);
+    );
+    persist(updated);
+  }, [collections, persist]);
   
   const getCollectionsForCard = useCallback((cardId: string) => 
     collections.filter(c => c.cardIds.includes(cardId)), [collections]);

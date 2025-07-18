@@ -150,6 +150,36 @@ export type EnrichedSpiritWorld = {
   relations?: string[];
 };
 
+export type EnrichedGroup = {
+  __type: 'group';
+  id: string;
+  name: string;
+  description: string;
+  slug: string;
+  groupType?: string | null;
+  affiliation?: string | null;
+  ideology?: string | null;
+  baseOfOperations?: string | null;
+  foundingDate?: string | null;
+  dissolutionDate?: string | null;
+  leadership?: string[];
+  membership?: string[];
+  notableMembers?: string[];
+  size?: number | null;
+  image?: string | null;
+  synonyms?: string[];
+  tags?: string[];
+  relations?: string[];
+  notableEvents?: string[];
+  alliances?: string[];
+  rivals?: string[];
+  relatedLocations?: string[];
+  historicalMilestones?: string[];
+  roleInNarrative?: string[];
+  politicalInfluence?: string[];
+  militaryCapabilities?: string[];
+};
+
 export interface Collection {
   id: string;
   name: string;
@@ -164,5 +194,6 @@ export type EnrichedRecord =
   | EnrichedCharacter
   | EnrichedFauna
   | EnrichedFood
+  | EnrichedGroup
   | EnrichedLocation
   | EnrichedSpiritWorld;

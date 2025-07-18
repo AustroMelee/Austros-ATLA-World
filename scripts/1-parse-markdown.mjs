@@ -52,8 +52,8 @@ async function parseMarkdownFile(filePath) {
       return null;
     }
     
-    if (frontmatter.type !== 'character') {
-      console.log(`[INFO]    Skipping ${filePath}: Type is "${frontmatter.type}", not "character".`);
+    if (!['character', 'group'].includes(frontmatter.type)) {
+      console.log(`[INFO]    Skipping ${filePath}: Type is "${frontmatter.type}", not supported.`);
       return null;
     }
 
@@ -93,7 +93,7 @@ async function parseMarkdownFile(filePath) {
 
     const mergedData = Object.assign({}, cardViewData, ...jsonBlocks, {
       expandedView: expandedViewMatch ? expandedViewMatch[1].trim() : '',
-      __type: 'character',
+      __type: frontmatter.type,
     });
 
     // --- FIX: FLATTEN NESTED METADATA ---
@@ -125,7 +125,7 @@ async function parseMarkdownFile(filePath) {
        console.log(`[FAIL]    Skipping ${filePath}: Final merged data is missing required 'id' or 'slug'.`);
        return null;
     }
-    console.log(`[SUCCESS] Parsed character: ${mergedData.id} from ${filePath}`);
+    console.log(`[SUCCESS] Parsed ${frontmatter.type}: ${mergedData.id} from ${filePath}`);
     return mergedData;
 
   } catch (error) {
@@ -139,7 +139,9 @@ async function main() {
   try {
     await fs.mkdir(DATA_DIR, { recursive: true });
 
-    const mdFilePaths = await findMarkdownFilesRecursive(RAW_DATA_DIR);
+    const mdFilePaths = (await findMarkdownFilesRecursive(RAW_DATA_DIR))
+      // Skip any files in a 'templates' subdirectory
+      .filter(p => !/[/\\]templates[/\\]/.test(p));
     console.log(`\n--- File Discovery Phase ---`);
     console.log(`Found ${mdFilePaths.length} markdown files to process:`);
     console.log(mdFilePaths.join('\n'));

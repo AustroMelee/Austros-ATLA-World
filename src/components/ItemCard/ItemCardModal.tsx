@@ -65,7 +65,7 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
       <div
         className="relative w-11/12 max-w-2xl h-[90vh] overflow-hidden rounded-lg z-10"
         role="document"
-        aria-label="Character details"
+        aria-label="Item details"
       >
         <button
           onClick={onClose}
