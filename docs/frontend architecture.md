@@ -34,6 +34,22 @@ The frontend is organized around a clear separation of concerns, with a central 
 
 ---
 
+## 3a. Enhanced Search Bar (SearchBar.tsx) - 2025 Update
+
+- **Terminal Aesthetic:** Provides an authentic CRT terminal experience with custom Glass_TTY_VT220 font
+- **Typography:** Uses 28px font size for enhanced readability with reduced padding (`py-2`) for compact appearance
+- **Custom Cursor:** Features a blinking green block cursor positioned 4px after text for authentic terminal feel
+- **CRT Effects:** Includes comprehensive CRT styling with glow effects, border effects, and scan-line dithering
+- **User Experience Enhancements:**
+  - **Disabled Spell Check:** `spellCheck={false}` prevents browser underlining on character names
+  - **Custom Text Selection:** CRT green background with black text instead of default blue highlighting
+  - **Removed Clear Button:** Cleaner interface without X/clear button for authentic terminal appearance
+  - **Hidden Native Caret:** Uses `caretColor: 'transparent'` to show only the custom block cursor
+- **Accessibility:** Maintains full keyboard navigation and screen reader compatibility despite custom styling
+- **Implementation:** Uses absolute positioning with invisible measurement span for pixel-perfect cursor placement
+
+---
+
 ## 4. Card Grid & Modal System
 
 - **`EntityGrid.tsx`:**
@@ -46,11 +62,16 @@ The frontend is organized around a clear separation of concerns, with a central 
     - Fixed width of 113px with responsive text sizing (`text-sm` for optimal fit)
     - Uses `flex-1 min-w-0` layout to ensure proper text truncation with ellipsis
     - Displays character name with `overflow-hidden text-ellipsis` for graceful handling of long names
+    - **Text Display Improvements (2025):** Removed deprecated `@tailwindcss/line-clamp` plugin in favor of built-in Tailwind utilities for better compatibility and performance
     - Shows nation icon alongside the name in a flex container
     - Displays badge/role information with fallback logic for different data locations
-  - **Expanded Modal:**
+  - **Expanded Modal Features (2025 Update):**
     - Full-screen, responsive modal overlay with detailed entity view
-    - Large image display with scrollable text content
+    - **Nation-Colored Titles:** Card titles now use nation-specific colors (e.g., green for Earth Kingdom characters like Bosco)
+    - **Click-to-Close:** Users can click anywhere outside the content area to close the modal
+    - **Keyboard Navigation:** Escape key closes the modal with proper accessibility support
+    - **React Icons Consistency:** All icon displays use React Icons for consistent styling
+    - Large image display with scrollable text content and custom CRT-themed scrollbars
     - Uses the `useImageFallback` hook for robust image handling
   - **Type:** `EnrichedEntity` (defined in `src/search/types.ts`)
   - Contains all top-level fields needed for display: `name`, `nation`, `role`, `slug`, `expandedView`, `image`, etc.

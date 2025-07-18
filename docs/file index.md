@@ -71,6 +71,8 @@ defined there are treated the same as the canonical tag during search.
 | src/pages/ | Page-level components that compose the UI. |
 | src/search/ | Client-side search utilities. |
 | src/styles/ | CSS files. |
+| src/styles/custom.css | Custom CSS with CRT utilities (crt-glow-text, crt-glow-border, crt-dither), scrollbar theming, and font definitions. |
+| src/styles/generated-tailwind.css | Generated Tailwind CSS output (must be rebuilt after config changes). |
 | src/config/constants.ts | Centralized API endpoints and config constants. |
 
 ---
@@ -103,7 +105,7 @@ defined there are treated the same as the canonical tag during search.
 | **`components/ItemCard/ItemCard.tsx`** | Renders both the small grid card and the full-screen expanded modal view. Contains all logic for a single entity's display. Features responsive text sizing and proper flex layout to prevent name truncation. |
 | **`components/CustomMarkdownRenderer.tsx`** | Renders markdown content for the expanded card view, with custom styling. |
 | **`components/ThemedCard/ThemedCard.tsx`** | A styled wrapper that applies a nation-specific border color to cards. |
-| **`components/SearchBar.tsx`** | Terminal-style search input with custom fonts and block cursor animation. |
+| **`components/SearchBar.tsx`** | Terminal-style search input with custom fonts, block cursor animation, 28px font size, disabled spell-check, custom text selection, and comprehensive CRT effects. |
 | **`components/Layout.tsx`** | Main application layout wrapper component. |
 | **`components/NationIcon/NationIcon.tsx`** | Displays nation-specific icons using React Icons. |
 | **`components/Badge/Badge.tsx`** | Reusable badge component for displaying roles and categories. |

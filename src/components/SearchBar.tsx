@@ -29,30 +29,33 @@ export default function SearchBar({
           <input
             ref={inputRef}
             type="text"
+            spellCheck={false}
             className="
               w-full
               rounded-lg
               border-4
               text-green-200
-              text-[23px]
-              px-6 py-4
-              shadow-[0_0_16px_2px_rgba(112,171,108,0.5)]
+              text-[28px]
+              px-6 py-2
               focus:outline-none focus:ring-0
               placeholder:text-green-300/60
               transition-all duration-200
               font-tty-glass
               bg-transparent
               caret-green-400
+              crt-glow-border
+              crt-dither
+              crt-glow-text
+              crt-text-dither
             "
             style={{
-              borderColor: '#70ab6c',
               background: `
                 radial-gradient(ellipse at center, rgba(6,25,17,0.98) 60%, rgba(6,25,17,0.85) 80%, rgba(6,25,17,0.7) 100%)
               `,
               backgroundColor: '#061911',
               backgroundBlendMode: 'overlay',
               caretColor: 'transparent', // Hide native caret
-              fontSize: '23px',
+              fontSize: '28px',
             }}
             placeholder={placeholder}
             value={value}
@@ -60,7 +63,7 @@ export default function SearchBar({
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
           />
-          {/* Blinking block cursor overlay, perfectly flush with text */}
+          {/* Blinking block cursor overlay, with spacing from text */}
           {isFocused && (
             <span
               className="pointer-events-none absolute top-0 bottom-0 flex items-center font-tty-glass text-green-400 select-none"
@@ -68,7 +71,7 @@ export default function SearchBar({
                 fontFamily: 'Glass_TTY_VT220, monospace',
                 left: '1.5rem', // px-6 = 1.5rem
                 height: '100%',
-                fontSize: '23px',
+                fontSize: '28px',
               }}
             >
               {/* Hidden span to measure text width */}
@@ -78,33 +81,20 @@ export default function SearchBar({
                 className="invisible whitespace-pre font-tty-glass text-green-200"
                 style={{
                   fontFamily: 'Glass_TTY_VT220, monospace',
-                  fontSize: '23px',
+                  fontSize: '28px',
                   fontWeight: 400,
                 }}
               >
                 {value}
               </span>
-              {/* Blinking block cursor, positioned flush after text */}
+              {/* Blinking block cursor, positioned with spacing after text */}
               <span
-                className="inline-block w-2 h-6 bg-green-400 animate-blink align-middle"
+                className="inline-block w-2 h-6 bg-green-400 animate-blink align-middle crt-glow-text"
                 style={{
-                  marginLeft: 0,
+                  marginLeft: '4px', // 4px spacing from text
                 }}
               />
             </span>
-          )}
-          {!!value && (
-            <button
-              type="button"
-              onClick={() => onChange("")}
-              className="absolute right-5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-primary transition-all"
-              aria-label="Clear search"
-              tabIndex={0}
-            >
-              <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5">
-                <path d="M6 6l8 8M6 14L14 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-            </button>
           )}
         </div>
       </form>

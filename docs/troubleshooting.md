@@ -51,6 +51,91 @@ The following changes were made to fix the issue:
 
 ---
 
+## [2025-01-27] CRT Effects and Modal Interaction Issues
+
+**Symptom:**
+CRT effects (glow, dithering) not appearing, or modal click-to-close not working properly.
+
+**Root Cause:**
+The CRT effects rely on custom CSS utilities that may not be generated if Tailwind hasn't been rebuilt, or modal event handlers may have accessibility conflicts.
+
+**Common Issues & Solutions:**
+
+1. **CRT Effects Not Visible:**
+   - **Check:** Run `npm run build:tailwind` to regenerate CSS with new utility classes
+   - **Verify:** Ensure `custom.css` contains the CRT utility definitions
+   - **Browser:** Clear browser cache and hard refresh (Ctrl+F5)
+   - **Classes:** Verify components are using the correct class names:
+     - `crt-glow-text` for text glow effects
+     - `crt-glow-border` for border glow
+     - `crt-dither` for container dithering
+     - `crt-text-dither` for text dithering
+
+2. **Search Bar Styling Issues:**
+   - **Font:** Ensure Glass_TTY_VT220.ttf font is properly loaded in `custom.css`
+   - **Text Size:** Search bar uses 28px font size with `py-2` padding for compact appearance
+   - **Block Cursor:** Custom cursor should have 4px spacing from text end
+   - **Spell Check:** `spellCheck={false}` should prevent browser underlining
+   - **Text Selection:** Should use CRT green background with black text, not default blue
+   - **Check:** Verify all CRT classes are applied: `crt-glow-border crt-dither crt-glow-text crt-text-dither`
+
+3. **Scrollbars Not Themed:**
+   - **Browser Support:** CRT scrollbar styling only works in Webkit browsers (Chrome, Safari, Edge)
+   - **Firefox:** Will use default scrollbars (expected behavior)
+   - **Check:** Ensure CSS variables `--crt-green` and `--crt-green-glow` are defined
+
+4. **Modal Click-to-Close Issues:**
+   - **Symptom:** Clicking outside modal doesn't close it
+   - **Check:** Ensure the invisible overlay button is properly positioned with `absolute inset-0`
+   - **Events:** Verify event propagation is stopped on content clicks
+   - **Accessibility:** Confirm keyboard navigation (Escape key) still works
+
+5. **Nation-Colored Titles Not Appearing:**
+   - **Check:** Verify `nationThemeMap` import in `ItemCardModal.tsx`
+   - **Data:** Ensure character data includes proper `nation` field
+   - **Fallback:** Should default to gray color if nation is undefined
+
+6. **Text Display and Selection Issues:**
+   - **Selection Color:** Text selection should show CRT green background with black text
+   - **Terminal Aesthetic:** No spell-check underlining should appear on character names
+   - **Text Truncation:** Names should use `text-sm` with proper ellipsis handling
+   - **Check:** Verify custom selection CSS is applied globally
+
+**Implementation Check:**
+```tsx
+// Verify these elements exist in SearchBar.tsx
+className="crt-glow-border crt-dither crt-glow-text crt-text-dither"
+spellCheck={false}
+style={{ fontSize: '28px', caretColor: 'transparent' }}
+
+// Verify these elements exist in ItemCardModal.tsx
+style={{ color: titleColor }}
+onClick={onClose} // On overlay
+onClick={(e) => e.stopPropagation()} // On content
+```
+
+**CSS Verification:**
+```css
+/* Check custom.css for these rules */
+::selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+}
+
+.crt-glow-text { /* text glow effects */ }
+.crt-glow-border { /* border glow effects */ }
+.crt-dither { /* scan-line patterns */ }
+```
+
+**Impact:**
+- All CRT effects should be visible and performant
+- Modal interactions should be smooth and accessible
+- Nation colors should provide immediate visual context
+- Scrollbars should match the overall CRT aesthetic
+- Search bar should provide authentic terminal experience without browser interference
+
+---
+
 ## [2025-07-17] Character Badge/Role Not Displaying
 
 **Symptom:**

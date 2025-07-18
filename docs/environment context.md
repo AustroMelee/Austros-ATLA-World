@@ -39,6 +39,14 @@
 - **@tailwindcss/typography:** ^0.5.16
 - **autoprefixer:** ^10.4.21
 - **Note:** The deprecated `@tailwindcss/line-clamp` plugin has been removed. Text truncation now uses built-in Tailwind utilities (`overflow-hidden text-ellipsis`).
+- **CRT Effects (2025):** Custom utility classes for authentic terminal aesthetics:
+  - `crt-glow-text`: Text glow effects with CRT-style shadows
+  - `crt-glow-border`: Border glow effects for terminal-style containers
+  - `crt-dither` and `crt-text-dither`: Scan-line dithering patterns with animations
+  - Custom scrollbar styling with CRT green theme and glow effects
+  - **Search Bar Enhancements:** Terminal-style search input with 28px font size, custom block cursor with 4px spacing, disabled spell-check, and authentic CRT styling
+  - **Text Selection:** Custom selection colors using CRT green background with black text for consistent terminal aesthetic
+- **CSS Variables:** CRT theming controlled via `--crt-green` and `--crt-green-glow` variables
 
 ### **Build & Tooling**
 - **Vite:** ^5.4.19 (build tool)

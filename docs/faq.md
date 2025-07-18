@@ -31,6 +31,53 @@
 
 ---
 
+### 🎮 CRT Terminal UI & Interactions (2025 Update)
+
+**What are the new CRT visual effects?**
+- The search bar now features authentic CRT terminal styling with:
+  - Larger text size (28px) for better readability
+  - Reduced vertical padding (`py-2`) for a more compact, terminal-like appearance
+  - CRT glow effects on both text and borders
+  - Scan-line dithering patterns that subtly animate
+  - 4px spacing between text and the block cursor for improved clarity
+  - Removed clear (X) button for cleaner terminal aesthetics
+  - Disabled spell-check (`spellCheck={false}`) to prevent browser underlining on character names
+  - Custom text selection styling with CRT green background and black text instead of default blue
+- Custom scrollbars throughout the application use CRT green theming with glow effects
+
+**How do I interact with the search bar?**
+- **Terminal Aesthetics:** The search bar provides an authentic CRT terminal experience
+- **Text Entry:** Type character names or search terms with immediate visual feedback
+- **Block Cursor:** A blinking green block cursor appears 4px after your text when focused
+- **No Spell Check:** Browser spell-check is disabled to maintain clean terminal appearance
+- **Text Selection:** Selecting text shows CRT green background with black text for consistency
+- **Keyboard Navigation:** Fully accessible with standard keyboard shortcuts (Tab, Shift+Tab, etc.)
+
+**How do I interact with expanded character cards?**
+- **Click anywhere** outside the card content to close the modal
+- **Press Escape** to close the modal using keyboard navigation
+- Character titles in the expanded view now use **nation-specific colors** (e.g., green for Earth Kingdom characters)
+- All icons consistently use React Icons for a unified visual experience
+
+**Why do character names have different colors in expanded view?**
+- Character titles are now colored based on their nation affiliation:
+  - **Green** for Earth Kingdom characters (like Bosco, Toph)
+  - **Red** for Fire Nation characters (like Azula, Zuko)
+  - **Blue** for Water Tribe characters (like Katara, Sokka)
+  - **Orange** for Air Nomads (like Aang)
+  - **Gray** for characters without clear nation affiliation
+- This provides immediate visual context about the character's background
+
+**Are there any accessibility improvements?**
+- The modal system now includes proper keyboard navigation and focus management
+- Click-to-close functionality includes proper event handling to prevent accidental closures
+- All CRT effects maintain sufficient contrast for users with visual impairments
+- Scrollbars remain clearly visible and interactive across different input methods
+- Search bar maintains full keyboard accessibility despite custom cursor implementation
+- Text selection uses high-contrast colors for improved readability
+
+---
+
 ### 🏆 Search Result Ordering & Tag Matching (2024 Update)
 
 **How are search results ordered?**

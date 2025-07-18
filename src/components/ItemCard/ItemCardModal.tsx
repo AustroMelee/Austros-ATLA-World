@@ -7,6 +7,7 @@ import { CustomMarkdownRenderer } from '../CustomMarkdownRenderer';
 import { useImageFallback } from '../../hooks/useImageFallback';
 import { fallbackImages, universalFallback } from './imageFallbacks';
 import { getField } from '../../utils/data';
+import { nationThemeMap } from '../../theme/nationThemes';
 
 interface ItemCardModalProps {
   item: EnrichedEntity;
@@ -24,11 +25,25 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
     [slugKey]: fallbackImages[slugKey] || fallbackImages[item.id] || universalFallback,
   });
 
+  // Get nation color for title
+  const nationKey = nation ? nation.toLowerCase() : 'default';
+  const titleColor = nationThemeMap[nationKey]?.main || nationThemeMap.default.main;
+
   useEffect(() => {
     if (image) {
       setImgSrc(`/assets/images/${image}`);
     }
-  }, [image, setImgSrc]);
+    
+    // Handle escape key to close modal
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [image, setImgSrc, onClose]);
 
   return (
     <div
@@ -36,8 +51,15 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
       role="dialog"
       aria-modal="true"
     >
+      {/* Invisible overlay button for click-to-close */}
+      <button
+        className="absolute inset-0 w-full h-full bg-transparent"
+        onClick={onClose}
+        aria-label="Close modal"
+        tabIndex={-1}
+      />
       <div
-        className="relative w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto rounded-lg"
+        className="relative w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto rounded-lg z-10"
         role="document"
       >
         <button
@@ -65,7 +87,10 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
               )}
             </div>
             <div className="w-full">
-              <h2 className="text-3xl font-bold text-center md:text-left">
+              <h2 
+                className="text-3xl font-bold text-center md:text-left"
+                style={{ color: titleColor }}
+              >
                 {toTitleCase(item.name)}
                 {nation && <NationIcon nation={nation} size={20} className="align-middle flex-shrink-0 ml-2" />}
               </h2>

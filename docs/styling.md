@@ -117,15 +117,50 @@ These conventions ensure cards are visually clean, accessible, and maintain a cl
 
 This ensures the expanded card header is always visually prominent, accessible, and immune to future CSS/plugin changes.
 
-## 10. Terminal-Style Search Bar: Font & Block Cursor (2024-07)
+## 10. Terminal-Style Search Bar: Font & Block Cursor (2025 Update)
 
 - **Search System Reference:** The search bar is the entry point to the new client-side search/indexing system. For a full explanation of the search architecture, see `docs/search engine.md`. For debugging and troubleshooting, see `docs/troubleshooting.md`.
 - **Font:** The search bar uses the custom Glass_TTY_VT220.ttf font, loaded via @font-face in custom.css and applied with the .font-tty-glass utility class. This gives the input a retro terminal/CRT look.
-- **Font Sizing:** The input, overlay, and block cursor use a font size of 23px for bold, readable terminal aesthetics. The input's padding, border, and overall scale remain unchanged for layout consistency.
+- **Font Sizing:** The input, overlay, and block cursor use a font size of 28px for enhanced readability while maintaining the same input container size.
+- **Input Dimensions:** The search bar uses reduced vertical padding (`py-2` instead of `py-4`) for a more compact terminal aesthetic while preserving the larger 28px text size.
+- **CRT Effects:** The search bar now features authentic CRT styling with:
+  - **CRT Glow Text:** Applied via `crt-glow-text` utility class for subtle text shadowing
+  - **CRT Border Glow:** Applied via `crt-glow-border` for authentic terminal border effects
+  - **CRT Dithering:** Applied via `crt-dither` and `crt-text-dither` for realistic scan-line effects
+  - **Removed Standard Glow:** The previous `shadow-[0_0_16px_2px_rgba(112,171,108,0.5)]` effect has been replaced with CRT-specific styling
 - **Block Cursor:** A custom blinking block cursor is rendered as an absolutely positioned overlay, using Tailwind's animate-blink utility (defined in tailwind.config.js as a 1s steps(2, start) infinite animation). The block is a green rectangle (w-2 h-6 bg-green-400) that blinks in sync with the input focus.
-- **Pixel-Perfect Alignment:** The overlay uses a hidden span (visibility: hidden, whitespace-pre) to measure the exact rendered width of the input value. The block cursor is placed immediately after this span, inside a flex container absolutely positioned with left: 1.5rem (matching px-6 input padding). This ensures the block cursor is always flush with the end of the text, regardless of font quirks or browser.
+- **Cursor Spacing:** The block cursor now has 4px spacing from the text end (via `marginLeft: '4px'`) instead of being flush, improving readability and visual separation.
+- **Removed Clear Button:** The X/clear button has been completely removed for a cleaner, more authentic terminal appearance.
+- **Spell Check Disabled:** The search input now has `spellCheck={false}` to prevent browser spell-check underlining, maintaining the clean terminal aesthetic and improving the experience when searching for character names.
+- **Text Selection Styling:** Custom selection colors use CRT green background with black text for authentic terminal feel, replacing the default blue selection highlight.
+- **Pixel-Perfect Alignment:** The overlay uses a hidden span (visibility: hidden, whitespace-pre) to measure the exact rendered width of the input value. The block cursor is placed after this span with proper spacing, inside a flex container absolutely positioned with left: 1.5rem (matching px-6 input padding).
 - **Caret Hiding:** The native input caret is hidden (caret-color: transparent) so only the custom block cursor is visible, for full terminal authenticity.
 - **Accessibility:** The input remains fully accessible and keyboard navigable. The overlay is pointer-events-none and select-none, so it does not interfere with user interaction or screen readers.
-- **Customization:** Font size, block size, and color can be tweaked in SearchBar.tsx and custom.css. The block cursor can be further styled for CRT/scanline effects if desired.
+- **Customization:** Font size, block size, spacing, and CRT effects can be tweaked in SearchBar.tsx and custom.css. The CRT dithering patterns and glow effects are fully customizable through CSS variables.
 
-This approach delivers a visually authentic, highly readable, and fully accessible terminal search bar, with a block cursor that is always perfectly flush with the text.
+This approach delivers a visually authentic, highly readable, and fully accessible terminal search bar with proper CRT aesthetics, including dithering, glow effects, improved cursor positioning, and authentic terminal interactions.
+
+## 11. Custom Scrollbar Styling: CRT-Themed Scrollbars (2025 Update)
+
+- **System Integration:** Custom scrollbar styling is applied globally and affects both the main UI scrolling and modal content scrolling.
+- **Visual Design:** Scrollbars use a green gradient theme that matches the overall CRT aesthetic:
+  - **Track:** Dark background (#0D1117) with rounded corners matching the application theme
+  - **Thumb:** Linear gradient from CRT green (#70ab6c) to darker green (#4a7c59) with rounded corners
+  - **Glow Effects:** CRT-style glow applied via box-shadow using CSS variables for consistent theming
+  - **Dithering Pattern:** Subtle repeating linear gradients create authentic scan-line effects
+- **Interactive States:** 
+  - **Default:** Standard CRT green gradient with subtle glow
+  - **Hover:** Brighter gradient (#7bb872 to #5a8f6b) with enhanced glow effects
+- **Cross-Browser Support:** Uses `-webkit-scrollbar` selectors for Webkit-based browsers (Chrome, Safari, Edge)
+- **Accessibility:** Maintains sufficient contrast and clear visual boundaries for users with visual impairments
+- **Performance:** Uses CSS-only approach with hardware-accelerated effects (box-shadow, linear-gradient)
+- **Customization:** All colors, gradients, and effects are controlled through CSS variables defined in `custom.css`:
+  - `--crt-green`: Primary CRT green color
+  - `--crt-green-glow`: CRT glow effect with appropriate opacity
+- **Implementation Details:**
+  - 12px width for comfortable interaction on both desktop and touch devices
+  - 2px border from container background to create visual separation
+  - Subtle inset highlights for depth and dimension
+  - Consistent border-radius (6px) throughout all scrollbar elements
+
+This creates a cohesive CRT terminal experience where even the scrolling elements contribute to the authentic retro computing aesthetic.

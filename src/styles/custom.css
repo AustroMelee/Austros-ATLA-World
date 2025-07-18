@@ -10,12 +10,93 @@ body {
 :root {
   --border-from: #2563eb; /* Tailwind blue-600 */
   --border-to: #60a5fa;   /* Tailwind blue-400 */
+  --crt-green: #70ab6c;
+  --crt-green-glow: rgba(112, 171, 108, 0.4);
+  --search-bg: #061911; /* Search bar background color */
 }
 
 @keyframes flowing-border-rotate {
   100% {
     transform: rotate(1turn);
   }
+}
+
+/* CRT Noise/Dithering Pattern */
+@keyframes crt-flicker {
+  0%, 100% { opacity: 0.95; }
+  50% { opacity: 1; }
+}
+
+/* Terminal-Style Text Selection for Search Bar */
+input[type="text"]::selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+input[type="text"]::-moz-selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+/* Apply CRT selection to elements with font-tty-glass class */
+.font-tty-glass::selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+.font-tty-glass::-moz-selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0D1117;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--crt-green) 0%, #4a7c59  100%);
+  border-radius: 6px;
+  border: 2px solid #0D1117;
+  box-shadow: 
+    0 0 8px var(--crt-green-glow),
+    inset 0 0 2px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 2px
+    );
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7bb872 0%, #5a8f6b 100%);
+  box-shadow: 
+    0 0 12px var(--crt-green-glow),
+    inset 0 0 3px rgba(255, 255, 255, 0.15);
 }
 
 /* Custom styles for filter sidebar and chips */
@@ -49,5 +130,70 @@ body {
   }
   .isolation-isolate {
     isolation: isolate;
+  }
+  
+  /* CRT Glow Effects */
+  .crt-glow-text {
+    text-shadow: 
+      0 0 2px var(--crt-green),
+      0 0 4px var(--crt-green-glow),
+      0 0 6px var(--crt-green-glow);
+    filter: brightness(1.1);
+  }
+  
+  .crt-glow-border {
+    border-color: var(--crt-green);
+    box-shadow: 
+      0 0 4px var(--crt-green-glow),
+      0 0 8px var(--crt-green-glow),
+      inset 0 0 2px var(--crt-green-glow);
+    position: relative;
+  }
+  
+  .crt-dither::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        rgba(112, 171, 108, 0.05) 1px,
+        transparent 2px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        rgba(112, 171, 108, 0.03) 1px,
+        transparent 2px
+      );
+    pointer-events: none;
+    animation: crt-flicker 3s infinite ease-in-out;
+    border-radius: inherit;
+  }
+  
+  .crt-text-dither {
+    position: relative;
+  }
+  
+  .crt-text-dither::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        rgba(112, 171, 108, 0.03) 1px,
+        transparent 2px
+      );
+    pointer-events: none;
+    animation: crt-flicker 4s infinite ease-in-out;
   }
 }

@@ -14,12 +14,115 @@ body {
   /* Tailwind blue-600 */
   --border-to: #60a5fa;
   /* Tailwind blue-400 */
+  --crt-green: #70ab6c;
+  --crt-green-glow: rgba(112, 171, 108, 0.4);
+  --search-bg: #061911;
+  /* Search bar background color */
 }
 
 @keyframes flowing-border-rotate {
   100% {
     transform: rotate(1turn);
   }
+}
+
+/* CRT Noise/Dithering Pattern */
+
+@keyframes crt-flicker {
+  0%, 100% {
+    opacity: 0.95;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Terminal-Style Text Selection for Search Bar */
+
+input[type="text"]::-moz-selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+input[type="text"]::selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+input[type="text"]::-moz-selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+/* Apply CRT selection to elements with font-tty-glass class */
+
+.font-tty-glass::-moz-selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+.font-tty-glass::selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+.font-tty-glass::-moz-selection {
+  background-color: var(--crt-green);
+  color: var(--search-bg);
+  text-shadow: none;
+}
+
+/* Custom Scrollbar Styling */
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0D1117;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--crt-green) 0%, #4a7c59  100%);
+  border-radius: 6px;
+  border: 2px solid #0D1117;
+  box-shadow: 
+    0 0 8px var(--crt-green-glow),
+    inset 0 0 2px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 2px
+    );
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7bb872 0%, #5a8f6b 100%);
+  box-shadow: 
+    0 0 12px var(--crt-green-glow),
+    inset 0 0 3px rgba(255, 255, 255, 0.15);
 }
 
 /* Custom styles for filter sidebar and chips */
@@ -1206,16 +1309,8 @@ video {
   right: 1rem;
 }
 
-.right-5{
-  right: 1.25rem;
-}
-
 .top-0{
   top: 0px;
-}
-
-.top-1\/2{
-  top: 50%;
 }
 
 .top-4{
@@ -1337,10 +1432,6 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.h-5{
-  height: 1.25rem;
-}
-
 .h-6{
   height: 1.5rem;
 }
@@ -1385,10 +1476,6 @@ video {
   width: 0.5rem;
 }
 
-.w-5{
-  width: 1.25rem;
-}
-
 .w-\[113px\]{
   width: 113px;
 }
@@ -1427,11 +1514,6 @@ video {
 
 .flex-shrink-0{
   flex-shrink: 0;
-}
-
-.-translate-y-1\/2{
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @keyframes blink{
@@ -1740,6 +1822,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .pb-1\.5{
   padding-bottom: 0.375rem;
 }
@@ -1799,13 +1886,8 @@ video {
   font-size: 18px;
 }
 
-.text-\[23px\]{
-  font-size: 23px;
-}
-
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-\[28px\]{
+  font-size: 28px;
 }
 
 .text-lg{
@@ -1982,12 +2064,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-\[0_0_16px_2px_rgba\(112\2c 171\2c 108\2c 0\.5\)\]{
-  --tw-shadow: 0 0 16px 2px rgba(112,171,108,0.5);
-  --tw-shadow-colored: 0 0 16px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-inner{
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
@@ -2042,6 +2118,72 @@ video {
   font-family: 'Glass_TTY_VT220', monospace;
 }
 
+/* CRT Glow Effects */
+
+.crt-glow-text {
+  text-shadow: 
+      0 0 2px var(--crt-green),
+      0 0 4px var(--crt-green-glow),
+      0 0 6px var(--crt-green-glow);
+  filter: brightness(1.1);
+}
+
+.crt-glow-border {
+  border-color: var(--crt-green);
+  box-shadow: 
+      0 0 4px var(--crt-green-glow),
+      0 0 8px var(--crt-green-glow),
+      inset 0 0 2px var(--crt-green-glow);
+  position: relative;
+}
+
+.crt-dither::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+      repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        rgba(112, 171, 108, 0.05) 1px,
+        transparent 2px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        rgba(112, 171, 108, 0.03) 1px,
+        transparent 2px
+      );
+  pointer-events: none;
+  animation: crt-flicker 3s infinite ease-in-out;
+  border-radius: inherit;
+}
+
+.crt-text-dither {
+  position: relative;
+}
+
+.crt-text-dither::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+      repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        rgba(112, 171, 108, 0.03) 1px,
+        transparent 2px
+      );
+  pointer-events: none;
+  animation: crt-flicker 4s infinite ease-in-out;
+}
+
 .placeholder\:text-green-300\/60::-moz-placeholder{
   color: rgb(134 239 172 / 0.6);
 }
@@ -2070,11 +2212,6 @@ video {
 .hover\:bg-neutral-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(64 64 64 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:text-primary:hover{
-  --tw-text-opacity: 1;
-  color: rgb(88 166 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:ring-2:hover{
