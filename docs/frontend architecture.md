@@ -42,8 +42,18 @@ The frontend is organized around a clear separation of concerns, with a central 
   - Dynamically sets the `expanded` and `onExpand` props for each card.
 - **`ItemCard.tsx`:**
   - Renders both the collapsed grid card and the full-screen expanded modal view.
-  - Expanded view is a modal overlay, fully responsive and accessible.
-  - Uses the `useImageFallback` hook for robust image handling.
+  - **Collapsed Card Features:**
+    - Fixed width of 113px with responsive text sizing (`text-sm` for optimal fit)
+    - Uses `flex-1 min-w-0` layout to ensure proper text truncation with ellipsis
+    - Displays character name with `overflow-hidden text-ellipsis` for graceful handling of long names
+    - Shows nation icon alongside the name in a flex container
+    - Displays badge/role information with fallback logic for different data locations
+  - **Expanded Modal:**
+    - Full-screen, responsive modal overlay with detailed entity view
+    - Large image display with scrollable text content
+    - Uses the `useImageFallback` hook for robust image handling
+  - **Type:** `EnrichedEntity` (defined in `src/search/types.ts`)
+  - Contains all top-level fields needed for display: `name`, `nation`, `role`, `slug`, `expandedView`, `image`, etc.
 
 ---
 
@@ -91,3 +101,46 @@ The application renders a modern, accessible, and responsive DOM structure, opti
   - The layout adapts to all screen sizes, with larger tap targets and scrollable overlays for mobile devices.
 
 This structure ensures a robust, accessible, and visually consistent UI, with clear mapping between React components and the rendered DOM. For further details, inspect the live DOM or refer to the raw extract in `docs/reports/dom data.txt`.
+
+---
+
+## 7. Getting Started for New Developers
+
+### **Understanding the Data Flow**
+1. **Start with the data**: Examine `public/enriched-data.json` to understand the data structure
+2. **Follow the pipeline**: Review `docs/data pipeline.md` to understand how data is processed
+3. **Trace the search**: Look at `src/hooks/useSearch.ts` to see how client-side indexing works
+4. **Examine components**: Start with `HomeContainer.tsx` and follow the prop flow down
+
+### **Making Your First Change**
+1. **UI changes**: Most visual changes happen in `src/components/ItemCard/ItemCardCollapsed.tsx`
+2. **Search changes**: Modify `src/search/preprocessor.ts` to change what fields are searchable
+3. **Data changes**: Edit markdown files in `raw-data/characters/` then run `npm run build:data`
+4. **Style changes**: Update Tailwind classes, then run `npm run build:tailwind`
+
+### **Essential Commands**
+```bash
+# Development workflow
+npm run dev                    # Start development server
+npm run build:data            # Rebuild data from markdown
+npm run build:tailwind        # Rebuild CSS after style changes
+npm run type-check            # Check TypeScript errors
+npm run lint:fix              # Fix linting issues
+
+# Testing and validation
+npm test                      # Run test suite
+npm run validate:data         # Validate data integrity
+```
+
+### **Key Files to Know**
+- `src/pages/HomeContainer.tsx` - Central state management
+- `src/components/ItemCard/ItemCardCollapsed.tsx` - Card display logic
+- `src/hooks/useSearch.ts` - Search functionality
+- `docs/troubleshooting.md` - When things go wrong
+- `projectrules.mdc` - Project conventions and rules
+
+### **Common Tasks**
+- **Add new character**: Create markdown file in `raw-data/characters/`, run `npm run build:data`
+- **Fix search issues**: Check `src/search/preprocessor.ts` and `docs/troubleshooting.md`
+- **Update styling**: Modify Tailwind classes, run `npm run build:tailwind`
+- **Debug data issues**: Check `public/enriched-data.json` first, then trace backwards

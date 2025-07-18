@@ -108,7 +108,7 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields }: Ite
           )}
           <div className="w-full mt-auto px-1.5 pt-2.5">
             <div className="flex items-center justify-start gap-1">
-              <h3 className="font-bold text-lg text-white whitespace-normal line-clamp-2">
+              <h3 className="font-bold text-sm text-white leading-tight overflow-hidden text-ellipsis flex-1 min-w-0">
                 {toTitleCase(item.name)}
               </h3>
               {nation && (

@@ -16,6 +16,21 @@
 
 ---
 
+### 📱 Text Display & Truncation (2025 Update)
+
+**How are character names displayed in cards?**
+- Character names use responsive text sizing (`text-sm`) optimized for the 113px card width.
+- Names are displayed with `overflow-hidden text-ellipsis` and proper flex layout (`flex-1 min-w-0`) to prevent truncation issues.
+- Longer names are gracefully truncated with "..." rather than being cut off mid-word.
+- The deprecated `@tailwindcss/line-clamp` plugin has been removed in favor of built-in Tailwind utilities.
+
+**Why was the line-clamp plugin removed?**
+- The `@tailwindcss/line-clamp` plugin was deprecated and caused compatibility issues with newer Tailwind versions.
+- Built-in Tailwind utilities (`overflow-hidden text-ellipsis`) provide better performance and reliability.
+- The new approach ensures consistent text display across all browsers and devices.
+
+---
+
 ### 🏆 Search Result Ordering & Tag Matching (2024 Update)
 
 **How are search results ordered?**

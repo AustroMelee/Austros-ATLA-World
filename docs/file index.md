@@ -53,8 +53,8 @@ defined there are treated the same as the canonical tag during search.
 |------|-------------|
 | scripts/1-parse-markdown.mjs | **Stage 1:** Parses raw Markdown files, extracting YAML frontmatter and all JSON/MD blocks into a structured format. |
 | scripts/2-enrich-data.mjs | **Stage 2:** Cleans the parsed data, promotes UI-critical fields to the top level, and outputs the final `public/enriched-data.json`. |
-| scripts/slug-utils.mjs | Utility functions for generating unique slugs. |
 | scripts/validate-data.mjs | Validates data files against a defined schema. |
+| scripts/lib/enrichRecord.mjs | Utility library for record enrichment logic used by the enrichment script. |
 
 ---
 
@@ -84,6 +84,15 @@ defined there are treated the same as the canonical tag during search.
 | **`hooks/useSearch.ts`** | **The core of the search system.** Receives all data, preprocesses it, builds the FlexSearch index in-browser, and returns filtered results. |
 | **`hooks/useEnrichedData.ts`** | Fetches and manages the enriched data from the API endpoint, with robust error handling. |
 | **`hooks/useImageFallback.ts`** | Manages image loading, error fallback, and status for entity images. |
+| **`hooks/useAustrosSearch.ts`** | Enhanced search hook with additional functionality for the Austros system. |
+| **`hooks/useCardExpansion.ts`** | Manages card expansion state and modal behavior. |
+| **`hooks/useFilters.ts`** | Handles filtering logic and state management. |
+| **`hooks/useFilterOptions.ts`** | Provides available filter options based on data. |
+| **`hooks/useModalFocus.ts`** | Manages focus trapping and accessibility for modals. |
+| **`hooks/useNationColor.ts`** | Provides nation-based color theming. |
+| **`hooks/useDebounce.ts`** | Debounces rapid input changes for performance. |
+| **`hooks/useSuggestions.ts`** | Provides search suggestions and autocomplete. |
+| **`hooks/useRecentSearchRecorder.ts`** | Records and manages recent search history. |
 | **`search/preprocessor.ts`** | Helper for `useSearch`. Creates the `searchBlob` from each record to enable comprehensive full-text search. |
 | **`pages/Home.tsx`** | The presentational "body" of the app. Receives props from `HomeContainer` and renders the UI. |
 
@@ -91,9 +100,28 @@ defined there are treated the same as the canonical tag during search.
 | File | Description |
 |------|-------------|
 | **`components/EntityGrid/EntityGrid.tsx`** | Renders the responsive grid of cards. Passes expand/collapse state to each card. |
-| **`components/ItemCard/ItemCard.tsx`** | Renders both the small grid card and the full-screen expanded modal view. Contains all logic for a single entity's display. |
+| **`components/ItemCard/ItemCard.tsx`** | Renders both the small grid card and the full-screen expanded modal view. Contains all logic for a single entity's display. Features responsive text sizing and proper flex layout to prevent name truncation. |
 | **`components/CustomMarkdownRenderer.tsx`** | Renders markdown content for the expanded card view, with custom styling. |
 | **`components/ThemedCard/ThemedCard.tsx`** | A styled wrapper that applies a nation-specific border color to cards. |
+| **`components/SearchBar.tsx`** | Terminal-style search input with custom fonts and block cursor animation. |
+| **`components/Layout.tsx`** | Main application layout wrapper component. |
+| **`components/NationIcon/NationIcon.tsx`** | Displays nation-specific icons using React Icons. |
+| **`components/Badge/Badge.tsx`** | Reusable badge component for displaying roles and categories. |
+| **`components/QuoteBlock/QuoteBlock.tsx`** | Renders quoted text with special styling for markdown content. |
+| **`components/SectionBlock/SectionBlock.tsx`** | Renders structured sections in expanded views. |
+| **`components/NoResults.tsx`** | Fallback component displayed when no search results are found. |
+| **`components/FilterSidebar.tsx`** | Sidebar for filtering options (can be hidden via returning null). |
+| **`components/CollectionsSidebar.tsx`** | Sidebar for collection management (can be hidden via returning null). |
+
+#### **TypeScript Types & Configuration**
+| File | Description |
+|------|-------------|
+| **`types/domainTypes.ts`** | Core domain types for entities, collections, and business logic. |
+| **`types/rawTypes.ts`** | Types for raw markdown data before processing. |
+| **`types/grid.ts`** | Types for grid layouts and responsive components. |
+| **`types/index.ts`** | Central type exports and re-exports. |
+| **`search/types.ts`** | Search-specific types for indexing and results. |
+| **`theme/nationThemes.ts`** | Nation color theme definitions and mappings. |
 
 ---
 

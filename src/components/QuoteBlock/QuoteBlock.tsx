@@ -15,4 +15,6 @@ export const QuoteBlock: React.FC<QuoteBlockProps> = ({ children, author }) => (
     <span>{children}</span>
     {author && <footer className="mt-2 text-xs text-blue-300">— {author}</footer>}
   </blockquote>
-); 
+);
+
+export default QuoteBlock; 

@@ -36,4 +36,6 @@ export const Badge: React.FC<BadgeProps> = ({ label, type, variant = 'primary', 
   return (
     <span className={`${base} ${colorClass} ${variantClass}`}>{label}</span>
   );
-}; 
+};
+
+export default Badge; 

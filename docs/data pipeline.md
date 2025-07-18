@@ -49,6 +49,7 @@ are promoted to the top level and indexed alongside regular tags.
 ### Stage 2: Enrich Data (`scripts/2-enrich-data.mjs`)
 - Promotes UI-critical fields (e.g., image, role, nation) to the top level of each record.
 - All other fields are placed in a `metadata` object.
+- Uses helper functions from `scripts/lib/enrichRecord.mjs` for record processing.
 - **Output:** `public/enriched-data.json` (the only data file used by the frontend).
 
 ### Client-Side Indexing (In the Browser)

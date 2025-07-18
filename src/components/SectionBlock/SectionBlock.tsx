@@ -43,4 +43,6 @@ export const SectionBlock: React.FC<SectionBlockProps> = ({ title, icon, childre
       <div>{children}</div>
     </section>
   );
-}; 
+};
+
+export default SectionBlock; 

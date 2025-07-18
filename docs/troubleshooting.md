@@ -16,6 +16,41 @@
 
 ---
 
+## [2025-01-27] Character Names Being Cut Off in Card Display
+
+**Symptom:**
+Character names (e.g., "Headhunter") are being truncated in the card display, showing as "Headhun..." instead of the full name.
+
+**Root Cause:**
+The issue was caused by a combination of factors in the `ItemCardCollapsed.tsx` component:
+1. **Deprecated line-clamp plugin**: The project was using `@tailwindcss/line-clamp` version 0.4.4, which is deprecated and may not work properly with newer Tailwind versions
+2. **Inappropriate text sizing**: The name was using `text-lg` (18px) which was too large for the 113px wide card
+3. **Flex layout issues**: The text container couldn't shrink properly due to missing `min-w-0` class
+4. **Icon space allocation**: The NationIcon was taking up space in the flex container, leaving insufficient room for longer names
+
+**Solution:**
+The following changes were made to fix the issue:
+
+1. **Removed deprecated plugin**: Removed `@tailwindcss/line-clamp` from both `tailwind.config.js` and `package.json`
+2. **Updated text display**: Changed from `text-lg line-clamp-2` to `text-sm` with `overflow-hidden text-ellipsis`
+3. **Improved flex layout**: Added `flex-1 min-w-0` to the text container to allow proper shrinking
+4. **Better overflow handling**: Used `overflow-hidden text-ellipsis` for graceful text truncation
+
+**Implementation:**
+```tsx
+<h3 className="font-bold text-sm text-white leading-tight overflow-hidden text-ellipsis flex-1 min-w-0">
+  {toTitleCase(item.name)}
+</h3>
+```
+
+**Impact:**
+- All character names now display properly without being cut off
+- Longer names are gracefully truncated with ellipsis rather than being cut mid-word
+- The smaller font size (`text-sm` instead of `text-lg`) provides more space for longer names
+- The flex layout ensures proper space allocation between text and icons
+
+---
+
 ## [2025-07-17] Character Badge/Role Not Displaying
 
 **Symptom:**

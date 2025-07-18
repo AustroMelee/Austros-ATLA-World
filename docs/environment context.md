@@ -38,6 +38,7 @@
 - **Tailwind CSS:** ^3.4.3 (pinned, see below)
 - **@tailwindcss/typography:** ^0.5.16
 - **autoprefixer:** ^10.4.21
+- **Note:** The deprecated `@tailwindcss/line-clamp` plugin has been removed. Text truncation now uses built-in Tailwind utilities (`overflow-hidden text-ellipsis`).
 
 ### **Build & Tooling**
 - **Vite:** ^5.4.19 (build tool)
@@ -76,6 +77,16 @@
 - **Key scripts:**
     - `1-parse-markdown.mjs`: Parses raw markdown files into structured JSON.
     - `2-enrich-data.mjs`: Cleans and structures the parsed data into the final `public/enriched-data.json`.
+    - `validate-data.mjs`: Validates data files against defined schemas.
+- **Available npm scripts:**
+    - `build:data`: Runs the full data pipeline (parse → enrich)
+    - `build:data:parse`: Runs only the parsing stage
+    - `build:data:enrich`: Runs only the enrichment stage  
+    - `validate:data`: Validates data integrity
+    - `build:tailwind`: Builds Tailwind CSS styles
+    - `lint`, `lint:fix`: ESLint code quality checks
+    - `type-check`: TypeScript compilation check
+    - `test`: Runs Jest test suite
 - **Note:** The old `3-build-index.mjs` script is no longer used. All search indexing is now performed client-side.
 
 ---

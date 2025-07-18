@@ -30,10 +30,10 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 
 ### 4. Card Styling & Scaling
 
--   **Card Width:** Card width is set in `EntityGrid` (currently `w-[188px]`).
-    -   **Source of Truth:** To change the card size globally, update the `w-[188px]` value in `src/components/EntityGrid/EntityGrid.tsx`. All card content is sized relative to this width.
+-   **Card Width:** Card width is set in `ItemCardCollapsed` (currently `w-[113px]`).
+    -   **Source of Truth:** To change the card size globally, update the `w-[113px]` value in `src/components/ItemCard/ItemCardCollapsed.tsx`. All card content is sized relative to this width.
 -   **Card Content Scaling:** All internal card content (image, text, etc.) is scaled in `ItemCard` to match the card size for visual consistency.
--   **Card Name Wrapping:** Card names use `line-clamp-2` (multi-line clamping) for accessibility and to avoid hidden content. This requires the `@tailwindcss/line-clamp` plugin, which is enabled in `tailwind.config.js`.
+-   **Card Name Wrapping:** Card names use `overflow-hidden text-ellipsis` with proper flex layout (`flex-1 min-w-0`) for accessibility and graceful text truncation. The deprecated `@tailwindcss/line-clamp` plugin has been removed in favor of built-in Tailwind utilities.
 -   **Grid Layout:** The card grid uses flexbox for layout, ensuring cards stretch to fill the row and maintain a consistent appearance.
 -   **SRP:** All card styling and scaling should be handled in the relevant component (`EntityGrid` for layout/width, `ItemCard` for content), not globally.
 -   **Nation Colors:** Card border and background glow are themed by nation. The nation color is determined by the `nationThemeMap` in `src/theme/nationThemes.ts`, and applied via the `ThemedCard` component. To change or add a nation color, update `nationThemeMap`—all cards for that nation will update automatically. If a nation is missing, a neutral default color is used.
