@@ -35,23 +35,34 @@
 
 **What are the new CRT visual effects?**
 - The search bar now features authentic CRT terminal styling with:
+  - Phosphor persistence: Characters briefly flash brighter green when typed
+  - Cursor wake-up: 100ms elastic scale animation on first focus
+  - Scan lines: Subtle horizontal lines that drift upward
   - Larger text size (28px) for better readability
   - Reduced vertical padding (`py-2`) for a more compact, terminal-like appearance
   - CRT glow effects on both text and borders
-  - Scan-line dithering patterns that subtly animate
   - 4px spacing between text and the block cursor for improved clarity
   - Removed clear (X) button for cleaner terminal aesthetics
   - Disabled spell-check (`spellCheck={false}`) to prevent browser underlining on character names
   - Custom text selection styling with CRT green background and black text instead of default blue
-- Custom scrollbars throughout the application use CRT green theming with glow effects
 
 **How do I interact with the search bar?**
 - **Terminal Aesthetics:** The search bar provides an authentic CRT terminal experience
 - **Text Entry:** Type character names or search terms with immediate visual feedback
+  - Each character briefly flashes brighter green (#a8e6a8) when typed
+  - Characters smoothly fade to standard color over 0.6 seconds
 - **Block Cursor:** A blinking green block cursor appears 4px after your text when focused
+  - Features a special "wake-up" animation on first focus
+  - Maintains consistent blinking after initial animation
 - **No Spell Check:** Browser spell-check is disabled to maintain clean terminal appearance
 - **Text Selection:** Selecting text shows CRT green background with black text for consistency
 - **Keyboard Navigation:** Fully accessible with standard keyboard shortcuts (Tab, Shift+Tab, etc.)
+
+**What happens when there are no search results?**
+- The interface maintains a clean, minimalist approach
+- No "No results found" message is displayed
+- The grid area remains empty but maintains proper spacing
+- This design choice keeps the focus on the search bar and maintains the terminal aesthetic
 
 **How do I interact with expanded character cards?**
 - **Click anywhere** outside the card content to close the modal

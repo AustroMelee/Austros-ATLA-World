@@ -1,6 +1,91 @@
-## 🎨 Styling & UI Policy
+# 🎨 Styling Guide & Standards
 
-### 1. CSS Source of Truth: Tailwind CSS (v3.4.3)
+## CRT Terminal Effects (2025)
+
+### Search Bar Effects
+
+#### 1. Phosphor Persistence
+- Characters briefly flash brighter green (#a8e6a8) when typed
+- Smooth fade transition over 0.6s to standard color
+- Subtle text shadow for authentic CRT glow
+- Implementation in `custom.css`:
+  ```css
+  @keyframes phosphor-fade {
+    0% {
+      color: #a8e6a8;
+      text-shadow: 
+        0 0 6px rgba(168, 230, 168, 0.5),
+        0 0 12px rgba(168, 230, 168, 0.3);
+    }
+    40% {
+      color: #8fcc8f;
+      text-shadow: 
+        0 0 4px rgba(143, 204, 143, 0.4),
+        0 0 8px rgba(143, 204, 143, 0.2);
+    }
+    100% {
+      color: #70ab6c;
+      text-shadow: 
+        0 0 3px rgba(112, 171, 108, 0.3),
+        0 0 6px rgba(112, 171, 108, 0.1);
+    }
+  }
+  ```
+
+#### 2. Cursor Wake-Up Animation
+- 100ms elastic scale animation on first focus
+- Smooth transition from invisible to visible state
+- Implementation in `custom.css`:
+  ```css
+  @keyframes cursor-wake-up {
+    0% { transform: scaleX(0); opacity: 0; }
+    20% { transform: scaleX(1.2); opacity: 0.6; }
+    40% { transform: scaleX(0.8); opacity: 0.8; }
+    60% { transform: scaleX(1.1); opacity: 0.9; }
+    80% { transform: scaleX(0.9); opacity: 1; }
+    100% { transform: scaleX(1); opacity: 1; }
+  }
+  ```
+
+#### 3. Scan Lines
+- Subtle horizontal scan lines that drift upward
+- Semi-transparent green lines for authentic CRT look
+- Implementation in `custom.css`:
+  ```css
+  .search-scanlines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 1px,
+      rgba(112, 171, 108, 0.08) 2px,
+      rgba(112, 171, 108, 0.08) 3px
+    );
+    pointer-events: none;
+    z-index: 1;
+    animation: scanline-drift 8s linear infinite;
+  }
+  ```
+
+### UI Standards
+
+#### Search Bar Typography
+- Font: Glass_TTY_VT220 at 28px
+- Padding: py-2 (reduced vertical padding)
+- Text color: #70ab6c (standard), #a8e6a8 (phosphor flash)
+- Cursor spacing: 4px from text
+
+#### Grid Layout
+- Empty state shows clean grid without "No results found" message
+- Maintains consistent spacing regardless of result count
+- Uses flex layout with proper gap handling
+
+## 1. CSS Source of Truth: Tailwind CSS (v3.4.3)
 
 The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable environmental bug with the v4+ CLI installer on the primary development machine.
 

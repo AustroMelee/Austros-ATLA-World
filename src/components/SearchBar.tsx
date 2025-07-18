@@ -1,6 +1,6 @@
 // src/components/SearchBar.tsx
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 interface SearchBarProps {
   value: string;
@@ -14,8 +14,36 @@ export default function SearchBar({
   placeholder = "",
 }: SearchBarProps) {
   const [isFocused, setIsFocused] = useState(false);
+  const [hasBeenFocused, setHasBeenFocused] = useState(false);
+  const [lastChar, setLastChar] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
   const measureRef = useRef<HTMLSpanElement>(null);
+  const lastCharRef = useRef<HTMLSpanElement>(null);
+
+  // Handle phosphor persistence effect
+  useEffect(() => {
+    if (lastChar && lastCharRef.current) {
+      lastCharRef.current.classList.remove('phosphor-persist');
+      void lastCharRef.current.offsetWidth; // Force reflow
+      lastCharRef.current.classList.add('phosphor-persist');
+    }
+  }, [lastChar]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    const lastTypedChar = newValue.length > value.length 
+      ? newValue[newValue.length - 1] 
+      : '';
+    setLastChar(lastTypedChar);
+    onChange(newValue);
+  };
+
+  const handleFocus = () => {
+    setIsFocused(true);
+    if (!hasBeenFocused) {
+      setHasBeenFocused(true);
+    }
+  };
 
   return (
     <section className="flex justify-center items-center w-full py-12">
@@ -25,7 +53,7 @@ export default function SearchBar({
         autoComplete="off"
         onSubmit={e => e.preventDefault()}
       >
-        <div className="relative w-full">
+        <div className="relative w-full search-scanlines">
           <input
             ref={inputRef}
             type="text"
@@ -47,6 +75,8 @@ export default function SearchBar({
               crt-dither
               crt-glow-text
               crt-text-dither
+              relative
+              z-0
             "
             style={{
               background: `
@@ -59,10 +89,26 @@ export default function SearchBar({
             }}
             placeholder={placeholder}
             value={value}
-            onChange={e => onChange(e.target.value)}
-            onFocus={() => setIsFocused(true)}
+            onChange={handleChange}
+            onFocus={handleFocus}
             onBlur={() => setIsFocused(false)}
           />
+          {/* Last character with phosphor effect */}
+          {lastChar && (
+            <span
+              ref={lastCharRef}
+              className="absolute pointer-events-none font-tty-glass select-none"
+              style={{
+                left: `calc(1.5rem + ${measureRef.current?.offsetWidth || 0}px)`,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontSize: '28px',
+                opacity: 0.8,
+              }}
+            >
+              {lastChar}
+            </span>
+          )}
           {/* Blinking block cursor overlay, with spacing from text */}
           {isFocused && (
             <span
@@ -89,7 +135,14 @@ export default function SearchBar({
               </span>
               {/* Blinking block cursor, positioned with spacing after text */}
               <span
-                className="inline-block w-2 h-6 bg-green-400 animate-blink align-middle crt-glow-text"
+                className={`
+                  inline-block w-2 h-6 
+                  bg-green-400 
+                  animate-blink 
+                  align-middle 
+                  crt-glow-text
+                  ${!hasBeenFocused ? 'cursor-wake-up' : ''}
+                `}
                 style={{
                   marginLeft: '4px', // 4px spacing from text
                 }}

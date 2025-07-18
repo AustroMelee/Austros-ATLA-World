@@ -4,7 +4,6 @@ import React from 'react';
 import SearchBar from '../components/SearchBar';
 import EntityGrid from '../components/EntityGrid/EntityGrid';
 import Layout from '../components/Layout';
-import NoResults from '../components/NoResults';
 import type { MatchResult, EnrichedEntity } from '../search/types';
 // import type { EnrichedCharacter } from '../types/domainTypes';
 
@@ -42,8 +41,6 @@ export function Home({
         <SearchBar value={query} onChange={handleSearchChange} />
         {loading ? (
           <div className="mt-8 text-neutral-400">Loading...</div>
-        ) : gridItems.length === 0 ? (
-          <NoResults />
         ) : (
           <EntityGrid
             items={gridItems}

@@ -427,16 +427,103 @@ input[type="text"]::-moz-selection {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/noise/noise.svg');
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  /* Search bar scanlines effect */
+  .search-scanlines {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .search-scanlines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    background: 
-      repeating-linear-gradient(
-        90deg,
-        transparent 0px,
-        rgba(112, 171, 108, 0.03) 1px,
-        transparent 2px
-      );
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 1px,
+      rgba(112, 171, 108, 0.08) 2px,
+      rgba(112, 171, 108, 0.08) 3px
+    );
     pointer-events: none;
-    animation: crt-flicker 4s infinite ease-in-out;
+    z-index: 1;
+    animation: scanline-drift 8s linear infinite;
   }
+
+  @keyframes scanline-drift {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(4px);
+    }
+  }
+}
+
+/* Phosphor persistence animation */
+@keyframes phosphor-fade {
+  0% {
+    color: #a8e6a8;
+    text-shadow: 
+      0 0 6px rgba(168, 230, 168, 0.5),
+      0 0 12px rgba(168, 230, 168, 0.3);
+  }
+  40% {
+    color: #8fcc8f;
+    text-shadow: 
+      0 0 4px rgba(143, 204, 143, 0.4),
+      0 0 8px rgba(143, 204, 143, 0.2);
+  }
+  100% {
+    color: #70ab6c;
+    text-shadow: 
+      0 0 3px rgba(112, 171, 108, 0.3),
+      0 0 6px rgba(112, 171, 108, 0.1);
+  }
+}
+
+/* Cursor wake-up animation */
+@keyframes cursor-wake-up {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  20% {
+    transform: scaleX(1.2);
+    opacity: 0.6;
+  }
+  40% {
+    transform: scaleX(0.8);
+    opacity: 0.8;
+  }
+  60% {
+    transform: scaleX(1.1);
+    opacity: 0.9;
+  }
+  80% {
+    transform: scaleX(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.phosphor-persist {
+  animation: phosphor-fade 0.6s ease-out;
+}
+
+.cursor-wake-up {
+  animation: cursor-wake-up 0.1s ease-out forwards;
+  transform-origin: center;
 }

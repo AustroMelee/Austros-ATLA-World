@@ -55,12 +55,17 @@ The frontend is organized around a clear separation of concerns, with a central 
 - **Terminal Aesthetic:** Provides an authentic CRT terminal experience with custom Glass_TTY_VT220 font
 - **Typography:** Uses 28px font size for enhanced readability with reduced padding (`py-2`) for compact appearance
 - **Custom Cursor:** Features a blinking green block cursor positioned 4px after text for authentic terminal feel
-- **CRT Effects:** Includes comprehensive CRT styling with glow effects, border effects, and scan-line dithering
+- **CRT Effects:** Includes comprehensive CRT styling with:
+  - **Phosphor Persistence:** Characters briefly flash brighter green (#a8e6a8) when typed, fading smoothly to standard color
+  - **Cursor Wake-Up:** 100ms elastic scale animation when input is first focused
+  - **Scan Lines:** Subtle horizontal scan lines that drift upward
+  - **Glow Effects:** Text and border glow effects for authentic CRT appearance
 - **User Experience Enhancements:**
   - **Disabled Spell Check:** `spellCheck={false}` prevents browser underlining on character names
   - **Custom Text Selection:** CRT green background with black text instead of default blue highlighting
   - **Removed Clear Button:** Cleaner interface without X/clear button for authentic terminal appearance
   - **Hidden Native Caret:** Uses `caretColor: 'transparent'` to show only the custom block cursor
+  - **No "No Results" Message:** Clean interface that simply shows an empty grid when no results are found
 - **Accessibility:** Maintains full keyboard navigation and screen reader compatibility despite custom styling
 - **Implementation:** Uses absolute positioning with invisible measurement span for pixel-perfect cursor placement
 
