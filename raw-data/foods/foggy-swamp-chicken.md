@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** A dish from the Foggy Swamp Tribe, prepared with rice, critters, and bamboo roots, representing the unique culinary traditions of the swamp-dwelling Water Tribe members.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Foggy Swamp Chicken is a distinctive dish from the Foggy Swamp Tribe, showcasing the unique culinary traditions of Water Tribe members who adapted to life in the humid, swampy environment. This dish combines rice with various critters and bamboo roots, creating a meal that reflects the tribe's ability to make the most of their unusual environment. The dish represents the Water Tribe's remarkable adaptability and their understanding that every environment can provide sustenance if approached with wisdom and respect.
 
 ### Notable Uses

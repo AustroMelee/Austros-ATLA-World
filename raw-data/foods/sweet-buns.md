@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** Glutinous rice dumplings wrapped in large flat leaves, representing the Air Nomads' mastery of portable food and their nomadic lifestyle.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Sweet Buns are traditional Air Nomad dumplings made from glutinous rice and wrapped in large flat leaves, creating a portable, nourishing food that perfectly suits their nomadic lifestyle. These dumplings represent the Air Nomads' practical wisdom and their ability to create satisfying meals that can be easily transported and consumed during long flights and spiritual journeys. The dish embodies their philosophy that food should be both nourishing and adaptable to the demands of a mobile lifestyle.
 
 ### Notable Uses

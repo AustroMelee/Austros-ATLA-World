@@ -10,9 +10,12 @@ type: food
 **Region:** Fire Nation  
 **Description:** A specialty dish of Kirachu Island featuring an intensely spicy soufflé that showcases the Fire Nation's mastery of heat and their love for bold, fiery flavors.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Superspicy Soufflé is a signature dish of Kirachu Island that represents the Fire Nation's ultimate expression of their love for heat and bold flavors. This intensely spicy soufflé showcases the nation's mastery of both soufflé-making techniques and their ability to incorporate extreme levels of spice into elegant dishes. The dish embodies the Fire Nation's philosophy that the most impressive culinary achievements come from combining technical skill with their signature love of heat, creating dishes that challenge and delight the palate.
 
 ### Notable Uses

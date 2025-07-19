@@ -10,9 +10,12 @@ type: food
 **Region:** Fire Nation  
 **Description:** A Fire Nation pastry often served with sweet cream, traditionally used for birthday celebrations and representing the nation's approach to festive desserts.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Hotcakes are a beloved Fire Nation pastry that holds special significance in the nation's celebration culture. These fluffy, warm pastries are often served with sweet cream and are traditionally prepared for birthday celebrations and other festive occasions. The dish embodies the Fire Nation's philosophy that celebrations should be marked with special foods that bring warmth and joy to those who partake in them, combining comfort with celebration in a way that strengthens community bonds.
 
 ### Notable Uses

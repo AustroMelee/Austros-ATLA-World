@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** A tea made from ingredients growing in the Spirit Oasis, consumed by those who pay respects to the oasis during meditation, representing the Water Tribe's spiritual connection to their sacred places.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Spirit Oasis Tea is a sacred Water Tribe beverage that connects drinkers to the spiritual energy of the Spirit Oasis. This tea, made from ingredients growing in the lush landscapes of the oasis, represents the Water Tribe's deep spiritual connection to their sacred places and their understanding that beverages can serve both physical and spiritual purposes. The dish embodies the Water Tribe's philosophy that the most meaningful drinks are those that connect them to their spiritual heritage and the natural world.
 
 ### Notable Uses

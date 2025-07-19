@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** An important form of sustenance for warriors of the Southern Water Tribe, representing their mastery of fish preservation and warrior support.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Salmon Jerky is a vital food source for Southern Water Tribe warriors, demonstrating the tribe's exceptional skill in preserving fish and their commitment to supporting their protectors. This jerky represents the Water Tribe's understanding that their warriors need portable, nutritious food that can sustain them during long missions and harsh conditions. The dish embodies their philosophy that protecting their community requires ensuring their warriors have the best possible sustenance.
 
 ### Notable Uses

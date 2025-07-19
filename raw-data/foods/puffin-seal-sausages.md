@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** Sausages made from puffin and seal meat, representing the Water Tribe's resourceful use of polar animals and their mastery of meat preservation techniques.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Puffin-Seal Sausages are a traditional Water Tribe dish that demonstrates the tribe's exceptional skill in utilizing all available resources from their polar environment. These sausages combine the meat of puffins and seals, two animals that are abundant in the polar regions, creating a protein-rich food that can be preserved for long periods. The dish represents the Water Tribe's practical wisdom and their deep understanding of how to survive and thrive in one of the world's harshest environments.
 
 ### Notable Uses

@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** Bread made from seaweed that represents the Water Tribe's innovative use of ocean resources in baking and their mastery of seaweed preparation.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Seaweed Bread is an innovative Water Tribe creation that demonstrates the tribe's exceptional skill in utilizing ocean resources and their ability to adapt traditional baking techniques to their environment. This bread represents the Water Tribe's practical wisdom and their understanding that the ocean provides not just fish and meat, but also ingredients that can be used in creative ways. The dish embodies their philosophy that every ocean resource has value and can be transformed into something nourishing and culturally significant.
 
 ### Notable Uses

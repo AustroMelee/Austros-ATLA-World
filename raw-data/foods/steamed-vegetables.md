@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** An essential part of any temple dinner, including vegetables like potatoes, tomatoes, taro, and various mushrooms, representing the Air Nomads' commitment to wholesome, natural nutrition.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Steamed Vegetables are a cornerstone of Air Nomad cuisine, representing their commitment to wholesome, natural nutrition and their mastery of simple, healthy cooking methods. This essential dish includes a variety of vegetables such as potatoes, tomatoes, taro, and various mushrooms, all prepared with care to preserve their natural flavors and nutritional value. The dish embodies the Air Nomads' philosophy that the best meals are those that nourish both body and spirit while honoring the natural world.
 
 ### Notable Uses

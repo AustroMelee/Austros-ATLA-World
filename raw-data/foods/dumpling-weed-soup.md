@@ -10,9 +10,12 @@ type: food
 **Region:** Earth Kingdom  
 **Description:** A simple soup made from a common plant on Kyoshi Island, representing Earth Kingdom island cuisine and the kingdom's use of local island resources.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Dumpling Weed Soup is a traditional Earth Kingdom dish from Kyoshi Island, demonstrating the kingdom's ability to create satisfying meals from local island resources. This simple soup represents the Earth Kingdom's philosophy that good food doesn't need to be complicated to be nourishing and culturally significant. The dish embodies the kingdom's understanding that every region has its own unique ingredients and that local plants can be transformed into satisfying meals through traditional cooking methods.
 
 ### Notable Uses

@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** A delectable Southern Water Tribe dish, smoked over a fire pit. Bolin claimed it tasted similar to possum chicken, representing the tribe's mastery of smoking techniques.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Smoked Arctic Hen is a prized Southern Water Tribe dish that showcases the tribe's exceptional skill in smoking and preserving meat. This delectable dish is prepared by smoking arctic hen over a traditional fire pit, creating a rich, flavorful meal that demonstrates the Water Tribe's mastery of food preservation techniques. The dish's similarity to possum chicken, as noted by Bolin, reflects the universal appeal of well-prepared smoked meats and the Water Tribe's ability to create dishes that resonate across different cultures.
 
 ### Notable Uses

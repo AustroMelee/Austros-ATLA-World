@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** A common dish in both the Northern and Southern Water Tribes, representing their fundamental use of ocean resources and their mastery of seaweed preparation.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Seaweed Stew is a fundamental Water Tribe dish that serves as a cornerstone of both Northern and Southern Water Tribe cuisine. This hearty stew demonstrates the tribe's deep understanding of ocean resources and their ability to create satisfying, nutritious meals from seaweed, one of the most abundant resources in their coastal environment. The dish represents the Water Tribe's practical wisdom and their respect for the ocean's bounty, showing how they can transform simple ocean vegetation into a nourishing meal.
 
 ### Notable Uses

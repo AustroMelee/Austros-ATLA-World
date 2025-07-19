@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** A coconut-based cookie-shaped confection that showcases the Air Nomads' mastery of baking and their love for natural sweetness.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Macaroons are delicate, coconut-based cookies that exemplify the Air Nomads' exceptional baking skills and their appreciation for natural sweetness. These light, airy confections are made with care and precision, reflecting the Air Nomads' belief that even the simplest desserts can be elevated to art through skillful preparation. The cookies represent the perfect balance of texture and flavor, demonstrating how the Air Nomads could create satisfying treats without relying on complex ingredients or excessive sweetness.
 
 ### Notable Uses

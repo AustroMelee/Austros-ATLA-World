@@ -10,9 +10,12 @@ type: food
 **Region:** Fire Nation  
 **Description:** A spiced pastry that embodies the Fire Nation's love for heat and flavor, representing the nation's signature approach to baked goods.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Fire Cakes are a signature Fire Nation pastry that perfectly embodies the nation's love for heat and bold flavors. These spiced pastries showcase the Fire Nation's mastery of baking techniques combined with their signature approach to seasoning, creating treats that are both delicious and representative of the nation's culinary identity. The dish embodies the Fire Nation's philosophy that even simple baked goods can be elevated through the judicious use of spices and seasonings, creating foods that are both comforting and exciting.
 
 ### Notable Uses

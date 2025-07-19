@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** A general category of snacks sold at the Glacier Spirits Festival, representing Water Tribe festival food culture and their love for portable, delicious treats.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Fried Foods on Sticks is a general category of festival snacks that showcases the Water Tribe's love for portable, delicious treats and their ability to create satisfying food that can be enjoyed during celebrations and gatherings. These snacks represent the tribe's understanding that festival food should be both convenient and delightful, allowing people to enjoy the celebration while satisfying their hunger. The category embodies the Water Tribe's philosophy that food can enhance celebrations and bring people together in shared moments of joy.
 
 ### Notable Uses

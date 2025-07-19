@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** A typical Southern Water Tribe dish that showcases their innovative use of ocean resources and their ability to create satisfying meals from seaweed.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Seaweed Noodles are a distinctive Southern Water Tribe dish that demonstrates the tribe's exceptional creativity and their deep understanding of how to utilize ocean resources. This innovative dish transforms seaweed into noodle-like strands, creating a unique culinary experience that showcases the Water Tribe's ability to find nourishment and beauty in what might seem like simple ocean vegetation. The dish represents their philosophy of making the most of every available resource and their respect for the ocean's bounty.
 
 ### Notable Uses

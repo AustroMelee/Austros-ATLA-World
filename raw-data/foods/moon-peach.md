@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** A special fruit eaten whole with fresh cream, representing the Air Nomads' connection to natural cycles and celestial bodies.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Moon Peach is a unique fruit that holds special significance in Air Nomad culture, representing their deep connection to natural cycles and celestial bodies. This fruit is traditionally eaten whole with fresh cream, creating a simple yet profound culinary experience that embodies the Air Nomads' philosophy of appreciating natural gifts in their purest form. The dish represents the Air Nomads' belief that the most meaningful meals are those that connect us to the rhythms of nature and the cosmos.
 
 ### Notable Uses

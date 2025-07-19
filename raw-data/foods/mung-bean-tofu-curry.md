@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** A rich and creamy curry served over rice, featuring mung beans and tofu in a flavorful vegetarian sauce.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Mung Bean & Tofu Curry is a cornerstone of Air Nomad cuisine, embodying the nation's vegetarian philosophy and mastery of plant-based cooking. This rich and creamy curry combines protein-rich mung beans with delicate tofu in a flavorful sauce, served over a warm bed of rice. The dish represents the Air Nomads' commitment to non-violence and their sophisticated approach to vegetarian cuisine.
 
 ### Notable Uses

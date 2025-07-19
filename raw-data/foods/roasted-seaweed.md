@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** A simple, nutritious snack made from roasted seaweed, representing the Air Nomads' minimalist approach to food and their connection to natural resources.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Roasted Seaweed is a simple yet nutritious snack that perfectly embodies the Air Nomads' minimalist approach to food and their deep connection to natural resources. This uncomplicated dish demonstrates how the Air Nomads could create satisfying, healthy snacks using only the most basic ingredients and preparation methods. The snack represents their philosophy that the best foods are those that honor natural ingredients in their purest form.
 
 ### Notable Uses

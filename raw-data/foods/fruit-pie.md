@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** Baked pastries filled with fresh fruits like plums, representing the Air Nomads' mastery of baking and appreciation for natural sweetness.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Fruit Pie is a beloved dessert in Air Nomad cuisine, showcasing the nation's exceptional baking skills and their deep connection to nature. These delicate pastries are filled with fresh, seasonal fruits like plums, creating a perfect balance of natural sweetness and flaky pastry. The pies represent the Air Nomads' philosophy of harmony with nature and their ability to transform simple ingredients into elegant desserts.
 
 ### Notable Uses

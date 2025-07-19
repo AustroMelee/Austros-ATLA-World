@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** An emergency food source used by Southern Tribe warriors and adventurers, representing their innovative preservation techniques for survival situations.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Freeze-Dried Cucumberquats are an innovative emergency food source developed by the Southern Water Tribe for their warriors and adventurers. This preservation technique demonstrates the tribe's practical wisdom and their understanding of how to create lightweight, long-lasting food supplies for dangerous expeditions and survival situations. The dish represents the Water Tribe's commitment to ensuring their people can survive in the harshest conditions while maintaining access to essential nutrients.
 
 ### Notable Uses

@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** Crackers intended for flying bison but also edible for humans, representing the Air Nomads' deep connection to their animal companions and their philosophy of shared sustenance.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Sky Bison Biscuits are a unique food that embodies the Air Nomads' deep connection to their flying bison companions and their philosophy of shared sustenance. These crackers were originally created to nourish the flying bison that were essential to Air Nomad life, but they were also found to be perfectly suitable for human consumption. The dish represents the Air Nomads' belief that food can be a bridge between species and that caring for their animal companions is as important as caring for themselves.
 
 ### Notable Uses

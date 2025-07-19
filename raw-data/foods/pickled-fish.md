@@ -10,9 +10,12 @@ type: food
 **Region:** Water Tribe  
 **Description:** A common dish in the Northern Water Tribe, one of the first dishes Kanna entrusted Sokka to make on his own, representing the passing down of culinary traditions.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Pickled Fish is a traditional Northern Water Tribe dish that holds special significance as one of the first culinary tasks that Kanna entrusted to her grandson Sokka. This dish represents the important tradition of passing down cooking knowledge from one generation to the next, ensuring that Water Tribe culinary traditions continue to thrive. The pickling process demonstrates the tribe's mastery of food preservation techniques, essential for surviving the harsh polar climate.
 
 ### Notable Uses

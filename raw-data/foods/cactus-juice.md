@@ -10,9 +10,12 @@ type: food
 **Region:** Earth Kingdom  
 **Description:** A liquid from desert cacti with strong hallucinogenic properties, famously discovered and named by Sokka during his desert adventure.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Cactus Juice is a potent liquid extracted from desert cacti in the Earth Kingdom's arid regions, particularly the Si Wong Desert. This mysterious substance has strong hallucinogenic properties that can cause vivid hallucinations and altered states of consciousness. The drink was famously discovered and named by Sokka during his desert adventure, becoming a legendary tale of survival and unintended consequences.
 
 ### Notable Uses

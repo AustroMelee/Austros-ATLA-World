@@ -10,9 +10,12 @@ type: food
 **Region:** Fire Nation  
 **Description:** A simple rice-based snack that represents the Fire Nation's mastery of basic grain preparation and their appreciation for portable, satisfying foods.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Rice Ball is a fundamental Fire Nation snack that showcases the nation's mastery of basic grain preparation and their ability to create portable, satisfying foods. These simple rice balls represent the Fire Nation's understanding that even the most basic ingredients can be transformed into convenient and delicious snacks. The dish embodies the Fire Nation's philosophy that the best snacks are those that provide both nutrition and convenience, making them perfect for busy lifestyles and active pursuits.
 
 ### Notable Uses

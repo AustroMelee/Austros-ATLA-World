@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** A combination of rice and sweet fruits like dried mango and cucumberquat, designed to be adaptable for Air Nomad travels and nomadic lifestyle.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Sweet Rice is a versatile dish that perfectly embodies the Air Nomads' nomadic lifestyle and their ability to adapt to different environments. This dish combines rice with sweet fruits like dried mango and cucumberquat, creating a portable, nutritious meal that can be easily prepared and consumed during travels. The dish represents the Air Nomads' practical wisdom and their understanding of how to maintain a healthy diet while constantly on the move.
 
 ### Notable Uses

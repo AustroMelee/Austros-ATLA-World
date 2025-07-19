@@ -10,9 +10,12 @@ type: food
 **Region:** Air Nomads  
 **Description:** A traditional cake made from sweet red beans, showcasing the Air Nomads' mastery of plant-based desserts and their appreciation for natural sweetness.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Sweet Red Bean Cake is a traditional Air Nomad dessert that demonstrates their exceptional skill in creating satisfying sweets from plant-based ingredients. This cake combines the natural sweetness and nutritional benefits of red beans with the Air Nomads' baking expertise, creating a dessert that is both delicious and nourishing. The dish represents the Air Nomads' philosophy that desserts can be both indulgent and wholesome, providing both pleasure and sustenance.
 
 ### Notable Uses

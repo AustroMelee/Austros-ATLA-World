@@ -10,9 +10,12 @@ type: food
 **Region:** Fire Nation  
 **Description:** A staple food in Fire Nation cuisine, often served spicy and prepared using various cooking methods to showcase the nation's mastery of heat and flavor.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Noodles are a fundamental staple of Fire Nation cuisine, representing the nation's mastery of both simple and complex cooking techniques. These versatile strands of dough are prepared in countless ways throughout the Fire Nation, from simple boiled noodles to elaborate spicy preparations that showcase the nation's love of heat and flavor. The dish embodies the Fire Nation's philosophy that even the most basic ingredients can be transformed into something extraordinary through proper technique and the judicious use of spices and seasonings.
 
 ### Notable Uses

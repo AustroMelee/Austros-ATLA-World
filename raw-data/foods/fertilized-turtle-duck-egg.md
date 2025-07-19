@@ -10,9 +10,12 @@ type: food
 **Region:** Fire Nation  
 **Description:** A delicacy sometimes eaten as a snack by Fire Nation nobility, representing the nation's appreciation for rare and exotic ingredients.
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
-### Overview
+```md
+
+#
+```## Overview
 Fertilized Turtle Duck Egg is a rare delicacy in Fire Nation cuisine, representing the nation's appreciation for exotic and unique ingredients. This specialty snack is sometimes consumed by nobility in the Capital, showcasing the Fire Nation's willingness to experiment with unusual food sources and their appreciation for rare culinary experiences. The dish embodies the Fire Nation's philosophy that the most interesting foods often come from the most unexpected sources, and that culinary exploration can lead to unique and memorable dining experiences.
 
 ### Notable Uses
