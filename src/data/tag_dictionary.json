@@ -139,6 +139,13 @@
     "weight": 50,
     "description": ""
   },
+  "air_force": {
+    "displayName": "Air Force",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "air_nomads": {
     "displayName": "Air Nomads",
     "category": "general",
@@ -146,8 +153,36 @@
     "weight": 50,
     "description": ""
   },
+  "air_temples": {
+    "displayName": "Air Temples",
+    "category": "region",
+    "aliases": [],
+    "weight": 50,
+    "description": "All Air Nomad temples, including Eastern, Western, Northern, and Southern."
+  },
   "airbender": {
     "displayName": "Airbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "airbending": {
+    "displayName": "Airbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "all_air_temples": {
+    "displayName": "All Air Temples",
+    "category": "region",
+    "aliases": [],
+    "weight": 50,
+    "description": "All Air Nomad temples, including Eastern, Western, Northern, and Southern."
+  },
+  "allies": {
+    "displayName": "Allies",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -202,6 +237,13 @@
     "weight": 50,
     "description": ""
   },
+  "ancient": {
+    "displayName": "Ancient",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "androgynous_appearance": {
     "displayName": "Androgynous Appearance",
     "category": "general",
@@ -232,6 +274,13 @@
   },
   "antagonist": {
     "displayName": "Antagonist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "antagonists": {
+    "displayName": "Antagonists",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -279,6 +328,13 @@
     "weight": 50,
     "description": ""
   },
+  "archers": {
+    "displayName": "Archers",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "arena_fighter": {
     "displayName": "Arena Fighter",
     "category": "general",
@@ -288,6 +344,13 @@
   },
   "aristocracy": {
     "displayName": "Aristocracy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "army": {
+    "displayName": "Army",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -365,6 +428,13 @@
   },
   "avatar": {
     "displayName": "Avatar",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "avatar_aang": {
+    "displayName": "Avatar Aang",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -509,6 +579,13 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "beetles": {
+    "displayName": "Beetles",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to beetles as ingredients in foods and dishes."
   },
   "befriending_aang": {
     "displayName": "Befriending Aang",
@@ -874,6 +951,13 @@
     "weight": 50,
     "description": ""
   },
+  "cabbage": {
+    "displayName": "Cabbage",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to cabbage as an ingredient in foods and dishes."
+  },
   "cabbage_cart_destruction": {
     "displayName": "Cabbage Cart Destruction",
     "category": "general",
@@ -923,8 +1007,36 @@
     "weight": 50,
     "description": ""
   },
+  "carrot": {
+    "displayName": "Carrot",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to carrot as an ingredient in foods and dishes."
+  },
   "carved_betrothal_necklace": {
     "displayName": "Carved Betrothal Necklace",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "cavalry": {
+    "displayName": "Cavalry",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "celebrations": {
+    "displayName": "Celebrations",
+    "category": "occasion",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to celebrations, festivals, and special occasions in the Avatar universe."
+  },
+  "ceremonial": {
+    "displayName": "Ceremonial",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -957,6 +1069,13 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "chayote": {
+    "displayName": "Chayote",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to chayote as an ingredient in foods and dishes."
   },
   "cheerful": {
     "displayName": "Cheerful",
@@ -1357,6 +1476,13 @@
     "weight": 50,
     "description": ""
   },
+  "daily_meals": {
+    "displayName": "Daily Meals",
+    "category": "occasion",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to regular daily meals and eating routines in the Avatar universe."
+  },
   "dance_partner": {
     "displayName": "Dance Partner",
     "category": "general",
@@ -1504,6 +1630,13 @@
     "weight": 50,
     "description": ""
   },
+  "desert": {
+    "displayName": "Desert",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "deserter": {
     "displayName": "Deserter",
     "category": "general",
@@ -1609,6 +1742,13 @@
     "weight": 50,
     "description": ""
   },
+  "dumplings": {
+    "displayName": "Dumplings",
+    "category": "food",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "dutiful": {
     "displayName": "Dutiful",
     "category": "general",
@@ -1646,6 +1786,13 @@
   },
   "earthbender": {
     "displayName": "Earthbender",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "earthbending": {
+    "displayName": "Earthbending",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -1720,6 +1867,55 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "elder_wisdom": {
+    "displayName": "Elder Wisdom",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to wisdom, knowledge, and guidance from elders in the Avatar universe."
+  },
+  "elite": {
+    "displayName": "Elite",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "elite_culture": {
+    "displayName": "Elite Culture",
+    "category": "culture",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to elite, high-class, or aristocratic culture and society in the Avatar universe."
+  },
+  "elite_dining": {
+    "displayName": "Elite Dining",
+    "category": "occasion",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to high-class dining experiences and elite culinary culture in the Avatar universe."
+  },
+  "elite_districts": {
+    "displayName": "Elite Districts",
+    "category": "location",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to elite, high-class, or wealthy districts and areas in the Avatar universe."
+  },
+  "elite_occasions": {
+    "displayName": "Elite Occasions",
+    "category": "occasion",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to elite, high-class, or prestigious occasions and events in the Avatar universe."
+  },
+  "elite_only": {
+    "displayName": "Elite Only",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to items, services, or experiences available exclusively to the elite class in the Avatar universe."
   },
   "embittered": {
     "displayName": "Embittered",
@@ -1819,6 +2015,13 @@
     "weight": 50,
     "description": ""
   },
+  "expensive": {
+    "displayName": "Expensive",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to expensive, costly, or high-value items in the Avatar universe."
+  },
   "f": {
     "displayName": "F",
     "category": "general",
@@ -1826,155 +2029,106 @@
     "weight": 50,
     "description": ""
   },
-  "face_bending": {
-    "displayName": "Face Bending",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
   "fall_of_ba_sing_se": {
     "displayName": "Fall Of Ba Sing Se",
-    "category": "general",
+    "category": "event",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to the fall or conquest of Ba Sing Se in the Avatar universe."
   },
-  "family_loyalty": {
-    "displayName": "Family Loyalty",
-    "category": "general",
+  "family": {
+    "displayName": "Family",
+    "category": "theme",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to family relationships, bonds, and family-oriented activities in the Avatar universe."
   },
-  "father_of_azula": {
-    "displayName": "Father Of Azula",
-    "category": "general",
+  "family_cooking": {
+    "displayName": "Family Cooking",
+    "category": "occasion",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to cooking activities and meals prepared with family involvement in the Avatar universe."
   },
-  "father_of_azulon": {
-    "displayName": "Father Of Azulon",
-    "category": "general",
+  "family_homes": {
+    "displayName": "Family Homes",
+    "category": "location",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to family residences and domestic settings in the Avatar universe."
   },
-  "father_of_houting": {
-    "displayName": "Father Of Houting",
-    "category": "general",
+  "family_life": {
+    "displayName": "Family Life",
+    "category": "theme",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to family relationships, dynamics, and daily life within families in the Avatar universe."
+  },
+  "family_meals": {
+    "displayName": "Family Meals",
+    "category": "occasion",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to meals shared with family members in the Avatar universe."
+  },
+  "family_secret": {
+    "displayName": "Family Secret",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to family secrets, hidden knowledge, or private family traditions in the Avatar universe."
+  },
+  "family_tradition": {
+    "displayName": "Family Tradition",
+    "category": "culture",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to traditions, practices, or customs passed down within families in the Avatar universe."
   },
   "father_of_iroh": {
     "displayName": "Father Of Iroh",
-    "category": "general",
+    "category": "relationship",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "father_of_katara": {
-    "displayName": "Father Of Katara",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "father_of_lau_ganlan": {
-    "displayName": "Father Of Lau Ganlan",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "father_of_lu_ten": {
-    "displayName": "Father Of Lu Ten",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters who are the father of Iroh in the Avatar universe."
   },
   "father_of_ozai": {
     "displayName": "Father Of Ozai",
-    "category": "general",
+    "category": "relationship",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "father_of_sokka": {
-    "displayName": "Father Of Sokka",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "father_of_toph": {
-    "displayName": "Father Of Toph",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters who are the father of Ozai in the Avatar universe."
   },
   "father_of_yue": {
     "displayName": "Father Of Yue",
-    "category": "general",
+    "category": "relationship",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "father_of_zuko": {
-    "displayName": "Father Of Zuko",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters who are the father of Yue in the Avatar universe."
   },
   "favoritism": {
     "displayName": "Favoritism",
-    "category": "general",
+    "category": "behavior",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to favoritism or preferential treatment in the Avatar universe."
   },
   "fearful": {
     "displayName": "Fearful",
-    "category": "general",
+    "category": "emotion",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to characters or entities who exhibit fear or anxiety in the Avatar universe."
   },
   "female": {
     "displayName": "Female",
-    "category": "general",
+    "category": "gender",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to female characters in the Avatar universe."
   },
-  "fighter": {
-    "displayName": "Fighter",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "figurehead": {
-    "displayName": "Figurehead",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "final_boss": {
-    "displayName": "Final Boss",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "fire_lord": {
-    "displayName": "Fire Lord",
+  "female_fighters": {
+    "displayName": "Female Fighters",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -1987,183 +2141,71 @@
     "weight": 50,
     "description": ""
   },
-  "fire_nation_circus": {
-    "displayName": "Fire Nation Circus",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "fire_nation_navy": {
-    "displayName": "Fire Nation Navy",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "fire_nation_nobility": {
-    "displayName": "Fire Nation Nobility",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "fire_nation_prisoner": {
-    "displayName": "Fire Nation Prisoner",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "fire_nation_royal_family": {
-    "displayName": "Fire Nation Royal Family",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
   "fire_nation_royalty": {
     "displayName": "Fire Nation Royalty",
-    "category": "general",
+    "category": "status",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "fire_nation_school": {
-    "displayName": "Fire Nation School",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to members of the Fire Nation royal family in the Avatar universe."
   },
   "firebender": {
     "displayName": "Firebender",
+    "category": "bending",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to characters or entities capable of firebending in the Avatar universe."
+  },
+  "firebending": {
+    "displayName": "Firebending",
     "category": "general",
     "aliases": [],
     "weight": 50,
     "description": ""
   },
-  "firebending_master": {
-    "displayName": "Firebending Master",
-    "category": "general",
+  "fire_lord": {
+    "displayName": "Fire Lord",
+    "category": "title",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to the title of Fire Lord, the ruler of the Fire Nation in the Avatar universe."
+  },
+  "fire_nation_royal_family": {
+    "displayName": "Fire Nation Royal Family",
+    "category": "status",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to members of the Fire Nation royal family in the Avatar universe."
   },
   "firebending_prodigy": {
     "displayName": "Firebending Prodigy",
-    "category": "general",
+    "category": "ability",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "firebreath": {
-    "displayName": "Firebreath",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "first_deserter": {
-    "displayName": "First Deserter",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "first_earth_king_to_leave_ba_sing_se": {
-    "displayName": "First Earth King To Leave Ba Sing Se",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "first_love_yue": {
-    "displayName": "First Love Yue",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters who are exceptionally skilled in firebending at a young age."
   },
   "flight": {
     "displayName": "Flight",
-    "category": "general",
+    "category": "ability",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to the ability to fly or aerial movement in the Avatar universe."
   },
-  "florist": {
-    "displayName": "Florist",
-    "category": "general",
+  "flying_bison_meat": {
+    "displayName": "Flying Bison Meat",
+    "category": "ingredient",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "fog_of_lost_souls": {
-    "displayName": "Fog Of Lost Souls",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "foggy_swamp": {
-    "displayName": "Foggy Swamp",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "follower_of_jet": {
-    "displayName": "Follower Of Jet",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "foodloving": {
-    "displayName": "Foodloving",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "forgave_zuko": {
-    "displayName": "Forgave Zuko",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "forged_space_sword": {
-    "displayName": "Forged Space Sword",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to meat from flying bison, a rare and valuable ingredient in the Avatar universe."
   },
   "fortuneteller": {
     "displayName": "Fortuneteller",
-    "category": "general",
+    "category": "occupation",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to characters who practice fortune telling or divination in the Avatar universe."
   },
-  "found_by_zuko": {
-    "displayName": "Found By Zuko",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "found_his_mother": {
-    "displayName": "Found His Mother",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "founder": {
-    "displayName": "Founder",
+  "four_nations": {
+    "displayName": "Four Nations",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -2171,227 +2213,66 @@
   },
   "freed_by_zuko": {
     "displayName": "Freed By Zuko",
-    "category": "general",
+    "category": "event",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "freedom_fighter": {
-    "displayName": "Freedom Fighter",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "freedom_fighters": {
-    "displayName": "Freedom Fighters",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend": {
-    "displayName": "Friend",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_aang": {
-    "displayName": "Friend Of Aang",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_azula_former": {
-    "displayName": "Friend Of Azula Former",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_gyatso": {
-    "displayName": "Friend Of Gyatso",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_kanna": {
-    "displayName": "Friend Of Kanna",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_katara": {
-    "displayName": "Friend Of Katara",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_mai": {
-    "displayName": "Friend Of Mai",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters or entities who were freed or rescued by Zuko in the Avatar universe."
   },
   "friend_of_momo": {
     "displayName": "Friend Of Momo",
-    "category": "general",
+    "category": "relationship",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "friend_of_nini": {
-    "displayName": "Friend Of Nini",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_roku": {
-    "displayName": "Friend Of Roku",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_smellerbee": {
-    "displayName": "Friend Of Smellerbee",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters who are friends with Momo in the Avatar universe."
   },
   "friend_of_sokka": {
     "displayName": "Friend Of Sokka",
-    "category": "general",
+    "category": "relationship",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "friend_of_susu": {
-    "displayName": "Friend Of Susu",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_teo_and_the_duke": {
-    "displayName": "Friend Of Teo And The Duke",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_the_avatar": {
-    "displayName": "Friend Of The Avatar",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "friend_of_the_duke": {
-    "displayName": "Friend Of The Duke",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters who are friends with Sokka in the Avatar universe."
   },
   "friend_of_ty_lee": {
     "displayName": "Friend Of Ty Lee",
-    "category": "general",
+    "category": "relationship",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to characters who are friends with Ty Lee in the Avatar universe."
   },
-  "friendly": {
-    "displayName": "Friendly",
-    "category": "general",
+  "foodloving": {
+    "displayName": "Food Loving",
+    "category": "trait",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "from_entertainer_to_patriot": {
-    "displayName": "From Entertainer To Patriot",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "from_follower_to_coleader": {
-    "displayName": "From Follower To Coleader",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "from_follower_to_friend": {
-    "displayName": "From Follower To Friend",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "from_outcast_to_leader": {
-    "displayName": "From Outcast To Leader",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "from_unlucky_vendor_to_mogul": {
-    "displayName": "From Unlucky Vendor To Mogul",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters who have a strong love or appreciation for food in the Avatar universe."
   },
   "from_wild_to_royal_pet": {
     "displayName": "From Wild To Royal Pet",
-    "category": "general",
+    "category": "transformation",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to characters or entities who transformed from wild animals to royal pets in the Avatar universe."
+  },
+  "from_entertainer_to_patriot": {
+    "displayName": "From Entertainer To Patriot",
+    "category": "transformation",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to characters who transformed from entertainers to patriots in the Avatar universe."
+  },
+  "immortalized_in_republic_city": {
+    "displayName": "Immortalized In Republic City",
+    "category": "legacy",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to characters or entities who were immortalized or memorialized in Republic City in the Avatar universe."
   },
   "frozen_in_iceberg": {
     "displayName": "Frozen In Iceberg",
-    "category": "general",
+    "category": "event",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "fruit_pie_attack": {
-    "displayName": "Fruit Pie Attack",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "fruit_pie_attacks": {
-    "displayName": "Fruit Pie Attacks",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "fugitive": {
-    "displayName": "Fugitive",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "g": {
-    "displayName": "G",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters or entities who were frozen in an iceberg in the Avatar universe."
   },
   "gaoling": {
     "displayName": "Gaoling",
@@ -2427,6 +2308,13 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "ginger": {
+    "displayName": "Ginger",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to ginger as an ingredient in foods and beverages."
   },
   "girl": {
     "displayName": "Girl",
@@ -2526,6 +2414,13 @@
     "weight": 50,
     "description": ""
   },
+  "grandma_lokai": {
+    "displayName": "Grandma Lokai",
+    "category": "character",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to Grandma Lokai, a character in the Avatar universe."
+  },
   "grandmother": {
     "displayName": "Grandmother",
     "category": "general",
@@ -2582,6 +2477,13 @@
     "weight": 50,
     "description": ""
   },
+  "guerrilla_warfare": {
+    "displayName": "Guerrilla Warfare",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "guide_to_team_avatar": {
     "displayName": "Guide To Team Avatar",
     "category": "general",
@@ -2617,6 +2519,13 @@
     "weight": 50,
     "description": ""
   },
+  "hand_folded": {
+    "displayName": "Hand Folded",
+    "category": "technique",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to foods that are manually folded or shaped by hand during preparation."
+  },
   "handtohand_combat": {
     "displayName": "Handtohand Combat",
     "category": "general",
@@ -2630,6 +2539,13 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "harmony": {
+    "displayName": "Harmony",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to balance, peace, and harmonious relationships in the Avatar universe."
   },
   "harmony_restoration_movement": {
     "displayName": "Harmony Restoration Movement",
@@ -2785,6 +2701,13 @@
     "weight": 50,
     "description": ""
   },
+  "heroes": {
+    "displayName": "Heroes",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "hidden_heart_of_gold": {
     "displayName": "Hidden Heart Of Gold",
     "category": "general",
@@ -2806,6 +2729,13 @@
     "weight": 50,
     "description": ""
   },
+  "home_cooking": {
+    "displayName": "Home Cooking",
+    "category": "occasion",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to home-cooked meals and family-style cooking in the Avatar universe."
+  },
   "honorable": {
     "displayName": "Honorable",
     "category": "general",
@@ -2813,152 +2743,40 @@
     "weight": 50,
     "description": ""
   },
-  "hook_swords": {
-    "displayName": "Hook Swords",
-    "category": "general",
+  "hospitality": {
+    "displayName": "Hospitality",
+    "category": "culture",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "hope": {
-    "displayName": "Hope",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "hopeful": {
-    "displayName": "Hopeful",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "houting_dynasty": {
-    "displayName": "Houting Dynasty",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "humanitarian": {
-    "displayName": "Humanitarian",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "humble": {
-    "displayName": "Humble",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "humorous": {
-    "displayName": "Humorous",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "hundred_year_war": {
-    "displayName": "Hundred Year War",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to welcoming guests, providing comfort, and hosting practices in the Avatar universe."
   },
   "hunted_her_mother": {
     "displayName": "Hunted Her Mother",
-    "category": "general",
+    "category": "action",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to characters who hunted or pursued their mother in the Avatar universe."
   },
-  "hunted_iroh": {
-    "displayName": "Hunted Iroh",
-    "category": "general",
+  "hundred_year_war": {
+    "displayName": "Hundred Year War",
+    "category": "event",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to the Hundred Year War between the Fire Nation and the other nations in the Avatar universe."
   },
   "hunted_the_avatar": {
     "displayName": "Hunted The Avatar",
-    "category": "general",
+    "category": "action",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to characters who hunted or pursued the Avatar in the Avatar universe."
   },
   "husband": {
     "displayName": "Husband",
-    "category": "general",
+    "category": "relationship",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "husband_of_kanna": {
-    "displayName": "Husband Of Kanna",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "husband_of_kya": {
-    "displayName": "Husband Of Kya",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "husband_of_poppy": {
-    "displayName": "Husband Of Poppy",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "husband_of_ursa": {
-    "displayName": "Husband Of Ursa",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "i": {
-    "displayName": "I",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "ice_bending": {
-    "displayName": "Ice Bending",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "identity_amnesia": {
-    "displayName": "Identity Amnesia",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "immortalized_in_republic_city": {
-    "displayName": "Immortalized In Republic City",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "impulsive": {
-    "displayName": "Impulsive",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters who are husbands in the Avatar universe."
   },
   "innocent": {
     "displayName": "Innocent",
@@ -3212,6 +3030,13 @@
     "weight": 50,
     "description": ""
   },
+  "komodo_rhino": {
+    "displayName": "Komodo Rhino",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "kyoshi_island": {
     "displayName": "Kyoshi Island",
     "category": "general",
@@ -3387,6 +3212,20 @@
     "weight": 50,
     "description": ""
   },
+  "local_ingredients": {
+    "displayName": "Local Ingredients",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to ingredients that are sourced locally or regionally in the Avatar universe."
+  },
+  "local_vegetables": {
+    "displayName": "Local Vegetables",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to locally grown or sourced vegetables in the Avatar universe."
+  },
   "longestreigning_fire_lord": {
     "displayName": "Longestreigning Fire Lord",
     "category": "general",
@@ -3471,6 +3310,34 @@
     "weight": 50,
     "description": ""
   },
+  "luxury": {
+    "displayName": "Luxury",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to luxury, premium, or high-end items and experiences in the Avatar universe."
+  },
+  "luxury_dining": {
+    "displayName": "Luxury Dining",
+    "category": "occasion",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to luxury dining experiences and high-end culinary culture in the Avatar universe."
+  },
+  "luxury_ingredients": {
+    "displayName": "Luxury Ingredients",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to luxury, premium, or high-end ingredients used in cooking and food preparation."
+  },
+  "luxury_life": {
+    "displayName": "Luxury Life",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to luxury lifestyle, opulence, and high-end living in the Avatar universe."
+  },
   "m": {
     "displayName": "M",
     "category": "general",
@@ -3487,6 +3354,13 @@
   },
   "main_antagonist_book_1": {
     "displayName": "Main Antagonist Book 1",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "main_characters": {
+    "displayName": "Main Characters",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -3660,6 +3534,13 @@
     "weight": 50,
     "description": ""
   },
+  "masters": {
+    "displayName": "Masters",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "maternal_wisdom": {
     "displayName": "Maternal Wisdom",
     "category": "general",
@@ -3687,6 +3568,13 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "meditation": {
+    "displayName": "Meditation",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to meditation practices and contemplative activities in the Avatar universe."
   },
   "megalomaniacal": {
     "displayName": "Megalomaniacal",
@@ -3807,6 +3695,13 @@
     "weight": 50,
     "description": ""
   },
+  "mindfulness": {
+    "displayName": "Mindfulness",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to awareness, presence, and mindful practices in the Avatar universe."
+  },
   "minor_antagonist": {
     "displayName": "Minor Antagonist",
     "category": "general",
@@ -3842,12 +3737,26 @@
     "weight": 50,
     "description": ""
   },
+  "monastic": {
+    "displayName": "Monastic",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "monk": {
     "displayName": "Monk",
     "category": "general",
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "monk_culture": {
+    "displayName": "Monk Culture",
+    "category": "culture",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to the cultural practices, traditions, and way of life of monks in the Avatar universe."
   },
   "monster_of_the_week": {
     "displayName": "Monster Of The Week",
@@ -3947,6 +3856,13 @@
     "weight": 50,
     "description": ""
   },
+  "mountain_regions": {
+    "displayName": "Mountain Regions",
+    "category": "environment",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to mountainous areas and high-altitude regions in the Avatar universe."
+  },
   "multiple_joo_dees": {
     "displayName": "Multiple Joo Dees",
     "category": "general",
@@ -4017,6 +3933,13 @@
     "weight": 50,
     "description": ""
   },
+  "natural": {
+    "displayName": "Natural",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to natural, organic, or unprocessed elements in the Avatar universe."
+  },
   "naval_commander": {
     "displayName": "Naval Commander",
     "category": "general",
@@ -4024,8 +3947,22 @@
     "weight": 50,
     "description": ""
   },
+  "navy": {
+    "displayName": "Navy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "nephew_of_iroh": {
     "displayName": "Nephew Of Iroh",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "neutral": {
+    "displayName": "Neutral",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -4059,6 +3996,20 @@
     "weight": 50,
     "description": ""
   },
+  "nomads": {
+    "displayName": "Nomads",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "non-benders": {
+    "displayName": "Non-Benders",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "nonbender": {
     "displayName": "Nonbender",
     "category": "general",
@@ -4075,6 +4026,13 @@
   },
   "nonbender_mortal": {
     "displayName": "Nonbender Mortal",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "nonbenders": {
+    "displayName": "Nonbenders",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -4276,6 +4234,13 @@
     "weight": 50,
     "description": ""
   },
+  "pai_sho": {
+    "displayName": "Pai Sho",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "painted_lady": {
     "displayName": "Painted Lady",
     "category": "general",
@@ -4318,6 +4283,13 @@
     "weight": 50,
     "description": ""
   },
+  "passed_down": {
+    "displayName": "Passed Down",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to knowledge, traditions, or practices that are passed down through generations in the Avatar universe."
+  },
   "passionate_internally": {
     "displayName": "Passionate Internally",
     "category": "general",
@@ -4338,6 +4310,13 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "peace": {
+    "displayName": "Peace",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to peaceful states, tranquility, and non-violent approaches in the Avatar universe."
   },
   "peacemaker": {
     "displayName": "Peacemaker",
@@ -4411,6 +4390,13 @@
   },
   "philosopher": {
     "displayName": "Philosopher",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "philosophy": {
+    "displayName": "Philosophy",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -4528,6 +4514,13 @@
     "weight": 50,
     "description": ""
   },
+  "premium": {
+    "displayName": "Premium",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to premium, high-quality, or top-tier items in the Avatar universe."
+  },
   "pride_before_a_fall": {
     "displayName": "Pride Before A Fall",
     "category": "general",
@@ -4621,6 +4614,13 @@
   },
   "protagonist": {
     "displayName": "Protagonist",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "protagonists": {
+    "displayName": "Protagonists",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -4731,6 +4731,13 @@
     "weight": 50,
     "description": ""
   },
+  "rare_ingredient": {
+    "displayName": "Rare Ingredient",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to rare, hard-to-find, or uncommon ingredients in the Avatar universe."
+  },
   "rarely_speaks": {
     "displayName": "Rarely Speaks",
     "category": "general",
@@ -4766,6 +4773,13 @@
     "weight": 50,
     "description": ""
   },
+  "rebels": {
+    "displayName": "Rebels",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "reconciled_with_family": {
     "displayName": "Reconciled With Family",
     "category": "general",
@@ -4775,13 +4789,6 @@
   },
   "recurring_character": {
     "displayName": "Recurring Character",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "recurring_gag": {
-    "displayName": "Recurring Gag",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -5039,6 +5046,13 @@
     "weight": 50,
     "description": ""
   },
+  "rural_areas": {
+    "displayName": "Rural Areas",
+    "category": "location",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to rural, countryside, or agricultural areas in the Avatar universe."
+  },
   "ruthless": {
     "displayName": "Ruthless",
     "category": "general",
@@ -5109,6 +5123,13 @@
     "weight": 50,
     "description": ""
   },
+  "sandbenders": {
+    "displayName": "Sandbenders",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "sarcastic": {
     "displayName": "Sarcastic",
     "category": "general",
@@ -5158,8 +5179,22 @@
     "weight": 50,
     "description": ""
   },
+  "secret_police": {
+    "displayName": "Secret Police",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "secret_ruler": {
     "displayName": "Secret Ruler",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "secret_society": {
+    "displayName": "Secret Society",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -5270,6 +5305,13 @@
     "weight": 50,
     "description": ""
   },
+  "simple": {
+    "displayName": "Simple",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to simple, uncomplicated, or minimalist approaches in the Avatar universe."
+  },
   "sister_of_mura": {
     "displayName": "Sister Of Mura",
     "category": "general",
@@ -5293,73 +5335,24 @@
   },
   "six_legs": {
     "displayName": "Six Legs",
-    "category": "general",
+    "category": "physical",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "skilled_at_shurikenjutsu": {
-    "displayName": "Skilled At Shurikenjutsu",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to characters or entities with six legs in the Avatar universe."
   },
   "sky_bison": {
     "displayName": "Sky Bison",
-    "category": "general",
+    "category": "species",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Related to sky bison, a species of flying bison in the Avatar universe."
   },
-  "smitten": {
-    "displayName": "Smitten",
-    "category": "general",
+  "social_hierarchy": {
+    "displayName": "Social Hierarchy",
+    "category": "theme",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "smug_snake": {
-    "displayName": "Smug Snake",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "sokkas_father": {
-    "displayName": "Sokkas Father",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "sokkas_first_girlfriend": {
-    "displayName": "Sokkas First Girlfriend",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "son_of_azulon": {
-    "displayName": "Son Of Azulon",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "son_of_hakoda": {
-    "displayName": "Son Of Hakoda",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "son_of_kanna": {
-    "displayName": "Son Of Kanna",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Related to social class, hierarchy, and status differences in the Avatar universe."
   },
   "son_of_ozai": {
     "displayName": "Son Of Ozai",
@@ -5388,6 +5381,20 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "sophisticated": {
+    "displayName": "Sophisticated",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to sophisticated, refined, or elegant items and experiences in the Avatar universe."
+  },
+  "soup": {
+    "displayName": "Soup",
+    "category": "food_type",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to soup dishes and liquid-based meals in the Avatar universe."
   },
   "southern_air_temple": {
     "displayName": "Southern Air Temple",
@@ -5433,6 +5440,13 @@
   },
   "space_sword": {
     "displayName": "Space Sword",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "special_forces": {
+    "displayName": "Special Forces",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -5543,12 +5557,47 @@
     "weight": 50,
     "description": ""
   },
+  "status": {
+    "displayName": "Status",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to status, condition, or state of being in the Avatar universe."
+  },
+  "status_symbol": {
+    "displayName": "Status Symbol",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to status symbols, prestige items, or markers of social standing in the Avatar universe."
+  },
   "statusseeker": {
     "displayName": "Statusseeker",
     "category": "general",
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "steak": {
+    "displayName": "Steak",
+    "category": "food_type",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to steak dishes and meat cuts in the Avatar universe."
+  },
+  "steamed": {
+    "displayName": "Steamed",
+    "category": "food",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "steamed_preparation": {
+    "displayName": "Steamed Preparation",
+    "category": "technique",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to foods that are prepared using steam cooking methods."
   },
   "stepgrandfather_of_sokka": {
     "displayName": "Stepgrandfather Of Sokka",
@@ -5851,6 +5900,20 @@
     "weight": 50,
     "description": ""
   },
+  "temple": {
+    "displayName": "Temple",
+    "category": "location",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to temples and sacred places in the Avatar universe."
+  },
+  "temple_life": {
+    "displayName": "Temple Life",
+    "category": "culture",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to daily life, routines, and activities within temples in the Avatar universe."
+  },
   "ten_tons": {
     "displayName": "Ten Tons",
     "category": "general",
@@ -6089,6 +6152,13 @@
     "weight": 50,
     "description": ""
   },
+  "the_waterbending_master": {
+    "displayName": "The Waterbending Master",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "the_western_air_temple": {
     "displayName": "The Western Air Temple",
     "category": "general",
@@ -6098,13 +6168,6 @@
   },
   "the_wise_old_man": {
     "displayName": "The Wise Old Man",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "the_waterbending_master": {
-    "displayName": "The Waterbending Master",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -6138,12 +6201,33 @@
     "weight": 50,
     "description": ""
   },
+  "tradition": {
+    "displayName": "Tradition",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to traditional practices, customs, and cultural heritage in the Avatar universe."
+  },
   "traditional": {
     "displayName": "Traditional",
     "category": "general",
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "traditional_cooking": {
+    "displayName": "Traditional Cooking",
+    "category": "technique",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to traditional cooking methods and techniques passed down through generations."
+  },
+  "traditions": {
+    "displayName": "Traditions",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to cultural traditions, customs, and practices in the Avatar universe."
   },
   "tragic_hero": {
     "displayName": "Tragic Hero",
@@ -6154,13 +6238,6 @@
   },
   "tragic_love_interest": {
     "displayName": "Tragic Love Interest",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "tragic_past": {
-    "displayName": "Tragic Past",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -6179,6 +6256,13 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "training": {
+    "displayName": "Training",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to training, learning, or educational activities in the Avatar universe."
   },
   "traitor": {
     "displayName": "Traitor",
@@ -6210,6 +6294,13 @@
   },
   "tribal_leaders_family": {
     "displayName": "Tribal Leaders Family",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "tribe": {
+    "displayName": "Tribe",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -6305,6 +6396,20 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "upper_ring": {
+    "displayName": "Upper Ring",
+    "category": "location",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to the Upper Ring of Ba Sing Se, the wealthiest and most prestigious area of the city."
+  },
+  "upper_ring_exclusive": {
+    "displayName": "Upper Ring Exclusive",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to exclusive, high-end items and experiences available only in the Upper Ring of Ba Sing Se."
   },
   "usurped_the_throne": {
     "displayName": "Usurped The Throne",
@@ -6509,6 +6614,13 @@
     "weight": 50,
     "description": ""
   },
+  "warriors": {
+    "displayName": "Warriors",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "was_never_a_player": {
     "displayName": "Was Never A Player",
     "category": "general",
@@ -6543,6 +6655,20 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "waterbending": {
+    "displayName": "Waterbending",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wealth": {
+    "displayName": "Wealth",
+    "category": "property",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to wealth, riches, and financial prosperity in the Avatar universe."
   },
   "wears_a_queue": {
     "displayName": "Wears A Queue",
@@ -6600,6 +6726,13 @@
     "weight": 50,
     "description": ""
   },
+  "wife_of_kya": {
+    "displayName": "Wife Of Kya",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
   "wife_of_noren": {
     "displayName": "Wife Of Noren",
     "category": "general",
@@ -6609,6 +6742,20 @@
   },
   "wife_of_ozai": {
     "displayName": "Wife Of Ozai",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wife_of_poppy": {
+    "displayName": "Wife Of Poppy",
+    "category": "general",
+    "aliases": [],
+    "weight": 50,
+    "description": ""
+  },
+  "wife_of_ursa": {
+    "displayName": "Wife Of Ursa",
     "category": "general",
     "aliases": [],
     "weight": 50,
@@ -6627,6 +6774,13 @@
     "aliases": [],
     "weight": 50,
     "description": ""
+  },
+  "wisdom": {
+    "displayName": "Wisdom",
+    "category": "theme",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to wisdom, knowledge, and learned insights in the Avatar universe."
   },
   "wise": {
     "displayName": "Wise",
@@ -6677,6 +6831,13 @@
     "weight": 50,
     "description": ""
   },
+  "worms": {
+    "displayName": "Worms",
+    "category": "ingredient",
+    "aliases": [],
+    "weight": 50,
+    "description": "Related to worms as ingredients in foods and dishes."
+  },
   "wrestler": {
     "displayName": "Wrestler",
     "category": "general",
@@ -6726,305 +6887,88 @@
     "weight": 50,
     "description": ""
   },
-  "earthbending": {
-    "displayName": "Earthbending",
-    "category": "general",
+  "soups_stews": {
+    "displayName": "Soups & Stews",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "firebending": {
-    "displayName": "Firebending",
-    "category": "general",
+  "noodles_dumplings": {
+    "displayName": "Noodles & Dumplings",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "waterbending": {
-    "displayName": "Waterbending",
-    "category": "general",
+  "baked_goods_pastries": {
+    "displayName": "Baked Goods & Pastries",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "airbending": {
-    "displayName": "Airbending",
-    "category": "general",
+  "cookies_biscuits": {
+    "displayName": "Cookies & Biscuits",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "secret_police": {
-    "displayName": "Secret Police",
-    "category": "general",
+  "cakes_decadent_desserts": {
+    "displayName": "Cakes & Decadent Desserts",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "antagonists": {
-    "displayName": "Antagonists",
-    "category": "general",
+  "roasted_grilled_meats": {
+    "displayName": "Roasted & Grilled Meats",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "elite": {
-    "displayName": "Elite",
-    "category": "general",
+  "seafood_fish": {
+    "displayName": "Seafood & Fish",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "military": {
-    "displayName": "Military",
-    "category": "general",
+  "vegetarian_dishes": {
+    "displayName": "Vegetarian Dishes",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "army": {
-    "displayName": "Army",
-    "category": "general",
+  "street_food_snacks": {
+    "displayName": "Street Food & Snacks",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "navy": {
-    "displayName": "Navy",
-    "category": "general",
+  "spicy_foods": {
+    "displayName": "Spicy Foods",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "air_force": {
-    "displayName": "Air Force",
-    "category": "general",
+  "teas_juices": {
+    "displayName": "Teas & Juices",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   },
-  "fire_nation": {
-    "displayName": "Fire Nation",
-    "category": "general",
+  "preserved_travel_foods": {
+    "displayName": "Preserved & Travel Foods",
+    "category": "food_category",
     "aliases": [],
     "weight": 50,
-    "description": ""
-  },
-  "earth_kingdom": {
-    "displayName": "Earth Kingdom",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "water_tribe": {
-    "displayName": "Water Tribe",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "rebels": {
-    "displayName": "Rebels",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "resistance": {
-    "displayName": "Resistance",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "guerrilla_warfare": {
-    "displayName": "Guerrilla Warfare",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "warriors": {
-    "displayName": "Warriors",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "non-benders": {
-    "displayName": "Non-Benders",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "kyoshi_island": {
-    "displayName": "Kyoshi Island",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "allies": {
-    "displayName": "Allies",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "female_fighters": {
-    "displayName": "Female Fighters",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "nonbenders": {
-    "displayName": "Nonbenders",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "secret_society": {
-    "displayName": "Secret Society",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "philosophy": {
-    "displayName": "Philosophy",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "masters": {
-    "displayName": "Masters",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "pai_sho": {
-    "displayName": "Pai Sho",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "neutral": {
-    "displayName": "Neutral",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "ancient": {
-    "displayName": "Ancient",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "cavalry": {
-    "displayName": "Cavalry",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "komodo_rhino": {
-    "displayName": "Komodo Rhino",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "tribe": {
-    "displayName": "Tribe",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "sandbenders": {
-    "displayName": "Sandbenders",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "desert": {
-    "displayName": "Desert",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "nomads": {
-    "displayName": "Nomads",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "special_forces": {
-    "displayName": "Special Forces",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "navy": {
-    "displayName": "Navy",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "protagonists": {
-    "displayName": "Protagonists",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "main_characters": {
-    "displayName": "Main Characters",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "four_nations": {
-    "displayName": "Four Nations",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "heroes": {
-    "displayName": "Heroes",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "avatar_aang": {
-    "displayName": "Avatar Aang",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
-  },
-  "archers": {
-    "displayName": "Archers",
-    "category": "general",
-    "aliases": [],
-    "weight": 50,
-    "description": ""
+    "description": "Food category for filtering and organization"
   }
 }

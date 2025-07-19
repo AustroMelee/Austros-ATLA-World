@@ -160,6 +160,14 @@ export function HomeContainer() {
           }
         }
         
+        // Check food categories
+        if (activeCoreFilter === 'foods') {
+          // Check if the food item has the category in its tags
+          if (item.tags?.some(tag => tag.toLowerCase() === subFilterLower)) {
+            return true;
+          }
+        }
+        
         return false;
       });
     });

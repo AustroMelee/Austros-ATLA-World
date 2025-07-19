@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import type { EnrichedEntity } from '../../search/types';
 import ThemedCard from '../ThemedCard/ThemedCard';
 import NationIcon from '../NationIcon/NationIcon';
@@ -54,6 +54,7 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
   });
   const [showPopover, setShowPopover] = useState(false);
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (image) {
@@ -64,6 +65,7 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
   return (
     <>
       <div
+        ref={cardRef}
         onClick={onExpand}
         role="button"
         tabIndex={0}
@@ -80,19 +82,6 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
                 setShowPopover(prev => !prev);
               }}
             />
-            {showPopover && (
-              <AddToCollectionPopover
-                onClose={() => setShowPopover(false)}
-                cardId={item.id}
-                collections={collectionsApi.collections}
-                addCard={collectionsApi.addCardToCollection}
-                removeCard={collectionsApi.removeCardFromCollection}
-                onCreateNew={() => {
-                  setShowCreateModal(true);
-                  setShowPopover(false);
-                }}
-              />
-            )}
             <div className="mb-1.5 flex justify-center w-full px-1.5">
               <div className="w-full aspect-square max-w-[85%] max-h-[65%] mx-auto bg-transparent rounded-xl flex items-center justify-center border border-subtle/20 overflow-hidden shadow-lg">
                 {status === 'error' || !imgSrc ? (
@@ -157,6 +146,20 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
           </div>
         </ThemedCard>
       </div>
+      {showPopover && (
+        <AddToCollectionPopover
+          onClose={() => setShowPopover(false)}
+          cardId={item.id}
+          collections={collectionsApi.collections}
+          addCard={collectionsApi.addCardToCollection}
+          removeCard={collectionsApi.removeCardFromCollection}
+          onCreateNew={() => {
+            setShowCreateModal(true);
+            setShowPopover(false);
+          }}
+          cardRef={cardRef}
+        />
+      )}
       {showCreateModal && (
         <CreateCollectionModal
           isOpen={showCreateModal}

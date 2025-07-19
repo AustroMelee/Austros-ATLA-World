@@ -148,6 +148,13 @@ graph TD
 - **Multi-Select:** Multiple sub-filters can be active simultaneously
 - **Comprehensive Mapping:** Translates filter terms to data values (e.g., "villains" → "antagonist")
 
+**Food Sub-Filters (2025 Update):**
+- **12 Categories:** beverages, desserts, soups, meat, vegetables, noodles, dumplings, preserved, street food, traditional, vegetarian, luxury, ceremonial, health, fire-themed, seafood
+- **React Emojis:** Each sub-filter includes React emoji with descriptive text labels
+- **Comprehensive Coverage:** All 98 food items categorized into appropriate sub-filters
+- **Nation Integration:** Food items display nation symbols in cards
+- **Multi-Select Support:** Multiple food categories can be selected simultaneously
+
 **Responsive Design:**
 - **Flex-Wrap Layout:** Buttons wrap to new lines on smaller screens
 - **Adaptive Sizing:** Button sizes adjust for mobile devices
@@ -176,6 +183,7 @@ if (activeNations.size > 0) {
 - **Gender:** Maps to `gender` field with male/female values
 - **Bender:** Maps to `isBender` and `bendingElement` fields
 - **Role-Based:** Maps filter terms to role, narrativeFunction, and eraAppearances
+- **Food Categories:** Maps to food category tags with comprehensive coverage
 
 **Animal Exclusion Logic:**
 ```typescript
@@ -185,6 +193,12 @@ const isAnimal = item.species && animalSpecies.some(species =>
   item.species.toLowerCase().includes(species)
 );
 ```
+
+**Food Category Filtering:**
+- **12 Sub-Categories:** Comprehensive food categorization system
+- **Tag-Based:** Uses food category tags for filtering
+- **Nation Integration:** Food items display nation symbols
+- **Multi-Select:** Supports selecting multiple food categories
 
 ---
 
@@ -240,6 +254,13 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **Visual States:** Different icons for in/out of collection states
 - **Hover Effects:** CRT green glow effects matching the theme
 
+**Nation Symbol Integration (2025 Update):**
+- **Food Cards:** Display nation symbols for all food items
+- **Character Cards:** Display nation symbols for all characters
+- **Group Cards:** Display nation symbols for all groups
+- **NationIcon Component:** Maps nation strings to React icons
+- **Consistent Display:** All entity types show nation affiliation
+
 ---
 
 ## 6. Collections System (2025 Update)
@@ -251,6 +272,13 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **Real-Time Updates:** Immediate UI updates when collections change
 - **Error Handling:** Graceful fallback if storage is unavailable
 
+**Dynamic Sizing (2025 Update):**
+- **Content-Based Height:** Uses `h-fit` instead of fixed height to grow only as needed
+- **Responsive Width:** `w-auto min-w-[200px] max-w-[280px]` for flexible sizing
+- **No Stretching:** Removed `sticky top-20` and replaced with `self-start` to prevent forced height
+- **Parent Container Fixes:** Removed `min-h-screen` from Layout and Home containers to prevent stretching
+- **Visual Result:** Sidebar now appears as a compact, content-sized panel instead of a long column
+
 **Collection Management:**
 - **Create Collections:** Modal interface for creating new collections
 - **Add/Remove Cards:** Button-based card management with popover interface
@@ -259,20 +287,69 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ### Collection Components
 
-**CollectionCardButton:**
-- **Matrix Styling:** CRT green glow effects with backdrop blur
-- **Visual States:** Plus icon for add, checkmark for in collection
-- **Positioning:** Top-right corner of each card
+**CollectionCardButton (Enhanced 2025):**
+- **Enhanced Matrix Styling:** Larger size (`w-7 h-7`) with thicker border (`border-2`)
+- **Improved Glow Effects:** Stronger shadows (`shadow-[0_0_20px_rgba(112,171,108,0.8)]`) for dramatic glow
+- **Interactive Animations:** Scale animation (`hover:scale-110`) and smooth transitions (`duration-300`)
+- **Better Typography:** Bold fonts with drop shadows for glowing text effect
+- **Enhanced States:** Different colors and glows for add/remove states
+- **Visual Hierarchy:** Plus icon (`text-lg`) and checkmark (`text-sm`) with proper proportions
+- **Z-Index Management:** `z-10` ensures button stays above other elements
 
-**AddToCollectionPopover:**
-- **Dropdown Interface:** Shows all collections with checkboxes
-- **Create New:** Option to create new collection
-- **Matrix Theme:** Semi-transparent background with CRT styling
+**AddToCollectionPopover (Enhanced 2025):**
+- **Fixed Positioning:** Uses `position: fixed` with dynamic positioning based on card location
+- **Dynamic Sizing:** `min-width: 200px` with `overflow-y-auto` and `max-h-[80vh]` for scrolling
+- **Card Integration:** Receives `cardRef` from parent card for accurate positioning
+- **Click-Outside Detection:** Closes popover when clicking outside card or popover area
+- **Enhanced Styling:** Semi-transparent background with CRT green borders and glow effects
+- **Custom Checkboxes:** Matrix-themed checkboxes with green glow and rounded corners
+- **Responsive Design:** Adapts to different collection counts with proper scrolling
 
 **CreateCollectionModal:**
 - **Modal Interface:** Clean form for collection creation
 - **Validation:** Ensures unique collection names
 - **Matrix Styling:** Consistent with overall theme
+
+### Popover Positioning System (2025 Update)
+
+**Technical Implementation:**
+- **Card Reference:** `cardRef` passed from `ItemCardCollapsed` to popover
+- **Fixed Positioning:** Popover positioned outside card container to avoid clipping
+- **Dynamic Calculation:** Uses `getBoundingClientRect()` for accurate positioning
+- **Responsive Design:** Adapts to different screen sizes and card positions
+- **Overflow Handling:** Scrollable content with maximum height constraints
+
+**User Experience Improvements:**
+- **Click-Outside Detection:** Event listeners detect clicks outside popover and card
+- **Smooth Transitions:** 300ms duration for all animations
+- **Visual Feedback:** Clear hover and active states
+- **Accessibility:** Proper ARIA labels and keyboard navigation
+
+### Layout Integration (2025 Update)
+
+**Container Height Management:**
+- **Layout.tsx:** Removed `min-h-screen` from root container
+- **Home.tsx:** Removed `min-h-screen` from main flex container, added to content area only
+- **Result:** Sidebar no longer stretches to full viewport height
+
+**Flexbox Optimization:**
+- **Self-Start:** Sidebar uses `self-start` instead of `sticky` positioning
+- **Content Flow:** Main content area maintains proper height constraints
+- **Visual Balance:** Sidebar and content area have proper proportions
+
+### Enhanced Visual Design (2025 Update)
+
+**Matrix Theme Integration:**
+- **CRT Green Glow:** Consistent use of `#70ab6c` and `#c8ffc8` colors
+- **Backdrop Blur:** `backdrop-blur-md` for glassmorphism effects
+- **Drop Shadows:** Text drop shadows for glowing effects
+- **Border Effects:** Thick borders with glow for definition
+
+**Interactive States:**
+- **Hover Effects:** Scale animation and enhanced glow on hover
+- **Active States:** Different colors and glows for different states
+- **Transition Smoothness:** 300ms duration for all animations
+- **Visual Hierarchy:** Clear distinction between add and remove states
 
 ---
 
@@ -290,6 +367,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **Primary:** Name, role, titles
 - **Secondary:** Tags, ageRange, gender, bendingElement
 - **Metadata:** Nation, eraAppearances, narrativeFunction
+- **Food Categories:** Food category tags and nation affiliations
 
 ---
 
@@ -317,6 +395,13 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **Common Issues:** Trailing commas in arrays and objects
 - **Validation:** Parser checks for JSON syntax errors and reports them
 - **Fixes Applied:** Removed trailing commas from all group files
+
+### Food Data Processing (2025 Update)
+- **98 Food Items:** Complete food database with comprehensive categorization
+- **12 Sub-Categories:** Beverages, desserts, soups, meat, vegetables, noodles, dumplings, preserved, street food, traditional, vegetarian, luxury, ceremonial, health, fire-themed, seafood
+- **Nation Integration:** All food items have nation affiliations with symbols
+- **Category Tags:** All food items categorized into appropriate sub-filters
+- **Enrichment Process:** Maps region to nation, adds category tags, validates data integrity
 
 ---
 
@@ -373,6 +458,8 @@ const isAnimal = item.species && animalSpecies.some(species =>
 The frontend architecture provides a robust, performant, and accessible foundation for the Austros ATLA World encyclopedia. The 2025 January update introduces:
 
 - **Enhanced Multi-Layered Filtering:** Comprehensive filtering with PNG nation images, age ranges, gender, and bender classification
+- **Food Category System:** 12 comprehensive food sub-categories with React emojis and text labels
+- **Nation Integration:** All entity types display nation symbols with consistent theming
 - **Matrix Rain Integration:** Authentic background effects with adaptive performance
 - **Glassmorphism UI:** Modern visual effects with depth and transparency
 - **Collections System:** Matrix-themed collection management with localStorage persistence
@@ -383,3 +470,13 @@ The frontend architecture provides a robust, performant, and accessible foundati
 - **Accessibility Compliance:** Inclusive user experience for all users
 
 The combination of these features creates a cohesive, high-performance application that delivers both visual impact and functional utility while maintaining the distinctive Matrix/CRT aesthetic.
+
+**Key Statistics (2025 Update):**
+- **98 Food Items:** Complete food database with nation affiliations
+- **67 Character Items:** Full character roster with age/gender/bender classification
+- **12+ Group Items:** Comprehensive group coverage with nation symbols
+- **12 Food Sub-Categories:** Comprehensive food filtering system
+- **4 Nation Types:** Fire, Water, Earth, Air with PNG images and React icons
+- **Enhanced Filtering:** Multi-layered filtering with comprehensive coverage
+
+The application now provides a complete encyclopedia experience with robust filtering, comprehensive categorization, and authentic Matrix/CRT aesthetics.

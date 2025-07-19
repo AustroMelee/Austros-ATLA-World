@@ -69,6 +69,14 @@ are promoted to the top level and indexed alongside regular tags.
 - **Fixes Applied:** Removed trailing commas from all group files
 - **Pattern:** No trailing commas in arrays `["item1", "item2"]` or objects `{"key": "value"}`
 
+### Food Data Processing (2025 Update)
+
+- **98 Food Items:** Complete food database with comprehensive categorization
+- **12 Sub-Categories:** Beverages, desserts, soups, meat, vegetables, noodles, dumplings, preserved, street food, traditional, vegetarian, luxury, ceremonial, health, fire-themed, seafood
+- **Nation Integration:** All food items have nation affiliations with symbols
+- **Category Tags:** All food items categorized into appropriate sub-filters
+- **Enrichment Process:** Maps region to nation, adds category tags, validates data integrity
+
 ---
 
 ## 2. The Automated Scripts & Data Flow
@@ -84,6 +92,7 @@ are promoted to the top level and indexed alongside regular tags.
 - Promotes UI-critical fields (e.g., image, role, nation) to the top level of each record.
 - All other fields are placed in a `metadata` object.
 - Uses helper functions from `scripts/lib/enrichRecord.mjs` for record processing.
+- **NEW (2025):** Enhanced nation mapping and food category processing
 - **Output:** `public/enriched-data.json` (the only data file used by the frontend).
 
 ### Client-Side Indexing (In the Browser)
@@ -111,6 +120,8 @@ Before running `npm run build:data`, ensure:
 - [ ] Expanded view content is wrapped in ```md blocks
 - [ ] Template files are in `templates/` subdirectories
 - [ ] All tags are single, underscore-joined words
+- [ ] Food items have proper nation affiliations
+- [ ] Food items are categorized into appropriate sub-filters
 
 ---
 
@@ -127,11 +138,63 @@ See `docs/templates/character_template.md` for the full, up-to-date schema and r
 
 ---
 
+## 5. Enhanced Enrichment Features (2025 Update)
+
+### Nation Integration
+- **Region to Nation Mapping:** Automatically maps `region` field to `nation` field
+- **Consistent Formatting:** Normalizes nation values to proper format (e.g., "Fire Nation", "Earth Kingdom")
+- **Symbol Integration:** All entity types display nation symbols in UI cards
+- **Validation:** Ensures all entities have proper nation affiliations
+
+### Food Category Processing
+- **12 Sub-Categories:** Comprehensive food categorization system
+- **Tag-Based Filtering:** Uses food category tags for sub-filter functionality
+- **Multi-Select Support:** Supports selecting multiple food categories
+- **React Emoji Integration:** Each sub-filter includes React emoji with descriptive text labels
+- **Comprehensive Coverage:** All 98 food items categorized into appropriate sub-filters
+
+### Age and Gender Classification
+- **Age Ranges:** Child, teen, young adult, adult, elder classification
+- **Gender Classification:** Male/female classification with proper validation
+- **Bender Classification:** Bender/nonbender classification with element specification
+- **Animal Exclusion:** Automatically excludes animals from age/gender filters
+
+### Enhanced Tag Processing
+- **Lenient Tag Enrichment:** More user-friendly tag system with fallback to simpler tags
+- **Tag Normalization:** Ensures all tags follow single-word, underscore-joined format
+- **Comprehensive Coverage:** Tags cover all entity types and categories
+- **Search Integration:** Tags are properly indexed for search functionality
+
+---
+
+## 6. Data Quality Assurance
+
+### Validation Scripts
+- **`scripts/validate-data.mjs`:** Validates data integrity and schema compliance
+- **Image Path Validation:** Ensures all image references exist
+- **Tag Dictionary Validation:** Verifies all tags are in the central dictionary
+- **Required Field Validation:** Checks for missing required fields
+
+### Error Reporting
+- **Detailed Error Messages:** Specific error messages for each validation failure
+- **Build Failure Prevention:** Prevents commits with broken data
+- **Debug Logging:** Comprehensive logging for troubleshooting
+- **Graceful Degradation:** Handles missing data gracefully in UI
+
+### Data Statistics (2025 Update)
+- **98 Food Items:** Complete food database with nation affiliations
+- **67 Character Items:** Full character roster with age/gender/bender classification
+- **12+ Group Items:** Comprehensive group coverage with nation symbols
+- **12 Food Sub-Categories:** Comprehensive food filtering system
+- **4 Nation Types:** Fire, Water, Earth, Air with PNG images and React icons
+
+---
+
 **Summary:**
 - The only data file used by the frontend is `public/enriched-data.json`.
 - All search and filtering is performed client-side, in-browser, using FlexSearch.
 - The pipeline is strictly two-stage and robust, transparent, and easy to debug.
-- **NEW (2025):** Template exclusion, enhanced expanded view processing, image path validation, and JSON syntax validation.
+- **NEW (2025):** Template exclusion, enhanced expanded view processing, image path validation, JSON syntax validation, food category processing, and nation integration.
 
 ## Performance Considerations
 
@@ -146,3 +209,9 @@ See `docs/templates/character_template.md` for the full, up-to-date schema and r
 - Data loading doesn't affect rain performance due to separate rendering contexts
 - Large datasets may cause brief loading delays but don't impact visual effects
 - Canvas rendering is hardware-accelerated and independent of data operations
+
+### Food Data Optimization
+- **98 Food Items:** Optimized processing for comprehensive food database
+- **Category Tagging:** Efficient tag-based filtering system
+- **Nation Integration:** Streamlined nation symbol display
+- **Multi-Select Performance:** Optimized for multiple category selection

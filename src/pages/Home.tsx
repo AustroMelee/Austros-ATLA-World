@@ -1,6 +1,5 @@
 // Home: Presentational/stateless component for Home page. Receives all data/handlers as props from HomeContainer.
 import React from 'react';
-import { FaMars, FaVenus } from 'react-icons/fa';
 import SearchBar from '../components/SearchBar';
 import EntityGrid from '../components/EntityGrid/EntityGrid';
 import Layout from '../components/Layout';
@@ -54,8 +53,8 @@ export function Home({
     if (!coreFilter) return [];
     const subFilterMap: Record<string, Array<{key: string, symbol?: React.ReactNode}>> = {
       characters: [
-        { key: 'male', symbol: <FaMars className="text-blue-400" /> },
-        { key: 'female', symbol: <FaVenus className="text-pink-400" /> },
+        { key: 'male', symbol: <span className="text-blue-400">♂</span> },
+        { key: 'female', symbol: <span className="text-pink-400">♀</span> },
         { key: 'child' },
         { key: 'teen' },
         { key: 'young adult' },
@@ -68,9 +67,18 @@ export function Home({
         { key: 'nonbender' }
       ],
       foods: [
-        { key: 'meat' },
-        { key: 'vegetables' },
-        { key: 'desserts' }
+        { key: 'soups_stews', symbol: <span className="text-orange-400">🍲 Soups & Stews</span> },
+        { key: 'noodles_dumplings', symbol: <span className="text-yellow-400">🥟 Noodles & Dumplings</span> },
+        { key: 'baked_goods_pastries', symbol: <span className="text-amber-400">🥧 Baked Goods & Pastries</span> },
+        { key: 'cookies_biscuits', symbol: <span className="text-brown-400">🍪 Cookies & Biscuits</span> },
+        { key: 'cakes_decadent_desserts', symbol: <span className="text-pink-400">🍰 Cakes & Decadent Desserts</span> },
+        { key: 'roasted_grilled_meats', symbol: <span className="text-red-400">🍖 Roasted & Grilled Meats</span> },
+        { key: 'seafood_fish', symbol: <span className="text-blue-400">🐟 Seafood & Fish</span> },
+        { key: 'vegetarian_dishes', symbol: <span className="text-green-400">🥬 Vegetarian Dishes</span> },
+        { key: 'street_food_snacks', symbol: <span className="text-yellow-400">🍡 Street Food & Snacks</span> },
+        { key: 'spicy_foods', symbol: <span className="text-red-400">🌶️ Spicy Foods</span> },
+        { key: 'teas_juices', symbol: <span className="text-cyan-400">🍵 Teas & Juices</span> },
+        { key: 'preserved_travel_foods', symbol: <span className="text-gray-400">🥩 Preserved & Travel Foods</span> }
       ],
       locations: [
         { key: 'cities' },
@@ -99,14 +107,14 @@ export function Home({
 
   return (
     <Layout>
-      <div className="flex w-full pt-16 min-h-screen bg-transparent">
+      <div className="flex w-full pt-16 bg-transparent">
         <CollectionsSidebar
           collections={collectionsApi.collections}
           activeId={activeCollectionId}
           onActivate={setActiveCollectionId}
           createCollection={collectionsApi.createCollection}
         />
-        <div className="flex-1 flex flex-col items-center">
+        <div className="flex-1 flex flex-col items-center min-h-screen">
           <FilterBar
             activeNations={activeNations}
             onToggleNation={onToggleNation}

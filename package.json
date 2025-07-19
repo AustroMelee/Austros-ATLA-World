@@ -19,6 +19,7 @@
     "build:data:enrich": "node scripts/2-enrich-data.mjs",
     "build:data:index": "node scripts/3-build-index.mjs",
     "build:data": "npm run validate:data && npm run enrich:data && npm run build:index",
+    "convert-food-templates": "node scripts/convert-food-templates.mjs",
     "lint:md": "markdownlint --config .markdownlint.json \"**/*.md\"",
     "build:tailwind": "tailwindcss -i ./src/styles/custom.css -o ./src/styles/generated-tailwind.css --watch",
     "build:tailwind:once": "tailwindcss -i ./src/styles/custom.css -o ./src/styles/generated-tailwind.css",

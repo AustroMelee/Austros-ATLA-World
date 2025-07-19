@@ -214,6 +214,61 @@ graph TD
     style E fill:#f3e5f5
 ```
 
+### Collections System Flow (2025 Update)
+```mermaid
+graph TD
+    A[User Clicks + Button] --> B[CollectionCardButton]
+    B --> C[AddToCollectionPopover]
+    C --> D[Card Ref Positioning]
+    D --> E[Fixed Position Popover]
+    E --> F[Collection List Display]
+    F --> G[Custom Checkboxes]
+    G --> H[Click Outside Detection]
+    H --> I[Popover Close]
+    
+    J[CollectionsSidebar] --> K[Dynamic Sizing]
+    K --> L[Content-Based Height]
+    L --> M[Responsive Width]
+    M --> N[No Stretching]
+    
+    O[Layout Container] --> P[Height Management]
+    P --> Q[Flexbox Optimization]
+    Q --> R[Visual Balance]
+    
+    style A fill:#e3f2fd
+    style C fill:#fff3e0
+    style E fill:#f3e5f5
+    style G fill:#e8f5e8
+    style J fill:#c8e6c9
+    style O fill:#ffebee
+```
+
+### Enhanced Collections Components Flow
+```mermaid
+graph TD
+    A[ItemCardCollapsed] --> B[cardRef Creation]
+    B --> C[CollectionCardButton]
+    C --> D[Enhanced Matrix Styling]
+    D --> E[Scale Animation]
+    E --> F[Glow Effects]
+    
+    G[AddToCollectionPopover] --> H[Fixed Positioning]
+    H --> I[Dynamic Sizing]
+    I --> J[Scrollable Content]
+    J --> K[Click Outside Detection]
+    K --> L[Custom Checkboxes]
+    
+    M[CollectionsSidebar] --> N[Content-Based Height]
+    N --> O[Responsive Width]
+    O --> P[No Stretching]
+    P --> Q[Visual Balance]
+    
+    style A fill:#f3e5f5
+    style C fill:#fff3e0
+    style G fill:#e8f5e8
+    style M fill:#c8e6c9
+```
+
 ## 🎯 Key Data Transformations
 
 ### Raw Markdown → Enriched JSON
@@ -232,12 +287,15 @@ graph TD
 
 ## 📊 Data Volume Metrics
 
-- **Raw Markdown Files:** ~60+ files
-- **Parsed Records:** ~60+ JSON objects
-- **Enriched Records:** ~60+ with additional metadata
-- **Search Index:** ~60+ indexed documents
-- **Image Assets:** ~60+ character/group images
+- **Raw Markdown Files:** ~165+ files
+- **Parsed Records:** ~165+ JSON objects
+- **Enriched Records:** ~165+ with additional metadata
+- **Search Index:** ~165+ indexed documents
+- **Image Assets:** ~165+ character/group/food images
 - **Tag Dictionary:** ~200+ normalized tags
+- **Food Items:** 98 items
+- **Character Items:** 67 items
+- **Group Items:** ~10+ items
 
 ## 🔗 Related Documentation
 

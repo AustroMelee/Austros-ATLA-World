@@ -149,6 +149,7 @@
     - **`src/hooks/useSearch.ts`:** The core search hook. It takes the enriched data, preprocesses it in the browser to create a `searchBlob`, and builds an in-memory `FlexSearch` index for instant searching.
     - **No Pre-Built Index:** The app does not load a pre-built search index file. This strategy is more robust and avoids build-time errors.
 - **Data Types:** Defined in `src/types/`.
+- **Food Data:** 98 food items with detailed categorization and nation affiliations.
 
 ---
 

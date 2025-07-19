@@ -79,6 +79,21 @@
   - **Gray** for characters without clear nation affiliation
 - This provides immediate visual context about the character's background
 
+**How do I interact with expanded food cards?**
+- **Click anywhere** outside the card content to close the modal
+- **Press Escape** to close the modal using keyboard navigation
+- Food titles in the expanded view use **category-specific colors** (e.g., green for vegetables, red for meat)
+- All icons consistently use React Icons for a unified visual experience
+
+**Why do food names have different colors in expanded view?**
+- Food titles are now colored based on their category:
+  - **Green** for vegetables and vegetarian foods (like Cabbage Noodles, Steamed Vegetables)
+  - **Red** for meat and fish dishes (like Bison Steak, Fish Cakes)
+  - **Blue** for beverages and soups (like Bubble Tea, Sea Prune Stew)
+  - **Orange** for desserts and sweets (like Blueberry Cookies, Fruit Pie)
+  - **Gray** for foods without clear category affiliation
+- This provides immediate visual context about the food's type and dietary classification
+
 **Are there any accessibility improvements?**
 - The modal system now includes proper keyboard navigation and focus management
 - Click-to-close functionality includes proper event handling to prevent accidental closures
@@ -97,6 +112,7 @@
 - **Bender Classification:** Bender/nonbender filters for character classification
 - **Enhanced Nation Filtering:** Partial string matching for full nation names
 - **Comprehensive Sub-Filters:** Dynamic filters based on selected categories
+- **Food Category Filters:** 12 comprehensive food sub-categories with React emojis
 
 **How does age range filtering work?**
 - **Child:** Characters like Toph (12 years old during main series)
@@ -131,8 +147,83 @@ The system applies filters in this specific sequence:
 - **Categories:** Click category buttons to filter by main entity types (single-select)
 - **Subcategories:** Dynamic buttons appear when a category is selected (multi-select)
 - **Age/Gender/Bender:** Available when "characters" category is selected
+- **Food Categories:** Available when "foods" category is selected
 - **Visual Feedback:** Active filters are highlighted with different colors
 - **Clear Filters:** Click active filters to deselect them
+
+---
+
+### 🍽️ Food Category Filtering (2025 Update)
+
+**What food categories are available?**
+- **12 Sub-Categories:** beverages, desserts, soups, meat, vegetables, noodles, dumplings, preserved, street food, traditional, vegetarian, luxury, ceremonial, health, fire-themed, seafood
+- **React Emojis:** Each sub-filter includes React emoji with descriptive text labels
+- **Multi-Select:** Multiple food categories can be selected simultaneously
+- **Comprehensive Coverage:** All 98 food items categorized into appropriate sub-filters
+
+**How do food nation filters work?**
+- **Nation Symbols:** All food items display nation symbols in cards
+- **Nation Integration:** Food items have proper nation affiliations (Fire Nation, Earth Kingdom, etc.)
+- **Symbol Display:** NationIcon component maps nation strings to React icons
+- **Consistent Theming:** Nation symbols use consistent styling across all entity types
+
+**Why are some food items not showing in filters?**
+- **Missing Nation Values:** Food items may be missing `nation` field in data
+- **Missing Category Tags:** Food items may not have proper category tags
+- **Enrichment Issues:** Data pipeline may not have processed category tags correctly
+- **Solution:** Run `npm run build:data` to regenerate with proper categorization
+
+**How do I troubleshoot food filtering issues?**
+- **Check Data:** Verify `public/enriched-data.json` has proper nation and category fields
+- **Verify Tags:** Ensure food items have appropriate category tags
+- **Rebuild Data:** Run `npm run build:data` to regenerate with proper categorization
+- **Check UI:** Verify sub-filter buttons appear when "foods" category is selected
+
+**What are the food category examples?**
+- **Beverages:** Air Nomad Style Tea, Butter Tea, Bubble Tea, Cactus Juice
+- **Desserts:** Blueberry Cookies, Candied Jackfruit Pie, Cotton Candy, Egg Custard Tart
+- **Soups:** Beetle-Worm Soup, Blood Soup, Dumpling Weed Soup, Five-Flavor Soup
+- **Meat:** Bison Steak, Braised Turtle Duck, Fish Cakes, Foggy Swamp Chicken
+- **Vegetables:** Cabbage Noodles, Steamed Vegetables, Tofu Curry, Kale Wraps
+- **Noodles:** Cabbage Noodles, Noodles, Seaweed Noodles, Spiral-Shaped Noodles
+- **Dumplings:** Air Nomad Dumplings, Dragon Dumplings, Dumplings, Steamed Dumplings
+- **Preserved:** Dried Fish, Freeze-Dried Cucumberquats, Pickled Fish, Smoked Sea Slug
+- **Street Food:** Fried Fish Balls, Fried Foods on Sticks, Meat Kebabs
+- **Traditional:** Sea Prune Stew, Tsampa, Mochi, Sweet Red Bean Cake
+- **Vegetarian:** Air Nomad Dumplings, Cabbage Noodles, Steamed Vegetables, Tofu Curry
+- **Luxury:** Bison Steak, Braised Turtle Duck, Dragon Dumplings
+- **Ceremonial:** Blood Soup, Five-Flavor Soup, Yue's Mooncakes
+- **Health:** Chi-Enhancing Tea, Kale Smoothie, Kale Wraps, Steamed Vegetables
+- **Fire-themed:** Azula's Lightning, Fire Cakes, Fire Gummies, Flaming Fire Flakes
+- **Seafood:** Crab Urchin Stir-Fry, Fish Cakes, Sea Prune Stew, Sea Squid Soup
+
+---
+
+### 🏛️ Nation Integration Issues (2025 Update)
+
+**Why are nation symbols not displaying on food cards?**
+- **Missing Nation Values:** Food items may be missing `nation` field in data
+- **Incorrect Format:** Nation values may not match expected format (e.g., "Fire Nation", "Earth Kingdom")
+- **Enrichment Issues:** Data pipeline may not have mapped `region` to `nation` correctly
+- **Solution:** Check `scripts/lib/enrichRecord.mjs` for proper nation mapping
+
+**How do nation filter buttons work with food data?**
+- **Partial Matching:** Filter buttons use single words ("fire", "earth", "water", "air")
+- **Data Format:** Food data contains full names ("Fire Nation", "Earth Kingdom", etc.)
+- **Matching Logic:** System matches "fire" within "Fire Nation", "earth" within "Earth Kingdom"
+- **Multi-Select:** Multiple nations can be selected simultaneously (OR logic)
+
+**What if food items have inconsistent nation values?**
+- **Data Validation:** Check `public/enriched-data.json` for consistent nation values
+- **Enrichment Process:** Verify `scripts/lib/enrichRecord.mjs` normalizes nation values
+- **Rebuild Data:** Run `npm run build:data` to regenerate with proper nation mapping
+- **Test Filtering:** Verify nation filters work with specific food items
+
+**How are nation symbols displayed in the UI?**
+- **NationIcon Component:** Maps nation strings to React icons
+- **Consistent Display:** All entity types (characters, groups, foods) show nation symbols
+- **Visual Theming:** Nation symbols use consistent styling across all cards
+- **Fallback Handling:** Graceful handling of missing or invalid nation values
 
 ---
 
@@ -400,7 +491,7 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 
 **What subcategories are available?**
 - **Characters:** heroes, villains, mentors
-- **Foods:** meat, vegetables, desserts
+- **Foods:** beverages, desserts, soups, meat, vegetables, noodles, dumplings, preserved, street food, traditional, vegetarian, luxury, ceremonial, health, fire-themed, seafood
 - **Locations:** cities, temples, wilderness
 - **Bending:** firebending, waterbending, earthbending, airbending
 - **Fauna:** domestic, wild, spirit
@@ -436,8 +527,13 @@ First, consult this FAQ and other project documentation. If the issue is not cov
   - "villains" → matches "antagonist" and "villain" in data
   - "heroes" → matches "protagonist", "hero", "deuteragonist", and "mentor" in data
   - "mentors" → matches "mentor" in data
+- **Food Sub-filters:**
+  - "beverages" → matches food items with beverage category tags
+  - "desserts" → matches food items with dessert category tags
+  - "soups" → matches food items with soup category tags
+  - And so on for all 12 food categories
 - **Data Field Coverage:** Sub-filters check multiple data locations:
-  - `tags` array (e.g., "villain", "hero")
+  - `tags` array (e.g., "villain", "hero", "beverage", "dessert")
   - `role` field (e.g., "EK General", "SWT Warrior")
   - `metadata.narrativeFunction` (e.g., "antagonist", "protagonist", "mentor")
   - `metadata.eraAppearances[].role` (e.g., "hero", "villain", "supporting")
@@ -445,6 +541,7 @@ First, consult this FAQ and other project documentation. If the issue is not cov
   - Long Feng shows up as Earth villain (narrativeFunction: "antagonist")
   - Sokka shows up as Water hero (eraAppearances role: "hero")
   - Bumi shows up as Earth hero (narrativeFunction: "mentor")
+  - Air Nomad Style Tea shows up as beverage (category tag: "beverage")
 
 **Are the filters accessible?**
 - All filter buttons are keyboard-navigable

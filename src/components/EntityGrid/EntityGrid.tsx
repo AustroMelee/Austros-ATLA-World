@@ -12,16 +12,17 @@ interface EntityGridProps {
 
 export default function EntityGrid({ items, expandedCardId, onCardExpand, collectionsApi }: EntityGridProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-4 bg-transparent">
-      {items.map((gridItem) => (
-        <ItemCard
-          key={gridItem.record.id}
-          item={gridItem.record}
-          matchedFields={gridItem.matchedFields}
-          expanded={gridItem.record.id === expandedCardId}
-          onExpand={() => onCardExpand(gridItem.record.id)}
-          collectionsApi={collectionsApi}
-        />
+    <div className="flex flex-wrap gap-4 justify-center p-4">
+      {items.map((item) => (
+        <div key={item.record.id} className="w-[188px]">
+          <ItemCard
+            item={item.record}
+            matchedFields={item.matchedFields}
+            expanded={expandedCardId === item.record.id}
+            onExpand={() => onCardExpand(item.record.id)}
+            collectionsApi={collectionsApi}
+          />
+        </div>
       ))}
     </div>
   );

@@ -52,7 +52,7 @@ async function parseMarkdownFile(filePath) {
       return null;
     }
     
-    if (!['character', 'group'].includes(frontmatter.type)) {
+    if (!['character', 'group', 'food'].includes(frontmatter.type)) {
       console.log(`[INFO]    Skipping ${filePath}: Type is "${frontmatter.type}", not supported.`);
       return null;
     }

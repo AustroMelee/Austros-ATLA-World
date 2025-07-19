@@ -54,7 +54,9 @@ The system now supports multiple data types beyond characters:
 ### Foods (`type: food`)
 - **Location:** `raw-data/foods/`
 - **Template:** `raw-data/foods/templates/food_template.md`
+- **Total:** 98 foods
 - **Features:** Culinary data with ingredients, cultural significance, and regional information
+- **Categories:** Beverages, Desserts, Soups & Stews, Meat & Fish, Noodles & Dumplings, Vegetables & Tofu, Bread & Pastries, Preserved Foods, Special/Unique, Alcohol
 
 ### Locations (`type: location`)
 - **Location:** `raw-data/locations/`
@@ -109,6 +111,15 @@ The system now supports multiple data types beyond characters:
 - **Features:** Matrix-themed styling with CRT green glow effects
 - **Storage:** Client-side localStorage persistence
 - **Integration:** Seamlessly integrated with existing card system
+
+### Enhanced Collections System (2025 Update)
+- **CollectionCardButton:** Enhanced Matrix styling with larger size (`w-7 h-7`), thicker borders, improved glow effects, scale animations, and better typography
+- **AddToCollectionPopover:** Fixed positioning system with dynamic sizing, scrollable content, click-outside detection, and custom Matrix-themed checkboxes
+- **CollectionsSidebar:** Content-based height with responsive width, no stretching, and proper visual balance
+- **Layout Integration:** Removed height constraints from Layout and Home containers to prevent sidebar stretching
+- **Popover Positioning:** Uses `cardRef` and `getBoundingClientRect()` for accurate positioning outside card container
+- **Click-Outside Detection:** Event listeners for closing popover when clicking outside card or popover area
+- **Visual Design:** Consistent Matrix/CRT theme with green glow effects, backdrop blur, and smooth transitions
 
 ### Filter System Enhancement
 - **Component:** `src/components/Filters/FilterBar.tsx`

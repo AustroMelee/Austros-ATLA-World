@@ -13,8 +13,8 @@ export default function CollectionsSidebar({ collections, activeId, onActivate, 
   const [showCreateModal, setShowCreateModal] = useState(false);
 
   return (
-    <aside className="p-6 w-72 sticky top-20 space-y-4 text-sm bg-black/80 backdrop-blur-sm border-r border-[#70ab6c]/20 min-h-[calc(100vh-5rem)] crt-screen z-10">
-      <h3 className="font-bold text-base mb-4 text-[#c8ffc8] crt-glow-text">Collections</h3>
+    <aside className="p-4 w-auto min-w-[200px] max-w-[280px] self-start space-y-3 text-sm bg-black/80 backdrop-blur-sm border-r border-[#70ab6c]/20 crt-screen z-10">
+      <h3 className="font-bold text-base mb-3 text-[#c8ffc8] crt-glow-text">Collections</h3>
       <button
         type="button"
         className={`block text-left w-full px-3 py-2 rounded text-[#c8ffc8] transition-colors ${activeId === null ? 'bg-[#70ab6c]/20 font-bold' : 'hover:bg-[#70ab6c]/10'}`}
@@ -27,11 +27,11 @@ export default function CollectionsSidebar({ collections, activeId, onActivate, 
           <li key={col.id}>
             <button
               type="button"
-              className={`w-full text-left px-3 py-2 rounded flex items-center gap-2 text-[#c8ffc8] transition-colors ${activeId === col.id ? 'bg-[#70ab6c]/20 font-bold' : 'hover:bg-[#70ab6c]/10'}`}
+              className={`w-full text-left px-3 py-2 rounded flex items-center justify-between text-[#c8ffc8] transition-colors ${activeId === col.id ? 'bg-[#70ab6c]/20 font-bold' : 'hover:bg-[#70ab6c]/10'}`}
               onClick={() => onActivate(activeId === col.id ? null : col.id)}
             >
-              <span className="flex-1">{col.name}</span>
-              <span className="text-xs text-[#70ab6c]">{col.cardIds.length}</span>
+              <span className="truncate flex-1">{col.name}</span>
+              <span className="text-xs text-[#70ab6c] ml-2 flex-shrink-0">{col.cardIds.length}</span>
             </button>
           </li>
         ))}

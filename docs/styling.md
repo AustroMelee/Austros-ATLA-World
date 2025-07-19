@@ -204,36 +204,49 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 - **Accessibility:**
   - Ensure badge text is always readable by screen readers (use semantic HTML and sufficient contrast).
 
-### 8. Card Information Requirements: Titles, Categories, and Badges (2024-07)
+### 8. Enhanced Collections Styling (2025 Update)
 
-**Every card must display all three of the following, without exception:**
+#### CollectionCardButton Styling
+- **Enhanced Matrix Styling:** Larger size (`w-7 h-7`) with thicker border (`border-2`) for better visibility
+- **Improved Glow Effects:** Stronger shadows (`shadow-[0_0_20px_rgba(112,171,108,0.8)]`) for dramatic CRT glow
+- **Interactive Animations:** Scale animation (`hover:scale-110`) and smooth transitions (`duration-300`)
+- **Better Typography:** Bold fonts with drop shadows for glowing text effect
+- **Enhanced States:** Different colors and glows for add/remove states
+- **Visual Hierarchy:** Plus icon (`text-lg`) and checkmark (`text-sm`) with proper proportions
+- **Z-Index Management:** `z-10` ensures button stays above other elements
 
-- **Title (Name):**
-  - The character’s (or entity’s) name is always shown at the top of the card, styled for prominence and accessibility.
-  - If a NationIcon is present, it appears next to the name.
+#### AddToCollectionPopover Styling
+- **Fixed Positioning:** Uses `position: fixed` with dynamic positioning based on card location
+- **Dynamic Sizing:** `min-width: 200px` with `overflow-y-auto` and `max-h-[80vh]` for scrolling
+- **Enhanced Styling:** Semi-transparent background with CRT green borders and glow effects
+- **Custom Checkboxes:** Matrix-themed checkboxes with green glow and rounded corners
+- **Responsive Design:** Adapts to different collection counts with proper scrolling
 
-- **Category:**
-  - The category (e.g., "Character", "Location", "Fauna") is always shown as plain text directly below the name.
-  - This is never omitted, never shown as a badge, and never duplicated in the badge.
-  - The category is derived from the entity type (for characters, always "Character").
+#### CollectionsSidebar Styling
+- **Content-Based Height:** Uses `h-fit` instead of fixed height to grow only as needed
+- **Responsive Width:** `w-auto min-w-[200px] max-w-[280px]` for flexible sizing
+- **No Stretching:** Removed `sticky top-20` and replaced with `self-start` to prevent forced height
+- **Visual Result:** Sidebar appears as a compact, content-sized panel instead of a long column
 
-- **Badge (Role):**
-  - If the entity has a specific role/title (e.g., "NWT Chief", "Avatar"), a badge is shown floating at the bottom-right of the image area.
-  - If there is no specific role/title, the badge is omitted (do not show a generic fallback like "Character" in the badge).
-  - The badge must use the high-contrast, pill style described above for readability and visual hierarchy.
+#### Layout Integration Styling
+- **Container Height Management:** Removed `min-h-screen` from Layout.tsx and Home.tsx containers
+- **Flexbox Optimization:** Sidebar uses `self-start` instead of `sticky` positioning
+- **Content Flow:** Main content area maintains proper height constraints
+- **Visual Balance:** Sidebar and content area have proper proportions
 
-**Non-Negotiable:**
-- All three elements (title, category, badge-if-present) are required for every card. Cards missing any of these are considered incomplete and must be fixed before release.
-- Never duplicate information between the badge and the category text.
-- The information hierarchy is: Name (with icon) → Category → Badge (if present) → Details.
+#### Matrix Theme Integration
+- **CRT Green Glow:** Consistent use of `#70ab6c` and `#c8ffc8` colors
+- **Backdrop Blur:** `backdrop-blur-md` for glassmorphism effects
+- **Drop Shadows:** Text drop shadows for glowing effects
+- **Border Effects:** Thick borders with glow for definition
 
-**Rationale:**
-- This ensures every card is instantly scannable, visually consistent, and accessible, regardless of content or background image.
+#### Interactive States
+- **Hover Effects:** Scale animation and enhanced glow on hover
+- **Active States:** Different colors and glows for different states
+- **Transition Smoothness:** 300ms duration for all animations
+- **Visual Hierarchy:** Clear distinction between add and remove states
 
-**Reference:**
-- See section 7 for badge styling and placement details.
-
-These conventions ensure cards are visually clean, accessible, and maintain a clear information hierarchy, regardless of content or background image.
+### 9. Popover Positioning System (2025 Update)
 
 ### 9. Expanded Card Header: Specificity War & Inline Style Solution (2024-07)
 
