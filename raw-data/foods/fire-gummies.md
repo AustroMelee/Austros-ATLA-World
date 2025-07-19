@@ -4,17 +4,15 @@ type: food
 
 # 🍬 Fire Gummies
 
-## 🎴 UI Card View
-
-**Name:** Fire Gummies  
-**Region:** Fire Nation  
-**Description:** A common Fire Nation snack food featuring gummy candies with a spicy kick, representing the nation's love for incorporating heat into even sweet treats.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Fire Gummies
+- Region: Fire Nation
+- Description: A common Fire Nation snack food featuring gummy candies with a spicy kick, representing the nation's love for incorporating heat into even sweet treats.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Fire Gummies are a popular Fire Nation snack that perfectly demonstrates the nation's unique approach to candy-making. These gummy candies incorporate the Fire Nation's signature spices and heat, creating a sweet treat with a surprising spicy kick. The dish embodies the Fire Nation's philosophy that even the sweetest treats can be enhanced through the addition of carefully selected spices, creating a unique culinary experience that combines the familiar comfort of candy with the excitement of bold flavors.
 
@@ -38,7 +36,7 @@ Fire Gummies embody the Fire Nation's understanding that culinary innovation can
 ### Historical Context
 The tradition of Fire Gummies has been a part of Fire Nation snack culture for generations, developed as a way to showcase the nation's love for spices in even the most traditional of sweet treats. This candy demonstrates the Fire Nation's practical wisdom and their ability to create unique culinary experiences that reflect their cultural identity. The tradition continues to be a vital part of Fire Nation snack culture and serves as a reminder of their commitment to culinary innovation.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

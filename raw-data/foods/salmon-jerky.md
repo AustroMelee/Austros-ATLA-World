@@ -4,17 +4,15 @@ type: food
 
 # 🐟 Salmon Jerky
 
-## 🎴 UI Card View
-
-**Name:** Salmon Jerky  
-**Region:** Water Tribe  
-**Description:** An important form of sustenance for warriors of the Southern Water Tribe, representing their mastery of fish preservation and warrior support.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Salmon Jerky
+- Region: Water Tribe
+- Description: An important form of sustenance for warriors of the Southern Water Tribe, representing their mastery of fish preservation and warrior support.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Salmon Jerky is a vital food source for Southern Water Tribe warriors, demonstrating the tribe's exceptional skill in preserving fish and their commitment to supporting their protectors. This jerky represents the Water Tribe's understanding that their warriors need portable, nutritious food that can sustain them during long missions and harsh conditions. The dish embodies their philosophy that protecting their community requires ensuring their warriors have the best possible sustenance.
 
@@ -38,7 +36,7 @@ Salmon Jerky embodies the Water Tribe's deep respect for their warriors and thei
 ### Historical Context
 The development of Salmon Jerky as warrior sustenance represents the Southern Water Tribe's response to the need to support their protectors with high-quality, portable food. This preservation technique demonstrates their practical wisdom and their understanding of how to create food that can sustain warriors during the most challenging conditions. The tradition continues to be a testament to the tribe's commitment to their warriors and their survival skills.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "salmon-jerky",

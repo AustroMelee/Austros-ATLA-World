@@ -4,17 +4,15 @@ type: food
 
 # 🍜 Five-Flavor Soup
 
-## 🎴 UI Card View
-
-**Name:** Five-Flavor Soup  
-**Region:** Water Tribe  
-**Description:** A traditional Southern Water Tribe dinner that originally used seaweed but later evolved to use wheat noodles from the Earth Kingdom, representing cultural adaptation and trade.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Five-Flavor Soup
+- Region: Water Tribe
+- Description: A traditional Southern Water Tribe dinner that originally used seaweed but later evolved to use wheat noodles from the Earth Kingdom, representing cultural adaptation and trade.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Five-Flavor Soup is a beloved traditional dish of the Southern Water Tribe that demonstrates the tribe's ability to adapt and evolve their culinary traditions while maintaining their cultural identity. Originally made with seaweed, the dish evolved to incorporate wheat noodles from the Earth Kingdom, creating a perfect example of how trade and cultural exchange can enrich traditional cuisine. The soup represents the Water Tribe's practical wisdom and their willingness to embrace new ingredients while preserving their culinary heritage.
 
@@ -38,7 +36,7 @@ Five-Flavor Soup embodies the Water Tribe's philosophy of adaptability and their
 ### Historical Context
 The evolution of Five-Flavor Soup from a seaweed-based dish to one incorporating Earth Kingdom wheat noodles represents the broader cultural changes that occurred as trade between the nations increased. This adaptation demonstrates the Water Tribe's practical wisdom and their ability to maintain their culinary identity while embracing beneficial innovations. The dish serves as a testament to the tribe's resilience and their commitment to preserving their traditions while adapting to new opportunities.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

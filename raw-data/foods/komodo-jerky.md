@@ -4,17 +4,15 @@ type: food
 
 # 🥩 Komodo Jerky
 
-## 🎴 UI Card View
-
-**Name:** Komodo Jerky  
-**Region:** Fire Nation  
-**Description:** Jerky made from komodo rhino meat, representing the Fire Nation's mastery of meat preservation techniques and their appreciation for portable, flavorful snacks.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Komodo Jerky
+- Region: Fire Nation
+- Description: Jerky made from komodo rhino meat, representing the Fire Nation's mastery of meat preservation techniques and their appreciation for portable, flavorful snacks.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Komodo Jerky is a traditional Fire Nation preserved meat that showcases the nation's mastery of meat preservation techniques and their ability to create portable, flavorful foods. Made from komodo rhino meat, this jerky represents the Fire Nation's practical approach to food preservation and their understanding that preserved meats can be both nutritious and delicious. The dish embodies the Fire Nation's philosophy that the best preserved foods maintain their flavor and nutritional value while providing convenience and portability.
 
@@ -38,7 +36,7 @@ Komodo Jerky embodies the Fire Nation's understanding that food preservation is 
 ### Historical Context
 The tradition of Komodo Jerky has been a cornerstone of Fire Nation food preservation for generations, developed as a way to create portable, long-lasting food from local meat sources. This preserved meat demonstrates the Fire Nation's practical wisdom and their ability to create foods that serve both nutritional and practical needs. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a reminder of their commitment to food preservation techniques.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "komodo-jerky",

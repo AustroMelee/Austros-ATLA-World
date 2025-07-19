@@ -4,17 +4,15 @@ type: food
 
 # 🍘 Fish Cakes
 
-## 🎴 UI Card View
-
-**Name:** Fish Cakes  
-**Region:** Water Tribe  
-**Description:** Served during special ceremonies in the Northern Water Tribe, representing their ceremonial food traditions and their respect for important occasions.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Fish Cakes
+- Region: Water Tribe
+- Description: Served during special ceremonies in the Northern Water Tribe, representing their ceremonial food traditions and their respect for important occasions.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Fish Cakes are a ceremonial dish of the Northern Water Tribe, served during special occasions and important ceremonies. These carefully prepared cakes represent the tribe's deep respect for tradition and their understanding that food can be a powerful medium for honoring significant moments and spiritual connections. The dish embodies the Water Tribe's philosophy that the most meaningful meals are those that are prepared with intention and served to mark important cultural and spiritual events.
 
@@ -38,7 +36,7 @@ Fish Cakes embody the Water Tribe's understanding that food can be both nourishm
 ### Historical Context
 The tradition of Fish Cakes as ceremonial food has been a cornerstone of Northern Water Tribe culture for generations, developed as a way to honor important occasions and spiritual connections. This dish represents the tribe's understanding that food preparation can be a form of spiritual practice and that ceremonial meals help strengthen community bonds and cultural identity. The tradition continues to be a vital part of Northern Water Tribe ceremonial life.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

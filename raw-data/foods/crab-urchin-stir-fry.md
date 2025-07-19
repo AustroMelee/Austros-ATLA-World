@@ -4,17 +4,15 @@ type: food
 
 # 🦀 Crab Urchin Stir-Fry
 
-## 🎴 UI Card View
-
-**Name:** Crab Urchin Stir-Fry  
-**Region:** Earth Kingdom  
-**Description:** A dish made with wild crab urchins and high-quality oil that was Jianzhu's favorite dish, representing Earth Kingdom sophisticated cuisine and personal taste preferences.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Crab Urchin Stir-Fry
+- Region: Earth Kingdom
+- Description: A dish made with wild crab urchins and high-quality oil that was Jianzhu's favorite dish, representing Earth Kingdom sophisticated cuisine and personal taste preferences.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Crab Urchin Stir-Fry is a sophisticated Earth Kingdom dish that demonstrates the kingdom's ability to create refined cuisine using rare and high-quality ingredients. This dish, which was Jianzhu's favorite, represents the Earth Kingdom's understanding that personal taste preferences can drive culinary innovation and that expensive ingredients can create memorable dining experiences. The stir-fry embodies the kingdom's appreciation for both culinary technique and the use of premium ingredients to create dishes of exceptional quality.
 
@@ -56,7 +54,7 @@ The development of Crab Urchin Stir-Fry represents the Earth Kingdom's response 
 - **Seasonal versions:** Different preparations based on ingredient availability
 - **Modern adaptations:** Contemporary versions with updated techniques
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

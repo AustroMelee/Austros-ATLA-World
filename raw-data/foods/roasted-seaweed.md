@@ -4,17 +4,15 @@ type: food
 
 # 🍃 Roasted Seaweed
 
-## 🎴 UI Card View
-
-**Name:** Roasted Seaweed  
-**Region:** Air Nomads  
-**Description:** A simple, nutritious snack made from roasted seaweed, representing the Air Nomads' minimalist approach to food and their connection to natural resources.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Roasted Seaweed
+- Region: Air Nomads
+- Description: A simple, nutritious snack made from roasted seaweed, representing the Air Nomads' minimalist approach to food and their connection to natural resources.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Roasted Seaweed is a simple yet nutritious snack that perfectly embodies the Air Nomads' minimalist approach to food and their deep connection to natural resources. This uncomplicated dish demonstrates how the Air Nomads could create satisfying, healthy snacks using only the most basic ingredients and preparation methods. The snack represents their philosophy that the best foods are those that honor natural ingredients in their purest form.
 
@@ -38,7 +36,7 @@ Roasted Seaweed embodies the Air Nomads' philosophy of simplicity and their beli
 ### Historical Context
 Roasted Seaweed has been a staple of Air Nomad cuisine for generations, developed as a practical solution for creating portable, nutritious snacks that could sustain them during their nomadic lifestyle. The simple preparation method reflects the Air Nomads' practical wisdom and their ability to make the most of available natural resources. This tradition was among the many culinary practices that Avatar Aang worked to preserve after the Hundred Year War.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "roasted-seaweed",

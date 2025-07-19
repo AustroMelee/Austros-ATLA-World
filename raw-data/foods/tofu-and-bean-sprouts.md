@@ -4,17 +4,15 @@ type: food
 
 # 🥢 Tofu and Bean Sprouts
 
-## 🎴 UI Card View
-
-**Name:** Tofu and Bean Sprouts  
-**Region:** Air Nomads  
-**Description:** A simple dish combining tofu with fresh bean sprouts, showcasing the Air Nomads' minimal use of spices.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Tofu and Bean Sprouts
+- Region: Air Nomads
+- Description: A simple dish combining tofu with fresh bean sprouts, showcasing the Air Nomads' minimal use of spices.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Tofu and Bean Sprouts is a classic Air Nomad dish that represents the kingdom's mastery of simple, wholesome cooking and their appreciation for natural, unadorned flavors. This light and nutritious dish combines soft tofu with crisp, fresh bean sprouts, creating a meal that showcases the Air Nomads' characteristic minimal use of spices and their ability to let natural ingredients speak for themselves. The dish embodies the Air Nomads' philosophy of simple, satisfying meals that can sustain both body and spirit.
 
@@ -33,7 +31,7 @@ The dish is made by gently cooking soft tofu with fresh bean sprouts, using mini
 ### Historical Context
 Tofu and Bean Sprouts has been a cornerstone of Air Nomad temple cuisine for generations, with recipes and techniques passed down through monastic communities. The dish represents the Air Nomads' long tradition of creating simple, nutritious meals and their ability to adapt to whatever ingredients are available locally.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "tofu-and-bean-sprouts",

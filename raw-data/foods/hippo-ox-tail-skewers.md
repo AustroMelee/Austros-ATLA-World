@@ -4,17 +4,15 @@ type: food
 
 # 🍖 Hippo-Ox Tail Skewers
 
-## 🎴 UI Card View
-
-**Name:** Hippo-Ox Tail Skewers  
-**Region:** Fire Nation  
-**Description:** Savory skewers made from hippo-ox tail meat, representing the Fire Nation's mastery of exotic meats and their love for bold, flavorful preparations.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Hippo-Ox Tail Skewers
+- Region: Fire Nation
+- Description: Savory skewers made from hippo-ox tail meat, representing the Fire Nation's mastery of exotic meats and their love for bold, flavorful preparations.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Hippo-Ox Tail Skewers are a distinctive Fire Nation dish that showcases the nation's willingness to experiment with exotic meats and their mastery of skewer preparation techniques. These savory skewers, made from the tail meat of hippo-oxen, represent the Fire Nation's adventurous approach to cuisine and their ability to transform unusual ingredients into delicious, flavorful dishes. The dish embodies the Fire Nation's philosophy that culinary excellence comes from being willing to try new ingredients and preparation methods, creating experiences that are both exciting and satisfying.
 
@@ -38,7 +36,7 @@ Hippo-Ox Tail Skewers embody the Fire Nation's understanding that culinary innov
 ### Historical Context
 The tradition of Hippo-Ox Tail Skewers has been a part of Fire Nation cuisine for generations, developed as a way to utilize the meat from these large, powerful creatures. This dish demonstrates the Fire Nation's practical wisdom and their ability to create satisfying meals from unusual ingredients. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a reminder of their willingness to explore the boundaries of acceptable cuisine.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

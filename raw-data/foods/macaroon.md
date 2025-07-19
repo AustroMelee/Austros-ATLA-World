@@ -4,17 +4,15 @@ type: food
 
 # 🥥 Macaroon
 
-## 🎴 UI Card View
-
-**Name:** Macaroon  
-**Region:** Air Nomads  
-**Description:** A coconut-based cookie-shaped confection that showcases the Air Nomads' mastery of baking and their love for natural sweetness.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Macaroon
+- Region: Air Nomads
+- Description: A coconut-based cookie-shaped confection that showcases the Air Nomads' mastery of baking and their love for natural sweetness.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Macaroons are delicate, coconut-based cookies that exemplify the Air Nomads' exceptional baking skills and their appreciation for natural sweetness. These light, airy confections are made with care and precision, reflecting the Air Nomads' belief that even the simplest desserts can be elevated to art through skillful preparation. The cookies represent the perfect balance of texture and flavor, demonstrating how the Air Nomads could create satisfying treats without relying on complex ingredients or excessive sweetness.
 
@@ -56,7 +54,7 @@ Macaroons have been a beloved part of Air Nomad cuisine for generations, develop
 - **Ceremonial:** Special versions for important occasions
 - **Modern:** Contemporary adaptations with updated techniques
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "macaroon",

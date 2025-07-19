@@ -4,17 +4,15 @@ type: food
 
 # 🍰 Sweet Red Bean Cake
 
-## 🎴 UI Card View
-
-**Name:** Sweet Red Bean Cake  
-**Region:** Air Nomads  
-**Description:** A traditional cake made from sweet red beans, showcasing the Air Nomads' mastery of plant-based desserts and their appreciation for natural sweetness.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Sweet Red Bean Cake
+- Region: Air Nomads
+- Description: A traditional cake made from sweet red beans, showcasing the Air Nomads' mastery of plant-based desserts and their appreciation for natural sweetness.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Sweet Red Bean Cake is a traditional Air Nomad dessert that demonstrates their exceptional skill in creating satisfying sweets from plant-based ingredients. This cake combines the natural sweetness and nutritional benefits of red beans with the Air Nomads' baking expertise, creating a dessert that is both delicious and nourishing. The dish represents the Air Nomads' philosophy that desserts can be both indulgent and wholesome, providing both pleasure and sustenance.
 
@@ -38,7 +36,7 @@ This cake embodies the Air Nomads' deep understanding of how to create satisfyin
 ### Historical Context
 Sweet Red Bean Cake has been a beloved part of Air Nomad cuisine for generations, developed as a way to create satisfying desserts that align with their vegetarian philosophy. The recipe was among the many baking traditions that the Air Nomads perfected, and it was among the culinary practices that Avatar Aang worked to preserve after the Hundred Year War. The cake continues to be a testament to the Air Nomads' baking expertise and their ability to create beauty from simple, wholesome ingredients.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "sweet-red-bean-cake",

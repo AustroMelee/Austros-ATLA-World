@@ -4,17 +4,15 @@ type: food
 
 # 🌀 Spiral-Shaped Noodles
 
-## 🎴 UI Card View
-
-**Name:** Spiral-Shaped Noodles  
-**Region:** Fire Nation  
-**Description:** Traditional Fire Nation noodles shaped in spirals, traditionally eaten to celebrate the announcement of a new Fire Avatar and representing the nation's ceremonial food traditions.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Spiral-Shaped Noodles
+- Region: Fire Nation
+- Description: Traditional Fire Nation noodles shaped in spirals, traditionally eaten to celebrate the announcement of a new Fire Avatar and representing the nation's ceremonial food traditions.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Spiral-Shaped Noodles are a traditional Fire Nation dish that holds special ceremonial significance in the nation's culture. These uniquely shaped noodles are traditionally consumed to celebrate the announcement of a new Fire Avatar, representing the Fire Nation's deep connection to their spiritual heritage and their understanding that food can be a powerful medium for honoring significant moments. The spiral shape symbolizes the cyclical nature of the Avatar cycle and the continuous flow of firebending energy throughout the world.
 
@@ -38,7 +36,7 @@ Spiral-Shaped Noodles embody the Fire Nation's understanding that food can be bo
 ### Historical Context
 The tradition of Spiral-Shaped Noodles as ceremonial food has been a cornerstone of Fire Nation culture for generations, developed as a way to honor the announcement of new Fire Avatars and celebrate the nation's spiritual heritage. This dish represents the Fire Nation's understanding that food preparation can be a form of spiritual practice and that ceremonial meals help strengthen community bonds and cultural identity. The tradition continues to be a vital part of Fire Nation ceremonial life.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "spiral-shaped-noodles",

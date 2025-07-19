@@ -4,17 +4,15 @@ type: food
 
 # 🍰 Fruit Tart
 
-## 🎴 UI Card View
-
-**Name:** Fruit Tart  
-**Region:** Fire Nation  
-**Description:** A Fire Nation dessert featuring a pastry base topped with fresh fruit and often served with rose petals, representing the nation's elegant approach to sweet dishes.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Fruit Tart
+- Region: Fire Nation
+- Description: A Fire Nation dessert featuring a pastry base topped with fresh fruit and often served with rose petals, representing the nation's elegant approach to sweet dishes.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Fruit Tart is an elegant Fire Nation dessert that showcases the nation's mastery of pastry-making and their appreciation for beautiful presentation. This delicate dessert features a carefully crafted pastry base topped with fresh, seasonal fruits and is often garnished with rose petals for an extra touch of sophistication. The dish embodies the Fire Nation's philosophy that desserts should be both visually appealing and delicious, combining artistry with culinary skill to create memorable dining experiences.
 
@@ -38,7 +36,7 @@ Fruit Tart embodies the Fire Nation's understanding that desserts can be both ar
 ### Historical Context
 The tradition of Fruit Tart has been a cornerstone of Fire Nation dessert culture for generations, developed as a way to showcase the nation's pastry-making skills and their appreciation for beautiful presentation. This dessert demonstrates the Fire Nation's practical wisdom and their ability to create impressive dishes that delight both the palate and the eye. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a testament to their commitment to culinary excellence.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

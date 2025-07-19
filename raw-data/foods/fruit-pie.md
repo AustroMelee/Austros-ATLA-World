@@ -4,17 +4,15 @@ type: food
 
 # 🥧 Fruit Pie
 
-## 🎴 UI Card View
-
-**Name:** Fruit Pie  
-**Region:** Air Nomads  
-**Description:** Baked pastries filled with fresh fruits like plums, representing the Air Nomads' mastery of baking and appreciation for natural sweetness.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Fruit Pie
+- Region: Air Nomads
+- Description: Baked pastries filled with fresh fruits like plums, representing the Air Nomads' mastery of baking and appreciation for natural sweetness.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Fruit Pie is a beloved dessert in Air Nomad cuisine, showcasing the nation's exceptional baking skills and their deep connection to nature. These delicate pastries are filled with fresh, seasonal fruits like plums, creating a perfect balance of natural sweetness and flaky pastry. The pies represent the Air Nomads' philosophy of harmony with nature and their ability to transform simple ingredients into elegant desserts.
 
@@ -38,7 +36,7 @@ Fruit pies embody the Air Nomads' respect for natural cycles and their ability t
 ### Historical Context
 The tradition of fruit pie baking was among the many culinary arts that the Air Nomads perfected over generations. Many monks were skilled bakers, and these pies were a testament to their patience and attention to detail. The recipes were passed down through oral tradition and were among the cultural practices that Avatar Aang worked to preserve after the Hundred Year War.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

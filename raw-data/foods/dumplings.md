@@ -4,17 +4,15 @@ type: food
 
 # 🥟 Dumplings
 
-## 🎴 UI Card View
-
-**Name:** Dumplings  
-**Region:** Air Nomads  
-**Description:** Filled with vegetables like cabbage, ginger, chayote, carrot, and sometimes milk, representing the Air Nomads' vegetarian lifestyle.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Dumplings
+- Region: Air Nomads
+- Description: Filled with vegetables like cabbage, ginger, chayote, carrot, and sometimes milk, representing the Air Nomads' vegetarian lifestyle.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Air Nomad Dumplings are a fundamental dish that represents the Air Nomads' commitment to vegetarianism and their mastery of simple, wholesome cooking techniques. These delicate dumplings are filled with a variety of fresh vegetables including cabbage, ginger, chayote, and carrot, with some variations including milk for added richness. The dumplings showcase the Air Nomads' ability to create satisfying, nutritious meals from simple, plant-based ingredients while maintaining their characteristic minimal use of spices.
 
@@ -51,7 +49,7 @@ Air Nomad Dumplings have been a staple of Air Nomad cuisine for generations, wit
 - **Seasonal:** Different vegetable combinations based on availability
 - **Regional:** Various preparations based on local ingredients and traditions
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

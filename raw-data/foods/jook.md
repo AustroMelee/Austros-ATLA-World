@@ -4,17 +4,15 @@ type: food
 
 # 🍚 Jook
 
-## 🎴 UI Card View
-
-**Name:** Jook  
-**Region:** Earth Kingdom  
-**Description:** Rice congee, a type of porridge that represents Earth Kingdom comfort food traditions and the kingdom's mastery of simple, nourishing dishes.
-
-## 📖 UI - EXPANDED VIEW
+## 🎴 UI - CARD VIEW
 
 ```md
+- Name: Jook
+- Region: Earth Kingdom
+- Description: Rice congee, a type of porridge that represents Earth Kingdom comfort food traditions and the kingdom's mastery of simple, nourishing dishes.
+```## 📖 UI - EXPANDED VIEW
 
-#
+```md
 ```## Overview
 Jook is a traditional Earth Kingdom comfort food, a rice porridge that demonstrates the kingdom's mastery of simple, nourishing dishes. This congee represents the Earth Kingdom's philosophy that the best meals are often those that are simple, wholesome, and easy to digest. The dish embodies the kingdom's understanding that comfort food can be both satisfying and culturally significant, providing nourishment and warmth to people of all ages and backgrounds.
 
@@ -38,7 +36,7 @@ Jook embodies the Earth Kingdom's philosophy of comfort and nourishment and thei
 ### Historical Context
 The tradition of Jook represents the Earth Kingdom's long-standing commitment to comfort food and their understanding that simple, nourishing meals are essential to community well-being. This dish demonstrates the kingdom's practical wisdom and their ability to create satisfying meals from basic ingredients. The tradition continues to be a testament to the Earth Kingdom's appreciation for wholesome food and their understanding of the importance of comfort in daily life.
 
-## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "jook",
