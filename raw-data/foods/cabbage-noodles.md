@@ -2,16 +2,19 @@
 type: food
 ---
 
-# 🥬 Cabbage Noodles
+# Cabbage Noodles
 
-## 🎴 UI Card View
+## 🎴 UI - CARD VIEW
 
-**Name:** Cabbage Noodles  
-**Region:** Earth Kingdom  
-**Description:** Signature dishes from the cabbage merchant's "Cabbage Delicacies Bistro", representing Earth Kingdom entrepreneurial cuisine and the kingdom's innovative use of humble ingredients.
+```md
+- Name: Cabbage Noodles
+- Region: Earth Kingdom
+- Description: Signature dishes from the cabbage merchant's "Cabbage Delicacies Bistro", representing Earth Kingdom entrepreneurial cuisine and the kingdom's innovative use of humble ingredients.
+```
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
+```md
 ### Overview
 Cabbage Noodles are signature dishes from the cabbage merchant's "Cabbage Delicacies Bistro," demonstrating the Earth Kingdom's entrepreneurial spirit and their ability to transform humble ingredients into celebrated cuisine. These dishes represent the kingdom's philosophy that innovation and passion can elevate even the simplest ingredients to culinary excellence. The noodles embody the Earth Kingdom's appreciation for creative entrepreneurship and their understanding that dedication to a single ingredient can create memorable dining experiences.
 
@@ -52,6 +55,7 @@ The development of Cabbage Noodles represents the Earth Kingdom's response to th
 - **Regional specialties:** Different preparations based on local cabbage varieties
 - **Seasonal versions:** Various interpretations based on cabbage availability
 - **Modern innovations:** Contemporary versions with updated techniques
+```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 

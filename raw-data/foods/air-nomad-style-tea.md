@@ -4,14 +4,17 @@ type: food
 
 # Air Nomad Style Tea
 
-## 🎴 UI Card View
+## 🎴 UI - CARD VIEW
 
-**Name:** Air Nomad Style Tea  
-**Region:** Air Nomads  
-**Description:** A traditional tea preparation method unique to the Air Nomads, representing their minimal approach to beverage making.
+```md
+- Name: Air Nomad Style Tea
+- Region: Air Nomads
+- Description: A traditional tea preparation method unique to the Air Nomads, representing their minimal approach to beverage making.
+```
 
-## 📖 UI Expanded View
+## 📖 UI - EXPANDED VIEW
 
+```md
 ### Overview
 Air Nomad Style Tea is a distinctive beverage that represents the kingdom's unique approach to tea preparation and their appreciation for simple, natural flavors. This traditional tea is prepared using methods that are characteristic of Air Nomad culture, creating a beverage that showcases the Air Nomads' characteristic minimal processing and their ability to let natural flavors shine through. The tea embodies the Air Nomads' philosophy of finding balance in simplicity and their tradition of creating drinks that can refresh both body and spirit.
 
@@ -47,6 +50,7 @@ Air Nomad Style Tea has been a cornerstone of Air Nomad beverage culture for gen
 - **Seasonal:** Different preparations based on available ingredients
 - **Regional:** Various interpretations based on local traditions
 - **Modern:** Contemporary versions with updated techniques
+```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
