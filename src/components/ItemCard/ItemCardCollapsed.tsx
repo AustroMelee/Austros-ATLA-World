@@ -96,6 +96,7 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
                     draggable={false}
                     onError={handleImageError}
                     onLoad={handleImageLoad}
+                    loading="lazy"
                   />
                 )}
               </div>

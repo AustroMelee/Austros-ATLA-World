@@ -89,6 +89,7 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
                     className="w-full h-auto max-h-80 object-contain rounded-lg mx-auto"
                     onError={handleImageError}
                     onLoad={handleImageLoad}
+                    loading="lazy"
                   />
                 )}
               </div>

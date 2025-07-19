@@ -156,7 +156,7 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 -   **Modal/Overlay Borders:** **Never apply `border`, `rounded-*`, or `shadow-*` styles to both a modal container and its child card.** Only the innermost component should have these "card-like" styles to prevent double borders or visual artifacts.
 -   **Responsive Layouts:** Use `flex-wrap` for tag/pill groups. Use `flex-shrink-0`, `flex-1`, and `truncate` for list items to ensure they adapt gracefully.
 
-### 4. Card Styling & Scaling
+### 4. Card Styling & Scaling (2025 Performance Update)
 
 -   **Card Width:** Card width is set in `ItemCardCollapsed` (currently `w-[113px]`).
     -   **Source of Truth:** To change the card size globally, update the `w-[113px]` value in `src/components/ItemCard/ItemCardCollapsed.tsx`. All card content is sized relative to this width.
@@ -166,6 +166,8 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 -   **SRP:** All card styling and scaling should be handled in the relevant component (`EntityGrid` for layout/width, `ItemCard` for content), not globally.
 -   **Nation Colors:** Card border and background glow are themed by nation. The nation color is determined by the `nationThemeMap` in `src/theme/nationThemes.ts`, and applied via the `ThemedCard` component. To change or add a nation color, update `nationThemeMap`—all cards for that nation will update automatically. If a nation is missing, a neutral default color is used.
 -   **Card Text Formatting:** Card text is beautifully formatted due to the use of the Tailwind Typography plugin (`prose` classes), which is enabled and customized in `tailwind.config.js` for the project's dark theme. The expanded card content uses a `prose`-styled div, and the `CustomMarkdownRenderer` component (with `react-markdown` and custom React components) further enhances markdown rendering for headings, lists, and emphasis. This combination ensures all card text is visually appealing, readable, and consistent.
+-   **Performance Optimization:** ItemCard components are wrapped with React.memo to prevent unnecessary re-renders and improve performance.
+-   **Image Loading:** All card images use `loading="lazy"` attribute for faster initial page load and better performance.
 
 ### 5. Hiding/Unhiding UI Features (Filters & Collections)
 

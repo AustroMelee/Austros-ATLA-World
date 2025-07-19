@@ -23,9 +23,10 @@ graph TD
     M --> N[Filtered Results]
     N --> I
     
-    O[Filter Controls] --> P[useFilters Hook]
-    P --> Q[Filtered Data]
-    Q --> I
+    O[Filter Controls] --> P[useFilterState Hook]
+    P --> Q[applyFilters Utility]
+    Q --> R[useMemo Cache]
+    R --> I
     
     R[Collections] --> S[useCollections Hook]
     S --> T[localStorage]
@@ -95,8 +96,10 @@ graph TD
     D --> E[FlexSearch Index]
     E --> F[Search Results]
     
-    G[Filter Controls] --> H[useFilters Hook]
-    H --> I[Filtered Data]
+    G[Filter Controls] --> H[useFilterState Hook]
+    H --> I[applyFilters Utility]
+    I --> J[useMemo Cache]
+    J --> K[Filtered Data]
     
     F --> J[EntityGrid]
     I --> J
@@ -145,7 +148,7 @@ graph TD
 graph LR
     A[useEnrichedData] --> B[enriched-data.json]
     C[useSearch] --> A
-    D[useFilters] --> A
+    D[useFilterState] --> A
     E[useCollections] --> F[localStorage]
     
     G[useCardExpansion] --> H[Modal State]
@@ -280,10 +283,11 @@ graph TD
 
 ### Enriched JSON → UI Components
 1. **Type Classification** → Component selection
-2. **Image Loading** → Fallback handling
+2. **Image Loading** → Fallback handling with lazy loading
 3. **Search Indexing** → FlexSearch optimization
-4. **Filter Processing** → Real-time filtering
+4. **Filter Processing** → Memoized filtering with useMemo
 5. **Collection State** → localStorage persistence
+6. **Performance Optimization** → React.memo components and useCallback hooks
 
 ## 📊 Data Volume Metrics
 

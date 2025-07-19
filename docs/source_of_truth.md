@@ -139,6 +139,8 @@ The system now supports multiple data types beyond characters:
 - **Template Exclusion:** Template files are automatically excluded from data processing.
 - **Image Path Validation:** All image paths must match actual files in the assets directory.
 - **JSON Syntax Compliance:** All JSON blocks must have valid syntax without trailing commas.
+- **Performance Optimization:** Memoized filtering with useMemo, React.memo components, and useCallback hooks for optimal performance.
+- **Code Organization:** Separation of concerns with dedicated hooks and utility functions.
 
 ---
 

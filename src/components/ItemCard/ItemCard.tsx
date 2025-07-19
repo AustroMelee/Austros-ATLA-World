@@ -16,10 +16,14 @@ interface ItemCardProps {
   collectionsApi: import('../../hooks/useCollections').UseCollectionsReturn;
 }
 
-export default function ItemCard({ item, expanded, onExpand, matchedFields, collectionsApi }: ItemCardProps) {
+function ItemCardComponent({ item, expanded, onExpand, matchedFields, collectionsApi }: ItemCardProps) {
   return expanded ? (
     <ItemCardModal item={item} onClose={onExpand} />
   ) : (
     <ItemCardCollapsed item={item} matchedFields={matchedFields} onExpand={onExpand} collectionsApi={collectionsApi} />
   );
 }
+
+const ItemCard = React.memo(ItemCardComponent);
+
+export default ItemCard;

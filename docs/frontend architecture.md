@@ -101,15 +101,16 @@ graph TD
 
 ---
 
-## 1. HomeContainer.tsx: The Central Orchestrator
+## 1. HomeContainer.tsx: The Central Orchestrator (2025 Performance Update)
 
 - **Data Fetching:** On initial load, fetches `public/enriched-data.json` (the only data file used by the app) using the `useEnrichedData` hook.
 - **State Management:** Manages the user's search query, collection selection, and the `expandedCardId` for modal views.
 - **Search Logic:** Calls the `useSearch` hook, passing the filtered dataset and the current query.
 - **Collections:** Uses the `useCollections` hook to create, store, and filter collections via `localStorage`.
-- **Enhanced Filtering:** Manages comprehensive filtering state including nations, categories, subcategories, age ranges, gender, and bender classification.
-- **Sequential Pipeline:** Implements the filtering pipeline: Collections → Nations → Categories → Subcategories → Age/Gender/Bender → Search.
+- **Performance Optimized Filtering:** Uses `useFilterState` hook and `applyFilters` utility for memoized filtering with `useMemo`.
+- **Memoized Pipeline:** Implements the filtering pipeline with performance optimization: Collections → Nations → Categories → Subcategories → Age/Gender/Bender → Search.
 - **NEW (2025):** Template exclusion system prevents template files from being processed as data.
+- **Performance Enhancement:** Reduced from ~200 lines to 64 lines (68% reduction) through code organization and separation of concerns.
 
 ---
 
@@ -162,12 +163,13 @@ graph TD
 
 ### Filtering Logic (`src/pages/HomeContainer.tsx`)
 
-**Sequential Pipeline:**
+**Performance Optimized Pipeline:**
 1. **Collections Filter:** Filter by selected collection IDs
 2. **Nation Filter:** Filter by nation using partial string matching
 3. **Category Filter:** Filter by entity type (character, location, group, etc.)
 4. **Sub-Filter:** Apply comprehensive sub-filtering with mapping
 5. **Search:** Apply text search to filtered results
+6. **Memoization:** All filtering results cached with `useMemo` to prevent wasteful re-computation
 
 **Nation Filtering:**
 ```typescript
@@ -421,13 +423,26 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 10. Performance Optimizations
+## 10. Performance Optimizations (2025 Major Update)
 
 ### React Optimizations
 - **Memoization:** `useMemo` and `useCallback` for expensive operations
-- **Lazy Loading:** Images loaded on demand with fallbacks
+- **React.memo:** ItemCard components wrapped with React.memo to prevent unnecessary re-renders
+- **Lazy Loading:** Images loaded on demand with fallbacks and `loading="lazy"` attribute
 - **Virtual Scrolling:** Efficient rendering of large lists
 - **State Management:** Minimal re-renders through proper state structure
+
+### Filtering Performance (Major Enhancement)
+- **useMemo Optimization:** Complex filtering pipeline memoized to prevent wasteful re-computation on every keystroke
+- **useFilterState Hook:** Extracted filter state management into reusable custom hook with useCallback optimizations
+- **applyFilters Utility:** Pure function for filtering logic, isolated from component concerns
+- **Performance Impact:** Filtering only re-runs when filters actually change, not on every search input
+- **Code Organization:** HomeContainer reduced from ~200 lines to 64 lines (68% reduction)
+
+### Image Loading Performance
+- **Lazy Loading:** All card images use `loading="lazy"` attribute for faster initial page load
+- **Fallback System:** Robust image fallback handling with graceful degradation
+- **Performance Impact:** Browser only loads images when they're about to be visible
 
 ### Animation Performance
 - **requestAnimationFrame:** Smooth 60fps Matrix rain animation
@@ -478,5 +493,6 @@ The combination of these features creates a cohesive, high-performance applicati
 - **12 Food Sub-Categories:** Comprehensive food filtering system
 - **4 Nation Types:** Fire, Water, Earth, Air with PNG images and React icons
 - **Enhanced Filtering:** Multi-layered filtering with comprehensive coverage
+- **Performance Optimizations:** Major performance improvements with memoized filtering and React.memo components
 
-The application now provides a complete encyclopedia experience with robust filtering, comprehensive categorization, and authentic Matrix/CRT aesthetics.
+The application now provides a complete encyclopedia experience with robust filtering, comprehensive categorization, authentic Matrix/CRT aesthetics, and superior performance through intelligent caching and optimization.
