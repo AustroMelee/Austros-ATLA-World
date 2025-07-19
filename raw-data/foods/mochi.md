@@ -10,10 +10,12 @@ type: food
 - Name: Mochi
 - Region: Fire Nation
 - Description: A chewy rice cake traditionally prepared for birthday celebrations in the Fire Nation, representing the nation's appreciation for traditional rice-based desserts.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Mochi is a traditional Fire Nation dessert that showcases the nation's mastery of rice-based confections and their appreciation for chewy, satisfying textures. These chewy rice cakes are often prepared for birthday celebrations and other special occasions, representing the Fire Nation's connection to rice cultivation and their ability to transform this staple grain into delightful desserts. The dish embodies the Fire Nation's philosophy that traditional ingredients can be elevated through careful preparation and that desserts should provide both satisfaction and celebration.
 
 ### Notable Uses
@@ -53,8 +55,9 @@ The tradition of Mochi has been a cornerstone of Fire Nation dessert culture for
 - **Seasonal:** Various interpretations for different celebrations
 - **Ceremonial:** Special versions for important occasions
 - **Modern:** Contemporary adaptations with updated techniques
+```
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "mochi",

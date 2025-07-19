@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Sea Soup is a traditional Fire Nation dish that showcases the nation's ability to create flavorful soups using seafood and eggs. This hearty soup represents the Fire Nation's connection to the ocean and their mastery of combining different ingredients to create harmonious flavors. The dish embodies the Fire Nation's philosophy that the best soups come from ingredients that are carefully selected and prepared using techniques that enhance their natural qualities while adding the nation's signature spices and seasonings.
 
 ### Notable Uses
@@ -35,7 +35,6 @@ Sea Soup embodies the Fire Nation's understanding that soup-making is an art tha
 
 ### Historical Context
 The tradition of Sea Soup has been a cornerstone of Fire Nation cuisine for generations, developed as a way to utilize the abundant seafood available along the nation's coastlines. This dish demonstrates the Fire Nation's practical wisdom and their ability to create nourishing meals from local ingredients. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a reminder of their connection to the sea.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {

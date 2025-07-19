@@ -10,10 +10,12 @@ type: food
 - Name: Dried Fish
 - Region: Water Tribe
 - Description: A simple preserved food that represents the Water Tribe's fundamental food preservation techniques and their mastery of drying methods.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Dried Fish is a fundamental Water Tribe food that demonstrates the tribe's mastery of basic preservation techniques and their ability to create long-lasting food supplies from their abundant ocean resources. This simple yet essential food represents the Water Tribe's practical wisdom and their understanding of how to survive in the harsh polar environment. The dish embodies their philosophy that the best food preservation methods are often the simplest ones, developed through generations of experience and necessity.
 
 ### Notable Uses
@@ -53,8 +55,9 @@ The tradition of drying fish has been a cornerstone of Water Tribe cuisine for g
 - **Seasonal versions:** Various methods based on weather conditions
 - **Fish types:** Different species of fish used in drying
 - **Modern adaptations:** Contemporary preservation techniques
+```
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Steamed Tofu is a fundamental dish in Air Nomad cuisine, representing their mastery of simple, nutritious vegetarian cooking. This humble side dish demonstrates how the Air Nomads could create satisfying, protein-rich meals using minimal preparation and natural ingredients. The dish embodies their philosophy that the best food is that which honors the natural qualities of its ingredients while providing essential nourishment for both body and spirit.
 
 ### Notable Uses
@@ -35,7 +35,6 @@ Steamed Tofu embodies the Air Nomads' philosophy of simplicity and their belief 
 
 ### Historical Context
 Steamed Tofu has been a cornerstone of Air Nomad cuisine for generations, developed as a way to provide essential protein in a form that aligns with their vegetarian philosophy. The simple preparation method reflects the Air Nomads' practical wisdom and their ability to create nourishing meals with minimal resources. This tradition was among the many culinary practices that Avatar Aang worked to preserve after the Hundred Year War, recognizing its importance in maintaining the health and spirituality of the Air Nomad community.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {

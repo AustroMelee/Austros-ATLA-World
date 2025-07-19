@@ -10,10 +10,12 @@ type: food
 - Name: Lychee Juice
 - Region: Air Nomads
 - Description: A refreshing juice made from lychee fruits, representing the Air Nomads' appreciation for natural sweetness.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Lychee Juice is a refreshing Air Nomad beverage that represents the kingdom's appreciation for natural sweetness and their ability to create satisfying drinks from simple ingredients. This light, fragrant juice is made from fresh lychee fruits, creating a beverage that showcases the Air Nomads' characteristic minimal processing and their ability to let natural flavors shine through. The juice embodies the Air Nomads' philosophy of finding joy in simple pleasures and their tradition of creating drinks that can refresh both body and spirit.
 
 ### Notable Uses
@@ -48,8 +50,9 @@ Lychee Juice has been a staple of Air Nomad beverage culture for generations, wi
 - **Seasonal:** Different preparations based on available ingredients
 - **Regional:** Various interpretations based on local traditions
 - **Modern:** Contemporary versions with updated techniques
+```
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "lychee-juice",

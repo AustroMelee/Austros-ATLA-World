@@ -15,32 +15,27 @@ type: food
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-### 📖 Overview
-
+### Overview
 Toast is a fundamental Fire Nation food that showcases the nation's mastery of basic bread preparation and their appreciation for simple, satisfying meals. This browned bread, often enjoyed with condiments like jelly, represents the Fire Nation's understanding that even the most basic foods can be elevated through proper preparation and thoughtful accompaniments. The dish embodies the Fire Nation's philosophy that the best meals often come from mastering fundamental cooking techniques and using quality ingredients.
 
-### ✨ Notable Uses
-
+### Notable Uses
 - Served as a simple breakfast or snack food
 - Prepared for casual meals and quick dining
 - Offered to visitors as a basic, traditional Fire Nation food
 - Consumed during everyday meals and informal gatherings
 - Used to showcase basic bread preparation techniques
 
-### 🔥 Cultural Significance
-
+### Cultural Significance
 Toast embodies the Fire Nation's understanding that mastery of basic cooking techniques is essential to creating satisfying meals. The dish represents their belief that even simple foods can be elevated through proper preparation and that fundamental cooking methods have value in their own right. The simple nature of toast reflects the Fire Nation's practical approach to food and their appreciation for meals that are both nourishing and straightforward.
 
-### 🍽️ Preparation Methods
-
+### Preparation Methods
 - Bread is carefully selected and sliced
 - Toasted using controlled heat to achieve perfect browning
 - Often served with condiments like jelly or butter
 - Prepared using traditional Fire Nation toasting techniques
 - Served warm to maximize flavor and appeal
 
-### 🏛️ Historical Context
-
+### Historical Context
 The tradition of Toast has been a cornerstone of Fire Nation basic cuisine for generations, developed as a way to create satisfying meals from simple bread ingredients. This dish demonstrates the Fire Nation's practical wisdom and their ability to create nourishing foods from basic components. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a reminder of the value of mastering fundamental cooking methods.
 ```
 

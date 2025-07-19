@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Sweet Rice is a versatile dish that perfectly embodies the Air Nomads' nomadic lifestyle and their ability to adapt to different environments. This dish combines rice with sweet fruits like dried mango and cucumberquat, creating a portable, nutritious meal that can be easily prepared and consumed during travels. The dish represents the Air Nomads' practical wisdom and their understanding of how to maintain a healthy diet while constantly on the move.
 
 ### Notable Uses
@@ -35,7 +35,6 @@ Sweet Rice embodies the Air Nomads' nomadic philosophy and their ability to crea
 
 ### Historical Context
 Sweet Rice was developed by the Air Nomads as a solution to the challenges of their nomadic lifestyle. The dish was designed to provide sustained energy for long flights and spiritual journeys while being easy to prepare and transport. This practical approach to food was among the many traditions that Avatar Aang worked to preserve, recognizing its importance in maintaining the Air Nomad way of life.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {

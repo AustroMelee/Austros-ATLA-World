@@ -10,10 +10,12 @@ type: food
 - Name: Fried Fish Balls on a Stick
 - Region: Water Tribe
 - Description: A common snack food that represents Water Tribe street food traditions and their ability to create portable, delicious treats from ocean resources.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Fried Fish Balls on a Stick is a popular Water Tribe street food that demonstrates the tribe's ability to create delicious, portable snacks from their abundant ocean resources. This common snack represents the Water Tribe's practical approach to food - making the most of available ingredients while creating treats that bring joy and satisfaction to daily life. The dish embodies their philosophy that good food should be both nourishing and enjoyable, accessible to everyone in the community.
 
 ### Notable Uses
@@ -35,8 +37,9 @@ Fried Fish Balls on a Stick embodies the Water Tribe's understanding that food c
 
 ### Historical Context
 The development of Fried Fish Balls on a Stick represents the Water Tribe's response to the need for portable, satisfying food that could be enjoyed during daily activities and celebrations. This street food demonstrates their practical wisdom and their understanding of how to create treats that bring joy while using their abundant ocean resources. The tradition continues to be a vital part of Water Tribe daily life and community culture.
+```
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

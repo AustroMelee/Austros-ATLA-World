@@ -15,32 +15,27 @@ type: food
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-### 📖 Overview
-
+### Overview
 Tofu Curry is a beloved dish in Air Nomad cuisine, combining the delicate texture of tofu with a rich, creamy sauce that exemplifies the Air Nomads' mastery of vegetarian cooking. This dish was particularly cherished by Kelsang, demonstrating how even the simplest ingredients can be transformed into something extraordinary through careful preparation and respect for natural flavors. The curry represents the Air Nomads' philosophy that true culinary excellence comes from working in harmony with ingredients rather than overwhelming them with spices.
 
-### ✨ Notable Uses
-
+### Notable Uses
 - Kelsang's favorite dish during his time at the air temples
 - Served as a special meal in Air Nomad temples
 - Offered to honored guests and visitors
 - Consumed during spiritual celebrations
 - Part of traditional Air Nomad feasts
 
-### 🌱 Cultural Significance
-
+### Cultural Significance
 This curry embodies the Air Nomads' deep understanding of how to create satisfying, nourishing meals without relying on excessive spices or complex preparations. The dish represents their belief that the best food is that which honors the natural qualities of its ingredients while providing both physical and spiritual nourishment. Kelsang's fondness for this dish reflects the Air Nomads' appreciation for meals that are both comforting and spiritually grounding.
 
-### 🍽️ Preparation Methods
-
+### Preparation Methods
 - Tofu is carefully prepared to maintain its delicate texture
 - Sauce is made with minimal spices to highlight natural flavors
 - Creamy consistency is achieved through careful cooking techniques
 - Served over warm rice for a complete meal
 - Preparation requires patience and attention to detail
 
-### 🏛️ Historical Context
-
+### Historical Context
 Tofu Curry has been a cornerstone of Air Nomad cuisine for generations, developed as a way to create satisfying vegetarian meals that could nourish both body and spirit. Kelsang's particular fondness for this dish became part of Air Nomad lore, representing the deep personal connections that can form between individuals and the foods that sustain them. This tradition was among the many culinary practices that Avatar Aang worked to preserve after the Hundred Year War.
 ```
 

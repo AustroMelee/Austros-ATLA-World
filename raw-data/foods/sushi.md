@@ -15,32 +15,27 @@ type: food
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-### 📖 Overview
-
+### Overview
 Sushi is a traditional Earth Kingdom coastal dish that showcases the kingdom's mastery of rice and seafood combinations, particularly popular on Kyoshi Island. These rolled fish and rice preparations represent the Earth Kingdom's understanding that their coastal resources can be combined with staple grains to create sophisticated, flavorful dishes. The dish embodies the Earth Kingdom's philosophy that coastal culinary traditions can create unique, culturally significant foods that highlight their diverse resources.
 
-### ✨ Notable Uses
-
+### Notable Uses
 - Served as a coastal specialty, especially on Kyoshi Island
 - Consumed during coastal celebrations and gatherings
 - Offered to visitors as a representation of Earth Kingdom coastal cuisine
 - Used as a main course in coastal meal traditions
 - Part of Earth Kingdom coastal culinary heritage
 
-### 🌍 Cultural Significance
-
+### Cultural Significance
 Sushi embodies the Earth Kingdom's understanding that coastal resources can be combined with staple grains to create sophisticated, culturally significant dishes. The dish represents their belief that rice and seafood combinations can create unique flavors that serve both practical and cultural purposes. The use of rolled preparations reflects the Earth Kingdom's practical wisdom and their ability to create elegant dishes from their coastal resources.
 
-### 🍽️ Preparation Methods
-
+### Preparation Methods
 - Fresh fish and rice are carefully selected and prepared
 - Rolled using traditional Earth Kingdom coastal techniques
 - Often seasoned with local herbs and spices
 - Prepared using time-honored coastal cooking methods
 - Served to highlight the combination of rice and seafood
 
-### 🏛️ Historical Context
-
+### Historical Context
 The tradition of Sushi has been a cornerstone of Earth Kingdom coastal culinary culture for generations, particularly on Kyoshi Island, developed as a way to showcase the combination of rice and seafood in elegant preparations. This coastal dish demonstrates the Earth Kingdom's practical wisdom and their ability to create sophisticated foods from their coastal resources. The tradition continues to be a vital part of Earth Kingdom coastal culinary culture and serves as a reminder of their coastal culinary ingenuity.
 ```
 

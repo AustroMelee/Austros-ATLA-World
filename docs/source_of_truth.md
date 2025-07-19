@@ -83,6 +83,8 @@ The system now supports multiple data types beyond characters:
 - **Parser Logic:** Extracts content between ```md and ``` markers
 - **Validation:** Debug logging shows `[DEBUG] Found Expanded View block: true/false`
 - **Issue Resolution:** Fixed double ```md blocks in group files that prevented content display
+- **Regex Fix (2025 January):** Updated parser regex from `/## [^\n]*UI - EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/` to `/## [^\n]*EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/` to handle emoji headers
+- **Result:** All expanded view content now parses correctly regardless of emoji presence in section headers
 
 ### Image Path Validation
 - **Requirement:** Image paths in JSON metadata must match actual filenames in `public/assets/images/`

@@ -15,32 +15,27 @@ type: food
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-### 📖 Overview
-
+### Overview
 Spicy Pickled Kelp is a traditional Earth Kingdom delicacy that showcases the kingdom's mastery of preserving marine vegetables and their diverse flavor profiles. This pickled kelp with spicy seasonings represents the Earth Kingdom's understanding that their coastal resources can be preserved and enhanced with bold flavors. The dish embodies the Earth Kingdom's philosophy that preservation techniques can create unique, flavorful delicacies that showcase their diverse culinary traditions.
 
-### ✨ Notable Uses
-
+### Notable Uses
 - Served as a delicacy in Earth Kingdom coastal regions
 - Consumed during special occasions and celebrations
 - Offered to visitors as a representation of Earth Kingdom coastal cuisine
 - Used as a condiment or side dish in elaborate meals
 - Part of Earth Kingdom coastal culinary traditions
 
-### 🌍 Cultural Significance
-
+### Cultural Significance
 Spicy Pickled Kelp embodies the Earth Kingdom's understanding that coastal resources can be transformed into sophisticated delicacies through preservation and seasoning. The dish represents their belief that pickling techniques combined with bold flavors can create unique foods that serve both practical and cultural purposes. The use of kelp reflects the Earth Kingdom's practical wisdom and their ability to utilize marine resources in creative culinary ways.
 
-### 🍽️ Preparation Methods
-
+### Preparation Methods
 - Kelp is carefully harvested and cleaned
 - Pickled using traditional Earth Kingdom techniques
 - Seasoned with spicy herbs and spices
 - Prepared using time-honored preservation methods
 - Served as a ready-to-eat delicacy
 
-### 🏛️ Historical Context
-
+### Historical Context
 The tradition of Spicy Pickled Kelp has been a cornerstone of Earth Kingdom coastal culinary culture for generations, developed as a way to preserve and enhance marine vegetables with bold flavors. This delicacy demonstrates the Earth Kingdom's practical wisdom and their ability to create sophisticated foods from their coastal resources. The tradition continues to be a vital part of Earth Kingdom culinary culture and serves as a reminder of their coastal culinary ingenuity.
 ```
 

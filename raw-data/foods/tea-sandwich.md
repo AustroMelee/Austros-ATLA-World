@@ -15,32 +15,27 @@ type: food
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-### 📖 Overview
-
+### Overview
 Tea Sandwich is a refined Fire Nation dish that showcases the nation's appreciation for sophisticated afternoon dining and their mastery of delicate food preparation. These small, carefully prepared sandwiches represent the Fire Nation's understanding that afternoon meals can be both elegant and satisfying, combining artistry with practicality. The dish embodies the Fire Nation's philosophy that even simple foods can be elevated through careful preparation and presentation, creating memorable dining experiences.
 
-### ✨ Notable Uses
-
+### Notable Uses
 - Served during afternoon tea times and formal gatherings
 - Prepared for refined social occasions and celebrations
 - Offered to honored guests as a representation of Fire Nation hospitality
 - Consumed during traditional Fire Nation afternoon meals
 - Used to showcase delicate food preparation techniques
 
-### 🔥 Cultural Significance
-
+### Cultural Significance
 Tea Sandwich embodies the Fire Nation's understanding that afternoon dining can be both sophisticated and accessible. The dish represents their belief that even simple sandwiches can be elevated through careful preparation and that afternoon meals provide important opportunities for social connection and culinary appreciation. The delicate nature of these sandwiches reflects the Fire Nation's commitment to culinary refinement and their appreciation for meals that are both beautiful and satisfying.
 
-### 🍽️ Preparation Methods
-
+### Preparation Methods
 - Sandwiches are carefully prepared with attention to detail
 - Often filled with refined ingredients and spreads
 - Prepared using traditional Fire Nation sandwich techniques
 - Served with attention to presentation and elegance
 - Cut into small, manageable portions
 
-### 🏛️ Historical Context
-
+### Historical Context
 The tradition of Tea Sandwich has been a cornerstone of Fire Nation afternoon dining culture for generations, developed as a way to create elegant, satisfying afternoon meals that combine practicality with sophistication. This dish demonstrates the Fire Nation's practical wisdom and their ability to create refined foods that serve both nutritional and social needs. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a reminder of the importance of afternoon dining in daily life.
 ```
 

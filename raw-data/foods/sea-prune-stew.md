@@ -15,33 +15,24 @@ type: food
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-### 📖 Overview
-
+### Overview
 Sea Prune Stew is a beloved traditional dish of the Southern Water Tribe, featuring sea prunes stewed in a rich, creamy broth. This hearty soup represents the Water Tribe's connection to the ocean and their mastery of preservation techniques, creating a warming meal perfect for the harsh polar climate.
 
-### ✨ Notable Uses
-
+### Notable Uses
 - Traditional Southern Water Tribe dinner
 - Served during special family gatherings
 - Part of ceremonial meals and celebrations
 - Comfort food during cold winter months
 - Zuko helped Katara prepare it after the war
 
-### 🌟 Ingredients
+### Cultural Significance
+This stew represents the Water Tribe's deep connection to the ocean and their resourcefulness in using what the sea provides. The long preparation time reflects the Water Tribe's patience and respect for traditional methods, while the communal aspect of preparation strengthens family bonds.
 
-- Sea prunes: Ocean fruits similar to kumquats, harvested from the sea
-- Broth: Rich, flavorful base made from fish stock
-- Cream: Added for richness and texture
-- Herbs: Traditional Water Tribe seasonings
-- Sausage: Sometimes added to make it a one-dish meal
-
-### 🍽️ Preparation
-
+### Preparation Methods
 According to Kanna's traditional recipe, the broth must boil all afternoon to achieve the perfect creamy consistency. The sea prunes are carefully stewed until tender, creating a soup that warms both body and spirit. Zuko learned to help Katara with this time-consuming preparation after the war.
 
-### 🏛️ Cultural Significance
-
-This stew represents the Water Tribe's deep connection to the ocean and their resourcefulness in using what the sea provides. The long preparation time reflects the Water Tribe's patience and respect for traditional methods, while the communal aspect of preparation strengthens family bonds.
+### Historical Context
+The tradition of Sea Prune Stew has been passed down through generations of Southern Water Tribe families, with Kanna's recipe being particularly cherished. The dish represents the Water Tribe's practical wisdom and their ability to create nourishing meals from their local environment. The tradition continues to be a vital part of Water Tribe culture and family life.
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)

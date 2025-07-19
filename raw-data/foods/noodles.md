@@ -4,67 +4,68 @@ type: food
 
 # 🍜 Noodles
 
-## 🎴 UI - CARD VIEW
+## 🖼️ UI - CARD VIEW
 
 ```md
 - Name: Noodles
 - Region: Fire Nation
-- Description: A staple food in Fire Nation cuisine, often served spicy and prepared using various cooking methods to showcase the nation's mastery of heat and flavor.
-```## 📖 UI - EXPANDED VIEW
+- Short Description: A versatile staple food made from wheat flour and water, commonly served in various preparations including boiled, stir-fried, and in soups.
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### 📖 Overview
+
 Noodles are a fundamental staple of Fire Nation cuisine, representing the nation's mastery of both simple and complex cooking techniques. These versatile strands of dough are prepared in countless ways throughout the Fire Nation, from simple boiled noodles to elaborate spicy preparations that showcase the nation's love of heat and flavor. The dish embodies the Fire Nation's philosophy that even the most basic ingredients can be transformed into something extraordinary through proper technique and the judicious use of spices and seasonings.
 
-### Notable Uses
+### ✨ Notable Uses
+
 - Served as a staple food in Fire Nation households
 - Prepared in various styles from simple to elaborate
 - Often served spicy to enhance firebending abilities
 - Consumed during family meals and celebrations
 - Used as a base for many Fire Nation dishes
 
-### Cultural Significance
+### 🌟 Cultural Significance
+
 Noodles embody the Fire Nation's understanding that mastery of basic cooking techniques is essential to creating great cuisine. The dish represents their belief that even simple foods can be elevated through proper preparation and the addition of carefully selected spices and seasonings. The various ways noodles are prepared reflect the Fire Nation's creativity in the kitchen and their ability to adapt basic ingredients to create diverse and flavorful meals.
 
-### Preparation Methods
+### 🍽️ Preparation Methods
+
 - Noodles are made from wheat flour and water
 - Can be boiled, stir-fried, or served in soups
 - Often seasoned with Fire Nation spices and chili
 - Prepared using traditional Fire Nation cooking techniques
 - Served hot to maximize flavor and warmth
 
-### Historical Context
-The tradition of noodle-making has been a cornerstone of Fire Nation cuisine for generations, developed as a way to create satisfying meals from basic ingredients. This staple food demonstrates the Fire Nation's practical wisdom and their ability to create diverse dishes from simple components. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a foundation for many more complex dishes.
+### 🏛️ Historical Context
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+The tradition of noodle-making has been a cornerstone of Fire Nation cuisine for generations, developed as a way to create satisfying meals from basic ingredients. This staple food demonstrates the Fire Nation's practical wisdom and their ability to create diverse dishes from simple components. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a foundation for many more complex dishes.
+```
+
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
+## 🥘 Culinary Identity & Classification
 
 ```json
 {
   "id": "noodles",
   "name": "Noodles",
+  "slug": "noodles",
   "type": "food",
   "region": "fire_nation",
   "category": "noodles_dumplings",
   "subcategory": "staple_food",
-  "dietary": [
-    "vegetarian"
-  ],
-  "cooking_method": [
-    "boiled",
-    "stir_fried",
-    "soup"
-  ],
+  "dietary": ["vegetarian"],
+  "cooking_method": ["boiled", "stir_fried", "soup"],
   "serving_temperature": "hot",
   "spice_level": "variable",
   "preparation_time": "short",
   "difficulty": "easy",
-  "categories": [
-    "noodles_dumplings"
-  ],
+  "categories": ["noodles_dumplings"],
   "foodType": "Noodles & Dumplings",
-  "tags": [
-    "noodles_dumplings"
-  ]
+  "tags": ["noodles_dumplings"]
 }
 ```
 

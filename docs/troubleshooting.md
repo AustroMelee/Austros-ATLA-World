@@ -409,3 +409,41 @@ If you encounter an issue not covered in this guide:
 ---
 
 *Last Updated: January 2025*
+
+---
+
+## 📖 Expanded View Content Issues
+
+### Missing Expanded View Content
+
+**Problem: "Expanded view content not showing in modal despite correct markdown formatting"**
+- **Cause:** The parser's regex pattern was too strict and failed to match section headers that included emojis
+- **Original Issue:** Headers like `## 📖 UI - EXPANDED VIEW` with emojis weren't being matched by the parser
+- **Root Cause:** The original regex `/## [^\n]*UI - EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/` was too specific
+- **Solution:** Updated regex to be more flexible: `/## [^\n]*EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/`
+- **Debug Steps:**
+  1. Run `node scripts/1-parse-markdown.mjs` to see debug output
+  2. Look for `[DEBUG] Found Expanded View block: true/false` messages
+  3. Check `[DEBUG] Expanded view content length:` to verify content is being extracted
+  4. Verify the expanded view content is wrapped in ```md code blocks
+- **Validation:** Check `data/parsed-data.json` for the specific entry's `expandedView` field
+- **Prevention:** Always test expanded view parsing when adding new content with emoji headers
+
+**Problem: "Expanded view shows '#' instead of actual content"**
+- **Cause:** The parser failed to extract content and fell back to a placeholder value
+- **Solution:**
+  1. Check that expanded view content is properly wrapped in ```md blocks
+  2. Verify section header format matches parser expectations
+  3. Run debug logging to see what the parser is detecting
+  4. Ensure no double ```md markers that could confuse the parser
+  5. Check for any special characters or encoding issues in the markdown
+
+**Problem: "Expanded view content is truncated or incomplete"**
+- **Cause:** The regex may be stopping at the wrong ``` marker
+- **Solution:**
+  1. Ensure expanded view content ends with a single ``` marker
+  2. Check for any nested code blocks that might confuse the parser
+  3. Verify the content doesn't contain unescaped ``` sequences
+  4. Test with simpler content to isolate the issue
+
+---

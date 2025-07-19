@@ -10,10 +10,12 @@ type: food
 - Name: Sea Squid Soup
 - Region: Water Tribe
 - Description: A popular Water Tribe dish consisting of squid or octopus tentacles and noodles, representing the tribe's mastery of seafood preparation and their connection to the ocean.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Sea Squid Soup is a beloved Water Tribe dish that showcases the tribe's deep connection to the ocean and their mastery of seafood preparation. This hearty soup combines tender squid or octopus tentacles with noodles, creating a nourishing meal that represents the Water Tribe's understanding that the sea provides not just sustenance, but also the foundation for their culinary traditions. The dish embodies the Water Tribe's philosophy that the best meals come from ingredients that are carefully harvested from their natural environment and prepared with respect for their unique qualities.
 
 ### Notable Uses
@@ -35,8 +37,9 @@ Sea Squid Soup embodies the Water Tribe's understanding that the ocean is their 
 
 ### Historical Context
 The tradition of Sea Squid Soup has been a cornerstone of Water Tribe cuisine for generations, developed as a way to utilize the abundant seafood available in their waters. This dish demonstrates the Water Tribe's practical wisdom and their ability to create nourishing meals from their local environment. The tradition continues to be a vital part of Water Tribe culinary culture and serves as a reminder of their deep connection to the ocean.
+```
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "sea-squid-soup",

@@ -58,13 +58,24 @@ async function parseMarkdownFile(filePath) {
     }
 
     // --- Rich Character Parsing Logic ---
-    const cardViewMatch = bodyContent.match(/## [^\n]*UI - CARD VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/);
-    const expandedViewMatch = bodyContent.match(/## [^\n]*UI - EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/);
+    const cardViewMatch = bodyContent.match(/## [^\n]*CARD VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/);
+    const expandedViewMatch = bodyContent.match(/## [^\n]*EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/);
     const jsonMatches = [...bodyContent.matchAll(/```json\r?\n([\s\S]*?)```/g)];
 
     console.log(`[DEBUG]   Found Card View block: ${!!cardViewMatch}`);
     console.log(`[DEBUG]   Found Expanded View block: ${!!expandedViewMatch}`);
     console.log(`[DEBUG]   Found ${jsonMatches.length} JSON blocks.`);
+    
+    // Add detailed debugging for expanded view
+    if (!expandedViewMatch) {
+      console.log(`[DEBUG]   Expanded view regex failed. Looking for pattern: ## [^\n]*EXPANDED VIEW[^\n]*`);
+      console.log(`[DEBUG]   Body content preview: ${bodyContent.substring(0, 500)}...`);
+      const expandedViewSections = bodyContent.match(/## [^\n]*EXPANDED VIEW[^\n]*/g);
+      console.log(`[DEBUG]   Found ${expandedViewSections ? expandedViewSections.length : 0} expanded view headers:`, expandedViewSections);
+    } else {
+      console.log(`[DEBUG]   Expanded view content length: ${expandedViewMatch[1].length}`);
+      console.log(`[DEBUG]   Expanded view preview: ${expandedViewMatch[1].substring(0, 100)}...`);
+    }
 
     const jsonBlocks = [];
     for (const match of jsonMatches) {

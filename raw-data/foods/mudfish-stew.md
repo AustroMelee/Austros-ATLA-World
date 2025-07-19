@@ -10,10 +10,12 @@ type: food
 - Name: Mudfish Stew
 - Region: Fire Nation
 - Description: A traditional stew passed down through the Lambak clan, made with mudfish indigenous to Lambak Island and prepared using time-honored Fire Nation cooking techniques.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Mudfish Stew is a traditional Fire Nation dish that has been passed down through generations of the Lambak clan. Made with mudfish indigenous to Lambak Island, this hearty stew represents the Fire Nation's deep connection to their local waters and their mastery of seafood preparation. The dish embodies the Fire Nation's philosophy that the best meals come from ingredients that are carefully selected from their natural environment and prepared with respect for both the ingredients and the cooking process.
 
 ### Notable Uses
@@ -35,7 +37,6 @@ Mudfish Stew embodies the Fire Nation's understanding that the best dishes come 
 
 ### Historical Context
 The tradition of Mudfish Stew has been a cornerstone of Lambak clan culture for generations, developed as a way to utilize the abundant mudfish found in the waters around their island. This dish represents the clan's practical wisdom and their ability to create nourishing meals from their local environment. The tradition continues to be a vital part of Lambak clan culinary heritage and serves as a reminder of their connection to the sea and their ancestors.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json

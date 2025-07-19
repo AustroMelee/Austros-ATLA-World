@@ -10,10 +10,12 @@ type: food
 - Name: Mung Bean & Tofu Curry
 - Region: Air Nomads
 - Description: A rich and creamy curry served over rice, featuring mung beans and tofu in a flavorful vegetarian sauce.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Mung Bean & Tofu Curry is a cornerstone of Air Nomad cuisine, embodying the nation's vegetarian philosophy and mastery of plant-based cooking. This rich and creamy curry combines protein-rich mung beans with delicate tofu in a flavorful sauce, served over a warm bed of rice. The dish represents the Air Nomads' commitment to non-violence and their sophisticated approach to vegetarian cuisine.
 
 ### Notable Uses
@@ -35,7 +37,6 @@ This curry represents the Air Nomads' deep understanding of plant-based nutritio
 
 ### Historical Context
 The recipe for this curry was among the many culinary traditions that Avatar Aang attempted to reconstruct after the Hundred Year War. While the original recipes were lost with the destruction of the Air Nomad civilization, Aang worked to preserve and revive these traditional dishes based on his memories and damaged scrolls found in the air temples.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json

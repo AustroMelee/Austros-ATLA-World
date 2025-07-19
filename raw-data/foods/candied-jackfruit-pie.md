@@ -10,10 +10,12 @@ type: food
 - Name: Candied Jackfruit Pie
 - Region: Air Nomads
 - Description: A specific pie developed by Monk Gyatso, who would send the pastries flying with airbending as part of training exercises.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Candied Jackfruit Pie is a unique dessert created by the legendary Monk Gyatso, combining the natural sweetness of jackfruit with the Air Nomads' mastery of baking. What makes this pie truly special is its role in airbending training - Monk Gyatso would use airbending to send these pastries flying through the air, creating a fun and engaging way to practice precision and control. The pie represents the Air Nomads' ability to blend culinary arts with bending practice, making learning both delicious and entertaining.
 
 ### Notable Uses
@@ -53,8 +55,9 @@ The creation of Candied Jackfruit Pie by Monk Gyatso represents one of the most 
 - **Regional styles:** Various interpretations from different air temples
 - **Seasonal versions:** Different preparations based on jackfruit availability
 - **Modern adaptations:** Contemporary versions with updated techniques
+```
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

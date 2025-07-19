@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Roast Duck is a classic Fire Nation dish that showcases the nation's mastery of roasting techniques and their love of bold flavors. The duck is carefully seasoned with herbs and spices, roasted to achieve the perfect balance of crispy skin and tender meat, and served with a special sauce that enhances its natural flavors. The dish embodies the Fire Nation's philosophy that the best meals come from ingredients that are prepared with respect for their natural qualities and enhanced through careful seasoning and cooking techniques.
 
 ### Notable Uses
@@ -35,7 +35,7 @@ Roast Duck embodies the Fire Nation's understanding that mastery of cooking tech
 
 ### Historical Context
 The tradition of Roast Duck has been a cornerstone of Fire Nation cuisine for generations, developed as a way to showcase the nation's mastery of fire and cooking techniques. This dish demonstrates the Fire Nation's practical wisdom and their ability to create impressive meals from quality ingredients. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a testament to their cooking expertise.
-
+```
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {

@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Tart Pie is a sophisticated Fire Nation dessert that showcases the nation's mastery of layered pastry techniques and their appreciation for complex flavor combinations. This unique pie features a fruit tart positioned on top of a traditional pie base, creating a double-layered dessert that represents the Fire Nation's love for elaborate and visually impressive sweet dishes. The dish embodies the Fire Nation's philosophy that the most memorable desserts combine multiple elements to create experiences that delight both the eye and the palate.
 
 ### Notable Uses
@@ -35,7 +35,6 @@ Tart Pie embodies the Fire Nation's understanding that desserts can be both tech
 
 ### Historical Context
 The tradition of Tart Pie has been a cornerstone of Fire Nation dessert culture for generations, developed as a way to showcase the nation's pastry-making skills and their appreciation for elaborate presentation. This dessert demonstrates the Fire Nation's practical wisdom and their ability to create dishes that combine technical skill with artistic presentation. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a testament to their commitment to culinary excellence.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {

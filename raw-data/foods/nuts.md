@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Nuts are a fundamental Air Nomad snack that represents the kingdom's commitment to simple, wholesome eating and their deep appreciation for natural, unprocessed foods. This basic snack features various types of nuts that are consumed in their natural state, creating a food that showcases the Air Nomads' characteristic minimal processing and their ability to let natural ingredients speak for themselves. The snack embodies the Air Nomads' philosophy of finding joy in simple pleasures and their tradition of creating foods that can sustain both body and spirit.
 
 ### Notable Uses
@@ -30,7 +30,6 @@ Nuts are typically consumed in their natural state, with minimal processing to p
 
 ### Historical Context
 Nuts have been a staple of Air Nomad snack culture for generations, with consumption patterns passed down through families and temple communities. The snack represents the Air Nomads' long tradition of appreciating natural, unprocessed foods and their ability to find joy in simple pleasures.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json

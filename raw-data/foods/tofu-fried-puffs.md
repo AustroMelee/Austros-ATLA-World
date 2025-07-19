@@ -15,32 +15,27 @@ type: food
 ## 📖 UI - EXPANDED VIEW
 
 ```md
-### 📖 Overview
-
+### Overview
 Tofu Fried Puffs are a traditional Earth Kingdom dish that showcases the kingdom's mastery of tofu preparations and their diverse approach to vegetarian protein sources. These fried puffs of tofu represent the Earth Kingdom's understanding that tofu can be prepared in various ways to create satisfying, flavorful dishes. The dish embodies the Earth Kingdom's philosophy that vegetarian protein sources can be transformed into delicious, culturally significant foods through creative cooking methods.
 
-### ✨ Notable Uses
-
+### Notable Uses
 - Served as a vegetarian protein option in Earth Kingdom meals
 - Consumed during vegetarian dining experiences
 - Offered to visitors as a representation of Earth Kingdom tofu cuisine
 - Used as a component in larger meal presentations
 - Part of Earth Kingdom vegetarian culinary traditions
 
-### 🌍 Cultural Significance
-
+### Cultural Significance
 Tofu Fried Puffs embody the Earth Kingdom's understanding that vegetarian protein sources can be prepared in creative, flavorful ways. The dish represents their belief that tofu can be transformed through cooking methods to create satisfying dishes that serve both nutritional and cultural purposes. The use of frying reflects the Earth Kingdom's practical wisdom and their ability to create diverse tofu preparations.
 
-### 🍽️ Preparation Methods
-
+### Preparation Methods
 - Tofu is carefully selected and cut into appropriate pieces
 - Fried using traditional Earth Kingdom techniques
 - Often seasoned with local herbs and spices
 - Prepared using time-honored frying methods
 - Served hot to maximize flavor and appeal
 
-### 🏛️ Historical Context
-
+### Historical Context
 The tradition of Tofu Fried Puffs has been a part of Earth Kingdom vegetarian culinary culture for generations, developed as a way to create satisfying tofu dishes through frying techniques. This tofu preparation demonstrates the Earth Kingdom's practical wisdom and their ability to create diverse, flavorful dishes from vegetarian protein sources. The tradition continues to be a vital part of Earth Kingdom culinary culture and serves as a reminder of their tofu culinary ingenuity.
 ```
 

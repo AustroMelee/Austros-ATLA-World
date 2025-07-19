@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Steamed Dumplings are a fundamental Water Tribe dish that showcases the tribe's mastery of basic cooking techniques and their appreciation for simple, nourishing foods. These simple steamed dumplings represent the Water Tribe's understanding that the best meals often come from mastering fundamental cooking methods and using ingredients that are readily available in their environment. The dish embodies the Water Tribe's philosophy that food should be both practical and satisfying, providing nourishment without unnecessary complexity.
 
 ### Notable Uses
@@ -35,7 +35,6 @@ Steamed Dumplings embody the Water Tribe's understanding that mastery of basic c
 
 ### Historical Context
 The tradition of Steamed Dumplings has been a cornerstone of Water Tribe cuisine for generations, developed as a way to create satisfying meals using basic ingredients and fundamental cooking techniques. This dish demonstrates the Water Tribe's practical wisdom and their ability to create nourishing foods from simple components. The tradition continues to be a vital part of Water Tribe culinary culture and serves as a reminder of the value of mastering basic cooking methods.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {

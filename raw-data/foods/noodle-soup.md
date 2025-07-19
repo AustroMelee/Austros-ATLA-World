@@ -10,10 +10,12 @@ type: food
 - Name: Noodle Soup
 - Region: Air Nomads
 - Description: A simple, nourishing noodle soup that embodies the Air Nomads' minimalist approach to cooking and their emphasis on wholesome, uncomplicated meals.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Noodle Soup is a fundamental dish in Air Nomad cuisine, representing their philosophy of simplicity and their belief that the best meals are those that nourish both body and spirit without unnecessary complexity. This humble soup combines fresh vegetables with delicate noodles in a clear, flavorful broth, creating a meal that is both satisfying and spiritually grounding. The dish embodies the Air Nomads' minimalist approach to cooking and their deep respect for natural flavors.
 
 ### Notable Uses
@@ -35,8 +37,9 @@ Noodle soup embodies the Air Nomads' philosophy that true nourishment comes from
 
 ### Historical Context
 Noodle soup has been a cornerstone of Air Nomad cuisine for generations, developed as a way to create nourishing meals with minimal environmental impact. The recipe was among the many culinary traditions that Avatar Aang worked to preserve after the Hundred Year War, recognizing its importance in maintaining the spiritual and physical health of the Air Nomad community.
+```
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json
 {

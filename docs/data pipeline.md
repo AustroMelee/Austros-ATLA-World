@@ -53,6 +53,16 @@ are promoted to the top level and indexed alongside regular tags.
 - **Common Issues:** Double ```md blocks prevent content from being parsed correctly
 - **Fix Applied:** Removed duplicate ```md markers from all group files
 
+### Expanded View Parsing Fix (2025 January Update)
+
+- **Issue Identified:** The parser's regex pattern was too strict and failed to match section headers that included emojis
+- **Original Regex:** `/## [^\n]*UI - EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/`
+- **Problem:** Headers like `## 📖 UI - EXPANDED VIEW` with emojis weren't being matched
+- **Solution:** Updated regex to be more flexible: `/## [^\n]*EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/`
+- **Result:** All expanded view content now parses correctly regardless of emoji presence
+- **Debug Logging:** Enhanced debug output shows `[DEBUG] Found Expanded View block: true/false` and content length
+- **Validation:** Parser now correctly extracts expanded view content for all entity types
+
 ### Image Path Validation (2025 Update)
 
 - **Requirement:** Image paths in JSON metadata must match actual filenames in `public/assets/images/`

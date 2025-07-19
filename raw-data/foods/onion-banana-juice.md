@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Onion-Banana Juice is a distinctive Air Nomad beverage that represents the kingdom's creative approach to natural flavors and their ability to combine unexpected ingredients in harmonious ways. This unique juice combines the sweetness of bananas with the savory notes of onions, creating a beverage that showcases the Air Nomads' characteristic minimal processing and their ability to let natural flavors shine through. The juice embodies the Air Nomads' philosophy of finding balance in unexpected combinations and their tradition of creating drinks that can refresh both body and spirit.
 
 ### Notable Uses
@@ -30,7 +30,6 @@ The juice is made by carefully extracting the liquid from both onions and banana
 
 ### Historical Context
 Onion-Banana Juice has been a creative beverage in Air Nomad culture for generations, with preparation techniques passed down through families and temple communities. The juice represents the Air Nomads' long tradition of innovative cooking and their ability to find beauty in unexpected combinations.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
 ```json

@@ -10,10 +10,12 @@ type: food
 - Name: Sizzle-Crisps
 - Region: Fire Nation
 - Description: A meat-based snack that was Zuko's favorite afternoon treat, representing the Fire Nation's mastery of crispy, flavorful snack foods.
-```## 📖 UI - EXPANDED VIEW
+```
+
+## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Sizzle-Crisps are a beloved Fire Nation snack that showcases the nation's mastery of creating crispy, flavorful treats from meat. These crispy snacks, which were famously Zuko's favorite afternoon treat, represent the Fire Nation's ability to transform simple ingredients into satisfying, addictive snacks. The dish embodies the Fire Nation's philosophy that the best snacks are those that combine texture, flavor, and satisfaction in a way that makes them irresistible and memorable.
 
 ### Notable Uses
@@ -35,8 +37,9 @@ Sizzle-Crisps embody the Fire Nation's understanding that snacks can be both ind
 
 ### Historical Context
 The tradition of Sizzle-Crisps has been a beloved part of Fire Nation snack culture for generations, developed as a way to create satisfying afternoon treats that provide both nutrition and pleasure. This snack demonstrates the Fire Nation's practical wisdom and their ability to create foods that serve both practical and emotional needs. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a reminder of the importance of afternoon treats in daily life.
+```
 
-```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
   "id": "sizzle-crisps",

@@ -13,7 +13,7 @@ type: food
 ```## 📖 UI - EXPANDED VIEW
 
 ```md
-```## Overview
+### Overview
 Sky Bison Biscuits are a unique food that embodies the Air Nomads' deep connection to their flying bison companions and their philosophy of shared sustenance. These crackers were originally created to nourish the flying bison that were essential to Air Nomad life, but they were also found to be perfectly suitable for human consumption. The dish represents the Air Nomads' belief that food can be a bridge between species and that caring for their animal companions is as important as caring for themselves.
 
 ### Notable Uses
@@ -35,7 +35,6 @@ Sky Bison Biscuits embody the Air Nomads' philosophy of harmony with all living 
 
 ### Historical Context
 The creation of Sky Bison Biscuits represents one of the most innovative approaches to interspecies cooperation in Air Nomad history. By developing a food that could nourish both humans and their flying bison companions, the Air Nomads created a practical solution that also reinforced their spiritual beliefs about the unity of all life. This tradition was among the many practices that Avatar Aang worked to preserve, recognizing its importance in maintaining the unique relationship between Air Nomads and their bison companions.
-
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
