@@ -25,6 +25,7 @@ interface HomeProps {
   onSetCoreFilter: (filter: string | null) => void;
   activeSubFilters: Set<string>;
   onToggleSubFilter: (subFilter: string) => void;
+  onClearAllFilters: () => void;
 }
 
 export function Home({
@@ -43,6 +44,7 @@ export function Home({
   onSetCoreFilter,
   activeSubFilters,
   onToggleSubFilter,
+  onClearAllFilters,
 }: HomeProps) {
   const gridItems: GridItem[] = searchResults.map(result => ({
     record: result.entity,
@@ -124,6 +126,17 @@ export function Home({
             onToggleSubFilter={onToggleSubFilter}
             subFilterOptions={getSubFilterOptions(activeCoreFilter)}
           />
+          {/* Clear All Filters Button */}
+          {(activeNations.size > 0 || activeCoreFilter || activeSubFilters.size > 0) && (
+            <div className="flex justify-center mb-4">
+              <button
+                onClick={onClearAllFilters}
+                className="px-6 py-2 rounded-md bg-black backdrop-blur-sm border-2 border-[#70ab6c]/40 font-perfect-dos text-sm font-bold transition-all duration-200 crt-screen active:scale-95 shadow-lg text-[#c8ffc8] hover:bg-[#70ab6c]/60 hover:border-[#70ab6c] hover:text-black hover:shadow-[0_0_8px_rgba(112,171,108,0.6)]"
+              >
+                Clear All Filters
+              </button>
+            </div>
+          )}
           <SearchBar value={query} onChange={handleSearchChange} />
           {loading ? (
             <div className="mt-8 text-neutral-400">Loading...</div>

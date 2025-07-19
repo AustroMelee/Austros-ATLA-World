@@ -318,16 +318,16 @@ The application now features an authentic Matrix-style digital rain effect imple
 
 #### **Implementation Details:**
 - **Component:** `src/components/MatrixRain/MatrixRain.tsx`
-- **Rendering:** HTML5 Canvas with 30fps animation
-- **Characters:** Japanese Katakana and binary characters for authenticity
+- **Rendering:** HTML5 Canvas with a static grid and brightness waves
+- **Characters:** Expanded glyph set with flipped and rotated variations
 - **Performance:** Hardware-accelerated with `will-change: transform`
 
 #### **Visual Characteristics:**
-- **Leading Characters:** Bright green (`#c8ffc8`) for movie-accurate effect
-- **Trail Characters:** Standard green (`#70ab6c`) with progressive fade
-- **Background Fade:** Optimized `rgba(13, 17, 23, 0.2)` to prevent muddy accumulation
-- **Column Spacing:** Auto-calculated based on screen width (20px character width)
-- **Drop Speed:** Randomized fall rates for natural variation
+- **Leading Characters:** Bright white head followed by glowing green trail
+- **Trail Characters:** Fade smoothly with column-based drop speeds
+- **Background Fade:** Optimized `rgba(13, 17, 23, 0.1)` to prevent muddy accumulation
+- **Column Spacing:** Auto-calculated based on screen width
+- **Variable Speed:** Streams fall at different rates with random delays
 
 #### **CSS Integration:**
 ```css
@@ -495,3 +495,106 @@ opacity: modalOpen ? 0.5 : 1;
 - Hardware acceleration recommended for optimal performance
 - Graceful fallback for older browsers (static background)
 - Respects `prefers-reduced-motion` accessibility setting
+
+## Perfect DOS Font Integration (January 2025 Update)
+
+### Font Loading
+The Perfect DOS font is loaded via `@font-face` in `src/styles/custom.css`:
+```css
+@font-face {
+  font-family: 'Perfect DOS VGA 437';
+  src: url('/assets/fonts/perfect_dos_vga_437/Perfect DOS VGA 437.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+```
+
+### Application
+- **Core Filter Buttons:** Applied via `font-perfect-dos` class for better readability
+- **Subfilter Buttons:** Applied via `font-perfect-dos` class for consistency
+- **Clear All Filters Button:** Applied via `font-perfect-dos` class for matching styling
+
+### Benefits
+- **Enhanced Readability:** Better legibility against complex Matrix Rain background
+- **Retro Terminal Aesthetic:** Matches the authentic CRT/terminal theme
+- **Consistent Typography:** Uniform font usage across filter components
+- **Visual Hierarchy:** Clear distinction between different UI elements
+
+### Color Coding System (January 2025 Update)
+
+#### Core Filter Icons and Colors
+- **Characters**: `FaUsers` icon with `text-blue-400` color
+- **Foods**: `FaUtensils` icon with `text-orange-400` color
+- **Locations**: `FaMapMarkerAlt` icon with `text-green-400` color
+- **Groups**: `FaLayerGroup` icon with `text-purple-400` color
+- **Fauna**: `FaPaw` icon with `text-yellow-400` color
+- **Spirits**: `FaGhost` icon with `text-cyan-400` color
+
+#### Character Subfilter Color Coding
+- **Age Groups:**
+  - Child: `text-yellow-300` (bright yellow for youth)
+  - Teen: `text-blue-300` (blue for adolescence)
+  - Young Adult: `text-green-300` (green for growth)
+  - Adult: `text-purple-300` (purple for maturity)
+  - Elder: `text-gray-300` (gray for wisdom)
+
+- **Character Types:**
+  - Heroes: `text-green-400` (green for good/heroic)
+  - Villains: `text-red-400` (red for evil/antagonistic)
+  - Mentors: `text-blue-400` (blue for wisdom/guidance)
+
+- **Bending Status:**
+  - Bender: `text-orange-400` (orange for fire/energy)
+  - Nonbender: `text-gray-400` (gray for lack of bending)
+
+### Nation Button Opacity Enhancement (January 2025 Update)
+
+#### Changes Made
+- **Removed**: `backdrop-blur-sm` (semi-transparent background)
+- **Removed**: `opacity-80 hover:opacity-100` (transparency effects)
+- **Added**: Solid `bg-black` background
+- **Result**: 100% opaque buttons for maximum readability
+
+#### Benefits
+- **Maximum Readability**: No transparency allows for crisp, clear visibility
+- **Better Contrast**: Solid black background provides strong contrast against the Matrix Rain
+- **Consistent Styling**: Matches the opaque styling of other UI elements
+- **Enhanced UX**: Nation symbols are now clearly visible and easy to interact with
+- **Professional Look**: Clean, solid appearance without any visual noise
+
+### Clear All Filters Button Styling (January 2025 Update)
+
+#### Smart Visibility
+- **Conditional Rendering**: Only appears when any filters are active
+- **Logic**: `(activeNations.size > 0 || activeCoreFilter || activeSubFilters.size > 0)`
+- **Clean UI**: Keeps interface uncluttered when not needed
+
+#### Styling Consistency
+- **Perfect DOS Font**: Matches filter button typography
+- **Matrix Theme**: Consistent with overall CRT aesthetic
+- **Hover Effects**: Same interactive feedback as other buttons
+- **Positioning**: Centered between subfilters and search bar
+
+#### Functionality
+- **One-Click Reset**: Clears all filter states instantly
+- **Immediate Feedback**: All filters reset with visual confirmation
+- **Performance**: Uses `useCallback` for efficiency
+- **State Management**: Integrated with `useFilterState` hook
+
+## Image Handling & Fallbacks
+
+### Image Fallback System
+- **Component:** `src/components/ItemCard/imageFallbacks.ts`
+- **Purpose:** Handles cases where image filenames don't match data slugs
+- **Implementation:** Maps data slugs to actual image filenames
+- **Example:** `'mung-bean-tofu-curry': 'mung-bean-&-tofu-curry.jpg'` handles ampersand in filename
+- **Fallback Chain:** Primary image → Fallback mapping → Universal fallback → Text icon
+- **Universal Fallback:** `404.jpg` for missing images
+- **Special Cases:** Handles character name variations (e.g., `'toph-beifong': 'toph.jpg'`)
+
+### Image Loading States
+- **Loading:** Shows placeholder while image loads
+- **Success:** Displays image with proper aspect ratio
+- **Error:** Falls back to text initials or universal fallback
+- **Responsive:** Images adapt to different screen sizes
+- **Lazy Loading:** Images load on demand for better performance

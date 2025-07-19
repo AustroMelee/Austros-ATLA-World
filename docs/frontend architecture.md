@@ -13,37 +13,38 @@ graph TD
     E --> G[Main Content Area]
     
     G --> H[FilterBar.tsx]
-    G --> I[SearchBar.tsx]
-    G --> J[EntityGrid.tsx]
+    G --> I[Clear All Filters Button]
+    G --> J[SearchBar.tsx]
+    G --> K[EntityGrid.tsx]
     
-    F --> K[CreateCollectionModal.tsx]
-    F --> L[Collection Management]
+    F --> L[CreateCollectionModal.tsx]
+    F --> M[Collection Management]
     
-    H --> M[Nation Filters]
-    H --> N[Core Filters]
-    H --> O[Sub-Filters]
+    H --> N[Nation Filters]
+    H --> O[Core Filters]
+    H --> P[Sub-Filters]
     
-    J --> P[ItemCard.tsx]
-    P --> Q[ItemCardCollapsed.tsx]
-    P --> R[ItemCardModal.tsx]
+    K --> Q[ItemCard.tsx]
+    Q --> R[ItemCardCollapsed.tsx]
+    Q --> S[ItemCardModal.tsx]
     
-    Q --> S[CollectionCardButton.tsx]
-    Q --> T[AddToCollectionPopover.tsx]
+    R --> T[CollectionCardButton.tsx]
+    R --> U[AddToCollectionPopover.tsx]
     
-    R --> U[CustomMarkdownRenderer.tsx]
-    R --> V[QuoteBlock.tsx]
-    R --> W[SectionBlock.tsx]
+    S --> V[CustomMarkdownRenderer.tsx]
+    S --> W[QuoteBlock.tsx]
+    S --> X[SectionBlock.tsx]
     
-    X[useEnrichedData Hook] --> D
-    Y[useSearch Hook] --> D
-    Z[useFilters Hook] --> D
-    AA[useCollections Hook] --> D
-    BB[useCardExpansion Hook] --> D
+    Y[useEnrichedData Hook] --> D
+    Z[useSearch Hook] --> D
+    AA[useFilterState Hook] --> D
+    BB[useCollections Hook] --> D
+    CC[useCardExpansion Hook] --> D
     
     style A fill:#e1f5fe
     style D fill:#fff3e0
-    style J fill:#f3e5f5
-    style P fill:#ffebee
+    style K fill:#f3e5f5
+    style Q fill:#ffebee
     style C fill:#fce4ec
 ```
 
@@ -53,7 +54,7 @@ graph TD
 graph LR
     A[enriched-data.json] --> B[useEnrichedData]
     B --> C[useSearch]
-    B --> D[useFilters]
+    B --> D[useFilterState]
     B --> E[useCollections]
     
     F[Search Input] --> G[useDebounce]
@@ -111,6 +112,7 @@ graph TD
 - **Memoized Pipeline:** Implements the filtering pipeline with performance optimization: Collections → Nations → Categories → Subcategories → Age/Gender/Bender → Search.
 - **NEW (2025):** Template exclusion system prevents template files from being processed as data.
 - **Performance Enhancement:** Reduced from ~200 lines to 64 lines (68% reduction) through code organization and separation of concerns.
+- **Clear All Filters:** Added `handleClearAllFilters` function to reset all filter states.
 
 ---
 
@@ -119,12 +121,13 @@ graph TD
 - **Pure Component:** Receives all data and handlers from `HomeContainer`.
 - **Layout Management:** Renders the main layout with `CollectionsSidebar` and content area.
 - **Filter Integration:** Renders the `FilterBar` component with all filtering props.
+- **Clear All Filters Button:** Conditionally renders clear button between filters and search bar.
 - **Search Integration:** Renders the `SearchBar` component below filters.
 - **Grid Rendering:** Passes filtered results to `EntityGrid` for card display.
 
 ---
 
-## 3. Enhanced Multi-Layered Filtering System (2025 Update)
+## 3. Enhanced Multi-Layered Filtering System (2025 January Update)
 
 ### FilterBar Component (`src/components/Filters/FilterBar.tsx`)
 
@@ -134,20 +137,34 @@ graph TD
 - **Multi-Select:** Supports selecting multiple nations simultaneously (OR logic)
 - **Partial Matching:** Handles full nation names ("Fire Nation", "Earth Kingdom") with single-word filter buttons ("fire", "earth")
 - **Visual Effects:** Glowing terminal indicators with Matrix-themed styling
+- **100% Opaque:** Nation buttons now use solid black background for maximum readability
 
-**Core Filtering:**
+**Core Filtering (January 2025 Update):**
 - **Categories:** Characters, Groups, Locations, Foods, Fauna, Spirits
 - **Single-Select:** Only one category can be active at a time
+- **Perfect DOS Font:** Core filter buttons now use `font-perfect-dos font-bold` for better readability
+- **React Icons:** Each core filter has a color-coded React icon:
+  - 👥 **Characters**: `FaUsers` - Blue (`text-blue-400`)
+  - 🍽️ **Foods**: `FaUtensils` - Orange (`text-orange-400`) 
+  - 📍 **Locations**: `FaMapMarkerAlt` - Green (`text-green-400`)
+  - 👥 **Groups**: `FaLayerGroup` - Purple (`text-purple-400`)
+  - 🐾 **Fauna**: `FaPaw` - Yellow (`text-yellow-400`)
+  - 👻 **Spirits**: `FaGhost` - Cyan (`text-cyan-400`)
 - **Sharp Terminal Keys:** Matrix-themed button styling with glassmorphism effects
-- **NEW (2025):** Groups filter replaces the old 'bending' filter
 
-**Sub-Filtering:**
+**Sub-Filtering (January 2025 Update):**
 - **Dynamic Options:** Sub-filters appear only when a core filter is selected
 - **Age Ranges:** Child, teen, young adult, adult, elder (with animal exclusion)
 - **Gender Filters:** Male/female with React icon symbols (♂/♀)
 - **Bender Filters:** Bender/nonbender classification
 - **Multi-Select:** Multiple sub-filters can be active simultaneously
 - **Comprehensive Mapping:** Translates filter terms to data values (e.g., "villains" → "antagonist")
+- **Larger Icons:** Subfilter icons increased from `w-4 h-4` to `w-5 h-5` for better visibility
+- **Color-Coded Text:** Character subfilters now have color-coded text:
+  - **Age Groups:** Yellow (child), Blue (teen), Green (young adult), Purple (adult), Gray (elder)
+  - **Character Types:** Green (heroes), Red (villains), Blue (mentors)
+  - **Bending Status:** Orange (bender), Gray (nonbender)
+- **Perfect DOS Font:** Subfilter text uses `font-perfect-dos` for better readability
 
 **Food Sub-Filters (2025 Update):**
 - **12 Categories:** beverages, desserts, soups, meat, vegetables, noodles, dumplings, preserved, street food, traditional, vegetarian, luxury, ceremonial, health, fire-themed, seafood
@@ -155,6 +172,13 @@ graph TD
 - **Comprehensive Coverage:** All 98 food items categorized into appropriate sub-filters
 - **Nation Integration:** Food items display nation symbols in cards
 - **Multi-Select Support:** Multiple food categories can be selected simultaneously
+
+**Clear All Filters Button (January 2025 Update):**
+- **Smart Visibility:** Only appears when any filters are active (nations, core filters, or subfilters)
+- **Perfect Positioning:** Centered between subfilters and search bar with proper spacing
+- **Consistent Styling:** Matches filter button styling with Perfect DOS font
+- **One-Click Reset:** Clears all filter states instantly
+- **Enhanced UX:** Provides immediate visual feedback and keeps UI clean
 
 **Responsive Design:**
 - **Flex-Wrap Layout:** Buttons wrap to new lines on smaller screens
@@ -209,13 +233,13 @@ const isAnimal = item.species && animalSpecies.some(species =>
 ### MatrixRain Component (`src/components/MatrixRain/MatrixRain.tsx`)
 
 **Canvas-Based Rendering:**
-- **Single Component:** 122-line React component replacing 287+ lines of CSS
-- **True Randomness:** Every character randomly generated each frame
-- **Authentic Aesthetic:** Movie-accurate bright leading characters with proper trails
-- **Performance:** Uses `requestAnimationFrame` for smooth 60fps animation with adaptive frame skipping
-- **Modal Integration:** Reduces intensity when modal is open (frame skipping, reduced opacity, dimmed colors)
-- **Responsive:** Auto-calculates columns based on screen width
-- **Clean Integration:** Transparent backgrounds allow rain to show through UI gaps
+- **Static Grid:** Characters stay in fixed cells while waves of brightness move downward.
+- **Flipped & Rotated Glyphs:** Each cell stores a random orientation for authentic visual variety.
+- **Multiple Streams:** Columns can host several drops with random speed and start delays.
+- **Random Glyph Cycling:** Symbols change over time inside the illuminated trails.
+- **Performance:** Uses `requestAnimationFrame` for smooth 60fps animation with adaptive frame skipping.
+- **Modal Integration:** Reduces intensity when modal is open.
+- **Responsive:** Auto-calculates columns based on screen width and cleans up listeners on resize.
 
 **Rendering Strategy:**
 1. **Dual-Layer Rendering:** Fade layer followed by character layer for clean trails
@@ -421,6 +445,12 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **`.crt-flicker`:** Subtle animation mimicking CRT refresh
 - **`.crt-screen`:** Scanline and dithering effects
 
+### Perfect DOS Font Integration (January 2025 Update)
+- **Font Loading:** Perfect DOS font loaded via `@font-face` in `custom.css`
+- **Application:** Applied to core filters and subfilters via `font-perfect-dos` class
+- **Benefits:** Better readability against complex Matrix Rain background
+- **Consistency:** Matches the retro terminal aesthetic
+
 ---
 
 ## 10. Performance Optimizations (2025 Major Update)
@@ -473,6 +503,12 @@ const isAnimal = item.species && animalSpecies.some(species =>
 The frontend architecture provides a robust, performant, and accessible foundation for the Austros ATLA World encyclopedia. The 2025 January update introduces:
 
 - **Enhanced Multi-Layered Filtering:** Comprehensive filtering with PNG nation images, age ranges, gender, and bender classification
+- **Perfect DOS Font Integration:** Core filters and subfilters now use Perfect DOS font for better readability
+- **React Icons with Color Coding:** Each core filter has a distinct icon and color for instant recognition
+- **100% Opaque Nation Buttons:** Nation symbol buttons are now fully opaque for maximum readability
+- **Larger Subfilter Icons:** All subfilter icons increased in size for better visibility
+- **Color-Coded Character Subfilters:** Character subfilters have color-coded text for visual distinction
+- **Clear All Filters Button:** Smart visibility button that resets all filter states
 - **Food Category System:** 12 comprehensive food sub-categories with React emojis and text labels
 - **Nation Integration:** All entity types display nation symbols with consistent theming
 - **Matrix Rain Integration:** Authentic background effects with adaptive performance
@@ -486,13 +522,14 @@ The frontend architecture provides a robust, performant, and accessible foundati
 
 The combination of these features creates a cohesive, high-performance application that delivers both visual impact and functional utility while maintaining the distinctive Matrix/CRT aesthetic.
 
-**Key Statistics (2025 Update):**
+**Key Statistics (2025 January Update):**
 - **98 Food Items:** Complete food database with nation affiliations
 - **67 Character Items:** Full character roster with age/gender/bender classification
 - **12+ Group Items:** Comprehensive group coverage with nation symbols
 - **12 Food Sub-Categories:** Comprehensive food filtering system
 - **4 Nation Types:** Fire, Water, Earth, Air with PNG images and React icons
-- **Enhanced Filtering:** Multi-layered filtering with comprehensive coverage
+- **Enhanced Filtering:** Multi-layered filtering with comprehensive coverage and color coding
 - **Performance Optimizations:** Major performance improvements with memoized filtering and React.memo components
+- **UI Enhancements:** Perfect DOS font, React icons, color coding, and 100% opaque elements
 
-The application now provides a complete encyclopedia experience with robust filtering, comprehensive categorization, authentic Matrix/CRT aesthetics, and superior performance through intelligent caching and optimization.
+The application now provides a complete encyclopedia experience with robust filtering, comprehensive categorization, authentic Matrix/CRT aesthetics, superior performance through intelligent caching and optimization, and enhanced visual distinction through color coding and improved typography.

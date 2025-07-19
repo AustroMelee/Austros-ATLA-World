@@ -13,7 +13,7 @@ export default function CollectionsSidebar({ collections, activeId, onActivate, 
   const [showCreateModal, setShowCreateModal] = useState(false);
 
   return (
-    <aside className="p-4 w-auto min-w-[200px] max-w-[280px] self-start space-y-3 text-sm bg-black/80 backdrop-blur-sm border-r border-[#70ab6c]/20 crt-screen z-10">
+    <aside className="p-4 w-auto min-w-[200px] max-w-[280px] self-start space-y-3 text-sm bg-black/95 backdrop-blur-sm border-r border-[#70ab6c]/20 crt-screen z-10">
       <h3 className="font-bold text-base mb-3 text-[#c8ffc8] crt-glow-text">Collections</h3>
       <button
         type="button"

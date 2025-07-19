@@ -49,7 +49,7 @@ export default function AddToCollectionPopover({ collections, cardId, addCard, r
     <div 
       ref={popoverRef}
       style={getPosition()}
-      className="fixed bg-black/90 backdrop-blur-md border-2 border-[#70ab6c] rounded-lg shadow-2xl p-3 z-20 text-sm text-[#c8ffc8] crt-screen overflow-y-auto max-h-[80vh]"
+      className="fixed bg-black/98 backdrop-blur-md border-2 border-[#70ab6c] rounded-lg shadow-2xl p-3 z-20 text-sm text-[#c8ffc8] crt-screen overflow-y-auto max-h-[80vh]"
     >
       <button type="button" className="w-full text-left p-1 rounded hover:bg-[#70ab6c]/20" onClick={onCreateNew}>
         + Create new collection

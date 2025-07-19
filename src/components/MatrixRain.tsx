@@ -15,91 +15,152 @@ const MatrixRain: React.FC<MatrixRainProps> = ({ modalOpen = false }) => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // --- Configuration ---
     const fontSize = 16;
-    const characters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン01';
-    
+    const charSet =
+      'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const orientations = [0, Math.PI / 2, Math.PI, (3 * Math.PI) / 2];
+
+    interface Cell {
+      char: string;
+      angle: number;
+      flip: boolean;
+    }
+
+    interface Stream {
+      y: number;
+      speed: number;
+      delay: number;
+    }
+
+    const trailLength = 20;
+
     let width: number;
     let height: number;
     let columns: number;
-    let drops: number[] = [];
+    let rows: number;
+    let grid: Cell[][] = [];
+    let streams: Stream[][] = [];
     let lastTime = 0;
-    
-    const initializeCanvas = () => {
+
+    const initGrid = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
       columns = Math.floor(width / fontSize);
-      
-      drops = [];
-      for (let i = 0; i < columns; i++) {
-        drops[i] = Math.floor(Math.random() * height / fontSize);
+      rows = Math.floor(height / fontSize);
+
+      grid = Array.from({ length: columns }, () =>
+        Array.from({ length: rows }, () => ({
+          char: charSet.charAt(Math.floor(Math.random() * charSet.length)),
+          angle: orientations[Math.floor(Math.random() * orientations.length)],
+          flip: Math.random() < 0.5,
+        }))
+      );
+
+      streams = Array.from({ length: columns }, () => [
+        {
+          y: -Math.random() * rows,
+          speed: 0.5 + Math.random() * 1.5,
+          delay: Math.floor(Math.random() * 50),
+        },
+      ]);
+    };
+
+    const drawCell = (x: number, y: number, cell: Cell, color: string) => {
+      ctx.save();
+      ctx.translate(x + fontSize / 2, y + fontSize / 2);
+      ctx.rotate(cell.angle);
+      if (cell.flip) ctx.scale(-1, 1);
+      ctx.fillStyle = color;
+      ctx.fillText(cell.char, -fontSize / 2, -fontSize / 2);
+      ctx.restore();
+    };
+
+    const updateChars = () => {
+      for (let c = 0; c < columns; c += 1) {
+        for (let r = 0; r < rows; r += 1) {
+          if (Math.random() < 0.02) {
+            grid[c][r].char = charSet.charAt(Math.floor(Math.random() * charSet.length));
+          }
+        }
       }
     };
-    
-    initializeCanvas();
-    
-    // --- Optimized Animation Loop with requestAnimationFrame ---
-    const animate = (currentTime: number) => {
-      // Skip frames to reduce intensity when modal is open
-      const frameSkip = modalOpen ? 3 : 1;
-      if (currentTime - lastTime < (1000 / 60) * frameSkip) {
-        animationRef.current = requestAnimationFrame(animate);
-        return;
-      }
-      lastTime = currentTime;
 
-      // Dual-layer rendering: Fade layer first
-      const fadeOpacity = modalOpen ? 0.15 : 0.2;
-      ctx.fillStyle = `rgba(13, 17, 23, ${fadeOpacity})`; 
+    const draw = () => {
+      ctx.fillStyle = modalOpen ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.1)';
       ctx.fillRect(0, 0, width, height);
 
       ctx.font = `${fontSize}px monospace`;
+      ctx.textBaseline = 'top';
+      ctx.textAlign = 'left';
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = characters.charAt(Math.floor(Math.random() * characters.length));
-        const y = drops[i] * fontSize;
-        
-        // Only draw each character once, with proper trail effect
-        if (y <= height) {
-          // Determine if this is the leading character (bottom of column)
-          const isLeading = y === Math.max(...drops.map(d => d * fontSize));
-          
-          if (isLeading) {
-            // Bright leading character
-            ctx.fillStyle = modalOpen ? '#70ab6c' : '#c8ffc8';
-          } else {
-            // Standard trail character with reduced opacity
-            const trailOpacity = modalOpen ? 0.4 : 0.7;
-            ctx.fillStyle = `rgba(112, 171, 108, ${trailOpacity})`;
-          }
-          
-          ctx.fillText(text, i * fontSize, y);
+      // base dim grid
+      for (let c = 0; c < columns; c += 1) {
+        for (let r = 0; r < rows; r += 1) {
+          drawCell(c * fontSize, r * fontSize, grid[c][r], 'rgba(112,171,108,0.15)');
         }
-
-        // Reset column when it goes off screen
-        if (y > height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-
-        drops[i]++;
       }
 
+      // streams
+      for (let c = 0; c < columns; c += 1) {
+        const colStreams = streams[c];
+        for (let s = colStreams.length - 1; s >= 0; s -= 1) {
+          const stream = colStreams[s];
+          if (stream.delay > 0) {
+            stream.delay -= 1;
+            continue;
+          }
+          stream.y += stream.speed;
+
+          for (let k = 0; k < trailLength; k += 1) {
+            const row = Math.floor(stream.y) - k;
+            if (row < 0 || row >= rows) continue;
+            const brightness = 1 - k / trailLength;
+            const color =
+              k === 0
+                ? modalOpen
+                  ? '#c8ffc8'
+                  : '#ffffff'
+                : `rgba(112, 171, 108, ${brightness})`;
+            drawCell(c * fontSize, row * fontSize, grid[c][row], color);
+          }
+
+          if (stream.y - trailLength > rows) {
+            colStreams.splice(s, 1);
+            colStreams.push({
+              y: -Math.random() * rows,
+              speed: 0.5 + Math.random() * 1.5,
+              delay: Math.floor(Math.random() * 50),
+            });
+          }
+        }
+
+        if (colStreams.length < 2 && Math.random() < 0.02) {
+          colStreams.push({
+            y: -Math.random() * rows,
+            speed: 0.5 + Math.random() * 1.5,
+            delay: Math.floor(Math.random() * 50),
+          });
+        }
+      }
+    };
+
+    const animate = (time: number) => {
+      const frameSkip = modalOpen ? 3 : 1;
+      if (time - lastTime > (1000 / 60) * frameSkip) {
+        updateChars();
+        draw();
+        lastTime = time;
+      }
       animationRef.current = requestAnimationFrame(animate);
     };
 
-    // Start the animation loop
+    initGrid();
     animationRef.current = requestAnimationFrame(animate);
-
-    const handleResize = () => {
-      initializeCanvas();
-    };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', initGrid);
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', handleResize);
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+      window.removeEventListener('resize', initGrid);
     };
 
   }, [modalOpen]);

@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Perfect DOS VGA 437';
+  src: url('/assets/fonts/perfect_dos_vga_437/Perfect DOS VGA 437.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Enables smooth scrolling for all in-page anchor links */
 html {
   scroll-behavior: smooth;
@@ -371,8 +378,12 @@ input[type="text"]::-moz-selection {
 
 @layer utilities {
   .font-tty-glass {
-    font-family: 'Glass_TTY_VT220', monospace;
-  }
+  font-family: 'Glass_TTY_VT220', monospace;
+}
+
+.font-perfect-dos {
+  font-family: 'Perfect DOS VGA 437', monospace;
+}
   .transform-style-preserve-3d {
     transform-style: preserve-3d;
   }

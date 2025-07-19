@@ -92,6 +92,15 @@ The system now supports multiple data types beyond characters:
 - **Fixes Applied:** Corrected image paths for Order of the White Lotus, Si Wong Tribes, and Water Tribe Military
 - **Pattern:** `"image": "exact-filename.jpg"` must match actual file
 
+### Image Fallback System (January 2025 Update)
+- **Component:** `src/components/ItemCard/imageFallbacks.ts`
+- **Purpose:** Handles cases where image filenames don't match data slugs
+- **Implementation:** Maps data slugs to actual image filenames
+- **Example:** `'mung-bean-tofu-curry': 'mung-bean-&-tofu-curry.jpg'` handles ampersand in filename
+- **Fallback Chain:** Primary image → Fallback mapping → Universal fallback → Text icon
+- **Universal Fallback:** `404.jpg` for missing images
+- **Special Cases:** Handles character name variations (e.g., `'toph-beifong': 'toph.jpg'`)
+
 ### JSON Syntax Validation
 - **Requirement:** All JSON blocks must have valid syntax
 - **Common Issues:** Trailing commas in arrays and objects
@@ -100,7 +109,7 @@ The system now supports multiple data types beyond characters:
 
 ---
 
-## 🎯 UI Component Updates (2025 Update)
+## 🎯 UI Component Updates (2025 January Update)
 
 ### Dynamic Type Labels
 - **Component:** `src/components/ItemCard/ItemCardCollapsed.tsx`
@@ -123,11 +132,37 @@ The system now supports multiple data types beyond characters:
 - **Click-Outside Detection:** Event listeners for closing popover when clicking outside card or popover area
 - **Visual Design:** Consistent Matrix/CRT theme with green glow effects, backdrop blur, and smooth transitions
 
-### Filter System Enhancement
+### Filter System Enhancement (January 2025 Update)
 - **Component:** `src/components/Filters/FilterBar.tsx`
-- **Update:** Replaced 'bending' filter with 'groups' filter
-- **Logic:** Updated `typeMap` in `HomeContainer.tsx` to map 'groups' to 'group' type
-- **Integration:** Groups now appear when "Groups" filter is selected
+- **Perfect DOS Font:** Core filters and subfilters now use `font-perfect-dos` for better readability
+- **React Icons with Color Coding:** Each core filter has a distinct icon and color:
+  - 👥 **Characters**: `FaUsers` - Blue (`text-blue-400`)
+  - 🍽️ **Foods**: `FaUtensils` - Orange (`text-orange-400`) 
+  - 📍 **Locations**: `FaMapMarkerAlt` - Green (`text-green-400`)
+  - 👥 **Groups**: `FaLayerGroup` - Purple (`text-purple-400`)
+  - 🐾 **Fauna**: `FaPaw` - Yellow (`text-yellow-400`)
+  - 👻 **Spirits**: `FaGhost` - Cyan (`text-cyan-400`)
+- **100% Opaque Nation Buttons:** Nation symbol buttons now use solid black background for maximum readability
+- **Larger Subfilter Icons:** All subfilter icons increased from `w-4 h-4` to `w-5 h-5` for better visibility
+- **Color-Coded Character Subfilters:** Character subfilters have color-coded text:
+  - **Age Groups:** Yellow (child), Blue (teen), Green (young adult), Purple (adult), Gray (elder)
+  - **Character Types:** Green (heroes), Red (villains), Blue (mentors)
+  - **Bending Status:** Orange (bender), Gray (nonbender)
+- **Clear All Filters Button:** Smart visibility button that resets all filter states with conditional rendering
+
+### Clear All Filters Button (January 2025 Update)
+- **Component:** `src/pages/Home.tsx`
+- **Smart Visibility:** Only appears when any filters are active (nations, core filters, or subfilters)
+- **Perfect Positioning:** Centered between subfilters and search bar with proper spacing
+- **Consistent Styling:** Matches filter button styling with Perfect DOS font
+- **One-Click Reset:** Clears all filter states instantly
+- **Enhanced UX:** Provides immediate visual feedback and keeps UI clean
+
+### Perfect DOS Font Integration (January 2025 Update)
+- **Font Loading:** Perfect DOS font loaded via `@font-face` in `src/styles/custom.css`
+- **Application:** Applied to core filters and subfilters via `font-perfect-dos` class
+- **Benefits:** Better readability against complex Matrix Rain background
+- **Consistency:** Matches the retro terminal aesthetic
 
 ---
 
@@ -138,17 +173,19 @@ The system now supports multiple data types beyond characters:
 - **Strict Schema Adherence:** All data must follow the canonical schema in `docs/templates/character_template.md`.
 - **Template Exclusion:** Template files are automatically excluded from data processing.
 - **Image Path Validation:** All image paths must match actual files in the assets directory.
+- **Image Fallback System:** Handles cases where image filenames don't match data slugs with fallback mappings.
 - **JSON Syntax Compliance:** All JSON blocks must have valid syntax without trailing commas.
 - **Performance Optimization:** Memoized filtering with useMemo, React.memo components, and useCallback hooks for optimal performance.
 - **Code Organization:** Separation of concerns with dedicated hooks and utility functions.
+- **UI Enhancement:** Perfect DOS font integration, React icons with color coding, and 100% opaque elements for maximum readability.
 
 ---
 
 ## Canonical References
-- **Data Pipeline:** See `docs/data pipeline.md` for the full authoring and build process.
-- **Search Engine:** See `docs/search engine.md` for the client-side search architecture.
-- **Frontend Architecture:** See `docs/frontend architecture.md` for the React component structure and data flow.
-- **Data Flow:** See `docs/data flow.md` for the complete data flow including filtering system.
+- **Data Pipeline:** See `docs/data_pipeline.md` for the full authoring and build process.
+- **Search Engine:** See `docs/search_engine.md` for the client-side search architecture.
+- **Frontend Architecture:** See `docs/frontend_architecture.md` for the React component structure and data flow.
+- **Data Flow:** See `docs/data_flow.md` for the complete data flow including filtering system.
 - **Troubleshooting:** See `docs/troubleshooting.md` for debugging steps and lessons learned.
 
 ---

@@ -27,8 +27,8 @@ export default function CreateCollectionModal({ isOpen, onClose, onCreate }: Pro
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-      <div className="bg-black/90 backdrop-blur-sm border border-[#70ab6c]/20 rounded-lg p-6 w-96 max-w-[90vw] text-[#c8ffc8] crt-screen">
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+      <div className="bg-black/98 backdrop-blur-sm border border-[#70ab6c]/20 rounded-lg p-6 w-96 max-w-[90vw] text-[#c8ffc8] crt-screen">
         <h2 className="text-xl font-bold mb-4">Create New Collection</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

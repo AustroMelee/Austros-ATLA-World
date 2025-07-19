@@ -25,10 +25,10 @@ The primary container for all React components:
 #### Matrix Rain (`<canvas>`):
 - A `<canvas>` element is rendered with `position: fixed` and `z-index: -1`
 - This places it as a persistent background layer behind all other content
-- **2025 Update:** Canvas-based Matrix digital rain with authentic movie-style characteristics
-- **Performance Optimized:** Uses `requestAnimationFrame` instead of `setInterval` for smooth 60fps animation with adaptive frame skipping
-- **Modal Integration:** Reduces intensity when modal is open (frame skipping, reduced opacity, dimmed colors)
-- **Responsive Design:** Auto-calculates column count based on screen width
+- **2025 Update:** Static character grid with brightness waves, flipped glyphs, and random character cycling
+- **Performance Optimized:** Uses `requestAnimationFrame` with adaptive frame skipping
+- **Modal Integration:** Reduces intensity when modals are open
+- **Responsive Design:** Auto-calculates column count and cleans up on resize
 - **Memory Management:** Proper cleanup of animation frames and event listeners
 
 #### Main Content (`<main>`):

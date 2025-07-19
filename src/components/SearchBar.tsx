@@ -80,7 +80,7 @@ export default function SearchBar({
             "
             style={{
               background: `
-                radial-gradient(ellipse at center, rgba(6,25,17,0.98) 60%, rgba(6,25,17,0.85) 80%, rgba(6,25,17,0.7) 100%)
+                radial-gradient(ellipse at center, rgba(6,25,17,0.99) 60%, rgba(6,25,17,0.95) 80%, rgba(6,25,17,0.9) 100%)
               `,
               backgroundColor: '#061911',
               backgroundBlendMode: 'overlay',

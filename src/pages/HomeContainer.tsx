@@ -22,6 +22,7 @@ export function HomeContainer() {
     handleToggleNation,
     handleSetCoreFilter,
     handleToggleSubFilter,
+    handleClearAllFilters,
   } = useFilterState();
 
   const filteredItems = useMemo(
@@ -57,6 +58,7 @@ export function HomeContainer() {
       onSetCoreFilter={handleSetCoreFilter}
       activeSubFilters={activeSubFilters}
       onToggleSubFilter={handleToggleSubFilter}
+      onClearAllFilters={handleClearAllFilters}
     />
   );
 }

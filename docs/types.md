@@ -184,20 +184,33 @@ interface MatrixRainProps {
 ```typescript
 // Canvas configuration
 const fontSize = 16;
-const characters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン01';
+const charSet = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+interface Cell {
+  char: string;
+  angle: number;
+  flip: boolean;
+}
+
+interface Stream {
+  y: number;
+  speed: number;
+  delay: number;
+}
 
 // Animation state
 let width: number;
 let height: number;
 let columns: number;
-let drops: number[];
+let rows: number;
+let grid: Cell[][];
+let streams: Stream[][];
 let lastTime = number;
+const trailLength = 20;
 
 // Performance settings
-const frameSkip = modalOpen ? 3 : 1; // Frame skipping when modal is open
-const fadeOpacity = modalOpen ? 0.15 : 0.2; // Reduced opacity when modal is open
-const leadingColor = modalOpen ? '#70ab6c' : '#c8ffc8'; // Dimmed colors when modal is open
-const trailOpacity = modalOpen ? 0.4 : 0.7; // Reduced trail opacity when modal is open
+const frameSkip = modalOpen ? 3 : 1;
+const baseFade = modalOpen ? 0.3 : 0.1;
 ```
 
 ## Data Pipeline Types (2025 Update)

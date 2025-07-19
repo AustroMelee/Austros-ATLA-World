@@ -28,12 +28,16 @@ graph TD
     Q --> R[useMemo Cache]
     R --> I
     
-    R[Collections] --> S[useCollections Hook]
-    S --> T[localStorage]
-    T --> U[Collection UI]
+    S[Clear All Filters] --> T[useFilterState Hook]
+    T --> U[Reset All Filters]
+    U --> R
     
-    V[Matrix Rain] --> W[useCardExpansion Hook]
-    W --> X[Modal Display]
+    V[Collections] --> W[useCollections Hook]
+    W --> X[localStorage]
+    X --> Y[Collection UI]
+    
+    Z[Matrix Rain] --> AA[useCardExpansion Hook]
+    AA --> BB[Modal Display]
     
     style A fill:#e1f5fe
     style E fill:#c8e6c9
@@ -101,18 +105,23 @@ graph TD
     I --> J[useMemo Cache]
     J --> K[Filtered Data]
     
+    L[Clear All Filters] --> M[handleClearAllFilters]
+    M --> N[Reset Filter States]
+    N --> O[useFilterState Hook]
+    O --> I
+    
     F --> J[EntityGrid]
     I --> J
     J --> K[ItemCard Components]
     
-    L[Collections State] --> M[useCollections Hook]
-    M --> N[localStorage]
-    N --> O[Collection UI]
+    P[Collections State] --> Q[useCollections Hook]
+    Q --> R[localStorage]
+    R --> S[Collection UI]
     
     style A fill:#c8e6c9
     style J fill:#f3e5f5
     style K fill:#ffebee
-    style N fill:#e8f5e8
+    style R fill:#e8f5e8
 ```
 
 ### 4. Component Hierarchy
@@ -122,23 +131,24 @@ graph TD
     B --> C[HomeContainer.tsx]
     C --> D[SearchBar.tsx]
     C --> E[FilterBar.tsx]
-    C --> F[EntityGrid.tsx]
-    C --> G[CollectionsSidebar.tsx]
+    C --> F[Clear All Filters Button]
+    C --> G[EntityGrid.tsx]
+    C --> H[CollectionsSidebar.tsx]
     
-    F --> H[ItemCard.tsx]
-    H --> I[ItemCardCollapsed.tsx]
-    H --> J[ItemCardModal.tsx]
+    G --> I[ItemCard.tsx]
+    I --> J[ItemCardCollapsed.tsx]
+    I --> K[ItemCardModal.tsx]
     
-    E --> K[Filter Components]
-    G --> L[Collection Components]
+    E --> L[Filter Components]
+    H --> M[Collection Components]
     
-    M[MatrixRain.tsx] --> B
+    N[MatrixRain.tsx] --> B
     
     style A fill:#e1f5fe
     style C fill:#fff3e0
-    style F fill:#f3e5f5
-    style H fill:#ffebee
-    style M fill:#fce4ec
+    style G fill:#f3e5f5
+    style I fill:#ffebee
+    style N fill:#fce4ec
 ```
 
 ## 🔧 Hook Dependencies
@@ -272,6 +282,26 @@ graph TD
     style M fill:#c8e6c9
 ```
 
+### Clear All Filters Flow (January 2025 Update)
+```mermaid
+graph TD
+    A[User Clicks Clear All] --> B[handleClearAllFilters]
+    B --> C[Reset Active Nations]
+    C --> D[Reset Active Core Filter]
+    D --> E[Reset Active Sub Filters]
+    E --> F[Trigger Re-render]
+    F --> G[Update UI State]
+    
+    H[Filter State Check] --> I[Show/Hide Button]
+    I --> J[Conditional Rendering]
+    J --> K[Smart Visibility]
+    
+    style A fill:#e3f2fd
+    style B fill:#fff3e0
+    style G fill:#f3e5f5
+    style K fill:#c8e6c9
+```
+
 ## 🎯 Key Data Transformations
 
 ### Raw Markdown → Enriched JSON
@@ -288,6 +318,7 @@ graph TD
 4. **Filter Processing** → Memoized filtering with useMemo
 5. **Collection State** → localStorage persistence
 6. **Performance Optimization** → React.memo components and useCallback hooks
+7. **UI Enhancement** → Perfect DOS font, React icons, color coding
 
 ## 📊 Data Volume Metrics
 
@@ -300,6 +331,66 @@ graph TD
 - **Food Items:** 98 items
 - **Character Items:** 67 items
 - **Group Items:** ~10+ items
+
+## 🎨 UI Enhancement Flow (January 2025 Update)
+
+### Perfect DOS Font Integration
+```mermaid
+graph TD
+    A[Custom CSS] --> B[@font-face Declaration]
+    B --> C[Perfect DOS Font Loading]
+    C --> D[font-perfect-dos Class]
+    D --> E[Core Filter Buttons]
+    D --> F[Subfilter Buttons]
+    
+    G[FilterBar Component] --> H[Font Application]
+    H --> I[Enhanced Readability]
+    I --> J[Retro Terminal Aesthetic]
+    
+    style A fill:#e3f2fd
+    style C fill:#c8e6c9
+    style E fill:#f3e5f5
+    style F fill:#f3e5f5
+```
+
+### React Icons with Color Coding
+```mermaid
+graph TD
+    A[React Icons Import] --> B[Icon Mapping]
+    B --> C[Color Mapping]
+    C --> D[Core Filter Icons]
+    D --> E[Character Subfilter Icons]
+    
+    F[FilterBar Component] --> G[Icon Rendering]
+    G --> H[Color Application]
+    H --> I[Visual Distinction]
+    
+    J[Character Subfilters] --> K[Age Group Colors]
+    J --> L[Character Type Colors]
+    J --> M[Bending Status Colors]
+    
+    style A fill:#e3f2fd
+    style D fill:#f3e5f5
+    style E fill:#f3e5f5
+    style I fill:#c8e6c9
+```
+
+### Nation Button Opacity Enhancement
+```mermaid
+graph TD
+    A[Nation Button Component] --> B[Remove backdrop-blur-sm]
+    B --> C[Remove opacity-80]
+    C --> D[Add solid bg-black]
+    D --> E[100% Opaque Buttons]
+    
+    F[Matrix Rain Background] --> G[Complex Animated BG]
+    G --> H[Enhanced Readability]
+    H --> I[Maximum Contrast]
+    
+    style A fill:#e3f2fd
+    style E fill:#c8e6c9
+    style I fill:#f3e5f5
+```
 
 ## 🔗 Related Documentation
 

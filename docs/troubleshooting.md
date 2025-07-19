@@ -447,3 +447,33 @@ If you encounter an issue not covered in this guide:
   4. Test with simpler content to isolate the issue
 
 ---
+
+## Image Issues
+
+### Missing Images
+**Problem:** Images not appearing in cards
+**Solution:** Check the image fallback system in `src/components/ItemCard/imageFallbacks.ts`
+
+**Common Issues:**
+1. **Filename Mismatch:** Image filename doesn't match data slug
+   - **Example:** Data slug is `mung-bean-tofu-curry` but image is `mung-bean-&-tofu-curry.jpg`
+   - **Fix:** Add fallback mapping: `'mung-bean-tofu-curry': 'mung-bean-&-tofu-curry.jpg'`
+
+2. **Missing Image File:** Image file doesn't exist in `public/assets/images/`
+   - **Fix:** Add the image file or update the fallback mapping
+
+3. **Character Name Variations:** Character names in data don't match image filenames
+   - **Example:** `'toph-beifong': 'toph.jpg'` for character name variations
+   - **Fix:** Add appropriate fallback mapping
+
+**Debugging Steps:**
+1. Check browser console for 404 errors
+2. Verify image file exists in `public/assets/images/`
+3. Check data slug matches expected image filename
+4. Add fallback mapping if needed
+5. Test with universal fallback `404.jpg`
+
+### Image Loading Performance
+**Problem:** Slow image loading
+**Solution:** Images use lazy loading with `loading="lazy"` attribute
+**Optimization:** Images only load when they're about to be visible

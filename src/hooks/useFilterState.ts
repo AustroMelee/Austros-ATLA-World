@@ -7,6 +7,7 @@ export interface FilterState {
   handleToggleNation: (nation: string) => void;
   handleSetCoreFilter: (filter: string | null) => void;
   handleToggleSubFilter: (subFilter: string) => void;
+  handleClearAllFilters: () => void;
 }
 
 export function useFilterState(): FilterState {
@@ -35,6 +36,12 @@ export function useFilterState(): FilterState {
     });
   }, []);
 
+  const handleClearAllFilters = useCallback(() => {
+    setActiveNations(new Set());
+    setActiveCoreFilter(null);
+    setActiveSubFilters(new Set());
+  }, []);
+
   return {
     activeNations,
     activeCoreFilter,
@@ -42,6 +49,7 @@ export function useFilterState(): FilterState {
     handleToggleNation,
     handleSetCoreFilter,
     handleToggleSubFilter,
+    handleClearAllFilters,
   };
 }
 
