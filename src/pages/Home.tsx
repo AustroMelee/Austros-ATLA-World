@@ -107,6 +107,23 @@ export function Home({
         { key: 'malevolent' },
         { key: 'neutral' }
       ],
+      episodes: [
+        { key: 'series_premiere', symbol: <span className="text-purple-400">🎬 Series Premiere</span> },
+        { key: 'avatar_discovery', symbol: <span className="text-blue-400">🔍 Avatar Discovery</span> },
+        { key: 'airbending', symbol: <span className="text-cyan-400">💨 Airbending</span> },
+        { key: 'waterbending', symbol: <span className="text-blue-400">💧 Waterbending</span> },
+        { key: 'fire_nation', symbol: <span className="text-red-400">🔥 Fire Nation</span> },
+        { key: 'iceberg', symbol: <span className="text-cyan-400">🧊 Iceberg</span> },
+        { key: 'flying_bison', symbol: <span className="text-gray-400">🐂 Flying Bison</span> },
+        { key: 'hundred_year_war', symbol: <span className="text-red-400">⚔️ Hundred Year War</span> },
+        { key: 'southern_water_tribe', symbol: <span className="text-blue-400">🏘️ Southern Water Tribe</span> },
+        { key: 'prince_zuko', symbol: <span className="text-red-400">👑 Prince Zuko</span> },
+        { key: 'uncle_iroh', symbol: <span className="text-orange-400">☕ Uncle Iroh</span> },
+        { key: 'gran_gran', symbol: <span className="text-blue-400">👵 Gran Gran</span> },
+        { key: 'penguin_sledding', symbol: <span className="text-cyan-400">🛷 Penguin Sledding</span> },
+        { key: 'booby_trap', symbol: <span className="text-red-400">💥 Booby Trap</span> },
+        { key: 'flare_signal', symbol: <span className="text-yellow-400">📡 Flare Signal</span> }
+      ],
     };
     return subFilterMap[coreFilter] || [];
   };

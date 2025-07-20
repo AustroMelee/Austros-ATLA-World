@@ -19240,6 +19240,70 @@
     }
   },
   {
+    "id": "the-boy-in-the-iceberg",
+    "name": "Unnamed Record",
+    "summary": "",
+    "type": "episode",
+    "slug": "the-boy-in-the-iceberg",
+    "tags": [
+      "airbending",
+      "waterbending",
+      "iceberg"
+    ],
+    "expandedView": "",
+    "metadata": {
+      "slug": "the-boy-in-the-iceberg",
+      "title": "The Boy in the Iceberg",
+      "series": "Avatar: The Last Airbender",
+      "book": "Water",
+      "episodeNumber": 1,
+      "totalEpisodes": 61,
+      "originalAirDate": "2005-02-21",
+      "writtenBy": [
+        "Michael Dante DiMartino",
+        "Bryan Konietzko"
+      ],
+      "additionalWriting": [
+        "Aaron Ehasz",
+        "Peter Goldfinger",
+        "Josh Stolberg"
+      ],
+      "directedBy": "Dave Filoni",
+      "animation": "JM Animation",
+      "guestStars": [
+        "Mako (Uncle)",
+        "Melendy Britt (Gran Gran)"
+      ],
+      "productionNumber": "101",
+      "nextEpisode": "The Avatar Returns",
+      "characters": [
+        "aang",
+        "katara",
+        "sokka",
+        "zuko",
+        "iroh",
+        "appa",
+        "gran-gran"
+      ],
+      "locations": [
+        "southern-water-tribe",
+        "wolf-cove",
+        "fire-nation-shipwreck",
+        "south-pole"
+      ],
+      "overview": "The first episode of Avatar: The Last Airbender where Katara and Sokka discover Aang frozen in an iceberg.",
+      "synopsis": "While fishing, siblings Katara and Sokka discover Aang, a young boy frozen in an iceberg. After freeing him and his flying bison named Appa, they learn his identity as an airbender, long thought extinct, and bring him back to their village in the Southern Water Tribe.",
+      "keyThemes": [
+        "Discovery and Awakening",
+        "War and Peace",
+        "Bending Arts",
+        "Friendship and Trust"
+      ],
+      "culturalImpact": "Established the foundation for one of the most beloved animated series of all time.",
+      "__type": "episode"
+    }
+  },
+  {
     "id": "anchovy",
     "name": "Anchovy",
     "summary": "",
@@ -19448,7 +19512,8 @@
     "type": "fauna",
     "slug": "armadillo-bear",
     "tags": [
-      "resilient"
+      "resilient",
+      "hybrid_mixed"
     ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Armadillo Bear is a large mammalian creature native to the Fire Nation, characterized by its unique combination of bear-like features and a hard, segmented shell similar to an armadillo. These creatures are well-adapted to the Fire Nation's volcanic environment and are known for their strength and resilience.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nArmadillo Bears are found throughout the Fire Nation's volcanic regions, particularly in areas with rocky terrain and sparse vegetation. They thrive in the nation's harsh, arid conditions and are well-suited to the challenging environment that characterizes much of the Fire Nation's landscape.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation culture, the Armadillo Bear represents resilience and adaptability - qualities that the nation itself embodies. These creatures are often seen as symbols of the Fire Nation's ability to thrive in difficult conditions and their determination to overcome challenges.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nArmadillo Bears are known for their defensive nature and ability to protect themselves using their armored shell. They are generally solitary creatures that prefer to avoid confrontation but can be fiercely protective when threatened. Their shell provides excellent protection against predators and environmental hazards.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are omnivorous, feeding on a combination of plant matter, small animals, and carrion. They are opportunistic feeders that can adapt their diet based on what's available in their harsh environment, making them well-suited to the Fire Nation's challenging landscape.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nArmadillo Bears are large creatures with powerful builds and distinctive segmented shells that provide natural armor. Their size and strength make them formidable creatures, while their shell offers protection against the harsh elements and potential threats.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese creatures have relatively long lifespans and are well-adapted to their environment. They reproduce slowly but steadily, maintaining stable populations in their volcanic habitat despite the challenging conditions.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nArmadillo Bears are relatively common in their native habitat within the Fire Nation. While they face challenges from the harsh environment, their populations remain stable due to their adaptability and resilience.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Volcanic Adaptation**: These creatures have evolved to thrive in the Fire Nation's volcanic environment, making them unique among bear species\r\n- **Cultural Symbol**: Often used as a symbol of Fire Nation resilience and determination in local folklore and art\r\n- **Environmental Indicator**: Their presence often indicates healthy ecosystems in the Fire Nation's challenging landscape",
@@ -19601,7 +19666,9 @@
     "type": "fauna",
     "slug": "basilisk-centipede",
     "tags": [
-      "defensive"
+      "defensive",
+      "small_insects",
+      "predators_hunters"
     ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Basilisk Centipede is a distinctive bright red insect native to the Fire Nation, known for its unique defensive mechanism. When threatened, these creatures excrete a paralyzing slime that can immobilize predators and other threats, making them formidable despite their small size.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nBasilisk Centipedes are found throughout the Fire Nation's volcanic regions, particularly in areas with rocky terrain and sparse vegetation. They thrive in the nation's warm climate and are well-adapted to the harsh conditions that characterize much of the Fire Nation's landscape.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation culture, the Basilisk Centipede represents the nation's dangerous and unpredictable nature. These creatures are often used as symbols of the Fire Nation's ability to defend itself and the hidden dangers that lurk in their volcanic environment.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nBasilisk Centipedes are known for their defensive behavior and unique ability to excrete paralyzing slime when threatened. They are generally reclusive creatures that prefer to avoid confrontation but can be extremely dangerous when provoked. Their bright red coloration serves as a warning to potential predators.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are carnivorous, feeding on smaller insects and other small animals. They are opportunistic hunters that use their paralyzing slime to immobilize prey before consuming it. Their hunting strategy relies on stealth and their potent defensive mechanism.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nBasilisk Centipedes are relatively small insects with distinctive bright red coloration and segmented bodies. Their size belies their dangerous nature, as their paralyzing slime makes them formidable despite their small stature.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese creatures have relatively short lifespans and reproduce quickly to maintain their populations in the challenging Fire Nation environment. Their rapid reproduction helps ensure their survival despite the harsh conditions of their habitat.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nBasilisk Centipedes are relatively common in their native habitat within the Fire Nation. While they face challenges from the harsh environment, their populations remain stable due to their adaptability and effective defensive mechanisms.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Defensive Adaptation**: These creatures have evolved a unique defensive mechanism that makes them dangerous despite their small size\r\n- **Cultural Symbol**: Often used as a symbol of hidden danger and the unpredictable nature of the Fire Nation's environment\r\n- **Scientific Interest**: Studied by Fire Nation researchers for their unique paralyzing slime and potential applications",
@@ -20365,6 +20432,10 @@
     "summary": "",
     "type": "fauna",
     "slug": "dragon-hawk",
+    "tags": [
+      "flying_aerial",
+      "domesticated_mounts"
+    ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Dragon Hawk is a non-hybrid bird of prey native to the Fire Nation, characterized by its distinctive red feathers and impressive hunting abilities. These birds are commonly used for delivering messages and are valued for their speed, intelligence, and reliability in communication networks.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nDragon Hawks are found throughout the Fire Nation, particularly in areas with rocky terrain and sparse vegetation. They thrive in the nation's warm climate and are well-adapted to the volcanic environment that characterizes much of the Fire Nation's landscape.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation society, Dragon Hawks represent efficiency and reliability in communication. They are commonly used by the military, government, and merchants for delivering important messages across the nation. Their red feathers make them a distinctive symbol of Fire Nation communication networks.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nDragon Hawks are known for their intelligence and ability to be trained for specific tasks. They are excellent hunters with keen eyesight and impressive speed. Their ability to navigate long distances makes them ideal for message delivery, while their hunting skills ensure their survival in the wild.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese birds are carnivorous, feeding on smaller animals and birds. They are skilled hunters that use their speed and sharp talons to catch prey. In domestic settings, they are fed a carefully managed diet that maintains their health and energy levels for message delivery work.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nDragon Hawks are medium to large birds of prey with distinctive red feathers and powerful wings. Their size and strength make them excellent for carrying messages, while their natural hunting abilities ensure their survival in the wild.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese birds have moderate lifespans and are relatively easy to breed in captivity. The Fire Nation maintains breeding programs to ensure a steady supply of these birds for communication and hunting purposes.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nDue to their value as message carriers and hunting birds, Dragon Hawks are actively bred and maintained throughout the Fire Nation. They are not considered endangered and are readily available for training and use in communication networks.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Military Communication**: Commonly used by Fire Nation military for delivering strategic messages\r\n- **Government Messengers**: Employed by Fire Nation government for official communications\r\n- **Merchant Networks**: Used by Fire Nation merchants for business communications",
     "metadata": {
@@ -20406,7 +20477,9 @@
     "type": "fauna",
     "slug": "dragon-moose",
     "tags": [
-      "merchant"
+      "merchant",
+      "domesticated_mounts",
+      "hybrid_mixed"
     ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Dragon Moose is a hybrid creature native to the Fire Nation, combining characteristics of dragons and moose. These creatures are primarily used for pulling carriages and other heavy loads, making them valuable for transportation and commerce throughout the Fire Nation.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nDragon Moose are found throughout the Fire Nation, particularly in areas where they are bred and trained for transportation work. They are well-adapted to the nation's volcanic environment and can navigate the challenging terrain that characterizes much of the Fire Nation's landscape.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation society, Dragon Moose represent the nation's practical approach to transportation and their ability to adapt creatures for specific purposes. They are commonly used by merchants, nobles, and military personnel for their strength and reliability in pulling heavy loads.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nDragon Moose are known for their strength and endurance, making them ideal for pulling carriages and heavy loads. They are generally docile when properly trained and form strong bonds with their handlers. Their hybrid nature gives them the strength of a moose combined with the resilience of dragon heritage.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are herbivorous, feeding primarily on vegetation and plant matter. In domestic settings, they are fed a carefully managed diet that maintains their strength and energy levels for transportation work while keeping them healthy and manageable.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nDragon Moose are large creatures with powerful builds designed for pulling heavy loads. Their size and strength make them excellent for transportation work, while their hybrid nature provides them with the resilience needed to work in the Fire Nation's challenging environment.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese hybrids have moderate lifespans and are bred specifically for transportation work. The Fire Nation maintains breeding programs to ensure a steady supply of these creatures for commercial and military use.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nDue to their value as transportation animals, Dragon Moose are actively bred and maintained throughout the Fire Nation. They are not considered endangered and are readily available for purchase or rental by those who need transportation services.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Merchant Caravans**: Commonly used by Fire Nation merchants for transporting goods between cities and villages\r\n- **Noble Transportation**: Used by Fire Nation nobility for personal transportation and ceremonial purposes\r\n- **Military Logistics**: Employed by Fire Nation military for transporting supplies and equipment",
@@ -20449,7 +20522,9 @@
     "type": "fauna",
     "slug": "dragon",
     "tags": [
-      "firebending"
+      "firebending",
+      "sacred_spiritual",
+      "flying_aerial"
     ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Dragon is a large, intelligent, flying reptile that was the original firebender and holds immense cultural and spiritual significance in the Fire Nation. These magnificent creatures were hunted to near extinction but are still revered as sacred beings and the source of firebending knowledge.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nDragons were once found throughout the Fire Nation and beyond, but their populations have been severely reduced due to hunting. They prefer volcanic regions and areas with high heat, making the Fire Nation's volcanic landscape their natural habitat. The few remaining dragons are found in remote, protected areas.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation culture, dragons represent the very essence of firebending and the nation's spiritual heritage. They are revered as the original firebenders who taught humans the art of firebending. The Sun Warriors, an ancient civilization, still worship dragons and maintain their traditions.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nDragons are highly intelligent creatures with the ability to breathe fire and manipulate flames. They are known for their wisdom and are said to be able to communicate with humans who are worthy. They are generally peaceful but can be fiercely protective when threatened.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are carnivorous, feeding on large prey and occasionally smaller animals. They use their fire-breathing abilities to hunt and defend themselves. Their hunting methods combine aerial prowess with their unique fire manipulation abilities.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nDragons are massive creatures with powerful wings, scales that can withstand extreme heat, and the ability to breathe fire. Their size and strength make them among the most formidable creatures in the world, while their intelligence sets them apart from other animals.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nDragons have extremely long lifespans, with some individuals living for centuries. They reproduce slowly, which has contributed to their endangered status. The few remaining dragons are carefully protected by those who understand their importance.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nDragons are critically endangered due to extensive hunting in the past. The few remaining dragons are protected by the Sun Warriors and other enlightened individuals who understand their spiritual and cultural importance. Conservation efforts focus on protecting their remaining habitat and preventing further hunting.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Sun Warriors**: The ancient civilization that still worships dragons and maintains their traditions\r\n- **Firebending Origins**: Dragons are credited with teaching humans the art of firebending\r\n- **Spiritual Guardians**: Considered sacred beings who guard ancient wisdom and firebending knowledge",
@@ -20833,6 +20908,11 @@
     "summary": "",
     "type": "fauna",
     "slug": "flying-dolphin-fish",
+    "tags": [
+      "aquatic_marine",
+      "hybrid_mixed",
+      "domesticated_mounts"
+    ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Flying Dolphin Fish is a unique hybrid creature native to the Fire Nation, combining characteristics of dolphins and flying fish. These creatures are commonly used for recreational riding and are valued for their ability to leap out of the water and glide through the air, providing an exciting experience for riders.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nFlying Dolphin Fish are found in the waters surrounding the Fire Nation's volcanic islands and coastal regions. They thrive in the warm waters of the Fire Nation and are commonly used in recreational areas where visitors can experience the thrill of riding these unique creatures.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation recreational culture, Flying Dolphin Fish represent the nation's innovative approach to entertainment and their ability to create unique experiences. They are popular attractions for tourists and locals alike, offering an exciting way to experience the Fire Nation's coastal waters.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nFlying Dolphin Fish are known for their playful nature and their ability to leap out of the water and glide through the air. They are highly intelligent and can be trained for recreational riding. Their hybrid nature gives them the intelligence of dolphins combined with the aerial abilities of flying fish.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are carnivorous, feeding on fish and other marine life. They are skilled hunters that use their speed and agility to catch prey both underwater and during their aerial glides. Their hunting methods combine aquatic and aerial techniques.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nFlying Dolphin Fish are medium to large creatures with streamlined bodies designed for both swimming and gliding. Their size and strength make them excellent for recreational riding, while their hybrid nature provides them with enhanced abilities for their unique lifestyle.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese hybrids have moderate lifespans and are relatively easy to breed in captivity. The Fire Nation maintains breeding programs to ensure a steady supply of these creatures for recreational use.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nDue to their value as recreational animals, Flying Dolphin Fish are actively bred and maintained throughout the Fire Nation. They are not considered endangered and are readily available for recreational riding experiences.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Recreational Riding**: Commonly used for recreational riding experiences in Fire Nation coastal areas\r\n- **Tourist Attractions**: Popular attractions for visitors to the Fire Nation's volcanic islands\r\n- **Entertainment Shows**: Featured in various entertainment shows and demonstrations",
     "metadata": {
@@ -20924,6 +21004,10 @@
     "summary": "",
     "type": "fauna",
     "slug": "ghost-spider",
+    "tags": [
+      "small_insects",
+      "predators_hunters"
+    ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Ghost Spider is a dangerous arthropod native to the Fire Nation, known for its potent venom that can paralyze prey and predators alike. These creatures are feared throughout the Fire Nation for their stealthy hunting methods and deadly capabilities.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nGhost Spiders are found throughout the Fire Nation's volcanic regions, particularly in areas with rocky terrain and sparse vegetation. They thrive in the nation's warm climate and are well-adapted to the harsh conditions that characterize much of the Fire Nation's landscape.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation culture, the Ghost Spider represents the hidden dangers that lurk in the nation's environment. These creatures are often used as symbols of the Fire Nation's dangerous and unpredictable nature, serving as cautionary tales about the perils of the volcanic landscape.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nGhost Spiders are known for their stealthy hunting behavior and potent venom. They are generally reclusive creatures that prefer to avoid confrontation but can be extremely dangerous when provoked. Their ability to paralyze prey with venom makes them formidable predators despite their relatively small size.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are carnivorous, feeding on smaller animals and insects. They are stealth hunters that use their venom to immobilize prey before consuming it. Their hunting strategy relies on surprise and their potent venom to subdue larger prey.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nGhost Spiders are relatively small arachnids with distinctive appearance that helps them blend into their environment. Their size belies their dangerous nature, as their potent venom makes them formidable despite their small stature.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese creatures have relatively short lifespans and reproduce quickly to maintain their populations in the challenging Fire Nation environment. Their rapid reproduction helps ensure their survival despite the harsh conditions of their habitat.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nGhost Spiders are relatively common in their native habitat within the Fire Nation. While they face challenges from the harsh environment, their populations remain stable due to their adaptability and effective hunting mechanisms.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Venomous Adaptation**: These creatures have evolved potent venom that makes them dangerous despite their small size\r\n- **Cultural Symbol**: Often used as a symbol of hidden danger and the unpredictable nature of the Fire Nation's environment\r\n- **Scientific Interest**: Studied by Fire Nation researchers for their unique venom and potential applications",
     "metadata": {
@@ -21154,6 +21238,10 @@
     "summary": "",
     "type": "fauna",
     "slug": "hippo-cow",
+    "tags": [
+      "domesticated_mounts",
+      "hybrid_mixed"
+    ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Hippo Cow is a domesticated mammalian creature native to the Fire Nation, combining characteristics of hippos and cattle. These creatures are primarily used for farming and agriculture, providing both meat and labor for Fire Nation farmers and agricultural communities.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nHippo Cows are found throughout the Fire Nation's agricultural regions, particularly in areas with access to water and suitable grazing land. They are well-adapted to the Fire Nation's warm climate and are commonly raised on farms and agricultural estates throughout the nation.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation agricultural culture, Hippo Cows represent the nation's practical approach to farming and their ability to adapt creatures for agricultural purposes. They are essential to the Fire Nation's food production and are valued for their versatility in farming operations.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nHippo Cows are known for their strength and adaptability, making them ideal for various agricultural tasks. They are generally docile when properly cared for and can be trained for specific farming duties. Their omnivorous nature allows them to thrive on a variety of food sources.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are omnivorous, feeding on a combination of plant matter, small animals, and agricultural byproducts. In farming contexts, they are fed a carefully managed diet that maintains their health and productivity while making efficient use of available resources.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nHippo Cows are large creatures with powerful builds designed for agricultural work. Their size and strength make them excellent for farming tasks, while their hybrid nature provides them with the resilience needed to work in the Fire Nation's agricultural environment.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese creatures have moderate lifespans and are bred specifically for agricultural purposes. The Fire Nation maintains breeding programs to ensure a steady supply of these creatures for farming and food production.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nDue to their value as agricultural animals, Hippo Cows are actively bred and maintained throughout the Fire Nation. They are not considered endangered and are readily available for farming and agricultural use.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Agricultural Labor**: Commonly used by Fire Nation farmers for plowing fields and other heavy agricultural work\r\n- **Meat Production**: Valued for their meat, which is used in various Fire Nation dishes\r\n- **Dairy Production**: Some varieties are used for milk production, contributing to Fire Nation dairy products",
     "metadata": {
@@ -21416,6 +21504,9 @@
     "summary": "",
     "type": "fauna",
     "slug": "komodo-chicken",
+    "tags": [
+      "hybrid_mixed"
+    ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Komodo Chicken is a unique hybrid creature native to the Fire Nation, combining the characteristics of a komodo dragon and a chicken. These creatures are primarily raised for their meat, which is considered a delicacy in Fire Nation cuisine and is often used in traditional dishes.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nKomodo Chickens are found throughout the Fire Nation, particularly in agricultural regions where they are raised in specialized farms. They are well-adapted to the Fire Nation's warm climate and volcanic soil, thriving in both rural and urban farming environments.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation culinary culture, Komodo Chicken represents the nation's innovative approach to food production and their willingness to experiment with hybrid creatures. The meat is often featured in traditional Fire Nation dishes and is considered a symbol of the nation's culinary creativity and resourcefulness.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nKomodo Chickens exhibit a mix of behaviors from both their parent species. They are more aggressive than regular chickens but more manageable than full komodo dragons. They are known for their hardiness and ability to thrive in the Fire Nation's harsh environment, making them ideal for farming.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are omnivorous, feeding on a combination of plant matter, insects, and small animals. In farming contexts, they are fed a carefully balanced diet that promotes healthy growth and produces high-quality meat for culinary use.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nKomodo Chickens are larger than regular chickens but smaller than komodo dragons, making them an ideal size for farming and consumption. They have scaly skin with some feathering, combining the best traits of both parent species for agricultural purposes.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese hybrids have moderate lifespans and are bred specifically for meat production. The Fire Nation has developed specialized breeding programs to maintain consistent quality and characteristics in these creatures for culinary use.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nDue to their value as a food source, Komodo Chickens are actively bred and maintained throughout the Fire Nation. They are not considered endangered and are readily available for farming and consumption.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Traditional Dishes**: Komodo Chicken meat is used in various traditional Fire Nation dishes, particularly spicy preparations that highlight the nation's culinary preferences\r\n- **Agricultural Innovation**: Represents the Fire Nation's innovative approach to food production and hybrid creature breeding\r\n- **Culinary Delicacy**: Considered a premium meat source in Fire Nation cuisine",
     "metadata": {
@@ -21457,7 +21548,8 @@
     "slug": "komodo-rhino",
     "tags": [
       "military",
-      "cavalry"
+      "cavalry",
+      "domesticated_mounts"
     ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Komodo Rhino is a formidable reptilian creature native to the Fire Nation, known for its ferocity and versatility as a cavalry mount. These creatures are particularly associated with elite military units like the Rough Rhinos, where their strength and endurance make them ideal for combat situations.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nKomodo Rhinos are found throughout the Fire Nation's volcanic regions, particularly in areas with rocky terrain and sparse vegetation. They thrive in the harsh, arid conditions that characterize much of the Fire Nation's landscape, making them well-suited for military operations in challenging environments.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation military culture, the Komodo Rhino represents strength, loyalty, and the indomitable spirit of the nation's armed forces. The Rough Rhinos, one of the most feared cavalry units, have made these creatures synonymous with elite military prowess and Fire Nation dominance.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nKomodo Rhinos are known for their aggressive temperament and territorial nature. They form strong bonds with their riders through rigorous training, becoming fiercely loyal companions in battle. Their thick, scaly hide provides natural armor against attacks, while their powerful legs allow them to charge through enemy lines with devastating force.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are primarily carnivorous, feeding on smaller animals and carrion. In military contexts, they are carefully fed a diet that maintains their strength and aggression while ensuring they remain manageable for their riders.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nKomodo Rhinos are large, heavily-built creatures with thick, armored scales and powerful limbs. Their size and strength make them excellent mounts for heavily-armored cavalry units, capable of carrying both rider and equipment across difficult terrain.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese creatures have relatively long lifespans, with individuals serving in military units for many years. Their breeding is carefully managed by the Fire Nation military to ensure a steady supply of trained mounts for elite units.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nDue to their military value, Komodo Rhinos are actively bred and maintained by the Fire Nation's armed forces. While not endangered, their populations are carefully managed to ensure the military has access to these valuable assets.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Rough Rhinos Mounts**: The most famous Komodo Rhinos serve with the Rough Rhinos cavalry unit, where they have become symbols of Fire Nation military might\r\n- **Military Breeding Programs**: The Fire Nation maintains extensive breeding programs to ensure a steady supply of these creatures for military use",
@@ -21538,7 +21630,8 @@
     "slug": "mongoose-lizard",
     "tags": [
       "merchant",
-      "military"
+      "military",
+      "domesticated_mounts"
     ],
     "nation": "Fire Nation",
     "expandedView": "### 📖 Overview\r\n\r\nThe Mongoose Lizard is a reptilian creature native to the Fire Nation, commonly used for transportation and travel across the nation's diverse terrain. These creatures are known for their speed, agility, and adaptability to the Fire Nation's volcanic landscape.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nMongoose Lizards are found throughout the Fire Nation, particularly in areas with rocky terrain and sparse vegetation. They are well-adapted to the nation's volcanic environment, thriving in both arid regions and areas with more moderate climates.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Fire Nation society, Mongoose Lizards represent practicality and efficiency in transportation. They are commonly used by merchants, travelers, and military personnel for their reliability and ability to navigate difficult terrain. Their widespread use makes them a familiar sight throughout the nation.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nMongoose Lizards are known for their quick reflexes and agile movements. They are highly trainable and form strong bonds with their handlers. Their reptilian nature makes them well-suited to the Fire Nation's warm climate, and they can travel long distances without requiring extensive rest periods.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nThese creatures are primarily carnivorous, feeding on small animals and insects. In domestic settings, they are fed a carefully managed diet that maintains their energy levels for transportation work while keeping them healthy and manageable.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nMongoose Lizards are medium-sized reptiles with streamlined bodies designed for speed and agility. Their scales provide protection against the harsh elements, while their powerful legs allow them to navigate rough terrain with ease.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nThese creatures have moderate lifespans and are relatively easy to breed in captivity. The Fire Nation maintains breeding programs to ensure a steady supply of transportation animals for civilian and military use.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nDue to their practical value as transportation animals, Mongoose Lizards are actively bred and maintained throughout the Fire Nation. They are not considered endangered and are readily available for purchase or rental by travelers and merchants.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Merchant Transportation**: Commonly used by Fire Nation merchants for transporting goods between cities and villages\r\n- **Military Scouts**: Used by Fire Nation military scouts for rapid reconnaissance missions\r\n- **Civilian Travel**: Popular choice for civilian travelers due to their reliability and ease of care",
@@ -23093,7 +23186,9 @@
     "type": "fauna",
     "slug": "tui-and-la",
     "tags": [
-      "spirit"
+      "spirit",
+      "sacred_spiritual",
+      "aquatic_marine"
     ],
     "nation": "Spirit World",
     "expandedView": "### 📖 Overview\r\n\r\nTui and La are the physical manifestations of the Moon and Ocean spirits, appearing as koi fish that swim in an eternal dance within the Northern Water Tribe's Spirit Oasis. These sacred beings represent the balance of push and pull, the fundamental forces that govern the world's oceans and the moon's influence on waterbending.\r\n\r\n### 🏔️ Habitat & Distribution\r\n\r\nTui and La reside exclusively in the Spirit Oasis of the Northern Water Tribe, a sacred location where the physical and spirit worlds meet. This oasis is protected by the Northern Water Tribe and serves as a bridge between the human world and the spirit realm, making it one of the most spiritually significant locations in the world.\r\n\r\n### 🎭 Cultural Significance\r\n\r\nIn Water Tribe culture, Tui and La represent the very essence of waterbending and the balance of natural forces. They are revered as the original waterbenders who taught humans the art of waterbending. The Northern Water Tribe considers them sacred protectors, and their presence in the Spirit Oasis is central to the tribe's spiritual identity.\r\n\r\n### 🐾 Behavior & Abilities\r\n\r\nTui and La are known for their eternal dance, which represents the push and pull of the ocean's tides and the moon's influence on water. They are highly intelligent spirits that can communicate with humans who are spiritually attuned. Their dance maintains the balance of the world's waters and influences waterbending abilities.\r\n\r\n### 🍖 Diet & Hunting\r\n\r\nAs spiritual beings, Tui and La do not require physical sustenance in the traditional sense. They draw their energy from the spiritual connection between the moon and ocean, maintaining their existence through the eternal dance that represents the fundamental forces of nature.\r\n\r\n### 📏 Size & Physical Characteristics\r\n\r\nTui and La appear as large, majestic koi fish with distinctive markings that represent their spiritual nature. Their size and appearance are symbolic rather than physical, as they are manifestations of cosmic forces rather than ordinary creatures.\r\n\r\n### ⏰ Lifespan & Reproduction\r\n\r\nAs spiritual beings, Tui and La are eternal and do not age or reproduce in the traditional sense. They have existed since the beginning of time and will continue to exist as long as the balance between moon and ocean is maintained.\r\n\r\n### 🛡️ Conservation Status\r\n\r\nTui and La are protected by the Northern Water Tribe and are considered sacred beings that must be preserved at all costs. Their well-being is directly tied to the health of the world's oceans and the spiritual balance of the world. Any threat to them represents a threat to the fundamental forces of nature.\r\n\r\n### 🔗 Notable Examples\r\n\r\n- **Spirit Oasis Guardians**: Protected by the Northern Water Tribe in their sacred Spirit Oasis\r\n- **Waterbending Origins**: Credited with teaching humans the art of waterbending\r\n- **Cosmic Balance**: Their eternal dance maintains the balance between moon and ocean forces",

@@ -6,6 +6,8 @@ import {
   characterSubfilterColors,
   faunaSubfilterIcons,
   faunaSubfilterColors,
+  episodeSubfilterIcons,
+  episodeSubfilterColors,
   coreFilterIcons,
   coreFilterColors,
 } from './filterConstants';
@@ -118,6 +120,9 @@ export default function FilterBar({
               if (activeCoreFilter === 'fauna') {
                 icon = faunaSubfilterIcons[key];
                 color = faunaSubfilterColors[key];
+              } else if (activeCoreFilter === 'episodes') {
+                icon = episodeSubfilterIcons[key];
+                color = episodeSubfilterColors[key];
               } else {
                 icon = characterSubfilterIcons[key];
                 color = characterSubfilterColors[key];

@@ -43,6 +43,7 @@ export function applyFilters({
       foods: ['food'],
       groups: ['group', 'religious_organization', 'service_organization'],
       spirits: ['spirit-world'],
+      episodes: ['episode'],
     };
     const targetTypes = typeMap[activeCoreFilter];
     if (targetTypes) items = items.filter(item => targetTypes.includes(item.type));
@@ -139,6 +140,28 @@ export function applyFilters({
           
           // Check for flying creatures
           if (subFilterLower === 'flying_aerial' && item.metadata?.habitat === 'aerial') return true;
+        }
+        if (activeCoreFilter === 'episodes') {
+          // Check if the episode has the specific tag
+          if (item.tags?.some(tag => tag.toLowerCase() === subFilterLower)) return true;
+          
+          // Check episode-specific metadata
+          if (item.book && typeof item.book === 'string' && subFilterLower.includes(item.book.toLowerCase())) return true;
+          if (item.series && typeof item.series === 'string' && subFilterLower.includes(item.series.toLowerCase())) return true;
+          
+          // Check for specific episode themes and elements
+          if (item.characters && Array.isArray(item.characters)) {
+            for (const character of item.characters) {
+              if (typeof character === 'string' && character.toLowerCase().includes(subFilterLower)) return true;
+            }
+          }
+          
+          // Check for specific locations in the episode
+          if (item.locations && Array.isArray(item.locations)) {
+            for (const location of item.locations) {
+              if (typeof location === 'string' && location.toLowerCase().includes(subFilterLower)) return true;
+            }
+          }
         }
         return false;
       });

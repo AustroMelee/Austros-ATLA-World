@@ -17218,6 +17218,76 @@
     "slug": "zuko"
   },
   {
+    "id": "the-boy-in-the-iceberg",
+    "slug": "the-boy-in-the-iceberg",
+    "title": "The Boy in the Iceberg",
+    "series": "Avatar: The Last Airbender",
+    "book": "Water",
+    "episodeNumber": 1,
+    "totalEpisodes": 61,
+    "originalAirDate": "2005-02-21",
+    "writtenBy": [
+      "Michael Dante DiMartino",
+      "Bryan Konietzko"
+    ],
+    "additionalWriting": [
+      "Aaron Ehasz",
+      "Peter Goldfinger",
+      "Josh Stolberg"
+    ],
+    "directedBy": "Dave Filoni",
+    "animation": "JM Animation",
+    "guestStars": [
+      "Mako (Uncle)",
+      "Melendy Britt (Gran Gran)"
+    ],
+    "productionNumber": "101",
+    "nextEpisode": "The Avatar Returns",
+    "characters": [
+      "aang",
+      "katara",
+      "sokka",
+      "zuko",
+      "iroh",
+      "appa",
+      "gran-gran"
+    ],
+    "locations": [
+      "southern-water-tribe",
+      "wolf-cove",
+      "fire-nation-shipwreck",
+      "south-pole"
+    ],
+    "tags": [
+      "series-premiere",
+      "avatar-discovery",
+      "airbending",
+      "waterbending",
+      "fire-nation",
+      "iceberg",
+      "flying-bison",
+      "hundred-year-war",
+      "southern-water-tribe",
+      "prince-zuko",
+      "uncle-iroh",
+      "gran-gran",
+      "penguin-sledding",
+      "booby-trap",
+      "flare-signal"
+    ],
+    "overview": "The first episode of Avatar: The Last Airbender where Katara and Sokka discover Aang frozen in an iceberg.",
+    "synopsis": "While fishing, siblings Katara and Sokka discover Aang, a young boy frozen in an iceberg. After freeing him and his flying bison named Appa, they learn his identity as an airbender, long thought extinct, and bring him back to their village in the Southern Water Tribe.",
+    "keyThemes": [
+      "Discovery and Awakening",
+      "War and Peace",
+      "Bending Arts",
+      "Friendship and Trust"
+    ],
+    "culturalImpact": "Established the foundation for one of the most beloved animated series of all time.",
+    "expandedView": "",
+    "__type": "episode"
+  },
+  {
     "**polarschools": "** Various anchovy schools that inhabit the waters around Water Tribe territories, providing a reliable food source for fishing communities.",
     "id": "anchovy",
     "slug": "anchovy",
@@ -17448,7 +17518,7 @@
       "volcanic",
       "resilient",
       "armored",
-      "hybrid-mixed"
+      "hybrid_mixed"
     ],
     "synonyms": [
       "bear-armadillo",
@@ -17605,8 +17675,8 @@
       "dangerous",
       "defensive",
       "paralyzing",
-      "small-insects",
-      "predators-hunters"
+      "small_insects",
+      "predators_hunters"
     ],
     "synonyms": [
       "red-centipede",
@@ -18402,8 +18472,8 @@
       "messenger",
       "hunting",
       "communication",
-      "flying-aerial",
-      "domesticated-mounts"
+      "flying_aerial",
+      "domesticated_mounts"
     ],
     "synonyms": [
       "fire-hawk",
@@ -18446,8 +18516,8 @@
       "fire-nation",
       "carriage",
       "merchant",
-      "domesticated-mounts",
-      "hybrid-mixed"
+      "domesticated_mounts",
+      "hybrid_mixed"
     ],
     "synonyms": [
       "moose-dragon",
@@ -18490,8 +18560,8 @@
       "sacred",
       "firebending",
       "endangered",
-      "sacred-spiritual",
-      "flying-aerial"
+      "sacred_spiritual",
+      "flying_aerial"
     ],
     "synonyms": [
       "fire-dragon",
@@ -18893,9 +18963,9 @@
       "recreational",
       "aquatic",
       "riding",
-      "aquatic-marine",
-      "hybrid-mixed",
-      "domesticated-mounts"
+      "aquatic_marine",
+      "hybrid_mixed",
+      "domesticated_mounts"
     ],
     "synonyms": [
       "dolphin-flying-fish",
@@ -18994,8 +19064,8 @@
       "dangerous",
       "venomous",
       "stealth",
-      "small-insects",
-      "predators-hunters"
+      "small_insects",
+      "predators_hunters"
     ],
     "synonyms": [
       "fire-spider",
@@ -19234,8 +19304,8 @@
       "fire-nation",
       "farming",
       "domesticated",
-      "domesticated-mounts",
-      "hybrid-mixed"
+      "domesticated_mounts",
+      "hybrid_mixed"
     ],
     "synonyms": [
       "cow-hippo",
@@ -19502,7 +19572,7 @@
       "fire-nation",
       "agriculture",
       "culinary",
-      "hybrid-mixed"
+      "hybrid_mixed"
     ],
     "synonyms": [
       "dragon-chicken",
@@ -19544,7 +19614,7 @@
       "reptile",
       "fire-nation",
       "rough-rhinos",
-      "domesticated-mounts"
+      "domesticated_mounts"
     ],
     "synonyms": [
       "rhino-lizard",
@@ -19628,7 +19698,7 @@
       "fire-nation",
       "merchant",
       "military",
-      "domesticated-mounts"
+      "domesticated_mounts"
     ],
     "synonyms": [
       "lizard-mongoose",
@@ -21258,8 +21328,8 @@
       "sacred",
       "koi-fish",
       "cosmic-balance",
-      "sacred-spiritual",
-      "aquatic-marine"
+      "sacred_spiritual",
+      "aquatic_marine"
     ],
     "synonyms": [
       "moon-spirit",

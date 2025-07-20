@@ -202,6 +202,111 @@
     "weight": 50,
     "description": ""
   },
+  "series_premiere": {
+    "displayName": "Series Premiere",
+    "category": "episode",
+    "aliases": [],
+    "weight": 50,
+    "description": "First episode of the series"
+  },
+  "avatar_discovery": {
+    "displayName": "Avatar Discovery",
+    "category": "episode",
+    "aliases": [],
+    "weight": 50,
+    "description": "Episode involves discovery of the Avatar"
+  },
+  "airbending": {
+    "displayName": "Airbending",
+    "category": "bending",
+    "aliases": [],
+    "weight": 50,
+    "description": "Airbending techniques or demonstrations"
+  },
+  "waterbending": {
+    "displayName": "Waterbending",
+    "category": "bending",
+    "aliases": [],
+    "weight": 50,
+    "description": "Waterbending techniques or demonstrations"
+  },
+  "fire_nation": {
+    "displayName": "Fire Nation",
+    "category": "nation",
+    "aliases": [],
+    "weight": 50,
+    "description": "Fire Nation involvement or presence"
+  },
+  "iceberg": {
+    "displayName": "Iceberg",
+    "category": "location",
+    "aliases": [],
+    "weight": 50,
+    "description": "Iceberg-related events or locations"
+  },
+  "flying_bison": {
+    "displayName": "Flying Bison",
+    "category": "fauna",
+    "aliases": [],
+    "weight": 50,
+    "description": "Flying bison (Appa) appearance or involvement"
+  },
+  "hundred_year_war": {
+    "displayName": "Hundred Year War",
+    "category": "history",
+    "aliases": [],
+    "weight": 50,
+    "description": "References to the Hundred Year War"
+  },
+  "southern_water_tribe": {
+    "displayName": "Southern Water Tribe",
+    "category": "nation",
+    "aliases": [],
+    "weight": 50,
+    "description": "Southern Water Tribe involvement or presence"
+  },
+  "prince_zuko": {
+    "displayName": "Prince Zuko",
+    "category": "character",
+    "aliases": [],
+    "weight": 50,
+    "description": "Prince Zuko appearance or involvement"
+  },
+  "uncle_iroh": {
+    "displayName": "Uncle Iroh",
+    "category": "character",
+    "aliases": [],
+    "weight": 50,
+    "description": "Uncle Iroh appearance or involvement"
+  },
+  "gran_gran": {
+    "displayName": "Gran Gran",
+    "category": "character",
+    "aliases": [],
+    "weight": 50,
+    "description": "Gran Gran appearance or involvement"
+  },
+  "penguin_sledding": {
+    "displayName": "Penguin Sledding",
+    "category": "activity",
+    "aliases": [],
+    "weight": 50,
+    "description": "Penguin sledding activity"
+  },
+  "booby_trap": {
+    "displayName": "Booby Trap",
+    "category": "episode",
+    "aliases": [],
+    "weight": 50,
+    "description": "Booby trap or trap mechanism"
+  },
+  "flare_signal": {
+    "displayName": "Flare Signal",
+    "category": "episode",
+    "aliases": [],
+    "weight": 50,
+    "description": "Flare or signal mechanism"
+  },
   "ally_of_team_avatar": {
     "displayName": "Ally Of Team Avatar",
     "category": "general",
