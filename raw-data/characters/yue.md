@@ -88,25 +88,25 @@ A tragic love interest and key spiritual figure whose sacrifice is a pivotal mom
 
 ```json
 {
-  "isBender": true,
-  "bendingElement": "water",
-  "bendingProficiency": "legendary",
+  "isBender": false,
+  "bendingElement": null,
+  "bendingProficiency": null,
   "advancedBending": [],
-  "nonBendingSkills": [],
-  "uniqueTechniques": ["empowering all waterbenders", "global water manipulation"],
+  "nonBendingSkills": ["diplomacy", "royal etiquette", "spiritual connection"],
+  "uniqueTechniques": [],
   "powerMetrics": {
-    "rawPower": 10,
-    "technicalSkill": 10,
-    "strategicAptitude": 5
+    "rawPower": 1,
+    "technicalSkill": 1,
+    "strategicAptitude": 3
   },
-  "combatStyle": "support",
-  "vulnerabilities": ["reliant on Ocean Spirit (La) for direct action"],
+  "combatStyle": "non-combatant",
+  "vulnerabilities": ["no combat training", "reliant on others for protection"],
   "isLegendaryFighter": false,
   "notableFeats": [
     "Sacrificed herself to become the Moon Spirit",
     "Restored waterbending to the world",
     "Guided Aang through the Spirit World",
-    "Aided Aang in creating a massive tidal wave"
+    "Aided Aang in creating a massive tidal wave (as Moon Spirit)"
   ]
 }
 ```
@@ -248,28 +248,9 @@ A tragic love interest and key spiritual figure whose sacrifice is a pivotal mom
   "tagCategories": {
     "narrativeTags": ["sacrificial lion", "tragic love interest", "ascended to godhood", "princess"],
     "combatTags": ["non-bender (mortal)", "waterbender (spirit)"],
-    "relationshipTags": ["love interest of Sokka", "daughter of Arnook", "friend of Aang", "became the Moon Spirit"],
-    "emotionTags": ["gentle", "kind", "dutiful", "courageous", "sad"],
-    "politicalTags": ["princess", "spirit"],
-    "arcTags": ["Siege of the North", "sacrificed herself"],
-    "worldTags": ["Northern Water Tribe", "Spirit World", "Moon Spirit", "Spirit Oasis"],
-    "triviaTags": ["white hair", "saved by Moon Spirit", "Sokka's first girlfriend", "name means moon"]
+    "characterTags": ["royal", "spiritual", "tragic", "sacrificial"],
+    "relationshipTags": ["love interest", "princess", "betrothed"],
+    "thematicTags": ["sacrifice", "duty", "love", "spirituality", "moon", "balance", "destiny"]
   }
-}
-```
-
----
-
-## 🔮 AI/Filtering & System Flags
-
-```json
-{
-  "relatedCards": ["sokka", "aang", "arnook", "katara", "zhao", "tui-moon-spirit"],
-  "filterWeight": 65,
-  "canonicalImportance": "tertiary",
-  "dataCompletenessScore": 0.95,
-  "searchableKeywords": ["yue", "moon", "spirit", "princess", "north", "tribe", "sacrifice", "sokka", "white", "hair"],
-  "fuzzySynonyms": ["the moon princess", "sokka's girlfriend", "the girl who became the moon"],
-  "isSuggestedInXContext": []
 }
 ```

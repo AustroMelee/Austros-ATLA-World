@@ -115,6 +115,40 @@ export const imageFallbacks: Record<string, string> = {
 }
 ```
 
+#### Locations Not Appearing in UI
+**Problem:** Location files not appearing in UI despite being created
+**Root Cause:** Parser only accepting `['character', 'group', 'food']` types, not `'location'`
+**Solution:** Updated parser to accept `type: location` in supported types array
+**Files Affected:** `scripts/1-parse-markdown.mjs`
+**Code Fix:**
+```javascript
+if (!['character', 'group', 'food', 'location'].includes(frontmatter.type)) {
+  console.log(`[INFO]    Skipping ${filePath}: Type is "${frontmatter.type}", not supported.`);
+  return null;
+}
+```
+**Result:** All 4 Air Temple locations now parse correctly and appear in UI
+
+#### Fauna Subfilters Defaulting to Single Entry
+**Problem:** All fauna subfilters defaulting to komodo chicken instead of proper categorization
+**Root Cause:** Subfilter tags (like "predators_hunters", "domesticated_mounts") were filtered out during enrichment, leaving only basic tags like "military", "cavalry"
+**Solution:** Enhanced `applyFilters.ts` with comprehensive fauna subfilter mapping that checks existing tags, metadata fields, and behavioral characteristics
+**Files Affected:** `src/utils/applyFilters.ts`
+**Code Fix:**
+```typescript
+const faunaFilterMapping: Record<string, string[]> = {
+  predators_hunters: ['military', 'cavalry', 'hunting', 'predator', 'dangerous', 'venomous', 'aggressive'],
+  domesticated_mounts: ['military', 'cavalry', 'merchant', 'transportation', 'mount', 'domesticated'],
+  aquatic_marine: ['aquatic', 'marine', 'fish', 'mollusk', 'cephalopod'],
+  flying_aerial: ['flying', 'bird', 'aerial'],
+  sacred_spiritual: ['sacred', 'spirit', 'spiritual'],
+  hybrid_mixed: ['hybrid', 'mixed'],
+  small_insects: ['insect', 'arachnid', 'small'],
+  reptiles_amphibians: ['reptile', 'amphibian', 'lizard', 'snake']
+};
+```
+**Result:** Fauna entries now properly categorized across all 8 subfilters based on their actual available tags and metadata
+
 ### UI Issues
 
 #### Matched Fields Pills Cluttering UI
@@ -157,6 +191,7 @@ export const imageFallbacks: Record<string, string> = {
 3. **Validate JSON Syntax:** Check for trailing commas and valid JSON structure
 4. **Add Badges:** Include badges in card view section for characters
 5. **Verify Image Paths:** Ensure image paths match actual files
+6. **Use Correct Type:** Ensure location files use `type: location` in YAML frontmatter
 
 ### UI Component Updates
 1. **Update Type Logic:** When adding new entity types, update type label logic

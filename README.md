@@ -9,6 +9,13 @@ A lightweight encyclopedia for Avatar: The Last Airbender built with React, Type
 - Tailwind CSS
 - FlexSearch
 
+## Features
+- Matrix rain background toggle
+- Back to top button
+- Collections with localStorage
+- Multi-layered filters
+- FlexSearch-powered search
+
 ## Getting Started
 1. `npm install`
 2. `npm run build:data` to generate `public/enriched-data.json`

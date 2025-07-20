@@ -133,12 +133,17 @@ graph TD
     Y --> Z[Back to Top Visibility]
     Z --> AA[Smooth Scroll Action]
     
+    BB[Fauna Subfilters] --> CC[Enhanced Tag Mapping]
+    CC --> DD[Metadata-Based Categorization]
+    DD --> I
+    
     style A fill:#c8e6c9
     style J fill:#f3e5f5
     style K fill:#ffebee
     style R fill:#e8f5e8
     style V fill:#fce4ec
     style Y fill:#e8f5e8
+    style CC fill:#fff3e0
 ```
 
 ### 4. Component Hierarchy
@@ -393,6 +398,7 @@ graph TD
 9. **Scroll Management** → Back to top button with smooth scrolling
 10. **Badge Display** → Dynamic badge rendering from metadata
 11. **Nation Filtering** → All entities filterable by nation
+12. **Fauna Subfilter Mapping** → Enhanced tag mapping with metadata-based categorization
 
 ## 📊 Data Volume Metrics
 

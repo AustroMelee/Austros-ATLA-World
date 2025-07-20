@@ -45,6 +45,15 @@ are promoted to the top level and indexed alongside regular tags.
 - **Benefit:** Prevents template files from being parsed as real data entries
 - **Pattern:** Any file path containing `/templates/` or `\templates\` is skipped
 
+### Location Type Support (January 2025 Update)
+
+- **Parser Enhancement:** Updated `scripts/1-parse-markdown.mjs` to accept `type: location`
+- **Issue Resolution:** Parser was only accepting `['character', 'group', 'food']` but locations use `type: location`
+- **Fix Applied:** Added `'location'` to the supported types array: `['character', 'group', 'food', 'location']`
+- **Result:** All 4 Air Temple locations now parse correctly and appear in the UI
+- **Data Pipeline:** Locations go through the same enrichment process as other data types
+- **UI Integration:** Locations display with proper type labels and nation filtering
+
 ### Expanded View Processing (2025 Update)
 
 - **Format Requirement:** Expanded view content must be wrapped in ```md code blocks
@@ -107,6 +116,7 @@ are promoted to the top level and indexed alongside regular tags.
 - **NEW (2025):** Automatically excludes template files using path filtering
 - **NEW (2025):** Enhanced expanded view parsing with proper ```md block detection
 - **NEW (2025):** JSON syntax validation with error reporting
+- **NEW (January 2025):** Location type support for geographical data processing
 
 ### Stage 2: Enrich Data (`scripts/2-enrich-data.mjs`)
 - Promotes UI-critical fields (e.g., image, role, nation) to the top level of each record.
@@ -142,6 +152,7 @@ Before running `npm run build:data`, ensure:
 - [ ] All tags are single, underscore-joined words
 - [ ] Food items have proper nation affiliations
 - [ ] Food items are categorized into appropriate sub-filters
+- [ ] Location files use `type: location` in YAML frontmatter
 
 ---
 

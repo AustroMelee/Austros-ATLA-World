@@ -100,6 +100,46 @@ export function applyFilters({
         if (activeCoreFilter === 'foods') {
           if (item.tags?.some(tag => tag.toLowerCase() === subFilterLower)) return true;
         }
+        if (activeCoreFilter === 'fauna') {
+          // Map subfilters to actual tags and metadata available in fauna entries
+          const faunaFilterMapping: Record<string, string[]> = {
+            predators_hunters: ['military', 'cavalry', 'hunting', 'predator', 'dangerous', 'venomous', 'aggressive'],
+            domesticated_mounts: ['military', 'cavalry', 'merchant', 'transportation', 'mount', 'domesticated'],
+            aquatic_marine: ['aquatic', 'marine', 'fish', 'mollusk', 'cephalopod'],
+            flying_aerial: ['flying', 'bird', 'aerial'],
+            sacred_spiritual: ['sacred', 'spirit', 'spiritual'],
+            hybrid_mixed: ['hybrid', 'mixed'],
+            small_insects: ['insect', 'arachnid', 'small'],
+            reptiles_amphibians: ['reptile', 'amphibian', 'lizard', 'snake']
+          };
+          
+          const faunaMapped = faunaFilterMapping[subFilterLower] || [subFilterLower];
+          
+          // Check tags
+          if (item.tags?.some(tag => faunaMapped.includes(tag.toLowerCase()))) return true;
+          
+          // Check metadata for additional categorization
+          if (item.metadata?.animalType && typeof item.metadata.animalType === 'string' && faunaMapped.includes(item.metadata.animalType.toLowerCase())) return true;
+          if (item.metadata?.habitat && typeof item.metadata.habitat === 'string' && faunaMapped.includes(item.metadata.habitat.toLowerCase())) return true;
+          
+          // Check for specific characteristics in metadata
+          if (item.metadata?.behavior && typeof item.metadata.behavior === 'string') {
+            const behavior = item.metadata.behavior.toLowerCase();
+            if (faunaMapped.some(term => behavior.includes(term))) return true;
+          }
+          
+          // Check for military/cavalry usage
+          if (subFilterLower === 'domesticated_mounts' && item.tags?.some(tag => ['military', 'cavalry'].includes(tag.toLowerCase()))) return true;
+          
+          // Check for predator characteristics
+          if (subFilterLower === 'predators_hunters' && item.metadata?.diet === 'carnivore') return true;
+          
+          // Check for aquatic creatures
+          if (subFilterLower === 'aquatic_marine' && item.metadata?.habitat === 'aquatic') return true;
+          
+          // Check for flying creatures
+          if (subFilterLower === 'flying_aerial' && item.metadata?.habitat === 'aerial') return true;
+        }
         return false;
       });
     });

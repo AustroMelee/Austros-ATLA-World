@@ -66,7 +66,7 @@ A minor but memorable Earth Rumble fighter, The Gecko is known for his agility a
   "ethnicity": "Earth Kingdom",
   "gender": "Male",
   "age": 22,
-  "ageRange": "young adult",
+  "ageRange": "adult",
   "isBender": true,
   "bendingElement": "earth",
   "hairColor": null,

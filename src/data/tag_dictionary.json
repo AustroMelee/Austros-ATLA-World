@@ -6970,5 +6970,61 @@
     "aliases": [],
     "weight": 50,
     "description": "Food category for filtering and organization"
+  },
+  "predators_hunters": {
+    "displayName": "Predators & Hunters",
+    "category": "fauna_category",
+    "aliases": ["predators-hunters"],
+    "weight": 50,
+    "description": "Fauna category for aggressive hunting creatures and apex predators"
+  },
+  "domesticated_mounts": {
+    "displayName": "Domesticated & Mounts",
+    "category": "fauna_category",
+    "aliases": ["domesticated-mounts"],
+    "weight": 50,
+    "description": "Fauna category for creatures used by humans for transportation, work, or companionship"
+  },
+  "aquatic_marine": {
+    "displayName": "Aquatic & Marine",
+    "category": "fauna_category",
+    "aliases": ["aquatic-marine"],
+    "weight": 50,
+    "description": "Fauna category for water-dwelling creatures"
+  },
+  "flying_aerial": {
+    "displayName": "Flying & Aerial",
+    "category": "fauna_category",
+    "aliases": ["flying-aerial"],
+    "weight": 50,
+    "description": "Fauna category for creatures that fly"
+  },
+  "sacred_spiritual": {
+    "displayName": "Sacred & Spiritual",
+    "category": "fauna_category",
+    "aliases": ["sacred-spiritual"],
+    "weight": 50,
+    "description": "Fauna category for spiritually significant creatures"
+  },
+  "hybrid_mixed": {
+    "displayName": "Hybrid & Mixed",
+    "category": "fauna_category",
+    "aliases": ["hybrid-mixed"],
+    "weight": 50,
+    "description": "Fauna category for creatures that combine different species"
+  },
+  "small_insects": {
+    "displayName": "Small & Insects",
+    "category": "fauna_category",
+    "aliases": ["small-insects"],
+    "weight": 50,
+    "description": "Fauna category for smaller creatures and insects"
+  },
+  "reptiles_amphibians": {
+    "displayName": "Reptiles & Amphibians",
+    "category": "fauna_category",
+    "aliases": ["reptiles-amphibians"],
+    "weight": 50,
+    "description": "Fauna category for reptilian and amphibious creatures"
   }
 }

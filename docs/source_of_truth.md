@@ -38,6 +38,8 @@ This document is the canonical, always-up-to-date reference for how all data is 
 
 The system now supports multiple data types beyond characters:
 
+**Note:** As of January 2025, the data pipeline supports all data types including the newly added Locations system with full UI integration.
+
 ### Characters (`type: character`)
 - **Location:** `raw-data/characters/`
 - **Template:** `raw-data/characters/templates/character_template.md`
@@ -61,7 +63,9 @@ The system now supports multiple data types beyond characters:
 ### Locations (`type: location`)
 - **Location:** `raw-data/locations/`
 - **Template:** `raw-data/locations/templates/location_template.md`
+- **Total:** 4 locations (Air Temples)
 - **Features:** Geographical and historical data with notable events and cultural significance
+- **Locations:** Eastern Air Temple, Northern Air Temple, Southern Air Temple, Western Air Temple
 
 ### Episodes (`type: episode`)
 - **Location:** `raw-data/episodes/`
@@ -115,6 +119,14 @@ The system now supports multiple data types beyond characters:
 - **Common Issues:** Trailing commas in arrays and objects
 - **Validation:** Parser checks for JSON syntax errors and reports them
 - **Fixes Applied:** Removed trailing commas from all group files
+
+### Location Type Support (January 2025 Update)
+- **Parser Enhancement:** Updated `scripts/1-parse-markdown.mjs` to accept `type: location`
+- **Issue Resolution:** Parser was only accepting `['character', 'group', 'food']` but locations use `type: location`
+- **Fix Applied:** Added `'location'` to the supported types array: `['character', 'group', 'food', 'location']`
+- **Result:** All 4 Air Temple locations now parse correctly and appear in the UI
+- **Data Pipeline:** Locations go through the same enrichment process as other data types
+- **UI Integration:** Locations display with proper type labels and nation filtering
 
 ---
 
@@ -219,6 +231,7 @@ The system now supports multiple data types beyond characters:
 - **Image Path Validation:** All image paths must match actual files in the assets directory.
 - **Image Fallback System:** Handles cases where image filenames don't match data slugs with fallback mappings.
 - **JSON Syntax Compliance:** All JSON blocks must have valid syntax without trailing commas.
+- **Location Type Support:** Parser accepts `type: location` for geographical data with full UI integration.
 - **Performance Optimization:** Memoized filtering with useMemo, React.memo components, and useCallback hooks for optimal performance.
 - **Code Organization:** Separation of concerns with dedicated hooks and utility functions.
 - **UI Enhancement:** Perfect DOS font integration, React icons with color coding, and 100% opaque elements for maximum readability.

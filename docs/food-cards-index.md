@@ -6,11 +6,11 @@ This document provides a comprehensive index of all food cards in the Austros AT
 
 ## 📊 Food Data Statistics
 
-- **Total Foods:** 98 items
+- **Total Foods:** 110 items
 - **Nation Distribution:**
-  - Fire Nation: ~25 foods
-  - Earth Kingdom: ~30 foods
-  - Water Tribe: ~20 foods
+  - Fire Nation: ~30 foods
+  - Earth Kingdom: ~40 foods
+  - Water Tribe: ~25 foods
   - Air Nomads: ~15 foods
   - Republic City: ~5 foods
   - Spirit World: ~3 foods
@@ -94,15 +94,18 @@ if (activeNations.size > 0) {
 ## 📋 Food Categories
 
 ### Fire Nation Foods
-- **Spicy Dishes:** Fire cakes, flaming fire flakes, superspicy souffle
-- **Luxury Foods:** Fire gummies, fire-nation-tea
-- **Traditional:** Fire-themed dishes with heat elements
+- **Spicy Dishes:** Fire cakes, flaming fire flakes, superspicy souffle, extra-spicy-fire-noodles
+- **Luxury Foods:** Fire gummies, fire-nation-tea, ice-cream
+- **Traditional:** Fire-themed dishes with heat elements, loco-moco
+- **Seafood:** Elephant-koi-shui-zhu-yu, fried-bangus-fish
 - **Nation Field:** "Fire Nation"
 
 ### Earth Kingdom Foods
 - **Vegetables:** Steamed vegetables, kale wraps, kale smoothie
 - **Grains:** Rice dishes, bread, noodles
 - **Traditional:** Earth Kingdom cultural dishes
+- **Desserts:** Cabbage cookies, cakes, chocolate mousse, cookie-of-the-white-lotus, moon-peach-cakes, pumpkin-pie, stuffed-apple-donuts, sugar-cookies, wagashi-desserts
+- **Street Food:** Bean-curd-puffs
 - **Nation Field:** "Earth Kingdom"
 
 ### Water Tribe Foods
@@ -125,6 +128,27 @@ if (activeNations.size > 0) {
 - **Mystical:** Spirit-themed dishes
 - **Unique:** Otherworldly food items
 - **Nation Field:** "Spirit World"
+
+## 🆕 New Food Items (January 2025)
+
+### Earth Kingdom Additions
+- **Cabbage Cookies** - Signature dessert from Cabbage Delicacies Bistro
+- **Bean Curd Puffs** - Street food from Ba Sing Se markets
+- **Cakes** - Traditional baked pastries enjoyed by Bosco
+- **Chocolate Mousse** - Sophisticated dessert from Ba Sing Se's evolving culinary scene
+- **Cookie of the White Lotus** - Pai Sho prize cookies with cultural significance
+- **Moon Peach Cakes** - Rare fruit dessert showcasing culinary excellence
+- **Pumpkin Pie** - Traditional Earth Kingdom seasonal dessert
+- **Stuffed Apple Donuts** - Seasonal fried pastries with apple compote
+- **Sugar Cookies** - Classic Earth Kingdom comfort cookies
+- **Wagashi Desserts** - Artistic confections for tea ceremonies
+
+### Fire Nation Additions
+- **Loco Moco** - Hearty rice dish with burger patty and gravy
+- **Extra Spicy Fire Noodles** - Legendary challenge dish with extreme heat
+- **Ice Cream** - Cooling dessert providing relief from Fire Nation heat
+- **Elephant Koi Shui Zhu Yu** - Fish dish prepared in Yokoya
+- **Fried Bangus Fish** - Traditional fish dish from Lambak clan celebrations
 
 ## 🎨 Visual Design Elements
 
@@ -223,4 +247,5 @@ if (activeNations.size > 0) {
 *Last Updated: January 2025*  
 *Food Cards: Enhanced with Nation Integration*  
 *Category System: 12 Comprehensive Sub-Categories*  
-*Performance: Optimized with Memoization* 
+*Performance: Optimized with Memoization*  
+*New Items: 15 additional foods added* 

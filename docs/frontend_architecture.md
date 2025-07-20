@@ -5,80 +5,69 @@
 ```mermaid
 graph TD
     A[App.tsx] --> B[Layout.tsx]
-    B --> C[Header.tsx]
-    B --> D[MatrixRain.tsx]
-    B --> E[HomeContainer.tsx]
+    B --> C[MatrixRain.tsx]
+    B --> D[HomeContainer.tsx]
     
-    C --> F[Matrix Rain Toggle Button]
-    C --> G[Back to Top Button]
+    D --> E[Home.tsx]
+    E --> F[CollectionsSidebar.tsx]
+    E --> G[Main Content Area]
     
-    E --> H[Home.tsx]
-    H --> I[CollectionsSidebar.tsx]
-    H --> J[Main Content Area]
+    G --> H[FilterBar.tsx]
+    G --> I[Clear All Filters Button]
+    G --> J[SearchBar.tsx]
+    G --> K[EntityGrid.tsx]
     
-    J --> K[FilterBar.tsx]
-    J --> L[Clear All Filters Button]
-    J --> M[SearchBar.tsx]
-    J --> N[EntityGrid.tsx]
+    F --> L[CreateCollectionModal.tsx]
+    F --> M[Collection Management]
     
-    I --> O[CreateCollectionModal.tsx]
-    I --> P[Collection Management]
+    H --> N[Nation Filters]
+    H --> O[Core Filters]
+    H --> P[Sub-Filters]
     
-    K --> Q[Nation Filters]
-    K --> R[Core Filters]
-    K --> S[Sub-Filters]
+    K --> Q[ItemCard.tsx]
+    Q --> R[ItemCardCollapsed.tsx]
+    Q --> S[ItemCardModal.tsx]
     
-    N --> T[ItemCard.tsx]
-    T --> U[ItemCardCollapsed.tsx]
-    T --> V[ItemCardModal.tsx]
+    R --> T[CollectionCardButton.tsx]
+    R --> U[AddToCollectionPopover.tsx]
     
-    U --> W[CollectionCardButton.tsx]
-    U --> X[AddToCollectionPopover.tsx]
+    S --> V[CustomMarkdownRenderer.tsx]
+    S --> W[QuoteBlock.tsx]
+    S --> X[SectionBlock.tsx]
     
-    V --> Y[CustomMarkdownRenderer.tsx]
-    V --> Z[QuoteBlock.tsx]
-    V --> AA[SectionBlock.tsx]
-    
-    BB[useEnrichedData Hook] --> E
-    CC[useSearch Hook] --> E
-    DD[useFilterState Hook] --> E
-    EE[useCollections Hook] --> E
-    FF[useCardExpansion Hook] --> E
-    GG[useScrollToTop Hook] --> C
+    Y[useEnrichedData Hook] --> D
+    Z[useSearch Hook] --> D
+    AA[useFilterState Hook] --> D
+    BB[useCollections Hook] --> D
+    CC[useCardExpansion Hook] --> D
     
     style A fill:#e1f5fe
-    style E fill:#fff3e0
-    style N fill:#f3e5f5
-    style T fill:#ffebee
-    style D fill:#fce4ec
-    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style K fill:#f3e5f5
+    style Q fill:#ffebee
+    style C fill:#fce4ec
 ```
 
 ## 🔧 Hook Dependencies
 
 ```mermaid
 graph LR
-    A[enriched-data.json] --> B[useEnrichedData]
-    B --> C[useSearch]
-    B --> D[useFilterState]
-    B --> E[useCollections]
+    A[useEnrichedData] --> B[enriched-data.json]
+    C[useSearch] --> A
+    D[useFilterState] --> A
+    E[useCollections] --> F[localStorage]
     
-    F[Search Input] --> G[useDebounce]
-    G --> C
-    
-    H[Filter Controls] --> D
-    I[Collection Actions] --> E
-    
-    J[Card Expansion] --> K[useCardExpansion]
-    L[Image Loading] --> M[useImageFallback]
-    N[Scroll Position] --> O[useScrollToTop]
+    G[useCardExpansion] --> H[Modal State]
+    I[useImageFallback] --> J[Image Loading]
+    K[useDebounce] --> L[Search Input]
+    M[useScrollToTop] --> N[Scroll Position]
     
     style A fill:#c8e6c9
     style B fill:#fff3e0
     style C fill:#e3f2fd
     style D fill:#e3f2fd
     style E fill:#e8f5e8
-    style O fill:#fce4ec
+    style M fill:#fce4ec
 ```
 
 ## 🎯 Data Flow Architecture
@@ -103,74 +92,14 @@ graph TD
     K[User Interactions] --> L[State Updates]
     L --> M[UI Re-renders]
     
-    N[Header Component] --> O[Matrix Rain Toggle]
-    N --> P[Back to Top Button]
-    
     style A fill:#fff3e0
     style I fill:#f3e5f5
     style J fill:#ffebee
-    style N fill:#e8f5e8
 ```
 
 ---
 
-## 1. Header Component (2025 January Update)
-
-### Header.tsx (`src/components/Header.tsx`)
-
-**Matrix Rain Toggle Button:**
-- **Location:** Fixed position in top-right corner (`fixed top-4 right-4`)
-- **Default State:** Matrix Rain is OFF by default
-- **Button Text:** 
-  - When OFF: "ENTER MATRIX"
-  - When ON: "EXIT MATRIX"
-- **Styling:** Matrix-themed with CRT green glow effects and backdrop blur
-- **State Management:** Controlled by `matrixRainEnabled` prop from Layout component
-
-**Back to Top Button:**
-- **Location:** Fixed position in bottom-right corner (`fixed bottom-8 right-8`)
-- **Visibility:** Only appears when user scrolls down more than 300px
-- **Icon:** Up arrow (FaArrowUp from react-icons)
-- **Behavior:** Smooth scroll to top when clicked
-- **Styling:** Consistent with project's retro terminal aesthetic
-
-**Layout Integration:**
-- **No Header Background:** Clean floating button design without black header background
-- **Z-Index Management:** Proper layering with `z-50` for header, `z-40` for back-to-top
-- **Responsive Design:** Adapts to different screen sizes
-
-### useScrollToTop Hook (`src/hooks/useScrollToTop.ts`)
-
-**Scroll Detection:**
-- **Threshold:** Shows back-to-top button when scroll position > 300px
-- **Event Listener:** Monitors `window.pageYOffset` and `document.documentElement.scrollTop`
-- **Cleanup:** Properly removes event listeners on component unmount
-
-**Smooth Scrolling:**
-- **Implementation:** Uses `window.scrollTo()` with `behavior: 'smooth'`
-- **Performance:** Optimized for smooth scrolling experience
-- **Accessibility:** Proper ARIA labels for screen readers
-
----
-
-## 2. Layout Component (2025 January Update)
-
-### Layout.tsx (`src/components/Layout.tsx`)
-
-**Matrix Rain Integration:**
-- **Conditional Rendering:** MatrixRain component only renders when `matrixRainEnabled` is true
-- **State Management:** Uses `useState` to track Matrix Rain toggle state
-- **Performance:** Prevents unnecessary canvas rendering when Matrix Rain is disabled
-- **Modal Integration:** Passes `modalOpen` prop to MatrixRain for adaptive performance
-
-**Header Integration:**
-- **Component Composition:** Includes Header component with all necessary props
-- **State Passing:** Passes Matrix Rain state and scroll handlers to Header
-- **Clean Architecture:** Separates concerns between layout and header functionality
-
----
-
-## 3. HomeContainer.tsx: The Central Orchestrator (2025 Performance Update)
+## 1. HomeContainer.tsx: The Central Orchestrator (2025 Performance Update)
 
 - **Data Fetching:** On initial load, fetches `public/enriched-data.json` (the only data file used by the app) using the `useEnrichedData` hook.
 - **State Management:** Manages the user's search query, collection selection, and the `expandedCardId` for modal views.
@@ -184,7 +113,7 @@ graph TD
 
 ---
 
-## 4. Home.tsx: Presentational Layer
+## 2. Home.tsx: Presentational Layer
 
 - **Pure Component:** Receives all data and handlers from `HomeContainer`.
 - **Layout Management:** Renders the main layout with `CollectionsSidebar` and content area.
@@ -195,7 +124,7 @@ graph TD
 
 ---
 
-## 5. Enhanced Multi-Layered Filtering System (2025 January Update)
+## 3. Enhanced Multi-Layered Filtering System (2025 January Update)
 
 ### FilterBar Component (`src/components/Filters/FilterBar.tsx`)
 
@@ -296,7 +225,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 6. Matrix Rain Integration (2025 Update)
+## 4. Matrix Rain Integration (2025 Update)
 
 ### MatrixRain Component (`src/components/MatrixRain/MatrixRain.tsx`)
 
@@ -308,7 +237,6 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **Performance:** Uses `requestAnimationFrame` for smooth 60fps animation with adaptive frame skipping.
 - **Modal Integration:** Reduces intensity when modal is open.
 - **Responsive:** Auto-calculates columns based on screen width and cleans up listeners on resize.
-- **Conditional Rendering:** Only renders when `matrixRainEnabled` is true (controlled by Header toggle)
 
 **Rendering Strategy:**
 1. **Dual-Layer Rendering:** Fade layer followed by character layer for clean trails
@@ -319,7 +247,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 7. Card System & Modal Management
+## 5. Card System & Modal Management
 
 ### ItemCard Component (`src/components/ItemCard/ItemCard.tsx`)
 
@@ -342,7 +270,14 @@ const isAnimal = item.species && animalSpecies.some(species =>
 **Dynamic Type Labels:**
 - **Enhancement:** Dynamic type detection instead of hardcoded "Character"
 - **Logic:** Displays "Group", "Location", "Food", "Fauna", "Spirit", or "Character" based on item type
+- **Group Type Support:** Includes all group types: "group", "religious_organization", "service_organization"
 - **Accessibility:** Updated aria-label from "Character details" to "Item details"
+
+**Badge System Integration:**
+- **Dynamic Badge Display:** Badges extracted from card view section and displayed in UI
+- **Badge Logic:** Uses `getBadge` function to determine badge from `item.role`, `item.metadata.badge`, or `item.metadata.role`
+- **Visual Integration:** Badges appear prominently on character cards
+- **Fallback Handling:** Graceful handling when badges are missing
 
 **Collections Integration:**
 - **Collection Button:** Matrix-themed button in top-right corner
@@ -362,7 +297,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 8. Collections System (2025 Update)
+## 6. Collections System (2025 Update)
 
 ### CollectionsSidebar Component (`src/components/Collections/CollectionsSidebar.tsx`)
 
@@ -452,7 +387,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 9. Search Engine Integration
+## 7. Search Engine Integration
 
 ### useSearch Hook (`src/hooks/useSearch.ts`)
 
@@ -470,13 +405,31 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 10. Data Pipeline Integration (2025 Update)
+## 8. Data Pipeline Integration (2025 Update)
 
 ### Template Exclusion System
 - **Parser Enhancement:** Automatic exclusion of files in `templates/` subdirectories
 - **Implementation:** Added filter in `scripts/1-parse-markdown.mjs`
 - **Pattern:** `!/[/\\\\]templates[/\\\\]/.test(p)`
 - **Benefit:** Prevents template files from being processed as real data
+
+### Backend Metadata Separation
+- **Requirement:** Backend metadata must be separated from expanded view content
+- **Implementation:** Backend metadata section must not be included within expanded view
+- **Pattern:** Remove `---` separators that incorrectly place backend metadata within expanded view
+- **Benefit:** Prevents backend metadata from appearing in UI cards
+
+### Badge System Integration
+- **Extraction:** Badges extracted from card view section in markdown files
+- **Display:** Badges displayed dynamically in UI based on metadata
+- **Logic:** Uses `getBadge` function to determine badge from multiple sources
+- **Fallback:** Graceful handling when badges are missing
+
+### Nation Field Integration
+- **Requirement:** All entities must have nation fields for filtering
+- **Implementation:** Nation fields added to all groups and characters
+- **Filtering:** All entities can be filtered by nation
+- **Display:** Nation symbols displayed on all entity cards
 
 ### Expanded View Processing
 - **Format Requirement:** Content must be wrapped in ```md code blocks
@@ -504,7 +457,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 11. Styling Architecture
+## 9. Styling Architecture
 
 ### Tailwind CSS Integration
 - **Utility-First:** All styling done through Tailwind classes
@@ -526,7 +479,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 12. Performance Optimizations (2025 Major Update)
+## 10. Performance Optimizations (2025 Major Update)
 
 ### React Optimizations
 - **Memoization:** `useMemo` and `useCallback` for expensive operations
@@ -555,7 +508,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 ---
 
-## 13. Accessibility & Responsive Design
+## 11. Accessibility & Responsive Design
 
 ### Accessibility Features
 - **ARIA Labels:** All interactive elements properly labeled
@@ -575,9 +528,6 @@ const isAnimal = item.species && animalSpecies.some(species =>
 
 The frontend architecture provides a robust, performant, and accessible foundation for the Austros ATLA World encyclopedia. The 2025 January update introduces:
 
-- **Header Component:** New floating header with Matrix Rain toggle and back-to-top button
-- **Matrix Rain Toggle:** Clean floating button in top-right corner with conditional rendering
-- **Back to Top Button:** Smart visibility button that appears on scroll with smooth scrolling
 - **Enhanced Multi-Layered Filtering:** Comprehensive filtering with PNG nation images, age ranges, gender, and bender classification
 - **Perfect DOS Font Integration:** Core filters and subfilters now use Perfect DOS font for better readability
 - **React Icons with Color Coding:** Each core filter has a distinct icon and color for instant recognition
@@ -587,12 +537,15 @@ The frontend architecture provides a robust, performant, and accessible foundati
 - **Clear All Filters Button:** Smart visibility button that resets all filter states
 - **Food Category System:** 12 comprehensive food sub-categories with React emojis and text labels
 - **Nation Integration:** All entity types display nation symbols with consistent theming
-- **Matrix Rain Integration:** Authentic background effects with adaptive performance and toggle control
+- **Matrix Rain Integration:** Authentic background effects with adaptive performance
 - **Glassmorphism UI:** Modern visual effects with depth and transparency
 - **Collections System:** Matrix-themed collection management with localStorage persistence
 - **New Data Types:** Support for groups, foods, locations, and episodes with dynamic type detection
 - **Template Exclusion:** Automatic exclusion of template files from data processing
 - **Enhanced Data Validation:** Image path validation, JSON syntax checking, and expanded view processing
+- **Badge System:** Dynamic badge display for all character types
+- **Backend Metadata Separation:** Proper separation of backend metadata from UI content
+- **Nation Fields:** All entities filterable by nation
 - **Responsive Design:** Works seamlessly across all devices
 - **Accessibility Compliance:** Inclusive user experience for all users
 
@@ -607,8 +560,14 @@ The combination of these features creates a cohesive, high-performance applicati
 - **Enhanced Filtering:** Multi-layered filtering with comprehensive coverage and color coding
 - **Performance Optimizations:** Major performance improvements with memoized filtering and React.memo components
 - **UI Enhancements:** Perfect DOS font, React icons, color coding, and 100% opaque elements
-- **Header Features:** Matrix Rain toggle and back-to-top button with smart visibility
+- **Badge System:** Dynamic badges for all character types
+- **Nation Fields:** All entities filterable by nation
 
-The application now provides a complete encyclopedia experience with robust filtering, comprehensive categorization, authentic Matrix/CRT aesthetics, superior performance through intelligent caching and optimization, enhanced visual distinction through color coding and improved typography, and convenient navigation features with the new header component.
+The application now provides a complete encyclopedia experience with robust filtering, comprehensive categorization, authentic Matrix/CRT aesthetics, superior performance through intelligent caching and optimization, and enhanced visual distinction through color coding and improved typography.
 
-`
+---
+
+*Last Updated: January 2025*  
+*Architecture: Advanced Component Hierarchy*  
+*Performance: Optimized with Memoization*  
+*UI: Enhanced with Matrix Theme*

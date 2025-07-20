@@ -59,7 +59,6 @@ export function Home({
         { key: 'female', symbol: <span className="text-pink-400">♀</span> },
         { key: 'child' },
         { key: 'teen' },
-        { key: 'young adult' },
         { key: 'adult' },
         { key: 'elder' },
         { key: 'heroes' },
@@ -94,9 +93,14 @@ export function Home({
         { key: 'airbending' }
       ],
       fauna: [
-        { key: 'domestic' },
-        { key: 'wild' },
-        { key: 'spirit' }
+        { key: 'predators_hunters', symbol: <span className="text-red-400">🦁 Predators & Hunters</span> },
+        { key: 'domesticated_mounts', symbol: <span className="text-green-400">🐎 Domesticated & Mounts</span> },
+        { key: 'aquatic_marine', symbol: <span className="text-blue-400">🌊 Aquatic & Marine</span> },
+        { key: 'flying_aerial', symbol: <span className="text-cyan-400">🦅 Flying & Aerial</span> },
+        { key: 'sacred_spiritual', symbol: <span className="text-purple-400">🕊️ Sacred & Spiritual</span> },
+        { key: 'hybrid_mixed', symbol: <span className="text-yellow-400">🔄 Hybrid & Mixed</span> },
+        { key: 'small_insects', symbol: <span className="text-orange-400">🦗 Small & Insects</span> },
+        { key: 'reptiles_amphibians', symbol: <span className="text-gray-400">🐊 Reptiles & Amphibians</span> }
       ],
       spirits: [
         { key: 'benign' },
