@@ -132,6 +132,7 @@ export default function ItemCardCollapsed({ item, onExpand, collectionsApi }: It
                  item.type === 'food' ? 'Food' : 
                  item.type === 'fauna' ? 'Fauna' : 
                  item.type === 'spirit-world' ? 'Spirit' : 
+                 item.type === 'episode' ? 'Episode' : 
                  'Character'}
               </p>
             </div>

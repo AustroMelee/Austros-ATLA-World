@@ -101,6 +101,48 @@ export const imageFallbacks: Record<string, string> = {
 };
 ```
 
+#### Episode Title Duplication (RESOLVED - January 2025)
+**Problem:** Episode "Winter Solstice, Part 2: Avatar Roku" displayed title twice in UI - once from card view data and once from expanded view content
+**Root Cause:** Data pipeline was adding episode title to the beginning of expanded view content during processing
+**Solution:** Rebuilt data pipeline using `npm run build:data` which regenerated enriched data with correct content
+**Status:** ✅ RESOLVED - Episode now displays correctly with single title
+**Prevention:** Always rebuild data pipeline after any data processing issues
+**Files Affected:** `public/enriched-data.json`, episode markdown files
+**Verification:** Expanded view content now starts with `### 📖 Episode Information` instead of duplicate title heading
+
+#### Episode Images Not Showing (RESOLVED - January 2025)
+**Problem:** Episode cards showing placeholder text "WW" and "WR" instead of actual episode images
+**Root Cause:** Episode markdown files missing `image` field in JSON metadata, even when image files exist
+**Solution:** Added missing `image` fields to episode JSON metadata blocks
+**Status:** ✅ RESOLVED - Episode images now display correctly
+**Files Affected:** `raw-data/episodes/winter-solstice-part-1-the-spirit-world.md`, `raw-data/episodes/winter-solstice-part-2-avatar-roku.md`
+**Example Fix:**
+```json
+{
+  "type": "episode",
+  "id": "winter-solstice-part-1-the-spirit-world",
+  "title": "Winter Solstice, Part 1: The Spirit World",
+  "image": "winter-solstice,-part-1-the-spirit-world.jpg"
+}
+```
+**Prevention:** Always include `image` field in episode JSON metadata when creating new episode files
+
+#### Episode Title Parsing Issues (RESOLVED - January 2025)
+**Problem:** Episode titles not parsing correctly from markdown files
+**Root Cause:** Parser regex pattern was too strict and failed to match section headers with emojis
+**Solution:** Updated parser regex to be more flexible and handle emoji-containing headers
+**Status:** ✅ RESOLVED - All episode titles now parse correctly
+**Files Affected:** `scripts/1-parse-markdown.mjs`
+**Code Fix:**
+```javascript
+// Original regex (too strict)
+/## [^\n]*UI - EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/
+
+// Updated regex (more flexible)
+/## [^\n]*EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/
+```
+**Result:** All expanded view content now parses correctly regardless of emoji presence in headers
+
 #### Character Not Parsing
 **Problem:** New character not appearing in data
 **Root Cause:** Missing "id" field in JSON metadata block
@@ -183,15 +225,166 @@ const faunaFilterMapping: Record<string, string[]> = {
 **Solution:** Implemented memoized filtering with useMemo and useCallback
 **Files Affected:** `src/pages/HomeContainer.tsx`, `src/hooks/useFilterState.ts`
 
+### Cached Data Issues (2025 January Update)
+
+#### Unexpected Cards Appearing in UI
+**Problem:** UI shows cards for entities that no longer exist in the filesystem (e.g., episode cards when no episode files exist)
+**Root Cause:** Deleted markdown files leave cached data in `data/parsed-data.json` and `public/enriched-data.json`
+**Symptoms:** 
+- Episode cards appear despite no episode files
+- Character cards appear for deleted characters
+- Food cards appear for deleted food items
+- Location cards appear for deleted locations
+**Solution:** Complete data pipeline rebuild
+**Emergency Fix:**
+```bash
+# 1. Stop development server
+# 2. Delete cached data files
+rm data/parsed-data.json
+rm public/enriched-data.json
+
+# 3. Rebuild data pipeline
+npm run build:data:parse
+npm run enrich:data
+
+# 4. Restart development server
+npm run dev
+```
+**Prevention:** Always run `npm run build:data` after deleting any markdown files
+
+#### Orphaned Data Entries
+**Problem:** Processed data contains entries for files that no longer exist
+**Root Cause:** Data pipeline processes files that existed previously but were deleted
+**Diagnosis:**
+```bash
+# Count actual markdown files
+find raw-data -name "*.md" -not -path "*/templates/*" | wc -l
+
+# Count processed entries
+jq length data/parsed-data.json
+
+# If counts don't match, orphaned data exists
+```
+**Solution:** Force complete rebuild from scratch
+**Verification:**
+```bash
+# Check for specific orphaned types
+grep -r '"type": "episode"' data/parsed-data.json
+grep -r '"type": "episode"' public/enriched-data.json
+
+# Should return no results if properly cleaned
+```
+
+#### Data Pipeline Inconsistencies
+**Problem:** UI shows different data than what exists in filesystem
+**Root Cause:** Cached data files not reflecting current filesystem state
+**Solution:** Complete data pipeline rebuild
+**Files Affected:** `data/parsed-data.json`, `public/enriched-data.json`
+**Prevention Checklist:**
+- [ ] Run `npm run build:data` after any file deletions
+- [ ] Verify file counts match between filesystem and processed data
+- [ ] Check for unexpected entity types in UI
+- [ ] Monitor for orphaned entries in processed data
+
+#### Episode Processing Issues (January 2025 Update)
+**Problem:** Episode files not appearing in UI despite being created correctly
+**Root Cause:** Parser not recognizing `type: episode` in supported types array
+**Symptoms:**
+- Episode files exist in `raw-data/episodes/` but don't appear in UI
+- Parser logs show "Type is 'episode', not supported" message
+- Episode data missing from `enriched-data.json`
+**Solution:** Ensure parser supports episode type
+**Files Affected:** `scripts/1-parse-markdown.mjs`
+**Code Fix:**
+```javascript
+// Update supported types array to include 'episode'
+if (!['character', 'group', 'food', 'location', 'episode'].includes(frontmatter.type)) {
+  console.log(`[INFO]    Skipping ${filePath}: Type is "${frontmatter.type}", not supported.`);
+  return null;
+}
+```
+**Verification:**
+```bash
+# Check if episodes are being parsed
+node scripts/1-parse-markdown.mjs | grep "episode"
+
+# Check enriched data for episodes
+node -e "const data = require('./public/enriched-data.json'); const episodes = data.filter(item => item.type === 'episode'); console.log('Episodes found:', episodes.length);"
+```
+**Prevention:** Always verify new entity types are added to the supported types array in the parser
+
+#### Episode Creation Timing Issues (January 2025 Update)
+**Problem:** Episode file created correctly but doesn't appear in UI immediately
+**Root Cause:** Data pipeline processing timing - episode file may not be included in initial processing run due to file system synchronization
+**Symptoms:**
+- Episode file exists in `raw-data/episodes/` but doesn't appear in UI
+- Episode missing from `enriched-data.json` despite correct file structure
+- Development server running but episode not visible
+**Solution:** 
+1. Rebuild data pipeline: `npm run build:data`
+2. Restart development server: `npm run dev`
+3. Verify episode is in enriched data
+**Prevention:** Always rebuild data pipeline after creating new episode files
+**Verification:**
+```bash
+# Check if episode is in enriched data
+node -e "const data = require('./public/enriched-data.json'); const episodes = data.filter(i => i.type === 'episode'); console.log('Total episodes:', episodes.length); episodes.forEach(e => console.log(e.id, e.title));"
+
+# Check if episode file exists
+ls raw-data/episodes/ | grep "episode-name"
+```
+**Workflow:** Create episode file → Rebuild data pipeline → Restart development server → Verify episode appears
+
+### Type-Agnostic Script Architecture Issues (January 2025 Update)
+
+#### Special-Case Logic in Scripts
+**Problem:** Scripts contain type-specific handling that can cause inconsistencies
+**Root Cause:** Previous implementations included special-case logic for different entity types
+**Solution:** Complete cleanup of all scripts to ensure type-agnostic processing
+**Files Affected:** `scripts/lib/enrichRecord.mjs`, `scripts/1-parse-markdown.mjs`, `scripts/2-enrich-data.mjs`
+**Cleanup Summary:**
+- Removed episode-specific name handling (`record.title || record.name`)
+- Removed episode-specific expandedView promotion
+- Removed episode-specific debug logging
+- Removed food-specific region→nation mapping logic
+- Removed food-specific category tag handling
+**Result:** All entity types now use unified processing logic
+**Prevention:** Never introduce type-specific logic in any script
+
+#### Canonical Structure Violations
+**Problem:** Different entity types using different markdown structures
+**Root Cause:** Some entity types deviated from the canonical structure
+**Solution:** Enforce canonical structure for all entity types
+**Required Structure:**
+- YAML frontmatter with `type` field
+- `## UI - CARD VIEW` section with ```md code block
+- `## UI - EXPANDED VIEW` section with ```md code block
+- Backend metadata in separate section
+**Prevention:** All new entity types must follow this exact structure
+
 ## Prevention Guidelines
 
 ### Markdown File Structure
-1. **Separate Backend Metadata:** Always keep backend metadata separate from expanded view content
-2. **Include Required Fields:** Ensure all entities have required fields (id, name, type, nation)
-3. **Validate JSON Syntax:** Check for trailing commas and valid JSON structure
-4. **Add Badges:** Include badges in card view section for characters
-5. **Verify Image Paths:** Ensure image paths match actual files
-6. **Use Correct Type:** Ensure location files use `type: location` in YAML frontmatter
+1. **Canonical Structure for All Types:** All entity types (character, episode, group, food, location, fauna, etc.) must use the exact same markdown structure for UI blocks (CARD VIEW and EXPANDED VIEW), with summary and expanded content in ```md code blocks. No special-case logic or exceptions are allowed in the parsing script for any type.
+2. **Separate Backend Metadata:** Always keep backend metadata separate from expanded view content
+3. **Include Required Fields:** Ensure all entities have required fields (id, name, type, nation)
+4. **Validate JSON Syntax:** Check for trailing commas and valid JSON structure
+5. **Add Badges:** Include badges in card view section for characters
+6. **Verify Image Paths:** Ensure image paths match actual files
+7. **Use Correct Type:** Ensure location files use `type: location` in YAML frontmatter
+8. **Use Correct Episode Type:** Ensure episode files use `type: episode` in YAML frontmatter
+9. **Episode Image Fields:** Always include `image` field in episode JSON metadata (CRITICAL - prevents placeholder text)
+10. **No Special-Case Parsing:** Never introduce type-specific parsing logic. All parsing and enrichment must be type-agnostic and use the same extraction logic for UI blocks.
+
+### Script Architecture (2025 January Update)
+1. **Type-Agnostic Only:** All scripts must use unified logic that works identically for all entity types
+2. **No Special Cases:** Never introduce type-specific handling in any script (`scripts/1-parse-markdown.mjs`, `scripts/2-enrich-data.mjs`, `scripts/lib/enrichRecord.mjs`)
+3. **Unified Processing:** All entity types must go through the same parsing and enrichment pipeline
+4. **Canonical Structure Enforcement:** Any deviation from the canonical markdown structure is a build-breaking error
+5. **Validation:** Pre-commit hooks validate type-agnostic processing
+6. **Code Review:** All script changes must maintain type-agnostic architecture
+7. **Documentation:** This cleanup is documented to prevent regression
+8. **Testing:** All entity types are tested with the same processing pipeline
 
 ### UI Component Updates
 1. **Update Type Logic:** When adding new entity types, update type label logic

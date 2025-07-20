@@ -58,8 +58,8 @@ Due to their value as a food source, Komodo Chickens are actively bred and maint
 
 ```json
 {
-  "id": "komodo-chicken",
-  "slug": "komodo-chicken",
+  "id": "komodo-chicken-fauna",
+  "slug": "komodo-chicken-fauna",
   "name": "Komodo Chicken",
   "nation": "Fire Nation",
   "animalType": "hybrid",

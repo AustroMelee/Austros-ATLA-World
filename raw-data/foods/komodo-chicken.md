@@ -53,9 +53,9 @@ Komodo Chicken embodies the Fire Nation's philosophy of strength and boldness in
 
 ```json
 {
-  "id": "komodo-chicken",
+  "id": "komodo-chicken-food",
   "name": "Komodo Chicken",
-  "slug": "komodo-chicken",
+  "slug": "komodo-chicken-food",
   "type": "food",
   "description": "A spiced roasted chicken dish that embodies the Fire Nation's love for bold flavors and heat, often served as skewers or whole roasted birds with Fire Nation spices.",
   "region": "Fire Nation",

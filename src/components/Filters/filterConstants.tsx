@@ -16,6 +16,7 @@ import {
   FaPaw,
   FaGhost,
   FaPlay,
+  FaBook,
 } from 'react-icons/fa';
 
 export const nations = [
@@ -74,39 +75,15 @@ export const faunaSubfilterColors: Record<string, string> = {
 };
 
 export const episodeSubfilterIcons: Record<string, React.ReactNode> = {
-  series_premiere: <FaPlay className="w-5 h-5" />,
-  avatar_discovery: <FaShieldAlt className="w-5 h-5" />,
-  airbending: <FaFire className="w-5 h-5" />,
-  waterbending: <FaFire className="w-5 h-5" />,
-  fire_nation: <FaFire className="w-5 h-5" />,
-  iceberg: <FaGhost className="w-5 h-5" />,
-  flying_bison: <FaPaw className="w-5 h-5" />,
-  hundred_year_war: <FaShieldAlt className="w-5 h-5" />,
-  southern_water_tribe: <FaMapMarkerAlt className="w-5 h-5" />,
-  prince_zuko: <FaUserSecret className="w-5 h-5" />,
-  uncle_iroh: <FaUserGraduate className="w-5 h-5" />,
-  gran_gran: <FaUserFriends className="w-5 h-5" />,
-  penguin_sledding: <FaPaw className="w-5 h-5" />,
-  booby_trap: <FaShieldAlt className="w-5 h-5" />,
-  flare_signal: <FaFire className="w-5 h-5" />,
+  book_1: <FaBook className="w-5 h-5" />,
+  book_2: <FaBook className="w-5 h-5" />,
+  book_3: <FaBook className="w-5 h-5" />,
 };
 
 export const episodeSubfilterColors: Record<string, string> = {
-  series_premiere: 'text-purple-400',
-  avatar_discovery: 'text-blue-400',
-  airbending: 'text-cyan-400',
-  waterbending: 'text-blue-400',
-  fire_nation: 'text-red-400',
-  iceberg: 'text-cyan-400',
-  flying_bison: 'text-gray-400',
-  hundred_year_war: 'text-red-400',
-  southern_water_tribe: 'text-blue-400',
-  prince_zuko: 'text-red-400',
-  uncle_iroh: 'text-orange-400',
-  gran_gran: 'text-blue-400',
-  penguin_sledding: 'text-cyan-400',
-  booby_trap: 'text-red-400',
-  flare_signal: 'text-yellow-400',
+  book_1: 'text-blue-500',
+  book_2: 'text-green-500',
+  book_3: 'text-red-500',
 };
 
 export const coreFilterIcons: Record<string, React.ReactNode> = {

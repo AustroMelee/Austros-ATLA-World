@@ -142,23 +142,34 @@ export function applyFilters({
           if (subFilterLower === 'flying_aerial' && item.metadata?.habitat === 'aerial') return true;
         }
         if (activeCoreFilter === 'episodes') {
+          // Check for book-based subfilters
+          if (subFilterLower === 'book_1') {
+            return item.metadata?.book === 'Water' || item.metadata?.book === '1';
+          }
+          if (subFilterLower === 'book_2') {
+            return item.metadata?.book === 'Earth' || item.metadata?.book === '2';
+          }
+          if (subFilterLower === 'book_3') {
+            return item.metadata?.book === 'Fire' || item.metadata?.book === '3';
+          }
+          
           // Check if the episode has the specific tag
           if (item.tags?.some(tag => tag.toLowerCase() === subFilterLower)) return true;
           
           // Check episode-specific metadata
-          if (item.book && typeof item.book === 'string' && subFilterLower.includes(item.book.toLowerCase())) return true;
-          if (item.series && typeof item.series === 'string' && subFilterLower.includes(item.series.toLowerCase())) return true;
+          if (item.metadata?.book && typeof item.metadata.book === 'string' && subFilterLower.includes(item.metadata.book.toLowerCase())) return true;
+          if (item.metadata?.series && typeof item.metadata.series === 'string' && subFilterLower.includes(item.metadata.series.toLowerCase())) return true;
           
           // Check for specific episode themes and elements
-          if (item.characters && Array.isArray(item.characters)) {
-            for (const character of item.characters) {
+          if (item.metadata?.characters && Array.isArray(item.metadata.characters)) {
+            for (const character of item.metadata.characters) {
               if (typeof character === 'string' && character.toLowerCase().includes(subFilterLower)) return true;
             }
           }
           
           // Check for specific locations in the episode
-          if (item.locations && Array.isArray(item.locations)) {
-            for (const location of item.locations) {
+          if (item.metadata?.locations && Array.isArray(item.metadata.locations)) {
+            for (const location of item.metadata.locations) {
               if (typeof location === 'string' && location.toLowerCase().includes(subFilterLower)) return true;
             }
           }

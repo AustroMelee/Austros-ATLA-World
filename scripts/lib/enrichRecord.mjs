@@ -47,18 +47,21 @@ function extractSimpleTags(complexTag) {
 
 export default function enrichRecord(record, tagDictionary = {}) {
   const id = record.id || generateSlug(record.name);
-  const name = record.name || 'Unnamed Record';
+  
+  // Type-agnostic name handling - use title if available, otherwise name
+  const name = record.title || record.name || 'Unnamed Record';
+  
   const summary = record.summary || record.shortDescription || '';
   const type = record.type || record.__type || 'character';
 
-  // Remove any accidental inclusion of 'category' as a tag, but include food category tags
+  // Remove any accidental inclusion of 'category' as a tag, but include category tags
   const tags = [
     ...(record.tags || []),
     ...(record.tagCategories ? Object.values(record.tagCategories).flat() : []),
   ].filter(t => t !== 'category' && t !== 'beverage');
   
-  // Add food category tags from category field
-  if (record.category && record.type === 'food') {
+  // Add category tags from category field for any type
+  if (record.category) {
     tags.push(record.category);
   }
   // Remove any existing gender tags (case-insensitive, with or without prefix)
@@ -135,26 +138,12 @@ export default function enrichRecord(record, tagDictionary = {}) {
       promotedFields[field] = record[field];
     }
   }
-  
+
   // Handle region -> nation mapping for food items
-  if (record.type === 'food' && record.region) {
+  if (record.region) {
     // Convert underscores to spaces for proper nation display
     const nationName = record.region.replace(/_/g, ' ');
     promotedFields.nation = nationName;
-  } else if (record.type === 'food' && record.metadata && record.metadata.region) {
-    // Handle region in metadata object
-    const nationName = record.metadata.region.replace(/_/g, ' ');
-    promotedFields.nation = nationName;
-  }
-
-  const metadata = { ...record };
-  delete metadata.id;
-  delete metadata.name;
-  delete metadata.summary;
-  delete metadata.type;
-  delete metadata.tags;
-  for (const field of UI_FIELDS_TO_PROMOTE) {
-    delete metadata[field];
   }
 
   if ((record.id || record.name) === 'air-nomad-style-tea') {
@@ -165,6 +154,39 @@ export default function enrichRecord(record, tagDictionary = {}) {
     console.log('[DEBUG] Tags array for air-nomad-style-tea:', tags);
   }
 
+  // Preserve episode-specific fields
+  const episodeFields = {};
+  if (record.type === 'episode') {
+    if (record.title) episodeFields.title = record.title;
+    if (record.book) episodeFields.book = record.book;
+    if (record.episode) episodeFields.episode = record.episode;
+    if (record.air_date) episodeFields.air_date = record.air_date;
+    if (record.writers) episodeFields.writers = record.writers;
+    if (record.directors) episodeFields.directors = record.directors;
+    if (record.guest_stars) episodeFields.guest_stars = record.guest_stars;
+    if (record.production_number) episodeFields.production_number = record.production_number;
+    if (record.next_episode) episodeFields.next_episode = record.next_episode;
+    if (record.characters) episodeFields.characters = record.characters;
+    if (record.locations) episodeFields.locations = record.locations;
+    if (record.badge) episodeFields.badge = record.badge;
+    if (record.description) episodeFields.description = record.description;
+    if (record.synopsis) episodeFields.synopsis = record.synopsis;
+  }
+
+  // Preserve character-specific fields
+  const characterFields = {};
+  if (record.type === 'character') {
+    if (record.title) characterFields.title = record.title;
+    if (record.fullName) characterFields.fullName = record.fullName;
+    if (record.role) characterFields.role = record.role;
+    if (record.species) characterFields.species = record.species;
+    if (record.gender) characterFields.gender = record.gender;
+    if (record.ageChronological) characterFields.ageChronological = record.ageChronological;
+    if (record.nationality) characterFields.nationality = record.nationality;
+    if (record.isBender) characterFields.isBender = record.isBender;
+    if (record.bendingElement) characterFields.bendingElement = record.bendingElement;
+  }
+
   return {
     id,
     name,
@@ -173,6 +195,7 @@ export default function enrichRecord(record, tagDictionary = {}) {
     slug: record.slug || id,
     tags: finalTags.size > 0 ? Array.from(finalTags) : undefined,
     ...promotedFields,
-    metadata,
+    ...episodeFields,
+    ...characterFields,
   };
 }

@@ -1,5 +1,6 @@
 ---
-type: episode
+type: template
+id: episode-template
 ---
 
 # 🎬 ULTIMATE EPISODE METADATA SCHEMA (v1.0)
@@ -18,27 +19,66 @@ type: episode
 - Book/Season:
 - Episode #: (e.g., 1x01)
 - Short Description:
+- Badge: [Episode metadata badge]
 ```
 
 ---
 
 ## 📖 UI - EXPANDED VIEW
-*(Presentation Layer 2 - Unchanged)*
+*(Presentation Layer 2 - Updated)*
 
 ```md
 ### 📖 Synopsis
+
+<FaBookOpen className="inline mr-2" />
 
 ...
 
 ### ✨ Key Moments
 
+<FaStar className="inline mr-2" />
+
 ...
 
 ### 🎭 Characters Focus
 
+<FaUsers className="inline mr-2" />
+
 ...
 
 ### 🌟 Themes
+
+<FaLightbulb className="inline mr-2" />
+
+...
+
+### 📍 Locations Visited
+
+<FaMapMarkerAlt className="inline mr-2" />
+
+...
+
+### 💬 Notable Quotes
+
+<FaQuoteLeft className="inline mr-2" />
+
+...
+
+### 🎬 Plot Points
+
+<FaFilm className="inline mr-2" />
+
+...
+
+### 🔥 Bending Techniques
+
+<FaFire className="inline mr-2" />
+
+...
+
+### 🏛️ Cultural Elements
+
+<FaLandmark className="inline mr-2" />
 
 ...
 ```
@@ -53,25 +93,26 @@ type: episode
 
 ```json
 {
-  "id": "string (slug format)",
-  "name": "string",
-  "slug": "string",
   "type": "episode",
-  "book": "string",
-  "episodeNumber": "string",
+  "id": "string (slug format)",
+  "slug": "string",
   "title": "string",
-  "airDate": "string",
-  "director": "string",
-  "writer": "string",
-  "runningTime": "string",
-  "chronologicalOrder": "number",
-  "previousEpisode": "string | null",
-  "nextEpisode": "string | null",
+  "image": "string (exact filename in public/assets/images/)",
+  "series": "Avatar The Last Airbender",
+  "book": "string",
+  "episode": "number",
+  "air_date": "string (YYYY-MM-DD)",
+  "writers": ["string"],
+  "directors": ["string"],
+  "guest_stars": ["string"],
+  "production_number": "string",
+  "next_episode": "string (slug)",
+  "characters": ["string (slugs)"],
+  "locations": ["string (slugs)"],
+  "tags": ["string"],
+  "badge": "string",
   "description": "string",
-  "synopsis": "string",
-  "image": "string | null",
-  "tags": "string[]",
-  "searchAliases": "string[]"
+  "synopsis": "string"
 }
 ```
 
@@ -81,15 +122,15 @@ type: episode
 
 ```json
 {
-  "plotPoints": "string[]",
-  "featuredCharacters": "string[]",
-  "locationsVisited": "string[]",
-  "notableQuotes": "string[]",
-  "themes": "string[]",
-  "keyMoments": "string[]",
-  "characterFocus": "string[]",
-  "bendingTechniques": "string[]",
-  "culturalElements": "string[]",
+  "plotPoints": ["string"],
+  "featuredCharacters": ["string"],
+  "locationsVisited": ["string"],
+  "notableQuotes": ["string"],
+  "themes": ["string"],
+  "keyMoments": ["string"],
+  "characterFocus": ["string"],
+  "bendingTechniques": ["string"],
+  "culturalElements": ["string"],
   "expandedView": "string"
 }
 ``` 

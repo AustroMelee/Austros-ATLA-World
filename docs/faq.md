@@ -104,6 +104,67 @@
 
 ---
 
+### 🎬 Episode Processing & Display (2025 January Update)
+
+**How do episodes work in the system?**
+- **Episode Type Support:** Episodes use `type: episode` in YAML frontmatter
+- **Canonical Structure:** Episodes follow the same markdown structure as all other entity types
+- **UI Integration:** Episodes display with proper type labels and episode-specific metadata
+- **Data Pipeline:** Episodes go through the same type-agnostic processing as other data types
+
+**What episode metadata is available?**
+- **Book/Season Field:** Water, Earth, Fire season classification
+- **Episode Number Field:** Episode number in 1x01 format
+- **Air Date Field:** Original air date information
+- **Narrative Context:** Episode background and story information
+- **Character References:** Links to characters appearing in the episode
+- **Location References:** Links to locations featured in the episode
+
+**How do I create a new episode file?**
+- **Template Structure:** Use exact template from `raw-data/episodes/templates/episode_template.md`
+- **Image Field:** Always include `"image": "episode-filename.jpg"` in JSON metadata (CRITICAL)
+- **S1Ex Title Prefix:** Use `"title": "S1Ex - Episode Title"` in JSON metadata (CRITICAL)
+- **Data Pipeline:** Run `npm run build:data` after creating episode file
+- **Development Server:** Restart `npm run dev` to pick up new episode data
+- **Verification:** Check UI to confirm episode appears correctly
+
+**Why do episode cards show placeholder text instead of images?**
+- **Missing Image Field:** Episode JSON metadata missing `image` field
+- **Filename Mismatch:** Image filename doesn't match actual file in `public/assets/images/`
+- **Solution:** Add `"image": "exact-filename.jpg"` to episode JSON metadata
+- **Prevention:** Always include image field when creating new episode files
+
+**How does episode title parsing work?**
+- **Flexible Regex:** Parser uses flexible regex pattern that handles emoji presence in headers
+- **Emoji Support:** Headers like `## 📖 UI - EXPANDED VIEW` parse correctly
+- **Header Variations:** All header variations are supported by the flexible regex pattern
+- **Content Extraction:** Expanded view content is extracted correctly regardless of emoji presence
+
+**What if episode files don't appear in UI after creation?**
+- **Timing Issue:** Episode file may not be included in initial processing run due to file system synchronization
+- **Solution:** 
+  1. Rebuild data pipeline: `npm run build:data`
+  2. Restart development server: `npm run dev`
+  3. Verify episode is in enriched data
+- **Prevention:** Always rebuild data pipeline after creating new episode files
+
+**How do I troubleshoot episode processing issues?**
+- **Check Parser Support:** Ensure parser supports `type: episode` in supported types array
+- **Verify File Structure:** Use exact template structure with proper YAML frontmatter
+- **Check Image Field:** Ensure episode JSON metadata includes `image` field with valid filename
+- **Rebuild Pipeline:** Run `npm run build:data` to regenerate with proper episode processing
+- **Check Enriched Data:** Verify episode appears in `public/enriched-data.json`
+
+**What episode creation workflow should I follow?**
+1. **Create File:** Use exact template structure from episode template
+2. **Include Image Field:** Add `"image": "episode-filename.jpg"` to JSON metadata (CRITICAL)
+3. **Use S1Ex Prefix:** Use `"title": "S1Ex - Episode Title"` in JSON metadata (CRITICAL)
+4. **Rebuild Pipeline:** Run `npm run build:data` to process new episode
+5. **Restart Server:** Run `npm run dev` to pick up new episode data
+6. **Verify Appearance:** Check UI for new episode card with correct image and title
+
+---
+
 ### 🏆 Enhanced Filtering System (2025 Update)
 
 **What new filtering options are available?**
@@ -594,3 +655,18 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 - **For new anchor links:** No additional code needed - they automatically inherit smooth behavior
 - **For new programmatic scrolling:** Import the utility function and call it with the target element ID
 - **For custom scroll behavior:** The utility function can be extended or modified as needed
+
+---
+
+### 📏 Canonical Markdown Structure for All Types (2025 Update)
+
+**Q: Can I use a different markdown structure for episodes, foods, or other types?**
+- **A:** No. All entity types (character, episode, group, food, location, fauna, etc.) must use the exact same markdown structure for UI blocks (CARD VIEW and EXPANDED VIEW), with summary and expanded content in ```md code blocks. The parser is type-agnostic and does not allow special-case logic for any type. All new types must follow the canonical format. Any deviation is a build-breaking error.
+
+**Q: Can I add special-case logic to the scripts for a specific entity type?**
+- **A:** No. All scripts (`scripts/1-parse-markdown.mjs`, `scripts/2-enrich-data.mjs`, `scripts/lib/enrichRecord.mjs`) must use type-agnostic logic that works identically for all entity types. The 2025 January cleanup removed all special-case logic, and introducing type-specific handling is forbidden. All entity types must go through the same processing pipeline with no exceptions.
+
+**Q: What happens if I introduce special-case logic for a specific type?**
+- **A:** It will be caught by the Type-Agnostic Script Architecture quality gate during pre-commit validation. The build will fail, and the commit will be prevented. This ensures consistency and prevents future inconsistencies in data processing.
+
+---

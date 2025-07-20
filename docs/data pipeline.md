@@ -4,6 +4,20 @@ The project uses a robust, two-stage pipeline to transform raw markdown data int
 
 ---
 
+## 🚨 Canonical Markdown Structure Rule (2025 Update)
+
+**All entity types (character, episode, group, food, location, fauna, etc.) must use the exact same markdown structure for UI blocks.**
+- No special-case logic or exceptions are allowed in the parsing script for any type.
+- The parser expects the following canonical format for all types:
+  - YAML frontmatter with `type` field (e.g., `type: character`, `type: episode`)
+  - `## UI - CARD VIEW` section with a single ```md code block containing summary fields
+  - `## UI - EXPANDED VIEW` section with a single ```md code block containing detailed markdown
+- **No entity type may use a different structure.**
+- Any new types must follow this canonical structure exactly.
+- **Warning:** Introducing type-specific parsing logic is forbidden. All parsing and enrichment must be type-agnostic and use the same extraction logic for UI blocks.
+
+---
+
 ## 🚨 Non-Negotiable Tag Rule
 
 **All tags in markdown files must be single, underscore-joined words.**
@@ -54,13 +68,27 @@ are promoted to the top level and indexed alongside regular tags.
 - **Data Pipeline:** Locations go through the same enrichment process as other data types
 - **UI Integration:** Locations display with proper type labels and nation filtering
 
+### Episode Type Support (January 2025 Update)
+
+- **Parser Enhancement:** Updated `scripts/1-parse-markdown.mjs` to accept `type: episode`
+- **Issue Resolution:** Parser was only accepting `['character', 'group', 'food', 'location']` but episodes use `type: episode`
+- **Fix Applied:** Added `'episode'` to the supported types array: `['character', 'group', 'food', 'location', 'episode']`
+- **Result:** All episode files now parse correctly and appear in the UI
+- **Data Pipeline:** Episodes go through the same enrichment process as other data types
+- **UI Integration:** Episodes display with proper type labels and episode-specific metadata
+- **Episode Structure:** Episodes follow the canonical markdown structure with card view and expanded view sections
+- **Episode Metadata:** Includes book/season, episode number, air date, and narrative context
+- **Validation:** Episode files are validated against the same standards as other entity types
+- **Creation Process:** Episode creation requires data pipeline rebuild and development server restart
+
 ### Expanded View Processing (2025 Update)
 
 - **Format Requirement:** Expanded view content must be wrapped in ```md code blocks
-- **Parser Logic:** Extracts content between ```md and ``` markers
+- **Parser Logic:** Extracts content between ```md and ``` markers for all types, with no exceptions
 - **Validation:** Debug logging shows `[DEBUG] Found Expanded View block: true/false`
 - **Common Issues:** Double ```md blocks prevent content from being parsed correctly
 - **Fix Applied:** Removed duplicate ```md markers from all group files
+- **No Special Cases:** The parser does not and must not treat any type differently. All types are parsed identically.
 
 ### Expanded View Parsing Fix (2025 January Update)
 
@@ -98,6 +126,27 @@ are promoted to the top level and indexed alongside regular tags.
 - **Pattern:** `"image": "exact-filename.jpg"` must be included in food JSON metadata
 - **Syntax Fix:** Removed extra backticks that were preventing JSON blocks from being parsed correctly
 
+### Episode Image Field Validation (2025 January Update)
+
+- **Requirement:** All episode items must have an `image` field in their JSON metadata
+- **Common Issues:** Missing `image` field in episode markdown files, even when image files exist
+- **UI Impact:** Episodes without image fields show placeholder text ("WW", "WR") instead of images
+- **Validation:** Parser checks for required `image` field in episode items
+- **Fixes Applied:** Added missing `image` fields to winter-solstice-part-1-the-spirit-world and winter-solstice-part-2-avatar-roku
+- **Pattern:** `"image": "exact-filename.jpg"` must be included in episode JSON metadata
+- **Prevention:** Always include image field when creating new episode files
+
+### Episode Creation Workflow (2025 January Update)
+
+- **Process:** Episode creation requires specific workflow to ensure proper processing
+- **File Creation:** Use exact template structure from `raw-data/episodes/templates/episode_template.md`
+- **Image Field:** Always include `"image": "episode-filename.jpg"` in JSON metadata (CRITICAL)
+- **Data Pipeline:** Run `npm run build:data` after creating episode file
+- **Development Server:** Restart `npm run dev` to pick up new episode data
+- **Timing Issue:** Episode files may not be included in initial processing run due to file system synchronization
+- **Verification:** Check enriched data and UI to confirm episode appears correctly
+- **Prevention:** Always rebuild data pipeline after creating new episode files
+
 ### Food Data Processing (2025 Update)
 
 - **98 Food Items:** Complete food database with comprehensive categorization
@@ -117,12 +166,15 @@ are promoted to the top level and indexed alongside regular tags.
 - **NEW (2025):** Enhanced expanded view parsing with proper ```md block detection
 - **NEW (2025):** JSON syntax validation with error reporting
 - **NEW (January 2025):** Location type support for geographical data processing
+- **NEW (January 2025):** Episode type support for narrative content processing
+- **NEW (January 2025):** Flexible regex pattern for expanded view parsing with emoji support
 
 ### Stage 2: Enrich Data (`scripts/2-enrich-data.mjs`)
 - Promotes UI-critical fields (e.g., image, role, nation) to the top level of each record.
 - All other fields are placed in a `metadata` object.
 - Uses helper functions from `scripts/lib/enrichRecord.mjs` for record processing.
 - **NEW (2025):** Enhanced nation mapping and food category processing
+- **NEW (January 2025):** Type-agnostic processing for all entity types
 - **Output:** `public/enriched-data.json` (the only data file used by the frontend).
 
 ### Client-Side Indexing (In the Browser)
@@ -153,12 +205,15 @@ Before running `npm run build:data`, ensure:
 - [ ] Food items have proper nation affiliations
 - [ ] Food items are categorized into appropriate sub-filters
 - [ ] Location files use `type: location` in YAML frontmatter
+- [ ] Episode files include `image` field in JSON metadata (CRITICAL)
+- [ ] Episode image filenames match actual files in `public/assets/images/`
+- [ ] Episode creation workflow followed (create file → rebuild pipeline → restart server)
 
 ---
 
 ## 4. Canonical Templates & Schema
 
-See `docs/templates/character_template.md` for the full, up-to-date schema and required fields for all data types.
+See `docs/templates/character_template.md` for the full, up-to-date schema and required fields for all data types. All templates must use the same structure for UI blocks, regardless of type.
 
 ### New Template Types (2025 Update)
 
@@ -226,6 +281,7 @@ See `docs/templates/character_template.md` for the full, up-to-date schema and r
 - All search and filtering is performed client-side, in-browser, using FlexSearch.
 - The pipeline is strictly two-stage and robust, transparent, and easy to debug.
 - **NEW (2025):** Template exclusion, enhanced expanded view processing, image path validation, JSON syntax validation, food category processing, and nation integration.
+- **NEW (January 2025):** Episode type support, flexible regex parsing, image field validation, and type-agnostic script architecture.
 
 ## Performance Considerations
 
@@ -246,3 +302,50 @@ See `docs/templates/character_template.md` for the full, up-to-date schema and r
 - **Category Tagging:** Efficient tag-based filtering system
 - **Nation Integration:** Streamlined nation symbol display
 - **Multi-Select Performance:** Optimized for multiple category selection
+
+---
+
+## 7. Cached Data Management & Troubleshooting (2025 January Update)
+
+### Cached Data Issue Prevention
+- **Problem:** Deleted markdown files can leave cached data in `data/parsed-data.json` and `public/enriched-data.json`
+- **Solution:** Complete data pipeline rebuild
+- **Prevention:** Always run `npm run build:data` after deleting any markdown files
+
+### Script Cleanup & Type-Agnostic Architecture (2025 January Update)
+
+**Major Cleanup Completed:** All scripts have been cleaned to remove special-case logic and ensure type-agnostic processing.
+
+#### Cleanup Summary:
+- **`scripts/lib/enrichRecord.mjs`:** Removed all episode-specific handling, food-specific type checks, and special-case logic
+- **`scripts/1-parse-markdown.mjs`:** Already clean - uses unified regex for expanded view extraction
+- **All Scripts:** Now use type-agnostic logic that works identically for all entity types
+
+#### Removed Special-Case Logic:
+1. **Episode-Specific Handling:** Removed episode-specific name handling (`record.title || record.name`)
+2. **Episode-Specific Promotion:** Removed episode-specific expandedView promotion
+3. **Episode-Specific Debugging:** Removed episode-specific debug logging
+4. **Food-Specific Type Checks:** Removed food-specific region→nation mapping logic
+5. **Food-Specific Category Handling:** Removed food-specific category tag handling
+
+#### Type-Agnostic Architecture:
+- **Unified Name Handling:** All types use the same name extraction logic
+- **Unified Field Promotion:** All types use the same UI field promotion logic
+- **Unified Region Mapping:** Region→nation mapping works for any type with a region field
+- **Unified Category Handling:** Category tag handling works for any type with a category field
+- **Unified Parsing:** All types use the same markdown code block extraction logic
+
+#### Prevention Guidelines:
+- **No Special Cases:** Never introduce type-specific logic in any script
+- **Type-Agnostic Only:** All parsing and enrichment must work identically for all types
+- **Unified Logic:** Use the same extraction and processing logic for all entity types
+- **Canonical Structure:** All types must follow the exact same markdown structure
+- **Validation:** Any deviation from type-agnostic processing is a build-breaking error
+
+#### Enforcement:
+- **Build Validation:** Pre-commit hooks validate type-agnostic processing
+- **Code Review:** All script changes must maintain type-agnostic architecture
+- **Documentation:** This cleanup is documented to prevent regression
+- **Testing:** All entity types are tested with the same processing pipeline
+
+### Template Exclusion System (2025 Update)

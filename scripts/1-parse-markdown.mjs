@@ -59,7 +59,10 @@ async function parseMarkdownFile(filePath) {
 
     // --- Rich Character Parsing Logic ---
     const cardViewMatch = bodyContent.match(/## [^\n]*CARD VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/);
+    
+    // Unified expanded view extraction for all types
     const expandedViewMatch = bodyContent.match(/## [^\n]*EXPANDED VIEW[^\n]*[\s\S]*?```md\r?\n([\s\S]*?)```/);
+    
     const jsonMatches = [...bodyContent.matchAll(/```json\r?\n([\s\S]*?)```/g)];
 
     console.log(`[DEBUG]   Found Card View block: ${!!cardViewMatch}`);
@@ -102,11 +105,29 @@ async function parseMarkdownFile(filePath) {
       });
     }
 
-    const mergedData = Object.assign({}, cardViewData, ...jsonBlocks, {
-      expandedView: expandedViewMatch ? expandedViewMatch[1].trim() : '',
-      __type: frontmatter.type,
-    });
+    // --- FIX: Create a consistent and robust merging strategy ---
+    // The original implementation did not merge the frontmatter, relying on duplication in JSON blocks,
+    // which is error-prone. This new implementation uses the frontmatter as the base object, then
+    // allows the JSON blocks and card view data to override it. This ensures all data from the
+    // frontmatter is included and establishes a clear order of precedence, preventing inconsistencies.
+    const mergedData = Object.assign(
+      {},
+      frontmatter,      // 1. Base data from YAML frontmatter
+      ...jsonBlocks,    // 2. Override with data from any JSON blocks
+      cardViewData      // 3. Override with data from the card view
+    );
+    mergedData.__type = frontmatter.type; // Ensure the original type is preserved
+    mergedData.expandedView = expandedViewMatch ? expandedViewMatch[1].trim() : (mergedData.expandedView || '');
+    // --- END FIX ---
 
+    // --- PATCH: For episodes and characters, force title from JSON metadata if present ---
+    if (mergedData.type === 'episode' || mergedData.type === 'character') {
+      // Find the first JSON block with a 'title' field
+      const jsonTitle = jsonBlocks.find(b => b.title)?.title;
+      if (jsonTitle) mergedData.title = jsonTitle;
+    }
+    // --- END PATCH ---
+    
     // --- FIX: FLATTEN NESTED METADATA ---
     // This ensures a consistent, flat structure for all character records.
     // The client-side search hook expects this consistency.

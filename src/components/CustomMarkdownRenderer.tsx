@@ -17,7 +17,46 @@ const icons = {
   notable: <FaStar className="inline-block align-middle text-yellow-400 mr-2" size={18} />
 };
 
+// Function to filter out credits and metadata sections
+function filterMarkdownContent(markdown: string): string {
+  if (!markdown) return '';
+  
+  // Split the content into lines
+  const lines = markdown.split('\n');
+  const filteredLines: string[] = [];
+  let skipSection = false;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Check if this line starts a section we want to skip
+    if (line.match(/^##\s*(credits|metadata|sources|references)/i)) {
+      skipSection = true;
+      continue;
+    }
+    
+    // If we're in a section to skip, check if we've reached the next section
+    if (skipSection) {
+      if (line.match(/^##\s+/)) {
+        // We've reached the next section, stop skipping
+        skipSection = false;
+        filteredLines.push(line);
+      }
+      // Otherwise, continue skipping this line
+      continue;
+    }
+    
+    // Add the line if we're not skipping
+    filteredLines.push(line);
+  }
+  
+  return filteredLines.join('\n');
+}
+
 export function CustomMarkdownRenderer({ markdown }: CustomMarkdownRendererProps) {
+  // Filter out credits and metadata sections
+  const filteredMarkdown = useMemo(() => filterMarkdownContent(markdown), [markdown]);
+  
   // Memoize the components object to prevent recreation on every render
   const components = useMemo<Components>(() => ({
     h3: ({ children, ...props }) => {
@@ -59,6 +98,6 @@ export function CustomMarkdownRenderer({ markdown }: CustomMarkdownRendererProps
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={components}
-    >{markdown}</ReactMarkdown>
+    >{filteredMarkdown}</ReactMarkdown>
   );
 }

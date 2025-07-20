@@ -14,11 +14,15 @@ The NASA-level automation system has been successfully implemented and tested. A
 - ✅ **Tailwind CSS Build** - Working
 - ✅ **Data Pipeline Build** - Working
 - ✅ **Orphaned Files Check** - Working
+- ✅ **Cached Data Validation** - Working (2025 January Update)
+- ✅ **Type-Agnostic Script Architecture** - Working (2025 January Update)
 - ✅ **Commit Message Validation** - Working
 - ✅ **Food Data Processing** - Working (98 items)
 - ✅ **Character Data Processing** - Working (67 items)
 - ✅ **Group Data Processing** - Working (~10+ items)
 - ✅ **Location Data Processing** - Working (4 Air Temples)
+- ✅ **Episode Data Processing** - Working (Type-agnostic episode parsing and enrichment)
+- ✅ **Episode Creation Workflow** - Working (Create file → rebuild pipeline → restart server)
 - ✅ **Collections System** - Working (Enhanced 2025)
 - ✅ **Enhanced UI Components** - Working (Matrix-themed styling)
 - ✅ **Popover Positioning** - Working (Fixed positioning system)
@@ -37,6 +41,8 @@ The NASA-level automation system has been successfully implemented and tested. A
 - ✅ **Header Component** - Working (Matrix Rain toggle and back-to-top button)
 - ✅ **Scroll Management** - Working (Smart visibility and smooth scrolling)
 - ✅ **Matrix Rain Toggle** - Working (Conditional rendering and performance optimization)
+- ✅ **Episode Title Parsing** - Working (Flexible regex with emoji support)
+- ✅ **Episode Image Field Validation** - Working (Prevents placeholder text display)
 
 ## 🔧 Automation Components
 
@@ -62,6 +68,9 @@ npm run build:data
 
 # 6. Orphaned Files Check (Non-Negotiable Rule)
 node -e "/* Complex orphaned file detection */"
+
+# 7. Cached Data Validation (2025 January Update)
+npm run validate:cached-data
 ```
 
 ### 2. Commit Message Validation
@@ -108,6 +117,44 @@ Automatically formats and checks staged files:
 
 ## 🎯 Quality Gates Breakdown
 
+### Canonical Structure Enforcement (2025 Update)
+- **Purpose:** Ensures all entity types use the same markdown structure for UI blocks (CARD VIEW and EXPANDED VIEW)
+- **Checks:** Parser is type-agnostic; no special-case logic for any type is allowed
+- **Failure:** Any deviation from the canonical format is a build-breaking error
+- **Prevention:** All new types must follow the canonical format; any exception is forbidden
+
+### Gate 8: Type-Agnostic Script Architecture (2025 January Update)
+- **Purpose:** Ensures all scripts use unified logic that works identically for all entity types
+- **Checks:** No type-specific handling in parsing, enrichment, or validation scripts
+- **Failure:** Prevents commits with special-case logic that could cause inconsistencies
+- **Command:** Manual review of `scripts/1-parse-markdown.mjs`, `scripts/2-enrich-data.mjs`, `scripts/lib/enrichRecord.mjs`
+- **Logic:** All entity types must go through the same processing pipeline with no exceptions
+- **Prevention:** Enforces type-agnostic architecture to prevent future special-case logic
+
+### Gate 9: Episode Processing Validation (2025 January Update)
+- **Purpose:** Ensures episode files are properly processed and integrated into the data pipeline
+- **Checks:** Episode files use `type: episode` in YAML frontmatter and follow canonical structure
+- **Failure:** Prevents commits with episode files that don't parse correctly
+- **Command:** `npm run validate:data` and manual verification of episode processing
+- **Logic:** Episodes must go through the same type-agnostic processing as all other entity types
+- **Prevention:** Ensures episode files are created with correct structure and processed without special-case logic
+
+### Gate 10: Episode Title Parsing Validation (2025 January Update)
+- **Purpose:** Ensures episode titles parse correctly regardless of emoji presence in headers
+- **Checks:** Flexible regex pattern handles headers with and without emojis
+- **Failure:** Prevents commits with episode files that don't parse expanded view content
+- **Command:** Manual verification of episode title parsing in enriched data
+- **Logic:** All episode expanded view content must be extracted correctly
+- **Prevention:** Ensures episode files use proper header format and content structure
+
+### Gate 11: Episode Image Field Validation (2025 January Update)
+- **Purpose:** Ensures episode files include required image fields to prevent placeholder text display
+- **Checks:** All episode JSON metadata must include `image` field with valid filename
+- **Failure:** Prevents commits with episode files that show placeholder text instead of images
+- **Command:** Manual verification of episode image fields in enriched data
+- **Logic:** Episode image filenames must match actual files in `public/assets/images/`
+- **Prevention:** Ensures episode files always include image field when created
+
 ### Gate 1: Data Pipeline Validation
 - **Purpose:** Ensures raw data integrity
 - **Checks:** JSON schema validation, required fields, image references
@@ -143,6 +190,14 @@ Automatically formats and checks staged files:
 - **Checks:** All source files are imported somewhere
 - **Failure:** Prevents commits with orphaned files
 - **Logic:** Complex Node.js script that scans imports
+
+### Gate 7: Cached Data Validation (2025 January Update)
+- **Purpose:** Prevents orphaned data from deleted files
+- **Checks:** Verifies processed data matches filesystem state
+- **Failure:** Prevents commits with cached data inconsistencies
+- **Command:** `npm run validate:cached-data`
+- **Logic:** Compares file counts and checks for orphaned entries
+- **Prevention:** Ensures data pipeline always reflects current filesystem state
 
 ## 🔍 Orphaned Files Detection
 
@@ -228,6 +283,8 @@ Added to `package.json`:
 - **UI Enhancement:** Perfect DOS font, React icons, color coding, and 100% opaque elements
 - **Header Integration:** Matrix Rain toggle and back-to-top button with smart visibility
 - **Scroll Management:** Intelligent scroll detection and smooth scrolling functionality
+- **Episode Processing:** Type-agnostic episode parsing with flexible regex support
+- **Image Validation:** Comprehensive image field validation for all entity types
 
 ## 🚨 Troubleshooting
 
@@ -241,6 +298,7 @@ npm run type-check
 npm run lint
 npm run build:tailwind:once
 npm run build:data
+npm run validate:cached-data
 ```
 
 **"Orphaned files detected"**
@@ -248,10 +306,25 @@ npm run build:data
 - Move it to an excluded directory (docs/, tests/, etc.)
 - Delete it if no longer needed
 
+**"Cached data validation failed"**
+- Delete cached data files: `rm data/parsed-data.json public/enriched-data.json`
+- Rebuild data pipeline: `npm run build:data`
+- Verify file counts match between filesystem and processed data
+
 **"Commit message format invalid"**
 - Use conventional commit format
 - Keep message under 50 characters
 - Include type prefix (feat:, fix:, docs:, etc.)
+
+**"Episode title parsing failed"**
+- Ensure episode files use proper header format
+- Check for emoji presence in section headers
+- Verify expanded view content is wrapped in ```md blocks
+
+**"Episode image field missing"**
+- Add `image` field to episode JSON metadata
+- Ensure image filename matches actual file in `public/assets/images/`
+- Rebuild data pipeline after adding image field
 
 ### Bypassing Hooks (Emergency Only)
 ```bash
@@ -272,6 +345,7 @@ The automation system ensures:
 - ✅ **Style Consistency** - Uniform code formatting
 - ✅ **Data Integrity** - Valid data pipeline
 - ✅ **Architecture Compliance** - No orphaned files
+- ✅ **Cached Data Prevention** - No orphaned data from deleted files (2025 January Update)
 - ✅ **Performance Optimization** - Memoized filtering and optimized components
 - ✅ **Code Organization** - Clean separation of concerns
 - ✅ **Clear Error Messages** - Specific guidance for fixes
@@ -279,6 +353,8 @@ The automation system ensures:
 - ✅ **Smart Filtering** - Clear All Filters button with conditional visibility
 - ✅ **Header Features** - Matrix Rain toggle and back-to-top button with smart visibility
 - ✅ **Scroll Management** - Intelligent scroll detection and smooth scrolling
+- ✅ **Episode Processing** - Type-agnostic episode parsing with flexible regex support
+- ✅ **Image Validation** - Comprehensive image field validation for all entity types
 
 ## 🏆 NASA-Level Achievement
 
@@ -295,6 +371,7 @@ This automation system has achieved **NASA engineering standards**:
 - **UI Enhancement:** Perfect DOS font integration, React icons with color coding, and 100% opaque elements for maximum readability
 - **Header Integration:** Matrix Rain toggle and back-to-top button with smart visibility and smooth scrolling
 - **Scroll Management:** Intelligent scroll detection and smooth scrolling functionality
+- **Episode Processing:** Type-agnostic episode parsing with flexible regex support and comprehensive image validation
 
 ## 🔗 Related Documentation
 

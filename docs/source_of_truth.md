@@ -71,6 +71,9 @@ The system now supports multiple data types beyond characters:
 - **Location:** `raw-data/episodes/`
 - **Template:** `raw-data/episodes/templates/episode_template.md`
 - **Features:** Narrative data with plot points, character focus, and thematic analysis
+- **Episode Creation Workflow:** Create file → rebuild pipeline → restart server (January 2025 Update)
+- **Image Field Validation:** Required image field validation to prevent placeholder text display (January 2025 Update)
+- **Title Parsing:** Flexible regex with emoji support for expanded view headers (January 2025 Update)
 
 ---
 
@@ -105,6 +108,44 @@ The system now supports multiple data types beyond characters:
 - **Pattern:** `"image": "exact-filename.jpg"` must be included in food JSON metadata
 - **Syntax Fix:** Removed extra backticks that were preventing JSON blocks from being parsed correctly
 
+### Episode Image Field Validation (2025 January Update)
+- **Requirement:** All episode items must have an `image` field in their JSON metadata
+- **Common Issues:** Missing `image` field in episode markdown files, even when image files exist
+- **UI Impact:** Episodes without image fields show placeholder text ("WW", "WR") instead of images
+- **Validation:** Parser checks for required `image` field in episode items
+- **Fixes Applied:** Added missing `image` fields to winter-solstice-part-1-the-spirit-world and winter-solstice-part-2-avatar-roku
+- **Pattern:** `"image": "exact-filename.jpg"` must be included in episode JSON metadata
+- **Prevention:** Always include image field when creating new episode files
+
+### Episode Title Parsing (2025 January Update)
+- **Flexible Regex:** Parser uses flexible regex pattern that handles emoji presence in headers
+- **Emoji Support:** Headers like `## 📖 UI - EXPANDED VIEW` parse correctly
+- **Header Variations:** All header variations are supported by the flexible regex pattern
+- **Content Extraction:** Expanded view content is extracted correctly regardless of emoji presence
+- **Original Issue:** Parser regex pattern was too strict and failed to match section headers with emojis
+- **Solution:** Updated regex to be more flexible and handle emoji-containing headers
+- **Result:** All episode expanded view content now parses correctly
+
+### Episode Creation Workflow (2025 January Update)
+- **Process:** Episode creation requires specific workflow to ensure proper processing
+- **File Creation:** Use exact template structure from `raw-data/episodes/templates/episode_template.md`
+- **Image Field:** Always include `"image": "episode-filename.jpg"` in JSON metadata (CRITICAL)
+- **Data Pipeline:** Run `npm run build:data` after creating episode file
+- **Development Server:** Restart `npm run dev` to pick up new episode data
+- **Timing Issue:** Episode files may not be included in initial processing run due to file system synchronization
+- **Verification:** Check enriched data and UI to confirm episode appears correctly
+- **Prevention:** Always rebuild data pipeline after creating new episode files
+
+### Type-Agnostic Script Architecture (2025 January Update)
+- **Major Cleanup:** All scripts cleaned to remove special-case logic and ensure type-agnostic processing
+- **Unified Processing:** All entity types use the same parsing and enrichment pipeline
+- **Canonical Structure:** All types must follow the exact same markdown structure
+- **Prevention:** Any deviation from type-agnostic processing is a build-breaking error
+- **Enforcement:** Pre-commit hooks validate type-agnostic processing
+- **Code Review:** All script changes must maintain type-agnostic architecture
+- **Documentation:** Cleanup documented to prevent regression
+- **Testing:** All entity types tested with the same processing pipeline
+
 ### Image Fallback System (January 2025 Update)
 - **Component:** `src/components/ItemCard/imageFallbacks.ts`
 - **Purpose:** Handles cases where image filenames don't match data slugs
@@ -127,6 +168,18 @@ The system now supports multiple data types beyond characters:
 - **Result:** All 4 Air Temple locations now parse correctly and appear in the UI
 - **Data Pipeline:** Locations go through the same enrichment process as other data types
 - **UI Integration:** Locations display with proper type labels and nation filtering
+
+### Episode Type Support (January 2025 Update)
+- **Parser Enhancement:** Updated `scripts/1-parse-markdown.mjs` to accept `type: episode`
+- **Issue Resolution:** Parser was only accepting `['character', 'group', 'food', 'location']` but episodes use `type: episode`
+- **Fix Applied:** Added `'episode'` to the supported types array: `['character', 'group', 'food', 'location', 'episode']`
+- **Result:** All episode files now parse correctly and appear in the UI
+- **Data Pipeline:** Episodes go through the same enrichment process as other data types
+- **UI Integration:** Episodes display with proper type labels and episode-specific metadata
+- **Episode Structure:** Episodes follow the canonical markdown structure with card view and expanded view sections
+- **Episode Metadata:** Includes book/season, episode number, air date, and narrative context
+- **Validation:** Episode files are validated against the same standards as other entity types
+- **Creation Process:** Episode creation requires data pipeline rebuild and development server restart
 
 ---
 

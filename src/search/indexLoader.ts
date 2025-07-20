@@ -69,7 +69,13 @@ export async function loadIndex(): Promise<{ index: FlexSearch.Document<Enriched
           store: true,
         }
       });
-      recordMap = new Map(Object.entries(data.records));
+      const recordsArray: EnrichedRecord[] = Array.isArray(data.records)
+        ? data.records
+        : Object.values(data.records);
+
+      // FIX: Use slug as the key to ensure proper deduplication
+      // This prevents duplicate records with identical slugs from coexisting in the map
+      recordMap = new Map(recordsArray.map(record => [record.slug, record]));
       for (const record of recordMap.values()) {
         index.add(buildIndexableRecord(record) as EnrichedRecord);
       }

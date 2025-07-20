@@ -375,6 +375,92 @@ graph TD
     style K fill:#c8e6c9
 ```
 
+### Episode Processing Flow (January 2025 Update)
+```mermaid
+graph TD
+    A[Episode Markdown File] --> B[YAML Frontmatter: type: episode]
+    B --> C[Canonical Structure Validation]
+    C --> D[Card View Section]
+    D --> E[Expanded View Section]
+    E --> F[Backend Metadata Section]
+    
+    F --> G[Type-Agnostic Parser]
+    G --> H[Episode Data Extraction]
+    H --> I[Enrichment Process]
+    I --> J[Episode Integration]
+    J --> K[UI Display]
+    
+    L[Episode Metadata] --> M[Book/Season Field]
+    L --> N[Episode Number Field]
+    L --> O[Air Date Field]
+    L --> P[Narrative Context]
+    
+    Q[Episode Creation] --> R[Create File with Template]
+    R --> S[Include Image Field]
+    S --> T[Rebuild Data Pipeline]
+    T --> U[Restart Development Server]
+    U --> V[Verify Episode Appears]
+    
+    style A fill:#e3f2fd
+    style G fill:#c8e6c9
+    style J fill:#f3e5f5
+    style K fill:#ffebee
+    style Q fill:#fff3e0
+    style V fill:#c8e6c9
+```
+
+### Episode Title Parsing Flow (January 2025 Update)
+```mermaid
+graph TD
+    A[Episode Markdown File] --> B[Flexible Regex Pattern]
+    B --> C[Header Detection]
+    C --> D{Emoji Present?}
+    D -->|Yes| E[Parse with Emoji]
+    D -->|No| F[Parse without Emoji]
+    E --> G[Extract Expanded View]
+    F --> G
+    G --> H[Content Processing]
+    H --> I[UI Display]
+    
+    J[Original Regex] --> K[Too Strict Pattern]
+    K --> L[Failed to Match Emoji Headers]
+    L --> M[Updated Regex]
+    M --> N[Flexible Pattern]
+    N --> O[Handles All Header Types]
+    
+    style A fill:#e3f2fd
+    style B fill:#c8e6c9
+    style G fill:#f3e5f5
+    style I fill:#ffebee
+    style M fill:#fff3e0
+    style O fill:#c8e6c9
+```
+
+### Episode Image Field Validation Flow (January 2025 Update)
+```mermaid
+graph TD
+    A[Episode JSON Metadata] --> B[Image Field Check]
+    B --> C{Image Field Present?}
+    C -->|Yes| D[Validate Filename]
+    C -->|No| E[Show Placeholder Text]
+    D --> F{Filename Matches?}
+    F -->|Yes| G[Display Episode Image]
+    F -->|No| H[Show Fallback Image]
+    E --> I[Display "WW" or "WR"]
+    
+    J[Image Field Validation] --> K[Required Field Check]
+    K --> L[Filename Validation]
+    L --> M[File Existence Check]
+    M --> N[UI Display Logic]
+    
+    style A fill:#e3f2fd
+    style B fill:#c8e6c9
+    style G fill:#f3e5f5
+    style I fill:#ffebee
+    style J fill:#fff3e0
+    style N fill:#c8e6c9
+```
+
 ## 🎯 Key Data Transformations
 
 ### Raw Markdown → Enriched JSON
@@ -385,6 +471,8 @@ graph TD
 5. **Search Aliases** → Generated from content
 6. **Badge System** → Extracted from card view section
 7. **Nation Fields** → Promoted to top level for filtering
+8. **Episode Title Parsing** → Flexible regex with emoji support
+9. **Episode Image Validation** → Required image field validation
 
 ### Enriched JSON → UI Components
 1. **Type Classification** → Component selection
@@ -399,6 +487,8 @@ graph TD
 10. **Badge Display** → Dynamic badge rendering from metadata
 11. **Nation Filtering** → All entities filterable by nation
 12. **Fauna Subfilter Mapping** → Enhanced tag mapping with metadata-based categorization
+13. **Episode Processing** → Type-agnostic episode parsing with flexible regex support
+14. **Image Field Validation** → Comprehensive image field validation for all entity types
 
 ## 📊 Data Volume Metrics
 
@@ -411,8 +501,12 @@ graph TD
 - **Food Items:** 98 items
 - **Character Items:** 67 items
 - **Group Items:** ~10+ items
+- **Episode Items:** 2+ items (January 2025 Update)
+- **Episode Creation Workflow:** Create file → rebuild pipeline → restart server (January 2025 Update)
 - **Badge System:** Dynamic badges for all character types
 - **Nation Fields:** All entities have nation fields for filtering
+- **Episode Title Parsing:** Flexible regex with emoji support (January 2025 Update)
+- **Episode Image Validation:** Required image field validation (January 2025 Update)
 
 ## 🎨 UI Enhancement Flow (January 2025 Update)
 
@@ -493,6 +587,40 @@ graph TD
     style A fill:#e3f2fd
     style E fill:#c8e6c9
     style I fill:#f3e5f5
+```
+
+### Episode Processing Flow (January 2025 Update)
+```mermaid
+graph TD
+    A[Episode Markdown File] --> B[YAML Frontmatter: type: episode]
+    B --> C[Canonical Structure Validation]
+    C --> D[Card View Section]
+    D --> E[Expanded View Section]
+    E --> F[Backend Metadata Section]
+    
+    F --> G[Type-Agnostic Parser]
+    G --> H[Episode Data Extraction]
+    H --> I[Enrichment Process]
+    I --> J[Episode Integration]
+    J --> K[UI Display]
+    
+    L[Episode Metadata] --> M[Book/Season Field]
+    L --> N[Episode Number Field]
+    L --> O[Air Date Field]
+    L --> P[Narrative Context]
+    
+    Q[Episode Creation] --> R[Create File with Template]
+    R --> S[Include Image Field]
+    S --> T[Rebuild Data Pipeline]
+    T --> U[Restart Development Server]
+    U --> V[Verify Episode Appears]
+    
+    style A fill:#e3f2fd
+    style G fill:#c8e6c9
+    style J fill:#f3e5f5
+    style K fill:#ffebee
+    style Q fill:#fff3e0
+    style V fill:#c8e6c9
 ```
 
 ## 🔗 Related Documentation
