@@ -41,6 +41,7 @@ The creation of Sky Bison Biscuits represents one of the most innovative approac
   "id": "sky-bison-biscuits",
   "name": "Sky Bison Biscuits",
   "type": "food",
+  "image": "sky-bison-biscuits.jpg",
   "region": "air_nomads",
   "category": "cookies_biscuits",
   "subcategory": "cracker",

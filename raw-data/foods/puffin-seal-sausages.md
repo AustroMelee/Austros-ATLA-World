@@ -2,6 +2,46 @@
 type: food
 ---
 
+```json
+{
+  "id": "puffin-seal-sausages",
+  "name": "Puffin-Seal Sausages",
+  "slug": "puffin-seal-sausages",
+  "type": "food",
+  "description": "Sausages made from puffin and seal meat, representing the Water Tribe's resourceful use of polar animals and their mastery of meat preservation techniques.",
+  "region": "water_tribe",
+  "image": "puffin-seal-sausages.jpg",
+  "aliases": [
+    "puffin sausage",
+    "seal sausage",
+    "water tribe sausage"
+  ],
+  "sources": [
+    "Avatar: The Last Airbender"
+  ],
+  "tags": [
+    "water_tribe",
+    "polar_animals",
+    "sausage",
+    "preserved_meat",
+    "traditional",
+    "roasted_grilled_meats"
+  ],
+  "searchAliases": [
+    "puffin sausage",
+    "seal sausage",
+    "water tribe sausage",
+    "traditional sausage"
+  ],
+  "expandedView": "### Overview\nPuffin-Seal Sausages are a traditional Water Tribe dish that demonstrates the tribe's exceptional skill in utilizing all available resources from their polar environment. These sausages combine the meat of puffins and seals, two animals that are abundant in the polar regions, creating a protein-rich food that can be preserved for long periods. The dish represents the Water Tribe's practical wisdom and their deep understanding of how to survive and thrive in one of the world's harshest environments.\n\n### Notable Uses\n- Served as a staple protein source in Water Tribe communities\n- Consumed during long hunting expeditions and winter months\n- Offered to visitors as a traditional Water Tribe delicacy\n- Part of ceremonial feasts and celebrations\n- Used as emergency food supplies during harsh weather\n\n### Cultural Significance\nPuffin-Seal Sausages embody the Water Tribe's philosophy of resourcefulness and their respect for the animals that share their environment. The combination of puffin and seal meat reflects their understanding that different animals provide different nutritional benefits and that combining them creates a more complete and satisfying meal. The dish represents their belief in using every part of the animals they hunt and their commitment to sustainable hunting practices.\n\n### Preparation Methods\n- Puffin and seal meat are carefully prepared and ground\n- Mixed with traditional seasonings and preservatives\n- Stuffed into natural casings or traditional containers\n- Cured using time-tested Water Tribe methods\n- Often smoked for additional preservation and flavor\n\n### Historical Context\nThe development of Puffin-Seal Sausages represents the Water Tribe's centuries of experience in adapting to the polar environment. This dish demonstrates their mastery of food preservation techniques and their understanding of how to create satisfying, nutritious meals from the resources available in their harsh climate. The tradition continues to be passed down through generations as a testament to the tribe's resilience and practical wisdom.",
+  "category": "roasted_grilled_meats",
+  "categories": [
+    "roasted_grilled_meats"
+  ],
+  "foodType": "Roasted & Grilled Meats"
+}
+```
+
 # 🌊 Puffin-Seal Sausages
 
 ## 🎴 UI - CARD VIEW
@@ -41,6 +81,7 @@ The development of Puffin-Seal Sausages represents the Water Tribe's centuries o
   "id": "puffin-seal-sausages",
   "name": "Puffin-Seal Sausages",
   "type": "food",
+  "image": "puffin-seal-sausages.jpg",
   "region": "water_tribe",
   "category": "roasted_grilled_meats",
   "subcategory": "sausage",

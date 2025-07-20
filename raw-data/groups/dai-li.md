@@ -65,6 +65,7 @@ The Dai Li serve as primary antagonists during the Ba Sing Se arc. They are the 
   "type": "group",
   "description": "The Dai Li is the elite secret police force of Ba Sing Se who work to capture, interrogate, and imprison political dissidents. Founded by Avatar Kyoshi, they became corrupt over time, serving the interests of Grand Secretariat Long Feng and briefly Princess Azula.",
   "groupType": "secret_society",
+  "nation": "Earth Kingdom",
   "affiliation": "Earth Kingdom",
   "ideology": "Cultural preservation (originally), Authoritarianism, Political control",
   "baseOfOperations": "Ba Sing Se, Lake Laogai (formerly)",

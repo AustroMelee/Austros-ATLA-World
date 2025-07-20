@@ -59,11 +59,11 @@ Air Nomad Style Tea has been a cornerstone of Air Nomad beverage culture for gen
   "id": "air-nomad-style-tea",
   "name": "Air Nomad Style Tea",
   "type": "food",
+  "image": "air-nomad-style-tea.jpg",
   "category": "beverage",
   "region": "Air Nomads",
   "description": "A traditional tea preparation method unique to the Air Nomads, representing their minimal approach to beverage making."
 }
-```
 
 ## 🍽️ Culinary Profile & Characteristics
 

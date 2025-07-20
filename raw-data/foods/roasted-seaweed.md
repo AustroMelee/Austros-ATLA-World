@@ -41,6 +41,7 @@ Roasted Seaweed has been a staple of Air Nomad cuisine for generations, develope
   "id": "roasted-seaweed",
   "name": "Roasted Seaweed",
   "type": "food",
+  "image": "roasted-seaweed.jpg",
   "region": "air_nomads",
   "category": "vegetarian_dishes",
   "subcategory": "seaweed_snack",

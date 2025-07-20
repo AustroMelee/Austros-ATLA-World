@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import type { EnrichedEntity } from '../../search/types';
 import ThemedCard from '../ThemedCard/ThemedCard';
 import NationIcon from '../NationIcon/NationIcon';
@@ -26,8 +26,16 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
   });
 
   // Get nation color for title
-  const nationKey = nation ? nation.toLowerCase() : 'default';
+  const nationKey = nation || 'default';
   const titleColor = nationThemeMap[nationKey]?.main || nationThemeMap.default.main;
+
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (titleRef.current) {
+      titleRef.current.style.setProperty('color', titleColor, 'important');
+    }
+  }, [titleColor]);
 
   // Lock scroll when modal is open
   useScrollLock(true);
@@ -69,13 +77,16 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 bg-neutral-800 text-white rounded-full p-2 hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-white"
+          className="absolute top-4 right-8 z-20 bg-neutral-800 text-white rounded-full p-2 hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-white"
           aria-label="Close expanded card"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
         <ThemedCard nation={nation}>
-          <div className="h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent">
+          <div 
+            className="h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent"
+            style={{ '--modal-title-color': titleColor } as React.CSSProperties}
+          >
             <div className="flex flex-col p-4 md:p-6 crt-screen">
               <div className="w-full mb-4">
                 {status === 'error' || !imgSrc ? (
@@ -95,14 +106,15 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
               </div>
               <div className="w-full">
                 <h2 
+                  ref={titleRef}
                   className="text-3xl font-bold text-center md:text-left"
-                  style={{ color: titleColor }}
                 >
                   {toTitleCase(item.name)}
-                  {nation && <NationIcon nation={nation} size={20} className="align-middle flex-shrink-0 ml-2" />}
+                  {nation && <NationIcon nation={nation} size={24} className="align-middle flex-shrink-0 ml-2" />}
                 </h2>
                 {role && <p className="text-lg text-neutral-400 mb-4 text-center md:text-left font-bold">{role}</p>}
                 <hr className="border-gray-700 my-4" />
+                {/* Only markdown is inside prose */}
                 <div className="prose prose-invert max-w-none">
                   <CustomMarkdownRenderer markdown={getField(item, 'expandedView') || ''} />
                 </div>

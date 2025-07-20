@@ -79,6 +79,16 @@ are promoted to the top level and indexed alongside regular tags.
 - **Fixes Applied:** Removed trailing commas from all group files
 - **Pattern:** No trailing commas in arrays `["item1", "item2"]` or objects `{"key": "value"}`
 
+### Image Field Validation (2025 January Update)
+
+- **Requirement:** All food items must have an `image` field in their JSON metadata
+- **Common Issues:** Missing `image` field in food markdown files, even when image files exist
+- **Validation:** Parser checks for required `image` field in food items
+- **Syntax Errors:** Extra backticks in markdown files can prevent JSON parsing
+- **Fixes Applied:** Added missing `image` fields to freeze-dried-cucumberquats, fried-fish-balls, and fried-foods-on-sticks
+- **Pattern:** `"image": "exact-filename.jpg"` must be included in food JSON metadata
+- **Syntax Fix:** Removed extra backticks that were preventing JSON blocks from being parsed correctly
+
 ### Food Data Processing (2025 Update)
 
 - **98 Food Items:** Complete food database with comprehensive categorization

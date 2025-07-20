@@ -51,6 +51,7 @@ The tradition of Two-Headed Fish Soup has been a specialty of Southern Water Tri
   "name": "Two-Headed Fish Soup",
   "type": "food",
   "id": "two-headed-fish-soup",
+  "image": "Two-headed-Fish-Soup.jpg",
   "region": "water_tribe",
   "category": "soups_stews",
   "subcategory": "soup",

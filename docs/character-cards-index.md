@@ -2,427 +2,201 @@
 
 ## Overview
 
-This document provides a complete index of all character cards in the Austros ATLA World encyclopedia. Each character is numbered and categorized for easy reference.
-
-**Total Characters:** 67
-
----
-
-## 📋 Complete Character List (Alphabetical)
-
-### 1. aang.md
-**Category:** Main Character  
-**Nation:** Air Nation  
-**Role:** Avatar, Protagonist  
-
-### 2. appa.md
-**Category:** Animal  
-**Nation:** Air Nation  
-**Species:** Sky Bison  
-
-### 3. arnook.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Chief of Northern Water Tribe  
-
-### 4. aunt-wu.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Fortune Teller  
-
-### 5. azula.md
-**Category:** Main Character  
-**Nation:** Fire Nation  
-**Role:** Antagonist, Princess  
-
-### 6. azulon.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Fire Lord (Former)  
-
-### 7. bosco.md
-**Category:** Animal  
-**Nation:** Earth Kingdom  
-**Species:** Bear  
-
-### 8. boulder.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Earthbender, Fighter  
-
-### 9. bumi.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** King of Omashu  
-
-### 10. cabbage_merchant.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Merchant  
-
-### 11. combustion-man.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Assassin  
-
-### 12. fire nation man.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Citizen  
-
-### 13. fong.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** General  
-
-### 14. gyatso.md
-**Category:** Supporting Character  
-**Nation:** Air Nation  
-**Role:** Monk, Aang's Mentor  
-
-### 15. hahn.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Warrior  
-
-### 16. hakoda.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Chief of Southern Water Tribe  
-
-### 17. hama.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Bloodbender  
-
-### 18. haru.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Earthbender  
-
-### 19. headhunter.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Bounty Hunter  
-
-### 20. hide.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Freedom Fighter  
-
-### 21. iroh.md
-**Category:** Main Character  
-**Nation:** Fire Nation  
-**Role:** Prince, Mentor  
-
-### 22. jeong jeong.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Firebender, Deserter  
-
-### 23. jet.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Freedom Fighter  
-
-### 24. jin.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Citizen  
-
-### 25. joo dee.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Ba Sing Se Official  
-
-### 26. june.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Bounty Hunter  
-
-### 27. kanna.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Elder, Katara's Grandmother  
-
-### 28. katara.md
-**Category:** Main Character  
-**Nation:** Water Nation  
-**Role:** Protagonist, Waterbender  
-
-### 29. kuei.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Earth King  
-
-### 30. kuruk.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Avatar (Former)  
-
-### 31. kya.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Katara's Mother  
-
-### 32. kyoshi.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Avatar (Former)  
-
-### 33. lao.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Toph's Father  
-
-### 34. lo and li.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Azula's Attendants  
-
-### 35. long feng.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Grand Secretariat  
-
-### 36. longshot.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Freedom Fighter  
-
-### 37. mai.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Azula's Ally  
-
-### 38. meng.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Citizen  
-
-### 39. michi.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Teacher  
-
-### 40. ming.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Citizen  
-
-### 41. momo.md
-**Category:** Animal  
-**Nation:** Air Nation  
-**Species:** Lemur  
-
-### 42. monk-gyatso.md
-**Category:** Supporting Character  
-**Nation:** Air Nation  
-**Role:** Monk, Aang's Mentor  
-
-### 43. on ji.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Student  
-
-### 44. ozai.md
-**Category:** Main Character  
-**Nation:** Fire Nation  
-**Role:** Antagonist, Fire Lord  
-
-### 45. pakku.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Waterbending Master  
-
-### 46. pathik.md
-**Category:** Supporting Character  
-**Nation:** Air Nation  
-**Role:** Guru  
-
-### 47. piandao.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Sword Master  
-
-### 48. pipsqueak.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Freedom Fighter  
-
-### 49. poppy-beifong.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Toph's Mother  
-
-### 50. roku.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Avatar (Former)  
-
-### 51. smellerbee.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Freedom Fighter  
-
-### 52. sokka.md
-**Category:** Main Character  
-**Nation:** Water Nation  
-**Role:** Protagonist, Warrior  
-
-### 53. sozin.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Fire Lord (Former)  
-
-### 54. suki.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Kyoshi Warrior  
-
-### 55. the big bad hippo.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Wrestler  
-
-### 56. the gecko.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Freedom Fighter  
-
-### 57. the gopher.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Freedom Fighter  
-
-### 58. toph.md
-**Category:** Main Character  
-**Nation:** Earth Kingdom  
-**Role:** Protagonist, Earthbender  
-
-### 59. ty lee.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Azula's Ally  
-
-### 60. ursa.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Zuko's Mother  
-
-### 61. xin fu.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Earthbender, Bounty Hunter  
-
-### 62. yagoda.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Healer  
-
-### 63. yangchen.md
-**Category:** Supporting Character  
-**Nation:** Air Nation  
-**Role:** Avatar (Former)  
-
-### 64. ying.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Citizen  
-
-### 65. yu.md
-**Category:** Supporting Character  
-**Nation:** Earth Kingdom  
-**Role:** Earthbending Master  
-
-### 66. yue.md
-**Category:** Supporting Character  
-**Nation:** Water Nation  
-**Role:** Princess, Moon Spirit  
-
-### 67. zhao.md
-**Category:** Supporting Character  
-**Nation:** Fire Nation  
-**Role:** Admiral  
-
-### 68. zuko.md
-**Category:** Main Character  
-**Nation:** Fire Nation  
-**Role:** Protagonist, Prince  
-
----
-
-## 📊 Character Statistics
-
-### By Nation
-- **Air Nation:** 6 characters
-- **Earth Kingdom:** 25 characters
-- **Fire Nation:** 15 characters
-- **Water Nation:** 12 characters
-- **Mixed/Unknown:** 9 characters
-
-### By Category
-- **Main Characters:** 6 characters
-- **Supporting Characters:** 58 characters
-- **Animals:** 3 characters
-
-### By Role Type
-- **Protagonists:** 4 characters
-- **Antagonists:** 2 characters
-- **Avatars (Former):** 4 characters
-- **Royalty:** 8 characters
-- **Warriors/Fighters:** 12 characters
-- **Benders:** 15 characters
-- **Animals:** 3 characters
-- **Others:** 19 characters
-
----
-
-## 🔍 Quick Reference
-
-### Main Characters (1-6)
-1. Aang (Avatar)
-2. Azula (Antagonist)
-3. Iroh (Mentor)
-4. Katara (Protagonist)
-5. Ozai (Antagonist)
-6. Sokka (Protagonist)
-7. Toph (Protagonist)
-8. Zuko (Protagonist)
-
-### Animals (3)
-- Appa (Sky Bison)
-- Bosco (Bear)
-- Momo (Lemur)
-
-### Former Avatars (4)
-- Kuruk (Water)
-- Kyoshi (Earth)
-- Roku (Fire)
-- Yangchen (Air)
-
-### Fire Nation Royals (4)
-- Azula (Princess)
-- Azulon (Former Fire Lord)
-- Ozai (Fire Lord)
-- Zuko (Prince)
-
----
-
-## 📁 File Locations
-
-All character markdown files are located in:
-```
-raw-data/characters/
+This document provides a comprehensive index of all character cards in the Austros ATLA World application, including their metadata, badges, nation affiliations, and display characteristics.
+
+## 📊 Character Data Statistics
+
+- **Total Characters:** 67 items
+- **Nation Distribution:**
+  - Fire Nation: ~20 characters
+  - Earth Kingdom: ~25 characters
+  - Water Tribe: ~15 characters
+  - Air Nomads: ~7 characters
+- **Badge System:** Dynamic badges for all character types
+- **Nation Fields:** All characters have nation fields for filtering
+- **Type Labels:** Dynamic type detection with proper labeling
+
+## 🎯 Character Card Features
+
+### Core Display Elements
+- **Name:** Primary character name with proper typography
+- **Badge:** Dynamic badge display from card view section
+- **Nation Symbol:** Nation icon with enhanced sizing (50% larger in grid cards)
+- **Type Label:** Dynamic detection ("Character", "Group", "Location", etc.)
+- **Image:** Character portrait with fallback system
+- **Short Description:** Concise character summary
+
+### Enhanced UI Elements (2025 January Update)
+- **Matrix Glow Effects:** CRT green glow on hover
+- **Glassmorphism:** Semi-transparent backgrounds with backdrop blur
+- **Collection Integration:** Matrix-themed collection buttons
+- **Responsive Design:** Adapts to all screen sizes
+- **Accessibility:** Proper ARIA labels and keyboard navigation
+
+### Badge System Integration
+- **Dynamic Extraction:** Badges extracted from card view section
+- **Display Logic:** Uses `getBadge` function for multiple sources
+- **Visual Integration:** Prominent badge display on character cards
+- **Fallback Handling:** Graceful handling when badges are missing
+
+### Nation Field Integration
+- **Comprehensive Filtering:** All characters filterable by nation
+- **Visual Display:** Nation symbols on all character cards
+- **Enhanced Sizing:** Nation icons increased for better visibility
+- **Consistent Theming:** Nation symbols match overall Matrix theme
+
+## 🔧 Technical Implementation
+
+### ItemCardCollapsed Component
+```typescript
+// Dynamic type label logic
+{item.type === 'group' || item.type === 'religious_organization' || 
+ item.type === 'service_organization' ? 'Group' : 
+ item.type === 'location' ? 'Location' : 
+ item.type === 'food' ? 'Food' : 
+ item.type === 'fauna' ? 'Fauna' : 
+ item.type === 'spirit-world' ? 'Spirit' : 
+ 'Character'}
 ```
 
-The enriched data is available in:
+### Badge System
+```typescript
+// Badge extraction from multiple sources
+const getBadge = (item: EnrichedItem) => {
+  return item.role || item.metadata?.badge || item.metadata?.role || null;
+};
 ```
-public/enriched-data.json
-src/data/enriched-data.json
+
+### Nation Integration
+```typescript
+// Nation field filtering
+if (activeNations.size > 0) {
+  itemsToFilter = itemsToFilter.filter(item => 
+    item.nation && activeNations.has(item.nation.toLowerCase())
+  );
+}
 ```
+
+## 📋 Character Categories
+
+### Fire Nation Characters
+- **Royal Family:** Zuko, Azula, Ozai, Iroh, Ursa
+- **Military:** Zhao, Jeong Jeong, Combustion Man
+- **Civilians:** Cabbage Merchant, June, Nyla
+- **Badges:** Fire Lord, Prince, Princess, General, Admiral, Bounty Hunter
+
+### Earth Kingdom Characters
+- **Royalty:** King Kuei, Long Feng
+- **Military:** General Fong, Haru, Ty Lee
+- **Civilians:** Toph, Jet, Smellerbee, Longshot
+- **Badges:** King, General, Freedom Fighter, Earthbender
+
+### Water Tribe Characters
+- **Royalty:** Chief Arnook, Princess Yue
+- **Military:** Pakku, Hahn
+- **Civilians:** Katara, Sokka, Hakoda, Hama
+- **Badges:** Chief, Princess, Waterbending Master, Warrior
+
+### Air Nomads Characters
+- **Avatars:** Aang, Roku, Kyoshi, Yangchen, Kuruk
+- **Monks:** Monk Gyatso, Pathik
+- **Badges:** Avatar, Airbending Master, Monk
+
+### Animal Companions
+- **Mounts:** Appa, Nyla
+- **Pets:** Momo, Bosco
+- **Badges:** Animal Companion, Shirshu, Flying Bison
+
+## 🎨 Visual Design Elements
+
+### Matrix Theme Integration
+- **CRT Green Glow:** `#70ab6c` and `#c8ffc8` colors
+- **Backdrop Blur:** `backdrop-blur-md` for glassmorphism
+- **Drop Shadows:** Text drop shadows for glowing effects
+- **Border Effects:** Thick borders with glow for definition
+
+### Interactive States
+- **Hover Effects:** Scale animation and enhanced glow
+- **Active States:** Different colors and glows for different states
+- **Transition Smoothness:** 300ms duration for all animations
+- **Visual Hierarchy:** Clear distinction between states
+
+### Enhanced Icon Sizing (2025 January Update)
+- **Grid Cards:** Nation icons increased from `size={8}` to `size={12}` (50% larger)
+- **Modal Cards:** Nation icons increased from `size={20}` to `size={24}` (20% larger)
+- **Visual Impact:** Nation icons significantly more prominent and easier to identify
+
+## 🔄 Data Flow Integration
+
+### Markdown Processing
+1. **Card View Section:** Extracts badge, name, and short description
+2. **Backend Metadata:** Separated from expanded view to prevent UI display
+3. **Nation Field:** Promoted to top level for filtering
+4. **Image Validation:** Ensures image paths match actual files
+
+### Enrichment Process
+1. **Badge Extraction:** Badges extracted from card view section
+2. **Nation Promotion:** Nation fields promoted to top level
+3. **Type Classification:** Dynamic type detection for proper labeling
+4. **Image Fallbacks:** Robust fallback system for missing images
+
+### UI Rendering
+1. **Dynamic Type Labels:** Proper type detection and display
+2. **Badge Display:** Dynamic badge rendering from metadata
+3. **Nation Integration:** Nation symbols on all character cards
+4. **Collection Integration:** Matrix-themed collection management
+
+## 🛠️ Troubleshooting
+
+### Common Issues
+- **Missing Badges:** Ensure badge is in card view section
+- **Backend Metadata in UI:** Remove `---` separators from expanded view
+- **Missing Nation Fields:** Add nation field to markdown metadata
+- **Image Not Showing:** Add fallback mapping in `imageFallbacks.ts`
+
+### Prevention Guidelines
+1. **Separate Backend Metadata:** Keep backend metadata separate from expanded view
+2. **Include Required Fields:** Ensure all characters have id, name, type, nation
+3. **Add Badges:** Include badges in card view section
+4. **Validate Image Paths:** Ensure image paths match actual files
+5. **Test Nation Filtering:** Verify characters can be filtered by nation
+
+## 📊 Performance Optimizations
+
+### React Optimizations
+- **React.memo:** ItemCard components wrapped to prevent unnecessary re-renders
+- **useMemo:** Expensive operations memoized for performance
+- **useCallback:** Event handlers optimized with useCallback
+- **Lazy Loading:** Images loaded on demand with `loading="lazy"`
+
+### Filtering Performance
+- **Memoized Filtering:** Complex filtering pipeline cached with useMemo
+- **useFilterState Hook:** Extracted filter state management
+- **applyFilters Utility:** Pure function for filtering logic
+- **Performance Impact:** Filtering only re-runs when filters change
+
+## 🎯 Accessibility Features
+
+### ARIA Labels
+- **Dynamic Labels:** Updated from "Character details" to "Item details"
+- **Proper Roles:** All interactive elements properly labeled
+- **Keyboard Navigation:** Full keyboard support throughout
+
+### Screen Reader Support
+- **Semantic HTML:** Proper HTML structure for screen readers
+- **Alt Text:** Image alt text for character portraits
+- **Focus Management:** Proper focus handling for modals
+
+## 🔗 Related Documentation
+
+- **Data Flow:** See `docs/data_flow.md` for processing details
+- **Frontend Architecture:** See `docs/frontend_architecture.md` for component structure
+- **Troubleshooting:** See `docs/troubleshooting.md` for common issues
+- **Data Pipeline:** See `docs/data_pipeline.md` for processing details
 
 ---
 
 *Last Updated: January 2025*  
-*Total Characters: 67* 
+*Character Cards: Enhanced with Badge System*  
+*Nation Integration: Complete Filtering Support*  
+*Performance: Optimized with Memoization* 

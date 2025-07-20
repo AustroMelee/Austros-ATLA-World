@@ -51,6 +51,7 @@ The creation of Yue's Mooncakes began after Princess Yue's sacrifice to become t
   "name": "Yue's Mooncakes",
   "type": "food",
   "id": "yue-mooncakes",
+  "image": "yue's-mooncakes.jpg",
   "region": "water_tribe",
   "category": "cakes_decadent_desserts",
   "subcategory": "cake",

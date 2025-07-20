@@ -46,6 +46,7 @@ The development of Foggy Swamp Chicken represents the Water Tribe's remarkable a
   "id": "foggy-swamp-chicken",
   "name": "Foggy Swamp Chicken",
   "type": "food",
+  "image": "foggy-swamp-chicken.jpg",
   "region": "water_tribe",
   "category": "roasted_grilled_meats",
   "subcategory": "swamp_dish",

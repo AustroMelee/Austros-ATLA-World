@@ -46,6 +46,7 @@ The tradition of fruit pie baking was among the many culinary arts that the Air 
   "id": "fruit-pie",
   "name": "Fruit Pie",
   "type": "food",
+  "image": "fruit-pie.jpg",
   "region": "air_nomads",
   "category": "baked_goods_pastries",
   "subcategory": "pie",

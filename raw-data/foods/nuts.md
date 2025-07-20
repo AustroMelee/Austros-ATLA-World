@@ -37,6 +37,7 @@ Nuts have been a staple of Air Nomad snack culture for generations, with consump
   "id": "nuts",
   "name": "Nuts",
   "type": "food",
+  "image": "nuts.jpg",
   "region": "air_nomads",
   "category": "snack",
   "subcategory": "natural_snack",

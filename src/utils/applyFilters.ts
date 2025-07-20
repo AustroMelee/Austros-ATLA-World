@@ -36,16 +36,16 @@ export function applyFilters({
   }
 
   if (activeCoreFilter) {
-    const typeMap: Record<string, string> = {
-      characters: 'character',
-      locations: 'location',
-      fauna: 'fauna',
-      foods: 'food',
-      groups: 'group',
-      spirits: 'spirit-world',
+    const typeMap: Record<string, string[]> = {
+      characters: ['character'],
+      locations: ['location'],
+      fauna: ['fauna'],
+      foods: ['food'],
+      groups: ['group', 'religious_organization', 'service_organization'],
+      spirits: ['spirit-world'],
     };
-    const targetType = typeMap[activeCoreFilter];
-    if (targetType) items = items.filter(item => item.type === targetType);
+    const targetTypes = typeMap[activeCoreFilter];
+    if (targetTypes) items = items.filter(item => targetTypes.includes(item.type));
   }
 
   if (activeCoreFilter && activeSubFilters.size > 0) {

@@ -58,6 +58,7 @@ The Southern Raiders are a deeply personal antagonist group for Katara. While th
   "name": "Southern Raiders",
   "slug": "southern-raiders",
   "type": "group",
+  "nation": "Fire Nation",
   "description": "An elite naval force of the Fire Nation tasked with launching numerous raids on the Southern Water Tribe to eliminate all of its waterbenders.",
   "groupType": "military",
   "affiliation": "Fire Nation",

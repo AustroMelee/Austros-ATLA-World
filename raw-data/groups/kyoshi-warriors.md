@@ -62,6 +62,7 @@ The Kyoshi Warriors serve as important recurring allies to Team Avatar. They rep
   "name": "Kyoshi Warriors",
   "slug": "kyoshi-warriors",
   "type": "group",
+  "nation": "Earth Kingdom",
   "description": "An all-female group of fighters from Kyoshi Island. Their fighting style and clothing mimic those of their founder, Avatar Kyoshi. They use metal fans and are skilled non-bending combatants.",
   "groupType": "military",
   "affiliation": "Earth Kingdom",

@@ -71,6 +71,7 @@ Team Avatar is the central protagonist group of the series. Their journey to hel
   "name": "Team Avatar",
   "slug": "team-avatar",
   "type": "group",
+  "nation": "Four Nations",
   "description": "The group of companions who traveled with Avatar Aang during his quest to master the four elements and end the Hundred Year War. The team is notable for having members from every nation and mastery of all bending arts.",
   "groupType": "organization",
   "affiliation": "Four Nations",

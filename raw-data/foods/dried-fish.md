@@ -64,6 +64,7 @@ The tradition of drying fish has been a cornerstone of Water Tribe cuisine for g
   "id": "dried-fish",
   "name": "Dried Fish",
   "type": "food",
+  "image": "dried-fish.jpg",
   "region": "Water Tribe",
   "category": "preserved_travel_foods",
   "subcategory": "preserved_fish",

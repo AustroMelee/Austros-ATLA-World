@@ -64,6 +64,7 @@ The creation of Candied Jackfruit Pie by Monk Gyatso represents one of the most 
   "id": "candied-jackfruit-pie",
   "name": "Candied Jackfruit Pie",
   "type": "food",
+  "image": "candied-jackfruit-pie.jpg",
   "region": "Air Nomads",
   "category": "baked_goods_pastries",
   "subcategory": "pie",

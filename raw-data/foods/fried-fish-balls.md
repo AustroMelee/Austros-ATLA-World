@@ -46,6 +46,7 @@ The development of Fried Fish Balls on a Stick represents the Water Tribe's resp
   "id": "fried-fish-balls",
   "name": "Fried Fish Balls on a Stick",
   "type": "food",
+  "image": "Fried-Fish-Balls-On-A-Stick.jpg",
   "region": "water_tribe",
   "category": "street_food_snacks",
   "subcategory": "street_food",

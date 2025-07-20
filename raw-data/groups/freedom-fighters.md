@@ -62,6 +62,7 @@ The Freedom Fighters serve as a cautionary tale about the cost of war and how a 
   "name": "Freedom Fighters",
   "slug": "freedom-fighters",
   "type": "group",
+  "nation": "Earth Kingdom",
   "description": "A group of teenage rebels who wanted to liberate the Earth Kingdom from Fire Nation occupation, even if it meant harming innocent people. They were led by Jet.",
   "groupType": "organization",
   "affiliation": "Earth Kingdom",

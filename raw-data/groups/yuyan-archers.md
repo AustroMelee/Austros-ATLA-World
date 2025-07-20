@@ -57,6 +57,7 @@ The Yuyan Archers serve to establish the high level of skill and specialization 
   "name": "Yuyan Archers",
   "slug": "yuyan-archers",
   "type": "group",
+  "nation": "Fire Nation",
   "description": "An elite and highly skilled unit of archers within the Fire Nation Army, renowned for their incredible precision. They are capable of pinning a fly to a tree from one hundred yards away without killing it.",
   "groupType": "military",
   "affiliation": "Fire Nation",

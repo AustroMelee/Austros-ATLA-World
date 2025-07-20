@@ -60,6 +60,7 @@ The Si Wong tribes are introduced as a neutral, opportunistic force. Their captu
   "name": "Si Wong Tribes",
   "slug": "si-wong-tribes",
   "type": "group",
+  "nation": "Earth Kingdom",
   "description": "A people indigenous to the Si Wong Desert in the Earth Kingdom, divided into several loosely-organized tribes. The tribes are notable for their special style of sandbending and their use of sand-sailers.",
   "groupType": "tribe",
   "affiliation": "Earth Kingdom",

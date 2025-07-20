@@ -37,6 +37,7 @@ Onion-Banana Juice has been a creative beverage in Air Nomad culture for generat
   "id": "onion-banana-juice",
   "name": "Onion-Banana Juice",
   "type": "food",
+  "image": "onion-banana-juice.jpg",
   "region": "air_nomads",
   "category": "beverage",
   "subcategory": "juice",

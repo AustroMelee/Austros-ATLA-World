@@ -46,6 +46,7 @@ The tradition of Fish Cakes as ceremonial food has been a cornerstone of Norther
   "id": "fish-cakes",
   "name": "Fish Cakes",
   "type": "food",
+  "image": "fish-cakes.jpg",
   "region": "water_tribe",
   "category": "seafood_fish",
   "subcategory": "ceremonial_dish",

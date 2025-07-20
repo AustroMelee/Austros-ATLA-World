@@ -56,7 +56,7 @@ The tradition of Kale Cookies and Seaweed Cookies has been a part of Water Tribe
   "type": "food",
   "description": "A traditional dish from the water_tribe.",
   "region": "water_tribe",
-  "image": "kale-cookies-seaweed-cookies.jpg",
+  "image": "Kale-Cookies-&-Seaweed-Cookies.jpg",
   "aliases": [],
   "sources": [
     "Avatar: The Last Airbender"

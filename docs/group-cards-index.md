@@ -2,274 +2,210 @@
 
 ## Overview
 
-This document provides a complete index of all group cards in the Austros ATLA World encyclopedia. Each group is numbered and categorized for easy reference.
+This document provides a comprehensive index of all group cards in the Austros ATLA World application, including their metadata, nation affiliations, type classifications, and display characteristics.
 
-**Total Groups:** 12
+## 📊 Group Data Statistics
 
----
+- **Total Groups:** ~10+ items
+- **Nation Distribution:**
+  - Fire Nation: Fire Sages, Royal Servants, Fire Nation Military, Yuyan Archers, Southern Raiders
+  - Earth Kingdom: Dai Li, Kyoshi Warriors, Freedom Fighters, Earth Kingdom Military, Si Wong Tribes
+  - Water Tribe: Foggy Swamp Tribe, Water Tribe Military
+  - Air Nomads: Air Nomads
+  - Four Nations: Order of the White Lotus, Team Avatar
+  - Independent: Pirates
+- **Type Classifications:** group, religious_organization, service_organization
+- **Nation Fields:** All groups have nation fields for filtering
+- **Type Labels:** Dynamic type detection with proper "Group" labeling
 
-## 📋 Complete Group List (Alphabetical)
+## 🎯 Group Card Features
 
-### 1. dai-li.md
-**Category:** Secret Society  
-**Affiliation:** Earth Kingdom  
-**Type:** Law Enforcement / Secret Police  
+### Core Display Elements
+- **Name:** Primary group name with proper typography
+- **Nation Symbol:** Nation icon with enhanced sizing (50% larger in grid cards)
+- **Type Label:** Dynamic detection showing "Group" for all group types
+- **Image:** Group representation image with fallback system
+- **Short Description:** Concise group summary
 
-### 2. earth-kingdom-military.md
-**Category:** Military Organization  
-**Affiliation:** Earth Kingdom  
-**Type:** Standing Army  
+### Enhanced UI Elements (2025 January Update)
+- **Matrix Glow Effects:** CRT green glow on hover
+- **Glassmorphism:** Semi-transparent backgrounds with backdrop blur
+- **Collection Integration:** Matrix-themed collection buttons
+- **Responsive Design:** Adapts to all screen sizes
+- **Accessibility:** Proper ARIA labels and keyboard navigation
 
-### 3. fire-nation-military.md
-**Category:** Military Organization  
-**Affiliation:** Fire Nation  
-**Type:** Imperial Military  
+### Nation Field Integration
+- **Comprehensive Filtering:** All groups filterable by nation
+- **Visual Display:** Nation symbols on all group cards
+- **Enhanced Sizing:** Nation icons increased for better visibility
+- **Consistent Theming:** Nation symbols match overall Matrix theme
 
-### 4. freedom-fighters.md
-**Category:** Resistance Movement  
-**Affiliation:** Earth Kingdom  
-**Type:** Guerrilla Fighters  
+### Type Classification System
+- **Dynamic Detection:** Proper type detection for all group types
+- **Group Types:** "group", "religious_organization", "service_organization"
+- **UI Labeling:** All group types display as "Group" in UI
+- **Filter Integration:** Groups appear in group filter category
 
-### 5. kyoshi-warriors.md
-**Category:** Elite Warriors  
-**Affiliation:** Earth Kingdom  
-**Type:** Special Forces  
+## 🔧 Technical Implementation
 
-### 6. order-of-the-white-lotus.md
-**Category:** Secret Society  
-**Affiliation:** Multi-Nation  
-**Type:** Philosophical Organization  
-
-### 7. rough-rhinos.md
-**Category:** Military Unit  
-**Affiliation:** Fire Nation  
-**Type:** Special Forces  
-
-### 8. si-wong-tribes.md
-**Category:** Tribal Confederation  
-**Affiliation:** Earth Kingdom  
-**Type:** Nomadic Tribes  
-
-### 9. southern-raiders.md
-**Category:** Military Unit  
-**Affiliation:** Fire Nation  
-**Type:** Naval Raiders  
-
-### 10. team-avatar.md
-**Category:** Heroic Group  
-**Affiliation:** Multi-Nation  
-**Type:** Protagonist Team  
-
-### 11. water-tribe-military.md
-**Category:** Military Organization  
-**Affiliation:** Water Tribes  
-**Type:** Tribal Defense Force  
-
-### 12. yuyan-archers.md
-**Category:** Elite Warriors  
-**Affiliation:** Fire Nation  
-**Type:** Special Forces  
-
----
-
-## 📊 Group Statistics
-
-### By Affiliation
-- **Earth Kingdom:** 5 groups
-- **Fire Nation:** 4 groups
-- **Water Tribes:** 1 group
-- **Multi-Nation:** 2 groups
-
-### By Category
-- **Military Organizations:** 4 groups
-- **Secret Societies:** 2 groups
-- **Elite Warriors:** 2 groups
-- **Resistance Movements:** 1 group
-- **Heroic Groups:** 1 group
-- **Tribal Confederations:** 1 group
-- **Military Units:** 1 group
-
-### By Type
-- **Standing Army:** 3 groups
-- **Special Forces:** 3 groups
-- **Secret Society:** 2 groups
-- **Guerrilla Fighters:** 1 group
-- **Protagonist Team:** 1 group
-- **Tribal Defense Force:** 1 group
-- **Nomadic Tribes:** 1 group
-
----
-
-## 🔍 Quick Reference
-
-### Military Organizations (4)
-1. Earth Kingdom Military
-2. Fire Nation Military
-3. Water Tribe Military
-4. Southern Raiders
-
-### Secret Societies (2)
-1. Dai Li
-2. Order of the White Lotus
-
-### Elite Warriors (2)
-1. Kyoshi Warriors
-2. Yuyan Archers
-
-### Special Forces (3)
-1. Rough Rhinos
-2. Kyoshi Warriors
-3. Yuyan Archers
-
-### Resistance & Heroic Groups (2)
-1. Freedom Fighters
-2. Team Avatar
-
-### Tribal Organizations (1)
-1. Si Wong Tribes
-
----
-
-## 🏛️ Group Details
-
-### Dai Li
-- **Role:** Secret police and law enforcement
-- **Base:** Ba Sing Se
-- **Leadership:** Long Feng
-- **Notable Members:** Joo Dee, various agents
-- **Specialization:** Earthbending, espionage, mind control
-
-### Earth Kingdom Military
-- **Role:** Standing army of the Earth Kingdom
-- **Base:** Various Earth Kingdom cities
-- **Leadership:** Various generals
-- **Notable Members:** General Fong, various soldiers
-- **Specialization:** Earthbending warfare, defensive tactics
-
-### Fire Nation Military
-- **Role:** Imperial military force
-- **Base:** Fire Nation Capital
-- **Leadership:** Fire Lord Ozai, various admirals
-- **Notable Members:** Admiral Zhao, various soldiers
-- **Specialization:** Firebending warfare, naval operations
-
-### Freedom Fighters
-- **Role:** Resistance movement against Fire Nation
-- **Base:** Various Earth Kingdom locations
-- **Leadership:** Jet
-- **Notable Members:** Smellerbee, Longshot, Pipsqueak
-- **Specialization:** Guerrilla warfare, sabotage
-
-### Kyoshi Warriors
-- **Role:** Elite female warriors
-- **Base:** Kyoshi Island
-- **Leadership:** Suki
-- **Notable Members:** Various warriors
-- **Specialization:** Hand-to-hand combat, fan fighting
-
-### Order of the White Lotus
-- **Role:** Secret society of masters
-- **Base:** Various locations
-- **Leadership:** Iroh, various masters
-- **Notable Members:** King Bumi, Master Pakku, Jeong Jeong
-- **Specialization:** Philosophy, beauty, truth, bending mastery
-
-### Rough Rhinos
-- **Role:** Special forces unit
-- **Base:** Fire Nation
-- **Leadership:** Various commanders
-- **Notable Members:** Various elite soldiers
-- **Specialization:** Mounted combat, shock tactics
-
-### Si Wong Tribes
-- **Role:** Nomadic desert tribes
-- **Base:** Si Wong Desert
-- **Leadership:** Various tribal leaders
-- **Notable Members:** Various tribespeople
-- **Specialization:** Desert survival, sandbending
-
-### Southern Raiders
-- **Role:** Naval raiding unit
-- **Base:** Fire Nation
-- **Leadership:** Various commanders
-- **Notable Members:** Various raiders
-- **Specialization:** Naval warfare, coastal raids
-
-### Team Avatar
-- **Role:** Protagonist group
-- **Base:** Various locations
-- **Leadership:** Aang (Avatar)
-- **Notable Members:** Katara, Sokka, Toph, Zuko
-- **Specialization:** Multi-element bending, diplomacy, heroism
-
-### Water Tribe Military
-- **Role:** Tribal defense forces
-- **Base:** Northern and Southern Water Tribes
-- **Leadership:** Tribal chiefs
-- **Notable Members:** Chief Hakoda, Chief Arnook, Master Pakku
-- **Specialization:** Waterbending warfare, naval combat
-
-### Yuyan Archers
-- **Role:** Elite archery unit
-- **Base:** Fire Nation
-- **Leadership:** Various commanders
-- **Notable Members:** Various archers
-- **Specialization:** Precision archery, tracking
-
----
-
-## 🎯 Group Characteristics
-
-### Military Focus
-- **Earth Kingdom Military:** Defensive, earthbending-based warfare
-- **Fire Nation Military:** Offensive, firebending-based warfare
-- **Water Tribe Military:** Naval, waterbending-based warfare
-- **Southern Raiders:** Naval raiding and coastal operations
-
-### Special Operations
-- **Dai Li:** Espionage and mind control
-- **Kyoshi Warriors:** Hand-to-hand combat and fan fighting
-- **Yuyan Archers:** Precision archery and tracking
-- **Rough Rhinos:** Mounted shock tactics
-
-### Resistance & Heroism
-- **Freedom Fighters:** Guerrilla warfare against Fire Nation
-- **Team Avatar:** Multi-element bending and diplomacy
-- **Order of the White Lotus:** Philosophy and bending mastery
-
-### Tribal & Cultural
-- **Si Wong Tribes:** Nomadic desert culture and sandbending
-
----
-
-## 📁 File Locations
-
-All group markdown files are located in:
-```
-raw-data/groups/
+### ItemCardCollapsed Component
+```typescript
+// Dynamic type label logic for groups
+{item.type === 'group' || item.type === 'religious_organization' || 
+ item.type === 'service_organization' ? 'Group' : 
+ item.type === 'location' ? 'Location' : 
+ item.type === 'food' ? 'Food' : 
+ item.type === 'fauna' ? 'Fauna' : 
+ item.type === 'spirit-world' ? 'Spirit' : 
+ 'Character'}
 ```
 
-The group template is located in:
-```
-raw-data/groups/templates/group_template.md
+### Filter Integration
+```typescript
+// Group type mapping in applyFilters.ts
+const typeMap: Record<string, string[]> = {
+  characters: ['character'],
+  locations: ['location'],
+  fauna: ['fauna'],
+  foods: ['food'],
+  groups: ['group', 'religious_organization', 'service_organization'],
+  spirits: ['spirit-world'],
+};
 ```
 
-The enriched data is available in:
-```
-public/enriched-data.json
-src/data/enriched-data.json
+### Nation Integration
+```typescript
+// Nation field filtering for groups
+if (activeNations.size > 0) {
+  itemsToFilter = itemsToFilter.filter(item => 
+    item.nation && activeNations.has(item.nation.toLowerCase())
+  );
+}
 ```
 
----
+## 📋 Group Categories
+
+### Fire Nation Groups
+- **Religious Organizations:** Fire Sages (religious_organization)
+- **Service Organizations:** Royal Servants (service_organization)
+- **Military:** Fire Nation Military, Yuyan Archers, Southern Raiders
+- **Nation Field:** "Fire Nation"
+
+### Earth Kingdom Groups
+- **Secret Societies:** Dai Li (secret_society)
+- **Military:** Earth Kingdom Military
+- **Resistance:** Freedom Fighters, Kyoshi Warriors
+- **Tribes:** Si Wong Tribes
+- **Nation Field:** "Earth Kingdom"
+
+### Water Tribe Groups
+- **Tribes:** Foggy Swamp Tribe
+- **Military:** Water Tribe Military
+- **Nation Field:** "Water Tribe"
+
+### Air Nomads Groups
+- **Monastic Orders:** Air Nomads (monastic_order)
+- **Nation Field:** "Air Nomads"
+
+### Multi-Nation Groups
+- **Secret Societies:** Order of the White Lotus, Team Avatar
+- **Nation Field:** "Four Nations"
+
+### Independent Groups
+- **Criminal Organizations:** Pirates
+- **Nation Field:** "Independent"
+
+## 🎨 Visual Design Elements
+
+### Matrix Theme Integration
+- **CRT Green Glow:** `#70ab6c` and `#c8ffc8` colors
+- **Backdrop Blur:** `backdrop-blur-md` for glassmorphism
+- **Drop Shadows:** Text drop shadows for glowing effects
+- **Border Effects:** Thick borders with glow for definition
+
+### Interactive States
+- **Hover Effects:** Scale animation and enhanced glow
+- **Active States:** Different colors and glows for different states
+- **Transition Smoothness:** 300ms duration for all animations
+- **Visual Hierarchy:** Clear distinction between states
+
+### Enhanced Icon Sizing (2025 January Update)
+- **Grid Cards:** Nation icons increased from `size={8}` to `size={12}` (50% larger)
+- **Modal Cards:** Nation icons increased from `size={20}` to `size={24}` (20% larger)
+- **Visual Impact:** Nation icons significantly more prominent and easier to identify
+
+## 🔄 Data Flow Integration
+
+### Markdown Processing
+1. **Card View Section:** Extracts name and short description
+2. **Backend Metadata:** Separated from expanded view to prevent UI display
+3. **Nation Field:** Promoted to top level for filtering
+4. **Type Classification:** Proper type detection for group types
+
+### Enrichment Process
+1. **Nation Promotion:** Nation fields promoted to top level
+2. **Type Classification:** Dynamic type detection for proper labeling
+3. **Image Validation:** Ensures image paths match actual files
+4. **Filter Mapping:** Groups mapped to group filter category
+
+### UI Rendering
+1. **Dynamic Type Labels:** Proper "Group" labeling for all group types
+2. **Nation Integration:** Nation symbols on all group cards
+3. **Collection Integration:** Matrix-themed collection management
+4. **Filter Display:** Groups appear in group filter category
+
+## 🛠️ Troubleshooting
+
+### Common Issues
+- **Groups Not Appearing:** Check filter mapping includes all group types
+- **Groups Labeled as "Character":** Update type label logic to include group types
+- **Missing Nation Fields:** Add nation field to group markdown metadata
+- **Backend Metadata in UI:** Remove `---` separators from expanded view
+- **Image Not Showing:** Add fallback mapping in `imageFallbacks.ts`
+
+### Prevention Guidelines
+1. **Separate Backend Metadata:** Keep backend metadata separate from expanded view
+2. **Include Required Fields:** Ensure all groups have id, name, type, nation
+3. **Update Filter Mapping:** Add new group types to filter mapping
+4. **Update Type Labels:** Include new group types in type label logic
+5. **Test Nation Filtering:** Verify groups can be filtered by nation
+
+## 📊 Performance Optimizations
+
+### React Optimizations
+- **React.memo:** ItemCard components wrapped to prevent unnecessary re-renders
+- **useMemo:** Expensive operations memoized for performance
+- **useCallback:** Event handlers optimized with useCallback
+- **Lazy Loading:** Images loaded on demand with `loading="lazy"`
+
+### Filtering Performance
+- **Memoized Filtering:** Complex filtering pipeline cached with useMemo
+- **useFilterState Hook:** Extracted filter state management
+- **applyFilters Utility:** Pure function for filtering logic
+- **Performance Impact:** Filtering only re-runs when filters change
+
+## 🎯 Accessibility Features
+
+### ARIA Labels
+- **Dynamic Labels:** Updated from "Character details" to "Item details"
+- **Proper Roles:** All interactive elements properly labeled
+- **Keyboard Navigation:** Full keyboard support throughout
+
+### Screen Reader Support
+- **Semantic HTML:** Proper HTML structure for screen readers
+- **Alt Text:** Image alt text for group representations
+- **Focus Management:** Proper focus handling for modals
 
 ## 🔗 Related Documentation
 
-- **Character Cards Index:** See `docs/character-cards-index.md` for character information
-- **Data Pipeline:** See `docs/data_pipeline.md` for data processing details
+- **Data Flow:** See `docs/data_flow.md` for processing details
+- **Frontend Architecture:** See `docs/frontend_architecture.md` for component structure
 - **Troubleshooting:** See `docs/troubleshooting.md` for common issues
-- **Source of Truth:** See `docs/source_of_truth.md` for project standards
+- **Data Pipeline:** See `docs/data_pipeline.md` for processing details
 
 ---
 
 *Last Updated: January 2025*  
-*Total Groups: 12* 
+*Group Cards: Enhanced with Nation Integration*  
+*Type Classification: Complete Group Support*  
+*Performance: Optimized with Memoization* 

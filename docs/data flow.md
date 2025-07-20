@@ -36,14 +36,21 @@ graph TD
     W --> X[localStorage]
     X --> Y[Collection UI]
     
-    Z[Matrix Rain] --> AA[useCardExpansion Hook]
-    AA --> BB[Modal Display]
+    Z[Matrix Rain Toggle] --> AA[Layout Component]
+    AA --> BB[MatrixRain Component]
+    BB --> CC[Conditional Rendering]
+    
+    DD[Scroll Position] --> EE[useScrollToTop Hook]
+    EE --> FF[Back to Top Button]
+    FF --> GG[Smooth Scroll]
     
     style A fill:#e1f5fe
     style E fill:#c8e6c9
     style F fill:#fff3e0
     style I fill:#f3e5f5
     style J fill:#ffebee
+    style Z fill:#fce4ec
+    style DD fill:#e8f5e8
 ```
 
 ## 📊 Detailed Flow Breakdown
@@ -118,38 +125,58 @@ graph TD
     Q --> R[localStorage]
     R --> S[Collection UI]
     
+    T[Matrix Rain Toggle] --> U[Layout State]
+    U --> V[MatrixRain Component]
+    V --> W[Conditional Canvas Rendering]
+    
+    X[Scroll Position] --> Y[useScrollToTop Hook]
+    Y --> Z[Back to Top Visibility]
+    Z --> AA[Smooth Scroll Action]
+    
     style A fill:#c8e6c9
     style J fill:#f3e5f5
     style K fill:#ffebee
     style R fill:#e8f5e8
+    style V fill:#fce4ec
+    style Y fill:#e8f5e8
 ```
 
 ### 4. Component Hierarchy
 ```mermaid
 graph TD
     A[App.tsx] --> B[Layout.tsx]
-    B --> C[HomeContainer.tsx]
-    C --> D[SearchBar.tsx]
-    C --> E[FilterBar.tsx]
-    C --> F[Clear All Filters Button]
-    C --> G[EntityGrid.tsx]
-    C --> H[CollectionsSidebar.tsx]
+    B --> C[Header.tsx]
+    B --> D[MatrixRain.tsx]
+    B --> E[HomeContainer.tsx]
     
-    G --> I[ItemCard.tsx]
-    I --> J[ItemCardCollapsed.tsx]
-    I --> K[ItemCardModal.tsx]
+    C --> F[Matrix Rain Toggle Button]
+    C --> G[Back to Top Button]
     
-    E --> L[Filter Components]
-    H --> M[Collection Components]
+    E --> H[SearchBar.tsx]
+    E --> I[FilterBar.tsx]
+    E --> J[Clear All Filters Button]
+    E --> K[EntityGrid.tsx]
+    E --> L[CollectionsSidebar.tsx]
     
-    N[MatrixRain.tsx] --> B
+    K --> M[ItemCard.tsx]
+    M --> N[ItemCardCollapsed.tsx]
+    M --> O[ItemCardModal.tsx]
+    
+    I --> P[Filter Components]
+    L --> Q[Collection Components]
     
     style A fill:#e1f5fe
-    style C fill:#fff3e0
-    style G fill:#f3e5f5
-    style I fill:#ffebee
-    style N fill:#fce4ec
+    style E fill:#fff3e0
+    style K fill:#f3e5f5
+    style M fill:#ffebee
+    style D fill:#fce4ec
+    style C fill:#e8f5e8
 ```
+
+**ItemCardCollapsed Type Label Logic:**
+- **Dynamic Detection:** Displays correct type labels based on item.type
+- **Group Support:** Handles "group", "religious_organization", "service_organization" types
+- **Fallback Logic:** Shows "Character" for unrecognized types
 
 ## 🔧 Hook Dependencies
 
@@ -164,11 +191,13 @@ graph LR
     G[useCardExpansion] --> H[Modal State]
     I[useImageFallback] --> J[Image Loading]
     K[useDebounce] --> L[Search Input]
+    M[useScrollToTop] --> N[Scroll Position]
     
     style A fill:#c8e6c9
     style C fill:#fff3e0
     style D fill:#fff3e0
     style E fill:#e8f5e8
+    style M fill:#fce4ec
 ```
 
 ## 📈 Performance Flow
@@ -225,6 +254,45 @@ graph TD
     style C fill:#fff3e0
     style D fill:#e8f5e8
     style E fill:#f3e5f5
+```
+
+### Matrix Rain Toggle Flow (2025 January Update)
+```mermaid
+graph TD
+    A[User Clicks Toggle] --> B[Header Component]
+    B --> C[Layout State Update]
+    C --> D[matrixRainEnabled Toggle]
+    D --> E[Conditional Rendering]
+    E --> F[MatrixRain Component]
+    F --> G[Canvas Animation]
+    
+    H[Modal Open] --> I[MatrixRain Props]
+    I --> J[Reduced Intensity]
+    J --> K[Adaptive Performance]
+    
+    style A fill:#e3f2fd
+    style C fill:#fff3e0
+    style F fill:#fce4ec
+    style G fill:#c8e6c9
+```
+
+### Back to Top Flow (2025 January Update)
+```mermaid
+graph TD
+    A[User Scrolls] --> B[useScrollToTop Hook]
+    B --> C[Scroll Position Check]
+    C --> D{Position > 300px?}
+    D -->|Yes| E[Show Back to Top Button]
+    D -->|No| F[Hide Back to Top Button]
+    
+    G[User Clicks Button] --> H[Smooth Scroll Action]
+    H --> I[Scroll to Top]
+    I --> J[Button Hides]
+    
+    style A fill:#e3f2fd
+    style C fill:#fff3e0
+    style E fill:#e8f5e8
+    style H fill:#fce4ec
 ```
 
 ### Collections System Flow (2025 Update)
@@ -310,6 +378,8 @@ graph TD
 3. **Image References** → Validated file paths
 4. **Tag Arrays** → Normalized and validated
 5. **Search Aliases** → Generated from content
+6. **Badge System** → Extracted from card view section
+7. **Nation Fields** → Promoted to top level for filtering
 
 ### Enriched JSON → UI Components
 1. **Type Classification** → Component selection
@@ -319,6 +389,10 @@ graph TD
 5. **Collection State** → localStorage persistence
 6. **Performance Optimization** → React.memo components and useCallback hooks
 7. **UI Enhancement** → Perfect DOS font, React icons, color coding
+8. **Matrix Rain Toggle** → Conditional canvas rendering
+9. **Scroll Management** → Back to top button with smooth scrolling
+10. **Badge Display** → Dynamic badge rendering from metadata
+11. **Nation Filtering** → All entities filterable by nation
 
 ## 📊 Data Volume Metrics
 
@@ -331,8 +405,31 @@ graph TD
 - **Food Items:** 98 items
 - **Character Items:** 67 items
 - **Group Items:** ~10+ items
+- **Badge System:** Dynamic badges for all character types
+- **Nation Fields:** All entities have nation fields for filtering
 
 ## 🎨 UI Enhancement Flow (January 2025 Update)
+
+### Header Component Integration
+```mermaid
+graph TD
+    A[Layout Component] --> B[Header Component]
+    B --> C[Matrix Rain Toggle]
+    B --> D[Back to Top Button]
+    
+    C --> E[Layout State Management]
+    E --> F[Conditional MatrixRain Rendering]
+    F --> G[Performance Optimization]
+    
+    D --> H[useScrollToTop Hook]
+    H --> I[Scroll Position Monitoring]
+    I --> J[Smooth Scroll Action]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fce4ec
+    style D fill:#fce4ec
+```
 
 ### Perfect DOS Font Integration
 ```mermaid

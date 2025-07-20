@@ -63,9 +63,10 @@ The Earth Kingdom military represents the primary force of resistance against th
 ```json
 {
   "id": "earth-kingdom-military",
-  "name": "Military of the Earth Kingdom",
+  "name": "Earth Kingdom Military",
   "slug": "earth-kingdom-military",
   "type": "group",
+  "nation": "Earth Kingdom",
   "description": "The body primarily responsible for the defense of the Earth Kingdom, consisting of an army, navy, and several specialized divisions. It is the largest military in the world by number.",
   "groupType": "military",
   "affiliation": "Earth Kingdom",

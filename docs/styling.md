@@ -164,7 +164,15 @@ The project is pinned to `tailwindcss@3.4.3` due to a critical, unrecoverable en
 -   **Card Name Wrapping:** Card names use `overflow-hidden text-ellipsis` with proper flex layout (`flex-1 min-w-0`) for accessibility and graceful text truncation. The deprecated `@tailwindcss/line-clamp` plugin has been removed in favor of built-in Tailwind utilities.
 -   **Grid Layout:** The card grid uses flexbox for layout, ensuring cards stretch to fill the row and maintain a consistent appearance.
 -   **SRP:** All card styling and scaling should be handled in the relevant component (`EntityGrid` for layout/width, `ItemCard` for content), not globally.
--   **Nation Colors:** Card border and background glow are themed by nation. The nation color is determined by the `nationThemeMap` in `src/theme/nationThemes.ts`, and applied via the `ThemedCard` component. To change or add a nation color, update `nationThemeMap`—all cards for that nation will update automatically. If a nation is missing, a neutral default color is used.
+-   **Nation Colors:** Card border, background glow, and **card title text** (both grid/collapsed and modal/expanded) are themed by nation. The nation color is determined by the `nationThemeMap` in `src/theme/nationThemes.ts`.
+    - **Collapsed Card Titles:** The grid card title (`<h3>`) now uses an inline style for color based on nation, matching the modal logic. The `text-white` class is removed from the `<h3>` in `ItemCardCollapsed.tsx`.
+    - **Expanded Card Titles:** The modal title (`<h2>`) uses the same nation color logic.
+    - **Nation Icons:** Nation symbols (Water Tribe droplet, Fire Nation flame, etc.) are displayed on both grid and modal cards with enhanced visibility and larger sizes for better prominence.
+    - **Icon Sizing (2025 January Update):** Nation icons have been increased in size for better visibility:
+      - **Grid Cards:** Increased from `size={8}` to `size={12}` (50% larger)
+      - **Modal Cards:** Increased from `size={20}` to `size={24}` (20% larger)
+      - **Visual Impact:** Nation icons are now significantly more prominent and easier to identify
+    - To change or add a nation color, update `nationThemeMap`—all cards for that nation will update automatically. If a nation is missing, a neutral default color is used.
 -   **Card Text Formatting:** Card text is beautifully formatted due to the use of the Tailwind Typography plugin (`prose` classes), which is enabled and customized in `tailwind.config.js` for the project's dark theme. The expanded card content uses a `prose`-styled div, and the `CustomMarkdownRenderer` component (with `react-markdown` and custom React components) further enhances markdown rendering for headings, lists, and emphasis. This combination ensures all card text is visually appealing, readable, and consistent.
 -   **Performance Optimization:** ItemCard components are wrapped with React.memo to prevent unnecessary re-renders and improve performance.
 -   **Image Loading:** All card images use `loading="lazy"` attribute for faster initial page load and better performance.

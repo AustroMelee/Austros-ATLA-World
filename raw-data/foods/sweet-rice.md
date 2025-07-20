@@ -41,6 +41,7 @@ Sweet Rice was developed by the Air Nomads as a solution to the challenges of th
   "id": "sweet-rice",
   "name": "Sweet Rice",
   "type": "food",
+  "image": "sweet-rice.jpg",
   "region": "air_nomads",
   "category": "baked_goods_pastries",
   "subcategory": "rice_dish",

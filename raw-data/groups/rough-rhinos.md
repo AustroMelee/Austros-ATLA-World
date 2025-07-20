@@ -58,6 +58,7 @@ The Rough Rhinos are introduced as a veteran, intimidating force representing th
   "name": "Rough Rhinos",
   "slug": "rough-rhinos",
   "type": "group",
+  "nation": "Fire Nation",
   "description": "An elite group of Fire Nation cavalry, founded by Colonel Mongke. There were five members of the group, each of whom carried a different specialized weapon. They were highly skilled and able to ride their komodo rhinos silently.",
   "groupType": "military",
   "affiliation": "Fire Nation",

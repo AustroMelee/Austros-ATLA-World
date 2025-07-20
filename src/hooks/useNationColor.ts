@@ -8,8 +8,7 @@ import { nationThemeMap } from '../theme/nationThemes';
 export function useNationColor(topHit: { nation?: string } | null): string {
   return useMemo(() => {
     if (topHit && topHit.nation) {
-      const nationKey = topHit.nation.toLowerCase();
-      return nationThemeMap[nationKey]?.main || nationThemeMap.default.main;
+      return nationThemeMap[topHit.nation]?.main || nationThemeMap.default.main;
     }
     return nationThemeMap.default.main;
   }, [topHit]);

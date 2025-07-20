@@ -39,6 +39,7 @@ Tofu and Bean Sprouts has been a cornerstone of Air Nomad temple cuisine for gen
   "id": "tofu-and-bean-sprouts",
   "name": "Tofu and Bean Sprouts",
   "type": "food",
+  "image": "tofu-and-bean-sprouts.jpg",
   "region": "air_nomads",
   "category": "main_course",
   "subcategory": "tofu_dish",

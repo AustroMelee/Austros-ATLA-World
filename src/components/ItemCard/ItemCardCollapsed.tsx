@@ -10,6 +10,7 @@ import CollectionCardButton from '../Collections/CollectionCardButton';
 import AddToCollectionPopover from '../Collections/AddToCollectionPopover';
 import type { UseCollectionsReturn } from '../../hooks/useCollections';
 import CreateCollectionModal from '../Collections/CreateCollectionModal';
+import { nationThemeMap } from '../../theme/nationThemes';
 
 interface MatchedField {
   field: string;
@@ -37,12 +38,7 @@ function getBadge(item: EnrichedEntity): string | undefined {
   return undefined;
 }
 
-function formatFieldName(field: string) {
-  if (field === 'global') return 'Content';
-  return toTitleCase(field.replace('metadata.', ''));
-}
-
-export default function ItemCardCollapsed({ item, onExpand, matchedFields, collectionsApi }: ItemCardCollapsedProps) {
+export default function ItemCardCollapsed({ item, onExpand, collectionsApi }: ItemCardCollapsedProps) {
   const iconText = item.name && typeof item.name === 'string' ? getInitials(item.name) : '';
   const badge = getBadge(item);
   const nation = getField(item, 'nation');
@@ -61,6 +57,9 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
       setImgSrc(`/assets/images/${image}`);
     }
   }, [image, setImgSrc]);
+
+  const nationKey = nation || 'default';
+  const titleColor = nationThemeMap[nationKey]?.main || nationThemeMap.default.main;
 
   return (
     <>
@@ -110,33 +109,25 @@ export default function ItemCardCollapsed({ item, onExpand, matchedFields, colle
                 </div>
               </div>
             )}
-            {matchedFields && matchedFields.length > 0 && (
-              <div className="mt-1.5 flex flex-wrap justify-center gap-1">
-                {matchedFields.map((match, index) => (
-                  <span
-                    key={`${match.field}-${index}`}
-                    className="bg-neutral-700 text-neutral-300 text-[10px] font-medium px-1.5 py-0.5 rounded-full"
-                  >
-                    Matched: {formatFieldName(match.field)}
-                  </span>
-                ))}
-              </div>
-            )}
+            {/* Matched fields pills removed for decluttered UI */}
             <div className="w-full mt-auto px-1.5 pt-2.5">
               <div className="flex items-center justify-start gap-1">
-                <h3 className="font-bold text-sm text-white leading-tight overflow-hidden text-ellipsis flex-1 min-w-0">
+                <h3
+                  className="font-bold text-sm leading-tight overflow-hidden text-ellipsis flex-1 min-w-0"
+                  style={{ color: titleColor }}
+                >
                   {toTitleCase(item.name)}
                 </h3>
                 {nation && (
                   <NationIcon
                     nation={nation}
-                    size={8}
+                    size={12}
                     className="align-middle flex-shrink-0"
                   />
                 )}
               </div>
               <p className="text-[12px] text-neutral-400 font-bold mt-1">
-                {item.type === 'group' ? 'Group' : 
+                {item.type === 'group' || item.type === 'religious_organization' || item.type === 'service_organization' ? 'Group' : 
                  item.type === 'location' ? 'Location' : 
                  item.type === 'food' ? 'Food' : 
                  item.type === 'fauna' ? 'Fauna' : 

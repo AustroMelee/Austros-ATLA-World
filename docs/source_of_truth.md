@@ -92,6 +92,15 @@ The system now supports multiple data types beyond characters:
 - **Fixes Applied:** Corrected image paths for Order of the White Lotus, Si Wong Tribes, and Water Tribe Military
 - **Pattern:** `"image": "exact-filename.jpg"` must match actual file
 
+### Image Field Validation (2025 January Update)
+- **Requirement:** All food items must have an `image` field in their JSON metadata
+- **Common Issues:** Missing `image` field in food markdown files, even when image files exist
+- **Validation:** Parser checks for required `image` field in food items
+- **Syntax Errors:** Extra backticks in markdown files can prevent JSON parsing
+- **Fixes Applied:** Added missing `image` fields to freeze-dried-cucumberquats, fried-fish-balls, and fried-foods-on-sticks
+- **Pattern:** `"image": "exact-filename.jpg"` must be included in food JSON metadata
+- **Syntax Fix:** Removed extra backticks that were preventing JSON blocks from being parsed correctly
+
 ### Image Fallback System (January 2025 Update)
 - **Component:** `src/components/ItemCard/imageFallbacks.ts`
 - **Purpose:** Handles cases where image filenames don't match data slugs
@@ -110,6 +119,30 @@ The system now supports multiple data types beyond characters:
 ---
 
 ## 🎯 UI Component Updates (2025 January Update)
+
+### Header Component (2025 January Update)
+- **Component:** `src/components/Header.tsx`
+- **Matrix Rain Toggle:** Floating button in top-right corner with conditional rendering
+- **Back to Top Button:** Smart visibility button that appears on scroll with smooth scrolling
+- **Layout Integration:** Clean floating design without black header background
+- **State Management:** Controlled by `matrixRainEnabled` prop from Layout component
+- **Scroll Detection:** Uses `useScrollToTop` hook for scroll position monitoring
+- **Styling:** Matrix-themed with CRT green glow effects and backdrop blur
+
+### useScrollToTop Hook (2025 January Update)
+- **Component:** `src/hooks/useScrollToTop.ts`
+- **Scroll Detection:** Shows back-to-top button when scroll position > 300px
+- **Event Listener:** Monitors `window.pageYOffset` and `document.documentElement.scrollTop`
+- **Smooth Scrolling:** Uses `window.scrollTo()` with `behavior: 'smooth'`
+- **Cleanup:** Properly removes event listeners on component unmount
+- **Accessibility:** Proper ARIA labels for screen readers
+
+### Layout Component (2025 January Update)
+- **Component:** `src/components/Layout.tsx`
+- **Matrix Rain Integration:** Conditional rendering based on `matrixRainEnabled` state
+- **Header Integration:** Includes Header component with all necessary props
+- **Performance:** Prevents unnecessary canvas rendering when Matrix Rain is disabled
+- **State Management:** Uses `useState` to track Matrix Rain toggle state
 
 ### Dynamic Type Labels
 - **Component:** `src/components/ItemCard/ItemCardCollapsed.tsx`
@@ -164,6 +197,17 @@ The system now supports multiple data types beyond characters:
 - **Benefits:** Better readability against complex Matrix Rain background
 - **Consistency:** Matches the retro terminal aesthetic
 
+### Nation Symbol & Color Integration (2025 Update)
+- **Food Cards:** Display nation symbols for all food items
+- **Character Cards:** Display nation symbols for all characters
+- **Group Cards:** Display nation symbols for all groups
+- **NationIcon Component:** Maps nation strings to React icons
+- **Consistent Display:** All entity types show nation affiliation
+- **Enhanced Icon Sizing (2025 January Update):** Nation icons have been increased in size for better visibility and prominence:
+  - **Grid Cards:** Increased from `size={8}` to `size={12}` (50% larger)
+  - **Modal Cards:** Increased from `size={20}` to `size={24}` (20% larger)
+  - **Visual Impact:** Nation icons are now significantly more prominent and easier to identify across all card types
+
 ---
 
 ## Key Principles
@@ -178,6 +222,8 @@ The system now supports multiple data types beyond characters:
 - **Performance Optimization:** Memoized filtering with useMemo, React.memo components, and useCallback hooks for optimal performance.
 - **Code Organization:** Separation of concerns with dedicated hooks and utility functions.
 - **UI Enhancement:** Perfect DOS font integration, React icons with color coding, and 100% opaque elements for maximum readability.
+- **Header Integration:** Matrix Rain toggle and back-to-top button with smart visibility and smooth scrolling.
+- **Scroll Management:** Intelligent scroll detection and smooth scrolling functionality.
 
 ---
 

@@ -56,7 +56,7 @@ The tradition of Jennamite has been a unique part of Earth Kingdom snack culture
   "type": "food",
   "description": "A traditional dish from the earth_kingdom.",
   "region": "earth_kingdom",
-  "image": "jennamite.jpg",
+  "image": "jennamite-(creeping-crystal).jpg",
   "aliases": [],
   "sources": [
     "Avatar: The Last Airbender"

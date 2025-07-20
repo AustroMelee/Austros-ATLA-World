@@ -46,6 +46,7 @@ The development of Fried Foods on Sticks as a festival food category represents 
   "id": "fried-foods-on-sticks",
   "name": "Fried Foods on Sticks",
   "type": "food",
+  "image": "Fried-Foods-On-Sticks.jpg",
   "region": "water_tribe",
   "category": "street_food_snacks",
   "subcategory": "festival_food",

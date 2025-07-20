@@ -46,6 +46,7 @@ The evolution of Five-Flavor Soup from a seaweed-based dish to one incorporating
   "id": "five-flavor-soup",
   "name": "Five-Flavor Soup",
   "type": "food",
+  "image": "five-flavor-soup.jpg",
   "region": "water_tribe",
   "category": "soups_stews",
   "subcategory": "soup",

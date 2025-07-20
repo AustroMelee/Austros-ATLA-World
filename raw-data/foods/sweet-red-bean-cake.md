@@ -41,6 +41,7 @@ Sweet Red Bean Cake has been a beloved part of Air Nomad cuisine for generations
   "id": "sweet-red-bean-cake",
   "name": "Sweet Red Bean Cake",
   "type": "food",
+  "image": "sweet-red-bean-cake.jpg",
   "region": "air_nomads",
   "category": "baked_goods_pastries",
   "subcategory": "cake",

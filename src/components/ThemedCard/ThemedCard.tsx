@@ -9,7 +9,7 @@ interface ThemedCardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function ThemedCard({ children, nation, className, ...props }: ThemedCardProps) {
-  const theme = nationThemeMap[nation?.toLowerCase() || 'default'] || nationThemeMap.default;
+  const theme = nationThemeMap[nation || 'default'] || nationThemeMap.default;
 
   const cardStyle: React.CSSProperties = {
     backgroundColor: 'rgba(22, 27, 34, 0.95)', // More opaque dark background

@@ -41,6 +41,7 @@ Steamed Tofu has been a cornerstone of Air Nomad cuisine for generations, develo
   "id": "steamed-tofu",
   "name": "Steamed Tofu",
   "type": "food",
+  "image": "steamed-tofu.jpg",
   "region": "air_nomads",
   "category": "vegetarian_dishes",
   "subcategory": "tofu_dish",

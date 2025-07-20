@@ -46,6 +46,7 @@ The development of Freeze-Dried Cucumberquats represents the Southern Water Trib
   "id": "freeze-dried-cucumberquats",
   "name": "Freeze-Dried Cucumberquats",
   "type": "food",
+  "image": "Freeze-dried-Cucumberquats.jpg",
   "region": "water_tribe",
   "category": "preserved_travel_foods",
   "subcategory": "emergency_food",

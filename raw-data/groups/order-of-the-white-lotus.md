@@ -65,6 +65,7 @@ The Order of the White Lotus serves as a powerful, benevolent force that reveals
   "name": "Order of the White Lotus",
   "slug": "order-of-the-white-lotus",
   "type": "group",
+  "nation": "Four Nations",
   "description": "An ancient and formerly secret society that transcends the boundaries of the four nations, seeking philosophy, beauty, and truth. They are devoted to sharing ancient knowledge across national and political divides.",
   "groupType": "secret_society",
   "affiliation": "Neutral",

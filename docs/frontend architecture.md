@@ -52,25 +52,22 @@ graph TD
 
 ```mermaid
 graph LR
-    A[enriched-data.json] --> B[useEnrichedData]
-    B --> C[useSearch]
-    B --> D[useFilterState]
-    B --> E[useCollections]
+    A[useEnrichedData] --> B[enriched-data.json]
+    C[useSearch] --> A
+    D[useFilterState] --> A
+    E[useCollections] --> F[localStorage]
     
-    F[Search Input] --> G[useDebounce]
-    G --> C
-    
-    H[Filter Controls] --> D
-    I[Collection Actions] --> E
-    
-    J[Card Expansion] --> K[useCardExpansion]
-    L[Image Loading] --> M[useImageFallback]
+    G[useCardExpansion] --> H[Modal State]
+    I[useImageFallback] --> J[Image Loading]
+    K[useDebounce] --> L[Search Input]
+    M[useScrollToTop] --> N[Scroll Position]
     
     style A fill:#c8e6c9
     style B fill:#fff3e0
     style C fill:#e3f2fd
     style D fill:#e3f2fd
     style E fill:#e8f5e8
+    style M fill:#fce4ec
 ```
 
 ## 🎯 Data Flow Architecture
@@ -273,19 +270,30 @@ const isAnimal = item.species && animalSpecies.some(species =>
 **Dynamic Type Labels:**
 - **Enhancement:** Dynamic type detection instead of hardcoded "Character"
 - **Logic:** Displays "Group", "Location", "Food", "Fauna", "Spirit", or "Character" based on item type
+- **Group Type Support:** Includes all group types: "group", "religious_organization", "service_organization"
 - **Accessibility:** Updated aria-label from "Character details" to "Item details"
+
+**Badge System Integration:**
+- **Dynamic Badge Display:** Badges extracted from card view section and displayed in UI
+- **Badge Logic:** Uses `getBadge` function to determine badge from `item.role`, `item.metadata.badge`, or `item.metadata.role`
+- **Visual Integration:** Badges appear prominently on character cards
+- **Fallback Handling:** Graceful handling when badges are missing
 
 **Collections Integration:**
 - **Collection Button:** Matrix-themed button in top-right corner
 - **Visual States:** Different icons for in/out of collection states
 - **Hover Effects:** CRT green glow effects matching the theme
 
-**Nation Symbol Integration (2025 Update):**
+**Nation Symbol & Color Integration (2025 Update):**
 - **Food Cards:** Display nation symbols for all food items
 - **Character Cards:** Display nation symbols for all characters
 - **Group Cards:** Display nation symbols for all groups
 - **NationIcon Component:** Maps nation strings to React icons
 - **Consistent Display:** All entity types show nation affiliation
+- **Enhanced Icon Sizing (2025 January Update):** Nation icons have been increased in size for better visibility and prominence:
+  - **Grid Cards:** Increased from `size={8}` to `size={12}` (50% larger)
+  - **Modal Cards:** Increased from `size={20}` to `size={24}` (20% larger)
+  - **Visual Impact:** Nation icons are now significantly more prominent and easier to identify across all card types
 
 ---
 
@@ -405,6 +413,24 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **Pattern:** `!/[/\\\\]templates[/\\\\]/.test(p)`
 - **Benefit:** Prevents template files from being processed as real data
 
+### Backend Metadata Separation
+- **Requirement:** Backend metadata must be separated from expanded view content
+- **Implementation:** Backend metadata section must not be included within expanded view
+- **Pattern:** Remove `---` separators that incorrectly place backend metadata within expanded view
+- **Benefit:** Prevents backend metadata from appearing in UI cards
+
+### Badge System Integration
+- **Extraction:** Badges extracted from card view section in markdown files
+- **Display:** Badges displayed dynamically in UI based on metadata
+- **Logic:** Uses `getBadge` function to determine badge from multiple sources
+- **Fallback:** Graceful handling when badges are missing
+
+### Nation Field Integration
+- **Requirement:** All entities must have nation fields for filtering
+- **Implementation:** Nation fields added to all groups and characters
+- **Filtering:** All entities can be filtered by nation
+- **Display:** Nation symbols displayed on all entity cards
+
 ### Expanded View Processing
 - **Format Requirement:** Content must be wrapped in ```md code blocks
 - **Parser Logic:** Extracts content between ```md and ``` markers
@@ -517,6 +543,9 @@ The frontend architecture provides a robust, performant, and accessible foundati
 - **New Data Types:** Support for groups, foods, locations, and episodes with dynamic type detection
 - **Template Exclusion:** Automatic exclusion of template files from data processing
 - **Enhanced Data Validation:** Image path validation, JSON syntax checking, and expanded view processing
+- **Badge System:** Dynamic badge display for all character types
+- **Backend Metadata Separation:** Proper separation of backend metadata from UI content
+- **Nation Fields:** All entities filterable by nation
 - **Responsive Design:** Works seamlessly across all devices
 - **Accessibility Compliance:** Inclusive user experience for all users
 
@@ -531,5 +560,14 @@ The combination of these features creates a cohesive, high-performance applicati
 - **Enhanced Filtering:** Multi-layered filtering with comprehensive coverage and color coding
 - **Performance Optimizations:** Major performance improvements with memoized filtering and React.memo components
 - **UI Enhancements:** Perfect DOS font, React icons, color coding, and 100% opaque elements
+- **Badge System:** Dynamic badges for all character types
+- **Nation Fields:** All entities filterable by nation
 
 The application now provides a complete encyclopedia experience with robust filtering, comprehensive categorization, authentic Matrix/CRT aesthetics, superior performance through intelligent caching and optimization, and enhanced visual distinction through color coding and improved typography.
+
+---
+
+*Last Updated: January 2025*  
+*Architecture: Advanced Component Hierarchy*  
+*Performance: Optimized with Memoization*  
+*UI: Enhanced with Matrix Theme*

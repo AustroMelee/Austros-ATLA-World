@@ -64,9 +64,10 @@ The Fire Nation military serves as the primary antagonistic force for the entire
 ```json
 {
   "id": "fire-nation-military",
-  "name": "Military of the Fire Nation",
+  "name": "Fire Nation Military",
   "slug": "fire-nation-military",
   "type": "group",
+  "nation": "Fire Nation",
   "description": "The unified armed forces of the Fire Nation and the world's most powerful military during the Hundred Year War. It consists of the Fire Army, Fire Nation Navy, and the world's first air force.",
   "groupType": "military",
   "affiliation": "Fire Nation",

@@ -67,6 +67,7 @@ The Water Tribe military represents the resilience and defiance of a people unde
   "type": "group",
   "description": "The unified armed forces of the Northern and Southern Water Tribes. Relies on skilled waterbenders and nonbending warriors adapted to arctic and naval warfare.",
   "groupType": "military",
+  "nation": "Water Tribe",
   "affiliation": "Water Tribes",
   "ideology": "Defense of the Water Tribes, Tribal honor, Resistance",
   "baseOfOperations": "Agna Qel'a (North), Wolf Cove (South)",

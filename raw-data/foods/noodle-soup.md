@@ -46,6 +46,7 @@ Noodle soup has been a cornerstone of Air Nomad cuisine for generations, develop
   "id": "noodle-soup",
   "name": "Noodle Soup",
   "type": "food",
+  "image": "noodle-soup.jpg",
   "region": "air_nomads",
   "category": "soups_stews",
   "subcategory": "soup",
