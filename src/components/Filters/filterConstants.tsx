@@ -14,7 +14,6 @@ import {
   FaMapMarkerAlt,
   FaLayerGroup,
   FaPaw,
-  FaGhost,
   FaPlay,
   FaBook,
 } from 'react-icons/fa';
@@ -26,7 +25,7 @@ export const nations = [
   { key: 'fire', image: '/assets/images/fire_nation.png', color: '#F87171', glow: '#F8717150' },
 ];
 
-export const coreFilters = ['characters', 'foods', 'locations', 'groups', 'fauna', 'spirits', 'episodes'];
+export const coreFilters = ['characters', 'foods', 'locations', 'groups', 'fauna', 'episodes'];
 
 export const characterSubfilterIcons: Record<string, React.ReactNode> = {
   child: <FaChild className="w-5 h-5" />,
@@ -43,12 +42,12 @@ export const characterSubfilterIcons: Record<string, React.ReactNode> = {
 export const faunaSubfilterIcons: Record<string, React.ReactNode> = {
   predators_hunters: <FaShieldAlt className="w-5 h-5" />,
   domesticated_mounts: <FaPaw className="w-5 h-5" />,
-  aquatic_marine: <FaGhost className="w-5 h-5" />,
-  flying_aerial: <FaGhost className="w-5 h-5" />,
-  sacred_spiritual: <FaGhost className="w-5 h-5" />,
-  hybrid_mixed: <FaGhost className="w-5 h-5" />,
-  small_insects: <FaGhost className="w-5 h-5" />,
-  reptiles_amphibians: <FaGhost className="w-5 h-5" />,
+  aquatic_marine: <FaPaw className="w-5 h-5" />,
+  flying_aerial: <FaPaw className="w-5 h-5" />,
+  sacred_spiritual: <FaPaw className="w-5 h-5" />,
+  hybrid_mixed: <FaPaw className="w-5 h-5" />,
+  small_insects: <FaPaw className="w-5 h-5" />,
+  reptiles_amphibians: <FaPaw className="w-5 h-5" />,
 };
 
 export const characterSubfilterColors: Record<string, string> = {
@@ -92,7 +91,6 @@ export const coreFilterIcons: Record<string, React.ReactNode> = {
   locations: <FaMapMarkerAlt className="w-5 h-5" />,
   groups: <FaLayerGroup className="w-5 h-5" />,
   fauna: <FaPaw className="w-5 h-5" />,
-  spirits: <FaGhost className="w-5 h-5" />,
   episodes: <FaPlay className="w-5 h-5" />,
 };
 
@@ -102,6 +100,5 @@ export const coreFilterColors: Record<string, string> = {
   locations: 'text-green-400',
   groups: 'text-purple-400',
   fauna: 'text-yellow-400',
-  spirits: 'text-cyan-400',
   episodes: 'text-purple-400',
 }; 

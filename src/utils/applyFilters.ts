@@ -42,7 +42,6 @@ export function applyFilters({
       fauna: ['fauna'],
       foods: ['food'],
       groups: ['group', 'religious_organization', 'service_organization'],
-      spirits: ['spirit-world'],
       episodes: ['episode'],
     };
     const targetTypes = typeMap[activeCoreFilter];
