@@ -108,9 +108,9 @@ export function Home({
         { key: 'neutral' }
       ],
       episodes: [
-        { key: 'book_1', symbol: '📚' },
-        { key: 'book_2', symbol: '📚' },
-        { key: 'book_3', symbol: '📚' }
+        { key: 'book_1', symbol: <span className="text-blue-400">📚 Book 1: Water</span> },
+        { key: 'book_2', symbol: <span className="text-green-400">📚 Book 2: Earth</span> },
+        { key: 'book_3', symbol: <span className="text-red-400">📚 Book 3: Fire</span> },
       ],
     };
     return subFilterMap[coreFilter] || [];

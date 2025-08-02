@@ -1,3 +1,7 @@
+---
+type: character
+---
+
 # 🧠 ULTIMATE CHARACTER METADATA SCHEMA (v3.0)
 
 *Standardized for Avatar Encyclopedia, Maxi-Minimalist UX Engine*
@@ -22,19 +26,27 @@
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
-- Name: 
-- Nation: 
-- Age: 
-- Role: (Their most notable role or title)
-- Overview: (A concise paragraph detailing their journey and significance)
-- Narrative Highlights: [...]
-- Role in the Story: (A single, defining sentence)
-- Relationships: [...]
-- Personality Traits: [...]
-- Notable Quotes: [...]
+### 📖 Overview
+
+[Detailed description of the character, their journey, and significance in the Avatar world]
+
+### ✨ Notable Achievements
+
+[Key accomplishments, feats, and defining moments]
+
+### 🎭 Role in the Story
+
+[How this character functions in the narrative and their impact on the plot]
+
+### 🌟 Relationships
+
+[Important connections with other characters and their dynamics]
+
+### 💬 Notable Quotes
+
+[Iconic or significant dialogue that captures their character]
 ```
 
----
 ---
 
 ## ⚙️ BACKEND METADATA (v3.0 EXPANSION)

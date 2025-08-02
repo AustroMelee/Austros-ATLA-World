@@ -101,6 +101,32 @@ export const imageFallbacks: Record<string, string> = {
 };
 ```
 
+#### Episodes Not Filtering by Book
+**Problem:** Episodes don't appear when filtering by Book 1, Book 2, or Book 3
+**Root Cause:** Filtering logic only checks `item.metadata?.book` but episodes have `book` field at top level
+**Solution:** Update filtering logic to check both `item.book` and `item.metadata?.book`
+**Files Affected:** `src/utils/applyFilters.ts`, `src/search/types.ts`
+**Code Fix:**
+```typescript
+// In applyFilters.ts
+if (subFilterLower === 'book_1') {
+  return item.book === 'Water' || item.metadata?.book === 'Water';
+}
+if (subFilterLower === 'book_2') {
+  return item.book === 'Earth' || item.metadata?.book === 'Earth';
+}
+if (subFilterLower === 'book_3') {
+  return item.book === 'Fire' || item.metadata?.book === 'Fire';
+}
+
+// In types.ts - Add book field to EnrichedEntity
+export interface EnrichedEntity {
+  // ... existing fields
+  book?: string; // Episode-specific field
+}
+```
+**Prevention:** Always check both field locations when filtering episodes by book
+
 #### Episode Title Duplication (RESOLVED - January 2025)
 **Problem:** Episode "Winter Solstice, Part 2: Avatar Roku" displayed title twice in UI - once from card view data and once from expanded view content
 **Root Cause:** Data pipeline was adding episode title to the beginning of expanded view content during processing

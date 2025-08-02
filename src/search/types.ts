@@ -17,6 +17,8 @@ export interface EnrichedEntity {
   affiliation?: string[];
   searchAliases?: string[];
   tagCategories?: Record<string, string[]>;
+  // Episode-specific fields
+  book?: string;
 }
 
 export interface IndexedEntity {

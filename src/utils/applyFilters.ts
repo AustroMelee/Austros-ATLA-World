@@ -144,19 +144,20 @@ export function applyFilters({
         if (activeCoreFilter === 'episodes') {
           // Check for book-based subfilters
           if (subFilterLower === 'book_1') {
-            return item.metadata?.book === 'Water' || item.metadata?.book === '1';
+            return item.book === 'Water' || item.metadata?.book === 'Water' || item.metadata?.book === '1';
           }
           if (subFilterLower === 'book_2') {
-            return item.metadata?.book === 'Earth' || item.metadata?.book === '2';
+            return item.book === 'Earth' || item.metadata?.book === 'Earth' || item.metadata?.book === '2';
           }
           if (subFilterLower === 'book_3') {
-            return item.metadata?.book === 'Fire' || item.metadata?.book === '3';
+            return item.book === 'Fire' || item.metadata?.book === 'Fire' || item.metadata?.book === '3';
           }
           
           // Check if the episode has the specific tag
           if (item.tags?.some(tag => tag.toLowerCase() === subFilterLower)) return true;
           
           // Check episode-specific metadata
+          if (item.book && typeof item.book === 'string' && subFilterLower.includes(item.book.toLowerCase())) return true;
           if (item.metadata?.book && typeof item.metadata.book === 'string' && subFilterLower.includes(item.metadata.book.toLowerCase())) return true;
           if (item.metadata?.series && typeof item.metadata.series === 'string' && subFilterLower.includes(item.metadata.series.toLowerCase())) return true;
           

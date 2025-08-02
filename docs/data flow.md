@@ -409,6 +409,40 @@ graph TD
     style V fill:#c8e6c9
 ```
 
+### Episode Book Filtering Flow (January 2025 Update)
+```mermaid
+graph TD
+    A[User Selects Episode Filter] --> B[Core Filter: Episodes]
+    B --> C[Subfilter Options Display]
+    C --> D[Book 1: Water Button]
+    C --> E[Book 2: Earth Button]
+    C --> F[Book 3: Fire Button]
+    
+    D --> G[Filter Logic: item.book === 'Water']
+    E --> H[Filter Logic: item.book === 'Earth']
+    F --> I[Filter Logic: item.book === 'Fire']
+    
+    G --> J[Display Water Episodes]
+    H --> K[Display Earth Episodes]
+    I --> L[Display Fire Episodes]
+    
+    M[Episode Data Structure] --> N[book: "Water" at top level]
+    M --> O[book: "Earth" at top level]
+    M --> P[book: "Fire" at top level]
+    
+    Q[Critical Implementation] --> R[Check item.book AND item.metadata?.book]
+    R --> S[Prevent Filtering Issues]
+    
+    style A fill:#e3f2fd
+    style B fill:#c8e6c9
+    style C fill:#f3e5f5
+    style G fill:#ffebee
+    style H fill:#ffebee
+    style I fill:#ffebee
+    style Q fill:#fff3e0
+    style R fill:#c8e6c9
+```
+
 ### Episode Title Parsing Flow (January 2025 Update)
 ```mermaid
 graph TD

@@ -10,11 +10,27 @@ The project uses a robust, two-stage pipeline to transform raw markdown data int
 - No special-case logic or exceptions are allowed in the parsing script for any type.
 - The parser expects the following canonical format for all types:
   - YAML frontmatter with `type` field (e.g., `type: character`, `type: episode`)
-  - `## UI - CARD VIEW` section with a single ```md code block containing summary fields
-  - `## UI - EXPANDED VIEW` section with a single ```md code block containing detailed markdown
+  - `## 🖼️ UI - CARD VIEW` section with `*(Presentation Layer 1 - Unchanged)*` comment and ```md code block containing summary fields
+  - `## 📖 UI - EXPANDED VIEW` section with `*(Presentation Layer 2 - Unchanged)*` comment and ```md code block containing detailed markdown
+  - `## ⚙️ BACKEND METADATA` section with description comment and ```json code blocks
+  - `## 🧱 Semantic & Thematic Index` section with description comment and ```json code blocks
 - **No entity type may use a different structure.**
 - Any new types must follow this canonical structure exactly.
 - **Warning:** Introducing type-specific parsing logic is forbidden. All parsing and enrichment must be type-agnostic and use the same extraction logic for UI blocks.
+
+### Template Standardization (January 2025 Update)
+
+**Status:** ✅ COMPLETED - All templates now follow consistent format
+**Standardized Elements:**
+- **Frontmatter:** `type: [category]` (removed extra fields)
+- **Title Format:** `# [Emoji] ULTIMATE [CATEGORY] METADATA SCHEMA (v[version])`
+- **Philosophy Statement:** Consistent placement and style
+- **UI Card View:** `## 🖼️ UI - CARD VIEW` with `*(Presentation Layer 1 - Unchanged)*`
+- **UI Expanded View:** `## 📖 UI - EXPANDED VIEW` with `*(Presentation Layer 2 - Unchanged)*`
+- **Backend Metadata:** `## ⚙️ BACKEND METADATA` with consistent description
+- **JSON Structure:** Multiple categorized blocks instead of single blocks
+- **Semantic Index:** Consistent `## 🧱 Semantic & Thematic Index` section
+- **Comments:** All sections include required comments and descriptions
 
 ---
 
@@ -48,9 +64,11 @@ are promoted to the top level and indexed alongside regular tags.
 - All data is authored in markdown files in `raw-data/`.
 - Each file must begin with a YAML frontmatter block (`---`) containing a `type` field (e.g., `type: character`).
 - The body must include at least one fenced JSON code block (```json) with structured data. All JSON blocks are merged.
-- For characters, the file must also include:
-  - `## UI - CARD VIEW` block (summary fields)
-  - `## UI - EXPANDED VIEW` block (detailed markdown)
+- For all entity types, the file must also include:
+  - `## 🖼️ UI - CARD VIEW` block with `*(Presentation Layer 1 - Unchanged)*` comment and summary fields
+  - `## 📖 UI - EXPANDED VIEW` block with `*(Presentation Layer 2 - Unchanged)*` comment and detailed markdown
+  - `## ⚙️ BACKEND METADATA` block with description comment and structured JSON
+  - `## 🧱 Semantic & Thematic Index` block with description comment and filtering metadata
 
 ### Template Exclusion System (2025 Update)
 
@@ -58,6 +76,61 @@ are promoted to the top level and indexed alongside regular tags.
 - **Implementation:** Added filter in `scripts/1-parse-markdown.mjs` using pattern `!/[/\\\\]templates[/\\\\]/.test(p)`
 - **Benefit:** Prevents template files from being parsed as real data entries
 - **Pattern:** Any file path containing `/templates/` or `\templates\` is skipped
+
+### Episode Filtering & Book Field Structure (2025 January Update)
+
+**Critical Implementation Detail:** Episodes have the `book` field at the top level of the enriched data, not in the metadata object.
+
+#### Episode Data Structure:
+```json
+{
+  "id": "episode-id",
+  "name": "Episode Name",
+  "type": "episode",
+  "book": "Water", // ← TOP LEVEL FIELD
+  "metadata": {
+    // Other metadata fields
+  }
+}
+```
+
+#### Filtering Logic Requirements:
+- **Book Field Location:** Episodes have `book` field at top level (`item.book`)
+- **Filtering Logic:** Must check both `item.book` and `item.metadata?.book`
+- **Book Values:** "Water" (Book 1), "Earth" (Book 2), "Fire" (Book 3)
+- **Type Definition:** `EnrichedEntity` interface must include `book?: string`
+
+#### Common Issues & Prevention:
+- **Issue:** Filtering logic only checks `item.metadata?.book` but episodes have `item.book`
+- **Solution:** Always check both locations in filtering logic
+- **Prevention:** Update filtering logic to handle both field locations
+- **Validation:** Ensure `EnrichedEntity` type includes `book?: string` field
+
+#### Episode Filtering Implementation:
+```typescript
+// CORRECT: Check both locations
+if (subFilterLower === 'book_1') {
+  return item.book === 'Water' || item.metadata?.book === 'Water';
+}
+if (subFilterLower === 'book_2') {
+  return item.book === 'Earth' || item.metadata?.book === 'Earth';
+}
+if (subFilterLower === 'book_3') {
+  return item.book === 'Fire' || item.metadata?.book === 'Fire';
+}
+```
+
+#### Episode Distribution:
+- **Book 1 (Water):** ~20 episodes
+- **Book 2 (Earth):** ~14 episodes  
+- **Book 3 (Fire):** ~20 episodes
+- **Total:** ~54 episodes with book metadata
+
+#### Prevention Guidelines:
+- **Always Check Both:** Filtering logic must check both `item.book` and `item.metadata?.book`
+- **Type Safety:** Ensure `EnrichedEntity` interface includes `book?: string`
+- **Testing:** Verify episode filtering works for all three books
+- **Documentation:** This structure is documented to prevent future issues
 
 ### Location Type Support (January 2025 Update)
 

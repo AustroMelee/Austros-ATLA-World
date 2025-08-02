@@ -1,6 +1,5 @@
 ---
-type: template
-id: episode-template
+type: episode
 ---
 
 # 🎬 ULTIMATE EPISODE METADATA SCHEMA (v1.0)
@@ -30,62 +29,45 @@ id: episode-template
 ```md
 ### 📖 Synopsis
 
-<FaBookOpen className="inline mr-2" />
-
-...
+[Detailed episode summary and plot overview]
 
 ### ✨ Key Moments
 
-<FaStar className="inline mr-2" />
-
-...
+[Pivotal scenes and important narrative beats]
 
 ### 🎭 Characters Focus
 
-<FaUsers className="inline mr-2" />
-
-...
+[Main characters featured and their roles in this episode]
 
 ### 🌟 Themes
 
-<FaLightbulb className="inline mr-2" />
-
-...
+[Thematic elements and messages explored]
 
 ### 📍 Locations Visited
 
-<FaMapMarkerAlt className="inline mr-2" />
-
-...
+[Places featured or visited during the episode]
 
 ### 💬 Notable Quotes
 
-<FaQuoteLeft className="inline mr-2" />
-
-...
+[Memorable dialogue and significant lines]
 
 ### 🎬 Plot Points
 
-<FaFilm className="inline mr-2" />
-
-...
+[Major story developments and plot progression]
 
 ### 🔥 Bending Techniques
 
-<FaFire className="inline mr-2" />
-
-...
+[Bending abilities and techniques showcased]
 
 ### 🏛️ Cultural Elements
 
-<FaLandmark className="inline mr-2" />
-
-...
+[Cultural aspects and world-building elements]
 ```
 
 ---
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+*The invisible, hyper-structured engine. **Never rendered directly to the user.***
 
 ---
 

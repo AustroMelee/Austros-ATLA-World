@@ -15,18 +15,15 @@ Every markdown file MUST have YAML frontmatter with these fields:
 ```yaml
 ---
 type: [entity_type]
-id: [unique_identifier]
 ---
 ```
 
 **Required Fields:**
 - `type`: Entity type (character, episode, food, fauna, group, location)
-- `id`: Unique identifier in slug format (e.g., "the-avatar-returns", "aang")
 
 **Common Issues:**
-- ❌ Missing `id` field (parser will skip the file)
 - ❌ Missing `type` field (parser will skip the file)
-- ❌ Invalid `id` format (should be slug-like, no spaces)
+- ❌ Invalid `type` format (must match supported entity types)
 
 ---
 
@@ -35,23 +32,26 @@ Every file MUST have a card view section with this exact format:
 
 ```markdown
 ## 🖼️ UI - CARD VIEW
+*(Presentation Layer 1 - Unchanged)*
 
 ```md
-- Title: [Entity Title]
+- Name: [Entity Name]
 - [Other Key-Value Pairs]
 ```
 ```
 
 **Required Format:**
 - Must start with `## 🖼️ UI - CARD VIEW`
+- Must include `*(Presentation Layer 1 - Unchanged)*` comment
 - Content MUST be wrapped in ```md code blocks
 - Must contain key-value pairs in format `- Key: Value`
-- At minimum, should have a title/name field
+- At minimum, should have a name/title field
 
 **Common Issues:**
 - ❌ Missing ```md code block wrappers
 - ❌ Using markdown formatting instead of key-value pairs
 - ❌ Missing card view section entirely
+- ❌ Missing presentation layer comment
 
 ---
 
@@ -60,21 +60,26 @@ Every file MUST have an expanded view section:
 
 ```markdown
 ## 📖 UI - EXPANDED VIEW
+*(Presentation Layer 2 - Unchanged)*
 
 ```md
+### 📖 Overview
+
 [Detailed markdown content for expanded view]
 ```
 ```
 
 **Required Format:**
 - Must start with `## 📖 UI - EXPANDED VIEW`
+- Must include `*(Presentation Layer 2 - Unchanged)*` comment
 - Content MUST be wrapped in ```md code blocks
 - Should contain detailed information about the entity
+- Should start with `### 📖 Overview` subsection
 
 **⚠️ IMPORTANT: Avoid Duplicate Titles**
 - Do NOT include the entity title as a markdown heading (`# Title`) in the expanded view
 - The title is already displayed from the card view data
-- Start with content directly (e.g., `**Episode Information:**` or `**Character Details:**`)
+- Start with content directly (e.g., `### 📖 Overview` or `**Character Details:**`)
 - This prevents duplicate titles from appearing in the UI
 
 **⚠️ IMPORTANT: Flexible Header Parsing (January 2025 Update)**
@@ -84,17 +89,18 @@ Every file MUST have an expanded view section:
 
 ---
 
-### 4. JSON Metadata Blocks (Required)
-Every file MUST have at least one JSON block with metadata:
+### 4. Backend Metadata Section (Required)
+Every file MUST have a backend metadata section with JSON blocks:
 
 ```markdown
 ## ⚙️ BACKEND METADATA
+*The invisible, hyper-structured engine. **Never rendered directly to the user.***
 
 ```json
 {
   "type": "entity_type",
   "id": "unique_identifier",
-  "title": "Entity Title",
+  "name": "Entity Name",
   "description": "Entity description",
   "tags": ["tag1", "tag2"]
 }
@@ -102,9 +108,45 @@ Every file MUST have at least one JSON block with metadata:
 ```
 
 **Required Format:**
+- Must start with `## ⚙️ BACKEND METADATA`
+- Must include description comment about invisible engine
 - Must be wrapped in ```json code blocks
 - Must be valid JSON
 - Should include entity-specific metadata fields
+
+---
+
+### 5. Semantic Index Section (Required)
+Every file MUST have a semantic index section:
+
+```markdown
+## 🧱 Semantic & Thematic Index
+*(The true heart of the filtering engine)*
+
+```json
+{
+  "archetype": "The Hero | The Rebel | The Mentor | The Trickster | The Ruler | The Innocent",
+  "thematicKeywords": ["keyword1", "keyword2"],
+  "tagCategories": {
+    "narrativeTags": ["tag1", "tag2"],
+    "combatTags": ["tag1", "tag2"],
+    "relationshipTags": ["tag1", "tag2"],
+    "emotionTags": ["tag1", "tag2"],
+    "politicalTags": ["tag1", "tag2"],
+    "arcTags": ["tag1", "tag2"],
+    "worldTags": ["tag1", "tag2"],
+    "triviaTags": ["tag1", "tag2"]
+  }
+}
+```
+```
+
+**Required Format:**
+- Must start with `## 🧱 Semantic & Thematic Index`
+- Must include description comment about filtering engine
+- Must be wrapped in ```json code blocks
+- Must include archetype and thematicKeywords fields
+- Must include tagCategories object with all required categories
 
 ---
 
@@ -114,13 +156,13 @@ Every file MUST have at least one JSON block with metadata:
 ```yaml
 ---
 type: character
-id: character-slug
 ---
 ```
 
 **Card View Required Fields:**
 - Name: [Character Name]
 - Nation: [Air/Earth/Fire/Water/Other]
+- Role: [Character role description]
 - Short Description: [Brief description]
 
 **JSON Block Required Fields:**
@@ -134,7 +176,6 @@ id: character-slug
 ```yaml
 ---
 type: episode
-id: episode-slug
 ---
 ```
 
@@ -173,7 +214,6 @@ id: episode-slug
 ```yaml
 ---
 type: food
-id: food-slug
 ---
 ```
 
@@ -193,7 +233,6 @@ id: food-slug
 ```yaml
 ---
 type: fauna
-id: fauna-slug
 ---
 ```
 
@@ -213,7 +252,6 @@ id: fauna-slug
 ```yaml
 ---
 type: group
-id: group-slug
 ---
 ```
 
@@ -233,7 +271,6 @@ id: group-slug
 ```yaml
 ---
 type: location
-id: location-slug
 ---
 ```
 
@@ -256,10 +293,11 @@ id: location-slug
 Before creating any new markdown file, verify:
 
 ### File Structure
-- [ ] YAML frontmatter with `type` and `id`
-- [ ] Card view section with ```md code blocks
-- [ ] Expanded view section with ```md code blocks
-- [ ] At least one JSON metadata block with ```json code blocks
+- [ ] YAML frontmatter with `type` field
+- [ ] Card view section with ```md code blocks and presentation layer comment
+- [ ] Expanded view section with ```md code blocks and presentation layer comment
+- [ ] Backend metadata section with ```json code blocks and description comment
+- [ ] Semantic index section with ```json code blocks and description comment
 
 ### Content Requirements
 - [ ] Valid YAML syntax in frontmatter
@@ -271,19 +309,19 @@ Before creating any new markdown file, verify:
 - [ ] Episode image filenames match actual files in `public/assets/images/`
 - [ ] Episode titles use `S1Ex -` prefix in JSON metadata (CRITICAL)
 - [ ] Episode expanded view headers parse correctly (emoji support available)
+- [ ] All sections include required comments and descriptions
 
 ### Pipeline Compatibility
-- [ ] `id` field matches slug format (no spaces, lowercase)
 - [ ] `type` field matches expected entity types
 - [ ] Card view contains required fields for entity type
 - [ ] JSON blocks contain required metadata fields
+- [ ] Semantic index contains all required tag categories
 
 ---
 
 ## 🚫 COMMON FAILURES
 
 ### Parser Will Skip File If:
-- Missing `id` field in YAML frontmatter
 - Missing `type` field in YAML frontmatter
 - Invalid YAML syntax in frontmatter
 - No JSON blocks found in file
@@ -299,10 +337,25 @@ Before creating any new markdown file, verify:
 - Episode titles missing `S1Ex -` prefix (causes UI inconsistency)
 - **NEW EPISODE CREATION:** Episode file created but not appearing in UI (timing issue)
 - **NEW HEADER PARSING:** Episode expanded view headers with emojis not parsing (resolved January 2025)
+- **MISSING SECTIONS:** Backend metadata or semantic index sections missing
+- **MISSING COMMENTS:** Presentation layer comments or description comments missing
 
 ---
 
 ## 🛠️ DEBUGGING & PREVENTION (2025 January Update)
+
+### Template Standardization (January 2025 Update)
+**Status:** ✅ COMPLETED - All templates now follow consistent format
+**Standardized Elements:**
+- **Frontmatter:** `type: [category]` (removed extra fields)
+- **Title Format:** `# [Emoji] ULTIMATE [CATEGORY] METADATA SCHEMA (v[version])`
+- **Philosophy Statement:** Consistent placement and style
+- **UI Card View:** `## 🖼️ UI - CARD VIEW` with `*(Presentation Layer 1 - Unchanged)*`
+- **UI Expanded View:** `## 📖 UI - EXPANDED VIEW` with `*(Presentation Layer 2 - Unchanged)*`
+- **Backend Metadata:** `## ⚙️ BACKEND METADATA` with consistent description
+- **JSON Structure:** Multiple categorized blocks instead of single blocks
+- **Semantic Index:** Consistent `## 🧱 Semantic & Thematic Index` section
+- **Comments:** All sections include required comments and descriptions
 
 ### Episode Creation Workflow
 1. **Create Episode File:** Use exact template structure from `raw-data/episodes/templates/episode_template.md`
@@ -344,9 +397,10 @@ Before creating any new markdown file, verify:
 **Correct Format:**
 ```markdown
 ## 📖 UI - EXPANDED VIEW
+*(Presentation Layer 2 - Unchanged)*
 
 ```md
-### 📖 Episode Information
+### 📖 Overview
 - **Series:** Avatar: The Last Airbender
 - **Book:** Water
 ```
@@ -374,12 +428,19 @@ Before creating any new markdown file, verify:
 ```markdown
 ---
 type: episode
-id: episode-slug
 ---
 
-# 🎬 Episode Title
+# 🎬 ULTIMATE EPISODE METADATA SCHEMA (v1.0)
+
+*Standardized for Avatar Encyclopedia, Maxi-Minimalist UX Engine*
+
+**PHILOSOPHY:** Episodes mark the beats of the story. Detailed metadata captures narrative arcs, character focus, and thematic resonance.
+
+---
 
 ## 🖼️ UI - CARD VIEW
+*(Presentation Layer 1 - Unchanged)*
+
 ```md
 - Title: S1Ex - Episode Title
 - Book/Season: Water/Earth/Fire
@@ -388,18 +449,34 @@ id: episode-slug
 - Badge: Episode badge
 ```
 
+---
+
 ## 📖 UI - EXPANDED VIEW
+*(Presentation Layer 2 - Unchanged)*
+
 ```md
-### 📖 Episode Information
-- **Series:** Avatar: The Last Airbender
-- **Book:** Water/Earth/Fire
-- **Episode:** Number/Total
-- **Original Air Date:** YYYY-MM-DD
-- **Written by:** Author Name
-- **Directed by:** Director Name
+### 📖 Overview
+
+[Detailed episode summary and plot overview]
+
+### ✨ Key Moments
+
+[Pivotal scenes and important narrative beats]
+
+### 🎭 Characters Focus
+
+[Main characters featured and their roles in this episode]
+
+### 🌟 Themes
+
+[Thematic elements and narrative significance]
 ```
 
+---
+
 ## ⚙️ BACKEND METADATA
+*The invisible, hyper-structured engine. **Never rendered directly to the user.***
+
 ```json
 {
   "type": "episode",
@@ -424,9 +501,26 @@ id: episode-slug
 }
 ```
 
-## 📖 NARRATIVE CONTEXT
-```md
-[Episode narrative context and background information]
+---
+
+## 🧱 Semantic & Thematic Index
+*(The true heart of the filtering engine)*
+
+```json
+{
+  "archetype": "The Hero | The Rebel | The Mentor | The Trickster | The Ruler | The Innocent",
+  "thematicKeywords": ["keyword1", "keyword2"],
+  "tagCategories": {
+    "narrativeTags": ["tag1", "tag2"],
+    "combatTags": ["tag1", "tag2"],
+    "relationshipTags": ["tag1", "tag2"],
+    "emotionTags": ["tag1", "tag2"],
+    "politicalTags": ["tag1", "tag2"],
+    "arcTags": ["tag1", "tag2"],
+    "worldTags": ["tag1", "tag2"],
+    "triviaTags": ["tag1", "tag2"]
+  }
+}
 ```
 ```
 

@@ -110,10 +110,27 @@ async function parseMarkdownFile(filePath) {
     // which is error-prone. This new implementation uses the frontmatter as the base object, then
     // allows the JSON blocks and card view data to override it. This ensures all data from the
     // frontmatter is included and establishes a clear order of precedence, preventing inconsistencies.
+    
+    // Flatten nested JSON objects before merging
+    const flattenedJsonBlocks = [];
+    for (const jsonBlock of jsonBlocks) {
+      const flattened = {};
+      for (const [key, value] of Object.entries(jsonBlock)) {
+        if (typeof value === 'object' && value !== null) {
+          // Flatten nested objects
+          Object.assign(flattened, value);
+        } else {
+          // Keep top-level properties
+          flattened[key] = value;
+        }
+      }
+      flattenedJsonBlocks.push(flattened);
+    }
+    
     const mergedData = Object.assign(
       {},
       frontmatter,      // 1. Base data from YAML frontmatter
-      ...jsonBlocks,    // 2. Override with data from any JSON blocks
+      ...flattenedJsonBlocks,    // 2. Override with flattened data from JSON blocks
       cardViewData      // 3. Override with data from the card view
     );
     mergedData.__type = frontmatter.type; // Ensure the original type is preserved
@@ -123,7 +140,7 @@ async function parseMarkdownFile(filePath) {
     // --- PATCH: For episodes and characters, force title from JSON metadata if present ---
     if (mergedData.type === 'episode' || mergedData.type === 'character') {
       // Find the first JSON block with a 'title' field
-      const jsonTitle = jsonBlocks.find(b => b.title)?.title;
+      const jsonTitle = flattenedJsonBlocks.find(b => b.title)?.title;
       if (jsonTitle) mergedData.title = jsonTitle;
     }
     // --- END PATCH ---

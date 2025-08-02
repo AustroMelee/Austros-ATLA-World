@@ -98,105 +98,25 @@ User Interface
 ### The "Non-Negotiable Rule"
 This project operates under a **single, unbreakable principle**:
 
-> **"Every file must be connected unless it's documentation or tests"**
+**Every source file must be imported somewhere in the codebase.**
 
-This means:
-- ✅ All components are imported and used
-- ✅ All hooks are consumed by components
-- ✅ All utilities are called by other code
-- ❌ No orphaned files floating in the codebase
-- ❌ No dead code or unused imports
+This rule is enforced by automated checks and prevents:
+- Dead code accumulation
+- Orphaned files
+- Unused dependencies
+- Build bloat
 
-### Why This Matters
-- **Maintainability:** Easy to understand what's actually used
-- **Performance:** No unused code in the bundle
-- **Clarity:** Clear dependency relationships
-- **Quality:** Forces good architectural decisions
+### Template Standardization (January 2025 Update)
+All entity types follow a **consistent template structure**:
 
-### How to Follow It
-1. **Before committing:** Run `npm run lint` to catch unused imports
-2. **When adding files:** Ensure they're imported somewhere
-3. **When removing features:** Delete all related files
-4. **When refactoring:** Update all import paths
+- **Frontmatter:** `type: [category]` (standardized)
+- **Title Format:** `# [Emoji] ULTIMATE [CATEGORY] METADATA SCHEMA (v[version])`
+- **UI Card View:** `## 🖼️ UI - CARD VIEW` with `*(Presentation Layer 1 - Unchanged)*`
+- **UI Expanded View:** `## 📖 UI - EXPANDED VIEW` with `*(Presentation Layer 2 - Unchanged)*`
+- **Backend Metadata:** `## ⚙️ BACKEND METADATA` with description comment
+- **Semantic Index:** `## 🧱 Semantic & Thematic Index` with description comment
 
----
-
-## 📚 Required Reading (In Order)
-
-### 1. Data Pipeline (`docs/data_pipeline.md`)
-**Why read first:** Understanding how data flows is fundamental to everything else.
-
-**Key concepts:**
-- How markdown files become JSON data
-- The enrichment process and tag normalization
-- Template exclusion and validation rules
-- The build process and error handling
-
-**What you'll learn:**
-- Raw data structure and YAML frontmatter
-- Script execution order and dependencies
-- Data validation and error reporting
-- How to add new content types
-
-### 2. Data Flow (`docs/data_flow.md`)
-**Why read second:** See the visual flow diagrams and understand data movement.
-
-**Key concepts:**
-- Complete data journey from raw files to UI
-- Hook dependencies and state management
-- Performance optimizations and caching
-- Component hierarchy and data consumption
-
-**What you'll learn:**
-- How search indexing works with FlexSearch
-- Image loading and fallback strategies
-- Collections state management with localStorage
-- Component data flow patterns
-
-### 3. Frontend Architecture (`docs/frontend_architecture.md`)
-**Why read third:** Understand the React component structure and patterns.
-
-**Key concepts:**
-- Component hierarchy and responsibility separation
-- Hook patterns and custom hook design
-- TypeScript type safety and domain modeling
-- Performance optimization strategies
-
-**What you'll learn:**
-- How to create new components following project patterns
-- Hook composition and state management
-- Type definitions and domain modeling
-- Performance profiling and optimization
-
-### 4. Styling (`docs/styling.md`)
-**Why read fourth:** Master the visual design system and theming.
-
-**Key concepts:**
-- Tailwind CSS configuration and custom classes
-- CRT screen effects and matrix rain styling
-- Nation-based color theming
-- Responsive design patterns
-
-**What you'll learn:**
-- How to style new components consistently
-- Color palette and theming system
-- Animation and visual effects
-- Responsive design best practices
-
-### 5. Source of Truth (`docs/source_of_truth.md`)
-**Why read last:** Understand the project standards and non-negotiables.
-
-**Key concepts:**
-- Project rules and coding standards
-- File organization and naming conventions
-- Documentation requirements
-- Quality gates and validation
-
-**What you'll learn:**
-- How to write code that meets project standards
-- Documentation requirements and formats
-- Testing and validation expectations
-- Deployment and maintenance procedures
+**No exceptions or special cases are allowed.** All entity types must follow this exact structure.
 
 ---
 
@@ -220,7 +140,7 @@ This means:
 
 ### Adding New Content
 1. **Create markdown file** in appropriate `raw-data/` folder
-2. **Follow template structure** with YAML frontmatter
+2. **Follow standardized template structure** with required sections and comments
 3. **Add image** to `public/assets/images/`
 4. **Run data pipeline:** `npm run build:data`
 5. **Test in UI** and verify display
@@ -241,13 +161,30 @@ This means:
 # 1. Create markdown file
 touch raw-data/characters/new-character.md
 
-# 2. Add content following character template
+# 2. Add content following standardized character template
 # 3. Add image to public/assets/images/
 # 4. Rebuild data
 npm run build:data
 
 # 5. Test in browser
 npm run dev
+```
+
+### Adding a New Episode
+```bash
+# 1. Create markdown file
+touch raw-data/episodes/new-episode.md
+
+# 2. Add content following standardized episode template
+# 3. Include image field in JSON metadata (CRITICAL)
+# 4. Use S1Ex title prefix in JSON metadata (CRITICAL)
+# 5. Rebuild data pipeline
+npm run build:data
+
+# 6. Restart development server
+npm run dev
+
+# 7. Verify episode appears in UI
 ```
 
 ### Adding a New Filter
@@ -295,49 +232,13 @@ npm run lint && npm run type-check
 - Verify all dependencies are installed
 - Review error messages for specific issues
 
+**"Template standardization errors"**
+- Ensure all templates follow consistent format
+- Check for required sections and comments
+- Verify standardized structure across all entity types
+
 ### Getting Help
 1. **Check documentation first** - most answers are here
 2. **Review troubleshooting guide** - `docs/troubleshooting.md`
-3. **Check recent changes** - what was modified recently?
-4. **Ask specific questions** - include error messages and context
-
----
-
-## 🎓 Next Steps
-
-### After Onboarding
-1. **Explore the codebase** - read through key components
-2. **Make a small change** - add a test character or modify styling
-3. **Review documentation** - ensure it's up to date
-4. **Ask questions** - don't hesitate to seek clarification
-
-### Advanced Topics
-- **Performance optimization** - React.memo, useMemo, useCallback
-- **Testing strategies** - unit tests, integration tests
-- **Deployment** - build process and hosting
-- **Data pipeline extensions** - adding new content types
-
-### Resources
-- **Project Rules:** `projectrules.mdc`
-- **Character Index:** `docs/character-cards-index.md`
-- **Group Index:** `docs/group-cards-index.md`
-- **FAQ:** `docs/faq.md`
-
----
-
-## 🏆 Success Metrics
-
-You'll know you're successfully onboarded when you can:
-
-- ✅ **Set up the environment** in under 15 minutes
-- ✅ **Add new content** following the data pipeline
-- ✅ **Create new components** following project patterns
-- ✅ **Debug issues** using the troubleshooting guide
-- ✅ **Follow the non-negotiable rule** consistently
-- ✅ **Contribute to documentation** and keep it updated
-
----
-
-*Welcome to the team! You're now ready to contribute to an "Interstellar" level codebase.* 🚀
-
-*Last Updated: January 2025* 
+3. **Check markdown checklist** - `docs/markdown-file-checklist.md`
+4. **Review automation guide** - `docs/automation.md` 

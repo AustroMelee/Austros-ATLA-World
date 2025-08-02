@@ -2,17 +2,29 @@
 type: fauna
 ---
 
-# 🐾 [Animal Name]
+# 🐾 ULTIMATE FAUNA METADATA SCHEMA (v1.0)
+
+*Standardized for Avatar Encyclopedia, Maxi-Minimalist UX Engine*
+
+**PHILOSOPHY:** Animals reflect the world's diversity and cultural significance. Rich metadata captures their ecological roles, cultural importance, and narrative connections.
+
+---
 
 ## 🖼️ UI - CARD VIEW
+*(Presentation Layer 1 - Unchanged)*
 
+```md
 - Name: [Animal Name]
 - Nation: [Air Nomads/Water Tribe/Earth Kingdom/Fire Nation/Neutral]
 - Animal Type: [mammal/bird/reptile/fish/insect/amphibian/crustacean/hybrid]
 - Habitat: [terrestrial/aquatic/aerial/arboreal/underground]
 - Short Description: [Brief description of the animal]
+```
+
+---
 
 ## 📖 UI - EXPANDED VIEW
+*(Presentation Layer 2 - Unchanged)*
 
 ```md
 ### 📖 Overview
@@ -36,7 +48,14 @@ type: fauna
 [Detailed information about the animal's behavior, abilities, and unique characteristics]
 ```
 
-## 🏷️ Metadata
+---
+
+## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+*The invisible, hyper-structured engine. **Never rendered directly to the user.***
+
+---
+
+## 🧬 Biological Profile
 
 ```json
 {
@@ -58,5 +77,73 @@ type: fauna
   "size": "[small/medium/large]",
   "lifespan": "[short/medium/long]",
   "conservationStatus": "[common/rare/endangered/extinct]"
+}
+```
+
+---
+
+## 🌍 Ecological & Cultural Context
+
+```json
+{
+  "habitatDetails": "string[]",
+  "geographicDistribution": "string[]",
+  "culturalUses": "string[]",
+  "spiritualSignificance": "string[]",
+  "economicValue": "string[]",
+  "domesticationStatus": "wild | domesticated | semi_domesticated",
+  "interactionWithHumans": "string[]"
+}
+```
+
+---
+
+## 🎭 Narrative & Thematic Significance
+
+```json
+{
+  "narrativeAppearances": "string[]",
+  "characterAssociations": "string[]",
+  "thematicKeywords": "string[]",
+  "symbolicMeanings": "string[]",
+  "storytellingRole": "string"
+}
+```
+
+---
+
+## 🧱 Semantic & Thematic Index
+*(The true heart of the filtering engine)*
+
+```json
+{
+  "thematicKeywords": "string[]",
+  "notableExamples": "string[]",
+  "habitatTypes": "string[]",
+  "tagCategories": {
+    "biologicalTags": "string[]",
+    "culturalTags": "string[]",
+    "narrativeTags": "string[]",
+    "thematicTags": "string[]",
+    "ecologicalTags": "string[]",
+    "triviaTags": "string[]"
+  }
+}
+```
+
+---
+
+## 🔮 AI/Filtering & System Flags
+
+```json
+{
+  "relatedCards": "string[]",
+  "filterWeight": "number (0-100)",
+  "canonicalImportance": "core | primary | secondary | tertiary | background",
+  "dataCompletenessScore": "number (0.0-1.0)",
+  "searchableKeywords": "string[]",
+  "fuzzySynonyms": "string[]",
+  "searchAliases": "string[]",
+  "isSuggestedInXContext": "string[]"
 }
 ``` 
