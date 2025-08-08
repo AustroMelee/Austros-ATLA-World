@@ -149,6 +149,11 @@ graph TD
   - 👻 **Spirits**: `FaGhost` - Cyan (`text-cyan-400`)
 - **Sharp Terminal Keys:** Matrix-themed button styling with glassmorphism effects
 
+**Location Sub-Filtering (2025 Aug Update):**
+- Data-backed keys: `capital`, `city`, `village`, `temple`, `island`, `desert`, `swamp`.
+- Heuristic match over `locationType`, `region`, `terrain`, `name`, `slug` with term synonyms (e.g., `island` ↔ `archipelago`, `coast`).
+- Add new subfilter by extending the `locations` array in `Home.tsx` and the `synonyms` map in `applyFilters.ts`.
+
 **Sub-Filtering (January 2025 Update):**
 - **Dynamic Options:** Sub-filters appear only when a core filter is selected
 - **Age Ranges:** Child, teen, young adult, adult, elder (with animal exclusion)
@@ -192,12 +197,29 @@ graph TD
 5. **Search:** Apply text search to filtered results
 6. **Memoization:** All filtering results cached with `useMemo` to prevent wasteful re-computation
 
-**Nation Filtering:**
+**Nation Filtering (2025 Aug Update):**
+- Uses `computeNationFromEntity` to normalize phrases (e.g., “north pole”, “Fire Nation archipelago”) to canonical nations.
+- Synonym matching expands each selected nation to common variants (e.g., water → “water tribe”, “north pole”, “south pole”, “northern/southern water tribe”).
 ```typescript
 if (activeNations.size > 0) {
-  itemsToFilter = itemsToFilter.filter(item => 
-    item.nation && activeNations.has(item.nation.toLowerCase())
-  );
+  items = items.filter(item => {
+    const normalized = computeNationFromEntity(item);
+    const rawNation = item.nation;
+    const region = getField<string>(item, 'region');
+    const haystacks = [normalized, rawNation, region]
+      .filter(Boolean)
+      .map(v => String(v).toLowerCase());
+    const synonyms: Record<string, string[]> = {
+      air: ['air', 'air nomads'],
+      earth: ['earth', 'earth kingdom'],
+      fire: ['fire', 'fire nation'],
+      water: ['water', 'water tribe', 'north pole', 'south pole', 'northern water tribe', 'southern water tribe'],
+    };
+    return Array.from(activeNations).some(sel => {
+      const terms = synonyms[sel] || [sel];
+      return terms.some(term => haystacks.some(h => h.includes(term)));
+    });
+  });
 }
 ```
 

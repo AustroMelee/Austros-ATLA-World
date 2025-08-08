@@ -388,6 +388,46 @@ ls raw-data/episodes/ | grep "episode-name"
 - Backend metadata in separate section
 **Prevention:** All new entity types must follow this exact structure
 
+### Nation icons missing on most location cards (RESOLVED – 2025 Aug)
+**Problem:** Nation icon shows globe for locations; only Air entries show correct icon.
+**Root Cause:** Location records use non‑canonical nation strings (e.g., "Northeastern Earth Kingdom", "Fire Nation archipelago", "north pole"), while the icon map expects canonical names.
+**Solution:** Introduced normalization in `computeNationFromEntity` and made cards prefer the normalized value.
+- Normalizes phrases → canonical nations:
+  - Air Nomads
+  - Water Tribe (includes “north pole”, “south pole”, “Northern/Southern Water Tribe”)
+  - Earth Kingdom
+  - Fire Nation
+- Cards now call `computeNationFromEntity(entity)` before falling back to raw `nation`.
+**Files Affected:**
+- `src/utils/data.ts` (new `computeNationFromEntity` and mappings)
+- `src/components/ItemCard/ItemCardCollapsed.tsx` and `ItemCardModal.tsx` (prefer computed nation)
+**Verification:** Open any location card (e.g., Chin Village, Crescent Island); icon should match nation.
+**Prevention:** Keep nation phrases canonical in content; if new phrasing appears, add it to normalization map.
+
+### Water nation filter not returning locations (RESOLVED – 2025 Aug)
+**Problem:** Selecting the Water nation filter returns no locations.
+**Root Cause:** Filter matched only the literal word "water" or "water tribe"; many water entries use “north pole”, “south pole”, or explicit tribe names.
+**Solution:** Expanded nation filter synonyms and applied them to normalized nation, raw nation, and region fields.
+- Water synonyms: ["water", "water tribe", "north pole", "south pole", "northern water tribe", "southern water tribe"].
+- Also normalized synonyms for air/earth/fire.
+**Files Affected:** `src/utils/applyFilters.ts` (nation filter uses `computeNationFromEntity` + synonyms)
+**Verification:** Water filter now returns Northern/Southern Water Tribe and polar entries.
+**Prevention:** When adding new data, prefer canonical `nation`; keep synonyms list updated if new phrasings appear.
+
+### Location subfilters not working / too many options (RESOLVED – 2025 Aug)
+**Problem:** Location subfilters didn’t match real data; UI showed non‑functional or overly granular options.
+**Root Cause:** Subfilters didn’t correspond to fields present in enriched data (`locationType`, `region`, `terrain`, or names).
+**Solution:** Reduced to a data‑backed set and implemented heuristic matching over multiple fields.
+- Current subfilters: `capital`, `city`, `village`, `temple`, `island`, `desert`, `swamp`.
+- Heuristic checks: `locationType`, `region`, `terrain`, `name`, and `slug` with term synonyms (e.g., island ↔ archipelago/coast).
+**Files Affected:**
+- `src/pages/Home.tsx` (subfilter options list)
+- `src/utils/applyFilters.ts` (location subfilter heuristic)
+**How to add a new subfilter:**
+1) Add `{ key: '<new_key>' }` to the `locations` array in `Home.tsx`.
+2) Extend the `synonyms` map for locations in `applyFilters.ts` to include the terms to match.
+3) Run `npm run type-check && npm run lint`.
+
 ## Prevention Guidelines
 
 ### Markdown File Structure

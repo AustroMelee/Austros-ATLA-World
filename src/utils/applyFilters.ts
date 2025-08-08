@@ -1,5 +1,6 @@
 import type { EnrichedEntity } from '../search/types';
 import type { Collection } from '../types/domainTypes';
+import { computeNationFromEntity, getField } from './data';
 
 interface ApplyFiltersArgs {
   entities: EnrichedEntity[];
@@ -27,12 +28,26 @@ export function applyFilters({
   }
 
   if (activeNations.size > 0) {
-    items = items.filter(item =>
-      item.nation &&
-      Array.from(activeNations).some(n =>
-        item.nation!.toLowerCase().includes(n.toLowerCase())
-      )
-    );
+    items = items.filter(item => {
+      const normalized = computeNationFromEntity(item);
+      const rawNation = item.nation;
+      const region = getField<string>(item, 'region');
+      const haystacks = [normalized, rawNation, region]
+        .filter(Boolean)
+        .map(v => String(v).toLowerCase());
+
+      const synonyms: Record<string, string[]> = {
+        air: ['air', 'air nomads'],
+        earth: ['earth', 'earth kingdom'],
+        fire: ['fire', 'fire nation'],
+        water: ['water', 'water tribe', 'north pole', 'south pole', 'northern water tribe', 'southern water tribe'],
+      };
+
+      return Array.from(activeNations).some(sel => {
+        const terms = synonyms[sel] || [sel];
+        return terms.some(term => haystacks.some(h => h.includes(term)));
+      });
+    });
   }
 
   if (activeCoreFilter) {
@@ -99,6 +114,35 @@ export function applyFilters({
         }
         if (activeCoreFilter === 'foods') {
           if (item.tags?.some(tag => tag.toLowerCase() === subFilterLower)) return true;
+          const origin = getField<string>(item, 'origin');
+          if (origin && origin.toLowerCase().includes(subFilterLower)) return true;
+        }
+        if (activeCoreFilter === 'locations') {
+          // Heuristic matching to real data fields
+          const locationType = getField<string>(item, 'locationType');
+          const region = getField<string>(item, 'region');
+          const terrain = getField<string>(item, 'terrain');
+          const name = (item.name || '').toLowerCase();
+          const slug = (getField<string>(item, 'slug') || '').toLowerCase();
+
+          // Normalize a few common keys
+          const key = subFilterLower;
+          const synonyms: Record<string, string[]> = {
+            capital: ['capital'],
+            city: ['city'],
+            village: ['village'],
+            temple: ['temple'],
+            island: ['island', 'archipelago', 'coast'],
+            desert: ['desert'],
+            swamp: ['swamp']
+          };
+          const terms = synonyms[key] || [key];
+
+          const haystacks = [locationType, region, terrain, name, slug]
+            .filter(Boolean)
+            .map(v => String(v).toLowerCase());
+
+          return terms.some(t => haystacks.some(h => h.includes(t)));
         }
         if (activeCoreFilter === 'fauna') {
           // Map subfilters to actual tags and metadata available in fauna entries

@@ -6,7 +6,7 @@ import { toTitleCase } from '../../utils/stringUtils';
 import { CustomMarkdownRenderer } from '../CustomMarkdownRenderer';
 import { useImageFallback } from '../../hooks/useImageFallback';
 import { fallbackImages, universalFallback } from './imageFallbacks';
-import { getField } from '../../utils/data';
+import { getField, computeNationFromEntity } from '../../utils/data';
 import { nationThemeMap } from '../../theme/nationThemes';
 import { useScrollLock } from '../../hooks/useScrollLock';
 
@@ -17,7 +17,7 @@ interface ItemCardModalProps {
 
 export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
   const role = getField(item, 'role');
-  const nation = getField(item, 'nation');
+  const nation = computeNationFromEntity(item) || getField(item, 'nation');
   const slug = getField(item, 'slug');
   const image = getField(item, 'image');
   const slugKey = (slug || item.id) as string;

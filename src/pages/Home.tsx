@@ -82,9 +82,13 @@ export function Home({
         { key: 'preserved_travel_foods', symbol: <span className="text-gray-400">🥩 Preserved & Travel Foods</span> }
       ],
       locations: [
-        { key: 'cities' },
-        { key: 'temples' },
-        { key: 'wilderness' }
+        { key: 'capital' },
+        { key: 'city' },
+        { key: 'village' },
+        { key: 'temple' },
+        { key: 'island' },
+        { key: 'desert' },
+        { key: 'swamp' }
       ],
       bending: [
         { key: 'firebending' },

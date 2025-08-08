@@ -5,7 +5,7 @@ import NationIcon from '../NationIcon/NationIcon';
 import { toTitleCase, getInitials } from '../../utils/stringUtils';
 import { useImageFallback } from '../../hooks/useImageFallback';
 import { fallbackImages, universalFallback } from './imageFallbacks';
-import { getField } from '../../utils/data';
+import { getField, computeNationFromEntity } from '../../utils/data';
 import CollectionCardButton from '../Collections/CollectionCardButton';
 import AddToCollectionPopover from '../Collections/AddToCollectionPopover';
 import type { UseCollectionsReturn } from '../../hooks/useCollections';
@@ -41,7 +41,7 @@ function getBadge(item: EnrichedEntity): string | undefined {
 export default function ItemCardCollapsed({ item, onExpand, collectionsApi }: ItemCardCollapsedProps) {
   const iconText = item.name && typeof item.name === 'string' ? getInitials(item.name) : '';
   const badge = getBadge(item);
-  const nation = getField(item, 'nation');
+  const nation = computeNationFromEntity(item) || getField(item, 'nation');
   const slug = getField(item, 'slug');
   const image = getField(item, 'image');
   const slugKey = (slug || item.id) as string;
