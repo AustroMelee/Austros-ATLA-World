@@ -197,4 +197,4 @@ Aang must travel to an herbalist to retrieve a cure for the ill Sokka and Katara
   ],
   "expandedView": "This episode introduces one of the series' most compelling dynamics - the potential for friendship between Aang and Zuko. The Blue Spirit identity allows Zuko to operate outside Fire Nation expectations while still pursuing his goal. The episode explores themes of cooperation between enemies and the complexity of identity, setting up the series' later development of Zuko's character arc."
 }
-``` 
+```

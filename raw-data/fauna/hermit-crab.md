@@ -59,4 +59,4 @@ Hermit crabs are known for their unique shell-carrying behavior. They are omnivo
   "lifespan": "medium",
   "conservationStatus": "common"
 }
-``` 
+```

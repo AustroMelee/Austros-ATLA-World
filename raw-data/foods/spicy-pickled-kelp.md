@@ -188,4 +188,4 @@ The tradition of Spicy Pickled Kelp has been a cornerstone of Earth Kingdom coas
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

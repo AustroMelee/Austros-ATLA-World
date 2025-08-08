@@ -93,4 +93,4 @@ Badgermoles are protected and revered throughout the Earth Kingdom. Their popula
   "lifespan": "100+ years, some centuries old",
   "conservationStatus": "Protected and revered, never harmed"
 }
-``` 
+```

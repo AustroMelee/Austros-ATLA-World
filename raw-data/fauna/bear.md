@@ -93,4 +93,4 @@ Bears are rare and protected throughout the Earth Kingdom. Their populations are
   "lifespan": "20-30 years",
   "conservationStatus": "Rare and protected, national treasure"
 }
-``` 
+```

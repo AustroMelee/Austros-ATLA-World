@@ -55,6 +55,7 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 ⚙️ BACKEND METADATA
 
 #### 🦪 Identity & Demographics
+
 ```json
 {
   "id": "poppy-beifong",
@@ -75,6 +76,7 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 ```
 
 #### 🔥 Abilities, Skills & Combat Profile
+
 ```json
 {
   "isBender": false,
@@ -88,6 +90,7 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 ```
 
 #### 🧭 Affiliations, Politics & Alignment
+
 ```json
 {
   "currentAffiliations": ["Beifong family"],
@@ -96,6 +99,7 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 ```
 
 #### 🎭 Narrative Metrics
+
 ```json
 {
   "narrativeFunction": "supporting",
@@ -107,6 +111,7 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 ```
 
 #### 🤝 Relational Matrix
+
 ```json
 {
   "relationships": [
@@ -118,6 +123,7 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 ```
 
 #### 🧠 Psycho-Emotional Profile
+
 ```json
 {
   "positiveTraits": ["Cheerful", "Polite", "Loving", "Supportive"],
@@ -127,6 +133,7 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 ```
 
 #### 📦 Physicality & Presentation
+
 ```json
 {
     "image": "poppy.jpg",
@@ -135,6 +142,7 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
 ```
 
 #### 🏷️ Tags & Categories
+
 ```json
 {
   "tags": ["Earth Kingdom", "Gaoling", "Mother", "Matriarch", "Female", "Nobility", "Book Two", "The Blind Bandit"],
@@ -146,4 +154,3 @@ A minor but emotionally resonant character, Poppy’s arc explores the challenge
   }
 }
 ```
-

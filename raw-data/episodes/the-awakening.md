@@ -103,6 +103,7 @@ Aang awakens to find himself weakened aboard a stolen Fire Nation ship with the 
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "previous_episode": "crossroads-of-destiny",

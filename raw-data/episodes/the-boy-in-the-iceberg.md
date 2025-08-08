@@ -184,4 +184,4 @@ While fishing, siblings Katara and Sokka discover Aang, a young boy frozen in an
   ],
   "expandedView": "The series premiere introduces the main characters and sets up the central conflict. Aang's discovery marks the beginning of his journey as the Avatar, while Zuko's pursuit establishes the ongoing threat. The episode balances innocence with the harsh reality of war, setting the tone for the entire series."
 }
-``` 
+```

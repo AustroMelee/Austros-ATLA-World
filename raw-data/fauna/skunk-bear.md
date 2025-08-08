@@ -93,4 +93,4 @@ Skunk Bears are common throughout their range and are generally left alone due t
   "lifespan": "12-18 years",
   "conservationStatus": "Common, generally left alone due to defensive capabilities"
 }
-``` 
+```

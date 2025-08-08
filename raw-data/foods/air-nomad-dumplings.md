@@ -195,4 +195,4 @@ These dumplings represent the Air Nomads' philosophy of living in harmony with n
   "searchAliases": ["dumplings", "vegetables", "steamed", "monk food", "temple cuisine"],
   "isSuggestedInXContext": ["air_nomad_culture", "vegetarian_food", "traditional_dishes"]
 }
-``` 
+```

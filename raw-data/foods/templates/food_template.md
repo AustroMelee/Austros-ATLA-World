@@ -11,6 +11,7 @@ type: food
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -22,6 +23,7 @@ type: food
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -49,6 +51,7 @@ type: food
 ---
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 *The invisible, hyper-structured engine. **Never rendered directly to the user.***
 
 ---
@@ -182,6 +185,7 @@ type: food
 ---
 
 ## 🧱 Semantic & Thematic Index
+
 *(The true heart of the filtering engine)*
 
 ```json
@@ -219,4 +223,4 @@ type: food
   "searchAliases": "string[]",
   "isSuggestedInXContext": "string[]"
 }
-``` 
+```

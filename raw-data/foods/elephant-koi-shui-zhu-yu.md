@@ -198,4 +198,4 @@ This dish represents the complex relationship between the Fire Nation and Earth 
   "searchAliases": ["fish", "elephant koi", "fire nation", "poached", "fusion"],
   "isSuggestedInXContext": ["fire_nation_cuisine", "fusion_foods", "sophisticated_dishes"]
 }
-``` 
+```

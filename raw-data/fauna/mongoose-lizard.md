@@ -77,4 +77,4 @@ Due to their practical value as transportation animals, Mongoose Lizards are act
   "lifespan": "Moderate lifespan, relatively easy to breed in captivity",
   "conservationStatus": "Actively bred and maintained, readily available for use"
 }
-``` 
+```

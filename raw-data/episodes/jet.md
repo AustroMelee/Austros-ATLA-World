@@ -134,4 +134,4 @@ Traveling by foot, Team Avatar accidentally stumbles into a Fire Nation camp. Th
 
 ```md
 This episode introduces Jet and the Freedom Fighters, establishing the moral complexity of the war between the Earth Kingdom and Fire Nation. It explores themes of trust, leadership, and the cost of war, while developing Sokka's character as someone whose instincts should be trusted. The episode also marks the first time Katara uses her ice breath ability to freeze someone, demonstrating her growing waterbending skills. Jet's character serves as a foil to show how the war can corrupt even those fighting for a just cause, and his willingness to sacrifice innocent lives foreshadows the darker aspects of the conflict that will be explored in later episodes.
-``` 
+```

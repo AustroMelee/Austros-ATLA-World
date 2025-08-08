@@ -66,6 +66,7 @@ The development of Seaweed Bread represents the Water Tribe's response to the ch
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -89,6 +90,7 @@ The development of Seaweed Bread represents the Water Tribe's response to the ch
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -112,6 +114,7 @@ The development of Seaweed Bread represents the Water Tribe's response to the ch
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -136,6 +139,7 @@ The development of Seaweed Bread represents the Water Tribe's response to the ch
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -160,6 +164,7 @@ The development of Seaweed Bread represents the Water Tribe's response to the ch
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

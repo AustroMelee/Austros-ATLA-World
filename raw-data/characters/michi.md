@@ -55,6 +55,7 @@ A supporting character whose arc highlights the tension between loyalty to famil
 ```
 
 ---
+
 ```json
 {
   "id": "michi",

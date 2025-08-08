@@ -22,6 +22,7 @@ The NASA-level automation system has been successfully implemented and tested. A
 - ✅ **Group Data Processing** - Working (~10+ items)
 - ✅ **Location Data Processing** - Working (4 Air Temples)
 - ✅ **Episode Data Processing** - Working (Type-agnostic episode parsing and enrichment)
+- ✅ **Episode Book/Nation Inference** - Working (Aug 2025: infer Book and nation from SxEx when fields are missing)
 - ✅ **Episode Creation Workflow** - Working (Create file → rebuild pipeline → restart server)
 - ✅ **Collections System** - Working (Enhanced 2025)
 - ✅ **Enhanced UI Components** - Working (Matrix-themed styling)
@@ -150,6 +151,12 @@ Automatically formats and checks staged files:
 - **Prevention:** Ensures episode files use proper header format and content structure
 
 ### Gate 11: Episode Image Field Validation (2025 January Update)
+### Gate 13: Episode Book/Nation Inference (2025 Aug)
+- **Purpose:** Ensure episodes without explicit `book` still pass filters and nation theming.
+- **Checks:** Book inference from `book`, `metadata.book`, or `SxEx` in `title`/`name` maps to season; nation derived 1→Water, 2→Earth, 3→Fire.
+- **Failure:** Filters or nation theming break for those episodes.
+- **Command:** Manual verification in UI; unit coverage optional.
+
 - **Purpose:** Ensures episode files include required image fields to prevent placeholder text display
 - **Checks:** All episode JSON metadata must include `image` field with valid filename
 - **Failure:** Prevents commits with episode files that show placeholder text instead of images

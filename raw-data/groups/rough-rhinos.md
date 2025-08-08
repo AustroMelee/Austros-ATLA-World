@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -44,7 +46,6 @@ The Rough Rhinos are introduced as a veteran, intimidating force representing th
 - Colonel Mongke (Founder)
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -123,4 +124,4 @@ The Rough Rhinos are introduced as a veteran, intimidating force representing th
     "Raiding and intimidation tactics"
   ]
 }
-``` 
+```

@@ -7,6 +7,7 @@ type: episode
 ## Frontend Display
 
 ### Card View
+
 **S3E16 - The Southern Raiders** 🌊
 *Revenge* | *Book Three: Fire*
 "I always wondered what kind of person could do such a thing."
@@ -14,6 +15,7 @@ type: episode
 ### Expanded View
 
 #### 📺 Episode Details
+
 **Title:** S3E16 - The Southern Raiders  
 **Series:** Avatar: The Last Airbender  
 **Season/Book:** Book Three: Fire  
@@ -22,19 +24,23 @@ type: episode
 **Runtime:** 25 minutes  
 
 #### 📝 Synopsis
+
 Katara still harbors deep resentment toward Zuko for his betrayal in Ba Sing Se. When Zuko offers to help her find the man who killed her mother, she sees an opportunity for revenge. Together, they track down Yon Rha, the former Southern Raiders commander responsible for Kya's death. Using powerful waterbending enhanced by the full moon, Katara confronts her mother's killer. However, when she finally faces him, she realizes that revenge will not bring her peace or her mother back. Instead, she chooses forgiveness for Zuko while refusing to forgive Yon Rha, understanding the difference between the two situations.
 
 #### 🎭 Main Characters
+
 **Team Avatar:** Katara, Zuko, Aang, Sokka  
 **Southern Raiders:** Yon Rha (former commander), Current commander  
 **Water Tribe:** Kya (flashbacks), Hakoda (flashbacks)  
 **Supporting:** Yon Rha's mother  
 
 #### 🗺️ Locations
+
 **Primary:** Southern Raiders ship, Yon Rha's village  
 **Secondary:** Southern Water Tribe (flashbacks), Fire Navy outpost  
 
 #### 📋 Key Topics
+
 - **Revenge vs Justice:** Moral complexity of vengeance  
 - **Forgiveness:** Choosing to let go of hatred  
 - **Mother-Daughter Bonds:** Kya's sacrifice and legacy  
@@ -46,6 +52,7 @@ Katara still harbors deep resentment toward Zuko for his betrayal in Ba Sing Se.
 ## Backend Metadata
 
 ### Episode Details
+
 ```json
 {
   "id": "the-southern-raiders-episode",
@@ -61,6 +68,7 @@ Katara still harbors deep resentment toward Zuko for his betrayal in Ba Sing Se.
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "series": "Avatar: The Last Airbender",

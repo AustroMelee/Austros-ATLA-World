@@ -40,6 +40,7 @@ The tradition of Jook represents the Earth Kingdom's long-standing commitment to
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "jook",
@@ -59,6 +60,7 @@ The tradition of Jook represents the Earth Kingdom's long-standing commitment to
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "dietary": ["vegetarian", "vegan"],
@@ -71,6 +73,7 @@ The tradition of Jook represents the Earth Kingdom's long-standing commitment to
 ```
 
 ## 🥘 Ingredients & Nutritional Profile
+
 ```json
 {
   "ingredients": {
@@ -90,6 +93,7 @@ The tradition of Jook represents the Earth Kingdom's long-standing commitment to
 ```
 
 ## 🏛️ Cultural & Thematic Significance
+
 ```json
 {
   "cultural_significance": {
@@ -108,6 +112,7 @@ The tradition of Jook represents the Earth Kingdom's long-standing commitment to
 ```
 
 ## 📚 Appearances & Variations
+
 ```json
 {
   "appearances": {

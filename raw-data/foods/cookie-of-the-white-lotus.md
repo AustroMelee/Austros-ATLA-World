@@ -199,4 +199,4 @@ These cookies represent the Order of the White Lotus's commitment to intellectua
   "searchAliases": ["cookies", "white lotus", "pai sho", "dessert", "order"],
   "isSuggestedInXContext": ["white_lotus_culture", "pai_sho_games", "traditional_desserts"]
 }
-``` 
+```

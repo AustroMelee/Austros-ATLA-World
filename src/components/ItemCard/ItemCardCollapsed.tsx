@@ -61,6 +61,43 @@ export default function ItemCardCollapsed({ item, onExpand, collectionsApi }: It
   const nationKey = nation || 'default';
   const titleColor = nationThemeMap[nationKey]?.main || nationThemeMap.default.main;
 
+  const displayTitle: string = (() => {
+    const name = typeof item.name === 'string' ? item.name : '';
+    const title = getField<string>(item, 'title') || '';
+    const hasSxEx = (s: string) => /s\s*\d+\s*e\s*\d+/i.test(s);
+    if (item.type === 'episode') {
+      if (hasSxEx(name)) return name;
+      if (hasSxEx(title)) return title;
+
+      const bookRaw = getField<string>(item, 'book') || '';
+      const book = bookRaw.toLowerCase();
+      const season = book.includes('water') || book.includes('book 1') || book === '1' ? 1
+        : book.includes('earth') || book.includes('book 2') || book === '2' ? 2
+        : book.includes('fire') || book.includes('book 3') || book === '3' ? 3
+        : null;
+
+      const episodeRaw = getField<string | number>(item, 'episode');
+      let episodeNum: number | null = null;
+      if (typeof episodeRaw === 'number') {
+        episodeNum = episodeRaw;
+      } else if (typeof episodeRaw === 'string') {
+        const mx = episodeRaw.match(/^(\d+)\s*x\s*(\d+)$/i);
+        if (mx) {
+          episodeNum = parseInt(mx[2], 10);
+        } else {
+          const onlyNum = episodeRaw.trim();
+          if (/^\d+$/.test(onlyNum)) episodeNum = parseInt(onlyNum, 10);
+        }
+      }
+
+      if (season !== null && episodeNum !== null) {
+        const base = name || title;
+        return `S${season}E${episodeNum} - ${base}`;
+      }
+    }
+    return toTitleCase(name || title);
+  })();
+
   return (
     <>
       <div
@@ -116,7 +153,7 @@ export default function ItemCardCollapsed({ item, onExpand, collectionsApi }: It
                   className="font-bold text-sm leading-tight overflow-hidden text-ellipsis flex-1 min-w-0"
                   style={{ color: titleColor }}
                 >
-                  {toTitleCase(item.name)}
+                  {displayTitle}
                 </h3>
                 {nation && (
                   <NationIcon

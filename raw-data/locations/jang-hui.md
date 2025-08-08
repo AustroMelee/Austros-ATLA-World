@@ -95,4 +95,4 @@ Jang Hui is a poor village in the Fire Nation composed of floating houseboats co
   ],
   "tags": ["river_village", "floating_houseboats", "poor_community", "river_lifestyle", "economic_diversity", "traditional_culture", "community_resilience"]
 }
-``` 
+```

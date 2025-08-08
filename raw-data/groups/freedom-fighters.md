@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -48,7 +50,6 @@ The Freedom Fighters serve as a cautionary tale about the cost of war and how a 
 - The Duke
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -135,4 +136,4 @@ The Freedom Fighters serve as a cautionary tale about the cost of war and how a 
     "Expertise in forest ambushes and traversal"
   ]
 }
-``` 
+```

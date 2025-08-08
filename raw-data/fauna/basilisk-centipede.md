@@ -77,4 +77,4 @@ Basilisk Centipedes are relatively common in their native habitat within the Fir
   "lifespan": "Relatively short lifespan, reproduces quickly",
   "conservationStatus": "Relatively common, stable populations in volcanic habitat"
 }
-``` 
+```

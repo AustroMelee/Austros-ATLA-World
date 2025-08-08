@@ -11,6 +11,7 @@ type: episode
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -24,6 +25,7 @@ type: episode
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Updated)*
 
 ```md
@@ -67,6 +69,7 @@ type: episode
 ---
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 *The invisible, hyper-structured engine. **Never rendered directly to the user.***
 
 ---
@@ -115,4 +118,4 @@ type: episode
   "culturalElements": ["string"],
   "expandedView": "string"
 }
-``` 
+```

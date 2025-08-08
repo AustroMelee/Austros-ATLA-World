@@ -7,6 +7,7 @@ type: episode
 ## Frontend Display
 
 ### Card View
+
 **S3E13 - The Firebending Masters** 🔥
 *Dragons* | *Book Three: Fire*
 "The Sun Warriors taught us the original source of firebending."
@@ -14,6 +15,7 @@ type: episode
 ### Expanded View
 
 #### 📺 Episode Details
+
 **Title:** S3E13 - The Firebending Masters  
 **Series:** Avatar: The Last Airbender  
 **Season/Book:** Book Three: Fire  
@@ -22,19 +24,23 @@ type: episode
 **Runtime:** 25 minutes  
 
 #### 📝 Synopsis
+
 Now part of Team Avatar, Zuko discovers he has lost his firebending abilities. To help both Zuko regain his powers and teach Aang proper firebending, they journey to the ancient Sun Warrior civilization. There they meet the last two dragons, Ran and Shaw, the original masters of firebending. The dragons test both Aang and Zuko with the eternal flame, teaching them that firebending's true source is not anger and hatred, but life and energy itself. This profound lesson transforms both their understanding of firebending and helps Zuko reclaim his abilities.
 
 #### 🎭 Main Characters
+
 **Team Avatar:** Aang, Zuko  
 **Sun Warriors:** Chief, Various Sun Warrior guards  
 **Dragons:** Ran and Shaw  
 **Mentioned:** Uncle Iroh  
 
 #### 🗺️ Locations
+
 **Primary:** Sun Warrior ancient civilization ruins  
 **Regions:** Fire Nation territory, Ancient temples  
 
 #### 📋 Key Topics
+
 - **Firebending Philosophy:** True source of firebending power  
 - **Ancient Civilizations:** Sun Warrior culture and history  
 - **Character Growth:** Zuko's spiritual transformation  
@@ -46,6 +52,7 @@ Now part of Team Avatar, Zuko discovers he has lost his firebending abilities. T
 ## Backend Metadata
 
 ### Episode Details
+
 ```json
 {
   "id": "the-firebending-masters-episode",
@@ -61,6 +68,7 @@ Now part of Team Avatar, Zuko discovers he has lost his firebending abilities. T
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "series": "Avatar: The Last Airbender",

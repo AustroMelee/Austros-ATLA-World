@@ -193,4 +193,4 @@ The tradition of Lychee Nut Ice Smoothie has been a part of Misty Palms Oasis cu
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

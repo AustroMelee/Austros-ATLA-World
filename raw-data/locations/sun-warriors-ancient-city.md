@@ -95,4 +95,4 @@ The Sun Warriors' Ancient City is a sprawling, ancient city thought to be ruins 
   ],
   "tags": ["spiritual_site", "sun_warriors", "dragons", "firebending_origins", "ancient_city", "sacred_rituals", "zuko_redemption"]
 }
-``` 
+```

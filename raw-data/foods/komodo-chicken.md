@@ -199,4 +199,4 @@ Komodo Chicken embodies the Fire Nation's philosophy of strength and boldness in
   "searchAliases": ["chicken", "roasted", "spicy", "fire nation", "komodo", "meat"],
   "isSuggestedInXContext": ["fire_nation_cuisine", "spicy_foods", "roasted_meats"]
 }
-``` 
+```

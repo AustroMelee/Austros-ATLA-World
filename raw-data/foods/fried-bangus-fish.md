@@ -199,4 +199,4 @@ Fried Bangus Fish represents the Fire Nation's mastery of seafood preparation an
   "searchAliases": ["fish", "bangus", "fried", "fire nation", "seafood"],
   "isSuggestedInXContext": ["fire_nation_cuisine", "seafood_dishes", "seasonal_foods"]
 }
-``` 
+```

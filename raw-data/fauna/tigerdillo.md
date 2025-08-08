@@ -93,4 +93,4 @@ Tigerdillos are common throughout their range but are respected and often avoide
   "lifespan": "12-18 years",
   "conservationStatus": "Common but respected, avoided due to territorial nature"
 }
-``` 
+```

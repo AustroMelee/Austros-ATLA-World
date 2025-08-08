@@ -193,4 +193,4 @@ The tradition of Misty Palms Special Rice has been a cornerstone of local culina
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

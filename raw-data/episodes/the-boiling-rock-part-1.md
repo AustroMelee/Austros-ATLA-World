@@ -7,6 +7,7 @@ type: episode
 ## Frontend Display
 
 ### Card View
+
 **S3E14 - The Boiling Rock, Part 1** ⛰️
 *Prison Break* | *Book Three: Fire*
 "It's a maximum security prison. No one has ever escaped."
@@ -14,6 +15,7 @@ type: episode
 ### Expanded View
 
 #### 📺 Episode Details
+
 **Title:** S3E14 - The Boiling Rock, Part 1  
 **Series:** Avatar: The Last Airbender  
 **Season/Book:** Book Three: Fire  
@@ -22,19 +24,23 @@ type: episode
 **Runtime:** 25 minutes  
 
 #### 📝 Synopsis
+
 Sokka is consumed with guilt over his father's capture during the Day of Black Sun invasion. He convinces Zuko to help him infiltrate the Boiling Rock, the Fire Nation's most secure prison built in the middle of a boiling lake. They discover that Sokka's father Hakoda isn't there, but they do find Suki imprisoned. The duo also encounters Chit Sang, a dangerous earthbender prisoner planning his own escape. Their rescue attempt becomes complicated when Azula's friend Mai arrives as the new prison warden's girlfriend, putting their covert mission at serious risk.
 
 #### 🎭 Main Characters
+
 **Team Avatar:** Sokka, Zuko  
 **Kyoshi Warriors:** Suki  
 **Fire Nation:** Mai, Prison Warden, Various guards  
 **Prisoners:** Chit Sang, Various earthbender and waterbender prisoners  
 
 #### 🗺️ Locations
+
 **Primary:** The Boiling Rock prison  
 **Regions:** Fire Nation territory, Maximum security facility  
 
 #### 📋 Key Topics
+
 - **Prison Systems:** Fire Nation maximum security methods  
 - **Rescue Operations:** Stealth and infiltration tactics  
 - **Father-Son Bonds:** Sokka's dedication to family  
@@ -46,6 +52,7 @@ Sokka is consumed with guilt over his father's capture during the Day of Black S
 ## Backend Metadata
 
 ### Episode Details
+
 ```json
 {
   "id": "the-boiling-rock-part-1-episode",
@@ -61,6 +68,7 @@ Sokka is consumed with guilt over his father's capture during the Day of Black S
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "series": "Avatar: The Last Airbender",

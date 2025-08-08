@@ -93,4 +93,4 @@ Fire Ferrets are common and well-loved throughout the Earth Kingdom. Their popul
   "lifespan": "8-12 years in captivity",
   "conservationStatus": "Common and well-loved, protected by law"
 }
-``` 
+```

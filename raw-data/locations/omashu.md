@@ -94,4 +94,4 @@ Omashu is the second largest city in the Earth Kingdom, built on a mountain that
   ],
   "tags": ["major_city", "king_bumi", "oma", "mail_system", "mountain_city", "earthbending", "liberation"]
 }
-``` 
+```

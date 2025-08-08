@@ -59,4 +59,4 @@ Buffalo yaks are large, horned, furry mammals adapted to extreme cold. They are 
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

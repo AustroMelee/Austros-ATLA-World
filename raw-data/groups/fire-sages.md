@@ -3,12 +3,14 @@ type: group
 ---
 
 ## CARD VIEW
+
 ```md
 - Name: Fire Sages
 - Short Description: Religious and spiritual authority of the Fire Nation, responsible for identifying the Avatar's incarnation and conducting royal ceremonies.
 ```
 
 ## EXPANDED VIEW
+
 ```md
 ### 📖 Overview
 
@@ -306,4 +308,4 @@ The Fire Sages are an ancient organization that serves as the religious authorit
     "cultural": "Fire Nation spiritual authority"
   }
 }
-``` 
+```

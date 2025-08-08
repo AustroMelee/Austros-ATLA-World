@@ -66,6 +66,7 @@ The tradition of Sea Soup has been a cornerstone of Fire Nation cuisine for gene
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -89,6 +90,7 @@ The tradition of Sea Soup has been a cornerstone of Fire Nation cuisine for gene
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -112,6 +114,7 @@ The tradition of Sea Soup has been a cornerstone of Fire Nation cuisine for gene
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -136,6 +139,7 @@ The tradition of Sea Soup has been a cornerstone of Fire Nation cuisine for gene
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -160,6 +164,7 @@ The tradition of Sea Soup has been a cornerstone of Fire Nation cuisine for gene
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

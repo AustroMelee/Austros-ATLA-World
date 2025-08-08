@@ -95,4 +95,4 @@ Whaletail Island is a large, whale-tail-shaped island located off the southweste
   ],
   "tags": ["landmark_island", "neutral_territory", "navigation_landmark", "whale_tail_shape", "geographic_reference", "maritime_travel", "natural_formation"]
 }
-``` 
+```

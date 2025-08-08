@@ -188,4 +188,4 @@ The tradition of Toast has been a cornerstone of Fire Nation basic cuisine for g
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

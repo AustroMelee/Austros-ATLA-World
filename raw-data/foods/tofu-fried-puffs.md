@@ -188,4 +188,4 @@ The tradition of Tofu Fried Puffs has been a part of Earth Kingdom vegetarian cu
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

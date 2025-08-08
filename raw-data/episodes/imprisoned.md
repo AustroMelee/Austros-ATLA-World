@@ -151,4 +151,4 @@ Aang, Katara, and Sokka arrive at a Fire Nation–controlled Earth Kingdom town 
     "earthbenderResilience": "Earthbenders' fight for freedom"
   }
 }
-``` 
+```

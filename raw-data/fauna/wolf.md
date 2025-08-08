@@ -59,4 +59,4 @@ Wolves are intelligent, social mammals that hunt in coordinated packs. They are 
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

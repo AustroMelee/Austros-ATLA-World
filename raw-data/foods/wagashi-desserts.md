@@ -199,4 +199,4 @@ Wagashi Desserts embody the Earth Kingdom's philosophy that food should nourish 
   "searchAliases": ["wagashi", "desserts", "artistic", "earth kingdom", "refined"],
   "isSuggestedInXContext": ["earth_kingdom_desserts", "artistic_foods", "refined_cuisine"]
 }
-``` 
+```

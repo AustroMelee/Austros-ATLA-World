@@ -59,4 +59,4 @@ Whale walruses are large, powerful creatures adapted to cold water environments.
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

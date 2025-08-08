@@ -206,4 +206,4 @@ While a storm approaches, Aang tells Katara why he ran away from the air temple 
   ],
   "expandedView": "This pivotal episode provides crucial backstory for both protagonists and antagonists, showing how their past traumas shaped their present motivations. Aang's guilt over running away parallels Zuko's shame over his banishment, while both had mentors who loved them unconditionally. The episode explores themes of destiny, family pressure, and the difficult transition from childhood to responsibility."
 }
-``` 
+```

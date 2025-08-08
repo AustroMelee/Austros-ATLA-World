@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -329,4 +331,4 @@ Unlike the other nations, those born to the Air Nomads were, without any seen ex
     "Non-violent conflict resolution"
   ]
 }
-``` 
+```

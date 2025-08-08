@@ -95,4 +95,4 @@ Chin Village is a small coastal town in the Earth Kingdom that once celebrated "
   ],
   "tags": ["small_village", "coastal", "avatar_day", "chin_the_great", "avatar_kyoshi", "reconciliation", "fishing_community"]
 }
-``` 
+```

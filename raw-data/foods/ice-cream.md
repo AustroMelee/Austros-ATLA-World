@@ -199,4 +199,4 @@ Ice Cream represents the Fire Nation's ability to find balance and comfort even 
   "searchAliases": ["ice cream", "dessert", "fire nation", "frozen", "cooling"],
   "isSuggestedInXContext": ["fire_nation_desserts", "cooling_foods", "frozen_treats"]
 }
-``` 
+```

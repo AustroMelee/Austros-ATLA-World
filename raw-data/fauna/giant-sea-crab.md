@@ -59,4 +59,4 @@ Giant sea crabs are large, powerful crustaceans adapted to cold water environmen
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

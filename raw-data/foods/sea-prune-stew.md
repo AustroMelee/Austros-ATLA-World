@@ -186,4 +186,4 @@ The tradition of Sea Prune Stew has been passed down through generations of Sout
   "searchAliases": ["stew", "soup", "sea prunes", "water tribe", "kanna", "katara", "family meal"],
   "isSuggestedInXContext": ["water_tribe_culture", "family_traditions", "soups", "traditional_dishes"]
 }
-``` 
+```

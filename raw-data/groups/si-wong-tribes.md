@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -46,7 +48,6 @@ The Si Wong tribes are introduced as a neutral, opportunistic force. Their captu
 - Sha-Mo
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -134,4 +135,4 @@ The Si Wong tribes are introduced as a neutral, opportunistic force. Their captu
     "Scavenging and raiding"
   ]
 }
-``` 
+```

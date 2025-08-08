@@ -59,4 +59,4 @@ Whales are intelligent, social mammals that communicate through complex vocaliza
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

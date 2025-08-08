@@ -59,4 +59,4 @@ Ice crawlers are small invertebrates adapted to extreme cold environments. They 
   "lifespan": "short",
   "conservationStatus": "common"
 }
-``` 
+```

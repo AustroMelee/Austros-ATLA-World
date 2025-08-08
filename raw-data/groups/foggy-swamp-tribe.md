@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -175,6 +177,7 @@ The Foggy Swamp Tribe is one of the three Water Tribes in the Avatar World. The 
 ---
 
 ## 🎨 THEME INTEGRATION
+
 *(Visual Layer - Unchanged)*
 
 ```typescript
@@ -191,23 +194,28 @@ const foggySwampTheme = {
 ---
 
 ## 🔗 RELATIONSHIPS & CONNECTIONS
+
 *(Network Layer - Unchanged)*
 
 **Allies:**
+
 - Southern Water Tribe (historical connection)
 - Team Avatar (temporary alliance)
 - Republic City (some members)
 
 **Enemies:**
+
 - Fire Nation (during Hundred Year War)
 
 **Neutral:**
+
 - Northern Water Tribe (independent but related)
 - Earth Kingdom (territorial relationship)
 
 ---
 
 ## 📊 DATA INTEGRITY
+
 *(Validation Layer - Unchanged)*
 
 - ✅ Unique ID: `foggy-swamp-tribe`
@@ -219,4 +227,4 @@ const foggySwampTheme = {
 
 ---
 
-*Schema Version: 1.0 | Last Updated: 2025-01-27 | Validated: ✅* 
+*Schema Version: 1.0 | Last Updated: 2025-01-27 | Validated: ✅*

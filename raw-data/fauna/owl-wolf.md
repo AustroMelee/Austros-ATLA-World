@@ -59,4 +59,4 @@ Owl wolves are formidable predators that combine the hunting skills of owls with
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

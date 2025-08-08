@@ -48,6 +48,7 @@ A minor but memorable Earth Rumble fighter, The Gecko is known for his agility a
 ```
 
 ---
+
 ```json
 {
   "id": "the-gecko",

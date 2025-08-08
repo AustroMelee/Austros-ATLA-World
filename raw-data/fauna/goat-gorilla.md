@@ -93,4 +93,4 @@ Goat Gorillas are common in their mountain habitats but are respected and often 
   "lifespan": "20-30 years",
   "conservationStatus": "Common in mountains, respected and avoided by travelers"
 }
-``` 
+```

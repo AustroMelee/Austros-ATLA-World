@@ -40,6 +40,7 @@ The tradition of Sea Squid Soup has been a cornerstone of Water Tribe cuisine fo
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "sea-squid-soup",
@@ -70,6 +71,7 @@ The tradition of Sea Squid Soup has been a cornerstone of Water Tribe cuisine fo
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -93,6 +95,7 @@ The tradition of Sea Squid Soup has been a cornerstone of Water Tribe cuisine fo
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -117,6 +120,7 @@ The tradition of Sea Squid Soup has been a cornerstone of Water Tribe cuisine fo
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -141,6 +145,7 @@ The tradition of Sea Squid Soup has been a cornerstone of Water Tribe cuisine fo
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -165,6 +170,7 @@ The tradition of Sea Squid Soup has been a cornerstone of Water Tribe cuisine fo
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

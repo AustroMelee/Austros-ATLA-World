@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -43,7 +45,6 @@ The Yuyan Archers serve to establish the high level of skill and specialization 
 - Colonel Shinu (Commander)
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -124,4 +125,4 @@ The Yuyan Archers serve to establish the high level of skill and specialization 
     "Effective against powerful benders through overwhelming, accurate projectile fire"
   ]
 }
-``` 
+```

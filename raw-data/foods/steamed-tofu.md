@@ -67,6 +67,7 @@ Steamed Tofu has been a cornerstone of Air Nomad cuisine for generations, develo
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -88,6 +89,7 @@ Steamed Tofu has been a cornerstone of Air Nomad cuisine for generations, develo
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -112,6 +114,7 @@ Steamed Tofu has been a cornerstone of Air Nomad cuisine for generations, develo
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -136,6 +139,7 @@ Steamed Tofu has been a cornerstone of Air Nomad cuisine for generations, develo
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -160,6 +164,7 @@ Steamed Tofu has been a cornerstone of Air Nomad cuisine for generations, develo
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

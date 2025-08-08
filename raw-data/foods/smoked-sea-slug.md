@@ -188,4 +188,4 @@ The tradition of Smoked Sea Slug has been a part of Fire Nation sophisticated cu
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

@@ -53,6 +53,7 @@ A legendary past Avatar who serves as a crucial spiritual guide, offering a prag
 ```
 
 ---
+
 ```json
 {
   "id": "yangchen",

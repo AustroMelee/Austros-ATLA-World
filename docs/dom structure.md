@@ -68,6 +68,7 @@ The primary container for all React components:
   - 👻 **Spirits**: `FaGhost` - Cyan (`text-cyan-400`)
 - **Larger Subfilter Icons:** All subfilter icons increased from `w-4 h-4` to `w-5 h-5` for better visibility
 - **Color-Coded Text:** Character subfilters have color-coded text for visual distinction
+- **Character Subfilters:** Heroes, villains, mentors; male/female; child/teen/adult/elder; bender/nonbender
 - **Clear All Filters Button:** Smart visibility button that resets all filter states with conditional rendering
 
 #### Search Bar (`<form>`):

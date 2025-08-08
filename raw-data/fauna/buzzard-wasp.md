@@ -86,4 +86,4 @@ While no specific Buzzard Wasps are mentioned in historical records, they are fr
   "lifespan": "2-3 years",
   "conservationStatus": "Least concern"
 }
-``` 
+```

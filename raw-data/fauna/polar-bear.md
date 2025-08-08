@@ -59,4 +59,4 @@ Polar bears are powerful predators adapted to extreme cold environments. They ar
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

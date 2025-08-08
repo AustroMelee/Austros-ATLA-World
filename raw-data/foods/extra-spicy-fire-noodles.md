@@ -200,4 +200,4 @@ Extra Spicy Fire Noodles represent the Fire Nation's love for intensity and thei
   "searchAliases": ["noodles", "spicy", "fire", "extreme", "challenge"],
   "isSuggestedInXContext": ["fire_nation_cuisine", "spicy_foods", "challenge_dishes"]
 }
-``` 
+```

@@ -193,4 +193,4 @@ The tradition of Kale Smoothie has been a part of Earth Kingdom healthy living c
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

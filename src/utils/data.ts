@@ -58,13 +58,39 @@ export function computeNationFromEntity(entity: EnrichedEntity): string | undefi
 
   // 5) Episode book mapping
   if (entity.type === 'episode') {
-    const book = getField<string>(entity, 'book');
-    if (book) {
-      const lower = book.toLowerCase();
-      if (lower.includes('water') || lower === '1') return 'Water Tribe';
-      if (lower.includes('earth') || lower === '2') return 'Earth Kingdom';
-      if (lower.includes('fire') || lower === '3') return 'Fire Nation';
-    }
+    // Resolve book from multiple sources, including title/name SxEx when missing
+    const resolveEpisodeBook = (): 'water' | 'earth' | 'fire' | undefined => {
+      const direct = getField<string>(entity, 'book');
+      if (typeof direct === 'string' && direct.trim()) {
+        const d = direct.trim().toLowerCase();
+        if (d.includes('water') || d === '1' || d.includes('book 1')) return 'water';
+        if (d.includes('earth') || d === '2' || d.includes('book 2')) return 'earth';
+        if (d.includes('fire') || d === '3' || d.includes('book 3')) return 'fire';
+      }
+      const metaBook = (entity as unknown as { metadata?: Record<string, unknown> }).metadata?.book;
+      if (typeof metaBook === 'string' && metaBook.trim()) {
+        const mb = metaBook.trim().toLowerCase();
+        if (mb.includes('water') || mb === '1' || mb.includes('book 1')) return 'water';
+        if (mb.includes('earth') || mb === '2' || mb.includes('book 2')) return 'earth';
+        if (mb.includes('fire') || mb === '3' || mb.includes('book 3')) return 'fire';
+      }
+      const title = getField<string>(entity, 'title') || '';
+      const name = String((entity as unknown as { name?: unknown }).name || '');
+      const sxe = /s\s*(\d+)\s*e\s*\d+/i;
+      const mm = title.match(sxe) || name.match(sxe);
+      if (mm) {
+        const season = Number(mm[1]);
+        if (season === 1) return 'water';
+        if (season === 2) return 'earth';
+        if (season === 3) return 'fire';
+      }
+      return undefined;
+    };
+
+    const normalized = resolveEpisodeBook();
+    if (normalized === 'water') return 'Water Tribe';
+    if (normalized === 'earth') return 'Earth Kingdom';
+    if (normalized === 'fire') return 'Fire Nation';
   }
 
   // 6) Generic hints

@@ -59,4 +59,4 @@ Squirrels are highly agile and intelligent rodents known for their ability to cl
   "lifespan": "medium",
   "conservationStatus": "common"
 }
-``` 
+```

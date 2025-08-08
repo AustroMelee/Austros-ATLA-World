@@ -162,7 +162,7 @@
 ### 🏆 Enhanced Filtering System (2025 Update)
 
 **What new filtering options are available?**
-- **Age Range Filters:** Child, teen, young adult, adult, elder for character classification
+- **Age Range Filters:** Child, teen, adult, elder for character classification
 - **Gender Filters:** Male/female filters with visual icons (♂/♀)
 - **Bender Classification:** Bender/nonbender filters for character classification
 - **Enhanced Nation Filtering:** Partial string matching for full nation names
@@ -170,11 +170,10 @@
 - **Food Category Filters:** 12 comprehensive food sub-categories with React emojis
 
 **How does age range filtering work?**
-- **Child:** Characters like Toph (12 years old during main series)
-- **Teen:** Characters like Aang, Katara, Sokka, Zuko (12-17 years old)
-- **Young Adult:** Characters like Azula, Ty Lee, Mai (18-25 years old)
-- **Adult:** Characters like June, Iroh, Pakku (26-50 years old)
-- **Elder:** Characters like Hama, King Bumi, Monk Gyatso (50+ years old)
+- **Child:** Characters like Toph (≈12 years old)
+- **Teen:** Characters like Aang, Katara, Sokka, Zuko (≈12–17 years old)
+- **Adult:** Characters like June, Iroh, Pakku (≈18–59 years old)
+- **Elder:** Characters like Hama, King Bumi, Monk Gyatso (≈60+ years old)
 - **Animal Exclusion:** Animals (bison, lemur, bear, animal, spirit) are excluded from age filters
 
 **How does gender filtering work?**
@@ -184,10 +183,10 @@
 - **Multi-Select:** Can select both male and female simultaneously
 
 **How does bender classification work?**
-- **Bender:** Characters with isBender: true and bendingElement field
-- **Nonbender:** Characters with isBender: false or missing bendingElement
-- **Comprehensive Coverage:** All characters now have proper bender classification
-- **Element Display:** Bender filters show the specific bending element when applicable
+- **Bender:** Characters with `isBender: true`, a defined `bendingElement`, or bender-style tags
+- **Nonbender:** Characters with `isBender: false` or no bending element/tags
+- **Comprehensive Coverage:** Applies across tags, top-level fields, and narrative text
+- **Element Display:** Bender filters can match specific bending elements when applicable
 
 **What is the filtering order?**
 The system applies filters in this specific sequence:
@@ -211,10 +210,22 @@ The system applies filters in this specific sequence:
 ### 🍽️ Food Category Filtering (2025 Update)
 
 **What food categories are available?**
-- **12 Sub-Categories:** beverages, desserts, soups, meat, vegetables, noodles, dumplings, preserved, street food, traditional, vegetarian, luxury, ceremonial, health, fire-themed, seafood
-- **React Emojis:** Each sub-filter includes React emoji with descriptive text labels
-- **Multi-Select:** Multiple food categories can be selected simultaneously
-- **Comprehensive Coverage:** All 98 food items categorized into appropriate sub-filters
+- **12 Sub-Categories (UI-backed):**
+  - `soups_stews`
+  - `noodles_dumplings`
+  - `baked_goods_pastries`
+  - `cookies_biscuits`
+  - `cakes_decadent_desserts`
+  - `roasted_grilled_meats`
+  - `seafood_fish`
+  - `vegetarian_dishes`
+  - `street_food_snacks`
+  - `spicy_foods`
+  - `teas_juices`
+  - `preserved_travel_foods`
+- **React Emojis:** Each sub-filter includes a React emoji-like label
+- **Multi-Select:** Multiple categories can be active simultaneously
+- **Comprehensive Coverage:** All items categorized into appropriate sub-filters
 
 **How do food nation filters work?**
 - **Nation Symbols:** All food items display nation symbols in cards
@@ -587,24 +598,31 @@ First, consult this FAQ and other project documentation. If the issue is not cov
 **How do sub-filters work?**
 - Sub-filters use a mapping system to translate filter button terms to actual data values
 - **Character Sub-filters:**
-  - "villains" → matches "antagonist" and "villain" in data
-  - "heroes" → matches "protagonist", "hero", "deuteragonist", and "mentor" in data
-  - "mentors" → matches "mentor" in data
-- **Food Sub-filters:**
-  - "beverages" → matches food items with beverage category tags
-  - "desserts" → matches food items with dessert category tags
-  - "soups" → matches food items with soup category tags
-  - And so on for all 12 food categories
-- **Data Field Coverage:** Sub-filters check multiple data locations:
-  - `tags` array (e.g., "villain", "hero", "beverage", "dessert")
-  - `role` field (e.g., "EK General", "SWT Warrior")
-  - `metadata.narrativeFunction` (e.g., "antagonist", "protagonist", "mentor")
-  - `metadata.eraAppearances[].role` (e.g., "hero", "villain", "supporting")
+  - "villains" → matches antagonist/villain via tags, `role`, `narrativeFunction`, or expanded text
+  - "heroes" → matches protagonist/hero via tags, `role`, `narrativeFunction`, or expanded text
+  - "mentors" → matches mentor/teacher/master via tags, `role`, `narrativeFunction`, or expanded text
+- **Fauna Sub-filters:**
+  - `predators_hunters` → predator/hunt/dangerous/venomous/aggressive (tags or text)
+  - `domesticated_mounts` → domesticated/mount/transportation/military/cavalry (tags or text)
+  - `aquatic_marine` → aquatic/marine/fish/ocean/sea/river/lake (tags or text)
+  - `flying_aerial` → flying/wing/flight/bird/raptor/aerial (tags or text)
+  - `sacred_spiritual` → sacred/spirit/spiritual or Spirit World affiliation
+  - `hybrid_mixed` → hybrid/mixed/combination
+  - `small_insects` → insect/arachnid/centipede/wasp/spider/bug/small
+  - `reptiles_amphibians` → reptile/amphibian/lizard/snake/crocodile/alligator/gator/frog/toad
+- **Food Sub-filters:** Maps to the 12 UI-backed categories listed above
+- **Data Field Coverage:** Sub-filters check multiple locations:
+  - `tags`
+  - `role`
+  - `gender`, `ageRange`, and numeric age heuristics (characters only; animals excluded)
+  - `isBender`, `bendingElement`, and bender-style tags
+  - `narrativeFunction` and expanded view text
+  - Name/slug/expanded text fallbacks for fauna when structured data is sparse
 - **Examples:**
-  - Long Feng shows up as Earth villain (narrativeFunction: "antagonist")
-  - Sokka shows up as Water hero (eraAppearances role: "hero")
-  - Bumi shows up as Earth hero (narrativeFunction: "mentor")
-  - Air Nomad Style Tea shows up as beverage (category tag: "beverage")
+  - Long Feng shows up as Earth villain (antagonist via narrativeFunction/tags)
+  - Bumi shows up as Earth mentor (mentor via narrativeFunction/tags)
+  - Air Nomad Style Tea shows up under its category tag
+  - Badgermole shows up under `sacred_spiritual`; Dragon Hawk under `flying_aerial`; Basilisk Centipede under `small_insects`
 
 **Are the filters accessible?**
 - All filter buttons are keyboard-navigable

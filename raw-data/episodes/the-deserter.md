@@ -195,4 +195,4 @@ After being chased out of a Fire Nation festival, Aang, Sokka, and Katara encoun
   ],
   "expandedView": "This episode introduces Aang to firebending and establishes important themes about the destructive nature of fire and the need for discipline in learning. Jeong Jeong's reluctance to teach reflects the traumatic effects of war, while Katara's discovery of healing abilities adds an important element to her character development. The episode also shows Roku's continued guidance of Aang's Avatar journey."
 }
-``` 
+```

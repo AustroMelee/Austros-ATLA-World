@@ -195,4 +195,4 @@ This tart represents the Air Nomads' philosophy of finding joy in simple pleasur
   "searchAliases": ["tart", "custard", "dessert", "aang", "favorite", "air nomad dessert"],
   "isSuggestedInXContext": ["aang_character", "air_nomad_culture", "desserts", "favorite_foods"]
 }
-``` 
+```

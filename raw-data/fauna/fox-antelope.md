@@ -93,4 +93,4 @@ Fox Antelopes are common throughout their range and are well-adapted to their en
   "lifespan": "12-15 years",
   "conservationStatus": "Common and well-adapted, left alone by humans"
 }
-``` 
+```

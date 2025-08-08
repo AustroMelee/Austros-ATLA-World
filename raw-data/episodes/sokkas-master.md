@@ -104,6 +104,7 @@ Feeling isolated as the only non-bender in the group after failing to help stop 
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "previous_episode": "the-painted-lady",

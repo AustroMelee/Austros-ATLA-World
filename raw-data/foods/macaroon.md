@@ -115,6 +115,7 @@ Macaroons have been a beloved part of Air Nomad cuisine for generations, develop
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "flavorProfile": [
@@ -134,6 +135,7 @@ Macaroons have been a beloved part of Air Nomad cuisine for generations, develop
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "culturalRole": "temple dessert",
@@ -152,6 +154,7 @@ Macaroons have been a beloved part of Air Nomad cuisine for generations, develop
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "themes": [
@@ -177,6 +180,7 @@ Macaroons have been a beloved part of Air Nomad cuisine for generations, develop
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "uniqueCharacteristics": [
@@ -207,6 +211,7 @@ Macaroons have been a beloved part of Air Nomad cuisine for generations, develop
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "loreConnections": [

@@ -59,4 +59,4 @@ Polar leopards are white leopards adapted to cold environments. They are excelle
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

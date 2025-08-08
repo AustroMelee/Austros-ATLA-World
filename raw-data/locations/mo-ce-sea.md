@@ -95,4 +95,4 @@ The Mo Ce Sea is a large, open body of water located between the western Earth K
   ],
   "tags": ["maritime_region", "neutral_territory", "shipping_route", "naval_battles", "strategic_waterway", "trade_connection", "independent_waters"]
 }
-``` 
+```

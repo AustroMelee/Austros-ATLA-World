@@ -92,4 +92,4 @@ The Southern Water Tribe represents the resilience and adaptability of the Water
   "historical_significance": "war_victim",
   "modern_development": "reconstruction_success"
 }
-``` 
+```

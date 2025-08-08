@@ -77,4 +77,4 @@ Armadillo Bears are relatively common in their native habitat within the Fire Na
   "lifespan": "Relatively long lifespan, well-adapted to environment",
   "conservationStatus": "Relatively common, stable populations in volcanic habitat"
 }
-``` 
+```

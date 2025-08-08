@@ -7,6 +7,7 @@ type: episode
 ## Frontend Display
 
 ### Card View
+
 **S1E7 - Winter Solstice, Part 1: The Spirit World** 🌫️
 *Spirits* | *Book One: Water*
 "Avatar Roku wants to speak with you."
@@ -14,6 +15,7 @@ type: episode
 ### Expanded View
 
 #### 📺 Episode Details
+
 **Title:** S1E7 - Winter Solstice, Part 1: The Spirit World  
 **Series:** Avatar: The Last Airbender  
 **Season/Book:** Book One: Water  
@@ -22,11 +24,13 @@ type: episode
 **Runtime:** 25 minutes  
 
 #### 📝 Synopsis
+
 Aang discovers a forest destroyed by the Fire Nation and meets Hei Bai, a panda spirit protecting the woods who has been driven to rage by the destruction of his home. When Hei Bai kidnaps Sokka, Aang follows them into the Spirit World. In this strange realm, Aang meets Avatar Roku's dragon, Fang, and learns that he can communicate with his past lives during the Winter Solstice. Meanwhile, Prince Zuko captures Iroh, who was enjoying a relaxing bath at a hot spring, when they are both taken prisoner by Earth Kingdom soldiers led by Captain Li.
 
 ## Backend Metadata
 
 ### Episode Details JSON
+
 ```json
 {
   "id": "the-winter-solstice-part-1-the-spirit-world-episode",
@@ -42,4 +46,5 @@ Aang discovers a forest destroyed by the Fire Nation and meets Hei Bai, a panda 
 ```
 
 ### Narrative & Canonical Context JSON
+
 ```

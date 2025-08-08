@@ -3,12 +3,14 @@ type: group
 ---
 
 ## CARD VIEW
+
 ```md
 - Name: Royal Servants
 - Short Description: Over a hundred servants who work in the Fire Nation Royal Palace and tend to the Royal Family's every need, including carrying palanquins.
 ```
 
 ## EXPANDED VIEW
+
 ```md
 ### 📖 Overview
 
@@ -265,4 +267,4 @@ The Royal Servants are a prestigious group of over a hundred dedicated servants 
     "personal": "Dedicated service to Fire Nation royalty"
   }
 }
-``` 
+```

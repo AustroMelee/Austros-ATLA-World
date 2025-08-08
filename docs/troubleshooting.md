@@ -2,6 +2,36 @@
 
 ## Common Issues and Solutions
 
+#### Episodes Missing Under Book Filters (2025 Aug)
+**Problem:** Some Book 2 (Earth) episodes (S2E14–S2E20) don't show when filtering Episodes → Book 2.
+**Root Cause:** Several episode entries in `public/enriched-data.json` lacked a top‑level `book` field. Filtering previously relied on `book` or `metadata.book` only.
+**Solution:** Filtering now infers the book from multiple sources: `book`, `metadata.book`, or the `SxEx` prefix in `title`/`name`. Episodes without explicit `book` still match the correct Book filter.
+**Files Affected:** `src/utils/applyFilters.ts`
+**Verification:** Select Episodes → Book 2. S2E14–S2E20 should appear.
+
+#### Episodes Not Tagged With Correct Nation (2025 Aug)
+**Problem:** Book 2 episodes didn’t get Earth Kingdom theming or respond to the Earth nation filter.
+**Root Cause:** Nation derivation for episodes depended on `book` but failed when `book` was missing.
+**Solution:** Nation normalization infers the season from `book`, `metadata.book`, or `SxEx` in `title`/`name`, then maps 1→Water Tribe, 2→Earth Kingdom, 3→Fire Nation.
+**Files Affected:** `src/utils/data.ts` (`computeNationFromEntity` episode mapping)
+**Verification:** Enable Earth nation filter; Book 2 episodes remain visible and themed.
+
+#### Episode Titles Missing SxEx Prefix (2025 Aug)
+**Problem:** Some episode cards/modals showed titles without `SxEx` (e.g., “The Waterbending Master”).
+**Root Cause:** Source data has mixed formats. UI previously displayed `name`/`title` as‑is.
+**Solution:** Cards now derive a display title with `SxEx` using `title`/`name` or `episode` + inferred season. If `SxEx` already exists, it’s preserved.
+**Files Affected:**
+- `src/components/ItemCard/ItemCardCollapsed.tsx`
+- `src/components/ItemCard/ItemCardModal.tsx`
+**Verification:** Cards render like `S1E18 - The Waterbending Master`.
+
+#### Episodes Not Ordered Chronologically (2025 Aug)
+**Problem:** Episode grid wasn’t in chronological order when filtering Episodes.
+**Root Cause:** No episode‑specific sort applied.
+**Solution:** When core filter is Episodes, items are sorted by Season → Episode; fallbacks: `air_date` → `production_number` → alphabetical.
+**Files Affected:** `src/utils/applyFilters.ts`
+**Verification:** With Book 1 active, the grid starts at S1E1 and increments.
+
 ### Data Pipeline Issues
 
 #### Backend Metadata Appearing in UI Cards
@@ -197,6 +227,13 @@ if (!['character', 'group', 'food', 'location'].includes(frontmatter.type)) {
 ```
 **Result:** All 4 Air Temple locations now parse correctly and appear in UI
 
+#### Character Subfilters Not Working (RESOLVED – 2025 Aug)
+**Problem:** Character subfilters (heroes, villains, mentors, male/female, child/teen/adult/elder, bender/nonbender) did not affect results.
+**Root Cause:** Filtering logic only checked a narrow set of fields and missed real data locations (top-level gender, isBender, bendingElement, expandedView text); age logic included non-human species.
+**Solution:** Updated `applyFilters.ts` to normalize and check multiple sources: tags, `role`, `gender`, numeric age or `ageRange`, `isBender`, `bendingElement`, `narrativeFunction`, and expanded view text; excluded non-human species from age-based filters.
+**Files Affected:** `src/utils/applyFilters.ts`
+**Verification:** With core filter set to `characters`, enabling any subfilter updates the grid immediately (e.g., male, bender, villains, mentors).
+
 #### Fauna Subfilters Defaulting to Single Entry
 **Problem:** All fauna subfilters defaulting to komodo chicken instead of proper categorization
 **Root Cause:** Subfilter tags (like "predators_hunters", "domesticated_mounts") were filtered out during enrichment, leaving only basic tags like "military", "cavalry"
@@ -215,7 +252,7 @@ const faunaFilterMapping: Record<string, string[]> = {
   reptiles_amphibians: ['reptile', 'amphibian', 'lizard', 'snake']
 };
 ```
-**Result:** Fauna entries now properly categorized across all 8 subfilters based on their actual available tags and metadata
+**Result:** Fauna entries now properly categorized across all 8 subfilters based on their actual available tags, metadata, and descriptive text fallbacks
 
 ### UI Issues
 

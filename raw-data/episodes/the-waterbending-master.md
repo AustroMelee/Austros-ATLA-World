@@ -155,4 +155,4 @@ Team Avatar finally reaches the Northern Water Tribe at the North Pole, where Aa
     "future": "Sets up the two-part season finale and final battle"
   }
 }
-``` 
+```

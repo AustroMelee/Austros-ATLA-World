@@ -198,4 +198,4 @@ Chocolate Mousse represents the Earth Kingdom's adaptability and openness to new
   "searchAliases": ["mousse", "chocolate", "dessert", "ba sing se", "refugee"],
   "isSuggestedInXContext": ["earth_kingdom_desserts", "sophisticated_foods", "refugee_cuisine"]
 }
-``` 
+```

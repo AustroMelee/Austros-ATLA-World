@@ -56,6 +56,43 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [image, setImgSrc, onClose]);
 
+  const displayTitle: string = (() => {
+    const name = typeof item.name === 'string' ? item.name : '';
+    const title = getField<string>(item, 'title') || '';
+    const hasSxEx = (s: string) => /s\s*\d+\s*e\s*\d+/i.test(s);
+    if ((item as { type?: string }).type === 'episode') {
+      if (hasSxEx(name)) return name;
+      if (hasSxEx(title)) return title;
+
+      const bookRaw = getField<string>(item, 'book') || '';
+      const book = bookRaw.toLowerCase();
+      const season = book.includes('water') || book.includes('book 1') || book === '1' ? 1
+        : book.includes('earth') || book.includes('book 2') || book === '2' ? 2
+        : book.includes('fire') || book.includes('book 3') || book === '3' ? 3
+        : null;
+
+      const episodeRaw = getField<string | number>(item, 'episode');
+      let episodeNum: number | null = null;
+      if (typeof episodeRaw === 'number') {
+        episodeNum = episodeRaw;
+      } else if (typeof episodeRaw === 'string') {
+        const mx = episodeRaw.match(/^(\d+)\s*x\s*(\d+)$/i);
+        if (mx) {
+          episodeNum = parseInt(mx[2], 10);
+        } else {
+          const onlyNum = episodeRaw.trim();
+          if (/^\d+$/.test(onlyNum)) episodeNum = parseInt(onlyNum, 10);
+        }
+      }
+
+      if (season !== null && episodeNum !== null) {
+        const base = name || title;
+        return `S${season}E${episodeNum} - ${base}`;
+      }
+    }
+    return toTitleCase(name || title);
+  })();
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center"
@@ -109,7 +146,7 @@ export default function ItemCardModal({ item, onClose }: ItemCardModalProps) {
                   ref={titleRef}
                   className="text-3xl font-bold text-center md:text-left"
                 >
-                  {toTitleCase(item.name)}
+                  {displayTitle}
                   {nation && <NationIcon nation={nation} size={24} className="align-middle flex-shrink-0 ml-2" />}
                 </h2>
                 {role && <p className="text-lg text-neutral-400 mb-4 text-center md:text-left font-bold">{role}</p>}

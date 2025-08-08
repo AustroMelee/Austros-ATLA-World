@@ -53,6 +53,7 @@ Lychee Juice has been a staple of Air Nomad beverage culture for generations, wi
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "lychee-juice",
@@ -111,6 +112,7 @@ Lychee Juice has been a staple of Air Nomad beverage culture for generations, wi
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "flavorProfile": [
@@ -130,6 +132,7 @@ Lychee Juice has been a staple of Air Nomad beverage culture for generations, wi
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "culturalRole": "temple refreshment",
@@ -147,6 +150,7 @@ Lychee Juice has been a staple of Air Nomad beverage culture for generations, wi
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "themes": [
@@ -172,6 +176,7 @@ Lychee Juice has been a staple of Air Nomad beverage culture for generations, wi
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "uniqueCharacteristics": [
@@ -202,6 +207,7 @@ Lychee Juice has been a staple of Air Nomad beverage culture for generations, wi
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "loreConnections": [

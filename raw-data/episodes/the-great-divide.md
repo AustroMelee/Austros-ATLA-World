@@ -185,4 +185,4 @@ While crossing a canyon on foot, Aang has to mediate between two tribes, the Zha
   ],
   "expandedView": "This episode explores Aang's role as a mediator and peacemaker, showing how the Avatar must sometimes use creativity and even fabrication to resolve conflicts. The feuding tribes represent how ancient grudges can blind people to present dangers, and Aang's solution demonstrates that sometimes peaceful resolution matters more than absolute truth."
 }
-``` 
+```

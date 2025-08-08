@@ -195,4 +195,4 @@ These flakes represent the Fire Nation's philosophy of embracing intensity and p
   "searchAliases": ["flakes", "spicy", "fire nation", "zuko", "snack", "fiery", "afternoon treat"],
   "isSuggestedInXContext": ["fire_nation_culture", "spicy_food", "snacks", "zuko_character"]
 }
-``` 
+```

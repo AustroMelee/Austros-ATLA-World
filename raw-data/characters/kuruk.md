@@ -53,6 +53,7 @@ A tragic past Avatar whose life serves as a cautionary tale about the spiritual 
 ```
 
 ---
+
 ```json
 {
   "id": "kuruk",

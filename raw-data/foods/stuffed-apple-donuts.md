@@ -200,4 +200,4 @@ Stuffed Apple Donuts embody the Earth Kingdom's values of seasonal eating and co
   "searchAliases": ["donuts", "apple", "dessert", "earth kingdom", "harvest"],
   "isSuggestedInXContext": ["earth_kingdom_desserts", "seasonal_foods", "harvest_traditions"]
 }
-``` 
+```

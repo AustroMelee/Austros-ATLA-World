@@ -52,6 +52,7 @@ A legendary predecessor to Aang whose life and ruthless methods serve as a stark
 ```
 
 ---
+
 ```json
 {
   "id": "kyoshi",

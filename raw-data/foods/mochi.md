@@ -58,6 +58,7 @@ The tradition of Mochi has been a cornerstone of Fire Nation dessert culture for
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "mochi",
@@ -118,6 +119,7 @@ The tradition of Mochi has been a cornerstone of Fire Nation dessert culture for
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "flavorProfile": [
@@ -137,6 +139,7 @@ The tradition of Mochi has been a cornerstone of Fire Nation dessert culture for
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "culturalRole": "celebration dessert",
@@ -152,6 +155,7 @@ The tradition of Mochi has been a cornerstone of Fire Nation dessert culture for
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "themes": [
@@ -177,6 +181,7 @@ The tradition of Mochi has been a cornerstone of Fire Nation dessert culture for
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "uniqueCharacteristics": [
@@ -207,6 +212,7 @@ The tradition of Mochi has been a cornerstone of Fire Nation dessert culture for
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "loreConnections": [

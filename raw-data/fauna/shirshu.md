@@ -93,4 +93,4 @@ Shirshus are rare and valuable animals, often bred specifically for their tracki
   "lifespan": "20-25 years in captivity",
   "conservationStatus": "Rare and valuable, carefully managed populations"
 }
-``` 
+```

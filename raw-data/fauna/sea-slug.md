@@ -77,4 +77,4 @@ Sea Slugs are relatively common in their native habitat within the Fire Nation's
   "lifespan": "Moderate lifespan, reproduce by laying eggs in marine environment",
   "conservationStatus": "Relatively common, stable populations in Fire Nation waters"
 }
-``` 
+```

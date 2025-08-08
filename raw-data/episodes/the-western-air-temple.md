@@ -7,6 +7,7 @@ type: episode
 ## Frontend Display
 
 ### Card View
+
 **S3E12 - The Western Air Temple** 📺
 *Air Temple* | *Book Three: Fire*
 "Hello. Zuko here."
@@ -14,6 +15,7 @@ type: episode
 ### Expanded View
 
 #### 📺 Episode Details
+
 **Title:** S3E12 - The Western Air Temple  
 **Series:** Avatar: The Last Airbender  
 **Season/Book:** Book Three: Fire  
@@ -22,18 +24,22 @@ type: episode
 **Runtime:** 25 minutes  
 
 #### 📝 Synopsis
+
 After the failed invasion of the Fire Nation, Team Avatar retreats to the Western Air Temple, a unique temple built upside down under cliff overhangs. While hiding from the Fire Nation, they are approached by an unexpected visitor: Prince Zuko, who wishes to join their group and teach Aang firebending. The team is deeply suspicious and rejects him, but when Combustion Man attacks the temple, Zuko proves his sincerity by helping to defend them, even getting injured in the process. Despite his efforts, the team remains divided on whether to trust him.
 
 #### 🎭 Main Characters
+
 **Team Avatar:** Aang, Katara, Sokka, Toph  
 **Fire Nation:** Prince Zuko, Combustion Man  
 **Supporting:** Haru, The Duke, Teo, Various Air Temple refugees  
 
 #### 🗺️ Locations
+
 **Primary:** Western Air Temple  
 **Regions:** Fire Nation territory, Ancient Air Nomad sites  
 
 #### 📋 Key Topics
+
 - **Character Development:** Zuko's redemption arc begins  
 - **Air Nomad Culture:** Western Air Temple architecture and history  
 - **Trust and Forgiveness:** Team dynamics with former enemies  
@@ -45,6 +51,7 @@ After the failed invasion of the Fire Nation, Team Avatar retreats to the Wester
 ## Backend Metadata
 
 ### Episode Details
+
 ```json
 {
   "id": "the-western-air-temple-episode",
@@ -60,6 +67,7 @@ After the failed invasion of the Fire Nation, Team Avatar retreats to the Wester
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "series": "Avatar: The Last Airbender",

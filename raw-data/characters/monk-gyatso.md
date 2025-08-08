@@ -276,4 +276,4 @@ A wise mentor, comic relief, and tragic figure whose teachings and loss deeply s
   "fuzzySynonyms": ["monk gyatso", "aang's mentor", "council elder", "air nomad master"],
   "isSuggestedInXContext": []
 }
-``` 
+```

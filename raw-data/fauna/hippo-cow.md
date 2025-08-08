@@ -77,4 +77,4 @@ Due to their value as agricultural animals, Hippo Cows are actively bred and mai
   "lifespan": "Moderate lifespan, bred specifically for agricultural purposes",
   "conservationStatus": "Actively bred and maintained for agricultural use"
 }
-``` 
+```

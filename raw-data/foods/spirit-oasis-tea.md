@@ -65,6 +65,7 @@ The tradition of Spirit Oasis Tea has been a part of Water Tribe spiritual cultu
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -86,6 +87,7 @@ The tradition of Spirit Oasis Tea has been a part of Water Tribe spiritual cultu
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -109,6 +111,7 @@ The tradition of Spirit Oasis Tea has been a part of Water Tribe spiritual cultu
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -133,6 +136,7 @@ The tradition of Spirit Oasis Tea has been a part of Water Tribe spiritual cultu
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -157,6 +161,7 @@ The tradition of Spirit Oasis Tea has been a part of Water Tribe spiritual cultu
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

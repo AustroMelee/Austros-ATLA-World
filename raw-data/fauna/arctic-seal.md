@@ -59,4 +59,4 @@ Arctic seals are excellent swimmers adapted to cold water environments. They are
   "lifespan": "medium",
   "conservationStatus": "common"
 }
-``` 
+```

@@ -1187,14 +1187,6 @@ video {
   }
 }
 
-.pointer-events-none {
-  pointer-events: none;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
 .fixed {
   position: fixed;
 }
@@ -1211,10 +1203,6 @@ video {
   inset: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .bottom-8 {
   bottom: 2rem;
 }
@@ -1229,10 +1217,6 @@ video {
 
 .right-8 {
   right: 2rem;
-}
-
-.top-0 {
-  top: 0px;
 }
 
 .top-2 {
@@ -1395,10 +1379,6 @@ video {
   height: 1.25rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-7 {
   height: 1.75rem;
 }
@@ -1545,28 +1525,8 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-.animate-blink {
-  animation: blink 1s steps(2, start) infinite;
-}
-
 .cursor-pointer {
   cursor: pointer;
-}
-
-.select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 .resize {
@@ -1659,10 +1619,6 @@ video {
 
 .text-ellipsis {
   text-overflow: ellipsis;
-}
-
-.whitespace-pre {
-  white-space: pre;
 }
 
 .rounded {
@@ -1834,11 +1790,6 @@ video {
 
 .bg-blue-900\/80 {
   background-color: rgb(30 58 138 / 0.8);
-}
-
-.bg-green-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity, 1));
 }
 
 .bg-green-800 {
@@ -2391,22 +2342,6 @@ video {
 
 /* Pixelated Dithering Effect */
 
-.crt-dither {
-  background-image: 
-      repeating-linear-gradient(
-        45deg,
-        transparent 0px,
-        rgba(112, 171, 108, 0.02) 1px,
-        transparent 2px
-      ),
-      repeating-linear-gradient(
-        -45deg,
-        transparent 0px,
-        rgba(255, 255, 255, 0.01) 1px,
-        transparent 3px
-      );
-}
-
 /* Combined CRT Effects */
 
 .crt-screen {
@@ -2432,7 +2367,8 @@ video {
         rgba(255, 255, 255, 0.008) 1px,
         transparent 3px
       );
-  animation: crt-flicker 4s ease-in-out infinite;
+  /* Disable flicker on crt-screen to reduce ghosting */
+  /* animation: crt-flicker 4s ease-in-out infinite; */
 }
 
 /* Intense CRT Effect for Special Elements */
@@ -2463,72 +2399,7 @@ video {
   position: relative;
 }
 
-.crt-dither::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-      repeating-linear-gradient(
-        90deg,
-        transparent 0px,
-        rgba(112, 171, 108, 0.05) 1px,
-        transparent 2px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        transparent 0px,
-        rgba(112, 171, 108, 0.03) 1px,
-        transparent 2px
-      );
-  pointer-events: none;
-  animation: crt-flicker 3s infinite ease-in-out;
-  border-radius: inherit;
-}
-
-.crt-text-dither {
-  position: relative;
-}
-
-.crt-text-dither::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/noise/noise.svg');
-  opacity: 0.15;
-  pointer-events: none;
-}
-
 /* Search bar scanlines effect */
-
-.search-scanlines {
-  position: relative;
-  overflow: hidden;
-}
-
-.search-scanlines::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(
-      0deg,
-      transparent 0px,
-      transparent 1px,
-      rgba(112, 171, 108, 0.08) 2px,
-      rgba(112, 171, 108, 0.08) 3px
-    );
-  pointer-events: none;
-  z-index: 1;
-  animation: scanline-drift 8s linear infinite;
-}
 
 @keyframes scanline-drift {
   from {
@@ -2568,8 +2439,8 @@ body {
       rgba(112, 171, 108, 0.05) 3px,
       transparent 4px
     );
-  /* Very subtle flicker */
-  animation: crt-flicker 3s ease-in-out infinite;
+  /* Disable global flicker to prevent ghosting in text while typing */
+  /* animation: crt-flicker 3s ease-in-out infinite; */
   position: relative;
 }
 
@@ -2871,12 +2742,14 @@ input[type="text"]::-moz-selection {
   }
 }
 
+/* Disable phosphor persist and cursor wake-up animations globally to prevent ghosting */
+
 .phosphor-persist {
-  animation: phosphor-fade 0.6s ease-out;
+  animation: none !important;
 }
 
 .cursor-wake-up {
-  animation: cursor-wake-up 0.1s ease-out forwards;
+  animation: none !important;
   transform-origin: center;
 }
 

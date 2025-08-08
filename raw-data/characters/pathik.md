@@ -85,6 +85,7 @@ A wise and eccentric mentor, Pathik’s teachings on chakras and spiritual balan
 ---
 
 ## 🏷️ Tags & Categories
+
 ```json
 {
   "tags": ["Air Nomads", "Mentor", "Spiritual Guide", "Nonbender", "Elder", "Male", "Book Two", "Eastern Air Temple"],

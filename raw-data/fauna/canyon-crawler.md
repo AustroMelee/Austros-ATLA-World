@@ -93,4 +93,4 @@ Canyon Crawlers are common in their specialized habitat and are well-adapted to 
   "lifespan": "3-5 years",
   "conservationStatus": "Common in specialized habitat, rarely seen by humans"
 }
-``` 
+```

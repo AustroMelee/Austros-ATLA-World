@@ -93,4 +93,4 @@ Camelephants are common and well-managed throughout the Earth Kingdom. Their pop
   "lifespan": "40-60 years in captivity",
   "conservationStatus": "Common and well-managed, protected by law"
 }
-``` 
+```

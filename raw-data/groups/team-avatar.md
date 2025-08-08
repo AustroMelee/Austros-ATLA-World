@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -178,4 +180,4 @@ Team Avatar is the central protagonist group of the series. Their journey to hel
     "Capable of infiltrating high-security locations and defeating large forces"
   ]
 }
-``` 
+```

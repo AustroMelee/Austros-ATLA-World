@@ -59,4 +59,4 @@ Polar bear dogs are large, powerful carnivores that can be tamed as loyal compan
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

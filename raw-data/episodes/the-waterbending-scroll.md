@@ -222,4 +222,4 @@ Katara begins teaching Aang waterbending, but becomes frustrated when he quickly
     "Bending Training: Traditional master-apprentice relationship dynamics"
   ]
 }
-``` 
+```

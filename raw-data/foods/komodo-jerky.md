@@ -40,6 +40,7 @@ The tradition of Komodo Jerky has been a cornerstone of Fire Nation food preserv
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "komodo-jerky",
@@ -59,6 +60,7 @@ The tradition of Komodo Jerky has been a cornerstone of Fire Nation food preserv
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "dietary": ["non_vegetarian"],
@@ -71,6 +73,7 @@ The tradition of Komodo Jerky has been a cornerstone of Fire Nation food preserv
 ```
 
 ## 🥘 Ingredients & Nutritional Profile
+
 ```json
 {
   "ingredients": {
@@ -89,6 +92,7 @@ The tradition of Komodo Jerky has been a cornerstone of Fire Nation food preserv
 ```
 
 ## 🏛️ Cultural & Thematic Significance
+
 ```json
 {
   "cultural_significance": {
@@ -107,6 +111,7 @@ The tradition of Komodo Jerky has been a cornerstone of Fire Nation food preserv
 ```
 
 ## 📚 Appearances & Variations
+
 ```json
 {
   "appearances": {

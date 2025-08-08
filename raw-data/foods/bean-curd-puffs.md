@@ -197,4 +197,4 @@ Bean Curd Puffs represent the Earth Kingdom's philosophy of resourcefulness and 
   "searchAliases": ["puffs", "bean", "curd", "snack", "ba sing se", "earth kingdom"],
   "isSuggestedInXContext": ["earth_kingdom_snacks", "vegetarian_dishes", "street_food"]
 }
-``` 
+```

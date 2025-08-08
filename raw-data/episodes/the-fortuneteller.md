@@ -189,4 +189,4 @@ Katara convinces Sokka and Aang to travel to a village after hearing of a fortun
   ],
   "expandedView": "This episode explores the development of romantic feelings between Aang and Katara while examining themes of fate versus free will. The fortuneteller's predictions drive much of the plot, but ultimately the characters' actions determine the outcome. Sokka's skepticism provides comic relief while also representing rational thinking against blind faith."
 }
-``` 
+```

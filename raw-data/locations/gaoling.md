@@ -94,4 +94,4 @@ Gaoling is a large, well-established town located in a southern mountain range o
   ],
   "tags": ["major_town", "beifong_family", "earth_rumble", "toph", "wealthy", "mountain_town", "trading_center"]
 }
-``` 
+```

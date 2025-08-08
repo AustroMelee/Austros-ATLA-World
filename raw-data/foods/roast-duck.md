@@ -36,6 +36,7 @@ Roast Duck embodies the Fire Nation's understanding that mastery of cooking tech
 ### Historical Context
 The tradition of Roast Duck has been a cornerstone of Fire Nation cuisine for generations, developed as a way to showcase the nation's mastery of fire and cooking techniques. This dish demonstrates the Fire Nation's practical wisdom and their ability to create impressive meals from quality ingredients. The tradition continues to be a vital part of Fire Nation culinary culture and serves as a testament to their cooking expertise.
 ```
+
 ```## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 ```json
 {
@@ -66,6 +67,7 @@ The tradition of Roast Duck has been a cornerstone of Fire Nation cuisine for ge
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -88,6 +90,7 @@ The tradition of Roast Duck has been a cornerstone of Fire Nation cuisine for ge
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -109,6 +112,7 @@ The tradition of Roast Duck has been a cornerstone of Fire Nation cuisine for ge
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -131,6 +135,7 @@ The tradition of Roast Duck has been a cornerstone of Fire Nation cuisine for ge
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -155,6 +160,7 @@ The tradition of Roast Duck has been a cornerstone of Fire Nation cuisine for ge
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -150,4 +152,4 @@ The Dai Li serve as primary antagonists during the Ba Sing Se arc. They are the 
     "Brainwashing and psychological conditioning"
   ]
 }
-``` 
+```

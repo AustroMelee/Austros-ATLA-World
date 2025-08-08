@@ -36,6 +36,7 @@ Seaweed Stew embodies the Water Tribe's fundamental connection to the ocean and 
 ### Historical Context
 Seaweed Stew has been a fundamental part of Water Tribe cuisine for generations, developed as a practical solution to the challenges of creating satisfying meals from the resources available in their coastal environment. The dish represents the tribe's centuries of experience in harvesting and preparing seaweed, and their understanding of how to create meals that are both practical and culturally meaningful. This tradition continues to be a vital part of Water Tribe culinary heritage.
 ```
+
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
@@ -70,6 +71,7 @@ Seaweed Stew has been a fundamental part of Water Tribe cuisine for generations,
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -93,6 +95,7 @@ Seaweed Stew has been a fundamental part of Water Tribe cuisine for generations,
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -117,6 +120,7 @@ Seaweed Stew has been a fundamental part of Water Tribe cuisine for generations,
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -141,6 +145,7 @@ Seaweed Stew has been a fundamental part of Water Tribe cuisine for generations,
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -165,6 +170,7 @@ Seaweed Stew has been a fundamental part of Water Tribe cuisine for generations,
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

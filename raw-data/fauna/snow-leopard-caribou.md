@@ -59,4 +59,4 @@ Snow leopard caribou are large hybrid felines adapted to extreme cold environmen
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

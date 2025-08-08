@@ -93,4 +93,4 @@ Boar-Q-Pines are common throughout their range but are respected and often avoid
   "lifespan": "10-15 years",
   "conservationStatus": "Common but respected, avoided by travelers"
 }
-``` 
+```

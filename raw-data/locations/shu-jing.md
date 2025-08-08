@@ -95,4 +95,4 @@ Shu Jing is a peaceful town situated on a cliff above a river in the Fire Nation
   ],
   "tags": ["peaceful_town", "cliff_location", "river_views", "agricultural", "community_harmony", "serene", "traditional_life"]
 }
-``` 
+```

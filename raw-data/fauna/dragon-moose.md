@@ -77,4 +77,4 @@ Due to their value as transportation animals, Dragon Moose are actively bred and
   "lifespan": "Moderate lifespan, bred specifically for transportation work",
   "conservationStatus": "Actively bred and maintained for transportation services"
 }
-``` 
+```

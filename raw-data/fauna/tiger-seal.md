@@ -59,4 +59,4 @@ Tiger seals are social creatures that gather in groups on ice floes and coastal 
   "lifespan": "medium",
   "conservationStatus": "common"
 }
-``` 
+```

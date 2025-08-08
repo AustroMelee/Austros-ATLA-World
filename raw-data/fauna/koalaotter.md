@@ -59,4 +59,4 @@ Koalaotters are playful, social mammals adapted to marine environments. Their di
   "lifespan": "medium",
   "conservationStatus": "common"
 }
-``` 
+```

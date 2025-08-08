@@ -193,4 +193,4 @@ The tradition of Kale Wraps has been a part of Earth Kingdom healthy eating cult
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

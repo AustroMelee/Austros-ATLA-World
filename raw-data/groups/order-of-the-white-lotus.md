@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -142,4 +144,4 @@ The Order of the White Lotus serves as a powerful, benevolent force that reveals
     "Mastery of earthbending, waterbending, firebending, and swordsmanship"
   ]
 }
-``` 
+```

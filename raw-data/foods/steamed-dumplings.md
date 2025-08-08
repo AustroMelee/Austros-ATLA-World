@@ -65,6 +65,7 @@ The tradition of Steamed Dumplings has been a cornerstone of Water Tribe cuisine
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -87,6 +88,7 @@ The tradition of Steamed Dumplings has been a cornerstone of Water Tribe cuisine
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -111,6 +113,7 @@ The tradition of Steamed Dumplings has been a cornerstone of Water Tribe cuisine
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -135,6 +138,7 @@ The tradition of Steamed Dumplings has been a cornerstone of Water Tribe cuisine
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -159,6 +163,7 @@ The tradition of Steamed Dumplings has been a cornerstone of Water Tribe cuisine
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

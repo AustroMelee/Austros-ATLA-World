@@ -31,6 +31,7 @@ The dish is made by gently cooking soft tofu with fresh bean sprouts, using mini
 ### Historical Context
 Tofu and Bean Sprouts has been a cornerstone of Air Nomad temple cuisine for generations, with recipes and techniques passed down through monastic communities. The dish represents the Air Nomads' long tradition of creating simple, nutritious meals and their ability to adapt to whatever ingredients are available locally.
 ```
+
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
@@ -53,6 +54,7 @@ Tofu and Bean Sprouts has been a cornerstone of Air Nomad temple cuisine for gen
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -74,6 +76,7 @@ Tofu and Bean Sprouts has been a cornerstone of Air Nomad temple cuisine for gen
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -98,6 +101,7 @@ Tofu and Bean Sprouts has been a cornerstone of Air Nomad temple cuisine for gen
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -122,6 +126,7 @@ Tofu and Bean Sprouts has been a cornerstone of Air Nomad temple cuisine for gen
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -146,6 +151,7 @@ Tofu and Bean Sprouts has been a cornerstone of Air Nomad temple cuisine for gen
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

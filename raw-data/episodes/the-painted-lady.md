@@ -104,6 +104,7 @@ The gang arrives at a Fire Nation village populated by sick and starving people 
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "previous_episode": "the-headband",

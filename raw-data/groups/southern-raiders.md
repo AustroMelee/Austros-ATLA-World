@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -44,7 +46,6 @@ The Southern Raiders are a deeply personal antagonist group for Katara. While th
 - Yon Rha (Commander, retired)
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -124,4 +125,4 @@ The Southern Raiders are a deeply personal antagonist group for Katara. While th
     "Specialized in raids on civilian populations to capture specific targets (benders)"
   ]
 }
-``` 
+```

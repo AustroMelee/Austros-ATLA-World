@@ -199,4 +199,4 @@ Sugar Cookies represent the Earth Kingdom's appreciation for simple pleasures an
   "searchAliases": ["cookies", "sugar", "dessert", "earth kingdom", "traditional"],
   "isSuggestedInXContext": ["earth_kingdom_desserts", "baked_goods", "comfort_foods"]
 }
-``` 
+```

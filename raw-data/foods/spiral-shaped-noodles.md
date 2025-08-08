@@ -40,6 +40,7 @@ The tradition of Spiral-Shaped Noodles as ceremonial food has been a cornerstone
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "spiral-shaped-noodles",
@@ -70,6 +71,7 @@ The tradition of Spiral-Shaped Noodles as ceremonial food has been a cornerstone
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -92,6 +94,7 @@ The tradition of Spiral-Shaped Noodles as ceremonial food has been a cornerstone
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -115,6 +118,7 @@ The tradition of Spiral-Shaped Noodles as ceremonial food has been a cornerstone
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -139,6 +143,7 @@ The tradition of Spiral-Shaped Noodles as ceremonial food has been a cornerstone
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -163,6 +168,7 @@ The tradition of Spiral-Shaped Noodles as ceremonial food has been a cornerstone
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

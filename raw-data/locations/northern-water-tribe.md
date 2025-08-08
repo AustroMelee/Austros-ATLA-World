@@ -92,4 +92,4 @@ The Northern Water Tribe serves as the cultural and spiritual heart of the Water
   "historical_significance": "war_survivor",
   "modern_development": "preserved_tradition"
 }
-``` 
+```

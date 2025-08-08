@@ -40,6 +40,7 @@ The tradition of Sizzle-Crisps has been a beloved part of Fire Nation snack cult
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "sizzle-crisps",
@@ -70,6 +71,7 @@ The tradition of Sizzle-Crisps has been a beloved part of Fire Nation snack cult
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -92,6 +94,7 @@ The tradition of Sizzle-Crisps has been a beloved part of Fire Nation snack cult
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -115,6 +118,7 @@ The tradition of Sizzle-Crisps has been a beloved part of Fire Nation snack cult
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -139,6 +143,7 @@ The tradition of Sizzle-Crisps has been a beloved part of Fire Nation snack cult
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -163,6 +168,7 @@ The tradition of Sizzle-Crisps has been a beloved part of Fire Nation snack cult
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

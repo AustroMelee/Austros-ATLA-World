@@ -159,4 +159,4 @@ In the season finale, Admiral Zhao kills the moon spirit, throwing the world int
     "future": "Sets up Book 2 with major character changes and new spiritual understanding"
   }
 }
-``` 
+```

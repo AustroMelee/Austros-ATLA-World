@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -48,7 +50,6 @@ The Kyoshi Warriors serve as important recurring allies to Team Avatar. They rep
 - Sokka (Honorary member, only male trained)
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -142,4 +143,4 @@ The Kyoshi Warriors serve as important recurring allies to Team Avatar. They rep
     "Stealth and agility"
   ]
 }
-``` 
+```

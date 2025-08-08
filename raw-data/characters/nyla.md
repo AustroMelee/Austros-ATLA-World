@@ -3,6 +3,7 @@ type: character
 ---
 
 ## CARD VIEW
+
 ```md
 - Name: Nyla
 - Badge: Shirshu
@@ -10,6 +11,7 @@ type: character
 ```
 
 ## EXPANDED VIEW
+
 ```md
 ### 📖 Overview
 
@@ -264,4 +266,4 @@ Nyla was a shirshu who served as the mount and constant companion of the bounty 
   "gender": "male",
   "ageRange": "adult"
 }
-``` 
+```

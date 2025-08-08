@@ -77,4 +77,4 @@ Due to their value as a food source, Komodo Chickens are actively bred and maint
   "lifespan": "Moderate lifespan, bred specifically for meat production",
   "conservationStatus": "Actively bred and maintained for food production"
 }
-``` 
+```

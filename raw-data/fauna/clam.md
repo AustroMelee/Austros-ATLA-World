@@ -77,4 +77,4 @@ Clams are relatively common in their native habitat within the Fire Nation's wat
   "lifespan": "Moderate lifespan, reproduce by releasing eggs and sperm into water",
   "conservationStatus": "Relatively common, stable populations in Fire Nation waters"
 }
-``` 
+```

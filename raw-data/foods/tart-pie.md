@@ -65,6 +65,7 @@ The tradition of Tart Pie has been a cornerstone of Fire Nation dessert culture 
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -87,6 +88,7 @@ The tradition of Tart Pie has been a cornerstone of Fire Nation dessert culture 
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -110,6 +112,7 @@ The tradition of Tart Pie has been a cornerstone of Fire Nation dessert culture 
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -134,6 +137,7 @@ The tradition of Tart Pie has been a cornerstone of Fire Nation dessert culture 
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -158,6 +162,7 @@ The tradition of Tart Pie has been a cornerstone of Fire Nation dessert culture 
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

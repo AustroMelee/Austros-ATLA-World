@@ -95,4 +95,4 @@ Fire Fountain City is a large, industrial city in the Fire Nation named for its 
   ],
   "tags": ["industrial_city", "fire_lord_statue", "manufacturing", "technology", "war_production", "industrial_advancement", "urban_development"]
 }
-``` 
+```

@@ -59,4 +59,4 @@ Snow rats are small, rodent-like creatures adapted to cold environments. They ar
   "lifespan": "short",
   "conservationStatus": "common"
 }
-``` 
+```

@@ -77,4 +77,4 @@ Iguana Seals are relatively common in their native habitat within the Fire Natio
   "lifespan": "Moderate lifespan, reproduce by laying eggs in protected coastal areas",
   "conservationStatus": "Relatively common in Fire Nation coastal regions, stable populations"
 }
-``` 
+```

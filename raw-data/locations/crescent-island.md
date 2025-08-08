@@ -95,4 +95,4 @@ Crescent Island is an uninhabited volcanic island located in the Fire Nation arc
   ],
   "tags": ["spiritual_site", "neutral_territory", "fire_sage_temple", "avatar_roku", "volcanic_island", "sacred_site", "avatar_communication"]
 }
-``` 
+```

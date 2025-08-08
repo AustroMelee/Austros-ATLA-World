@@ -67,6 +67,7 @@ Sweet Red Bean Cake has been a beloved part of Air Nomad cuisine for generations
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -88,6 +89,7 @@ Sweet Red Bean Cake has been a beloved part of Air Nomad cuisine for generations
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -112,6 +114,7 @@ Sweet Red Bean Cake has been a beloved part of Air Nomad cuisine for generations
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -136,6 +139,7 @@ Sweet Red Bean Cake has been a beloved part of Air Nomad cuisine for generations
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -160,6 +164,7 @@ Sweet Red Bean Cake has been a beloved part of Air Nomad cuisine for generations
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

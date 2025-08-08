@@ -105,6 +105,7 @@ Azula, Zuko, Mai, and Ty Lee are sent on a forced vacation to Ember Island while
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "previous_episode": "sokkas-master",

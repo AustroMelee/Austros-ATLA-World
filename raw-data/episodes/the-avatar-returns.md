@@ -202,4 +202,4 @@ After being banished from the Southern Water Tribe for accidentally alerting the
   ],
   "expandedView": "This episode marks a pivotal moment in the series as Aang finally reveals his true identity as the Avatar. The episode explores themes of destiny, sacrifice, and the weight of responsibility. Aang's journey from reluctant hero to accepting his role begins here, while Katara and Sokka demonstrate the power of friendship and loyalty. The episode also introduces the Avatar State and waterbending, setting up future developments in the series."
 }
-``` 
+```

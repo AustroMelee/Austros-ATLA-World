@@ -199,4 +199,4 @@ Loco Moco represents the Fire Nation's love for bold, substantial meals that sat
   "searchAliases": ["loco moco", "rice", "burger", "fire nation", "hearty"],
   "isSuggestedInXContext": ["fire_nation_cuisine", "comfort_foods", "hearty_dishes"]
 }
-``` 
+```

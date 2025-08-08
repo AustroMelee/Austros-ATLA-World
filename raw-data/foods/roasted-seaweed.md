@@ -67,6 +67,7 @@ Roasted Seaweed has been a staple of Air Nomad cuisine for generations, develope
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -86,6 +87,7 @@ Roasted Seaweed has been a staple of Air Nomad cuisine for generations, develope
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -110,6 +112,7 @@ Roasted Seaweed has been a staple of Air Nomad cuisine for generations, develope
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -132,6 +135,7 @@ Roasted Seaweed has been a staple of Air Nomad cuisine for generations, develope
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -156,6 +160,7 @@ Roasted Seaweed has been a staple of Air Nomad cuisine for generations, develope
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

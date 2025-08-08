@@ -192,4 +192,4 @@ Sokka and Katara meet Bato, a warrior from the Southern Water Tribe, at an abbey
   ],
   "expandedView": "This episode explores the complex relationship between family loyalty and chosen family. Aang's fear of abandonment leads him to betray his friends' trust, but ultimately their bond proves stronger than blood relations. The introduction of June and her shirshu adds a new threat while showcasing the show's creative creature design and world-building."
 }
-``` 
+```

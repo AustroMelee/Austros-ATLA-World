@@ -156,14 +156,14 @@ graph TD
 
 **Sub-Filtering (January 2025 Update):**
 - **Dynamic Options:** Sub-filters appear only when a core filter is selected
-- **Age Ranges:** Child, teen, young adult, adult, elder (with animal exclusion)
+- **Age Ranges:** Child, teen, adult, elder (with animal exclusion)
 - **Gender Filters:** Male/female with React icon symbols (♂/♀)
 - **Bender Filters:** Bender/nonbender classification
 - **Multi-Select:** Multiple sub-filters can be active simultaneously
 - **Comprehensive Mapping:** Translates filter terms to data values (e.g., "villains" → "antagonist")
 - **Larger Icons:** Subfilter icons increased from `w-4 h-4` to `w-5 h-5` for better visibility
 - **Color-Coded Text:** Character subfilters now have color-coded text:
-  - **Age Groups:** Yellow (child), Blue (teen), Green (young adult), Purple (adult), Gray (elder)
+  - **Age Groups:** Yellow (child), Blue (teen), Purple (adult), Gray (elder)
   - **Character Types:** Green (heroes), Red (villains), Blue (mentors)
   - **Bending Status:** Orange (bender), Gray (nonbender)
 - **Perfect DOS Font:** Subfilter text uses `font-perfect-dos` for better readability
@@ -224,10 +224,12 @@ if (activeNations.size > 0) {
 ```
 
 **Sub-Filter Mapping:**
-- **Age Ranges:** Maps to `ageRange` field with animal exclusion
-- **Gender:** Maps to `gender` field with male/female values
-- **Bender:** Maps to `isBender` and `bendingElement` fields
-- **Role-Based:** Maps filter terms to role, narrativeFunction, and eraAppearances
+- **Age Ranges:** Maps to `ageRange` or numeric age with animal exclusion (no non-human species)
+- **Gender:** Uses top-level `gender` field (male/female)
+- **Bender:** Uses `isBender`, `bendingElement`, and bender-style tags
+- **Role-Based (Characters):** Matches via tags, `role`, `narrativeFunction`, and expanded text
+- **Fauna:** Uses tags/metadata (animalType/habitat/behavior) with name/slug/expanded text fallbacks for:
+  - `predators_hunters`, `domesticated_mounts`, `aquatic_marine`, `flying_aerial`, `sacred_spiritual`, `hybrid_mixed`, `small_insects`, `reptiles_amphibians`
 - **Food Categories:** Maps to food category tags with comprehensive coverage
 
 **Animal Exclusion Logic:**
@@ -450,7 +452,7 @@ const isAnimal = item.species && animalSpecies.some(species =>
 ### Nation Field Integration
 - **Requirement:** All entities must have nation fields for filtering
 - **Implementation:** Nation fields added to all groups and characters
-- **Filtering:** All entities can be filtered by nation
+- **Filtering (2025 Aug):** Episodes inherit nation from Book when missing; mapping 1→Water Tribe, 2→Earth Kingdom, 3→Fire Nation. Nation filter uses normalized nation from `computeNationFromEntity`.
 - **Display:** Nation symbols displayed on all entity cards
 
 ### Expanded View Processing
@@ -458,6 +460,11 @@ const isAnimal = item.species && animalSpecies.some(species =>
 - **Parser Logic:** Extracts content between ```md and ``` markers
 - **Debug Logging:** Shows `[DEBUG] Found Expanded View block: true/false`
 - **Issue Resolution:** Fixed double ```md blocks in group files
+
+### Episode Book & Chronology (2025 Aug)
+- **Book Inference:** If `book` is missing, we infer it from `metadata.book` or `SxEx` in the `title`/`name`.
+- **Chronological Sort:** When core filter is Episodes, results are sorted by Season → Episode with fallbacks to `air_date` and `production_number`.
+- **UI Title Normalization:** Cards/modal titles auto‑prefix with `SxEx` if absent.
 
 ### Image Path Validation
 - **Requirement:** Image paths must match actual files in `public/assets/images/`

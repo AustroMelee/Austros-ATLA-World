@@ -94,4 +94,4 @@ The Cave of Two Lovers is an underground labyrinth located near Omashu, passing 
   ],
   "tags": ["spiritual_site", "cave", "oma_shu", "earthbending_origins", "romantic", "badgermoles", "wolfbats", "ancient_love"]
 }
-``` 
+```

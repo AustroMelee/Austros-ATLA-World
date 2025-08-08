@@ -94,4 +94,4 @@ Kyoshi Island is a small island off the southern coast of the Earth Kingdom, ori
   ],
   "tags": ["island_settlement", "kyoshi_warriors", "avatar_kyoshi", "neutral", "refuge", "warrior_training", "legacy"]
 }
-``` 
+```

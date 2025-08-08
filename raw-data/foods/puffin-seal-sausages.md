@@ -107,6 +107,7 @@ The development of Puffin-Seal Sausages represents the Water Tribe's centuries o
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -128,6 +129,7 @@ The development of Puffin-Seal Sausages represents the Water Tribe's centuries o
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -150,6 +152,7 @@ The development of Puffin-Seal Sausages represents the Water Tribe's centuries o
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -173,6 +176,7 @@ The development of Puffin-Seal Sausages represents the Water Tribe's centuries o
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -197,6 +201,7 @@ The development of Puffin-Seal Sausages represents the Water Tribe's centuries o
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

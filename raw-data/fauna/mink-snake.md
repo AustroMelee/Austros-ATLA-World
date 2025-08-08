@@ -59,4 +59,4 @@ Mink snakes are furry snakes that combine the body structure of snakes with the 
   "lifespan": "medium",
   "conservationStatus": "common"
 }
-``` 
+```

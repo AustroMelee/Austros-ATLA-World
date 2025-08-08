@@ -11,6 +11,7 @@ type: character
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -24,6 +25,7 @@ type: character
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Condensed)*
 
 ```md
@@ -52,6 +54,7 @@ Teo is a paraplegic boy from the Earth Kingdom who resettled at the Northern Air
 ---
 
 ## 🔧 BACKEND METADATA
+
 *(Data Pipeline Layer - Unchanged)*
 
 ```json
@@ -83,6 +86,7 @@ Teo is a paraplegic boy from the Earth Kingdom who resettled at the Northern Air
 ---
 
 ## 📊 DATA VALIDATION
+
 *(Pipeline Integrity Layer - Unchanged)*
 
 - ✅ **Schema Compliance:** All required fields present
@@ -99,9 +103,11 @@ Teo is a paraplegic boy from the Earth Kingdom who resettled at the Northern Air
 ---
 
 ## 🎯 IMPLEMENTATION NOTES
+
 *(Developer Layer - Unchanged)*
 
 **FRONTEND INTEGRATION:**
+
 - Character card displays nation, bending, role, and short description
 - Expanded view shows comprehensive character information
 - Search includes name, nation, bending, role, and affiliations
@@ -109,18 +115,21 @@ Teo is a paraplegic boy from the Earth Kingdom who resettled at the Northern Air
 - Badge system shows character metadata and relationships
 
 **DATA PIPELINE:**
+
 - Parsing script processes character markdown and metadata
 - Enrichment adds computed fields and relationships
 - Validation ensures data integrity and completeness
 - Export creates frontend-ready JSON with all character data
 
 **CONTENT MANAGEMENT:**
+
 - Character information stored in markdown with YAML metadata
 - Images stored in public/assets/images with consistent naming
 - Documentation updated to reflect new character addition
 - Index files maintained for easy reference and navigation
 
 **QUALITY ASSURANCE:**
+
 - All character data validated against schema
 - Relationships checked for consistency
 - Content reviewed for accuracy and completeness
@@ -130,4 +139,4 @@ Teo is a paraplegic boy from the Earth Kingdom who resettled at the Northern Air
 
 ---
 
-*Schema Version: 1.0 | Last Updated: 2025-01-27 | Pipeline: Austros ATLA World Data Engine* 
+*Schema Version: 1.0 | Last Updated: 2025-01-27 | Pipeline: Austros ATLA World Data Engine*

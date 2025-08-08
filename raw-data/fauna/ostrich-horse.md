@@ -93,4 +93,4 @@ Ostrich Horses are common and well-managed throughout the Earth Kingdom. Their p
   "lifespan": "25-30 years in captivity",
   "conservationStatus": "Common and well-managed, protected by law"
 }
-``` 
+```

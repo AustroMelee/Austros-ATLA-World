@@ -92,4 +92,4 @@ While not endangered, Armadillo Lions are respected and often avoided by travele
   "lifespan": "15-20 years",
   "conservationStatus": "Stable population, respected by travelers"
 }
-``` 
+```

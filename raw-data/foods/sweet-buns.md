@@ -40,6 +40,7 @@ Sweet Buns have been a cornerstone of Air Nomad travel cuisine for generations, 
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "sweet-buns",
@@ -72,6 +73,7 @@ Sweet Buns have been a cornerstone of Air Nomad travel cuisine for generations, 
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -93,6 +95,7 @@ Sweet Buns have been a cornerstone of Air Nomad travel cuisine for generations, 
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -117,6 +120,7 @@ Sweet Buns have been a cornerstone of Air Nomad travel cuisine for generations, 
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -141,6 +145,7 @@ Sweet Buns have been a cornerstone of Air Nomad travel cuisine for generations, 
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -165,6 +170,7 @@ Sweet Buns have been a cornerstone of Air Nomad travel cuisine for generations, 
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

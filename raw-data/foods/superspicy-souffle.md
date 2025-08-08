@@ -65,6 +65,7 @@ The tradition of Superspicy Soufflé has been a cornerstone of Kirachu Island's 
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -88,6 +89,7 @@ The tradition of Superspicy Soufflé has been a cornerstone of Kirachu Island's 
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -111,6 +113,7 @@ The tradition of Superspicy Soufflé has been a cornerstone of Kirachu Island's 
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -135,6 +138,7 @@ The tradition of Superspicy Soufflé has been a cornerstone of Kirachu Island's 
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -159,6 +163,7 @@ The tradition of Superspicy Soufflé has been a cornerstone of Kirachu Island's 
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

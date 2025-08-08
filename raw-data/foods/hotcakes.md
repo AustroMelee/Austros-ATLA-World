@@ -40,6 +40,7 @@ The tradition of Hotcakes has been a cornerstone of Fire Nation celebration cult
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "hotcakes",
@@ -59,6 +60,7 @@ The tradition of Hotcakes has been a cornerstone of Fire Nation celebration cult
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "dietary": ["vegetarian"],
@@ -71,6 +73,7 @@ The tradition of Hotcakes has been a cornerstone of Fire Nation celebration cult
 ```
 
 ## 🥘 Ingredients & Nutritional Profile
+
 ```json
 {
   "ingredients": {
@@ -90,6 +93,7 @@ The tradition of Hotcakes has been a cornerstone of Fire Nation celebration cult
 ```
 
 ## 🏛️ Cultural & Thematic Significance
+
 ```json
 {
   "cultural_significance": {
@@ -108,6 +112,7 @@ The tradition of Hotcakes has been a cornerstone of Fire Nation celebration cult
 ```
 
 ## 📚 Appearances & Variations
+
 ```json
 {
   "appearances": {

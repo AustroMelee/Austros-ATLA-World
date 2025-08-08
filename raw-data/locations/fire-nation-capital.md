@@ -95,4 +95,4 @@ The Fire Nation Capital is the seat of government located on the large Capital I
   ],
   "tags": ["capital_city", "fire_lord", "royal_palace", "volcanic_caldera", "military_command", "nobility", "government_seat"]
 }
-``` 
+```

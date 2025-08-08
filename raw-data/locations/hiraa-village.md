@@ -95,4 +95,4 @@ Hira'a Village is a small settlement located near the Forgetful Valley in the Fi
   ],
   "tags": ["small_village", "mother_of_faces", "forgetful_valley", "spiritual_connection", "agricultural", "peaceful", "traditional_life"]
 }
-``` 
+```

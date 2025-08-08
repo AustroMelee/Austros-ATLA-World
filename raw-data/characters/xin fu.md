@@ -50,6 +50,7 @@ Xin Fu served as a recurring antagonist in Book 2, representing the Earth Kingdo
 ```
 
 ---
+
 ```json
 {
   "id": "xin-fu",

@@ -93,4 +93,4 @@ Gopher Bears are common and well-adapted to their environment. Their populations
   "lifespan": "15-20 years",
   "conservationStatus": "Common and beneficial, protected in some areas"
 }
-``` 
+```

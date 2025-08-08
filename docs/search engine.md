@@ -37,20 +37,20 @@ The search engine is now fully client-side, leveraging FlexSearch to build and q
 
 - **Result Hierarchy:**
   - Results are ordered by a robust scoring system:
-    1. **Direct name match** (e.g., searching 'toph' puts Toph Beifong first if her name matches the query exactly).
-    2. **Exact tag or alias match** (e.g., searching 'white lotus' matches any entry tagged `order_of_the_white_lotus`).
-    3. **Gender/age/role match** for gendered queries (e.g., 'boy', 'girl', 'male', 'female' boost characters with matching gender and age/role).
-    4. **Main cast/primary role** (e.g., tags like 'protagonist', 'main', 'main_cast', 'lead').
-    5. **Partial tag match** (e.g., searching 'knife' matches 'knife_thrower').
+    1. **Direct name match**
+    2. **Exact tag or alias match**
+    3. **Gender/age/role match** for gendered queries (boy/girl/male/female)
+    4. **Main cast/primary role**
+    5. **Partial tag match** (e.g., 'knife' matches 'knife_thrower'; skipped for 'male'/'female')
     6. **Other matches** (fallback).
   - **Note:** As of July 2024, the search logic guarantees that any direct name match will always be ranked above all tag or partial tag matches, regardless of tag boosting or other factors. This ensures that searching for a character by name always returns the correct entity as the top result.
   - The logic is modular and can be extended for future improvements.
 
 - **Partial Tag Matching:**
-  - The search engine supports partial tag matching: if a query is a substring of a tag, the entity will be included in results (e.g., 'knife' matches 'knife_thrower').
-  - However, exact matches are always prioritized above partials.
-  - **Exception:** For mutually exclusive queries like 'male' and 'female', partial tag matching is completely skipped—only exact matches are allowed. This prevents 'female' from matching 'male' as a substring, and vice versa. All other queries retain partial tag matching as before.
-  - This makes the search both flexible and precise, supporting discovery and typo-tolerance while keeping the most relevant results at the top.
+  - Partial tag matching is enabled (e.g., 'knife' matches 'knife_thrower').
+  - Exact matches are prioritized above partials.
+  - **Exception:** For 'male' and 'female', partial tag matching is skipped entirely to avoid cross-matches.
+  - Balances discovery with precision; still ranks name and exact tags first.
 
 ### 3.1 Intent-Aware Augmentations (2025)
 

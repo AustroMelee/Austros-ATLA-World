@@ -94,4 +94,4 @@ The Serpent's Pass is a treacherous, narrow strip of land linking the southern a
   ],
   "tags": ["geographical_landmark", "land_bridge", "sea_serpent", "dangerous_crossing", "refugee_route", "courage_test", "alternative_path"]
 }
-``` 
+```

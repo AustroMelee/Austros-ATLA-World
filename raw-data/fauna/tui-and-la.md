@@ -77,4 +77,4 @@ Tui and La are protected by the Northern Water Tribe and are considered sacred b
   "lifespan": "Eternal spiritual beings that do not age or reproduce",
   "conservationStatus": "Sacred beings protected by Northern Water Tribe, essential to world's spiritual balance"
 }
-``` 
+```

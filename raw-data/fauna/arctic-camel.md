@@ -59,4 +59,4 @@ Arctic camels are thick-furred, two-humped animals adapted to extreme cold. They
   "lifespan": "long",
   "conservationStatus": "common"
 }
-``` 
+```

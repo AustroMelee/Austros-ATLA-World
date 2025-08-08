@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -53,7 +55,6 @@ The Fire Nation military serves as the primary antagonistic force for the entire
 - Colonel Shinu (Yuyan Archers)
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -159,4 +160,4 @@ The Fire Nation military serves as the primary antagonistic force for the entire
     "Extensive use of powerful firebending, especially when enhanced by Sozin's Comet"
   ]
 }
-``` 
+```

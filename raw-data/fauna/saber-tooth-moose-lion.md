@@ -93,4 +93,4 @@ Saber-Tooth Moose Lions are common throughout their range but are respected and 
   "lifespan": "15-20 years",
   "conservationStatus": "Common but respected, avoided by travelers"
 }
-``` 
+```

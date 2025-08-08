@@ -77,4 +77,4 @@ Toucan Puffins are relatively common in their native habitat along the Fire Nati
   "lifespan": "Moderate lifespan, relatively easy to breed in natural habitat",
   "conservationStatus": "Relatively common along Fire Nation coasts, stable populations"
 }
-``` 
+```

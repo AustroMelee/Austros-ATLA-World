@@ -3,12 +3,14 @@ type: character
 ---
 
 ## CARD VIEW
+
 ```md
 - Name: Huu
 - Short Description: Waterbending master and protector of the Foggy Swamp Tribe who achieved enlightenment under the great banyan-grove tree.
 ```
 
 ## EXPANDED VIEW
+
 ```md
 ### 📖 Overview
 
@@ -236,4 +238,4 @@ Huu was a waterbending master native to the Foggy Swamp Tribe located southwest 
     "spirituality": "Enlightenment Example"
   }
 }
-``` 
+```

@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -51,7 +53,6 @@ The Water Tribe military represents the resilience and defiance of a people unde
 - Master Pakku
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -149,4 +150,4 @@ The Water Tribe military represents the resilience and defiance of a people unde
     "Ingenious inventions like 'stink n' sink' tangle mines (South)"
   ]
 }
-``` 
+```

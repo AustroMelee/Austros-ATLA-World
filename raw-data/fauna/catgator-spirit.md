@@ -77,4 +77,4 @@ Catgator Spirits are protected by the natural spiritual forces of their environm
   "lifespan": "Eternal spiritual beings tied to spiritual domains and primal forces",
   "conservationStatus": "Protected by natural spiritual forces, essential to spiritual domain balance"
 }
-``` 
+```

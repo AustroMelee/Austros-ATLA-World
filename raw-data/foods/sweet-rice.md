@@ -68,6 +68,7 @@ Sweet Rice was developed by the Air Nomads as a solution to the challenges of th
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "ingredients": {
@@ -90,6 +91,7 @@ Sweet Rice was developed by the Air Nomads as a solution to the challenges of th
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "cultural_significance": {
@@ -114,6 +116,7 @@ Sweet Rice was developed by the Air Nomads as a solution to the challenges of th
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "thematic_elements": {
@@ -138,6 +141,7 @@ Sweet Rice was developed by the Air Nomads as a solution to the challenges of th
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "unique_characteristics": {
@@ -162,6 +166,7 @@ Sweet Rice was developed by the Air Nomads as a solution to the challenges of th
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "appearances": {

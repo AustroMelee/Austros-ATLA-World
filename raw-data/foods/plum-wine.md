@@ -198,4 +198,4 @@ Plum Wine embodies the Fire Nation's cultural values of strength, intensity, and
   "searchAliases": ["wine", "plum", "alcoholic", "fire nation", "blazing", "beverage"],
   "isSuggestedInXContext": ["fire_nation_beverages", "alcoholic_drinks", "traditional_foods"]
 }
-``` 
+```

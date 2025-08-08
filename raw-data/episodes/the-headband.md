@@ -102,6 +102,7 @@ Team Avatar steals Fire Nation clothing to blend in while traveling through enem
 ```
 
 ### Narrative & Canonical Context
+
 ```json
 {
   "previous_episode": "the-awakening",

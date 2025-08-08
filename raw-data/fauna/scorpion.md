@@ -93,4 +93,4 @@ Scorpions are common throughout their desert habitat and are well-adapted to the
   "lifespan": "5-10 years",
   "conservationStatus": "Common in desert habitat, avoided by humans"
 }
-``` 
+```

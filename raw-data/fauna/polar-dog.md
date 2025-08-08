@@ -59,4 +59,4 @@ Polar dogs are large, hardy canines adapted to extreme cold environments. They a
   "lifespan": "medium",
   "conservationStatus": "common"
 }
-``` 
+```

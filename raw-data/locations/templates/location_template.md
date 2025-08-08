@@ -11,6 +11,7 @@ type: location
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: location
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -46,6 +48,7 @@ type: location
 ---
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 *The invisible, hyper-structured engine. **Never rendered directly to the user.***
 
 ---
@@ -109,4 +112,4 @@ type: location
   "strategicImportance": "string[]",
   "culturalPractices": "string[]"
 }
-``` 
+```

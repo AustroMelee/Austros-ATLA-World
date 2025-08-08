@@ -198,4 +198,4 @@ These cookies represent the Earth Kingdom's practical wisdom and innovative spir
   "searchAliases": ["cookies", "cabbage", "dessert", "vegetable cookies", "ba sing se", "earth kingdom"],
   "isSuggestedInXContext": ["earth_kingdom_desserts", "vegetable_dishes", "traditional_foods"]
 }
-``` 
+```

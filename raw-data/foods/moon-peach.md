@@ -58,6 +58,7 @@ The tradition of consuming Moon Peach has been part of Air Nomad culture for gen
 ```
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
+
 ```json
 {
   "id": "moon-peach",
@@ -117,6 +118,7 @@ The tradition of consuming Moon Peach has been part of Air Nomad culture for gen
 ```
 
 ## 🍽️ Culinary Profile & Characteristics
+
 ```json
 {
   "flavorProfile": [
@@ -136,6 +138,7 @@ The tradition of consuming Moon Peach has been part of Air Nomad culture for gen
 ```
 
 ## 🏛️ Cultural & Historical Context
+
 ```json
 {
   "culturalRole": "ritual food",
@@ -154,6 +157,7 @@ The tradition of consuming Moon Peach has been part of Air Nomad culture for gen
 ```
 
 ## 🎭 Thematic & Narrative Elements
+
 ```json
 {
   "themes": [
@@ -179,6 +183,7 @@ The tradition of consuming Moon Peach has been part of Air Nomad culture for gen
 ```
 
 ## 🌟 Notable Features & Unique Aspects
+
 ```json
 {
   "uniqueCharacteristics": [
@@ -209,6 +214,7 @@ The tradition of consuming Moon Peach has been part of Air Nomad culture for gen
 ```
 
 ## 📚 Lore & World-Building Details
+
 ```json
 {
   "loreConnections": [

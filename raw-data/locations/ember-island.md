@@ -95,4 +95,4 @@ Ember Island is a small resort island in the Fire Nation archipelago, designed f
   ],
   "tags": ["resort_island", "luxury_vacation", "ember_island_players", "kuai_ball", "elite_culture", "character_development", "theater"]
 }
-``` 
+```

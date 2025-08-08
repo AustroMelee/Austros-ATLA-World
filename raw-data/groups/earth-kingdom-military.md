@@ -11,6 +11,7 @@ type: group
 ---
 
 ## 🖼️ UI - CARD VIEW
+
 *(Presentation Layer 1 - Unchanged)*
 
 ```md
@@ -23,6 +24,7 @@ type: group
 ---
 
 ## 📖 UI - EXPANDED VIEW
+
 *(Presentation Layer 2 - Unchanged)*
 
 ```md
@@ -52,7 +54,6 @@ The Earth Kingdom military represents the primary force of resistance against th
 - Terra Team
 
 ```
-
 
 ## ⚙️ BACKEND METADATA (v1.0 EXPANSION)
 
@@ -153,4 +154,4 @@ The Earth Kingdom military represents the primary force of resistance against th
     "Late-war development of earthbending-powered tanks"
   ]
 }
-``` 
+```

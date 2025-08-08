@@ -193,4 +193,4 @@ The tradition of Jennamite has been a unique part of Earth Kingdom snack culture
   "searchAliases": [],
   "isSuggestedInXContext": []
 }
-``` 
+```

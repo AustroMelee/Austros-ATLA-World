@@ -94,4 +94,4 @@ The Great Divide is the largest canyon in the world, located in the rocky centra
   ],
   "tags": ["geographical_landmark", "canyon", "feuding_tribes", "natural_obstacle", "cooperation", "reconciliation", "geological_wonder"]
 }
-``` 
+```

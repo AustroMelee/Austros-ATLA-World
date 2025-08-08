@@ -59,4 +59,4 @@ Arctic hens are domesticated birds adapted to cold environments. They are bred p
   "lifespan": "short",
   "conservationStatus": "domesticated"
 }
-``` 
+```

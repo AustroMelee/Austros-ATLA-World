@@ -59,4 +59,4 @@ White hamsters are small, white rodents adapted to cold environments. They are e
   "lifespan": "short",
   "conservationStatus": "common"
 }
-``` 
+```
