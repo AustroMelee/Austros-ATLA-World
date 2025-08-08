@@ -74,7 +74,7 @@ The primary container for all React components:
 - **Positioning:** Positioned below the Filter Bar
 - **Terminal Styling:** Styled with the project's CRT theme
 - **Custom Fonts:** Uses `font-tty-glass` for authentic terminal appearance
-- **Block Cursor:** Custom blinking green block cursor with 4px spacing
+- **Caret:** Uses the native caret (custom block cursor removed to prevent ghosting)
 - **Spell Check Disabled:** `spellCheck={false}` to prevent browser underlining on character names
 - **Text Selection:** Custom selection colors using CRT green background with black text
 
@@ -141,6 +141,7 @@ The scrollbars are extensively styled using `::-webkit-scrollbar` pseudo-element
 
 #### Themed Interactions:
 - **Text Selection:** The default blue text selection highlight is overridden globally to use `--crt-green` as the background, maintaining theme consistency
+- **Inputs:** Flicker, phosphor, and moving scanline overlays are disabled on inputs to eliminate typing ghosting
 - **Card Hover (`.matrix-card-glow`)**: A sophisticated multi-layer box-shadow and a pseudo-element (`::before`) with a pulsing gradient animation create a dynamic and visually impressive hover effect on cards
 
 #### Animations:

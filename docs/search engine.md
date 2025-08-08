@@ -12,8 +12,9 @@ The search engine is now fully client-side, leveraging FlexSearch to build and q
 - **Frontend:**
   - On load, the app fetches `public/enriched-data.json`.
   - The `useSearch` hook (see `src/hooks/useSearch.ts`) receives the full data array and the user's query.
-  - The hook uses a preprocessor (`src/search/preprocessor.ts`) to create a `searchBlob` for each record (concatenating all searchable fields).
-  - FlexSearch builds an in-memory index on fields like `name`, `role`, `tags`, `searchAliases`, and the `searchBlob`.
+  - The hook builds a comprehensive `searchBlob` per entity, including: name, description/summary, role, nation, gender, tags, searchAliases, affiliations, titles, tagCategories, all metadata strings/arrays, and expandedView text.
+  - FlexSearch builds an in-memory index on `name`, `searchBlob`, and key fields (`nation`, `role`, `tags`, `searchAliases`, `bendingElement`, `gender`).
+  - Intent-aware augmentation merges additional matches for queries like "white lotus", "villain/antagonist", group names, bender types, and role archetypes.
   - All searching and filtering is performed in-browser, with results mapped back to the full entity objects for display.
 
 ---
@@ -50,6 +51,14 @@ The search engine is now fully client-side, leveraging FlexSearch to build and q
   - However, exact matches are always prioritized above partials.
   - **Exception:** For mutually exclusive queries like 'male' and 'female', partial tag matching is completely skipped—only exact matches are allowed. This prevents 'female' from matching 'male' as a substring, and vice versa. All other queries retain partial tag matching as before.
   - This makes the search both flexible and precise, supporting discovery and typo-tolerance while keeping the most relevant results at the top.
+
+### 3.1 Intent-Aware Augmentations (2025)
+
+- White Lotus queries add the group and all members via tags (`order_of_the_white_lotus`, `member_of_white_lotus`, `white_lotus`), role/affiliation, aliases, and expandedView mentions.
+- Villain/Antagonist queries add characters via tags, `narrativeFunction`, `role`, and expandedView mentions.
+- Group-name queries add likely members based on tags, role/affiliation, aliases, and expandedView mentions.
+- Bender intents: `firebender`, `waterbender`, `earthbender`, `airbender`, `bender`, `nonbender`.
+- Role archetypes: `hero`, `protagonist`, `mentor`.
 
 ---
 

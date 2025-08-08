@@ -39,6 +39,19 @@ function createSearchBlob(record: EnrichedEntity): string {
       if (Array.isArray(category)) textParts.push(...category);
     }
   }
+
+  // Include ALL metadata string and string[] values to make global search robust
+  if (record.metadata && typeof record.metadata === 'object') {
+    for (const val of Object.values(record.metadata)) {
+      if (typeof val === 'string') {
+        textParts.push(val);
+      } else if (Array.isArray(val)) {
+        for (const v of val) {
+          if (typeof v === 'string') textParts.push(v);
+        }
+      }
+    }
+  }
   const uniqueParts = [...new Set(textParts.filter(Boolean).map(String))];
   return uniqueParts.join(' ').toLowerCase();
 }

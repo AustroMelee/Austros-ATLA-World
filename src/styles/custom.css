@@ -26,8 +26,8 @@ body {
       rgba(112, 171, 108, 0.05) 3px,
       transparent 4px
     );
-  /* Very subtle flicker */
-  animation: crt-flicker 3s ease-in-out infinite;
+  /* Disable global flicker to prevent ghosting in text while typing */
+  /* animation: crt-flicker 3s ease-in-out infinite; */
   position: relative;
 }
 
@@ -339,7 +339,8 @@ input[type="text"]::-moz-selection {
         rgba(255, 255, 255, 0.008) 1px,
         transparent 3px
       );
-    animation: crt-flicker 4s ease-in-out infinite;
+    /* Disable flicker on crt-screen to reduce ghosting */
+    /* animation: crt-flicker 4s ease-in-out infinite; */
   }
   
   /* Intense CRT Effect for Special Elements */
@@ -357,7 +358,8 @@ input[type="text"]::-moz-selection {
         rgba(255, 255, 255, 0.02) 1px,
         transparent 1px
       );
-    animation: crt-flicker 2s ease-in-out infinite;
+    /* Disable intense flicker for accessibility */
+    /* animation: crt-flicker 2s ease-in-out infinite; */
   }
 }
 
@@ -433,7 +435,8 @@ input[type="text"]::-moz-selection {
         transparent 2px
       );
     pointer-events: none;
-    animation: crt-flicker 3s infinite ease-in-out;
+    /* Disable flicker to prevent ghosting overlays */
+    /* animation: crt-flicker 3s infinite ease-in-out; */
     border-radius: inherit;
   }
   
@@ -475,7 +478,8 @@ input[type="text"]::-moz-selection {
     );
     pointer-events: none;
     z-index: 1;
-    animation: scanline-drift 8s linear infinite;
+    /* Disable moving scanline drift over inputs */
+    /* animation: scanline-drift 8s linear infinite; */
   }
 
   @keyframes scanline-drift {
@@ -538,14 +542,9 @@ input[type="text"]::-moz-selection {
   }
 }
 
-.phosphor-persist {
-  animation: phosphor-fade 0.6s ease-out;
-}
-
-.cursor-wake-up {
-  animation: cursor-wake-up 0.1s ease-out forwards;
-  transform-origin: center;
-}
+/* Disable phosphor persist and cursor wake-up animations globally to prevent ghosting */
+.phosphor-persist { animation: none !important; }
+.cursor-wake-up { animation: none !important; transform-origin: center; }
 
 /* Force modal title color with maximum specificity */
 div[role="document"] div[style*="--modal-title-color"] h2 {

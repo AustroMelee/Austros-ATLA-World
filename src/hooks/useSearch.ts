@@ -11,6 +11,57 @@ export function useSearch(
   allEntities: EnrichedEntity[],
   query: string,
 ): Array<{ entity: EnrichedEntity; matchedFields: MatchedField[] }> {
+  // Build a robust searchable blob for each entity (name, tags, affiliations, metadata, etc.)
+  const indexDocs = useMemo(() => {
+    const toArray = (val: unknown): string[] => (Array.isArray(val) ? (val as unknown[]).map(String) : val ? [String(val)] : []);
+    return allEntities.map((e: EnrichedEntity) => {
+      const parts: string[] = [];
+      // Core fields
+      if (e.name) parts.push(String(e.name));
+      if ((e as unknown as { summary?: unknown }).summary) parts.push(String((e as unknown as { summary?: unknown }).summary));
+      if (e.role) parts.push(String(e.role));
+      if (e.nation) parts.push(String(e.nation));
+      if ((e as unknown as { description?: unknown }).description) parts.push(String((e as unknown as { description?: unknown }).description));
+      if ((e as unknown as { expandedView?: unknown }).expandedView) parts.push(String((e as unknown as { expandedView?: unknown }).expandedView));
+      if (e.gender) parts.push(String(e.gender));
+      // Arrays
+      parts.push(...toArray((e as unknown as { titles?: unknown }).titles));
+      parts.push(...toArray((e as unknown as { searchableKeywords?: unknown }).searchableKeywords));
+      parts.push(...toArray((e as unknown as { fuzzySynonyms?: unknown }).fuzzySynonyms));
+      parts.push(...(e.tags || []));
+      parts.push(...(e.searchAliases || []));
+      parts.push(...(e.affiliation || []));
+      // tagCategories
+      if (e.tagCategories) {
+        for (const arr of Object.values(e.tagCategories)) {
+          parts.push(...toArray(arr));
+        }
+      }
+      // metadata (strings and string[])
+      if (e.metadata && typeof e.metadata === 'object') {
+        for (const val of Object.values(e.metadata)) {
+          if (typeof val === 'string') parts.push(val);
+          else if (Array.isArray(val)) parts.push(...val.map(String));
+        }
+      }
+      const unique = Array.from(new Set(parts.filter(Boolean).map(String)));
+      const searchBlob = unique.join(' ').toLowerCase();
+      return {
+        id: e.id,
+        name: String(e.name ?? '').toLowerCase(),
+        searchBlob,
+        // keep specific fields indexed for fine-grained matches/sorting
+        tags: (e.tags || []).map((t) => t.toLowerCase()),
+        searchAliases: (e.searchAliases || []).map((t) => t.toLowerCase()),
+        role: e.role ? String(e.role).toLowerCase() : undefined,
+        gender: e.gender ? String(e.gender).toLowerCase() : undefined,
+        nation: e.nation ? String(e.nation).toLowerCase() : undefined,
+        bendingElement: (e as unknown as { bendingElement?: unknown }).bendingElement
+          ? String((e as unknown as { bendingElement?: unknown }).bendingElement).toLowerCase()
+          : undefined,
+      };
+    });
+  }, [allEntities]);
   // Build a map for quick lookup by id
   const entityMapById = useMemo(() => {
     const map = new Map<string, EnrichedEntity>();
@@ -18,34 +69,46 @@ export function useSearch(
     return map;
   }, [allEntities]);
 
-  // 1. Create a memoized FlexSearch index.
+  // 1. Create a memoized FlexSearch index (robust: includes searchBlob + key fields)
   const index = useMemo(() => {
-    const newIndex = new FlexSearch.Document<EnrichedEntity>({
+    type IndexDoc = {
+      id: string;
+      name: string;
+      searchBlob: string;
+      nation?: string;
+      role?: string;
+      tags?: string[];
+      searchAliases?: string[];
+      bendingElement?: string;
+      gender?: string;
+    };
+    const newIndex = new FlexSearch.Document<IndexDoc>({
       document: {
         id: 'id',
         index: [
           'name',
+          'searchBlob',
           'nation',
           'role',
           'tags',
           'searchAliases',
           'bendingElement',
+          'gender',
         ],
       },
       tokenize: 'forward',
     });
-    allEntities.forEach((entity) => {
-      newIndex.add({ ...entity });
-    });
+    indexDocs.forEach((doc) => newIndex.add(doc as IndexDoc));
     return newIndex;
-  }, [allEntities]);
+  }, [indexDocs]);
 
   // 2. Perform the search and process the results.
   return useMemo(() => {
     if (!query) {
       return allEntities.map((entity) => ({ entity, matchedFields: [] }));
     }
-    const searchResults = index.search(query, { enrich: true }) as Array<{ field: string; result: string[] }>;
+    const qLower = query.toLowerCase();
+    const searchResults = index.search(qLower, { enrich: true }) as Array<{ field: string; result: string[] }>;
     const resultMap = new Map<string, { entity: EnrichedEntity; matchedFields: MatchedField[] }>();
     searchResults.forEach((fieldResult) => {
       const fieldName = fieldResult.field;
@@ -91,6 +154,181 @@ export function useSearch(
       });
     }
     // --- End partial tag matching ---
+
+    // --- Intent detection & synonym expansion for special queries ---
+    const toLower = (v: unknown): string => (typeof v === 'string' ? v.toLowerCase() : '');
+    const expandedOf = (e: EnrichedEntity): string => toLower((e as unknown as { expandedView?: unknown }).expandedView);
+    const roleOf = (e: EnrichedEntity): string => toLower((e as unknown as { role?: unknown }).role);
+    const narrativeOf = (e: EnrichedEntity): string => toLower((e as unknown as { narrativeFunction?: unknown }).narrativeFunction);
+    const affiliationOf = (e: EnrichedEntity): string => {
+      const aff = (e as unknown as { affiliation?: unknown }).affiliation;
+      if (Array.isArray(aff)) return aff.map(String).join(' ').toLowerCase();
+      if (typeof aff === 'string') return aff.toLowerCase();
+      return '';
+    };
+    const lowerTagsSet = (e: EnrichedEntity): Set<string> => {
+      const tags = new Set<string>((e.tags || []).map((t) => t.toLowerCase()));
+      const tc = e.tagCategories || {};
+      for (const arr of Object.values(tc)) {
+        if (Array.isArray(arr)) arr.forEach((x) => tags.add(String(x).toLowerCase()));
+      }
+      return tags;
+    };
+    const hasAnyTag = (e: EnrichedEntity, tags: string[]): boolean => {
+      const set = lowerTagsSet(e);
+      return tags.some((t) => set.has(t));
+    };
+    const entityHasAnyTags = hasAnyTag;
+
+    const isVillainIntent = qLower.includes('villain') || qLower.includes('antagonist');
+    const isWhiteLotusIntent = qLower.includes('white lotus');
+
+    if (isWhiteLotusIntent) {
+      const lotusTags = [
+        'order_of_the_white_lotus',
+        'member_of_white_lotus',
+        'white_lotus',
+      ];
+      const filtered = allEntities.filter((e) => {
+        const role = (e as unknown as { role?: unknown }).role ? String((e as unknown as { role?: unknown }).role).toLowerCase() : '';
+        const affiliation = (e as unknown as { affiliation?: unknown[] | undefined }).affiliation;
+        const affiliationStr = Array.isArray(affiliation) ? affiliation.map(String).join(' ').toLowerCase() : '';
+        const aliases = (e.searchAliases || []).map((a) => a.toLowerCase());
+        const expanded = expandedOf(e);
+        return (
+          entityHasAnyTags(e, lotusTags) ||
+          role.includes('lotus') ||
+          affiliationStr.includes('white lotus') ||
+          aliases.some((a) => a.includes('white lotus')) ||
+          expanded.includes('order of the white lotus')
+        );
+      });
+      // Merge into existing resultMap instead of replacing base results
+      filtered.forEach((e) => {
+        if (!resultMap.has(e.id)) {
+          resultMap.set(e.id, { entity: e, matchedFields: [{ field: 'intent.whiteLotus', token: query }] });
+        } else {
+          const ex = resultMap.get(e.id)!;
+          ex.matchedFields.push({ field: 'intent.whiteLotus', token: query });
+        }
+      });
+    }
+
+    if (isVillainIntent) {
+      const villainTags = [
+        'villain',
+        'antagonist',
+        'main_antagonist',
+        'secondary_antagonist',
+        'minor_antagonist',
+        'tragic_villain',
+        'book_1_villain',
+        'book_2_villain',
+        'book_3_villain',
+        'original_antagonist',
+        'stage_villain',
+        'starter_villain',
+      ];
+      const filtered = allEntities.filter((e) => {
+        const role = (e as unknown as { role?: unknown }).role ? String((e as unknown as { role?: unknown }).role).toLowerCase() : '';
+        const narrative = (e as unknown as { narrativeFunction?: unknown }).narrativeFunction
+          ? String((e as unknown as { narrativeFunction?: unknown }).narrativeFunction).toLowerCase()
+          : '';
+        const expanded = expandedOf(e);
+        return (
+          entityHasAnyTags(e, villainTags) ||
+          role.includes('antagonist') ||
+          narrative.includes('antagonist') ||
+          narrative.includes('villain') ||
+          expanded.includes('antagonist') ||
+          expanded.includes('villain')
+        );
+      });
+    // --- Dynamic Group Membership intent: any query that names a known group ---
+    const groupLikeTypes = new Set(['group', 'religious_organization', 'service_organization']);
+    const namedGroups = allEntities.filter((e) => groupLikeTypes.has((e as unknown as { type?: unknown }).type as string));
+    const matchedGroups = namedGroups.filter((g) => qLower.includes(String(g.name || '').toLowerCase()));
+    matchedGroups.forEach((group) => {
+      const groupNameLower = String(group.name || '').toLowerCase();
+      const groupSlugLower = String((group as unknown as { slug?: unknown }).slug || '').toLowerCase().replace(/-/g, ' ');
+      const candidates = allEntities.filter((e) => {
+        if (e.id === group.id) return true;
+        const expanded = expandedOf(e);
+        const role = roleOf(e);
+        const affiliation = affiliationOf(e);
+        const aliases = (e.searchAliases || []).map((a) => a.toLowerCase());
+        const tagHit = hasAnyTag(e, [groupSlugLower.replace(/\s+/g, '_'), groupNameLower.replace(/\s+/g, '_')]);
+        return (
+          tagHit ||
+          expanded.includes(groupNameLower) ||
+          expanded.includes(groupSlugLower) ||
+          role.includes(groupNameLower) ||
+          affiliation.includes(groupNameLower) ||
+          aliases.some((a) => a.includes(groupNameLower))
+        );
+      });
+      candidates.forEach((e) => {
+        if (!resultMap.has(e.id)) {
+          resultMap.set(e.id, { entity: e, matchedFields: [{ field: 'intent.groupMembership', token: query }] });
+        } else {
+          resultMap.get(e.id)!.matchedFields.push({ field: 'intent.groupMembership', token: query });
+        }
+      });
+    });
+
+    // --- Bender intent: firebender/waterbender/earthbender/airbender/bender/nonbender ---
+    const benderMap: Record<string, (e: EnrichedEntity) => boolean> = {
+      firebender: (e) => toLower((e as unknown as { bendingElement?: unknown }).bendingElement) === 'fire' || hasAnyTag(e, ['firebender']),
+      waterbender: (e) => toLower((e as unknown as { bendingElement?: unknown }).bendingElement) === 'water' || hasAnyTag(e, ['waterbender']),
+      earthbender: (e) => toLower((e as unknown as { bendingElement?: unknown }).bendingElement) === 'earth' || hasAnyTag(e, ['earthbender']),
+      airbender: (e) => toLower((e as unknown as { bendingElement?: unknown }).bendingElement) === 'air' || hasAnyTag(e, ['airbender']),
+      bender: (e) => (e as unknown as { isBender?: unknown }).isBender === true || hasAnyTag(e, ['bender']),
+      nonbender: (e) => (e as unknown as { isBender?: unknown }).isBender === false || hasAnyTag(e, ['nonbender']),
+    };
+    for (const [key, predicate] of Object.entries(benderMap)) {
+      if (qLower.includes(key)) {
+        allEntities.filter(predicate).forEach((e) => {
+          if (!resultMap.has(e.id)) {
+            resultMap.set(e.id, { entity: e, matchedFields: [{ field: `intent.${key}`, token: query }] });
+          } else {
+            resultMap.get(e.id)!.matchedFields.push({ field: `intent.${key}`, token: query });
+          }
+        });
+      }
+    }
+
+    // --- Role archetype intents: hero/protagonist/mentor ---
+    const roleIntentMap: Record<string, string[]> = {
+      hero: ['hero', 'heroes', 'protagonist', 'main', 'main_cast', 'lead'],
+      protagonist: ['protagonist', 'hero', 'lead', 'main', 'main_cast'],
+      mentor: ['mentor', 'teacher', 'master'],
+    };
+    for (const [intentKey, tagList] of Object.entries(roleIntentMap)) {
+      if (qLower.includes(intentKey)) {
+        const filteredRole = allEntities.filter((e) => {
+          const role = roleOf(e);
+          const narrative = narrativeOf(e);
+          const expanded = expandedOf(e);
+          return (
+            hasAnyTag(e, tagList) ||
+            tagList.some((t) => role.includes(t) || narrative.includes(t) || expanded.includes(t))
+          );
+        });
+        filteredRole.forEach((e) => {
+          if (!resultMap.has(e.id)) resultMap.set(e.id, { entity: e, matchedFields: [] });
+          resultMap.get(e.id)!.matchedFields.push({ field: `intent.${intentKey}`, token: query });
+        });
+      }
+    }
+      filtered.forEach((e) => {
+        if (!resultMap.has(e.id)) {
+          resultMap.set(e.id, { entity: e, matchedFields: [{ field: 'intent.villain', token: query }] });
+        } else {
+          const ex = resultMap.get(e.id)!;
+          ex.matchedFields.push({ field: 'intent.villain', token: query });
+        }
+      });
+    }
 
     // --- Broad tag match boosting and result sorting ---
     // Score: 5 = name match

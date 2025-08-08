@@ -33,30 +33,24 @@
 
 ### 🎮 CRT Terminal UI & Interactions (2025 Update)
 
-**What are the new CRT visual effects?**
-- The search bar now features authentic CRT terminal styling with:
-  - Phosphor persistence: Characters briefly flash brighter green when typed
-  - Cursor wake-up: 100ms elastic scale animation on first focus
-  - Scan lines: Subtle horizontal lines that drift upward
-  - Larger text size (28px) for better readability
-  - Reduced vertical padding (`py-2`) for a more compact, terminal-like appearance
-  - CRT glow effects on both text and borders
-  - 4px spacing between text and the block cursor for improved clarity
-  - Removed clear (X) button for cleaner terminal aesthetics
-  - Disabled spell-check (`spellCheck={false}`) to prevent browser underlining on character names
-  - Custom text selection styling with CRT green background and black text instead of default blue
+**What are the current CRT visual effects?**
+- The search bar keeps the CRT terminal styling while avoiding typing ghosting:
+  - Phosphor persistence animation: Disabled
+  - Cursor wake‑up animation: Disabled
+  - Moving scanline overlay on inputs: Disabled
+  - Native caret is used (no custom block‑cursor overlay)
+  - Larger text size (28px) for readability
+  - Compact vertical padding (`py-2`)
+  - Subtle CRT glow on text/borders
+  - Disabled spell‑check (`spellCheck={false}`)
+  - Custom text selection: CRT green background with black text
 
 **How do I interact with the search bar?**
-- **Terminal Aesthetics:** The search bar provides an authentic CRT terminal experience
-- **Text Entry:** Type character names or search terms with immediate visual feedback
-  - Each character briefly flashes brighter green (#a8e6a8) when typed
-  - Characters smoothly fade to standard color over 0.6 seconds
-- **Block Cursor:** A blinking green block cursor appears 4px after your text when focused
-  - Features a special "wake-up" animation on first focus
-  - Maintains consistent blinking after initial animation
-- **No Spell Check:** Browser spell-check is disabled to maintain clean terminal appearance
-- **Text Selection:** Selecting text shows CRT green background with black text for consistency
-- **Keyboard Navigation:** Fully accessible with standard keyboard shortcuts (Tab, Shift+Tab, etc.)
+- **Typing:** No afterglow/ghosting effects; characters render cleanly
+- **Caret:** Uses the native caret (no custom block cursor)
+- **No Spell Check:** `spellCheck={false}` remains enabled
+- **Text Selection:** CRT green background with black text
+- **Keyboard Navigation:** Fully accessible (Tab, Shift+Tab, etc.)
 
 **What happens when there are no search results?**
 - The interface maintains a clean, minimalist approach
@@ -309,6 +303,14 @@ The system applies filters in this specific sequence:
 - Searching 'bear' returns Bosco first.
 - Searching 'boy' returns Aang, Sokka, and Zuko first, then others.
 - Searching 'knife' returns all entities with tags containing 'knife', but 'knife_thrower' will be prioritized if it is an exact match.
+
+### 🧠 Intent-Aware Queries (2025 Update)
+
+- "Order of the White Lotus" now returns the group and all members. The engine merges multiple signals: tags (`order_of_the_white_lotus`, `member_of_white_lotus`, `white_lotus`), role/affiliation, aliases, and expandedView text.
+- "villain" and "antagonist" return all antagonists by checking tags, `narrativeFunction`, `role`, and expandedView text.
+- Group-name queries (any known group in data) augment results with likely members via tags, role/affiliation, aliases, and expandedView mentions.
+- Bender queries are supported: `firebender`, `waterbender`, `earthbender`, `airbender`, `bender`, `nonbender`.
+- Role archetype queries: `hero`, `protagonist`, `mentor`.
 
 ---
 
